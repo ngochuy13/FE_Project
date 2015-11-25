@@ -1,0 +1,82 @@
+.home-video-resource-detail-content
+  .video-block
+    .container
+      .row
+        .col-xs-12.col-md-10.col-md-offset-1.tac
+          .title-block
+            h3.grey.bold Videos
+            .divider
+              span
+      .row
+        .col-xs-12.col-md-9.col-md-push-3
+          .video-wrapper
+            #resource-video-player.video-player(data-id='HQzu7NYlZNQ')
+            .if-overlay
+              img(src="images/search/overlay.jpg", alt="")
+            .play-btn
+            .video-time.p
+              span.white
+          .row
+            .col-xs-12.col-sm-4.col-sm-push-8.col-lg-2.col-lg-push-10
+              .video-icon.pull-right.video-resource-detail-icon
+                .action.psr
+                  .toggleClick.video-share.share-toggle(target=".share-popup-block")
+                  include ../share_popup.jade
+                  a.heart-icon.video-favourite.cup(title="Add Video To Favorite")
+            .col-xs-12.col-sm-8.col-sm-pull-4.col-lg-10.col-lg-pull-2
+              .video-descriptions
+                .description(data-id="HQzu7NYlZNQ")
+                  .video-title 
+                    a.bold(href='#' target='_blank') Tutorial How to install Urban Designer Series? 1
+                  .detail
+                    p Minions ipsum veniam underweaaar consequat adipisicing consequat underweaaar
+                .description.hide(data-id="nVCubhQ454c")
+                  .video-title 
+                    a.bold(href='#' target='_blank') Tutorial How to install Urban Designer Series? 2
+                  .detail
+                    p Minions ipsum veniam underweaaar consequat adipisicing consequat underweaaar quis me want bananaaa! Voluptate jiji bee do bee do bee do tempor quis gelatooo incididunt magna enim ut. Ut dolor bappleees poopayee ti aamoo! Cillum. Irure pepete pepete officia sit amet bappleees. Butt pepete enim et veniam. Cillum me want bananaaa!
+                .description.hide(data-id="hJYGddE0vHc")
+                  .video-title 
+                    a.bold(href='#' target='_blank') Tutorial How to install Urban Designer Series? 3
+                  .detail
+                    p Minions ipsum veniam underweaaar consequat adipisicing consequat underweaaar quis me want bananaaa! Voluptate jiji bee do bee do bee do tempor quis gelatooo incididunt magna enim ut. Ut dolor bappleees poopayee ti aamoo! Cillum. Irure pepete pepete officia sit amet bappleees. Butt pepete enim et veniam. Cillum me want bananaaa! Para tú dolor sit amet la bodaaa. Voluptate tulaliloo enim ullamco cillum esse pepete.
+          .clearfix
+        .col-xs-12.col-md-3.col-md-pull-9
+          .video-list
+            .row
+              .col-xs-6.col-sm-4.col-md-12
+                .video(data-id="HQzu7NYlZNQ").selected
+                  .video-thumb
+                    img(src="images/video-resource/video-thumb-1.jpg" alt="video 1").image-fill
+                    span.thumb-overlay
+                      span.status 
+                        span.icon-elastic
+                        span.msg(data-play-status-msg="Play" data-playing-status-msg="Video is ON" data-loading-status-msg="Loading...")
+                          | Play
+                    span.video-time 0:00
+                  .video-title Minions ipsum veniam underwear consequat adipisicing consequat
+              .col-xs-6.col-sm-4.col-md-12
+                .video(data-id="nVCubhQ454c")
+                  .video-thumb
+                    img(src="images/video-resource/video-thumb-2.jpg" alt="video 2").image-fill
+                    span.thumb-overlay
+                      span.status 
+                        span.icon-elastic
+                        span.msg(data-play-status-msg="Play" data-playing-status-msg="Video is ON" data-loading-status-msg="Loading...")
+                          | Play
+                    span.video-time 0:00
+                  .video-title Minions ipsum veniam underwear consequat adipisicing consequat
+              .col-xs-6.col-sm-4.col-md-12
+                .video(data-id="hJYGddE0vHc")
+                  .video-thumb
+                    img(src="images/video-resource/video-thumb-3.jpg" alt="video 3").image-fill
+                    span.thumb-overlay
+                      span.status 
+                        span.icon-elastic
+                        span.msg(data-play-status-msg="Play" data-playing-status-msg="Video is ON" data-loading-status-msg="Loading...")
+                          | Play
+                    span.video-time 0:00
+                  .video-title Minions ipsum veniam underwear consequat adipisicing consequat
+  .text-center
+    a.button.rainbow
+      .bgw View more Videos

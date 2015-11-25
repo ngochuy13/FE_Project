@@ -1,0 +1,63 @@
+extends layouts/default
+
+block content
+	.container
+		.row
+			.col-md-12
+				.col-md-6
+					.title-block
+						h3.grey this is title block
+						.divider
+							span
+				.col-md-7
+					.video-wrapper
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/nfWlot6h_JM" frameborder="0" allowfullscreen></iframe>
+						.if-overlay
+							img(src="images/search/overlay.jpg", alt="")
+						.play-btn
+				h1 this is normal h1
+				.h1 this is a div with h1 style
+				h3 this is normal h3
+				h3.white white h3
+				h3.grey grey h3
+				h3.grey.bold grey bold h3
+				p.big big paragraph
+				p.big.bold big bold paragraph
+				p.small small paragraph
+				p normal paragraph
+				p.xsmall xsmall paragraph
+				a(href="#").button.rainbow
+					div.bgw button with a tag
+				.button.rainbow
+					div.bgw div button
+				a(href="#").img
+					img(src="images/home/img.jpg", alt="")
+				.img.has-action.circle
+					img(src="images/home/img.jpg", alt="")
+					.action
+						a(href="#").heart-icon
+						a(href="#").share-icon
+						a.button.view.rainbow 
+							div.bgw View
+				a.button.solid-btn Sign up
+				button.solid-btn Sign up
+				a(href="#").img.circle
+					img(src="images/home/img.jpg", alt="")
+				ul
+					li.button.rainbow.bottom
+						div.bgw product list
+				.divider
+					span
+				.divider.white
+					span
+				.division
+				input(type="text" class="gl-input")
+				+dropDown('Toan')
+				label(for="agree")
+					input(id="agree" type="checkbox")
+					.checkBox
+					p Would you like to receive more informations about Cemintel?
+
+			.col-md-8.col-md-offset-2.col-sm-6.col-sm-offset-3.col-xs-8.col-xs-offset-2 responsive column
+				include includes/search.jade
+				include includes/feature.jade

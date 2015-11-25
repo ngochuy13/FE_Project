@@ -1,0 +1,140 @@
+#header
+  min-height: $header-height
+  width: 100%
+  z-index: 11
+  background: $white
+  position: fixed
+  top: 0
+  .container
+    position: relative
+    .header-overlayer
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      z-index: 1
+    .columns
+      float: left
+      position: relative
+      z-index: 10
+    .menu
+      padding-left: 50px
+    .logo,
+    .navigation
+      height: $header-height
+    .logo
+      padding-top: 33px
+      position: relative
+      &:after
+        content: ""
+        display: block
+        position: absolute
+        right: 0
+        top: 50%
+        width: 1px
+        height: 39px
+        background: $dark-gray
+        opacity: 0.5
+        margin-top: -19px
+      a
+        display: block
+        padding-left: 15px
+        padding-right: 52px
+    .nav-collapsed
+      display: none
+    .navigation
+      ul
+        > li
+          float: left
+          padding: 44px 0
+          margin-right: 44px
+          > a:hover,
+          > a.active,
+          > span.CMSListMenuLinkHighlighted
+            border-bottom: 3px solid $activelimenu
+            padding-bottom: 8px
+          &.has-sub
+            position: relative
+            &:hover
+              ul.sub-menu
+                height: 30px
+          &:nth-child(5)
+            ul.sub-menu
+              min-width: 1105px
+              left: auto
+              right: -160%
+        a, span
+          font-family: $helveticaLTStdCond
+          font-size: $h5
+          color: $dusty-gray
+          text-transform: uppercase
+          position: relative
+        &.sub-menu
+          height: 0
+          min-width: 696px
+          overflow: hidden
+          position: absolute
+          top: 100%
+          left: 0
+          +transition(height 0.5s ease)
+          li
+            float: left
+            margin: 0
+            padding: 0 15px
+            background: rgba(166, 167, 168, 0.9)
+          a
+            color: $white
+            display: inline-block
+            padding: 6px 0
+            &:hover
+              border: none
+              padding: 6px 0
+    .lang
+      position: absolute
+      right: 0
+      top: 0
+      height: 100%
+      padding: 45px 35px
+      &:before
+        content: ""
+        display: block
+        position: absolute
+        left: 0
+        top: 50%
+        width: 1px
+        height: 39px
+        background: $dark-gray
+        opacity: 0.5
+        margin-top: -19px
+      .dropdown
+        ul
+          top: 59px
+          background: $overlay
+          border: none
+          +border-radius(0)
+          text-align: center
+          width: 100%
+          min-width: 100px
+          left: auto
+          right: 0
+          li
+            a
+              font-family: $helveticaLTStdCond
+              font-size: $h5
+              line-height: 1.444
+              color: $dusty-gray
+              text-transform: uppercase
+        > a
+          font-family: $helveticaLTStdCond
+          font-size: $h5
+          color: $dusty-gray
+          text-transform: uppercase
+          span
+            border: none
+            background: url('../images/icon-down.png') no-repeat center 60%
+            width: 14px
+            height: 9px
+            float: right
+            margin: 4px 0 0 8px
+

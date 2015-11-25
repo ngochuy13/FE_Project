@@ -1,0 +1,109 @@
+header#header 
+  .top-header
+    .container-fluid
+      .row 
+        a.navigation-trigger(href='#') 
+          span 
+          span
+          span
+        .top-logo.col-xs-4.col-xs-push-4.col-md-3.col-md-push-0
+          .logo   
+            +link-img('residence/logo.png', 'Logo', "home.html")(data-banners="images/home/banner.jpg,images/ipad/home/banner.jpg,images/mobile/home/banner-1.jpg")
+        .top-panel.col-xs-4.col-xs-push-4.col-md-3.col-md-push-6.hide-phone  
+          a(href="http://KEMPINSKI.COM" target="_blank").back-to-corp-link
+            |KEMPINSKI HOTELS       
+            span.fa.fa-angle-down    
+          ul     
+            li 
+              .dropdown    
+                .dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+                  | ENGLISH   
+                  span.fa.fa-angle-down
+                ul.dropdown-menu(aria-labelledby='dropdownMenu1')
+                  li
+                    a(href='#') ENGLISH    
+                  li
+                    a(href='#') ENGLISH 2       
+            li
+              a(href="#", title="Login")
+                span.user-icon
+                span.text-login Login       
+        .top-slogan.col-xs-12.col-xs-pull-0.col-md-6.col-md-pull-3
+          .text-big PALM JUMEIRAH DUBAI      
+          .text-small
+            span
+              span.line.line-before
+              |Luxurious Residence        
+              span.line.line-after
+          //- .star-block
+          //-   span.star-icon
+          //-   span.star-icon   
+          //-   span.star-icon
+          //-   span.star-icon  
+          //-   span.star-icon   
+  .hero-banner
+    .banner-wrapper
+      +hero-banner-img('Banner', bannerIMG )(style="background: url(images/#{bannerIMG}) center center" data-bg="url(images/#{bannerIMG}) center center")
+    .navigation-positioning
+      .navigation
+        .navigation__content   
+          .navigation__title Overview             
+          ul.navigation__link 
+            li(class={active: page === 'room-suite'})
+              +link("rooms & suites", roomsuite)
+            li(class={active: page === 'special-offers'})
+              +link("special offers", "#")
+            li(class={active: page === 'photogallery'})
+              +link("photo galleries", photogallery)
+            li(class={active: page === 'restaurant-bar'})
+              +link("restaurants & bars", restaurant)(data-banners="images/restaurant/banner-1.jpg,images/ipad/restaurant/banner-1.jpg,images/mobile/restaurant/banner-1.jpg")
+              ul.sub-menu 
+                li
+                  +link("Restaurants", restaurantDetail)
+                li
+                  +link("Bars", barDetail)
+            li(class={active: page === 'meetings-events'})
+              +link("meetings & events", meetingsevents)(data-banners="images/meetings-events/banner-1.jpg,images/ipad/meetings-events/banner-1.jpg,images/mobile/meetings-events/banner-1.jpg")
+              ul.sub-menu
+                li
+                  +link("Meetings", meetingseventsdetail)
+                li
+                  +link("Events", meetingseventsdetail)
+            li(class={active: page === 'location'})
+              +link("location", location)
+            li(class={active: page === 'guest-experience'})
+              +link("facilites", guestexperience)
+            li(class={active: page === 'guest-review'})
+              +link("guest reviews", guestreview)
+            li(class={active: page === 'contact-us'})
+              +link("contact us", contactus)   
+            li(class={active: page === 'facilities'})
+              +link("facilites", facilities)
+            li(class={active: page === 'pressroom'})
+              +link("Press-Room", pressroom)         
+          ul.navigation__linkcontrol.only-phone   
+            li
+              a(href="http://KEMPINSKI.COM" target="_blank").back-to-corp-link  
+                | KEMPINSKI.COM
+                //- span.fa.fa-angle-down 
+            li
+              .dropdown   
+                .dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+                  | ENGLISH   
+                  span.fa.fa-angle-down
+                ul.dropdown-menu(aria-labelledby='dropdownMenu1')
+                  li
+                    a(href='#') ENGLISH    
+                  li
+                    a(href='#') ENGLISH 2       
+            li
+              a(href="#", title="Login")
+                span.user-icon
+                span.text-login Login    
+
+  .booking-widget 
+    .container.text-center.hide-sm
+      a.navigation-trigger(href='#').hide-phone
+        span
+        span
+        span

@@ -1,0 +1,353 @@
+.locator-block {
+    .locator-banner {
+        background: #000 url('../images/case-study/bg.jpg');
+        background-size: auto;
+        background-repeat: no-repeat;
+        height: auto;
+        background-position: 0px -110px;
+        .title {
+            margin-top: 33px;
+            .sub-title {
+                position: relative;
+                p {
+                    @include mobile {
+                        padding-right: 33px;
+                    }
+                }
+                .dotdotdot {
+                    .expand-subtitle {
+                        display: none !important;
+                    }
+                }
+                .expand-subtitle {
+                    color: #fff;
+                    position: absolute;
+                    top: 5px;
+                    right: 0;
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    padding-top: 5px;
+                    margin-top: -5px;
+                    display: inline-block !important;
+                    cursor: pointer;
+                }
+                .collapse-subtitle {
+                    color: #fff;
+                    position: absolute;
+                    bottom: 10px;
+                    right: 0;
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    padding-top: 5px;
+                    margin-top: -5px;
+                    display: none;
+                    cursor: pointer;
+                }
+                .dotdotdot {
+                    @include mobile {
+                        height: 30px;
+                    }
+                }
+                .original {
+                    .expand-subtitle {
+                        display: none !important;
+                    }
+                }
+                .is-truncated {
+                    .expand-subtitle {
+                        display: inline-block !important;
+                    }
+                }
+            }
+        }
+    }
+    .locator-content {
+        padding: 30px 0 50px;
+        .locator-tabs {
+            border-bottom: none;
+            padding-bottom: 50px;
+            @include mobile {
+                padding-bottom: 15px;
+            }
+            li {
+                width: 31.3333%;
+                border-left: 1px solid #cacaca;
+                border-right: 1px solid #cacaca;
+                &:first-child,
+                &:last-child {
+                    border: none;
+                }
+                a {
+                    color: #9e9e9e;
+                    border-radius: 0;
+                    margin-right: 0px;
+                    border: none;
+                    font-size: 24px;
+                    @include tablet {
+                        font-size: 19px;
+                    }
+                    @include mobile {
+                        font-size: 14px;
+                    }
+                }
+                &.active {
+                    a {
+                        color: #fff;
+                        background-color: #cacaca;
+                        @include mobile {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .locator-tab-content {
+            .tab-pane {
+                .locator-tab-content-image {}
+                .locator-tab-content-inner {
+                    .locator-find-block {
+                        .locator-find-header {
+                            h3 {
+                                margin-top: 0;
+                                @include mobile {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                        .locator-find {
+                            padding-top: 15px;
+                            .use-current-location {
+                                margin-bottom: 15px;
+                                a {
+                                    width: 100%;
+                                }
+                                @include mobile {
+                                    margin-bottom: 20px;
+                                }
+                            }
+                            .state-dropdown {
+                                clear: both;
+                                .style-select {
+                                    @include tablet {
+                                        span {
+                                            font-size: 12px;
+                                        }
+                                    }
+                                    @include mobile {
+                                        margin-bottom: 20px;
+                                    }
+                                }
+                            }
+                        }
+                        .post-code {
+                            input {
+                                @include tablet {
+                                    font-size: 12px;
+                                }
+                                @include mobile {
+                                    margin-bottom: 15px;
+                                }
+                                &::-webkit-input-placeholder {
+                                    /* WebKit, Blink,Edge */
+                                    color: #000;
+                                }
+                                &:-moz-placeholder {
+                                    /* Mozilla Firefox 4 to 18 */
+                                    color: #000;
+                                    opacity: 1;
+                                }
+                                &::-moz-placeholder {
+                                    /* Mozilla Firefox 19+ */
+                                    color: #000;
+                                    opacity: 1;
+                                }
+                                &:-ms-input-placeholder {
+                                    /* Internet Explorer 10-11 */
+                                    color: #000;
+                                }
+                            }
+                            label.error{
+                                @include mobile {
+                                    margin-top: -15px;
+                                }
+                            }
+                        }
+                        .find-button {
+                            overflow: hidden;
+                        }
+                    }
+                    .locator-find-result {
+                        margin-top: 32px;
+                        @include mobile {
+                            margin-top: 0px;
+                        }
+                        .locator-find-result-item {
+                            padding: 25px 0;
+                            border-bottom: 1px solid #cacaca;
+                            &:last-child {
+                                border-bottom: 0;
+                            }
+                            .locator-result-alphabet {
+                                margin-bottom: 15px;
+                                span {
+                                    font-size: 16px;
+                                    background-color: #000;
+                                    border: 1px solid #000;
+                                    color: #fff;
+                                    border-radius: 50%;
+                                    width: 30px;
+                                    background-size: 20px;
+                                    display: block;
+                                    height: 30px;
+                                    padding: 0;
+                                    text-align: center;
+                                    line-height: 30px;
+                                }
+                            }
+                            .locator-result-info {}
+                            .locator-result-action {
+                                overflow: hidden;
+                                margin-top: 2px;
+                                text-align: right;
+                                @include tablet {
+                                    margin-top: 4px;
+                                }
+                                @include mobile {
+                                    margin-top: 25px;
+                                    text-align: left;
+                                }
+                                .add-favourite {
+                                    background-image: url('../images/locator/heart-color.png');
+                                    background-repeat: no-repeat;
+                                    background-size: 22px;
+                                    background-position: 45px 2px;
+                                    cursor: pointer;
+                                    &:hover {
+                                        background-image: url('../images/locator/heart-black.png');
+                                        background-repeat: no-repeat;
+                                        background-size: 22px;
+                                        background-position: 45px 2px;
+                                    }
+                                    @include smdesktop {
+                                        background-position: 5px 2px;
+                                        &:hover {
+                                            background-position: 5px 2px;
+                                        }
+                                    }
+                                    @include tablet {
+                                        background-position: 5px 2px;
+                                        &:hover {
+                                            background-position: 5px 2px;
+                                        }
+                                    }
+                                    @include mobile {
+                                        background-position: 0px 2px;
+                                        &:hover {
+                                            background-position: 0px 2px;
+                                        }
+                                    }
+                                    p {
+                                        cursor: pointer;
+                                        display: inline-block;
+                                        margin-left: 15px;
+                                        // transform: translateY(50%);
+                                        @include tablet {
+                                            font-size: 12px;
+                                        }
+                                        @include mobile {
+                                            margin-left: 40px;
+                                        }
+                                    }
+                                }
+                                .download-card {
+                                    background-image: url('../images/locator/download-color.png');
+                                    background-repeat: no-repeat;
+                                    background-size: 22px;
+                                    background-position: 75px 2px;
+                                    cursor: pointer;
+                                    &:hover {
+                                        background-image: url('../images/locator/download-black.png');
+                                        background-repeat: no-repeat;
+                                        background-size: 22px;
+                                        background-position: 75px 2px;
+                                    }
+                                    @include smdesktop {
+                                        background-position: 35px 2px;
+                                        &:hover {
+                                            background-position: 35px 2px;
+                                        }
+                                    }
+                                    @include tablet {
+                                        background-position: 5px 2px;
+                                        &:hover {
+                                            background-position: 5px 2px;
+                                        }
+                                    }
+                                    @include mobile {
+                                        background-position: 0px 2px;
+                                        &:hover {
+                                            background-position: 0px 2px;
+                                        }
+                                    }
+                                    p {
+                                        display: inline-block;
+                                        margin-left: 15px;
+                                        // transform: translateY(50%);
+                                        @include tablet {
+                                            font-size: 12px;
+                                        }
+                                        @include mobile {
+                                            margin-left: 40px;
+                                        }
+                                    }
+                                }
+                            }
+                            .website {
+                                @include mobile {
+                                    margin-left: 40px;
+                                }
+                                a {
+                                    color: #000;
+                                    text-decoration: underline;
+                                    // transform: translateY(50%);
+                                    &:hover {
+                                        color: #337ab7;
+                                    }
+                                    @include tablet {
+                                        font-size: 12px;
+                                    }
+                                    @include tablet {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                            .action-button {
+                                margin: 20px 0 0 40px;
+                                @include xmobile {
+                                    margin: 20px 0 0 0;
+                                }
+                                .action {
+                                    display: inline-block;
+                                    margin-right: 15px;
+                                    margin-bottom: 10px;
+                                    &:last-child {
+                                        margin-right: 0;
+                                        margin-bottom: 0px;
+                                    }
+                                    &.call {
+                                        .bgw {
+                                            padding: 6px 40px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

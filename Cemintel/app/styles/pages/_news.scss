@@ -1,0 +1,87 @@
+.news-block {
+    .news-header {
+        padding: 44px 0px;
+        background-color: #e8e8e8;
+        @include tablet {
+            padding: 20px 0;
+        }
+        @include mobile {
+            padding: 45px 0 10px;
+        }
+    }
+    .news-content {
+        padding: 50px 0 100px;
+        @include mobile {
+            padding: 25px 0px 75px;
+        }
+        .news-list-block {
+            overflow: hidden;
+            padding: 75px 0;
+            border-bottom: 1px solid #cacaca;
+            @include mobile {
+                padding: 35px 0 50px;
+            }
+            &:first-child {
+                padding: 0 0 75px;
+                @include mobile {
+                    padding: 0px 0px 35px;
+                }
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+            .news-list-month {
+                text-align: right;
+                @include mobile {
+                    margin-bottom: 25px;
+                    text-align: left;
+                }
+                h3 {
+                    margin: 0;
+                }
+            }
+            .new-list-content {
+                .new-list-content-inner {
+                    margin-bottom: 25px;
+                    @include mobile {
+                        margin-bottom: 50px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                    &:nth-child(3n+1) {
+                        clear: both;
+                    }
+                    .new-list-image {
+                        margin-bottom: 25px;
+                        @include mobile {
+                            margin-bottom: 15px;
+                            .heart-icon {
+                                top: 25%;
+                            }
+                            .view {
+                                bottom: 25%;
+                            }
+                        }
+                    }
+                    .new-list-date {
+                        color: #808080;
+                    }
+                    .new-list-content-body {
+                        &.dotdotdot {
+                            max-height: 300px;
+                            @include mobile {
+                                max-height: 100px;
+                            }
+                        }
+                    }
+                    .new-list-readmore {
+                        @include mobile {
+                            padding-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

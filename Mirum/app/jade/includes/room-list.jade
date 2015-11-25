@@ -1,0 +1,49 @@
+//- Created by Huy on 4/6/2015.
+.room-list
+  .container
+    ul
+      li
+        +link('Living room', '#')
+          +img('Living room', 'images/the-house/interior-img.jpg')
+          span.caption Living room
+      li
+        +link('Living room', '#')
+          +img('Living room', 'images/the-house/interior-img.jpg')
+          span.caption Dining room
+      li
+        +link('Living room', '#')
+          +img('Living room', 'images/the-house/interior-img.jpg')
+          span.caption Bedroom
+      li
+        +link('Living room', '#')
+          +img('Living room', 'images/the-house/interior-img.jpg')
+          span.caption Rooftop
+      li
+        +link('Living room', '#')
+          +img('Living room', 'images/the-house/interior-img.jpg')
+          span.caption Kitchen
+      li
+        +link('Living room', '#')
+          +img('Living room', 'images/the-house/interior-img.jpg')
+          span.caption Washroom
+      li
+        +link('Living room', '#')
+          +img('Living room', 'images/the-house/interior-img.jpg')
+          span.caption Courtyard
+      li
+        +link('Living room', '#')
+          +img('Living room', 'images/the-house/interior-img.jpg')
+          span.caption Entrance
+script(type="text/template").room-list-item-template.template.
+  <ul>
+    {{#each roomlist}}
+    <li>
+      <a href="#" data-id="{{dataID}}">
+        <img alt="{{title}}" src="{{thumb}}" />
+        <span class="caption">
+          {{title}}
+        </span>
+      </a>
+    </li>
+    {{/each}}
+  </ul>

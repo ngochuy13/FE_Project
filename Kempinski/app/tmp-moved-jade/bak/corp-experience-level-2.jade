@@ -1,0 +1,12 @@
+extends layouts/corp-template
+
+block vars
+  -title = 'Home'
+  -bodyClass = ''
+  -bannerIMG = 'home/banner.jpg'
+block container    
+  .inner
+    main#main
+      section.general-introduction
+        h2 General Introduction Title
+        include includes/article-detail

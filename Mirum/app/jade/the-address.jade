@@ -1,0 +1,24 @@
+extends layouts/layout
+
+block vars
+  -title = 'The House'
+  -bodyClass = 'the-address'
+block container
+  #urban-oasis.section
+    +parallax("The address", "images/the-address/address-bg-new.jpg")
+  .section.section-the-address
+    +introduction-text('THE ADDRESS').the-address-text
+      p Right in the very midst of Hong Kong’s bustling metropolis one can now turn a corner to be greeted by glorious contrast. Stylish townhouses set amidst lush greenery, fusing downtown chic with uptown grace and making each of these priceless dwellings a treasured gem. This holds true for the most desired districts of major global cities.
+  #city-list.section.section-citylist
+    include  includes/city-list
+  #central-district.section
+    +parallax("The address", "images/the-address/parallax-1.jpg")
+  #then-now.section.section-then-now
+    include includes/then-now
+  #full-image-address.section.section-full-address
+    +img('map section image', 'images/the-address/map-full-1.jpg')
+  .section.section-the-address
+    +introduction-text('The Private Legend').the-address-text
+      p Favored by the gentry across centuries, the tranquil environment of Happy Valley promises a high level of privacy and security.  In this reserved locale resides the crËme de la crËme of society including noble families, entrepreneurs, philanthropists, educators, and a number of famed celebrities.
+  #location-map.section.section-map
+    include includes/map-section

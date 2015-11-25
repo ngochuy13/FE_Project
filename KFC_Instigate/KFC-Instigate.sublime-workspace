@@ -1,0 +1,1259 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"roo",
+				"roomID"
+			],
+			[
+				"e",
+				"e"
+			],
+			[
+				"pa",
+				"parent"
+			],
+			[
+				"flo",
+				"floorID"
+			],
+			[
+				"un",
+				"unitID"
+			],
+			[
+				"tabl",
+				"table-cell"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"pare",
+				"parseInt"
+			],
+			[
+				"pre",
+				"percentage"
+			],
+			[
+				"fa",
+				"fade"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"ten",
+				"text-center"
+			],
+			[
+				"template",
+				"template_gallery_list_class"
+			],
+			[
+				"templ",
+				"template_thumb_list"
+			],
+			[
+				"tem",
+				"template_thumb_list_class"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"data",
+				"data-id"
+			],
+			[
+				"html",
+				"htmlItem"
+			],
+			[
+				"item",
+				"itemdata"
+			],
+			[
+				"script",
+				"scripts"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"prev",
+				"preventDefault"
+			],
+			[
+				"pos",
+				"pos:r	position:relative"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"re",
+				"render"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"txt",
+				"text-align"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"bst-",
+				"bst-icon	bst-icon"
+			],
+			[
+				"bs-pa",
+				"bst-panel	bst-panel"
+			],
+			[
+				"bs",
+				"bst-icon	bst-icon"
+			],
+			[
+				"ma",
+				"masonry"
+			],
+			[
+				"co",
+				"masonry-component"
+			],
+			[
+				"man",
+				"masonry-wrap"
+			],
+			[
+				"trs",
+				"trs	transition"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"ff",
+				"ffd600"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"sub",
+				"subscription-form"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"tile",
+				"title	Attr"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n   <head>\n      <meta charset=\"UTF-8\">\n      <title>KFC Instigate</title>\n      <meta name=\"description\" content=\"\">\n      <link href=\"http://fonts.googleapis.com/css?family=Lato:400,700\" rel=\"stylesheet\" type=\"text/css\">\n      <link rel=\"stylesheet\" href=\"styles/odfc-select.css\">\n      <link rel=\"stylesheet\" href=\"styles/main.css\">\n      <!--[if lt IE 9 ]>\n      <link rel=\"stylesheet\" href=\"styles/ie.css\"/>\n      <script src=\"http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js\"></script>\n      <script src=\"http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js\"></script>\n      <![endif]-->  \n   </head>\n   <body>\n      <!--[if lt IE 7]>\n      <p class=\"browsehappy\">You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/\">upgrade your browser</a> to improve your experience.</p>\n      <![endif]--> \n      <header class=\"site-header\">\n        <div class=\"block-logo\">\n           <a href=\"#\" class=\"home\">\n              <img src=\"images/logo.png\" alt=\"Home\">\n           </a>\n        </div>\n        <div class=\"block-search\">\n           <div class=\"row\">\n              <div class=\"text-search\"><span>Search:</span></div>\n              <div class=\"store\">\n                <span>Store</span>\n                <input type=\"text\" autocomplete=\"off\" name=\"search-text\">\n                <input type=\"submit\" value=\"Search\">\n              </div>\n              <div class=\"time\"><span>Time</span></div>\n           </div>\n           <div class=\"row\">\n             \n           </div>\n        </div>\n      </header>\n      <div id=\"main-content\" class=\"main-content\">\n         <div class=\"container\">\n\n         </div>\n      </div>\n      <footer class=\"site-footer\">\n        <div class=\"container\">\n          <div class=\"text-right\"><a href=\"#\" class=\"gotop\" title=\"Go Top\"></a></div>          \n        </div>\n      </footer>\n      <!-- script async=\"\" src=\"http://www.google-analytics.com/analytics.js\"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n         \n         ga('create', 'UA-XXXXX-X');\n         ga('send', 'pageview');\n      </script --> \n      <script src=\"scripts/jquery-1.9.1.min.js\"></script>\n      <script src=\"scripts/odfc-select.js\"></script>\n      <script src=\"scripts/Chart.js\"></script>\n      <script src=\"scripts/jquery.maskedinput.js\"></script>\n      <script src=\"scripts/main.js\"></script>\n   </body>\n</html>",
+			"file": "index.html",
+			"file_size": 2748,
+			"file_write_time": 130739941099510800,
+			"settings":
+			{
+				"buffer_size": 2712,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "styles/main.css",
+			"settings":
+			{
+				"buffer_size": 1057,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "wa",
+		"selected_items":
+		[
+			[
+				"wa",
+				"Word Wrap: Toggle"
+			],
+			[
+				"set sas",
+				"Set Syntax: Sass"
+			],
+			[
+				"set sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"set html",
+				"Set Syntax: HTML"
+			],
+			[
+				"set ht",
+				"Set Syntax: HTML (Tcl)"
+			],
+			[
+				"addd",
+				"Project: Add Folder"
+			],
+			[
+				"setsas",
+				"Set Syntax: Sass"
+			],
+			[
+				"set aj",
+				"Set Syntax: Jade"
+			],
+			[
+				"move",
+				"File: Move"
+			],
+			[
+				"wra",
+				"Word Wrap: Toggle"
+			],
+			[
+				"set js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"copy",
+				"File: Copy Path"
+			],
+			[
+				"setsa",
+				"Set Syntax: Sass"
+			],
+			[
+				"com",
+				"Toggle Comment"
+			],
+			[
+				"w",
+				"Word Wrap: Toggle"
+			],
+			[
+				"set sasa",
+				"Set Syntax: Sass"
+			],
+			[
+				"est sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"wr",
+				"Word Wrap: Toggle"
+			],
+			[
+				"mo",
+				"File: Move"
+			],
+			[
+				"de",
+				"File: Delete"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"set ja",
+				"Set Syntax: Jade"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"setsass",
+				"Set Syntax: Sass"
+			],
+			[
+				"save",
+				"Project: Save As"
+			],
+			[
+				"set ",
+				"Set Syntax: HTML"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"em",
+				"Set Syntax: Emmet"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"set hmtl",
+				"Set Syntax: HTML"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Huypham/KFC Instigate/_html",
+		"/D/Huypham/KFC Instigate/_html/styles"
+	],
+	"file_history":
+	[
+		"/D/Huypham/5ime/5ime000387/_html/app/ajax/WPF/detail-card.html",
+		"/D/Huypham/5ime/5ime000387/_html/app/ajax/WPF/data/data.json",
+		"/D/Huypham/5ime/5ime000387/_html/app/ajax/WPF/scripts/main.js",
+		"/D/Huypham/5ime/5ime000387/_html/app/ajax/WPF/styles/main.css",
+		"/D/Huypham/5ime/5ime000387/_html/app/ajax/WPF/styles/owl.theme.css",
+		"/D/Huypham/5ime/5ime000387/_html/app/ajax/WPF/styles/bookblock.css",
+		"/D/Huypham/WPF Card/git/styles/owl.theme.css",
+		"/D/Huypham/WPF Card/git/data/data.json",
+		"/D/Huypham/WPF Card/git/index.html",
+		"/D/Huypham/WPF Card/git/scripts/main.js",
+		"/D/Huypham/WPF Card/git/styles/main.css",
+		"/D/Huypham/5ime/5ime000387/_html/app/styles/pages.sass",
+		"/D/Huypham/5ime/5ime000387/_html/app/jade/includes/header-rules.jade",
+		"/D/Huypham/5ime/5ime000387/_html/app/jade/rules.jade",
+		"/D/Huypham/5ime/5ime000387/_html/app/jade/includes/reward.jade",
+		"/D/Huypham/5ime/5ime000387/_html/app/jade/includes/how-to-play.jade",
+		"/D/Huypham/5ime/5ime000387/_html/app/jade/includes/regulations.jade",
+		"/D/Huypham/5ime/5ime000387/_html/app/jade/info.jade",
+		"/D/Huypham/5ime/5ime000387/_html/app/styles/common.sass",
+		"/D/Huypham/5ime/5ime000387/_html/app/jade/includes/header.jade",
+		"/D/Huypham/Mirum/_html/app/jade/the-house.jade",
+		"/D/Huypham/Mirum/_html/app/styles/components.sass",
+		"/D/Huypham/Mirum/_html/Gruntfile.js",
+		"/D/Huypham/Mirum/_html/app/scripts/main.js",
+		"/D/Huypham/Mirum/_html/app/scripts/interior.js",
+		"/D/Huypham/Mirum/_html/app/jade/includes/floor-list.jade",
+		"/D/Huypham/Mirum/_html/app/jade/includes/map-section.jade",
+		"/D/Huypham/Mirum/CMS/CMSTemplates/BluePool/TheAddress.aspx",
+		"/D/Huypham/Mirum/_html/app/styles/editor.sass",
+		"/D/Huypham/Mirum/_html/app/styles/footer.sass",
+		"/D/Huypham/Mirum/_html/app/scripts/jquery.rwdImageMaps.js",
+		"/D/Huypham/Mirum/_html/app/styles/header.sass",
+		"/D/Huypham/Mirum/_html/app/scripts/img-data.js",
+		"/D/Huypham/Mirum/_html/app/scripts/data.js",
+		"/D/Huypham/Mirum/_html/app/jade/sales-info.jade",
+		"/D/Huypham/Mirum/CMS/CMSTemplates/BluePool/SalesInformation.aspx",
+		"/D/Huypham/Mirum/CMS/CMSTemplates/BluePool/TheGallery.aspx",
+		"/D/Huypham/Mirum/_html/app/jade/includes/masonry-garelly.jade",
+		"/D/Huypham/Mirum/_html/app/jade/includes/masonry-sale-document.jade",
+		"/D/Huypham/Mirum/_html/app/jade/includes/room-gallery.jade",
+		"/D/Huypham/Mirum/_html/app/scripts/garelly-masonry.js",
+		"/D/Huypham/Mirum/_html/app/jade/includes/garelly-list.jade",
+		"/D/Huypham/Mirum/_html/dist/scripts/main.js",
+		"/D/Huypham/Mirum/_html/app/styles/plugins-css.scss",
+		"/D/Huypham/Mirum/_html/app/styles/main.sass",
+		"/C/Users/Huy Pham/Desktop/img.dwg",
+		"/D/Huypham/Mirum/_html/dist/the-house.html",
+		"/D/Huypham/theme_jarvis/libraries.html",
+		"/D/Huypham/Mirum/_html/app/styles/plugins.sass",
+		"/D/Huypham/Mirum/_html/app/ajax/garelly.json",
+		"/D/Huypham/Mirum/_html/app/jade/libraries.jade",
+		"/D/Huypham/Mirum/_html/app/jade/includes/loading.jade",
+		"/D/Huypham/Mirum/_html/app/bower_components/handlebars/handlebars.min.js",
+		"/D/Huypham/Mirum/_html/app/styles/fontface.sass",
+		"/D/Huypham/Mirum/_html/app/styles/variables.sass",
+		"/D/Huypham/Mirum/_html/app/jade/includes/header.jade",
+		"/D/Huypham/Mirum/_html/app/styles/parallax.sass",
+		"/D/Huypham/Mirum/_html/.tmp/the-house.html",
+		"/D/Huypham/Mirum/_html/app/styles/bootstrap.scss",
+		"/D/Huypham/Mirum/_html/node_modules/grunt-contrib-uglify/node_modules/uglify-js/node_modules/yargs/lib/validation.js",
+		"/D/Huypham/Mirum/_html/app/jade/mixins/all.jade",
+		"/D/Huypham/Mirum/_html/app/jade/the-address.jade",
+		"/D/Huypham/Mirum/_html/app/jade/layouts/layout.jade",
+		"/D/Huypham/Mirum/_html/app/jade/includes/room-list.jade",
+		"/D/Huypham/Mirum/_html/app/jade/mixins/img.jade",
+		"/D/Huypham/Mirum/_html/app/jade/mixins/link.jade",
+		"/D/Huypham/Mirum/_html/app/jade/mixins/introduction-text.jade",
+		"/D/Huypham/Mirum/_html/app/jade/includes/unit-list.jade",
+		"/D/Huypham/Mirum/_html/app/jade/the-gallery.jade",
+		"/D/Huypham/Mirum/_html/app/jade/the-contact.jade",
+		"/D/Huypham/Mirum/_html/app/jade/includes/contact.jade",
+		"/D/Huypham/Mirum/_html/bower.json",
+		"/D/Huypham/Mirum/_html/app/bower_components/slick.js/slick/slick.js",
+		"/D/Huypham/Mirum Properties/bodoni_svtytwo_itc_tt_book/bodoni_svtytwo_itc_tt_book (1)/fonts.css",
+		"/D/Huypham/Mirum/_html/app/bower_components/image-preloader/odfc-preload-image.js",
+		"/D/Huypham/Mirum/_html/app/bower_components/pubsub/odfc-pubsub.js",
+		"/D/Huypham/Mirum/_html/.gitignore",
+		"/D/Huypham/Mirum/.gitignore",
+		"/D/Huypham/Mirum/_html/app/jade/the-garelly.jade",
+		"/D/Huypham/Mirum/_html/app/scripts/garelly.js",
+		"/D/Huypham/Mirum/_html/app/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_component-animations.scss",
+		"/D/Huypham/Mirum/_html/app/images/icon-down-pdf.png",
+		"/D/Huypham/Mirum/_html/app/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_normalize.scss",
+		"/D/Huypham/Mirum/_html/.tmp/the-garelly.html",
+		"/D/Huypham/Mirum/_html/app/jade/mixins/sales-info.jade",
+		"/D/Huypham/Mirum/_html/node_modules/grunt-mocha/node_modules/mocha/lib/reporters/templates/menu.jade",
+		"/D/Huypham/Mirum/_html/app/jade/index.jade",
+		"/D/Huypham/Mirum/_html/app/jade/mixins/text-full-page.jade",
+		"/D/Huypham/Mirum/_html/app/jade/mixins/parallax-image.jade",
+		"/C/Users/Huy Pham/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/Huypham/Mirum/_html/.tmp/index.html",
+		"/D/Huypham/Mirum/_html/dist/index.html",
+		"/D/Huypham/work/note-importan",
+		"/D/Huypham/theme_jarvis/js/javascript.js",
+		"/D/Huypham/theme_jarvis/css/style.css",
+		"/C/Users/Huy Pham/Downloads/isotope-docs/index.html",
+		"/D/Huypham/theme_jarvis/index.html",
+		"/D/Huypham/work/index_owcaroucel.html",
+		"/D/Huypham/work/index.html",
+		"/D/Huypham/work/css/style.css",
+		"/D/Huypham/theme_jarvis/lib/stellar.js-master/test/jquery.stellar.html",
+		"/D/Huypham/theme_jarvis/lib/stellar.js-master/test/jquery-loader.js",
+		"/D/Huypham/work/lib/gray-gh-pages/index.html",
+		"/D/Huypham/work/lib/jquery-match-height-master/test.html",
+		"/D/Huypham/work/lib/skrollr-menu-master/index.html",
+		"/D/Huypham/work/lib/skrollr-master/examples/amd.html",
+		"/D/Huypham/work/lib/skrollr-master/examples/anchor_target.html",
+		"/D/Huypham/work/lib/typeahead.js-master/test/playground.html",
+		"/D/Huypham/work/lib/typeahead.js/typeahead.jquery.js",
+		"/D/Huypham/work/lib/silviomoreto-bootstrap-select-v1.6.3-0-g3b5cfe0/silviomoreto-bootstrap-select-83d5a1b/test.html",
+		"/D/Huypham/work/lib/jquery-validation-1.13.1/demo/index.html",
+		"/D/Huypham/work/lib/jquery-validation-1.13.1/demo/custom-methods-demo.html",
+		"/D/Huypham/work/lib/superslides-0.6-stable/examples/simple.html",
+		"/D/Huypham/work/lib/superslides-0.6-stable/examples/constrained.html",
+		"/D/Huypham/work/lib/superslides-0.6-stable/examples/multiple.html",
+		"/D/Huypham/work/lib/jquery.nicescroll-master/demo/index.html",
+		"/D/Huypham/work/lib/garand-sticky-5158fec/example-header.html",
+		"/D/Huypham/work/lib/garand-sticky-5158fec/example-right.html",
+		"/D/Huypham/work/lib/garand-sticky-5158fec/example-center.html",
+		"/D/Huypham/work/lib/modernizr/index.html",
+		"/D/Huypham/work/lib/bourbon/README.md",
+		"/D/Huypham/work/lib/modernizr/modernizr.js",
+		"/D/Huypham/work/lib/jquery.jcarousel/jquery.jcarousel.css",
+		"/D/Huypham/work/js/javascript.js",
+		"/D/Huypham/work/css/reset.css",
+		"/D/Huypham/work/css/normalize.css",
+		"/D/Huypham/work/lib/jquery.jcarousel/jquery.jcarousel.js",
+		"/D/Huypham/work/lib/font-awesome-4.3.0/css/font-awesome.css"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 96.0,
+		"where_history":
+		[
+			"D:\\Huypham\\Mirum\\_html\\",
+			"D:\\Huypham\\Mirum\\_html\\app",
+			"D:\\Huypham\\Mirum\\_html\\",
+			"D:\\Huypham\\Mirum\\_html\\app\\bower_components\\bootstrap-sass\\assets\\stylesheets",
+			"<project>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"`",
+			"",
+			".ls",
+			"mo",
+			"transf",
+			"0.8",
+			"173",
+			"48",
+			" ($('#",
+			"3px",
+			";",
+			"the house",
+			"unit/a/floor-0",
+			"/\n",
+			"unit/a/floor-0",
+			"/\n",
+			"unit/a/floor-0",
+			"unit/a/floor-0/",
+			"unit/a/floor-0",
+			"\"thumb\"",
+			"A_floor",
+			"A_floor0",
+			"\"rooms\"",
+			"A_floor0",
+			"\"rooms\"",
+			"\"gallery\": [{",
+			"\"id\"",
+			"roomcoords",
+			"room-coords",
+			"coords",
+			".niceScroll()",
+			".niceScroll",
+			"nicesc",
+			"module.show =",
+			"module.show",
+			"$(\"html, body\").niceScroll()",
+			"niceScroll",
+			"interior-bg.jpg",
+			"masonry",
+			"sales-document",
+			"item",
+			"niceScroll",
+			"();\n",
+			"hide",
+			"selected-drawing",
+			"<<",
+			"loading",
+			"console",
+			"\nscript(type=\"text/template\").room-info-thumb-list-item-template.template\n  li\n    +link-img('images/the-house/thumb-1.png', '', '#')",
+			"\" A_",
+			"\"id\": \"floor",
+			"\"id\": \"B_floor",
+			"Unit A ",
+			"\"id\": \" floor",
+			"\"livingRoom\": {",
+			"images/",
+			"thumb",
+			"images",
+			"+link-img('images/the-house/interior-img.jpg', 'Living room', '#')",
+			"dtImg",
+			"data_all",
+			"onchange.floor",
+			"index",
+			"\n      .room-detail",
+			";",
+			"bdb8a8",
+			"img-thumb",
+			"thumb",
+			";",
+			"e4e1de",
+			";",
+			"\n          li\n            +link('Unit B', '#')",
+			"parall",
+			"libraries",
+			"index",
+			";",
+			"fonts/",
+			"fonts",
+			"44px",
+			"none",
+			"\n  // Masonry\n  MP.UI.masonry();",
+			"section-garelly-list",
+			"id",
+			"masonry",
+			"\\",
+			"masonry",
+			"img-thumb",
+			"img-src",
+			"data",
+			"{\n		\"img-src\": \"images/the-garelly/ReT_2145775.png\",\n		\"title\": \"title 1\",\n		\"caption\": \"caption\"\n	},",
+			";",
+			".title",
+			"eee5de",
+			"*",
+			"box-sizing: border-box",
+			"box",
+			";",
+			"bodoni_svtytwo_itc_tt_book",
+			"fontawesome-webfont",
+			";",
+			"garelly",
+			"address",
+			"a",
+			"The Address",
+			"animate-css",
+			"animate-css-trasition",
+			"demo.rocknrolladesigns",
+			"text-decoration: none;",
+			"\n.home-parallax-2 {\n	background-image: url(../img/parallax1.jpg);\n}",
+			"home-parallax-2",
+			"portfolio-overlay",
+			";\n",
+			"width=\"400\" height=\"250\" ",
+			">\n",
+			"\n				<div class=\"term-branding term-photography term-web portfolio-item\">\n					<div class=\"portfolio\">\n						<a href=\"#\" class=\"portfolio-image\">\n							<img class=\"portfolio-lazyLoad\" src=\"img/parallax-2-370x241.jpg\" width=\"400\" height=\"250\" data-original=\"img/parallax-2-370x241.jpg\" style=\"display: block;\">\n							<div class=\"portfolio-overlay\">\n								<div class=\"thumb-info\">\n									<h3>Vitae ante</h3>\n									<p class=\"portfolio-tags\">Branding, Photography, Web</p>\n								</div>\n							</div>\n						</a>\n					</div>\n				</div>",
+			"prev",
+			"\n.bg-gray {\n	background: rgb(246, 246, 246);\n}",
+			"\n				    <li class=\"item\" style=\"\">\n					    <p class=\"jtwt_tweet_text\">RT &nbsp;<a href=\"http://twitter.com/neoelemento\" target=\"_blank\" rel=\"prettyPhoto[216_slider]\">@neoelemento</a>&nbsp;: I don't know how many times I watched this &nbsp;<a href=\"http://twitter.com/envato\" target=\"_blank\" rel=\"prettyPhoto[216_slider]\">@envato</a>&nbsp; video featuring &nbsp;<a href=\"http://twitter.com/chriscoyier\" target=\"_blank\" rel=\"prettyPhoto[216_slider]\">@chriscoyier</a>&nbsp; . Inspirational on many levels!https://t…</p>\n					    <a href=\"http://twitter.com/envato/statuses/583635068817645568\" class=\"jtwt_date\" rel=\"prettyPhoto[216_slider]\">14 hours ago </a>\n				    </li>",
+			"\n	<div class=\"section\">\n		<div class=\"block-client\">\n			<div class=\"container\">\n				<div class=\"client-logos\">\n					<a href=\"#\" title=\"client 1\"><img src=\"img/client1.png\" alt=\"client 1\"></a>\n					<a href=\"#\" title=\"client 2\"><img src=\"img/client1.png\" alt=\"client 2\"></a>\n					<a href=\"#\" title=\"client 3\"><img src=\"img/client1.png\" alt=\"client 3\"></a>\n					<a href=\"#\" title=\"client 4\"><img src=\"img/client1.png\" alt=\"client 4\"></a>\n					<a href=\"#\" title=\"client 5\"><img src=\"img/client1.png\" alt=\"client 5\"></a>\n					<a href=\"#\" title=\"client 6\"><img src=\"img/client1.png\" alt=\"client 6\"></a>\n					<a href=\"#\" title=\"client 7\"><img src=\"img/client1.png\" alt=\"client 7\"></a>\n					<a href=\"#\" title=\"client 8\"><img src=\"img/client1.png\" alt=\"client 8\"></a>\n				</div>\n			</div>\n		</div>\n	</div>",
+			"\n.",
+			";\n",
+			"\n.home-parallax {\n	background-image: url(../img/home-parallax.jpg); 	\n}",
+			">\n",
+			"\n.row .col-1_3 {\n	float: left;\n	width: 33.3333%;\n	padding: 0 19px;\n	box-sizing: border-box;\n	margin-bottom: 30px;\n}",
+			"\n						<div class=\"col col-1_4\">\n							<span class=\"milestone-count highlight\">680</span>\n							<h6 class=\"milestone-details\">Pizzas Ordered</h6>\n						</div>",
+			"\n					<div class=\"col col-1_3\">\n						<div class=\"img-container\"><img src=\"img/paperplane.png\" alt=\"Innovative\"></div>\n						<h3>Innovative</h3>\n						<p>Pellentesquemattis arcu malesuada in. Donec urna sem, rutrum sit amet pellentesque vel, suscipit at metus.</p>\n					</div>",
+			">\n",
+			"com"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\\'",
+			"",
+			"rooms",
+			"",
+			"amplitude-book",
+			"bodoni_svtytwo_itc_tt_book",
+			"",
+			"contact",
+			"garelly",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2712,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1537,
+								1537
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 228.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "styles/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1057,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								200,
+								200
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "KFC-Instigate.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"o",
+				"styles\\owl.theme.css"
+			],
+			[
+				"main",
+				"styles\\main.css"
+			],
+			[
+				"page",
+				"app\\styles\\pages.sass"
+			],
+			[
+				"com",
+				"app\\styles\\common.sass"
+			],
+			[
+				"header.ja",
+				"app\\jade\\includes\\header.jade"
+			],
+			[
+				"thehouse.ja",
+				"_html\\app\\jade\\the-house.jade"
+			],
+			[
+				"compo",
+				"_html\\app\\styles\\components.sass"
+			],
+			[
+				"inter",
+				"_html\\app\\scripts\\interior.js"
+			],
+			[
+				"foot",
+				"_html\\app\\styles\\footer.sass"
+			],
+			[
+				"inte",
+				"_html\\app\\scripts\\interior.js"
+			],
+			[
+				"gare",
+				"_html\\app\\jade\\includes\\masonry-garelly.jade"
+			],
+			[
+				"salesinfjade",
+				"_html\\app\\jade\\sales-info.jade"
+			],
+			[
+				"sales",
+				"BluePool\\SalesInformation.aspx"
+			],
+			[
+				"mainjs",
+				"_html\\app\\scripts\\main.js"
+			],
+			[
+				"plu",
+				"_html\\app\\styles\\plugins-css.scss"
+			],
+			[
+				"mains",
+				"_html\\app\\styles\\main.sass"
+			],
+			[
+				"garell",
+				"_html\\app\\scripts\\garelly-masonry.js"
+			],
+			[
+				"edit",
+				"app\\styles\\editor.sass"
+			],
+			[
+				"footer",
+				"app\\styles\\footer.sass"
+			],
+			[
+				"header",
+				"app\\styles\\header.sass"
+			],
+			[
+				"mai",
+				"app\\scripts\\main.js"
+			],
+			[
+				"the-hou",
+				"app\\jade\\the-house.jade"
+			],
+			[
+				"theho",
+				"app\\jade\\the-house.jade"
+			],
+			[
+				"liba",
+				"app\\jade\\libraries.jade"
+			],
+			[
+				"in",
+				"app\\scripts\\interior.js"
+			],
+			[
+				"plugin",
+				"app\\styles\\plugins-css.scss"
+			],
+			[
+				"unitli",
+				"app\\jade\\includes\\unit-list.jade"
+			],
+			[
+				"od",
+				"app\\bower_components\\pubsub\\odfc-pubsub.js"
+			],
+			[
+				"data",
+				"app\\scripts\\data.js"
+			],
+			[
+				"imgjs",
+				"app\\scripts\\img-data.js"
+			],
+			[
+				"imgdata",
+				"app\\scripts\\img-data.js"
+			],
+			[
+				"li",
+				"app\\jade\\libraries.jade"
+			],
+			[
+				"roomlis",
+				"app\\jade\\includes\\room-list.jade"
+			],
+			[
+				"thehou",
+				"app\\jade\\the-house.jade"
+			],
+			[
+				"thehous",
+				"app\\jade\\the-house.jade"
+			],
+			[
+				"giti",
+				".gitignore"
+			],
+			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
+				"the-galle",
+				"app\\jade\\the-gallery.jade"
+			],
+			[
+				"slick",
+				"app\\bower_components\\slick.js\\slick\\slick.js"
+			],
+			[
+				"m",
+				"app\\scripts\\main.js"
+			],
+			[
+				"boot",
+				"app\\styles\\bootstrap.scss"
+			],
+			[
+				"co",
+				"app\\styles\\components.sass"
+			],
+			[
+				"va",
+				"app\\styles\\variables.sass"
+			],
+			[
+				"ga",
+				"app\\scripts\\garelly-masonry.js"
+			],
+			[
+				"paral",
+				"app\\styles\\parallax.sass"
+			],
+			[
+				"boo",
+				"app\\styles\\bootstrap.scss"
+			],
+			[
+				"head",
+				"app\\styles\\header.sass"
+			],
+			[
+				"",
+				"app\\jade\\the-house.jade"
+			],
+			[
+				"thehouse",
+				"app\\jade\\the-house.jade"
+			],
+			[
+				"thega",
+				"app\\jade\\the-gallery.jade"
+			],
+			[
+				"librar",
+				"app\\jade\\libraries.jade"
+			],
+			[
+				"thegal",
+				"app\\jade\\the-gallery.jade"
+			],
+			[
+				"gallery",
+				"app\\jade\\includes\\room-gallery.jade"
+			],
+			[
+				"sale",
+				"app\\jade\\sales-info.jade"
+			],
+			[
+				"libra",
+				"app\\jade\\libraries.jade"
+			],
+			[
+				"fontca",
+				"app\\styles\\fontface.sass"
+			],
+			[
+				"the",
+				"app\\jade\\the-gallery.jade"
+			],
+			[
+				"theg",
+				"app\\jade\\the-gallery.jade"
+			],
+			[
+				"garel",
+				"app\\jade\\includes\\garelly-list.jade"
+			],
+			[
+				"foo",
+				"app\\styles\\footer.sass"
+			],
+			[
+				"edi",
+				"app\\styles\\editor.sass"
+			],
+			[
+				"hea",
+				"app\\jade\\includes\\header.jade"
+			],
+			[
+				"he",
+				"app\\styles\\header.sass"
+			],
+			[
+				"thecon",
+				"app\\jade\\the-contact.jade"
+			],
+			[
+				"thecontac",
+				"app\\jade\\the-contact.jade"
+			],
+			[
+				"headerjade",
+				"app\\jade\\includes\\header.jade"
+			],
+			[
+				"comp",
+				"app\\styles\\components.sass"
+			],
+			[
+				"masonjs",
+				"app\\scripts\\garelly-masonry.js"
+			],
+			[
+				"mainsj",
+				"app\\scripts\\main.js"
+			],
+			[
+				"garelljs",
+				"app\\scripts\\garelly-masonry.js"
+			],
+			[
+				"the-ga",
+				"app\\jade\\the-garelly.jade"
+			],
+			[
+				"garelly",
+				"app\\scripts\\garelly-masonry.js"
+			],
+			[
+				"mainj",
+				"app\\scripts\\main.js"
+			],
+			[
+				"galleryjade",
+				"app\\jade\\includes\\room-gallery.jade"
+			],
+			[
+				"handlejs",
+				"app\\bower_components\\handlebars\\handlebars.min.js"
+			],
+			[
+				"librarijade",
+				"app\\jade\\libraries.jade"
+			],
+			[
+				"layout",
+				"app\\jade\\layouts\\layout.jade"
+			],
+			[
+				"mason",
+				"app\\jade\\includes\\masonry-garelly.jade"
+			],
+			[
+				"masonry-garelly",
+				"app\\jade\\includes\\masonry-garelly.jade"
+			],
+			[
+				"val",
+				"node_modules\\grunt-contrib-uglify\\node_modules\\uglify-js\\node_modules\\yargs\\lib\\validation.js"
+			],
+			[
+				"thegalljade",
+				"app\\jade\\the-garelly.jade"
+			],
+			[
+				"librarjade",
+				"app\\jade\\libraries.jade"
+			],
+			[
+				"layou",
+				"app\\jade\\layouts\\layout.jade"
+			],
+			[
+				"thejade",
+				"app\\jade\\the-garelly.jade"
+			],
+			[
+				"coma",
+				"app\\bower_components\\bootstrap-sass\\assets\\stylesheets\\bootstrap\\_component-animations.scss"
+			],
+			[
+				"lib",
+				"app\\jade\\libraries.jade"
+			],
+			[
+				"lira",
+				"app\\jade\\libraries.jade"
+			],
+			[
+				"var",
+				"app\\styles\\variables.sass"
+			],
+			[
+				"maso",
+				"app\\jade\\includes\\masonry-sale-document.jade"
+			],
+			[
+				"valsas",
+				"app\\styles\\variables.sass"
+			],
+			[
+				"bootnorm",
+				"app\\bower_components\\bootstrap-sass\\assets\\stylesheets\\bootstrap\\_normalize.scss"
+			],
+			[
+				"thegare",
+				"app\\jade\\the-garelly.jade"
+			],
+			[
+				"the-gareja",
+				"app\\jade\\the-garelly.jade"
+			],
+			[
+				"varia",
+				"app\\styles\\variables.sass"
+			],
+			[
+				"salesin",
+				"app\\jade\\sales-info.jade"
+			],
+			[
+				"all",
+				"app\\jade\\mixins\\all.jade"
+			],
+			[
+				"masory-ga",
+				"app\\jade\\includes\\masonry-garelly.jade"
+			],
+			[
+				"saeinf",
+				"app\\jade\\sales-info.jade"
+			],
+			[
+				"masos",
+				"app\\jade\\includes\\masonry-sale-document.jade"
+			],
+			[
+				"contactja",
+				"app\\jade\\mixins\\contact.jade"
+			],
+			[
+				"homejade",
+				"node_modules\\grunt-mocha\\node_modules\\mocha\\lib\\reporters\\templates\\menu.jade"
+			],
+			[
+				"lay",
+				"app\\jade\\layouts\\layout.jade"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\Huypham\\Note\\Note.sublime-project"
+			],
+			[
+				"not",
+				"D:\\Huypham\\Note\\Note.sublime-project"
+			],
+			[
+				"no",
+				"D:\\Huypham\\Note\\Note.sublime-project"
+			],
+			[
+				"ca",
+				"D:\\Huypham\\WPF Card\\WPF Card.sublime-workspace"
+			],
+			[
+				"i",
+				"D:\\Huypham\\theme_jarvis\\index.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 232.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

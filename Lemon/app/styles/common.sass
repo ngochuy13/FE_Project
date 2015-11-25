@@ -1,0 +1,942 @@
+.img-responsive
+  display: block
+  max-width: 100%
+  margin: 0 auto
+
+.img-circle
+  +border-radius(50%)
+  display: block
+
+.figure
+  border: 1px solid #d2dce5
+  padding: 3px
+  margin: 0 auto
+  max-width: 171px
+  @include box-sizing(border-box)
+  img
+    display: block
+    max-width: 100%
+    width: 100%
+
+// Triangle
+$triangle-bd: #E5EDF4
+.triangle-top-left,
+.triangle-bottom-right
+  display: block
+  position: absolute
+  @include square(0)
+
+.triangle-top-left
+  top: 1px
+  left: 1px
+  border-top: 9px solid $triangle-bd
+  border-right: 9px solid transparent
+  &.style-1
+    border-top: 7px solid $triangle-bd
+    border-right: 7px solid transparent
+
+.triangle-bottom-right
+  top: auto
+  bottom: 1px
+  right: 1px
+  border-bottom: 9px solid $triangle-bd
+  border-left: 9px solid transparent
+  &.style-1
+    border-bottom: 7px solid $triangle-bd
+    border-left: 7px solid transparent
+
+//vu.le
+#main
+  width: 100%
+  float: left
+  overflow: hidden
+.board
+  &.agree
+    .card
+      border: 1px solid $agreebar-bg 
+  &.discuss
+    .card
+      border: 1px solid $discussbar-bg 
+      &.active
+        background: $discussbar-bg
+  &.consider
+    .card
+      border: 1px solid $considerbar-bg
+.card-wrapper
+  box-sizing: border-box
+  width: 100%
+  float: left 
+  padding: 0px 37px 24px 37px
+.col-1-1
+  .card
+    @media screen and (min-width: 1024px)
+      width: calc(50% - 36px)
+      &:nth-child(n + 1)
+        margin-right: 18px
+      &:nth-child(2n + 2)
+        margin-left: 18px
+.card
+  width: 100% 
+  min-height: 126px
+  float: left
+  background: #fff
+  margin-bottom: 15px
+  margin-top: 10px
+  box-sizing: border-box
+  border: 1px solid $actitivybar-bg
+  position: relative
+  &.card-message
+    min-height: 0
+    background: $discussbar-bg
+    .card-content
+      padding: 30px 0px
+      min-height: 0
+      .body
+        width: calc(100% - 104px)
+        .text
+          font-family: 'MuseoSans'
+          font-size: 17px
+      .label
+        width: 25px
+        height: 47px
+        background: url(../images/sprites/gray-lemon-icon.png) no-repeat
+        background-size: contain
+        margin: 20px
+    &.add-detail
+      text-align: center
+      .body
+        width: 100%
+        background: url(../images/sprites/gray-lemon-icon.png) no-repeat
+        background-size: contain
+        background-position: 35px center
+      .btn-add-detail
+        font-size: 17px
+        color: #9f9fa0
+        text-decoration: none
+        background: #fff2a1
+        padding: 10px
+        display: inline-block
+        margin-top: 13px
+  
+  .card-layer
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    margin: auto
+    z-index: -1
+    span
+      position: absolute
+      width: 100%
+      height: 100%
+      border: 1px solid #FFDE14
+      top: 0px
+      right: 0px
+      background-color: #fff8ca 
+      z-index: 0
+      display: none
+      & + span
+        z-index: 2
+        top: 3px
+        right: 3px
+        display: block
+        & + span
+          z-index: 1
+          top: 7px
+          right: 7px
+          display: block
+          & + span
+            z-index: 0
+            top: 11px
+            right: 11px
+            display: block
+  .card-content
+    padding: 15px 0px
+    float: left
+    overflow-x: hidden
+    position: relative
+    width: 100%
+    min-height: 128px
+    .overlay
+      transition: 100ms
+      display: none
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+      margin: auto
+      background: $discuss-border
+      .btn-close
+        top: 13px
+        right: 13px
+        background: url(../images/sprites/close-icon.png)
+        background-size: contain
+        border: 0
+        width: 17px
+        height: 17px
+        display: inline-block
+        position: absolute
+      .btn-wrap
+        text-align: center
+        height: 39px
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        margin: auto
+        position: absolute
+        a.btn
+          width: 50px
+          text-align: center
+          border: 0
+          display: inline-block
+          margin: 0 5px
+          color: $card-text
+          text-decoration: none
+          font-size: 11px
+          padding-top: 45px
+          background-repeat: no-repeat!important
+          &:hover
+            color: #fff
+          &.btn-msg-large
+            background: url(../images/sprites/msg-icon-2.png) center top
+            background-size: 39px
+          &.btn-msg-large.blue
+            background: url(../images/sprites/msg-icon-3.png) center top
+            background-size: 39px
+          &.btn-check-large.blue
+            background: url(../images/sprites/check-icon-4.png) center top
+            background-size: 39px
+          &.btn-check-large
+            background: url(../images/sprites/check-icon-2.png) center top 
+            background-size: 39px
+          &.btn-edit-large
+            background: url(../images/sprites/edit-icon-2.png) center top
+            background-size: 39px
+          &.btn-remove-large
+            background: url(../images/sprites/remove-icon-2.png) center top
+            background-size: 39px
+          &.btn-history-large
+            background: url(../images/sprites/history-icon.png) center top
+            background-size: 39px
+    &:hover
+      // .overlay
+      //   opacity: 1
+      .action
+        display: block
+    .label
+      float: left
+      width: 42px
+      text-align: center
+      .user
+        width: 100%
+        height: 28px
+        display: inline-block
+        font-size: 14px
+        padding-top: 25px
+        color: #fff
+        & + span
+          color: #f7942d
+          font-size: 14px
+          margin-top: 3px
+          float: left
+          width: 100%
+        &.user1
+          background: url(../images/sprites/user1.png) no-repeat center 
+          background-size: contain
+        &.user2
+          background: url(../images/sprites/user2.png) no-repeat center
+          background-size: contain
+        &.gray-lemon
+          background: url(../images/sprites/gray-lemon-icon.png) no-repeat center
+          background-size: contain
+          & + span
+            color: #9f9fa0
+            font-size: 14px
+            margin-top: 3px
+            float: left
+            width: 100%
+    .body
+      float: left
+      width: calc(100% - 84px) 
+      .title
+        font-family: 'NeuzeitGro-Bol'
+        font-weight: bold
+        font-size: 14px
+        display: inline-block
+        padding-right: 20px
+        color: $card-text
+        .editable
+          float: left
+          margin-right: 5px
+        &.could
+          background: url(../images/sprites/could-icon.png) no-repeat center right
+          background-size: contain 
+        &.ip
+          background: url(../images/sprites/ip-icon.png) no-repeat center right
+          background-size: contain 
+      .text
+        .line
+          font-size: 14px
+          font-family: 'NeuzeitGro-Reg' 
+          float: left
+          width: 100%
+          clear: both
+          label 
+            float: left
+            span 
+              float: left
+
+    
+        textarea
+          font-family: 'NeuzeitGro-Reg'
+          font-weight: normal
+          font-size: 14px
+          color: #4d4e4d
+          width: calc(100% - 20px)
+          min-height: 100px
+          padding: 5px
+      &.select
+        .title
+          font-size: 17px
+        .text
+          margin-bottom: 15px
+    .action
+      float: left 
+      width: 42px
+      text-align: center
+      transition: transform 500ms
+      display: none
+      .btn-check
+        margin-bottom: 4px
+        width: 28px
+        height: 28px
+        border: 0
+        float: left
+        background: url(../images/sprites/check-icon-1.png) no-repeat
+        background-size: contain
+      .btn-msg
+        margin-bottom: 4px
+        width: 28px
+        height: 28px
+        border: 0
+        float: left
+        background: url(../images/sprites/msg-icon.png) no-repeat
+        background-size: contain
+      .btn-remove
+        margin-bottom: 4px
+        width: 28px
+        height: 28px
+        border: 0
+        float: left
+        background: url(../images/sprites/remove-icon.png) no-repeat
+        background-size: contain
+
+.btn-avtivity-show
+  background: url(../images/sprites/maximize-icon.png)
+  background-size: calc(100% - 20px)
+  width: 47px
+  height: 49px 
+  background-repeat: no-repeat
+  background-position: center 
+  border: 0
+  z-index: 2
+  position: absolute
+  left: 0
+  top: 0
+.btn-board-full
+  background: url(../images/sprites/maximize-icon-2.png)
+  background-size: calc(100% - 20px)
+  width: 47px
+  height: 49px 
+  background-repeat: no-repeat
+  background-position: center 
+  border: 0
+  z-index: 2
+  position: absolute
+  left: 0
+  top: 0
+.btn-avtivity-hide
+  background: url(../images/sprites/minimize-icon.png)
+  background-size: calc(100% - 20px)
+  width: 47px
+  height: 49px 
+  background-repeat: no-repeat
+  background-position: center 
+  border: 0
+  z-index: 2
+  position: absolute
+  right: 0 
+  top: 0
+
+.board-title
+  .btn-case-study
+    background: url(../images/sprites/case-study-icon.png)
+    background-size: calc(100% - 20px)
+    width: 47px
+    height: 44px 
+    background-repeat: no-repeat
+    background-position: center 
+    border: 0
+    z-index: 2
+    position: absolute
+    left: 0 
+    top: 0
+.btn-close
+  background: url(../images/sprites/close-icon.png) no-repeat
+  background-size: calc(100% - 24px)
+  width: 47px
+  height: 44px 
+  background-repeat: no-repeat
+  background-position: center 
+  border: 0
+  z-index: 2
+  position: absolute
+  right: 0 
+  top: 0
+.title
+  font-family: "NeuzeitGro-Bol"
+  margin-bottom: 8px
+  font-size: 17px
+.content 
+  font-family: "NeuzeitGro-Reg"
+  p
+    margin-bottom: 15px
+.btn-group
+  width: 68px
+  height: 34px
+  z-index: 2
+  position: absolute
+  bottom: 4px
+  left: 4px
+  .btn
+    float: left
+    width: 50%
+    height: 100%
+  .btn-status
+    float: left
+    width: 50%
+    height: 100%
+.btn-group 
+  .btn-archive
+    background: url(../images/sprites/archive-icon.png) no-repeat center
+    background-size: calc(100% - 8px)
+  .btn-folder
+    background: url(../images/sprites/folder-icon.png) no-repeat center
+    background-size: calc(100% - 8px)
+.consider
+  .btn-group 
+    .btn-archive
+      background-color: $considerbar-bg!important
+    .btn-status
+      background-color: $considerpopup-bar-bg!important
+      &.done
+        background: url(../images/sprites/check-icon-3.png) no-repeat center
+        background-size: 16px
+.discuss
+  .btn-group 
+    .btn-folder
+      background-color: $discussbar-bg!important
+    .btn-status
+      background-color: $discusspopup-bar-bg!important
+      &.number
+        font-family: 'MuseoSans'
+        font-size: 17px
+        background-size: 16px
+        color: #9fa0a0
+        text-align: center
+        line-height: 34px
+.modal
+  display: none
+  position: fixed
+  width: 100%
+  height: 100%
+  z-index: 4
+  top: 0
+  left: 0
+  &.equity-modal
+    .modal-overlay
+      background: #96d6ee
+      opacity: 0.9
+      position: absolute
+      width: 100%
+      height: 100%
+      z-index: 1
+      top: 0
+      left: 0
+    .modal-body
+      z-index: 2
+      width: 750px
+      @media screen and (min-width: 1024px)
+        width: 990px
+      .modal-action
+        background: transparent!important
+        border: 0px!important
+        .btn
+          width: auto!important
+          margin-top: 14px!important
+          padding: 10px 10px 10px 34px!important
+          font-size: 17px!important 
+          font-family: 'MuseoSans'
+          color: #fff!important
+          float: right
+          margin-left: 14px
+          &.btn-save-pdf
+            background: url(../images/sprites/file-icon.png) #237a9b no-repeat
+            background-size: 21px;
+            background-position: 10px center
+          &.btn-print
+            background: url(../images/sprites/printer-icon.png) #237a9b no-repeat
+            background-size: 21px;
+            background-position: 10px center
+
+
+    .table-equity-wrap
+      border: 4px solid #237a9b
+      background: #fff
+      padding-top: 24px
+      table
+        tr
+          &.total
+            line-height: 42px
+            background: #d9f0f9
+            th
+              text-align: right
+          .type
+            padding: 0px 42px
+          .money
+            padding: 0px 42px
+          th
+            font-size: 20px
+            color: #237a9b
+            font-family: 'MyriadPro'
+            span
+              display: inline-block
+              margin-bottom: 10px
+          td
+            color: #4d4d4d
+            font-size: 11px
+            font-family: 'NeuzeitGro-Reg'
+            label
+              &.ip
+                float: left
+                padding-left: 35px
+                background: url(../images/sprites/ip-discuss-icon.png) no-repeat left center
+                background-size: 29px
+              &.could
+                float: left
+                padding-top: 12px
+                padding-left: 35px
+                min-height: 32px
+                background: url(../images/sprites/time-discuss-icon.png) no-repeat left center
+                background-size: 29px
+              &.money
+                float: left
+                padding-left: 35px
+                min-height: 32px
+                background: url(../images/sprites/money-discuss-icon.png) no-repeat left center
+                background-size: 29px
+              &.time
+                float: left
+                padding-top: 12px
+                padding-left: 35px
+                min-height: 32px
+                background: url(../images/sprites/could-discuss-icon.png) no-repeat left center
+                background-size: 29px
+              &.other
+                float: left
+                padding-top: 12px
+                padding-left: 35px
+                min-height: 32px
+                background: url(../images/sprites/other-discuss-icon.png) no-repeat left center
+                background-size: 29px
+            p
+              margin-bottom: 10px
+            .unit
+              font-size: 24px
+
+  .modal-overlay
+    background: $discussbar-bg 
+    opacity: 0.9
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 1
+    top: 0
+    left: 0
+  .modal-body
+    z-index: 2
+    width: 500px
+    left: 0
+    right: 0
+    margin: auto
+    top: 25%
+    position: absolute
+    .card
+      width: 100%
+      float: left
+      border: 4px solid $discussbar-bg!important
+      .action
+        display: block
+    .card-layer
+      display: none
+    .modal-action
+      padding-bottom: 15px
+      margin-top: 9px
+      width: 100%
+      float: left
+      background: $discussbar-bg!important
+      border: 4px solid #fff!important
+      .title
+        width: 100%
+        float: left
+        font-size: 17px
+        font-family: "MuseoSans"
+        text-align: center
+        color: #fff
+        margin-top: 15px
+      .action
+        ul
+          width: 100%
+          float: left
+          list-style: none
+          margin-bottom: 10px
+          li 
+            width: 33.3333%
+            float: left
+            padding-left: 30px
+            box-sizing: border-box
+            &:nth-child(4)
+              clear: both
+            a
+              color: $card-text
+              font-size: 11px
+              text-decoration: none
+              padding: 5px 0px 5px 26px
+              float: left
+              position: relative
+              span
+                position: absolute
+                left: 0
+                top: 0
+                bottom: 0
+                margin: auto
+                float: left
+                width: 23px
+                height: 23px 
+                background-size: contain!important 
+                background-color: #4c4e4d!important
+                border-radius: 50%
+                font-family: 'NeuzeitGro-Reg'
+              &:hover, &.active
+                color: #f7941e
+                span
+                  background-color: #f7941e!important
+              &.btn-type-1
+                span
+                  background: url(../images/sprites/ip-icon-2.png) no-repeat center left
+              &.btn-type-2
+                span
+                  background: url(../images/sprites/money-icon.png) no-repeat center left
+              &.btn-type-3
+                span
+                  background: url(../images/sprites/could-icon-2.png) no-repeat center left
+              &.btn-type-4
+                span
+                  background: url(../images/sprites/time-icon.png) no-repeat center left
+              &.btn-type-5
+                span
+                  background: url(../images/sprites/convert-icon.png) no-repeat center left
+      .btn-confirm-group
+        text-align: center
+        a.btn
+          width: 50px
+          text-align: center
+          border: 0
+          display: inline-block
+          color: $card-text
+          text-decoration: none
+          font-size: 11px
+          padding-top: 45px
+          background-repeat: no-repeat!important
+          &:hover
+            color: #fff
+          &.btn-msg-large
+            background: url(../images/sprites/msg-icon-2.png) center top
+            background-size: 39px
+          &.btn-check-large
+            background: url(../images/sprites/check-icon-2.png) center top 
+            background-size: 39px
+.filter-status
+  width: 100%
+  text-align: center
+  float: left
+.btn.btn-status-consider
+  width: 28px
+  height: 28px
+  display: inline-block
+  background: url(../images/sprites/filter-status-icon.png) #f7941e
+  background-size: contain
+  margin: 4px
+.btn.btn-status-discuss
+  width: 28px
+  height: 28px
+  display: inline-block
+  background: url(../images/sprites/filter-status-icon.png) #95d7f0
+  background-size: contain
+  margin: 4px
+.btn.btn-status-agree
+  width: 28px
+  height: 28px
+  display: inline-block
+  background: url(../images/sprites/filter-status-icon.png) #78c362
+  background-size: contain
+  margin: 4px
+
+.btn.btn-check-consider
+  width: 28px
+  height: 28px
+  display: inline-block
+  background: url(../images/sprites/check-icon-5.png) #f7941e
+  background-size: contain
+  margin: 4px
+.btn.btn-check-discuss
+  width: 28px
+  height: 28px
+  display: inline-block
+  background: url(../images/sprites/check-icon-5.png) #95d7f0
+  background-size: contain
+  margin: 4px
+.btn.btn-check-agree
+  width: 28px
+  height: 28px
+  display: inline-block
+  background: url(../images/sprites/check-icon-5.png) #78c362
+  background-size: contain
+  margin: 4px
+
+.btn.btn-add-discuss
+  width: 34px
+  height: 34px
+  display: inline-block
+  background: url(../images/sprites/add-icon.png) #ffe543
+  background-size: contain
+  margin: 4px
+  float: right
+.equity-wrapper
+  width: 100%
+  float: left
+  .equity-group
+    width: 100%
+    float: left
+    .cup-container
+      width: 33.333%
+      float: left
+      overflow: hidden
+      .animation
+        position: relative
+        padding: 24px
+        box-sizing: border-box
+        margin-left: -24px
+        img
+          width: 100%
+          opacity: 0
+        .percen-rule
+          position: absolute
+          height: 50%
+          bottom: 12%
+          float: left
+          width: 77%
+          right: 12%
+          transition: height 500ms
+        .layer
+          top: 24px
+          left: 24px
+          position: absolute
+          bottom: 24px
+          right: 24px
+          background-size: contain 
+        .glass
+          background: url(../images/sprites/glass-layer.png) no-repeat 
+          background-size: 83%
+          background-position: bottom right 
+        .back
+          background: url(../images/sprites/water-layer-back-patt.png)
+          opacity: 0.5
+          width: 64%
+          right: 9%
+          left: auto
+          -webkit-transform: perspective(264) rotateX(-8deg)
+          top: auto
+          height: 90%
+          bottom: 0px
+          -webkit-transform-origin: 50% 100%
+          transform-origin: 50% 100%
+          .top
+            img
+              bottom: 100%
+              opacity: 1
+              position: absolute
+          .bottom
+            img
+              top: 100%
+              opacity: 1
+              position: absolute
+          .ice
+            img
+              top: -19px 
+              opacity: 1
+              position: absolute
+        .content 
+          // background: url(../images/sprites/content-layer.png) no-repeat
+          background: url(../images/sprites/pipe-block.png) no-repeat
+          background-size: contain
+          bottom: 8%
+        .front
+          opacity: 0.5
+          background: url(../images/sprites/water-layer-front-patt.png)
+          width: 64%
+          right: 9%
+          left: auto
+          -webkit-transform: perspective(264) rotateX(-8deg)
+          top: auto
+          height: calc(100% - 33px)
+          bottom: 0
+          -webkit-transform-origin: 50% 100%
+          transform-origin: 50% 100%
+          .top
+            img
+              bottom: 100%
+              opacity: 1
+              position: absolute
+          .bottom
+            img
+              top: 100%
+              opacity: 1
+              position: absolute
+      .content
+        text-align: center
+        float: left
+        width: 100%
+        color: $nomar-text
+        .name
+          font-family: 'NeuzeitGro-Bol'
+          font-size: 14px
+        .percen
+          span
+            font-family: 'NeuzeitGro-Bol'
+            font-size: 24px
+            border-bottom: 2px dashed #9f9fa0
+  .status-group
+    text-align: center
+    width: 100%
+    float: left
+    margin-top: 15px
+.checkbox-control
+  float: left
+  margin-right: 20px
+  font-size: 14px
+  line-height: 18px
+  input
+    display: none
+    &:checked + span
+      background: url(../images/sprites/check-icon-6.png) $discussbar-bg no-repeat
+      background-size: 60%
+      background-position: center
+  span.rb-face
+    width: 19px
+    height: 19px
+    float: left
+    background: $discussbar-bg
+    margin-right: 5px
+  span
+    float: left
+.card-comfirm
+    position: absolute
+    width: 300px
+    background-color: $comfirm-bg
+    bottom: calc(100% + 6px)
+    left: 0
+    right: 0
+    margin: auto
+    padding: 25px
+    box-sizing: border-box
+    .text
+      font-family: 'MuseoSans'
+      font-size: 17px
+    &:after
+      content: ""
+      position: absolute
+      border-left: 26px solid transparent
+      border-right: 26px solid transparent
+      border-top: 26px solid $comfirm-bg
+      border-bottom: 26px solid transparent
+      left: 0
+      right: 0
+      margin: auto
+      width: 0
+      height: 0
+      float: left
+      top: 100%
+    .btn-group
+      margin-top: 19px
+      width: 100%
+      text-align: center
+      float: left
+      position: relative
+      .btn
+        width: 39px
+        height: 39px
+        display: inline-block
+        float: none
+        margin: 0px 10px
+        background-size: contain!important
+      .btn-ok
+        background: url(../images/sprites/ok-icon.png)
+      .btn-cancel
+        background: url(../images/sprites/cancel-icon.png)
+.show-tooltip
+  position: relative
+.msg-tooltip
+  display: none
+  position: fixed
+  width: 310px
+  background-color: $comfirm-bg
+  bottom: auto
+  // left: -145px
+  right: auto
+  margin: auto
+  box-sizing: border-box
+  display: table
+  z-index: 999  
+  .btn-close
+    top: 13px
+    right: 13px
+    background: url(../images/sprites/close-icon.png)
+    background-size: contain
+    border: 0
+    width: 17px
+    height: 17px
+    display: inline-block
+    position: absolute
+  .text
+    font-family: 'MuseoSans'!important
+    font-size: 17px!important
+    color: #4d4e4d!important
+    padding: 25px
+  &:after
+    content: ""
+    position: absolute
+    border-left: 26px solid transparent
+    border-right: 26px solid transparent
+    border-top: 26px solid $comfirm-bg
+    border-bottom: 26px solid transparent
+    left: 0
+    right: 0
+    margin: auto
+    width: 0
+    height: 0
+    float: left
+    top: 100%

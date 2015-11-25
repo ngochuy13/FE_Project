@@ -1,0 +1,44 @@
+//- Created by Huy on 4/6/2015.
+extends layouts/layout
+
+block vars
+  -title = 'The Design'
+  -bodyClass = 'the-house'
+block container
+  #sumptuous-home.section
+    +parallax('The house', 'images/the-house/house-bg.jpg')
+  .section.section-intro-text
+    +introduction-text('The House')
+      p The key to true style is so often simplicity. And at 23-39 Blue Pool Road this philosophy has guided our design throughout each of these exquisitely designed houses. Every fine detail has been thought through to create a whole that offers stunning clean lines married with fixtures of the utmost taste.
+    include includes/award-section
+  #layout-plan.section.section-unit-list
+    include  includes/unit-list
+  #floor-plan.section.section-floor-list
+    include  includes/floor-list
+    include  includes/loading
+  #design.section.section-room-gallery
+    include  includes/room-gallery
+    include  includes/loading
+
+block pagescript
+  //- build:js scripts/handlebars.js
+  script(src='/bower_components/handlebars/handlebars.min.js')
+  //- endbuild
+  //- build:js scripts/slick.js
+  script(src='/bower_components/slick.js/slick/slick.min.js')
+  //- endbuild
+  //- build:js scripts/swiper.js
+  script(src='/bower_components/swiper/dist/js/swiper.min.js')
+  //- endbuild
+  //- build:js scripts/data-lang.js
+  script(src='/scripts/data.js')
+  //- endbuild
+  //- build:js scripts/img-data.js
+  script(src='/scripts/img-data.js')
+  //- endbuild
+  //- build:js scripts/jquery.rwdImageMaps.js
+  script(src='/scripts/jquery.rwdImageMaps.js')
+  //- endbuild
+  //- build:js scripts/interior.js
+  script(src='/scripts/interior.js')
+  //- endbuild

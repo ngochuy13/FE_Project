@@ -1,0 +1,1007 @@
+'use strict';
+
+window.ODFC = window.ODFC || {};
+window.ODFC.Events = window.ODFC.Events || {};
+window.Toyota = window.Toyota || {};
+window.Toyota.utils = window.Toyota.utils || {};
+
+window.Toyota.utils = {
+  getNatural: function(DOMelement) {
+    var img = new Image();
+    img.src = DOMelement.src;
+    return {
+      width: img.width,
+      height: img.height
+    };
+  }
+};
+
+window.Toyota.UI = {
+  initSelect: function() {
+    $('.navigation-top-container select').selectpicker();
+  }
+};
+
+window.Toyota.home = (function() {
+  var viewHome;
+  var module = {};
+
+  module.initUI = function() {
+    return false;
+  };
+
+  module.init = function(element) {
+    viewHome = jQuery(element);
+
+    if (viewHome.length < 0) {
+      return false;
+    }
+
+    module.initUI();
+
+    return module;
+  };
+  return module;
+
+})(jQuery);
+
+window.Toyota.carDetail = (function() {
+  // This module must be called in window onload
+  var view;
+  var module = {};
+
+  // Init carousel for tab content
+  function initTabContentCarousel(tabDetailContent) {
+    var $tabDetailContent = $(tabDetailContent);
+    if ($tooltipDetailContent.find('.owl-carousel-car-view .item').length <= 1) {
+      return false;
+    }
+    var owlCarousel = $tabDetailContent.find('.owl-carousel-car-view').owlCarousel({
+      center: true,
+      items: 1,
+      loop: false,
+      dots: true,
+      nav: false,
+      margin: 0
+    });
+    if ($tooltipDetailContent.find('.owl-carousel-car-view-nav .nav').length) {
+      $tooltipDetailContent.find('.owl-carousel-car-view-nav .nav a').on('click', function(event) {
+        event.preventDefault();
+        $tooltipDetailContent.find('.images-container').data('owlCarousel').to($(this).attr('data-index'), 200);
+      });
+    }
+  }
+
+  // Init carousel for tooltip content
+  function initTooltipCarousel(tooltipDetailContent) {
+    var $tooltipDetailContent = $(tooltipDetailContent);
+    if ($tooltipDetailContent.find('.images-container .item').length <= 1) {
+      return false;
+    }
+    var owlCarousel = $tooltipDetailContent.find('.images-container').owlCarousel({
+      center: true,
+      items: 1,
+      loop: false,
+      dots: true,
+      nav: false,
+      margin: 0
+    });
+    if ($tooltipDetailContent.find('.dots-nav').length) {
+      $tooltipDetailContent.find('.dots-nav a').on('click', function(event) {
+        event.preventDefault();
+        $tooltipDetailContent.find('.images-container').data('owlCarousel').to($(this).attr('data-index'), 200);
+      });
+    }
+  }
+
+  // Init range slider for tooltip content
+  function initTooltipRangeSlider(tooltipDetailContent) {
+    var $tooltipDetailContent = $(tooltipDetailContent);
+    if ($tooltipDetailContent.find('.images-container .item').length <= 1) {
+      return false;
+    }
+    $tooltipDetailContent.find('.images-container .item').css('opacity', 1);
+    var dP = 100 / ($tooltipDetailContent.find('.images-container .item').length - 1);
+
+    $tooltipDetailContent.find('input[type="range"]').css({
+      'position': 'absolute',
+      'top': 0
+    }).rangeslider({
+      polyfill: false,
+      onSlide: function(position, value) {
+        $tooltipDetailContent.find('.images-container .item:gt(' + Math.ceil((100 - value) / dP) + ')').css('opacity', 0);
+        $tooltipDetailContent.find('.images-container .item').eq(Math.ceil((100 - value) / dP)).css('opacity', 1 - ((value) % dP) / dP);
+      }
+    });
+  }
+
+  function updateTooltipTitle(target) {
+    $(target).closest('.block-popup').find(".tooltip-title-container").html($(target).find('.tooltip-title').html());
+  }
+
+  // Init Tooltip detail content based on each detail content type
+  module.initTooltipContent = function() {
+    view.find('.tooltip-detail-content').each(function(index, el) {
+      var dataType = $(this).attr('data-type');
+      switch (dataType) {
+        case 'carousel':
+          initTooltipCarousel(this);
+          break;
+        case 'range-slider':
+          initTooltipRangeSlider(this);
+          break;
+      }
+    });
+  }
+
+  // Init tooltip position for each car section
+  module.initTooltip = function() {
+    jQuery(".car-detail .tooltip").each(function() {
+      var $this = $(this);
+
+      var xc = $this.attr('data-x');
+      var yc = $this.attr('data-y');
+      var dx = $this.attr('data-dx');
+      var dy = $this.attr('data-dy');
+      var dir = $this.attr('data-dir');
+      xc = xc ? parseFloat(xc) : 0;
+      yc = yc ? parseFloat(yc) : 0;
+      dx = dx ? parseFloat(dx) : 0;
+      dy = dy ? parseFloat(dy) : 0;
+
+      var left, top;
+      var ttW = $(this).width() / 19.20;
+      var ttH = $(this).height() / 19.20;
+
+
+      if (dir === "bottom") {
+        top = yc - (dy + ttH);
+        left = xc + dx + ttW / 2;
+      } else if (dir === "top") {
+        top = yc + dy;
+        left = xc + dx + ttW / 2;
+      } else if (dir === "left") {
+        top = yc + dy + ttH / 2;
+        left = xc + dx;
+      } else if (dir === "right") {
+        top = yc + dy - ttH / 2;
+        left = xc - (dx + ttW);
+      }
+
+      $this.css({
+        'top': top + "%",
+        'left': left + "%"
+      });
+
+      if (dx !== 0) {
+        $this.find('span').css({
+          width: dx / (ttW / 100) + "%"
+        });
+      } else if (dy !== 0) {
+        $this.find('span').css({
+          height: dy / (ttH / 100) + "%"
+        });
+      }
+    });
+  }
+
+
+  module.initSliderAuto = function() {
+    if (!view.find('.section-slider-auto').length) {
+      return false;
+    }
+    var carViewCarousel = view.find('.section-slider-auto .owl-carousel-car-auto');
+
+    carViewCarousel.owlCarousel({
+      center: true,
+      items: 1,
+      loop: true,
+      dots: false,
+      nav: false,
+      mouseDrag: false,
+      touchDrag: false,
+      margin: 0,
+      speed: 200,
+      animateOut: 'fadeOut',
+      animateIn: 'fadeIn',
+      autoplay: true
+    });
+
+  };
+  module.initSwitcherView = function() {
+    if (!view.find('.section-slider-view').length) {
+      return false;
+    }
+    var carViewCarousel = view.find('.section-slider-view .owl-carousel-car-view');
+    var viewAnimating = false;
+    carViewCarousel.owlCarousel({
+      center: true,
+      items: 1,
+      loop: false,
+      dots: true,
+      nav: false,
+      mouseDrag: false,
+      touchDrag: false,
+      margin: 0,
+      speed: 200,
+      animateOut: 'fadeOut',
+      animateIn: 'fadeIn',
+      URLhashListener: false
+    });
+    view.on('to.owl.carousel', function() {
+      viewAnimating = true;
+    }).on('changed.owl.carousel', function() {
+      viewAnimating = false;
+    });
+    view.find('.section-slider-view .owl-carousel-car-view-nav .nav a').on('click', function(e) {
+      e.preventDefault();
+      if (viewAnimating || carViewCarousel.data('owlCarousel')._current == $(this).attr('data-index')) {
+        return;
+      }
+      carViewCarousel.data('owlCarousel').to($(this).attr('data-index'));
+      $(this).parent().find('a').removeClass('active');
+      $(this).addClass('active');
+
+      // change item for block-drag-item
+      $('.section-car-drag .block-drag-item, .section-car-drag .block-car-mobile img').removeClass('show');
+      $('.section-car-drag .block-drag-item img').removeClass('can-drop');
+      $('.section-car-drag .dropzone').removeClass('done');
+      if ($(this).hasClass('picnic')) {
+        $('.section-car-drag .block-drag-item.item-picnic, .section-car-drag .block-car-mobile .img-picnic').addClass('show');
+      } else {
+        $('.section-car-drag .block-drag-item.item-beach, .section-car-drag .block-car-mobile .img-beach').addClass('show');
+      }
+
+
+    });
+  };
+
+  module.initTooltipNav = function() {
+    // init action close popup
+
+    view.find('.car-section-content .close-btn a').on('click', function(event) {
+      event.preventDefault();
+      $(this).closest('.block-popup').removeClass('active');
+    });
+
+    view.find('.tooltip-navigation .next').on('click', function(event) {
+
+      var popup = $(this).closest('.block-popup');
+      var curContent = popup.find('.tooltip-detail-content.active').removeClass('active');
+      var detailContent = curContent.next('.tooltip-detail-content');
+
+      if (detailContent.length) {
+        var nextTooltipContent = detailContent.addClass('active');
+      } else {
+        var nextTooltipContent = popup.find('.tooltip-detail-content').first().addClass('active');
+      }
+      updateTooltipTitle(nextTooltipContent);
+    });
+
+    view.find('.tooltip-navigation .prev').on('click', function(event) {
+
+      var popup = $(this).closest('.block-popup');
+      var curContent = popup.find('.tooltip-detail-content.active').removeClass('active');
+      var detailContent = curContent.prev('.tooltip-detail-content');
+
+      if (detailContent.length) {
+        var prevTooltipContent = detailContent.addClass('active');
+      } else {
+        var prevTooltipContent = popup.find('.tooltip-detail-content').last().addClass('active');
+      }
+      updateTooltipTitle(prevTooltipContent);
+    });
+
+    view.find('.block-tooltip .tooltip').on('click.tooltip', function(event) {
+      event.preventDefault();
+      var dataTaget = "#" + $(this).attr('data-target');
+      $(dataTaget)
+        .siblings('.tooltip-detail-content').removeClass('active').end()
+        .addClass('active')
+        .closest('.block-popup').addClass('active');
+      updateTooltipTitle(dataTaget);
+
+    });
+  }
+
+  module.initCarDetail = function() {
+    if (!view.find('.section-car-detail').length) {
+      return false;
+    }
+
+    // // init tab 
+    view.find('.section-car-detail-navigation .tab').on('click', function(event) {
+      event.preventDefault();
+      view.find('.section-car-detail-navigation .tab').removeClass('active');
+      $(this).addClass('active');
+      var idTab = $(this).attr('data-id');
+      view.find('.section-car-detail-content > div').removeClass('active');
+      view.find('.section-car-detail-content #tab-' + idTab).addClass('active');
+      // module.initIMGMiddle();
+    });
+
+    // init tab content with carousel
+    // console.log( view.find('.section-car-detail-content .tab-content-car-carousel').length );
+    if (view.find('.section-car-detail-content .tab-content-car-carousel').length) {
+      initTabContentCarousel(view.find('.section-car-detail-content .tab-content-car-carousel'));
+    }
+
+  };
+
+
+
+  module.initUI = function() {
+    module.initTooltipContent();
+    module.initTooltipNav();
+
+    if ($('.ie8').length) {
+
+      view.find('.image-vertical-middle img').each(function(index, el) {
+        var imgWidth = window.Toyota.utils.getNatural(el).width;
+        var windownWidth = $(window).width();
+        if (imgWidth > windownWidth) {
+          var ml = (imgWidth - windownWidth) / 2;
+          if ($(el).parents('.section-super-wide-content').length) {
+            $(el).css('left', '-' + ml + 'px');
+          } else {
+            $(el).parent().css('left', '-' + ml + 'px');
+          }
+        }
+      });
+    }
+
+    //module.initIMGMiddle();
+  };
+
+  module.initIMGMiddle = function() {
+    view.find('.img-middle > img, .img-middle > picture > img').each(function(index, el) {
+      var imgHeight = $(el).height();
+      var blockHeight = $(el).parent().parent().height();
+
+      if ($(el).parent().is('picture')) {
+        blockHeight = $(el).parent().parent().parent().height();
+        if (imgHeight > blockHeight) {
+          var mt = (imgHeight - blockHeight) / 2;
+          $(el).parent().parent().css('top', '-' + mt + 'px');
+        }
+      } else {
+        if (imgHeight > blockHeight) {
+          var mt = (imgHeight - blockHeight) / 2;
+          $(el).parent().css('top', '-' + mt + 'px');
+        }
+      }
+
+    });
+  };
+
+  module.initLightCar = function() {
+
+    if (!view.find('.section-light-in-car').length) {
+      return false;
+    }
+    var carViewCarousel = view.find('.section-light-in-car .images-container');
+    var viewAnimating = false;
+    carViewCarousel.owlCarousel({
+      center: true,
+      items: 1,
+      loop: false,
+      dots: true,
+      nav: false,
+      mouseDrag: false,
+      touchDrag: false,
+      margin: 0,
+      speed: 200,
+      animateOut: 'fadeOut',
+      animateIn: 'fadeIn',
+      URLhashListener: false,
+
+      responsive: {
+        0: {
+          dots: false,
+          autoplay: true
+        },
+        767: {
+          dots: false,
+          autoplay: true
+        },
+        1366: {
+          dots: true,
+          autoplay: false
+        },
+        1920: {
+          dots: true,
+          autoplay: false
+        }
+      }
+    });
+    view.on('to.owl.carousel', function() {
+      viewAnimating = true;
+    }).on('changed.owl.carousel', function() {
+      viewAnimating = false;
+    });
+
+  };
+  module.initListsInterest = function() {
+    if ($('.block-lists-interest').length) {
+      var interest = $('.block-lists-interest');
+      interest.owlCarousel({
+        center: true,
+        items: 3,
+        loop: true,
+        dots: false,
+        nav: false,
+        margin: 0,
+        responsive: {
+          0: {
+            items: 1.5,
+            center: true,
+            merge: true
+          },
+          767: {
+            items: 1.5,
+            center: true,
+            merge: true
+          },
+          1366: {
+            items: 3,
+            center: true,
+            merge: false
+          },
+          1920: {
+            items: 3,
+            center: true,
+            merge: false
+          }
+        }
+      });
+    }
+  };
+
+  module.superWide = function() {
+    var blockSky = $('.block-sky');
+    if (blockSky.length) {
+      var owlBlockSky = blockSky.owlCarousel({
+        center: true,
+        items: 1,
+        loop: true,
+        dots: false,
+        nav: false,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        speed: 200,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        margin: 0,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+            loop: true
+          },
+          600: {
+            items: 1,
+            loop: true
+          },
+          1000: {
+            items: 1,
+            loop: true
+          }
+        }
+      });
+    }
+    var blockCloudy = $('.block-cloudy');
+    if (blockCloudy.length) {
+      // var owlBlockCloudy = blockCloudy.owlCarousel({
+      //   center: true,
+      //   items:1,
+      //   loop:true,
+      //   dots: false,
+      //   nav: false,
+      //   autoplay: true,
+      //   autoplayTimeout: 11000,
+      //   speed: 10000,
+      //   slideSpeed: 10000,
+      //   margin:0,
+      //   singleItem : true,
+      //   transitionStyle : "fade"
+      // });
+      var owlBlockCloudy = blockCloudy.bxSlider({
+        auto: true,
+        autoControls: false,
+        pause: 0,
+        autoDelay: 0,
+        speed: 50000,
+        controls: false,
+        pager: false,
+        responsive: false,
+        slideMargin: 0,
+        mode: 'vertical'
+      });
+    }
+  };
+  module.scaleBannerHome = function() {
+    if ($('.intel-scaling').length) {
+      $(window).resize(function() {
+        intelScaling();
+      });
+
+      // init reload page 
+      var intelScaling = function() {
+        if ($(window).width() < 1280 && $(window).width() >= 1024) {
+          var dataW, dataH, dataProportion;
+          $('.intel-scaling').each(function() {
+            dataW = $(this).attr('data-width');
+            dataH = $(this).attr('data-height');
+            dataProportion = 640 / dataH;
+            $(this).height($(window).width() * 0.53 / 0.95);
+          });
+        } else {
+          $('.intel-scaling').removeAttr('style');
+        }
+      };
+
+      intelScaling();
+
+    }
+  };
+  module.initImgDrag = function() {
+
+    var imgDragView = $(".image-drag");
+    if (imgDragView.length === 0 || ($(window).width() < 1280 && $(window).width() >= 1024)) {
+      return;
+    }
+
+
+    interact('.image-drag')
+      .draggable({
+        // enable inertial throwing
+        inertia: true,
+        onmove: function(event) {
+          var target = event.target,
+            targetIMG = $(target).find('img'),
+            // keep the dragged position in the data-x/data-y attributes
+            x = (parseFloat(targetIMG.attr('data-x')) || 0) + event.dx,
+            y = (parseFloat(targetIMG.attr('data-y')) || 0) + event.dy,
+            imgW = $(targetIMG).width(),
+            imgH = $(targetIMG).height(),
+            parentW = $(target).parent().width(),
+            parentH = $(target).parent().height();
+          // console.log(parentW , parentH);
+
+          if (-(x) >= (imgW - parentW) || (imgW - parentW) == 0 || x > 0) {
+            x = parseFloat(targetIMG.attr('data-x'));
+          }
+          if (-(y) >= (imgH - parentH) || (imgH - parentH) == 0 || y > 0) {
+            y = parseFloat(targetIMG.attr('data-y'));
+          }
+          $(target).css({
+            'position': 'relative',
+            'left': x + 'px',
+            'top': y + 'px',
+          });
+
+          // update the posiion attributes
+          targetIMG.attr('data-x', x);
+          targetIMG.attr('data-y', y);
+        },
+        onend: function(event) {
+          var target = event.target;
+
+        }
+
+      });
+  };
+  module.initCarDrag = function() {
+    if (!$('.section-car-drag').length || $(window).width() < 1056) {
+      var draggableElement = $('.block-drag-item img');
+      $.each(draggableElement, function() {
+        if ($(this).attr('data-img-drop') != '') {
+          $(this).attr('src', $(this).attr('data-img-drop'));
+        }
+      });
+
+      return;
+    }
+    var carDrag = $('.section-car-drag');
+
+    var dragMoveHandler = function(event) {
+      var target = event.target,
+        // keep the dragged position in the data-x/data-y attributes
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+      // translate the element
+      // target.style.webkitTransform =
+      // target.style.transform =
+      // 'translate(' + x + 'px, ' + y + 'px)';
+
+      $(target).css({
+        'left': x + 'px',
+        'top': y + 'px'
+      });
+
+      // update the posiion attributes
+      target.setAttribute('data-x', x);
+      target.setAttribute('data-y', y);
+
+      carDrag.find('.dropzone').addClass('drop-target');
+    };
+
+    // InteractJS drag end listener handler
+    var dragEndHandler = function(event) {
+      var target = event.target;
+      if (!$(target).hasClass('dropped')) {
+        //move to previous position
+        // target.style.webkitTransform
+        //   = target.style.transform
+        //   = 'translate(0px, 0px)';
+        $(target).removeAttr('style');
+
+        target.setAttribute('data-x', target.getAttribute('data-dx'));
+        target.setAttribute('data-y', target.getAttribute('data-dy'));
+      }
+      carDrag.find('.dropzone').removeClass('drop-target');
+    };
+
+    // InteractJS drag check listener handler
+    var dragCheckHandler = function(event) {
+      var flagCheck = true;
+      carDrag.find('.block-drag-item.show img').each(function() {
+        if (!$(this).hasClass('can-drop')) {
+          flagCheck = false;
+          return;
+        }
+      });
+      if (flagCheck) {
+        carDrag.find('.block-drag-container').addClass('done');
+      }
+    };
+
+    interact('.section-car-drag .draggable')
+      .draggable({
+        // enable inertial throwing
+        inertia: true,
+        // call this function on every dragmove event
+        onmove: dragMoveHandler,
+        // call this function on every dragend event
+        onend: dragEndHandler
+      });
+
+    interact('.section-car-drag .dropzone').dropzone({
+      // only accept elements matching this CSS selector
+      accept: '.section-car-drag .block-drag-item img',
+      // Require a 75% element overlap for a drop to be possible
+      overlap: 0.35,
+
+      ondrop: function(event) {
+
+        var draggableElement = $(event.relatedTarget);
+        var dropzoneElement = $(event.target);
+        // feedback the possibility of a drop
+        draggableElement.addClass('can-drop');
+
+        if (draggableElement.attr('data-img-drop')) {
+          draggableElement.attr('src', draggableElement.attr('data-img-drop'));
+        }
+
+        dragCheckHandler();
+      }
+    });
+
+  };
+
+  module.survey = function() {
+    /*/survey /*/
+    //survey at bottom
+    var surveyBox = $('.survey-box');
+    if (surveyBox.length === 0) {
+      return;
+    }
+    $('.survey-box-trigger').on('click', function(e) {
+      surveyBox.fadeIn('fast');
+      return false
+    });
+    $('.take-survey-btn').on('click', function(e) {
+      e.preventDefault();
+      surveyBox.fadeOut('fast', function() {
+        $('.animation-right-left').animate({
+          right: "120%"
+        }, 2500);
+      });
+      return false;
+    });
+
+    $('.surver-car').appear();
+    $(document.body).one('appear', '.animation-left-right', function(e) {
+      $(this).animate({
+        left: "120%"
+      }, 5000, function() {
+        // Animation complete.
+        $(this).addClass('done');
+      });
+    });
+    $(document.body).one('appear', '.animation-right-left', function(e) {
+      $(this).animate({
+        right: "61%"
+      }, 2500, function() {
+        // Animation complete.
+        $(this).addClass('done');
+        $(this).trigger('click');
+      });
+    });
+  };
+  module.panelSnap = function() {
+    /* panelSnap */
+    if ($('.car-detail').length === 0 || $(window).width() <= 1024) {
+      return;
+    }
+    var options = {
+      $menu: false,
+      panelSelector: '.panelsnap .section',
+      directionThreshold: 20,
+      offset: 53,
+      delay: 300,
+      keyboardNavigation: {
+        enabled: false,
+        nextPanelKey: 40,
+        previousPanelKey: 38,
+        wrapAround: true
+      }
+    };
+
+    // $('body').panelSnap(options);
+  };
+  module.changeColorCar = function() {
+    /*/change color car /*/
+    // init action change color car
+    var maskView = $("#mask-view");
+    if (maskView.length === 0) {
+      return;
+    }
+    var maskedImage = $("#masked-image");
+    var carContainer = $('.section-change-color-car-content .block-lists-car');
+    var animating = false;
+    var dataColor = 'light-blue';
+    var newHeight = maskView.height();
+
+    var imageSwaphandler = function() {
+      carContainer.find('.car').filter('.' + dataColor).addClass('active').siblings().removeClass('active');
+    };
+    imageSwaphandler();
+
+    // update size svg
+    if ($(window).width() < 1010) {
+      newHeight = maskView.width() * 371 / 848;
+      maskView.height(newHeight);
+      $(window).resize(function() {
+        newHeight = maskView.width() * 371 / 848;
+        maskView.height(newHeight);
+      });
+    }
+
+    $("#walt-embed").attr({
+      "cx": maskView.width() / 2,
+      "cy": (newHeight) / 2,
+    });
+
+
+    interact('.block-lists-color .color-item img')
+      .draggable({
+        // enable inertial throwing
+        inertia: true,
+        onmove: function(event) {
+          var target = event.target;
+          var colorInfoEle = $(target).parent().parent();
+          if (animating || dataColor == colorInfoEle.attr('data-color')) {
+            return;
+          }
+          var target = event.target,
+            // keep the dragged position in the data-x/data-y attributes
+            x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+            y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+          $(target).css({
+            'position': 'relative',
+            'left': x + 'px',
+            'top': y + 'px',
+            'z-index': 3
+          });
+
+          // update the posiion attributes
+          target.setAttribute('data-x', x);
+          target.setAttribute('data-y', y);
+        },
+        onend: function(event) {
+            var target = event.target;
+            $(target).fadeOut(300, function() {
+              $(this).removeAttr('data-x').removeAttr('data-y').removeAttr('style');
+            });
+          }
+          // keep the element within the area of it's parent
+          // restrict: {
+          //   restriction: '.block-lists-color',
+          //   endOnly: true,
+          //   elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+          // },
+
+        // call this function on every dragmove event
+      });
+
+    interact('.block-lists-car').dropzone({
+      // only accept elements matching this CSS selector
+      accept: '.block-lists-color .color-item img',
+      // Require a 75% element overlap for a drop to be possible
+      overlap: 1,
+
+      ondrop: function(event) {
+        var target = event.relatedTarget;
+        var colorInfoEle = $(target).parent().parent();
+        if (animating || dataColor == colorInfoEle.attr('data-color')) {
+          return;
+        }
+
+        dataColor = colorInfoEle.attr('data-color');
+        animating = true;
+
+        colorInfoEle
+          .addClass('active')
+          .siblings('.active').removeClass('active');
+
+        var carActive = carContainer.find('.car').filter('.' + dataColor);
+
+        var imageLink = carActive.find('img').attr('src');
+
+        $("#walt-embed").attr("r", 1);
+        maskView.attr('class', 'mask active');
+        maskedImage.attr('xlink:href', imageLink);
+        var radius = maskView.width() / 2;
+        var i = 0;
+        var tt = setInterval(function() {
+          if (i >= 120) {
+            animating = false;
+            maskView.attr('class', 'mask');
+            imageSwaphandler();
+            clearInterval(tt);
+          }
+          i += 8;
+          var realtimeR = Math.floor(radius * i / 100);
+          $("#walt-embed").attr("r", realtimeR);
+        }, 30);
+      }
+    });
+
+  };
+  module.init = function(element) {
+    view = $(element);
+
+    if (view.length < 0) {
+      return false;
+    }
+
+    module.initUI();
+    module.initSwitcherView();
+    module.initCarDetail();
+    module.initTooltip();
+
+    module.initLightCar();
+
+    module.superWide();
+
+    module.survey();
+
+    module.changeColorCar();
+
+    module.panelSnap();
+
+    module.initSliderAuto();
+
+    if ($(window).width() < 768) {
+      $('.section-car-detail .block-popup .tooltip-detail-content > .icon-tooltip-phone, .section-car-detail .block-popup .tooltip-detail-content > .tooltip-title').click(function(event) {
+        event.preventDefault();
+        $(this).parent().toggleClass('active');
+      });
+    }
+
+    return module;
+  };
+  return module;
+
+})(jQuery);
+
+
+
+/* Document Ready */
+jQuery(document).ready(function($) {
+  var iOS = (navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false);
+  if (iOS) {
+    $('html').addClass('iOS');
+  }
+
+  if (!Modernizr.touch) { //added by KhoaNT
+    $('body').addClass('no-touch');
+  }
+  if (Modernizr.touch) { //added by KhoaNT
+    $('body').addClass('touch-device');
+  }
+
+  if ($(window).width() > 767) {
+    if (!($('body').hasClass('DesignMode') || $('body').hasClass('EditMode'))) {
+      $(".navigation-container").sticky({
+        topSpacing: 0
+      });
+    }
+
+    //new cars list sub-menu
+    var newCarMenuItem = $('#new-car-menu-item');
+    var newCarMenuList = $('#new-car-menu-list');
+    $('#footer').before(newCarMenuList);
+    newCarMenuItem.on('click', function(e) {
+      if (newCarMenuItem.hasClass('active')) {
+        newCarMenuItem.removeClass('active');
+        newCarMenuList.removeClass('active');
+      } else {
+        newCarMenuItem.addClass('active');
+        newCarMenuList.addClass('active');
+      }
+      return false;
+    });
+    newCarMenuList.on('click', function(e) {
+      e.stopPropagation();
+    });
+    $(document).on('click', function(e) {
+      newCarMenuItem.removeClass('active');
+      newCarMenuList.removeClass('active');
+    });
+    $(window).on('scroll', function(e) {
+      newCarMenuList.toggleClass('sticky', $(".navigation-container").position().top == 0);
+    });
+
+    // middle helpful-link-list screem
+    if ($('.helpful-link-list').length) {
+      var top = ($(window).height() - $('.helpful-link-list').height()) / 2
+      $('.helpful-link-list').css('top', top);
+    }
+
+  } else {
+    $("#header").sticky({
+      topSpacing: 0
+    });
+    // change menu href for mobile
+    $('#header .navigation > ul > li > a').each(function() {
+      if ($(this).attr('data-href-mobile')) {
+        $(this).attr('href', $(this).attr('data-href-mobile'));
+      }
+    });
+
+  }
+
+});
+
+
+
+
+/* Window load */
+jQuery(window).load(function() {
+  /* home script */
+  window.Toyota.home.init('.home');
+
+  window.Toyota.UI.initSelect();
+
+  window.Toyota.carDetail.init('.car-detail');
+
+  window.Toyota.carDetail.initListsInterest();
+
+  window.Toyota.carDetail.scaleBannerHome();
+
+  window.Toyota.carDetail.initCarDrag();
+
+  window.Toyota.carDetail.initImgDrag();
+
+});
+
+
+
+
+
+/* Window resize */
+jQuery(window).on('resize', function() {
+  // window.Toyota.carDetail.init('.car-detail');
+});

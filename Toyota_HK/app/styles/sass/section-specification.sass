@@ -1,0 +1,41 @@
+//colors
+$color-main: #ed1b24
+$color-second: #666666
+$color-table-td: #ebebeb
+
+.section-specification-car
+  font-size: 14px
+  color: $color-second
+  padding-bottom: 20px
+  .container
+    padding-top: 50px
+  h2.title
+    font-size: 24px
+    line-height: 1.5
+    padding-bottom: 15px
+    color: $color-main
+    text-align: center
+    text-transform: uppercase
+  table 
+    width: 100%
+    max-width: 862px
+    border-top: 1px solid $color-main
+    margin: 0 auto
+    td 
+      padding: 15px 0
+      border-bottom: 1px solid $color-table-td
+      color: $color-second
+      vertical-align: top
+      &:nth-child(1)
+        width: 212px
+      &:nth-child(2)
+        width: 317px
+      &:nth-child(3)
+        width: 333px
+    .title 
+      color: $color-main
+
+// @media screen and (max-width: 767px)
+//   table , tbody , tr , td 
+//     display: block
+//     width: 100% !important

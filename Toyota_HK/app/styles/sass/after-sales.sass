@@ -1,0 +1,460 @@
+.aftersales-content, .promotion-detail .description
+  ul
+    li
+      background: url('../images/finance/dot-li.png') no-repeat 10px 12px
+      padding: 0 10px 0 25px
+      text-align: left
+      vertical-align: top
+    &.social-sharing-list
+      li
+        padding: 0 8px
+        background: none
+
+h2.page-title.custom-page-title
+  font-size: 40px
+  text-align: center
+  color: #666
+  margin: 48px 0 45px
+  font-weight: bold
+.sub-page-banner.feature-img
+  p
+    max-width: 1160px
+    width: 100%
+    height: 100%
+    line-height: 515px
+    margin: 0 auto
+    text-align: right
+    font-size: 64px
+    color: $white
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    z-index: 100
+    padding-right: 65px
+  img
+    height: 100%
+    width: auto
+    max-width: inherit
+.after-sales
+  img
+    max-width: 100%
+    height: auto
+  .aftersales-content
+    width: 100%
+    max-width: 1160px
+    margin: 0 auto
+    overflow: hidden
+    position: relative
+    font-size: 16px
+    line-height: 27px
+    table 
+      width: 100%
+      max-width: 862px
+      border-top: 1px solid #ebebeb
+      margin: 0 auto
+      td 
+        padding: 10px 0
+        border-bottom: 1px solid #ebebeb
+        vertical-align: middle
+        &:nth-child(1)
+          width: 212px
+        &:nth-child(2)
+          width: 317px
+        &:nth-child(3)
+          width: 333px
+      &.tbl-question
+        max-width: 900px
+        td:nth-child(1)
+          border: none
+        table
+          max-width: 900px
+          td:nth-child(3)
+            text-align: right
+        table
+          tr:last-child
+            td
+              border: none
+    .tbl-renewal
+      border: 1px solid #000
+      padding: 20px
+      .heading-renewal
+        text-align: center
+    .history-images
+      overflow: hidden
+      margin: 15px 0
+      .pic-col
+        float: left
+        margin-right: 10px
+  .block-content
+    .block-service
+      text-align: center
+      height: 125px
+      margin-bottom: 70px
+      .block-icon
+        position: relative
+        // height: 98px
+        .icon-service
+          width: 112px
+          height: 112px
+          display: inline-block
+          &.icon-1
+            background: url('../images/after-sales/icon-1.png') no-repeat
+          &.icon-2
+            background: url('../images/after-sales/icon-2.png') no-repeat
+          &.icon-3
+            background: url('../images/after-sales/icon-3.png') no-repeat
+          &.icon-4
+            background: url('../images/after-sales/icon-4.png') no-repeat
+          &.icon-5
+            background: url('../images/after-sales/icon-5.png') no-repeat
+          &.icon-6
+            background: url('../images/after-sales/icon-6.png') no-repeat
+          &.icon-7
+            background: url('../images/after-sales/icon-7.png') no-repeat
+          &.icon-8
+            background: url('../images/after-sales/icon-8.png') no-repeat
+          &.icon-9
+            background: url('../images/after-sales/icon-9.png') no-repeat
+          &.icon-10
+            background: url('../images/after-sales/icon-10.png') no-repeat
+      &:hover
+        .icon-service
+          &.icon-1
+            background: url('../images/after-sales/icon-hover-1.png')
+          &.icon-2
+            background: url('../images/after-sales/icon-hover-2.png')
+          &.icon-3
+            background: url('../images/after-sales/icon-hover-3.png')
+          &.icon-4
+            background: url('../images/after-sales/icon-hover-4.png')
+          &.icon-5
+            background: url('../images/after-sales/icon-hover-5.png')
+          &.icon-6
+            background: url('../images/after-sales/icon-hover-6.png')
+          &.icon-7
+            background: url('../images/after-sales/icon-hover-7.png')
+          &.icon-8
+            background: url('../images/after-sales/icon-hover-8.png')
+          &.icon-9
+            background: url('../images/after-sales/icon-hover-9.png')
+          &.icon-10
+            background: url('../images/after-sales/icon-hover-10.png')
+      p 
+        text-align: center
+        font-size: 18px
+      a, a:hover, a:focus, a:active
+        text-decoration: none
+      &:hover p
+        color: #eb1924
+  .modal-dialog
+    width: 1160px
+    margin-top: 125px
+    max-width: 100%
+    .modal-content
+      border-radius: 0
+      button.close
+        margin-top: 10px
+        margin-right: 10px
+        opacity: 0.5
+        &:hover
+          opacity: 1
+      .modal-body
+        padding: 0
+        .container-fluid
+          padding: 0
+          .title
+            font-size: 28px
+            font-weight: bold
+            color: #eb1924
+            margin-top: 50px
+          .block-content
+            font-size: 14px
+            color: #333333
+            p 
+              margin-bottom: 25px
+            span.color-red 
+              color: #eb1924
+          .block-img 
+            text-align: center
+            img 
+              max-width: 100%
+    .owl-controls
+      position: absolute
+      bottom: 6px
+      width: 100%
+      .owl-dots
+        .owl-dot
+          width: 12px
+          height: 12px
+          background: #cccccc
+          &.active
+            background: #eb1924
+  .aftersales-collape
+    margin-bottom: 80px
+    overflow: hidden
+    .panel-group
+      margin: 0
+      .panel
+        @include border-radius(0)
+        @include box-shadow(none)
+        margin: 0
+        border: none
+        & > .panel-heading
+          color: #666666
+          text-align: center
+          background: none
+          border: none
+          padding: 0
+          h4.panel-title
+            border-bottom: 1px solid #EBEBEB
+            background: url('../images/after-sales/bg-heading.png') no-repeat center bottom
+            height: 80px
+            line-height: 80px
+            position: relative
+            a
+              font-weight: bold
+              font-size: 20px
+              color: #EB1924
+              &:after
+                width: 26px
+                height: 26px
+                content: ''
+                display: inline-block
+                position: absolute
+                top: 27px
+                right: 40px
+                background: url('../images/after-sales/square-heading.png') no-repeat center center
+              &.collapsed
+                color: #666666
+                &:after
+                  background: url('../images/after-sales/plus-heading.png') no-repeat center center
+              &:hover,
+              &:active,
+              &:focus
+                text-decoration: none
+        & > .panel-heading + .panel-collapse > .panel-body
+          border-top: none
+          border-left: none
+          border-right: none
+          border-bottom: 1px solid #EBEBEB
+          font-size: 14px
+          color: #333333
+          background: url('../images/after-sales/bg-panel-coll.png') no-repeat center top
+          padding: 50px
+          .panel-box
+            .col
+              float: left
+              &.panel-img
+                max-width: 52%
+                margin-right: 50px
+                margin-bottom: 20px
+            .panel-text
+              font-size: 14px
+              color: #333333
+              line-height: 25px
+              padding-top: 25px
+              display: table-cell
+              h3
+                font-weight: bold
+                font-size: 28px
+                margin: 0 0 25px
+                color: #EB1924
+              p
+                margin-bottom: 20px
+              span
+                color: #EB1924
+              .question-aftersales
+                width: 74%
+                padding-right: 40px
+              .question-img-aftersales
+                width: 26%
+                text-align: center
+  .salesexpress-content
+    width: 100%
+    max-width: 960px
+    margin: 0 auto
+    h3.express-title
+      color: #EB1924
+      font-weight: bold
+      font-size: 28px
+      text-align: center
+      background: url('../images/after-sales-express/title-express.png') no-repeat center bottom
+      padding-bottom: 30px
+      margin-bottom: 25px
+      line-height: 35px
+    .caption-express
+      font-size: 14px
+      line-height: 31px
+      text-align: center
+      font-weight: bold
+      padding: 0 15px
+      span
+        color: #D2242B
+    .express-box
+      overflow: hidden
+      margin: 50px auto
+      width: 100%
+      max-width: 862px
+      img
+        display: block
+        margin: 0 auto
+      .col
+        float: left
+      .item-direct
+        width: 9%
+        padding-top: 33px
+      .item
+        width: 17.5%
+        .img-item
+          height: 80px
+          margin-bottom: 30px
+        p
+          font-size: 14px
+          line-height: 21px
+          font-weight: bold
+          color: #666666
+          text-align: left
+    .expess-like
+      ul
+        li
+          width: 33.333%
+          display: inline-block
+          background: url('../images/after-sales-express/like-express.png') no-repeat left 5px
+          font-size: 14px
+          line-height: 21px
+          font-weight: bold
+          padding: 0 85px 0 15px
+          margin-bottom: 25px
+          vertical-align: top
+    .express-note
+      font-size: 14px
+      line-height: 30px
+      font-weight: bold
+      margin-bottom: 40px
+      p
+        margin-bottom: 0
+        text-align: left
+        span
+          color: #EB1924
+      ul
+        li
+          background: url('../images/after-sales-express/bg-li-express-note.jpg') no-repeat left 12px
+          padding-left: 15px
+    .book-express-link
+      color: #fff
+      text-transform: uppercase
+      background: #ED1B24
+      font-size: 16px
+      padding: 15px 40px
+      display: table
+      margin: 0 auto 60px
+    
+    .common-btn
+      width: 200px
+      height: 52px
+      display: block
+      line-height: 52px
+      margin: 0 auto
+      &:hover
+        opacity: 1
+        -moz-opacity: 1
+        filter: alpha(opacity=100)
+        background: #600
+.images-custom-article
+  font-size: 14px
+  img
+    max-width: 100%
+    height: auto
+
+@media screen and(max-width: 1160px)
+  .salesexpress-content,
+  .aftersales-content
+    > .inner
+      padding: 0 15px
+  .after-sales .salesexpress-content .express-box .item
+    width: 100%
+    text-align: center
+    margin-bottom: 30px
+    .img-item
+      margin-bottom: 10px
+  .after-sales .salesexpress-content .express-box .item-direct
+    display: none
+  .after-sales .salesexpress-content .expess-like ul li
+    width: 100%
+    padding: 0 0 0 15px
+
+@media screen and (max-width: 1024px)
+  .sub-page-banner.feature-img p
+    line-height: 211px
+    display: block
+    margin: 0 auto
+    width: 100%
+    font-size: 30px
+  .sub-page-banner.feature-img img
+    width: 100%
+    height: auto
+    margin: 0
+    left: 0
+
+@media screen and(max-width: 767px)
+  .history-images
+      .pic-col
+        text-align: center
+        width: 100%
+        margin: 0
+  .aftersales-content table tr td
+    width: 100% !important
+    display: block
+    text-align: left
+  .sub-page-banner.feature-img p
+    line-height: 1.5
+    display: block !important
+    margin: 0 auto
+    width: 100%
+    padding: 0
+    display: block
+    text-align: center
+    bottom: 0
+    height: auto
+    max-width: inherit
+    top: auto
+  .after-sales .aftersales-content .aftersales-collape .panel-group .panel > .panel-heading h4.panel-title
+    height: auto
+    line-height: 30px
+    text-align: left
+    padding: 17px 15px
+    a
+      font-size: 16px
+      text-align: left
+      width: 81%
+      display: block
+      &:after
+        right: 25px
+        top: 19px
+  .after-sales .aftersales-content .aftersales-collape .panel-group .panel > .panel-heading + .panel-collapse > .panel-body
+    padding: 30px 15px
+    .panel-box .col.panel-img
+      width: 100%
+      max-width: 100%
+      text-align: center
+      margin: 0
+    .panel-box .panel-text
+      width: 100%
+      padding-top: 30px
+      .question-aftersales,
+      .question-img-aftersales
+        width: 100%
+@media screen and(max-width: 479px)
+  .feature-img .sub-page-banner p
+    font-size: 40px
+    padding: 0
+    text-align: center
+
+
+
+
+
+
+
+            

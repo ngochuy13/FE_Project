@@ -1,0 +1,26 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Home'
+  -bodyClass = ''
+  -bannerIMG = 'home/banner.jpg'
+block container    
+  .inner
+    main#main
+      section.slider-header
+        include includes/slider-header
+        .info-slider-header
+          .banner-header
+            p.text-big Guest reviews
+            p.intro
+              span Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+      
+      include includes/five-article
+
+      section.room-suite-section
+        +section-title("Our best offers", "Lorem ipsum dolor.", "Lorem ipsum.")
+        include includes/rooms-suites-offers
+        
+      section.experience-gallery-section
+        +section-title("EXPERIENCES TO TREASURE", "Discover the Magic of Arabiaan Hospotality", "PRIVAE BAY IN THE ARABIAN GULF")
+        include includes/experience-to-treasure 

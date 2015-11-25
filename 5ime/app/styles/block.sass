@@ -1,0 +1,327 @@
+.landscape-advice
+  display: none
+img.bg
+  max-width: 100%
+  display: block
+.v-wrapper
+  position: absolute
+  top: 0
+  width: 100%
+  overflow: hidden
+.slider-container
+  position: relative
+  .slider-nav
+    button
+      position: absolute
+      background: url($imgPath + 'slider-nav-1.png') no-repeat top left
+      background-size: 200%
+      width: 53px
+      height: 116px
+      display: block
+      border: none
+      cursor: pointer
+      top: 30%
+      font-size: 0
+    .prev
+      left: 40px
+    .next
+      background-position: top right
+      right: 40px
+
+  .slick-slider
+    max-width: 100%
+    img
+      max-width: 100%
+
+.loading
+  font-size: 2.4em
+  .main
+    display: none
+  .wrapper
+    min-height: 600px
+  .loading-layer
+    display: block
+.loading-layer
+  display: none
+  position: absolute
+  left: 25%
+  top: 300px
+  width: 50%
+  padding: 5px
+  height: 19px
+  border-radius: 9px
+  background: #202020
+  margin: 0 auto
+  .loading-wrapper
+    position: relative
+  .inner
+    background: url($imgPath + 'loading/loading-inner.png') repeat-x bottom left
+    height: 9px
+    position: absolute
+    width: 100%
+    border-radius: 4px
+    top: 0
+    left: 0
+  .inner-progress
+    +transition(0.3s width) 
+    background: url($imgPath + 'loading/loading-inner.png') repeat-x top left
+    height: 9px
+    position: absolute
+    width: 0%
+    border-radius: 4px
+    top: 0
+    left: 0
+    &:before
+      width: 76px
+      height: 48px
+      position: absolute
+      content: ""
+      display: block
+      top: -55px
+      right: -38px
+      background: url($imgPath + 'loading/loading-motor.png') no-repeat top left
+  .text
+    font-size: 24px
+    font-family: "Myriad Pro"
+    color: rgb( 64, 64, 64 )
+    line-height: 0.784
+    text-align: center
+    padding-top: 34px
+
+// MODAL
+#extra-info-modal
+  .failed
+    .failed-message
+      display: block
+      margin-bottom: 14px
+      text-align: center
+  .failed-message
+    display: none
+  .fake
+    display: inline-block
+  .real
+    display: none
+  .valid
+    .fake
+      display: none
+    .real
+      display: inline-block
+.style-1
+  .modal-dialog
+    width: 700px
+  .modal-content
+    background: #0d0d0d url($imgPath + 'border-image.png')
+    border-radius: 7px
+    padding: 14px
+  .modal-body
+    background: #0f1313
+    border: 1px solid rgba(255,255,255, 0.15)
+    color: white
+    text-align: center
+  h1
+    font-size: 35px
+    font-family: "Myriad Pro"
+    color: white
+    font-weight: bold
+    text-transform: uppercase
+    line-height: 1.44
+    text-align: center
+    padding: 50px 100px
+    text-shadow: 0px 4px 3px #000
+  &.style-1-ext
+    .modal-dialog
+      width: 440px
+    .modal-body
+      padding: 0
+    .submission
+      margin: 20px auto
+      button:first-child
+        margin-right: 20px
+  &.style-1-ext-2
+    .modal-header, .modal-footer, .modal-body
+      border: none
+    .modal-header
+      height: 89px
+      .close
+        margin-top: 0
+        position: absolute
+        right: 15px
+        top: 15px
+        background: transparent
+        border: none
+        color: white
+        font-size: 30px
+    .modal-dialog
+      width: 500px
+    .modal-content
+      padding: 0 25px 25px 25px
+    .modal-body
+      padding: 0
+      background: transparent
+    .screenshot-container
+      border-radius: 3px
+      background: #000
+    .modal-title
+      color: #02afdf
+      font-size: 26px
+      font-weight: bold
+      font-family: "Myriad Pro"
+      font-style: italic
+      text-align: center
+      position: relative
+      top: 50%
+      transform: translateY(-50%)
+    .author
+      font-size: 20px
+      font-family: "Myriad Pro"
+      line-height: 26px
+      font-weight: bold
+      text-transform: uppercase
+      margin-top: 11px
+      margin-bottom: 24px
+      position: relative
+      &:after
+        content: " "
+        width: 173px
+        height: 5px
+        position: absolute
+        left: 50%
+        margin-left: -86px
+        bottom: -10px
+        background: url($imgPath+'submission-modal-light-piece.png') no-repeat
+      span
+        color: #02afdf
+    .submission
+      margin: 20px auto
+      button:first-child
+      margin-right: 20px
+    .fb-interaction
+      .count
+        font-size: 12px
+        color: #555
+        display: inline-block
+        border-radius: 2px
+        padding: 0 3px
+        line-height: 20px
+        vertical-align: top
+        margin: 0 10px 0 2px
+        background: white
+
+.style-2
+  .modal-dialog
+    width: 368px
+  .modal-content
+    background: #0d0d0d url($imgPath + 'border-image.png')
+    border-radius: 7px
+    padding: 14px
+  .modal-body
+    color: white
+    text-align: center
+    padding: 0
+    background: #0d0d0d
+    border: 1px solid rgba(255,255,255, 0.15)
+  h1
+    background: url($imgPath + 'bg-thongtin-nhanthuong-header.jpg') no-repeat
+    font-size: 0
+    height: 87px
+  form
+    margin: 0 auto
+    width: 304px
+    text-align: left
+  .form-group
+    text-align: left
+    margin-bottom: 8px
+    &.text-center
+      text-align: center
+    .title
+      font-size: 14px
+      color: rgb( 0, 188, 255 )
+      font-weight: bold
+      text-align: left
+      text-shadow: 0px 2px 0px rgb( 0, 0, 0 )
+    input
+      background: #080808
+      border-top: 1px solid #303030
+      border-bottom: 1px solid #191919
+      border-left: 2px solid #242424
+      border-right: 2px solid #242424
+      height: 36px
+      width: 304px
+      padding: 3px 10px
+      font-size: 14px
+    button.btn-library Gui
+
+.jcrop-holder
+  margin: 0 auto
+  text-align: center
+  max-width: 100%
+
+.fb-share-button
+  >span, iframe
+    width: 56px !important
+    height: 20px !important
+.fb-like-button
+  >span, iframe
+    width: 48px !important
+    height: 20px !important
+
+.spinner
+  width: 70px
+  margin-left: -35px
+  margin-top: -11px
+  text-align: center
+  > span
+    width: 18px
+    height: 18px
+    background-color: #fff
+    border-radius: 100%
+    display: inline-block
+    -webkit-animation: bouncedelay 1.4s infinite ease-in-out
+    animation: bouncedelay 1.4s infinite ease-in-out
+    -webkit-animation-fill-mode: both
+    animation-fill-mode: both
+  .bounce1
+    -webkit-animation-delay: -0.32s
+    animation-delay: -0.32s
+  .bounce2
+    -webkit-animation-delay: -0.16s
+    animation-delay: -0.16s
+
+@-webkit-keyframes bouncedelay
+  0%, 80%, 100% 
+    -webkit-transform: scale(0.0)
+  40%
+    -webkit-transform: scale(1.0)
+
+@keyframes bouncedelay
+  0%, 80%, 100% 
+    -webkit-transform: scale(0.0)
+  40%
+    -webkit-transform: scale(1.0)
+
+@media (orientation: portrait)
+  body
+    overflow: hidden
+    .landscape-advice
+      z-index: 100
+      display: block
+      background: #333
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      text-align: center
+      img
+        width: 180px
+        height: 180px
+        margin-left: -90px
+        margin-top: -90px
+        position: absolute
+        top: 50%
+        left: 50%
+      p
+        font-size: 40px
+        font-weight: bold
+        color: white
+        margin: 30% 20% 0 20%

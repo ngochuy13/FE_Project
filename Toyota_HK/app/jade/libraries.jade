@@ -1,0 +1,14 @@
+extends layouts/layout
+
+block vars
+  -title = 'Demo Bootstrap Components'
+  -bodyClass = ''
+
+block container
+  //- header banner
+  .section.section-img-effect
+    h1 Section Image  Effect
+    .content
+      .view.effect
+        +img('Image 1' , '/homes/home-1.jpg')
+        .mask

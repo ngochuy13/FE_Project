@@ -1,0 +1,790 @@
+=story-intro-color($color, $hover-color)
+  &:hover
+    .title
+      color: $color
+    .readmore
+      background-color: $hover-color
+  .separator, .readmore
+    background-color: $color  
+
+*
+  box-sizing: border-box
+
+body.events-page
+  background-color: #f8f8f8
+
+.imagefill-section
+  display: block
+  background-size: cover
+  img.main-img, img.mobile-img
+    visibility: hidden
+    max-width: 100%
+.article-listing
+  article
+    margin: 0
+    padding: 0
+  .media
+    position: absolute
+    height: 100%
+    width: 100%
+    a
+      display: block
+      height: 100%
+    img
+      width: 100%
+      display: block
+.grid-sizer
+  width: 33.33%
+
+.grid-mode
+  margin-bottom: 75px
+  .grid-item 
+    float: left
+    width: 33.33%
+    height: 262px
+    overflow: hidden
+    z-index: 1
+    &:hover
+      .media
+        &:before
+          height: 100%
+      .detail
+        border-bottom-width: 16px
+      .interact
+        button
+          background: $c_purple
+    .meta-data, .see-full
+      display: none
+    .media, .interact, .detail
+      position: absolute
+    .interact
+      top: 50px
+      right: 0
+      z-index: 1
+      button
+        padding-left: 25px
+        background: #996ca0
+        height: 55px
+        border: none
+        color: $white
+        min-width: 103px
+        text-align: left
+        font-size: 19px
+        transition: background 0.3s
+        &:focus,&:active
+          outline: none
+        .fa
+          font-size: 24px
+          padding-right: 12px
+          position: relative
+          top: 2px
+    .media
+      padding: 0
+      margin: 0
+      &:before
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5))
+        display: block
+        content: " "
+        font-size: 0
+        transition: height 0.3s
+        height: 50%
+        width: 100%
+        left: 0
+        bottom: 0
+        position: absolute
+        z-index: 1
+    .detail
+      bottom: 0
+      width: 100%
+      border-bottom: 6px solid $white
+      transition: border-width 0.3s
+      padding-left: 30px
+      padding-bottom: 28px
+      padding-top: 20px
+      z-index: 2
+      &:before
+        content: " "
+        background: url($imgPath+'pointer-bg.png') no-repeat
+        background-size: 48px 40px
+        height: 20px
+        width: 46px
+        display: block
+        position: absolute
+        left: 107px
+        bottom: 0
+        font-size: 0
+      a
+        color: $white
+        text-decoration: none
+      .date-label
+        margin-bottom: 24px
+        span
+          font-size: 13px
+          font-family: $ss-ff
+          font-weight: bold
+          color: #fff
+          background: #996ca0
+          padding: 7px 18px
+      .description
+        font-size: 16px
+        font-family: $gg-ff
+        font-style: italic
+        line-height: 1.2
+      .title
+        font-size: 32px
+        font-family: $bt-ff
+        color: $white
+        font-weight: bold
+        line-height: 1.2
+    .bottom-bar
+      display: none
+  .grid-item--width2
+    width: 66.66%
+    .interact
+      button
+        min-width: 137px
+        padding-left: 12px
+    .detail
+      padding-bottom: 25px
+      .date-label
+        span
+          font-size: 16px
+      .description
+        font-size: 21px
+      .title
+        font-size: 49px
+  .grid-item--height2
+    height: 524px
+  .grid-item:hover 
+    background: #8CF
+    cursor: pointer
+  
+  &.home-grid
+    .readmore
+      display: none
+.list-mode
+  max-width: 1200px
+  margin: auto
+  box-sizing: border-box
+  overflow: hidden
+  article
+    .media
+      a
+        position: relative
+        &:hover
+          .view-image
+            opacity: 1
+      .view-image
+        width: 100%
+        height: 100%
+        position: absolute
+        background: url(../images/icons/icon-view.png) rgba(0, 0, 0, 0.4) no-repeat center 87px
+        background-size: 36px
+        opacity: 0
+        transition: opacity 0.3s
+        padding: 130px 0 116px 0
+        text-align: center
+        font-size: 16px
+        color: #fff
+  a
+    text-decoration: none
+  .grid-item
+    padding: 0 15px
+    margin-bottom: 70px
+  .media
+    width: 100%
+    height: 246px
+    position: relative!important
+  .overlay-info
+    height: 166px
+    .meta-data  
+      height: 43px
+    
+  .interact, .readmore, .date-label, .description
+    display: none
+  .detail
+    .title  
+      font-family: $bt-ff
+      font-weight: bold
+      font-size: 24px
+      color: #5e5e5e
+      padding: 0 12px
+      margin-top: 14px
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+  .meta-data
+    display: block 
+.meta-data
+  display: block
+  text-align: center
+  font-size: 0
+  margin-top: 17px
+  .field
+    border-right: 1px solid #949494
+    display: inline-block
+    font-family: $ss-ff
+    padding: 0 12px
+    text-align: center
+    &:last-child
+      border: 0
+    .big
+      line-height: 1
+      font-size: 30px
+      color: #f68124
+      display: inline-block
+      &.fa
+        line-height: 34px
+        font-size: 34px
+        color: #f68124
+        margin-top: -4px
+        &.fa-star
+          font-size: 24px
+    .small
+      clear: both
+      font-size: 14px
+      color: #635d5f
+      white-space: nowrap
+      display: block 
+@media screen and (max-width: 1185px)
+  .meta-data .field
+    padding: 0 5px
+@media screen and (max-width: 1024px)
+  .grid-mode .grid-item .media
+    position: absolute !important
+@media screen and (max-width: 480px)
+  .meta-data .field
+    padding: 0 4px
+
+.see-full, .loadmore
+  padding: 13px 0
+  width: 100%
+  font-size: 16px
+  margin-top: 22px
+.loadmore
+  margin-top: 0
+  margin-bottom: 80px
+.subscribe-form-landing
+  padding: 98px 0
+  background: #f4f4f4
+  .description
+    font-size: 18px
+    font-family: $gg-ff
+    color: rgb(35, 31, 32)
+    font-style: italic
+    margin-bottom: 28px
+  input.form-control
+    max-width: 368px
+  button.btn-submit
+    height: 50px
+    min-width: 105px
+  input.form-control, button.btn-submit
+    display: inline-block
+    vertical-align: middle
+    margin: 0 12px
+
+.story-intro
+  height: 680px
+  padding-top: 150px
+  background-size: cover
+  background-repeat: no-repeat
+  .title
+    font-size: 72px
+    font-family: $bt-ff
+    color: $white
+    font-weight: bold
+    line-height: 1.278
+    margin-bottom: 44px
+  .separator
+    display: inline-block
+    height: 10px
+    width: 100px
+    background: $white
+    margin-bottom: 43px
+  .description
+    font-size: 28px
+    font-family: $bt-ff
+    color: rgb(255, 255, 255)
+    font-weight: bold
+    margin-bottom: 26px
+  .meta
+    font-size: 16px
+    font-family: $gg-ff
+    color: $white
+    font-style: italic
+  .title, .description, .meta
+    text-shadow: 0 0 32px rgba(0,0,0, 0.5)
+  .readmore
+    text-decoration: none
+    margin-top: 41px
+    display: inline-block
+    font-size: 16px
+    width: 114px
+    height: 114px
+    padding-top: 47px
+    border-radius: 50%
+    font-family: $ss-ff
+    color: $white
+    background: $black
+    font-weight: normal
+  &.bottom-bar
+    border-bottom: 8px solid $white
+    position: relative
+    &:before
+      content: " "
+      background: url($imgPath+'pointer-bg.png') no-repeat
+      background-size: 73px 60px
+      height: 30px
+      width: 73px
+      display: block
+      position: absolute
+      left: 50%
+      margin-left: -36px
+      bottom: 0
+      font-size: 0
+  &.purple
+    +story-intro-color($c_purple, $c_purple_hover)
+  &.blue
+    +story-intro-color($c_blue, $c_blue_hover)
+  &.orange
+    +story-intro-color($c_orange, $c_orange_hover)
+  &.dark-blue
+    +story-intro-color(#7888a1, #8d9db6)
+  &.dark-brown
+    +story-intro-color(#9c5134, #a96348)
+  &.light-orange
+    +story-intro-color(#feb61a, #e39f12)
+  &.yellow
+    +story-intro-color($c_yellow, $c_yellow_hover)
+  &.home-banner
+    height: 548px
+    padding-top: 177px
+    .title
+      font-size: 48px
+      margin-bottom: 29px
+    .separator
+      margin-bottom: 15px
+    .description
+      font-size: 24px
+      margin-bottom: 26px
+    .meta
+      font-size: 14px
+    .features
+      padding-top: 26px
+      a
+        text-align: center
+        font-size: 32px
+        font-family: $ss-ff
+        color: rgb(255, 255, 255)
+        font-weight: bold
+        line-height: 1.2
+        text-decoration: none
+        display: inline-block
+        span
+          display: block
+        .bubble
+          display: inline-block
+          width: 80px
+          height: 93px
+          padding-top: 19px
+          margin-bottom: -10px
+        &.active, &:hover
+          .bubble
+            background: url($imgPath + 'ips-pin.png') no-repeat
+            background-size: 80px 93px
+
+@media screen and (max-width: 1023px)
+  .grid-mode
+    .grid-sizer
+      width: 100%
+    .grid-item
+      height: 336px
+      .bottom-bar
+        display: block
+      .media
+        &:before
+          height: 100%
+      .interact, .meta, .title, .detail
+        position: relative
+      .interact
+        top: 0
+        button
+          text-align: center
+          min-width: 95px
+          height: 37px
+          margin-bottom: 30px
+          font-size: 13px
+          padding-left: 6px
+          .fa
+            font-size: 16.5px
+      .detail
+        padding-top: 0
+        padding-right: 30px
+        border: none
+        &:before
+          display: none
+        .description
+          font-size: 14px
+          margin-bottom: 5px
+        .title
+          font-size: 28px
+      &:hover
+        .bottom-bar
+          height: 16px
+      .bottom-bar
+        position: absolute
+        width: 100%
+        height: 6px
+        background: $white
+        bottom: 0
+        transition: height 0.3s
+        z-index: 2
+        &:before
+          content: " "
+          background: url($imgPath+'pointer-bg.png') no-repeat
+          background-size: 48px 40px
+          height: 20px
+          width: 46px
+          display: block
+          position: absolute
+          left: 50%
+          margin-left: -23px
+          top: -20px
+          font-size: 0
+          z-index: 2
+          transition: bottom 0.3s
+      .overlay-info
+        width: 100%
+        text-align: center
+        margin-top: 67px
+        .readmore
+          display: none
+    .grid-item--width2, .grid-item
+      width: 100%
+    .grid-item--height2
+      height: 666px
+      .overlay-info
+        margin-top: 0
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        z-index: 1
+      .detail
+        .description
+          font-size: 18px
+        .title
+          font-size: 36px
+    &.home-grid
+      .grid-item--height2
+        .readmore
+          display: inline-block
+          border-radius: 50%
+          background: #996ca0
+          width: 100px
+          height: 100px
+          font-size: 14px
+          color: $white
+          padding-top: 39px
+          margin-top: 24px
+          transition: background-color 0.3s
+      .grid-item--height2
+        &:hover
+          .readmore
+            background: $c_purple
+            text-decoration: none
+  body.home
+    .story-intro
+      background-image: none!important
+
+  .story-intro
+    .story
+      padding-top: 84px
+      padding-bottom: 192px
+      background-position: center bottom
+    .features
+      padding-top: 35px
+      padding-bottom: 82px
+      background-position: center bottom
+      a
+        text-decoration: none
+      .bubble
+        background: url(../images/ips-pin-dark.png) center center no-repeat
+        background-size: contain
+        padding: 22px 0 30px 0
+        margin-top: 55px
+        &:hover
+          background: url(../images/ips-pin.png) center center no-repeat
+          background-size: contain
+          + span
+            color: #f68124
+        + span
+          font-size: 32px
+          color: #fff
+          font-family: $ss-ff
+          font-weight: bold
+          line-height: 1
+
+    &.home-banner
+      padding-top: 0px
+      height: auto
+      .title
+        line-height: 1.56
+        font-size: 36px
+      .description
+        font-size: 18px
+        padding: 0 15px
+        margin-bottom: 34px
+  .filter-select
+    margin-top: 23px
+    margin-bottom: 30px
+    button.clear
+      position: relative
+      float: left
+      right: 0px!important
+      bottom: 0px
+      padding: 10px 0
+@media screen and (min-width: 1024px)
+  .story-intro
+    .story, .features
+      background-image: none!important
+
+.section.article-list-filter
+  background: #f0f0f0
+  // overflow: hidden
+  &.border-top
+    border-top: 1px solid #fff
+  .blog-title
+    font-family: $bt-ff
+    color: #f68124
+    font-weight: bold
+    font-size: 24px
+    padding: 20px 0 17px 26px
+  .article-listing-view-mode-control
+    color: #5e5e5e
+    margin-bottom: 0px
+    button
+      border: 0
+      margin-left: 41px
+      margin-top: 23px
+      padding: 6px 32px 6px 0px
+      background: transparent
+      line-height: 1
+      color: #f68124
+      outline: none
+      position: relative
+      font-size: 14px
+      &.btn-grid
+        background: url(../images/icons/icon-grid-mode.png) no-repeat
+        background-size: contain 
+        background-position: right center
+        padding: 6px 42px 6px 0px
+        margin-left: 19px
+      &.btn-list
+        background: url(../images/icons/icon-boxed-mode.png) no-repeat
+        background-size: contain 
+        background-position: right center
+        padding: 6px 35px 6px 0px
+        margin-left: 26px
+      &.btn-map
+        background: url(../images/icons/icon-map.png) no-repeat
+        background-size: contain 
+        background-position: right center
+        padding: 6px 29px 6px 0px
+      &.active:after
+        position: absolute
+        content: ""
+        width: 36px
+        height: 14px
+        bottom: -22px
+        background: url(../images/pointer-bg.png) no-repeat
+        background-size: 36px
+        display: inline-block
+        right: -4px
+  .filter-select
+    margin-top: 23px
+    margin-bottom: 30px
+    button.clear
+      position: static
+      margin-top: 20px
+    >.text
+      float: left
+      font-size: 17px
+      vertical-align: middle
+      line-height: 1
+      padding: 15px 20px 15px 8px
+      
+    .select-wrap
+      padding: 10px 0 10px 0
+      float: left
+      margin-right: 20px
+      max-width: 100%
+      &:first-child
+        padding-left: 10px
+      .select-style-1
+        max-width: 500px
+      .accomodation-select-1
+        width: 496px
+      // .accomodation-select-2
+      //   width: 185px
+      .accomodation-select-3
+        width: 344px
+      >.text 
+        margin-right: 20px
+        color: #5e5e5e
+        font-size: 18px
+
+@media screen and (max-width: 1024px)
+  .section.article-list-filter .filter-select .select-wrap:first-child
+    padding-left: 0
+
+@media screen and (max-width: 1023px)
+  .section.article-list-filter
+    .article-listing-view-mode-control
+      text-align: left
+      margin-bottom: 22px
+      button
+        margin-left: 16px
+
+@media screen and (max-width: 767px)
+  .section.article-list-filter
+    .article-listing-view-mode-control
+      font-size: 0
+      button.active:after
+        // display: none
+    .filter-select 
+      .select-wrap 
+        width: 100%
+        .select-style-1
+          width: 100%
+          max-width: inherit
+
+
+.btn-group.bootstrap-select
+  max-width: 320px
+
+
+//=============================== Style for stay-lsit page
+.stay-list-page
+  #main, .section.article-list-filter, .section.article-list-filter.border-top, .section.article-list-filter .article-listing-view-mode-control button.active:after
+    background-color: #f8f8f8
+  .section.article-list-filter.with-3-select
+    .filter-select .select-wrap 
+      .accomodation-select-1
+        width: 282px
+      .accomodation-select-2
+        width: 185px
+      .accomodation-select-3
+        width: 348px 
+  .stay-grid 
+    .grid-item 
+      // .interact
+      //   top: 65px
+      .meta-data       
+        display: inline-block
+      &.grid-item--width2      
+        .meta-data
+          .field  
+            .big 
+              font-size: 30px
+            .small
+              font-size: 14px
+    .meta-data
+      .field    
+        border-color: #fff
+        .small
+          color: #fff
+          font-size: 12px
+        .big
+          font-size: 26px
+          line-height: 1
+    .only-list
+      display: none
+    &.list-mode
+      .title 
+        display: none
+      .only-list
+        display: block
+      .grid-item .meta-data       
+        display: block
+      .meta-data
+        .field    
+          border-color: #949494
+          .small
+            color: #635d5f
+            font-size: 12px!important
+      .grid-item.grid-item--width2 .meta-data .field .big
+        font-size: 24px
+
+.star-rating-wrapper
+  .rating-symbol
+    margin-right: 20px
+    font-size: 22px
+    color: $c_brown
+@media screen and (max-width: 1185px)
+  .stay-list-page
+    .meta-data .field
+      padding: 0 8px
+@media screen and (max-width: 767px)
+  .stay-list-page
+    .section.article-list-filter.with-3-select
+      .filter-select 
+        .select-wrap 
+          width: 100%
+          .select-style-1
+            width: 100%
+            max-width: inherit
+
+@media screen and (max-width: 1023px)
+  // .stay-list-page
+  //   .article-list-filter
+  //     display: none
+  .stay-list-page    
+    .stay-grid 
+      .meta-data 
+        .field 
+          .big
+            font-size: 24px
+            line-height: 1
+      &.grid-mode 
+        .grid-item 
+          .interact
+            display: none
+          .detail
+            padding: 0
+            .title
+              display: none
+            .only-list
+              display: block
+              height: 66px
+            .meta-data 
+              margin-top: 65px
+              .field .big
+                font-size: 30px
+        .grid-item--height2
+          .detail
+            .meta-data
+              position: absolute
+              left: 50%
+              transform: translateX(-50%)
+              top: 285px
+              width: 365px
+              margin: 0
+              .field .big
+                font-size: 30px
+
+@media screen and (max-width: 991px)
+  .article-list-filter
+    display: none
+  .stay-list-page .stay-grid.list-mode .only-list
+    text-align: center
+
+@media screen and (max-width: 480px)
+  .stay-list-page             
+    .stay-grid.grid-mode .grid-item .detail .meta-data .field 
+      padding: 0 10px
+      .big
+        font-size: 25px
+    .list-mode .meta-data .field
+      padding: 0 5px
+    .grid-mode .grid-item .media
+      position: absolute !important

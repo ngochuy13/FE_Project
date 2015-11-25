@@ -1,0 +1,106 @@
+header#header 
+  .top-header
+    .container-fluid
+      .row 
+        a.navigation-trigger(href='#')
+          span
+          span
+          span 
+        .top-logo.col-xs-4.col-xs-push-4.col-md-3.col-md-push-0
+          .logo   
+            +link-img('images-corp/logo.png', 'Logo', "home.html")
+        .top-panel.col-xs-4.col-xs-push-4.col-md-3.col-md-push-6.hide-phone  
+          a(href="http://KEMPINSKI.COM" target="_blank").back-to-corp-link
+            |KEMPINSKI HOTELS         
+            span.fa.fa-angle-down       
+          ul
+            li 
+              .dropdown    
+                .dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+                  | ENGLISH   
+                  span.fa.fa-angle-down
+                ul.dropdown-menu(aria-labelledby='dropdownMenu1')
+                  li
+                    a(href='#') ENGLISH    
+                  li
+                    a(href='#') ENGLISH 2       
+            li
+              a(href="#", title="Login")
+                span.user-icon
+                span.text-login Login       
+        .top-slogan.col-xs-12.col-xs-pull-0.col-md-6.col-md-pull-3
+          .text-big emirates palace arabian gulf       
+          .text-small
+            span
+              span.line.line-before
+              |Beyond 5-Star Luxury           
+              span.line.line-after 
+          //- .star-block
+          //-   span.star-icon
+          //-   span.star-icon   
+          //-   span.star-icon
+          //-   span.star-icon  
+          //-   span.star-icon       
+  .hero-banner
+    .banner-wrapper.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+      - if(page !== 'homepage'){
+        +hero-banner-img('Banner', bannerIMG )(style="background-image:url('images/#{bannerIMG}');")#hero-img
+      - }else{
+        +hero-banner-img('Banner', bannerIMG )#hero-img
+      - }
+    .navigation-positioning
+      .navigation
+        .navigation__content
+          .navigation__title Overview              
+          ul.navigation__link 
+            li(class={active: page === 'homepage'})
+              +link("home", homepage)
+            li(class={active: page === 'special-offers'})
+              +link("special offers", "#")
+            li(class={active: page === 'photogallery'})
+              +link("photo galleries", photogallery)(data-banners="images/home/banner.jpg,images/ipad/home/banner.jpg,images/mobile/home/banner.jpg")
+            li(class={active: page === 'restaurant-bar'})
+              +link("restaurants & bars", restaurant)(data-banners="images/restaurant/banner-1.jpg,images/ipad/restaurant/banner-1.jpg,images/mobile/restaurant/banner-1.jpg")
+              ul.sub-menu 
+                li
+                  +link("Restaurants", restaurantDetail)
+                li
+                  +link("Bars", barDetail)
+            li(class={active: page === 'meetings-events'})
+              +link("meetings & events", meetingsevents)(data-banners="images/meetings-events/banner-1.jpg,images/ipad/meetings-events/banner-1.jpg,images/mobile/meetings-events/banner-1.jpg")
+              ul.sub-menu
+                li
+                  +link("Meetings", meetingseventsdetail)
+                li
+                  +link("Events", meetingseventsdetail)
+            li(class={active: page === 'location'})
+              +link("location", location)(data-banners="images/guest-experience/banner.jpg,images/ipad/guest-experience/banner.jpg,images/mobile/guest-experience/banner.jpg")
+            li(class={active: page === 'guest-review'})
+              +link("guest reviews", guestreview)(data-banners="images/guest-experience/banner.jpg,images/ipad/guest-experience/banner.jpg,images/mobile/guest-experience/banner.jpg")
+            li(class={active: page === 'contact-us'})
+              +link("contact us", contactus)(data-banners="images/contact-us/banner.jpg,images/ipad/contact-us/banner.jpg,images/mobile/contact-us/banner.jpg")
+            li(class={active: page === 'facilities'})
+              +link("facilites", facilities)(data-banners="images/facilities/banner.jpg,images/ipad/facilities/banner.jpg,images/mobile/facilities/banner.jpg")
+            li(class={active: page === 'pressroom'})
+              +link("Press-Room", pressroom)(data-banners="images/press-room/banner-1.jpg,images/ipad/press-room/banner-1.jpg,images/mobile/press-room/banner-1.jpg") 
+          ul.navigation__linkcontrol.only-phone   
+            li
+              a(href="http://KEMPINSKI.COM" target="_blank").back-to-corp-link  
+                | KEMPINSKI.COM
+                //- span.fa.fa-angle-down 
+            li
+              .dropdown   
+                .dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+                  | ENGLISH   
+                  span.fa.fa-angle-down
+                ul.dropdown-menu(aria-labelledby='dropdownMenu1')
+                  li
+                    a(href='#') ENGLISH    
+                  li
+                    a(href='#') ENGLISH 2       
+            li
+              a(href="#", title="Login")
+                span.user-icon
+                span.text-login Login    
+  .booking-widget
+    include booking-widget

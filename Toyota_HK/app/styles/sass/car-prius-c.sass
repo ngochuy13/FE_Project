@@ -1,0 +1,335 @@
+//colors
+$blue:  blue
+$red:  red
+$yellow:  yellow
+$web_orange:  orange
+$pink:  pink
+$color_japanese_laurel_approx:  green
+$lavender_magenta:  violet
+$white_60: rgba(255,255,255,0.6)
+$url_13: url(../images/Cars/Ractis/icon-nav-slider-popup.png)
+
+.car-prius-c-detail
+  .tooltip-detail-content .block-text
+    font-size: 12px
+    color: #FFF
+    line-height: 1.5
+    text-align: left
+    position: absolute
+    left: 100px
+    bottom: 148px
+    z-index: 99
+  .owl-carousel-bg-car
+    &.owl-carousel
+      .animated
+        -webkit-animation-duration: 1000ms
+        animation-duration: 1000ms
+    .image-center 
+      height: 799px
+      width: 1920px
+      left: 50%
+      transform: translateX(-50%)
+      position: relative
+  
+  .slider 
+    height: 799px
+    width: 100%
+    overflow: hidden
+    margin: 0 auto
+    z-index: 2
+    position: relative
+
+  .mask-wrap
+    .mask 
+      width: 100%
+      height: 799px
+      left: 0
+      top: 0
+      position: absolute
+      z-index: 1
+      img 
+        position: relative  
+        top: 250px
+        margin: 0 auto
+        display: block
+        &.bg-car
+          position: absolute
+          top: 0
+          left: 0
+          width: auto
+          height: 100%
+          opacity: 0
+          -webkit-transition: all 0.3s
+          -moz-transition: all 0.3s
+          -ms-transition: all 0.3s
+          -o-transition: all 0.3s
+          transition: all 0.3s
+          
+    .supperwhite
+      background: #ffffff
+    .limewhitepearlcrystalshine
+      background: #e8ece8
+    .silvermetallic
+      background: #cfd5d9
+    .greymetallic
+      background: #384247
+    .black
+      background: #191712
+    .superredv
+      background: #9e1029
+    .orangepearlcrystalshine
+      background: #eb6f32
+    .yellow
+      background: #fab430
+    .yellowmicametallic
+      background: #c6be3f
+    .coolsodametallic
+      background: #5bb5d6
+
+  .handle 
+    position: absolute
+    display: block
+    width: 80px
+    height: 80px
+    //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+    border-radius: 50%
+    background: url('../images/Cars/PriusC/handle.png') no-repeat center center
+    right: 0
+    z-index: 3
+    margin-left: -40px
+    &:hover
+      &:before
+        content: " "
+        display: block
+        background-color: rgba(255,255,255,0.2)
+        width: 80px
+        height: 80px
+        border-radius: 50%
+
+  .handles 
+    position: relative
+    top: 50%
+    margin-top: -20px
+
+  .section-change-color-car-slider
+    .block-lists-color
+      position: absolute
+      bottom: 50px
+      left: 0 
+      width: 100%
+      z-index: 999
+      text-align: center
+      &.disabled .color-item .icon
+        cursor: default
+      .color-item
+        display: inline-block
+        .icon 
+          background: none
+          cursor: pointer
+        &.active
+          background: url('../images/Cars/PriusC/bg-color-car-active.png') no-repeat 
+    .section-change-color-car-content
+      background: none
+      padding: 0
+    .block-ow-caption
+      z-index: 99
+
+
+  .section-prius-c-banner
+    .owl-theme 
+      .owl-dots 
+        position: absolute
+        bottom: 15px
+        left: 0%
+        width: 100%
+        z-index: 9
+        .owl-dot 
+          width: 18px
+          height: 18px
+          background: $url_13 no-repeat -48px 0
+          margin: 2px 14px 0
+          opacity: 1
+          display: inline-block
+          &.active 
+            background: $url_13 no-repeat
+    .owl-item img
+      width: auto
+      // max-width: 100%
+      margin: 0 auto
+    .block-ow-caption
+      .block-top-middle
+        left: 54%
+        top: 180px
+    .owl-carousel-car
+      position: absolute
+      transform: translateZ(0)
+      top: 370px
+      z-index: 99
+      width: 100%
+      height: 331px
+      .item
+        position: absolute
+        top: 0
+        opacity: 0
+        width: 100%
+        text-align: center
+        transition: opacity 0.5s
+        &.active
+          opacity: 1
+  .block-ow-caption .block-top-middle
+    text-shadow: 0 0 10px rgb(0,0,0)
+    .title-small
+      text-transform: uppercase
+  .section-car-detail.car-prius-c
+    .section-car-detail-content-exterior 
+      .block-description 
+        top: 641px
+        .editor-content p
+          color: #fff
+          text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4)
+
+@media screen and (max-width: 1024px)
+  .car-prius-c-detail 
+    .section-prius-c-banner .block-ow-caption .block-top-middle
+      top: 80px
+      left: 0
+      width: 100%
+    .tooltip-detail-content
+      .block-text
+        display: none
+        bottom: 0
+        left: 10px
+      &.active .block-text
+        display: block          
+
+@media screen and (max-width: 1023px)
+  .car-prius-c-detail
+    .section-car-detail.car-prius-c .section-car-detail-content-exterior .block-description
+      position: static
+      .editor-content p
+        color: #333
+        text-shadow: none
+    .owl-carousel-car
+      display: none
+    .owl-carousel-bg-car
+      .owl-controls
+        display: none
+        position: absolute
+        top: 325px
+        width: 100%
+      .image-center
+        width: 100%
+        height: auto
+      .image-center
+        width: 100%
+    .section-prius-c-banner 
+      .block-ow-caption
+        margin: 10px auto 20px auto
+        position: static
+        color: #ed1b24
+        width: 320px
+        .title
+          font-size: 75px
+          background: transparent
+          margin-bottom: 0
+        .title-small
+          padding-bottom: 6px
+          position: relative
+          margin-bottom: 25px
+          &:before
+            width: 20px
+            margin-left: -10px
+            background: #ed1b24
+        .block-top-middle
+          position: static
+          text-shadow: none
+      .owl-carousel-bg-car
+        .owl-item img
+          width: 100%
+    .handles
+      display: none
+    .mask-wrap
+      .mask 
+        img 
+          width: 90%
+          &.bg-car
+            width: auto
+    .slider 
+      height: 660px
+    .section-change-color-car-slider 
+      .block-lists-color
+        bottom: 150px
+
+@media screen and (max-width: 768px)
+  .car-prius-c-detail
+    .owl-carousel-bg-car 
+      .owl-controls
+        top: 325px
+      .image-center
+        width: 768px
+    .slider 
+      height: 600px
+    .section-change-color-car-slider
+      .block-lists-color
+        bottom: 160px
+
+@media screen and (max-width: 767px)
+  .car-prius-c-detail .section-change-color-car-slider
+    margin-bottom: 0
+
+@media screen and (max-width: 639px)
+  .car-prius-c-detail
+    .slider 
+      height: 300px 
+    .section-change-color-car-slider
+      .block-ow-caption .block-top-middle
+        top: 20px
+        .title-small
+          padding-bottom: 5px
+          margin-bottom: 12px
+      .block-lists-color
+        bottom: 180px
+    .mask-wrap
+      .mask 
+        img 
+          top: 128px
+          width: 280px
+          height: auto
+
+@media screen and (max-width: 480px)
+  .car-prius-c-detail
+    .slider 
+      height: 450px
+    .section-change-color-car-slider
+      .block-lists-color
+        width: 280px
+        left: 50%
+        margin-left: -145px
+        text-align: left
+        bottom: auto
+        top: 260px
+        .color-item
+          margin: 0 5px
+          width: 60px
+          height: 60px
+          &.active
+            background-size: 60px 60px
+          img
+            width: 100%
+
+
+.ie8
+  .car-prius-c-detail 
+    .owl-carousel-bg-car .image-center
+      left: 0
+      -o-transform: none 
+      -ms-transform: none 
+      -moz-transform: none 
+      -webkit-transform: none 
+      transform: none 
+      margin: 0 auto
+    .block-ow-caption .block-top-middle
+      left: 0
+      width: 100%
+      text-align: center
+

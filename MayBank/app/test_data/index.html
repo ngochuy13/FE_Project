@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+<body>
+
+<pre id="pre"></pre>
+
+<script>
+
+
+jQuery(document).ready(function(){
+  $.ajax({
+    url: '03_investments.xml',
+    type: 'GET',
+    dataType: 'xml'
+  })
+  .done(function(data) {
+    console.log('done');
+    var obj = xmlToJson(data);
+    $('#pre').html(JSON.stringify(obj,null,'  '));
+  })
+  .fail(function() {
+    console.log("error");
+  });
+  
+});
+
+// Changes XML to JSON
+function xmlToJson(xml) {
+
+  // Create the return object
+  var obj = {};
+
+  if (xml.nodeType == 1) { // element
+    // do attributes
+    if (xml.attributes.length > 0) {
+      //obj["attributes"] = {};
+      for (var j = 0; j < xml.attributes.length; j++) {
+        var attribute = xml.attributes.item(j);
+        //obj["attributes"][attribute.nodeName] = attribute.nodeValue;
+        obj['@' + attribute.nodeName] = attribute.nodeValue;
+      }
+    }
+  } else if (xml.nodeType == 3) { // text
+    obj = xml.nodeValue.trim(); // add trim here
+  }
+
+  // do children
+  if (xml.hasChildNodes()) {
+    for (var i = 0; i < xml.childNodes.length; i++) {
+      var item = xml.childNodes.item(i);
+      var nodeName = item.nodeName;
+      //  console.debug('child',nodeName,item)
+      if (typeof(obj[nodeName]) == "undefined") {
+        var tmp = xmlToJson(item);
+        if (tmp !== "") // if not empty string
+          obj[nodeName] = tmp;
+      } else {
+        if (typeof(obj[nodeName].push) == "undefined") {
+          var old = obj[nodeName];
+          obj[nodeName] = [];
+          obj[nodeName].push(old);
+        }
+        var tmp = xmlToJson(item);
+        if (tmp !== "") // if not empty string
+          obj[nodeName].push(tmp);
+      }
+    }
+  }
+  if (!Array.isArray(obj) && typeof obj == 'object') {
+    var keys = Object.keys(obj);
+    if (keys.length == 1 && keys[0] == '#text') return obj['#text'];
+    if (keys.length === 0) return null;
+  }
+  return obj;
+}
+
+</script>
+
+</body>
+</html>

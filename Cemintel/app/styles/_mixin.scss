@@ -1,0 +1,160 @@
+@mixin scale($value) {
+    -webkit-transform: scale($value);
+    -moz-transform: scale($value);
+    -ms-transform: scale($value);
+    -o-transform: scale($value);
+    transform: scale($value);
+}
+
+@mixin scale2D($value, $value2) {
+    -webkit-transform: scale($value, $value2);
+    -moz-transform: scale($value, $value2);
+    -ms-transform: scale($value, $value2);
+    -o-transform: scale($value, $value2);
+    transform: scale($value, $value2);
+}
+
+@mixin transform($left, $top) {
+    -webkit-transform: translate($left, $top);
+    -moz-transform: translate($left, $top);
+    -ms-transform: translate($left, $top);
+    -o-transform: translate($left, $top);
+    transform: translate($left, $top);
+}
+
+@mixin rotate($deg) {
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    transform: rotate($deg);
+}
+
+@mixin transition($time) {
+    -webkit-transition: all $time ease-out;
+    -moz-transition: all $time ease-out;
+    -o-transition: all $time ease-out;
+    transition: all $time ease-out;
+}
+
+@mixin transitionAttr($attr, $time) {
+    -webkit-transition: $attr $time ease-out;
+    -moz-transition: $attr $time ease-out;
+    -o-transition: $attr $time ease-out;
+    transition: $attr $time ease-out;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin box-shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin spin {
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+@mixin slideInLeft {
+    -webkit-animation: slideInLeft;
+    animation: slideInLeft;
+}
+
+@mixin blur {
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+    opacity: 0.95;
+}
+
+@mixin opacity($op) {
+    opacity: $op;
+    filter: alpha(opacity=$op);
+}
+
+@mixin translate($x, $y) {
+    -ms-transform: translate($x, $y);
+    -webkit-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
+
+@mixin transition($time) {
+    -webkit-transition: all $time ease;
+    transition: all $time ease;
+}
+
+// Breakpoint
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$large-desktop-width: 1200px;
+$small-mobile: 480px;
+@mixin fullDesktop {
+    @media (min-width: #{$desktop-width + 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width + 1px}) and (max-width: #{$large-desktop-width}) {
+        @content;
+    }
+}
+
+@mixin device {
+    @media (max-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin smdesktop {
+    @media (min-width: #{$desktop-width + 1px}) and (max-width: #{$large-desktop-width}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin xmobile {
+    @media (max-width: #{$small-mobile}) {
+        @content;
+    }
+}
+
+@mixin print {
+    @media print {
+        @content;
+    }
+}
+
+@mixin landscape {
+    /* landscape */
+    @media screen and (orientation: landscape) {
+        /* landscape-specific styles */
+        @content;
+    }
+}
+
+@mixin portrait {
+    /* portrait */
+    @media screen and (orientation: portrait) {
+        /* portrait-specific styles */
+        @content;
+    }
+}

@@ -1,0 +1,419 @@
+//colors
+$black_10: rgba(0,0,0,0.1);
+$white: #fff;
+$color_log_cabin_approx: #222;
+$color_celeste_approx: #ccc;
+$color_fuscous_gray_approx: #555;
+$alto: #dbdbdb;
+$color_tundora_approx: #444;
+$color_alto_approx: #dedede;
+$color_tapa_approx: #777;
+$color_mountain_mist_approx: #999;
+$color_gallery_approx: #eee;
+$color_bondi_blue_approx: #0194be;
+$color_deep_cerulean_approx: #0186ab;
+
+//fonts
+$font_0: Calibri;
+$font_1: Arial;
+
+//data-uris
+$data_uri_0: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkYmRiZGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+";
+$data_uri_1: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAxOTRiZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMTg2YWIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+";
+
+//@extend-elements
+//original selectors
+//.megamenu .dropdown, .megamenu .dropdown li .dropdown
+%extend_1 {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: none;
+	position: absolute;
+	z-index: 999;
+	width: 160px;
+	border: solid 1px $black_10;
+	background: $white;
+}
+
+//original selectors
+//.megamenu form.contact input, .megamenu form.contact textarea
+%extend_2 {
+	font-family: $font_0, $font_1;
+	font-size: 16px;
+	color: $color_tundora_approx;
+	outline: 0;
+}
+
+//original selectors
+//.megamenu form.contact input[type="text"], .megamenu form.contact textarea
+%extend_3 {
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 5px 10px;
+	border: solid 1px $color_alto_approx;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: border .3s linear;
+}
+
+//original selectors
+//.megapanel .row:before, .megapanel .row:after
+%extend_4 {
+	display: table;
+	content: "";
+	line-height: 0;
+}
+
+//original selectors
+//.megapanel .row .col1, .megapanel .row .col2, .megapanel .row .col3, .megapanel .row .col4, .megapanel .row .col5, .megapanel .row .col6
+%extend_5 {
+	display: block;
+	width: 100%;
+	min-height: 20px;
+	float: left;
+	margin-left: 2.127659574468085%;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+}
+
+//original selectors
+//.skyblue, .skyblue>li.showhide
+%extend_6 {
+	background: $color_bondi_blue_approx;
+	background: url($data_uri_1);
+	background: linear-gradient(to bottom,$color_bondi_blue_approx 0,$color_deep_cerulean_approx 100%);
+	filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_bondi_blue_approx',endcolorstr='$color_deep_cerulean_approx',gradienttype=0);
+}
+
+//original selectors
+//.megamenu .dropdown, .megamenu .dropdown li .dropdown
+%extend_7 {
+	width: 100%;
+	display: none;
+	left: 0;
+	border-left: 0;
+	position: static;
+	border: 0;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+}
+
+
+.megamenu {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	list-style: none;
+	display: inline-block;
+	position: relative;
+	font-family: $font_0, $font_1;
+	font-size: 15px;
+	border: solid 1px $color_celeste_approx;
+	li {
+		float: left;
+		display: inline;
+	}
+	.dropdown {
+		@extend %extend_1;
+		top: 59px;
+		li {
+			clear: both;
+			width: 100%;
+			border-bottom: solid 1px $black_10;
+			.dropdown {
+				@extend %extend_1;
+				left: 160px;
+				top: inherit;
+			}
+			&:last-child {
+				border-bottom: 0;
+			}
+			a {
+				float: left;
+				width: 100%;
+				padding: 10px 25px;
+				text-decoration: none;
+				display: block;
+				border: 0 none;
+				font-size: 14px;
+				color: $color_tundora_approx;
+				background: 0;
+				//Instead of the line below you could use @include box-sizing($bs)
+				box-sizing: border-box;
+				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+				transition: color .4s ease-in-out;
+			}
+			&:hover>a {
+				background: $alto;
+			}
+		}
+	}
+	.megapanel {
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+		img {
+			width: 100%;
+			border: solid 1px $color_alto_approx;
+			cursor: pointer;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: border .3s linear;
+			&:hover {
+				border: solid 1px $color_tapa_approx;
+			}
+		}
+	}
+	form.contact {
+		input {
+			@extend %extend_2;
+		}
+		textarea {
+			@extend %extend_2;
+			@extend %extend_3;
+			&:focus {
+				border: solid 1px $color_mountain_mist_approx;
+			}
+		}
+		input[type="text"] {
+			@extend %extend_3;
+			height: 40px;
+			&:focus {
+				border: solid 1px $color_mountain_mist_approx;
+			}
+		}
+		input[type="submit"] {
+			width: 100px;
+			height: 35px;
+			border: 0;
+			color: $white;
+			cursor: pointer;
+			background: $color_mountain_mist_approx;
+		}
+	}
+}
+.megamenu>li>a {
+	float: left;
+	padding: 20px 30px;
+	color: $color_fuscous_gray_approx;
+	font-weight: 200;
+	text-decoration: none;
+	text-transform: uppercase;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: color .4s ease-in-out;
+}
+.megamenu>li {
+	&:hover>a {
+		background: $alto;
+	}
+	&.active>a {
+		background: $alto;
+	}
+	&.right {
+		float: right;
+	}
+	&.showhide {
+		display: none;
+		width: 100%;
+		height: 50px;
+		cursor: pointer;
+		color: $color_fuscous_gray_approx;
+		border-bottom: solid 1px $black_10;
+		background: $color_gallery_approx;
+		background: url($data_uri_0);
+		background: linear-gradient(to bottom,$color_gallery_approx 0,$alto 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_gallery_approx',endcolorstr='$alto',gradienttype=0);
+		span {
+			&.title {
+				margin: 15px 0 0 25px;
+				float: left;
+			}
+			&.icon1:after {
+				position: absolute;
+				content: "";
+				right: 25px;
+				top: 15px;
+				height: 3px;
+				width: 25px;
+				font-size: 50px;
+				border-top: 3px solid $white;
+				border-bottom: 3px solid $white;
+				z-index: 1;
+			}
+			&.icon2:after {
+				position: absolute;
+				content: "";
+				right: 25px;
+				top: 27px;
+				height: 3px;
+				width: 25px;
+				font-size: 50px;
+				border-top: 3px solid $white;
+				border-bottom: 3px solid $white;
+				z-index: 1;
+			}
+		}
+	}
+}
+.skyblue {
+	@extend %extend_6;
+	li>a {
+		color: $white;
+	}
+	.dropdown li:hover>a {
+		color: $white;
+		background: $color_deep_cerulean_approx;
+	}
+	.megapanel img:hover {
+		border: solid 1px $color_bondi_blue_approx;
+	}
+	form.contact {
+		input[type="submit"] {
+			background: $color_bondi_blue_approx;
+		}
+		input[type="text"]:focus {
+			border: solid 1px $color_bondi_blue_approx;
+		}
+		textarea:focus {
+			border: solid 1px $color_bondi_blue_approx;
+		}
+	}
+}
+.skyblue>li {
+	&.showhide {
+		@extend %extend_6;
+		span {
+			color: $white;
+		}
+	}
+	&:hover>a {
+		color: $white;
+		background: $color_deep_cerulean_approx;
+	}
+	&.active>a {
+		color: $white;
+		background: $color_deep_cerulean_approx;
+	}
+}
+@media(max-width:768px) {
+	.megamenu>li {
+		display: block;
+		width: 100%;
+		border-bottom: solid 1px $black_10;
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+		&:hover {
+			border-top: 0;
+		}
+		&.active {
+			border-top: 0;
+		}
+		&:hover>a {
+			padding: 15px 25px;
+		}
+		&.active>a {
+			padding: 15px 25px;
+		}
+	}
+	.megamenu>li>a {
+		padding: 15px 25px;
+	}
+	.megamenu {
+		a {
+			width: 100%;
+			//Instead of the line below you could use @include box-sizing($bs)
+			box-sizing: border-box;
+		}
+		.dropdown {
+			@extend %extend_7;
+			li {
+				background: $white!important;
+				border: 0;
+				.dropdown {
+					@extend %extend_7;
+				}
+			}
+		}
+		.dropdown>li>a {
+			padding-left: 40px!important;
+		}
+	}
+	.black {
+		background: $color_log_cabin_approx;
+	}
+	.megamenu>li>.megapanel {
+		position: static;
+		margin-top: 50px;
+	}
+	.megapanel .row {
+		margin-top: 0;
+		[class*="col"] {
+			float: none;
+			display: block;
+			width: 100%;
+			margin-left: 0;
+			margin-top: 15px;
+			//Instead of the line below you could use @include box-sizing($bs)
+			box-sizing: border-box;
+		}
+		&:first-child [class*="col"]:first-child {
+			margin-top: 0;
+		}
+	}
+}
+.megamenu>li>.megapanel {
+	position: absolute;
+	display: none;
+	background: $white;
+	width: 100.2%;
+	top: 58px;
+	left: -1px;
+	z-index: 99;
+	padding: 20px 30px;
+	border: solid 1px $color_celeste_approx;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+}
+.megapanel .row {
+	width: 100%;
+	margin-top: 15px;
+	&:first-child {
+		margin-top: 0;
+	}
+	&:before {
+		@extend %extend_4;
+	}
+	&:after {
+		@extend %extend_4;
+		clear: both;
+	}
+	.col1 {
+		@extend %extend_5;
+		width: 14.893617021276595%;
+	}
+	.col2 {
+		@extend %extend_5;
+		width: 31.914893617021278%;
+	}
+	.col3 {
+		@extend %extend_5;
+		width: 48.93617021276595%;
+	}
+	.col4 {
+		@extend %extend_5;
+		width: 65.95744680851064%;
+	}
+	.col5 {
+		@extend %extend_5;
+		width: 82.97872340425532%;
+	}
+	.col6 {
+		@extend %extend_5;
+		width: 100%;
+	}
+	[class*="col"]:first-child {
+		margin-left: 0;
+	}
+}

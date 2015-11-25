@@ -1,0 +1,53 @@
+.row
+	.contact-form-section
+		.col-sm-8
+			h3.bold Contact Us
+			.p
+				p We welcome your input. Questions, ask for samples, comments or feedback, we are here to help you. Let us know about your enquire filling our simple form.
+			.row
+				form(action="" name="" id="contact-form")
+					.col-sm-6.col-md-4.col-xs-8
+						+dropDown('Mr.', 'title')
+					.clearfix
+					.col-sm-6
+						input.gl-input(type="text" placeholder="First Name" required name="fname")
+					.col-sm-6
+						input.gl-input(type="text" placeholder="Last Name" required name="lname")
+					.col-sm-12
+						input.gl-input(type="text" placeholder="Company Name" required name="company")
+					.col-sm-6
+						input.gl-input(type="email" placeholder="Email Address" required name="email")
+					.col-sm-6
+						input.gl-input(type="text" placeholder="Phone" required name="phone")
+					.col-sm-6
+						+dropDown('How would you like us to respond?', 'respond')
+					.col-sm-6
+						+dropDown('Market segment you are working in', 'segment')
+					.col-sm-6
+						+dropDown('Subject', 'subject')
+					.col-sm-12
+						textarea.gl-input(placeholder="Message" required name="message")
+					.col-sm-9.col-xs-9
+						label(for="agree").label-agree
+							input#agree(type="checkbox" required name="term")
+							.checkBox
+							p Would you like to receive more informations about Cemintel?
+					.col-sm-3.col-xs-3
+						button(type="submit").button.rainbow.pull-right
+							div.bgw Submit
+		.col-sm-4
+			h3 &nbsp;
+			.contact-sidebar
+				.contact-sidebar-box.p
+					div.bold Orders and Customerservice
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum.
+					a(href="tel:131744")<span class="bold">Phone:</span> 13 17 44
+				.contact-sidebar-box.p
+					div.bold Orders and Customerservice
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum.
+					a(href="tel:131744")<span class="bold">Phone:</span> 13 17 44
+				.contact-sidebar-box.p
+					div.bold Orders and Customerservice
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum.
+					a(href="tel:131744")<span class="bold">Phone:</span> 13 17 44
+	.division

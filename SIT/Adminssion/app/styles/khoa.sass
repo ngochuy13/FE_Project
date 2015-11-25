@@ -1,0 +1,751 @@
+.text-block
+  padding: 20px 8px 0
+  // margin-bottom: 20px
+  border-top: 4px solid transparent
+  h3
+    font-weight: 800
+    margin-top: 0
+    margin-bottom: 5px
+  h2
+    font-weight: 800
+    font-size: 18px
+    font-family: $openSans
+    margin-bottom: 5px
+  .text-block-desc
+    font-size: 14px
+    p
+      font-family: $openSans
+      font-weight: normal
+      color: #666666
+      line-height: 1.6
+      margin-bottom: 20px
+      &:last-child
+        margin-bottom: 0
+    ul
+      margin-top: 20px    
+@media (max-width: 640px)
+  .text-block:first-child
+    padding-top: 0
+  .text-block
+    h2
+      font-size: 13px
+      margin-bottom: 10px
+    .text-block-desc
+      p
+        line-height: 20px  
+  .editor-content p, .T4-template p
+    font-size: 11px
+  .black-font
+    &.links-block
+      &.useful-links
+        a
+          font-size: 12px        
+
+.white-font
+  color:#fff
+.black-font
+  color: #555
+
+  &.white-bg
+    background:#fff
+  &.grey-bg
+    background: $main_grey_bg
+  &.links-block
+    a
+      display: block
+      color: #666666
+
+     
+    &.useful-links
+      a
+        color: #ef3f36
+
+  &.border-red
+    border-top-color: #ef3f36      
+
+.section-banner-list.style-2
+  position: relative
+  background-image: url('../images/course-details/course-detail-banner-bg.png') no-repeat
+  background-color: #FFF
+  background-size: cover
+  padding-top: 20px
+  padding-bottom: 20px
+  .course-detail-banner__after
+    position: absolute
+    width: 100%
+    height: 70px
+    bottom: 0
+    left: 0
+    span 
+      position: absolute
+      top: 16px
+      right: -5px
+      width: 120%
+      height: 140px
+      background: #fff
+      transform: skewY(-3deg)
+      // -ms-transform: none
+      // -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476)" /* IE8 */
+  img.bg-img
+    visibility: hidden
+    width: 100%
+    // min-height: 100% 
+  .titles-wrapper
+    position: absolute
+    top: 45%
+    transform: translateY(-50%)
+    width: 100%
+    text-align: center
+    .breadcrumb
+      background: none
+      border-radius: 0px
+      font-size: 12px
+      letter-spacing: 2px
+      margin-bottom: 10px
+      line-height: 1
+      text-transform: uppercase
+      li
+        a
+          color:#fff
+          font-weight: bold
+          
+          &:hover,&:active,&:focus
+            text-decoration: none
+    .button-wrapper  
+      .btn
+        // width: 25%
+        margin: 0 6px
+        font-size: 15px  
+        &.white_cta
+          font-size: 14px        
+    h1
+      font-size: 36px
+      line-height: 1.4
+      margin-bottom: 33px
+      margin-top: 0
+    .btn.playbtn
+      display: inline-block
+      color:#fff
+      border-radius: 3px
+      border: solid 1px transparent
+      padding: 10px 20px 10px 20px
+      font-weight: bold
+      font-size: 15px
+      background: rgba(0,0,0,0.5)
+      &:hover,&:active,&:focus
+        text-decoration: none 
+      span.fa
+        margin-right: 7px
+        font-size: 23px
+        vertical-align: middle
+  // @media (max-width: 993px)
+  //   padding-top: 100%
+  //   background: url('..images/course-details/course-detail-banner-bg-sm.png') center center no-repeat
+  //   img.bg-img
+  //     display: none
+  //   .titles-wrapper
+  //     .btn.playbtn
+  //       span.fa 
+  //         font-size: 17px
+  //         vertical-align: -10% 
+
+
+section.course-detail-main-body
+  background-color: transparent
+  padding: 30px 0 0px
+  position: relative
+  background-size: 100%
+  margin-bottom: -58px
+  .widget-right
+    .text-block
+      padding: 30px 29px
+      margin-bottom: 20px
+      background: #f4f4f4
+      h3
+        color: #555555
+        margin-bottom: 10px
+      .text-block-desc
+        p 
+          color: #666666
+      &.skewed-block
+        transform: skewY(-4deg)
+        h3,.text-block-desc
+          transform: skewY(4deg)
+.main-body-after
+  height: 230px
+  position: relative
+  transform: skewY(-3.5deg)
+  overflow: hidden
+  -webkit-backface-visibility: hidden
+  span.background
+    position: absolute
+    background: url('../images/banner/dotted-background-high.png') center 0 repeat
+    background-size: cover
+    width: 100%
+    height: 100%
+    transform: skewY(3.5deg)
+    transform-origin: bottom left
+  span.diagonal
+    width: 100%
+    height: 100%
+    display: block
+    transform: skewY(2deg)
+    position: absolute
+    bottom: -98px
+.T4-template
+  .main-body-after
+    span.background
+      background-size: 100%
+      background-color: #FFF
+@media (max-width: 993px)
+  section.course-detail-main-body
+    .widget-right
+      .text-block.skewed-block
+        padding: 60px 29px
+  .main-body-after
+    height: 105px
+    span.background
+      background-position: center bottom
+      background-repeat: no-repeat
+      background-size: 300%
+@media only screen and (max-device-width: 1024px)
+  .main-body-after
+    transform: none
+    height: 140px
+    overflow: visible
+    span.background
+      background: none
+      display: none
+    span.diagonal  
+      background: url('../images/banner/dotted-background - skewed.png') center 44px repeat-x
+      transform: skewY(-4deg)
+      background-size: cover
+      height: 140px
+      background-color: white
+      bottom: -12px
+@media only screen and (max-device-width: 768px)
+  .main-body-after
+    span.diagonal
+      background-position: center 15px
+      background-size: 135%
+@media only screen and (max-device-width: 480px)
+  .main-body-after
+    height: 61px
+    span.diagonal  
+      background-position: center 28px
+      transform: skewY(-4deg)
+      background-size: 175%
+      height: 100px
+      background-color: transparent
+      bottom: 24px
+@media (max-width: 640px)
+  .widget-right
+    .text-block
+      h3
+        font-size: 13px
+
+
+section.course-detail-study-trip
+  background-repeat: no-repeat
+  background-color: transparent
+  background-position: center 0
+  background-size: cover
+  padding: 150px 0 90px
+  z-index: 50
+  .text-block
+    padding: 20px 0
+    .text-block-desc, .text-block-desc p
+      color: #bebebe
+      font-size: 15px
+      line-height: 1.6
+    .text-block-title
+      color: #fff
+      font-size: 20px
+      text-transform: uppercase
+
+.T4_responsive_carousel
+  margin-top: 20px
+  position: relative
+  .resp-carousel-item
+    padding: 0 10px
+  .owl-nav
+    .owl-prev,.owl-next
+      position: absolute
+      font-size: 0
+      top: 0
+      bottom: 0
+      width: 36px
+      background: url(../images/sprites/sport-slider-angle.png) 1px center no-repeat
+      background-size: 160px
+    .owl-next
+      right: 0
+      background-position: -126px center
+    .owl-prev
+      left: 0
+@media (max-width: 993px)
+  .T4_responsive_carousel
+    .resp-carousel-item
+      padding: 0 40px
+@media (max-width: 993px)
+  .T4_responsive_carousel
+    .resp-carousel-item
+      padding: 0 25px
+
+.module-tab
+  .year-list
+    list-style: none
+    color: $black
+    font-weight: 800
+    width: 25%
+    padding: 0
+    float: left
+    padding-right: 15px
+    li
+      display: block
+      padding: 11px 22px
+      color: $white
+      cursor: pointer
+      position: relative
+      &.resp-tab-active   
+        background: $white
+        color: #555555
+        &:before
+          content: ""
+          position: absolute
+          right: -20px
+          top: 50%
+          transform: translateY(-50%)
+          width: 0
+          height: 0
+          border: 12px solid transparent
+          border-left-color: white
+      @media (max-width: 993px)
+        display: none    
+  .module-list
+    width: 75%
+    float: left
+    background: $white
+    h2
+      display: none
+      font-size: 15px
+      font-family: $openSans
+      font-weight: 800      
+      margin: 0
+      padding: 20px 30px
+      position: relative
+      background: #f40c1a
+      color: $white
+      cursor: pointer
+      border-bottom: 1px solid #ff979d
+      transition: border-bottom-color 0.4s ease
+      .resp-arrow:before
+        content:"\f107"
+        font-family: FontAwesome
+        position: absolute
+        right: 30px
+      &.resp-tab-active
+        background: $white
+        color: #555555
+        border-bottom-color: transparent
+        .resp-arrow:before
+          content: "\f106"
+    .tab-panel.resp-tab-content
+      display: none
+      min-height: 300px
+    @media (max-width: 993px)
+      width: 100%
+      h2
+        display: block
+      .tab-panel.resp-tab-content
+        min-height: auto
+
+ul.course-list-group
+  list-style: none
+  padding: 30px
+  margin: 0
+  li
+    color: rgb( 102, 102, 102 )
+    a
+      font-size: 15px
+      font-family: $openSans
+      font-weight: 600
+      color: rgb( 102, 102, 102 )
+      line-height: 2.267
+      &:hover,&:active,&:focus
+        text-decoration: none
+      &:before
+        content: "+"
+        margin-right: 8px
+        font-weight: bold
+        font-size: 18px
+    .course-item_detail
+      display: none
+      padding: 10px
+      background: #f4f4f4
+      margin-bottom: 10px
+      p 
+        font-size: 14px
+        font-weight: normal
+        padding-left: 10px
+        margin-bottom: 3px
+    &.active 
+      .course-item_detail
+        display: block
+      a         
+        &:before
+          content: "-"
+  @media (max-width: 993px)
+    padding: 15px 30px          
+
+section.course-detail-modules-synosis
+  background: #f40c1a
+  position: relative
+  padding-top: 40px
+  padding-bottom: 50px
+  h2
+    color: $white
+    line-height: 2
+    text-align: left
+  .modules-sypnosis-after
+    height: 100px
+    width: 100%
+    background:#fff
+    position: absolute
+    top: 100%
+    overflow: hidden
+    span
+      position:relative
+      bottom: 150px
+      right: 5px
+      height: 150%
+      width: 200%
+      display: block
+      background: #f40c1a
+      transform: skewY(-2deg)
+
+section.course-detail-campus-location
+  margin-top: 100px
+  background:#fff
+  padding: 0 40px 40px
+  h2
+    color: #231f20
+    line-height: 2
+    text-align: left
+  .campus-location-card
+    .media
+      text-align: left
+    .info
+      text-align: left
+      padding-top: 10px 
+      a, p
+        color: #555
+        font-size: 15px
+        font-family: $openSans
+        font-weight: bold
+        line-height: 1.6
+        margin:0
+      a:hover,a:active,a:focus
+        text-decoration: none
+      p 
+        font-weight: 600
+
+section.course-detail-testimonial
+  background-repeat: no-repeat
+  background-color: transparent
+  background-size: cover
+  background-position: center 0
+  padding: 150px 0 90px
+.testimonial-carousel
+  position: relative
+  .testimonial-carousel-item
+    max-width: 85%
+    margin: 0 auto
+    h2
+      font-size: $h2_editor
+      font-family: $font-family-base
+      font-weight: 800
+      color: $white
+      margin-bottom: 26px
+    .text-block-desc
+      color: #bebebe
+      font-style: italic;
+      p
+        font-size: 22px
+        line-height: 1.9
+        font-weight: normal
+    .author-block
+      margin-top: 29px
+      .author-avatar
+        display: inline-block
+        width: 182px
+        height: 182px
+        margin-right: 20px
+        margin-left: -80px
+        margin-bottom: 30px
+        padding: 15px
+        position: relative
+        .bg
+          display: block
+          width: 182px
+          height: 182px
+          background: url('../images/demo-img/avatar-decor.png') center center no-repeat
+          background-size: contain
+          position: absolute          
+          top: 0
+          right: 0
+        img
+          width: 100%
+          height: 100%
+          display: inline-block
+          z-index: 99
+          position: relative
+      .author-name
+        font-size: 16px
+        color: $white
+        vertical-align: 50%
+  .owl-nav
+    .owl-prev,.owl-next
+      position: absolute
+      top: 0
+      height: 100%
+      width: 80px
+      font-size: 0  
+    .owl-prev
+      left: 0
+      background: url(../images/sprites/slider-angle-sprite.png) 10px center no-repeat
+    .owl-next
+      right: 0
+      background: url(../images/sprites/slider-angle-sprite.png) -128px center no-repeat
+
+
+
+@media screen and (max-width: 993px)
+  .section-banner-list.style-2
+    padding: 30px 0 90px
+    background-size: cover
+    background-position: center bottom
+    // background: url('../images/course-details/course-detail-banner-bg-sm.png') center center no-repeat
+    // background-size: 115%
+    img.bg-img
+      display: none
+    .titles-wrapper
+      text-align: center
+      position: static
+      transform: none
+      .btn.playbtn
+        span.fa
+          font-size: 18px
+      h1
+        margin: 3px 0
+        font-size: 23px
+      .breadcrumb
+        padding: 8px 0
+        li
+          a
+            font-size: 7px
+          & + li:before
+            padding: 0
+            font-size: 7px
+            color: $white
+      .breadcrumb>li+li:before
+        padding: 0      
+      .banner-title
+      .button-wrapper
+        margin-top: 25px
+        .btn
+          font-size: 13px
+          
+  .text-block
+    &.skewed-block:first-child
+      margin-top: 50px
+
+  .testimonial-carousel
+    .testimonial-carousel-item
+      h2
+        margin: 0 -4px 20px
+      .text-block-desc
+        padding: 0 15px
+        p
+          font-size: 12px
+      .author-block
+        width: 100%
+        margin: 30px 0 0 0
+        .author-avatar
+          margin: 0 10px 0 0
+        .author-name
+          width: 50%
+          vertical-align: middle
+    .owl-nav
+      .owl-prev,.owl-next
+        background-size: 160%
+      .owl-next
+        background-position: -60px center         
+  section.course-detail-campus-location
+    margin-top: 50px
+    .campus-location-card
+      .info
+        a, p
+          font-size: 11px
+@media screen and (max-width: 615px)
+  .section-banner-list.style-2
+    // background: url('../images/course-details/course-detail-banner-bg-sm.png') center -42px no-repeat
+    .titles-wrapper
+      // text-align: left  
+      .button-wrapper
+        margin-top: 50px
+        .btn
+          padding: 10px 10px
+          width: auto
+          font-size: 11px
+          margin: 0 8px 0 0
+          width: 46%
+          &.cta_btn
+            padding: 9px 10px
+            border-radius: 2px
+            
+  section.course-detail-main-body
+    padding-top: 0
+@media screen and (max-width: 568px)
+  // section.course-detail-banner
+  //   background: url('../images/course-details/course-detail-banner-bg.png') center -64px no-repeat  
+@media screen and (max-width: 480px)
+  .section-banner-list.style-2
+    // background: url('../images/course-details/course-detail-banner-bg-sm.png') center -42px no-repeat
+    // background-size: cover
+    background-position: center -145px
+    @media (max-width: 450px)
+      background-size: 300%
+      background-position: center bottom
+    .container
+      padding-left: 25px
+      padding-right: 25px
+    .titles-wrapper
+      text-align: left 
+      .button-wrapper
+        margin-top: 30px
+        font-size: 0
+        .btn
+          &.playbtn
+            width: 130px
+            span.fa
+              margin-right: 4px
+          &.cta_btn
+            font-size: 11px
+            width: 130px
+            margin-right: 0
+            span.fa
+              font-size: 14px
+@media screen and (max-width: 640px)              
+  section.course-detail-main-body
+    margin-top: -10px
+    .container
+      padding-left: 25px
+      padding-right: 25px
+    .widget-right
+      .text-block.skewed-block:first-child
+        margin-top: 35px 
+      .text-block.skewed-block
+        padding: 30px 15px
+        margin-bottom: 15px
+  .T4-template 
+    .course-detail-study-trip
+      padding-top: 95px
+      .container
+        padding-left: 25px
+        padding-right: 25px
+      .text-block 
+        h2
+          font-size: 14px
+        .text-block-desc
+          p
+            font-size: 11px  
+  section.course-detail-testimonial
+    padding-top: 100px
+    padding-bottom: 30px     
+  .testimonial-carousel 
+    .testimonial-carousel-item 
+      h2
+        font-size: 14px
+      .text-block  
+        .text-block-desc 
+          p
+            font-size: 11px
+            color: #bebebe 
+      .author-block
+        padding-bottom: 50px
+        .author-avatar
+          width: 91px
+          height: 91px
+          background: #ee3f36
+          padding: 0
+          transform: rotate(8deg)
+          img
+            transform: rotate(-8deg)
+            width: 87px
+            height: 87px
+        .author-name
+          font-size: 12px
+  .T4-template        
+    .course-detail-modules-synosis
+      .container
+        padding-left: 25px
+        padding-right: 25px
+      h2
+        font-size: 14px 
+        &.resp-accordion
+          padding-left: 20px
+          padding-right: 20px
+          font-size: 12px         
+  .T4_responsive_carousel 
+    .resp-carousel-item
+      padding: 0 40px 0 35px
+  .module-tab 
+    .module-list 
+      h2 
+        .resp-arrow:before
+          font-size: 15px
+          top: 17px
+  ul.course-list-group 
+    padding: 0 20px 20px 20px
+    li 
+      line-height: 18px
+      padding-left: 20px
+      margin-bottom: 10px
+      a
+        font-size: 11px
+        line-height: 18px
+        position: relative
+        &:before
+          position: absolute
+          left: -20px
+          font-size: 11px
+      .course-item_detail
+        padding: 5px 0
+        p
+          font-size: 11px
+          padding: 0    
+          
+  section.course-detail-modules-synosis 
+    padding-bottom: 25px
+    .modules-sypnosis-after
+      transform: none
+      position: absolute
+      bottom: 0
+      background: transparent
+      span
+        height: 25px
+        position: absolute
+        right: 0
+        bottom: 78px
+        transform: skewY(-3deg)
+  section.course-detail-campus-location
+    padding-left: 25px
+    padding-right: 25px
+    .container
+      padding-left: 0
+      padding-right: 0
+    h2
+      font-size: 14px
+    .campus-location-card 
+      .info
+        padding-top: 5px       

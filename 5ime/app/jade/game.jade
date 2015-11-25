@@ -1,0 +1,14 @@
+extends layouts/layout
+
+block vars
+  -title = 'Homepage'
+  -bodyClass = 'puzzle-game'
+
+block container
+  .outmost-wrapper
+    .wrapper
+      .main
+        .content
+          include includes/game-home.jade
+      include includes/loading.jade
+block modal  

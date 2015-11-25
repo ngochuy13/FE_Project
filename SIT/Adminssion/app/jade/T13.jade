@@ -1,0 +1,84 @@
+extends layouts/template
+
+block vars
+  -title = 'T10 Scholarship Details'
+  -bodyClass = ''
+block container
+  +skewed-header("images/banner/scholarship-details-banner.png","images/banner/scholarship-details-banner-sm.png",'Overseas Immersion Programme','HOME','FINACIAL','LOANS')  
+  section.page-intro
+    .page-intro_before
+      span
+    .container
+      .row
+        .col-md-12
+          .page-intro-block
+            .intro-header
+              h2 PREPARING YOU FOR THE GLOBAL WORKPLACE
+            .intro-subtitle
+              h3 Invest in your future
+            .intro-desc
+              p SIT administers a variety of loan schemes to assist students with the payment of tuition fees and other education expenses such as the Overseas Immersion Programme. Undergraduate students may choose to utilise any of the following loan schemes available for AY2015/16.
+  section.page-main-body.dark-theme.has-bg(style="background-image: url('images/scholarshipdetail-bg.jpg');")
+    .container
+      .row
+        .col-md-12
+          .body-title
+            .symbol-img
+              img(src="images/scholarship-hat.png", alt="symbol")
+            .body-name
+              h2 SIT DEGREE PROGRAMMES
+    .container
+      .row
+        .col-md-12
+          .T4_responsive_carousel.owl-carousel
+            .resp-carousel-item
+              img(src="images/course-details/course-details-t4.jpg", alt="study_trip")
+            .resp-carousel-item
+              img(src="images/course-details/course-details-t4_2.jpg", alt="study_trip")
+            .resp-carousel-item
+              img(src="images/course-details/course-details-t4_3.jpg", alt="study_trip")          
+  section.page-intro.outro
+    .page-intro_before
+      span
+    .container
+      .row
+        .col-md-12
+          .body-title
+            .symbol-img
+              img(src="images/scholarship-hat.png", alt="symbol")
+            .body-name
+              h2 OVERSEAS UNIVERSITY PARTNERS
+      .row.row-centered
+        .col-md-3.col-xs-6.col-centered
+          a(href="#").partner-logo-wrapper
+            .partner-logo(style="background-image: url(images/partner-logo/7971.jpg)")
+        .col-md-3.col-xs-6.col-centered
+          a(href="#").partner-logo-wrapper
+            .partner-logo(style="background-image: url(images/partner-logo/Culinary_Institute_of_America_logo.svg.png)")
+        .col-md-3.col-xs-6.col-centered
+          a(href="#").partner-logo-wrapper
+            .partner-logo(style="background-image: url(images/partner-logo/Glasgow-logo.gif)")
+        .col-md-3.col-xs-6.col-centered
+          a(href="#").partner-logo-wrapper
+            .partner-logo(style="background-image: url(images/partner-logo/gsa%20117.jpg)")
+        .col-md-3.col-xs-6.col-centered
+          a(href="#").partner-logo-wrapper
+            .partner-logo(style="background-image: url(images/partner-logo/trinity.jpg)")
+        .col-md-3.col-xs-6.col-centered
+          a(href="#").partner-logo-wrapper
+            .partner-logo(style="background-image: url(images/partner-logo/logo.jpg)")
+        .col-md-3.col-xs-6.col-centered
+          a(href="#").partner-logo-wrapper
+            .partner-logo(style="background-image: url(images/partner-logo/tum_logo.png)")
+        .col-md-3.col-xs-6.col-centered
+          a(href="#").partner-logo-wrapper
+            .partner-logo(style="background-image: url(images/partner-logo/university-of-liverpool-banner.png)")
+        .col-md-3.col-xs-6.col-centered
+          a(href="#").partner-logo-wrapper
+            .partner-logo(style="background-image: url(images/partner-logo/WheelockLogo.gif)")
+        .col-md-3.col-xs-6.col-centered
+          a(href="#").partner-logo-wrapper
+            .partner-logo(style="background-image: url(images/partner-logo/unlvlogo.jpg)")
+        .col-md-3.col-xs-6.col-centered
+          a(href="#").partner-logo-wrapper
+            .partner-logo(style="background-image: url(images/logo.png)")                        

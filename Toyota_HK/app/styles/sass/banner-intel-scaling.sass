@@ -1,0 +1,64 @@
+// .banner-intel-scaling-item
+//   overflow: hidden
+//   img 
+//     left: 50%
+//     position: relative
+//     width: auto !important 
+//     transform: translate(-50%, 0)
+//     -webkit-transform: translate(-50%, 0)
+//     -ms-transform: translate(-50%, 0)
+// .banner-intel-scaling-item
+//   left: 50%
+//   transform: translate(-50%, 0)
+//   -webkit-transform: translate(-50%, 0)
+//   -ms-transform: translate(-50%, 0)
+.banner-intel-scaling-item
+  height: 799px
+  width: 1920px
+  left: 50%
+  -webkit-transform: translate(-50%, 0)
+  -ms-transform: translate(-50%, 0)
+  -moz-transform: translate(-50%, 0)
+  -o-transform: translate(-50%, 0)
+  transform: translate(-50%, 0)
+
+.owl-carousel 
+  .owl-item
+    overflow: hidden
+    .banner-intel-scaling-item
+      position: relative
+
+
+@media screen and (max-width: 1920px) and (min-width: 1024px)
+  .car-detail
+    .section,
+    .banner-intel-scaling-item
+      height: 799px
+    .section-components-car, .section-interest, .section-specification-car
+      height: auto
+@media screen and (max-width: 1023px)
+  .banner-intel-scaling-item
+    max-width: 100%
+    width: 100%
+    height: auto
+    img 
+      max-width: 100%
+      margin: 0 auto
+
+// Temporary Code until we have tablet images
+@media screen and (max-width: 768px)
+  .banner-intel-scaling-item
+    img 
+      max-width: inherit
+      width: 100%
+      height: auto
+
+@media screen and (max-width: 767px)
+  .car-detail
+    .banner-intel-scaling-item
+      height: auto
+      width: 100%
+      left: 0
+      transform: none
+      img 
+        margin: 0 auto

@@ -1,0 +1,154 @@
+extends layouts/template-1
+
+block vars
+  -title = 'About'
+  -bodyClass = ''
+  -bannerIMG = 'faq/banner.jpg'
+block container    
+  .inner
+    main#main
+      +page-title("CONTACT EMIRATES PALACE", "do not hesitate", "CALL US TODAY").gray
+
+      section.section-block.map-section.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+        .block-map-container.full-width
+          .map-container
+            .map-viewer(data-auto-map="true", data-lat="24.4776714", data-long="54.3451771", data-zoom="8", data-info-title="Emirates Palace", data-info-description="Emirates Palace offers you a magical place to enjoy the riches of the Arabian Gulf.")
+            .container.map-overlay-container
+              .map-overlay
+                .sumary-block
+                  .row.sumary.text-center
+                    .date Today, 14 October, 2014
+                    .place Abu Dhabi, UAE
+                    img(src="images/icon/weather/cloudy-medium.png")
+                    .weather 27
+                      span &ordm;
+                .today-block
+                  .row.today
+                    .col.col-4.text-center
+                      img(src="images/icon/weather/wind-rain.png")
+                      span.status Cloudy Gusts
+                      span.value 13°
+                    .col.col-4.text-center
+                      img(src="images/icon/weather/umbrella.png")
+                      span.status Humidity
+                      span.value 33%
+                    .col.col-4.text-center
+                      img(src="images/icon/weather/wind.png")
+                      span.status Wind
+                      span.value 
+                        |41 
+                        .unit mph
+                  .row
+                    .col.col-2.text-center
+                      .day MO
+                      img(src="images/icon/weather/sun.png")
+                      span.value 13°
+                      span.value-last 13°
+                    .col.col-2.text-center
+                      .day TU
+                      img(src="images/icon/weather/wub-could.png")
+                      span.value 13°
+                      span.value-last 13°
+                    .col.col-2.text-center
+                      .day WE
+                      img(src="images/icon/weather/cloudy.png")
+                      span.value 13°
+                      span.value-last 13°
+                    .col.col-2.text-center
+                      .day TH
+                      img(src="images/icon/weather/hail.png")
+                      span.value 13°
+                      span.value-last 13°
+                    .col.col-2.text-center
+                      .day FR
+                      img(src="images/icon/weather/sun.png")
+                      span.value 13°
+                      span.value-last 13°
+
+      .container
+        .editor-content
+          h2 EMIRATES PALACE LOCATION
+          p Emirates Palace is centrally located in the heart of Abu Dhabi, close to major visitor attractions and the main business areas of the city. Just 40 minutes from Abu Dhabi International Airport and 90 minutes from Dubai Airport, Emirates Palace is conveniently situated for both leisure and business travellers.
+          br
+          p Popular tourist sites close to the Emirates Palace include the Grand Mosque and the Abu Dhabi National Exhibition Centre, both located 20 minutes away. The Marina Mall and major shopping attractions are also within walking distance of the hotel.
+
+      .about-section.contact-section.section-block
+        .container
+          .contact-block
+            .title Address and Contact Details
+            .contact-detail.row
+              dl.dl-horizontal.col-md-4.address
+                dt
+                  strong Address:
+                dd  Emirates Palace, West Corniche Road <br/>
+                    | Abu Dhabi, United Arab Emirates<br/>
+                    | P.O.Box - 39999
+              dl.dl-horizontal.col-md-4
+                dt
+                  strong Email Contact:
+                dd 
+                  a(href="mailto:reservations@emiratespalace.ae", title="reservations@emiratespalace.ae") reservations@emiratespalace.ae
+                dt
+                  strong Telephone:
+                dd 
+                  a(href="tel://971-2-690-9000", title="tel:+971 2 690 9000") +971 2 690 9000
+                dt
+                  strong Fax:
+                dd 
+                  a(href="tel://971-2-690-9000", title="tel:+971 2 690 9000") +971 2 690 9000
+          .contact-block
+            .title Check-in/Check-out Time
+            p 
+              strong Check-in 2:00 pm
+              | &nbsp; - &nbsp;
+              strong Check-out 12:00 pm
+          .contact-block
+            .title Arrival Information
+            .editor-content
+              p The Emirates Palace offers different options for arrival:
+            .about-tab-item
+              #accordion.panel-group(role='tablist', aria-multiselectable='true')
+                +panel-collapse-item("By yacht, yellow boats or powerboats", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque in neque quisquam, debitis atque ipsam fugit, magnam laudantium tempora delectus? 1", "tab-item-content-1")
+                +panel-collapse-item("By limousines or helicopters", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque in neque quisquam, debitis atque ipsam fugit, magnam laudantium tempora delectus? 2", "tab-item-content-2")
+                +panel-collapse-item("By seaplanes with Seawings", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque in neque quisquam, debitis atque ipsam fugit, magnam laudantium tempora delectus? 3", "tab-item-content-3")            
+                
+            .about-description
+              p
+                | For booking your transfe, please contact our concierge desk <br/>by phone at 
+                a(href="tel://971-2-690-9000", title="tel:+971 2 690 9000") +971 2 690 9000
+                | or by emailing <br/>
+                a(href="mailto:concierge@emiratespalace.ae", title="concierge@emiratespalace.ae") reservations@emiratespalace.ae
+          .contact-block
+            .title Directions
+            .about-tab-item
+              #accordion2.panel-group(role='tablist', aria-multiselectable='true')
+                .panel.panel-default
+                  #tab-item-4.panel-heading(role='tab')
+                    label.panel-title
+                      a(role='button', data-toggle='collapse', data-parent='#accordion2', href='#tab-item-content-4', aria-expanded='true', aria-controls='tab-item-content-4').collapsed
+                        span.navigate
+                        span Abu Dhabi Airport
+                  #tab-item-content-4.panel-collapse.collapse(role='tabpanel', aria-labelledby='tab-item-4')
+                    .panel-body
+                      p 38km (approximately 35 - 40 minutes)
+
+                  #tab-item-5.panel-heading(role='tab')
+                    label.panel-title
+                      a(role='button', data-toggle='collapse', data-parent='#accordion2', href='#tab-item-content-5', aria-expanded='true', aria-controls='tab-item-content-5').collapsed
+                        span.navigate
+                        span Al Maktoum International Airport
+                  #tab-item-content-5.panel-collapse.collapse(role='tabpanel', aria-labelledby='tab-item-5')
+                    .panel-body
+                      p 125km (appromimately 70 - 100 minutes)
+
+
+                  #tab-item-6.panel-heading(role='tab')
+                    label.panel-title
+                      a(role='button', data-toggle='collapse', data-parent='#accordion2', href='#tab-item-content-6', aria-expanded='true', aria-controls='tab-item-content-6').collapsed
+                        span.navigate
+                        span Dubal Internation Airport
+                  #tab-item-content-6.panel-collapse.collapse(role='tabpanel', aria-labelledby='tab-item-6')
+                    .panel-body
+                      p 180km (appromimately 100 - 120 minutes)
+            .about-description
+              p Abu Dhabi City Centre: 3km (appromimately 5 - 10 minutes)

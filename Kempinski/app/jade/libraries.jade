@@ -1,0 +1,102 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Libraries'
+  -bodyClass = ''
+  -bannerIMG = 'home/banner.jpg'
+block container    
+  .inner
+    main#main
+      .container
+        h1 Block Gallery
+        section.block-gallery
+          .row
+            .gallery-filter.text-center.col-md-12
+              a#all.btn.btn-info.active(href='#') all
+              a#3d.btn.btn-info(href='#') 3d
+              a#drawings.btn.btn-info(href='#') drawings
+            .gallery-content.text-center.col-md-12
+              img(src="http://placehold.it/980x380&text=1-retina", alt="")
+              .owl-control
+                .owl-prev prev
+                .owl-next next
+            .gallery-thumbnail.owl-carousel.owl-theme.col-md-12
+              each val, index in {1:'3d',2:'drawings',3:'drawings 3d',4:'3d',5:'drawings',6:'drawings 3d',7:'3d',8:'drawings',9:'drawings 3d',10:'3d',11:'drawings',12:'drawings 3d'}
+                img(data-src='http://placehold.it/80x54&text=#{index}',src='http://placehold.it/80x54&text=#{index}', data-src-retina='http://placehold.it/980x380&text=#{index}-retina', alt='', data-index=index, class="owl-lazy #{val}")
+            .gallery-thumbnail-copy.hide
+
+        h1 Block Booking
+        section.block-booking
+          .row
+            form(id="booking", method="post", action="")
+              .col-md-4
+                .form-group
+                  input#search-text.form-control(type='text', placeholder='Where do you want to go ?', name='search-text')
+              .col-md-2
+                .form-group
+                  input#check-in.form-control.daterangepicker_plugin.daterangepicker_checkin(type='text', placeholder='Check In', name='check-in')
+                  i.glyphicon.glyphicon-calendar.fa.fa-calendar
+                  span
+                  b.caret
+              .col-md-2
+                .form-group
+                  input#check-out.form-control.daterangepicker_plugin.daterangepicker_checkout(type='text', placeholder='Check Out', name='check-out')
+                  i.glyphicon.glyphicon-calendar.fa.fa-calendar
+                  span
+                  b.caret
+              .col-md-4.hide
+                #reportrange.pull-right(style='background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%')
+                  i.glyphicon.glyphicon-calendar.fa.fa-calendar
+                  span
+                  b.caret
+                  
+              .col-md-2
+                .form-group
+                  select.form-control(name="number-guest")
+                    option 1 Guest
+                    option 2 Guest
+                    option 3 Guest
+                    option 4 Guest
+                    option 5 Guest
+                    option 5+ Guest
+              .col-md-2
+                .form-group
+                  input#search-submit.form-control.btn.btn-info(type='submit', value='Search', name='search-submit')
+
+
+
+        +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#')  
+        .data-table
+          table
+            thead
+              tr
+                td Emirates Centre
+                td Size(sqm)
+                td Cocktails
+                td Block
+            tbody    
+              tr
+                td: strong C040/ C 040
+                td 40sqm
+                td 16
+                td 0
+              tr
+                td: strong C040/ C 040
+                td 40sqm
+                td 16
+                td 0
+              tr
+                td: strong C040/ C 040
+                td 40sqm
+                td 16
+                td 0
+              tr
+                td: strong C040/ C 040
+                td 40sqm
+                td 16
+                td 0
+              tr
+                td: strong C040/ C 040
+                td 40sqm
+                td 16
+                td 0

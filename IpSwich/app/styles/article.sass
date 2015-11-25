@@ -1,0 +1,302 @@
+body.article
+  background: #f8f8f8
+  .story-intro 
+    height: 380px
+    padding-top: 31px
+  .story-intro .title
+    margin-top: 104px
+    font-size: 48px
+    margin-bottom: 14px
+  .story-intro.orange .separator
+    margin-bottom: 13px
+    height: 4px
+  .story-intro .description
+    font-size: 14px
+    margin-bottom: 20px
+    font-family: $gg-ff
+    font-style: italic
+    font-weight: normal
+  @media screen and (max-width: 991px)
+    .container
+      padding-left: 42px
+      padding-right: 42px
+  @media screen and (max-width: 1023px)
+    .story-intro
+      padding-top: 55px
+      height: 561px
+    .story-intro .title
+      margin-top: 0
+      margin-bottom: 26px
+    .story-intro.orange .separator
+      background-color: #feb61a
+      height: 4px
+      margin-bottom: 12px
+  .text-content
+    .separator
+      width: 84px
+      height: 5px
+      display: inline-block
+      background: #8f8f8f
+      margin: 31px auto 0 auto
+    i
+      font-family: $gg-ff
+  .detail-content
+    padding-top: 45px
+    margin-top: 8px
+    background: #f8f8f8
+    position: relative
+    &:before
+      background: url("../images/pointer-bg.png") no-repeat center top
+      background-size: 73px 60px
+      width: 73px
+      height: 30px
+      content: ""
+      display: block
+      position: absolute
+      top: -38px
+      left: 50%
+      margin-left: -36px
+    .article-content
+      margin-bottom: 30px
+      .text-content
+        width: 670px
+        max-width: 100%
+        margin: auto
+        .article-caption
+          p
+            margin-top: 0px!important
+            font-size: 18px
+            line-height: 1.3
+        p
+          color: #5e5e5e
+          font-size: 14px
+          font-family: $ss-ff
+          margin-top: 21px
+          margin-bottom: 0
+          display: inline-block
+          line-height: 1.5
+        .heading
+          font-family: $bt-ff
+          color: #f68124
+        .sub-heading
+          font-family: $bt-ff
+          color: #f68124
+  .blog-footer
+    margin-top: 30px
+    width: 100%
+    display: table
+    .story-intro 
+      height: 0
+      padding-top: calc(100% - 44px)
+      position: relative
+      &:after
+        content: ""
+        width: 100%
+        height: 100%
+        display: inline-block
+        position: absolute
+        top: 0 
+        left: 0
+        background: rgba(0, 0, 0, 0.5)
+        opacity: 0
+        transition: opacity 500ms
+        z-index: 0
+      &:hover
+        .story
+          .title
+            color: #fff
+        &:after
+          opacity: 1
+      .story
+        position: absolute
+        z-index: 1
+        top: 50%
+        transform: translateY(-50%)
+        width: 100%
+        .title
+          margin-top: 116px
+          font-size: 48px
+          margin-bottom: 28px
+          line-height: 1.2
+        .separator
+          margin-bottom: 15px
+          height: 8px
+    .left
+      .story-intro.orange .separator
+        background: #feb61a
+    .middle
+      .story-intro .title
+        margin-top: 90px
+      .story-intro.orange .separator
+        background: #ce5c20
+    .right
+      .story-intro.orange .separator
+        background: #4fdad2
+    .story-intro .description
+      font-size: 24px
+      margin-bottom: 42px
+      font-family: $bt-ff
+      font-style: normal
+      font-weight: bold
+.slide-content
+  margin: 27px 0 30px 0
+.flexslider
+  margin: 0
+  border: 0
+  padding: 0
+  .slides
+    padding: 0
+    margin: 0
+    li
+      img
+        width: 100%
+
+  .flex-direction-nav a
+    overflow: visible
+    font-size: 0
+    outline: none
+    text-decoration: none
+  .flex-direction-nav a:before
+    font-size: 94px
+  &.thumb
+    .flex-direction-nav a:before
+      font-size: 30px
+    .flex-direction-nav a
+      height: 42px
+      top: calc(50% - 21px)
+
+  .flex-direction-nav a
+    height: 133px
+    top: calc(50% - 67px)
+    margin: 0
+  .flex-direction-nav a:before
+    font-family: "FontAwesome"
+    color: #fff
+    content: '\f104'
+    transform: translateX(10px)
+  .flex-direction-nav a.flex-next:before
+    font-family: "FontAwesome"
+    color: #fff
+    content: '\f105'
+    transform: translateX(-10px)
+
+@media screen and (max-width: 1024px)
+  body.article .blog-footer
+    .story-intro .story 
+      .title
+        font-size: 40px
+      .description
+        font-size: 16px
+@media screen and (max-width: 374px)
+  body.article .blog-footer .story-intro
+    height: 375px
+
+.blog-comment
+  .comment-label
+    font-family: $ss-ff
+    font-size: 16px
+    color: #5e5e5e
+    border-bottom: 1px solid #dadada
+    padding: 34px 0
+  .comment
+    border-bottom: 1px solid #dadada
+    padding: 34px 0
+    .avatar
+      overflow: hidden
+      border-radius: 50%
+      display: table
+      img
+        width: 59px
+        height: 59px
+    .comment-info
+      margin-bottom: 26px
+      .author
+        font-family: $ss-ff
+        font-size: 14px
+        font-weight: bold
+        color: #5e5e5e
+        display: inline-block
+      .date
+        color: #aaa
+        margin-left: 40px
+        display: inline-block
+        .fa
+          margin-right: 5px
+
+    .content-content
+      font-family: $ss-ff
+      font-size: 14px
+      color: #5e5e5e
+    .your-comment
+      font-family: $font-family-serif
+      font-style: italic
+      color: #5e5e5e
+      border: 0
+      background: transparent
+      resize: none
+      outline: none
+      width: 100%
+      
+.side-bar
+  .category-block
+    .title
+      font-size: 14px
+      font-family: $ss-ff 
+      font-weight: bold
+      color: #f79241
+      letter-spacing: 2px
+    .separator
+      width: 84px
+      height: 2px
+      display: inline-block
+      background: #8f8f8f
+      margin: 16px auto 0 auto
+    ul
+      padding: 0
+      margin: 22px 0 0 0
+      li
+        list-style: none
+        padding: 0
+        margin: 0 0 29px 0
+        a
+          font-size: 14px
+          font-family: $ss-ff 
+          font-weight: bold
+          color: #5e5e5e
+  .tag-block
+    background: #fff
+    font-size: 0px
+    margin-top: 56px
+    padding: 24px 0
+    .title
+      font-size: 14px
+      font-family: $ss-ff 
+      font-weight: bold
+      color: #f79241
+      letter-spacing: 2px
+    .separator
+      width: 23px
+      height: 2px
+      display: inline-block
+      background: #8f8f8f
+      margin: 4px auto 0 auto
+    ul    
+      padding: 0 10px
+      margin: 31px 0 0 0
+      font-family: $ss-ff
+      display: table
+      li
+        list-style: none
+        padding: 0
+        margin: 0 0 10px 0
+        float: left
+        a
+          font-size: 12px
+          font-family: $ss-ff
+          color: #5e5e5e
+          padding: 0 12px
+          background-color: #f0f0f0
+          border-radius: 12px
+          margin: 0 5px
+          letter-spacing: 1px
+          text-transform: uppercase

@@ -1,0 +1,629 @@
+extends layouts/default
+
+block content
+	.locator-block
+		.locator-banner
+			.container
+				.title
+					h3.white.bold Find a Professional 
+					.sub-title
+						.p.white.dotdotdot
+							p Minions ipsum eiusmod aute potatoooo sit amet enim officia voluptate. Chasy voluptate ullamco aliquip ex aaaaaah tulaliloo. Elit et incididunt baboiii minim minim incididunt para tú irure dolor commodo. Sit amet elit veniam esse wiiiii esse dolore exercitation.
+							.expand-subtitle
+								<i class="fa fa-long-arrow-down visible-xs" title="Expand the sub-title"></i>
+						.p.original.white
+							.collapse-subtitle
+								<i class="fa fa-long-arrow-up visible-xs" title="Collapse the sub-title"></i>
+		.locator-content
+			.container
+				ul.nav.nav-tabs.locator-tabs(role="tablist")
+					li.tac.active(role="presentation")
+						a.bold(href="#suplier" aria-controls="suplier" role="tab" data-toggle="tab") Find a Supplier
+					li.tac(role="presentation")
+						a.bold(href="#builder" aria-controls="profile" role="tab" data-toggle="tab") Find a Builder
+					li.tac(role="presentation")
+						a.bold(href="#installer" aria-controls="messages" role="tab" data-toggle="tab") Find an Installer
+				.tab-content.locator-tab-content
+					#suplier.tab-pane.fade.in.active
+						.row
+							.col-sm-6.locator-tab-content-image.hidden-xs(style='height: 500px')
+								//- img(src="images/locator/map.jpg")
+								#googleMap(style='height: 100%')
+							.col-sm-6.locator-tab-content-inner
+								.locator-find-block
+									.locator-find-header
+										h3.bold Find a Supplier near your location
+									.locator-find-sub-header
+										p.p Lorem ipsum dolor sit amet, consecte adipiscing elit. Aenean euismod bibdum laoreet lorem ipsum dolor sit amet.
+									.locator-find
+										.row
+											.col-xs-12.use-current-location.visible-xs
+												a.button.rainbow.pull-right.tac.bold(href="#")
+													.bgw Use my current location
+											form#find-supplier-form
+												.col-sm-6.state-dropdown
+													+dropDown('State')
+												.col-sm-6.post-code
+													input.gl-input(type='text' placeholder="Suburb / Post Code" required name="suburb")
+												.col-sm-12
+													.error.find-error.find-supplier-error You have entered an invalid format for the postal code/ suburb
+												.col-sm-6.col-sm-offset-6.find-button
+													//- a.button.rainbow.pull-right(href="#")
+													button(type="submit").button.rainbow.pull-right.button-having-loading
+														.overlay
+															.relative-container
+																img(src="images/loading.png" alt="Loading")
+														.bgw Find supplier
+								.locator-find-result
+									.locator-find-result-item
+										.row
+											.col-sm-6.col-xs-12
+												.locator-result-alphabet.hidden-xs
+													span.bold 1
+												.locator-result-info
+													.info-name
+														a(href='#' target='_blank')
+															span.p.bold Company Name
+													.info-add
+														span.p 23 Street Name Darlinghurst 2010
+													.info-phone
+														span.p.bold Phone:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+													.info-fax
+														span.p.bold Fax:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+											.col-sm-5.col-sm-offset-1.col-xs-12
+												.locator-result-action
+													.add-favourite
+														a(href="#")
+															p.p.small Add to My Favourites
+													.download-card
+														a(href="#")
+															p.p.small Download vCard
+													.website.p.small
+														a(href="http://www.website-link.com.au" target="_blank" title="www.website-link.com.au") www.website-link.com.au
+													.action-button.visible-xs
+														.get-direction.action
+															a(href="#").button.rainbow
+																div.bgw.bold Get Directions
+														.call.action
+															a(href="#").button.rainbow
+																div.bgw.bold Call
+									.locator-find-result-item
+										.row
+											.col-sm-6.col-xs-12
+												.locator-result-alphabet.hidden-xs
+													span.bold 2
+												.locator-result-info
+													.info-name
+														a(href='#' target='_blank')
+															span.p.bold Company Name
+													.info-add
+														span.p 23 Street Name Darlinghurst 2010
+													.info-phone
+														span.p.bold Phone:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+													.info-fax
+														span.p.bold Fax:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+											.col-sm-5.col-sm-offset-1.col-xs-12
+												.locator-result-action
+													.add-favourite
+														a(href="#")
+															p.p.small Add to My Favourites
+													.download-card
+														a(href="#")
+															p.p.small Download vCard
+													.website.p.small
+														a(href="http://www.website-link.com.au" target="_blank" title="www.website-link.com.au") www.website-link.com.au
+													.action-button.visible-xs
+														.get-direction.action
+															a(href="#").button.rainbow
+																div.bgw.bold Get Directions
+														.call.action
+															a(href="#").button.rainbow
+																div.bgw.bold Call
+									.locator-find-result-item
+										.row
+											.col-sm-6.col-xs-12
+												.locator-result-alphabet.hidden-xs
+													span.bold 55
+												.locator-result-info
+													.info-name
+														a(href='#' target='_blank')
+															span.p.bold Company Name
+													.info-add
+														span.p 23 Street Name Darlinghurst 2010
+													.info-phone
+														span.p.bold Phone:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+													.info-fax
+														span.p.bold Fax:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+											.col-sm-5.col-sm-offset-1.col-xs-12
+												.locator-result-action
+													.add-favourite
+														a(href="#")
+															p.p.small Add to My Favourites
+													.download-card
+														a(href="#")
+															p.p.small Download vCard
+													.website.p.small
+														a(href="http://www.website-link.com.au" target="_blank" title="www.website-link.com.au") www.website-link.com.au
+													.action-button.visible-xs
+														.get-direction.action
+															a(href="#").button.rainbow
+																div.bgw.bold Get Directions
+														.call.action
+															a(href="#").button.rainbow
+																div.bgw.bold Call
+									.locator-find-result-item
+										.row
+											.col-sm-6.col-xs-12
+												.locator-result-alphabet.hidden-xs
+													span.bold 100
+												.locator-result-info
+													.info-name
+														a(href='#' target='_blank')
+															span.p.bold Company Name
+													.info-add
+														span.p 23 Street Name Darlinghurst 2010
+													.info-phone
+														span.p.bold Phone:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+													.info-fax
+														span.p.bold Fax:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+											.col-sm-5.col-sm-offset-1.col-xs-12
+												.locator-result-action
+													.add-favourite
+														a(href="#")
+															p.p.small Add to My Favourites
+													.download-card
+														a(href="#")
+															p.p.small Download vCard
+													.website.p.small
+														a(href="http://www.website-link.com.au" target="_blank" title="www.website-link.com.au") www.website-link.com.au
+													.action-button.visible-xs
+														.get-direction.action
+															a(href="#").button.rainbow
+																div.bgw.bold Get Directions
+														.call.action
+															a(href="#").button.rainbow
+																div.bgw.bold Call
+									.locator-find-result-item
+										.row
+											.col-sm-6.col-xs-12
+												.locator-result-alphabet.hidden-xs
+													span.bold 88
+												.locator-result-info
+													.info-name
+														a(href='#' target='_blank')
+															span.p.bold Company Name
+													.info-add
+														span.p 23 Street Name Darlinghurst 2010
+													.info-phone
+														span.p.bold Phone:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+													.info-fax
+														span.p.bold Fax:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+											.col-sm-5.col-sm-offset-1.col-xs-12
+												.locator-result-action
+													.add-favourite
+														a(href="#")
+															p.p.small Add to My Favourites
+													.download-card
+														a(href="#")
+															p.p.small Download vCard
+													.website.p.small
+														a(href="http://www.website-link.com.au" target="_blank" title="www.website-link.com.au") www.website-link.com.au
+													.action-button.visible-xs
+														.get-direction.action
+															a(href="#").button.rainbow
+																div.bgw.bold Get Directions
+														.call.action
+															a(href="#").button.rainbow
+																div.bgw.bold Call
+					#builder.tab-pane.fade
+						.row
+							.col-sm-6.locator-tab-content-image.hidden-xs(style='height: 500px')
+								//- img(src="images/locator/map.jpg")
+								#googleMap(style='height: 100%')
+							.col-sm-6.locator-tab-content-inner
+								.locator-find-block
+									.locator-find-header
+										h3.bold Find a Supplier near your location
+									.locator-find-sub-header
+										p.p Lorem ipsum dolor sit amet, consecte adipiscing elit. Aenean euismod bibdum laoreet lorem ipsum dolor sit amet.
+									.locator-find
+										.row
+											.col-xs-12.use-current-location.visible-xs
+												a.button.rainbow.pull-right.tac.bold(href="#")
+													.bgw Use my current location
+											form#find-builder-form
+												.col-sm-6.state-dropdown
+													+dropDown('State')
+												.col-sm-6.post-code
+													input.gl-input(type='text' placeholder="Suburb / Post Code" required name="builder-suburb")
+												.col-sm-12
+													.error.find-error.find-builder-error You have entered an invalid format for the postal code/ suburb
+												.col-sm-6.col-sm-offset-6.find-button
+													a.button.rainbow.pull-right(href="#")
+													button(type="submit").button.rainbow.pull-right.button-having-loading
+														.overlay
+															.relative-container
+																img(src="images/loading.png" alt="Loading")
+														.bgw Find supplier
+								.locator-find-result
+									.locator-find-result-item
+										.row
+											.col-sm-6.col-xs-12
+												.locator-result-alphabet.hidden-xs
+													span.bold 1
+												.locator-result-info
+													.info-name
+														a(href='#' target='_blank')
+															span.p.bold Company Name
+													.info-add
+														span.p 23 Street Name Darlinghurst 2010
+													.info-phone
+														span.p.bold Phone:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+													.info-fax
+														span.p.bold Fax:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+											.col-sm-5.col-sm-offset-1.col-xs-12
+												.locator-result-action
+													.add-favourite
+														a(href="#")
+															p.p.small Add to My Favourites
+													.download-card
+														a(href="#")
+															p.p.small Download vCard
+													.website.p.small
+														a(href="http://www.website-link.com.au" target="_blank" title="www.website-link.com.au") www.website-link.com.au
+													.action-button.visible-xs
+														.get-direction.action
+															a(href="#").button.rainbow
+																div.bgw.bold Get Directions
+														.call.action
+															a(href="#").button.rainbow
+																div.bgw.bold Call
+									.locator-find-result-item
+										.row
+											.col-sm-6.col-xs-12
+												.locator-result-alphabet.hidden-xs
+													span.bold 2
+												.locator-result-info
+													.info-name
+														a(href='#' target='_blank')
+															span.p.bold Company Name
+													.info-add
+														span.p 23 Street Name Darlinghurst 2010
+													.info-phone
+														span.p.bold Phone:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+													.info-fax
+														span.p.bold Fax:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+											.col-sm-5.col-sm-offset-1.col-xs-12
+												.locator-result-action
+													.add-favourite
+														a(href="#")
+															p.p.small Add to My Favourites
+													.download-card
+														a(href="#")
+															p.p.small Download vCard
+													.website.p.small
+														a(href="http://www.website-link.com.au" target="_blank" title="www.website-link.com.au") www.website-link.com.au
+													.action-button.visible-xs
+														.get-direction.action
+															a(href="#").button.rainbow
+																div.bgw.bold Get Directions
+														.call.action
+															a(href="#").button.rainbow
+																div.bgw.bold Call
+									.locator-find-result-item
+										.row
+											.col-sm-6.col-xs-12
+												.locator-result-alphabet.hidden-xs
+													span.bold 55
+												.locator-result-info
+													.info-name
+														a(href='#' target='_blank')
+															span.p.bold Company Name
+													.info-add
+														span.p 23 Street Name Darlinghurst 2010
+													.info-phone
+														span.p.bold Phone:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+													.info-fax
+														span.p.bold Fax:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+											.col-sm-5.col-sm-offset-1.col-xs-12
+												.locator-result-action
+													.add-favourite
+														a(href="#")
+															p.p.small Add to My Favourites
+													.download-card
+														a(href="#")
+															p.p.small Download vCard
+													.website.p.small
+														a(href="http://www.website-link.com.au" target="_blank" title="www.website-link.com.au") www.website-link.com.au
+													.action-button.visible-xs
+														.get-direction.action
+															a(href="#").button.rainbow
+																div.bgw.bold Get Directions
+														.call.action
+															a(href="#").button.rainbow
+																div.bgw.bold Call
+									.locator-find-result-item
+										.row
+											.col-sm-6.col-xs-12
+												.locator-result-alphabet.hidden-xs
+													span.bold 100
+												.locator-result-info
+													.info-name
+														a(href='#' target='_blank')
+															span.p.bold Company Name
+													.info-add
+														span.p 23 Street Name Darlinghurst 2010
+													.info-phone
+														span.p.bold Phone:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+													.info-fax
+														span.p.bold Fax:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+											.col-sm-5.col-sm-offset-1.col-xs-12
+												.locator-result-action
+													.add-favourite
+														a(href="#")
+															p.p.small Add to My Favourites
+													.download-card
+														a(href="#")
+															p.p.small Download vCard
+													.website.p.small
+														a(href="http://www.website-link.com.au" target="_blank" title="www.website-link.com.au") www.website-link.com.au
+													.action-button.visible-xs
+														.get-direction.action
+															a(href="#").button.rainbow
+																div.bgw.bold Get Directions
+														.call.action
+															a(href="#").button.rainbow
+																div.bgw.bold Call
+									.locator-find-result-item
+										.row
+											.col-sm-6.col-xs-12
+												.locator-result-alphabet.hidden-xs
+													span.bold 88
+												.locator-result-info
+													.info-name
+														a(href='#' target='_blank')
+															span.p.bold Company Name
+													.info-add
+														span.p 23 Street Name Darlinghurst 2010
+													.info-phone
+														span.p.bold Phone:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+													.info-fax
+														span.p.bold Fax:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+											.col-sm-5.col-sm-offset-1.col-xs-12
+												.locator-result-action
+													.add-favourite
+														a(href="#")
+															p.p.small Add to My Favourites
+													.download-card
+														a(href="#")
+															p.p.small Download vCard
+													.website.p.small
+														a(href="http://www.website-link.com.au" target="_blank" title="www.website-link.com.au") www.website-link.com.au
+													.action-button.visible-xs
+														.get-direction.action
+															a(href="#").button.rainbow
+																div.bgw.bold Get Directions
+														.call.action
+															a(href="#").button.rainbow
+																div.bgw.bold Call
+					#installer.tab-pane.fade
+						.row
+							.col-sm-6.locator-tab-content-image.hidden-xs(style='height: 500px')
+								//- img(src="images/locator/map.jpg")
+								#googleMap(style='height: 100%')
+							.col-sm-6.locator-tab-content-inner
+								.locator-find-block
+									.locator-find-header
+										h3.bold Find a Supplier near your location
+									.locator-find-sub-header
+										p.p Lorem ipsum dolor sit amet, consecte adipiscing elit. Aenean euismod bibdum laoreet lorem ipsum dolor sit amet.
+									.locator-find
+										.row
+											.col-xs-12.use-current-location.visible-xs
+												a.button.rainbow.pull-right.tac.bold(href="#")
+													.bgw Use my current location
+											form#find-installer-form
+												.col-sm-6.state-dropdown
+													+dropDown('State')
+												.col-sm-6.post-code
+													input.gl-input(type='text' placeholder="Suburb / Post Code" required name="installer-suburb")
+												.col-sm-12
+													.error.find-error.find-installer-error You have entered an invalid format for the postal code/ suburb
+												.col-sm-6.col-sm-offset-6.find-button
+													a.button.rainbow.pull-right(href="#")
+													button(type="submit").button.rainbow.pull-right.button-having-loading
+														.overlay
+															.relative-container
+																img(src="images/loading.png" alt="Loading")
+														.bgw Find supplier
+								.locator-find-result
+									.locator-find-result-item
+										.row
+											.col-sm-6.col-xs-12
+												.locator-result-alphabet.hidden-xs
+													span.bold 1
+												.locator-result-info
+													.info-name
+														a(href='#' target='_blank')
+															span.p.bold Company Name
+													.info-add
+														span.p 23 Street Name Darlinghurst 2010
+													.info-phone
+														span.p.bold Phone:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+													.info-fax
+														span.p.bold Fax:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+											.col-sm-5.col-sm-offset-1.col-xs-12
+												.locator-result-action
+													.add-favourite
+														a(href="#")
+															p.p.small Add to My Favourites
+													.download-card
+														a(href="#")
+															p.p.small Download vCard
+													.website.p.small
+														a(href="http://www.website-link.com.au" target="_blank" title="www.website-link.com.au") www.website-link.com.au
+													.action-button.visible-xs
+														.get-direction.action
+															a(href="#").button.rainbow
+																div.bgw.bold Get Directions
+														.call.action
+															a(href="#").button.rainbow
+																div.bgw.bold Call
+									.locator-find-result-item
+										.row
+											.col-sm-6.col-xs-12
+												.locator-result-alphabet.hidden-xs
+													span.bold 2
+												.locator-result-info
+													.info-name
+														a(href='#' target='_blank')
+															span.p.bold Company Name
+													.info-add
+														span.p 23 Street Name Darlinghurst 2010
+													.info-phone
+														span.p.bold Phone:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+													.info-fax
+														span.p.bold Fax:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+											.col-sm-5.col-sm-offset-1.col-xs-12
+												.locator-result-action
+													.add-favourite
+														a(href="#")
+															p.p.small Add to My Favourites
+													.download-card
+														a(href="#")
+															p.p.small Download vCard
+													.website.p.small
+														a(href="http://www.website-link.com.au" target="_blank" title="www.website-link.com.au") www.website-link.com.au
+													.action-button.visible-xs
+														.get-direction.action
+															a(href="#").button.rainbow
+																div.bgw.bold Get Directions
+														.call.action
+															a(href="#").button.rainbow
+																div.bgw.bold Call
+									.locator-find-result-item
+										.row
+											.col-sm-6.col-xs-12
+												.locator-result-alphabet.hidden-xs
+													span.bold 55
+												.locator-result-info
+													.info-name
+														a(href='#' target='_blank')
+															span.p.bold Company Name
+													.info-add
+														span.p 23 Street Name Darlinghurst 2010
+													.info-phone
+														span.p.bold Phone:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+													.info-fax
+														span.p.bold Fax:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+											.col-sm-5.col-sm-offset-1.col-xs-12
+												.locator-result-action
+													.add-favourite
+														a(href="#")
+															p.p.small Add to My Favourites
+													.download-card
+														a(href="#")
+															p.p.small Download vCard
+													.website.p.small
+														a(href="http://www.website-link.com.au" target="_blank" title="www.website-link.com.au") www.website-link.com.au
+													.action-button.visible-xs
+														.get-direction.action
+															a(href="#").button.rainbow
+																div.bgw.bold Get Directions
+														.call.action
+															a(href="#").button.rainbow
+																div.bgw.bold Call
+									.locator-find-result-item
+										.row
+											.col-sm-6.col-xs-12
+												.locator-result-alphabet.hidden-xs
+													span.bold 100
+												.locator-result-info
+													.info-name
+														a(href='#' target='_blank')
+															span.p.bold Company Name
+													.info-add
+														span.p 23 Street Name Darlinghurst 2010
+													.info-phone
+														span.p.bold Phone:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+													.info-fax
+														span.p.bold Fax:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+											.col-sm-5.col-sm-offset-1.col-xs-12
+												.locator-result-action
+													.add-favourite
+														a(href="#")
+															p.p.small Add to My Favourites
+													.download-card
+														a(href="#")
+															p.p.small Download vCard
+													.website.p.small
+														a(href="http://www.website-link.com.au" target="_blank" title="www.website-link.com.au") www.website-link.com.au
+													.action-button.visible-xs
+														.get-direction.action
+															a(href="#").button.rainbow
+																div.bgw.bold Get Directions
+														.call.action
+															a(href="#").button.rainbow
+																div.bgw.bold Call
+									.locator-find-result-item
+										.row
+											.col-sm-6.col-xs-12
+												.locator-result-alphabet.hidden-xs
+													span.bold 88
+												.locator-result-info
+													.info-name
+														a(href='#' target='_blank')
+															span.p.bold Company Name
+													.info-add
+														span.p 23 Street Name Darlinghurst 2010
+													.info-phone
+														span.p.bold Phone:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+													.info-fax
+														span.p.bold Fax:&nbsp
+														a(href="tel:0434 123 456 789") 0434 123 456 789
+											.col-sm-5.col-sm-offset-1.col-xs-12
+												.locator-result-action
+													.add-favourite
+														a(href="#")
+															p.p.small Add to My Favourites
+													.download-card
+														a(href="#")
+															p.p.small Download vCard
+													.website.p.small
+														a(href="http://www.website-link.com.au" target="_blank" title="www.website-link.com.au") www.website-link.com.au
+													.action-button.visible-xs
+														.get-direction.action
+															a(href="#").button.rainbow
+																div.bgw.bold Get Directions
+														.call.action
+															a(href="#").button.rainbow
+																div.bgw.bold Call

@@ -1,0 +1,215 @@
+h3.ms-layer.hps-title3
+  font-weight: 400!important
+.text-right
+  text-align: right
+@media screen and (min-width: 320px)
+  .testimonial__block
+    .desktop
+      display: none !important
+    .mobile
+      display: block !important
+    .loadmore
+      text-align: center
+      margin-top: 30px
+      button
+        font-size: 18px
+        font-family: "Oswald"
+        color: white
+        background-color: rgb(48, 46, 112)
+        border: none
+        text-transform: uppercase
+        width: 157px
+        height: 60px
+        transition: background 0.3s
+        margin-bottom: 30px
+        &:hover, &:active
+          background-color: #48469C
+  .testimonial__filter
+    max-width: 437px
+    margin: 50px auto 40px
+    .selectric-hover .selectric .button:after
+      border-top-color: #3c3d7b
+    .selectric
+      background: #fbc839
+      border: none
+      .label
+        margin: 0 38px
+        padding: 11px 0
+        height: 60px
+      p
+        text-align: center
+        font-size: 20px
+        font-family: "Roboto"
+        font-weight: 300
+        color: white
+        text-transform: uppercase
+      .button
+        width: 60px
+        height: 60px
+        &:after
+          border: 6px solid transparent
+          border-top-color: #3c3d7b
+          border-bottom: none
+          border-top-width: 10px
+    .selectric-items
+      border: none
+      box-shadow: 0 0 10px rgba(0,0,0, 0.2)
+      ul
+        background: white
+        padding: 0 15px
+      li
+        text-align: center
+        color: #3c3d7b
+        font-size: 20px
+        font-family: "Roboto"
+        font-weight: 300
+        text-transform: uppercase
+        padding: 19px
+        border-top: 1px solid #cccccc
+        border-bottom: none
+        &:first-child
+          border-top: none
+        &.selected
+          background: #eee
+  .testimonial__list
+    .testimonial__list__item
+      max-width: 190px
+      margin: 0 auto 40px
+      .mea
+        overflow: hidden
+      .media
+        text-align: center
+      .detail
+        padding-top: 10px
+        padding-right: 20px
+      blockquote
+        margin: 0 0 15px 0
+        font-size: 16px
+        color: rgb(92, 92, 92)
+        line-height: 1.4
+      .meta
+        font-size: 14px
+        color: rgb(48, 46, 112)
+        font-weight: bold
+        line-height: 1.3
+      &.testimonial__list__item--featured
+        margin: 45px 0
+        width: 100%
+        max-width: 100%
+        .mea
+          background: #f9f9f9
+          border: 1px solid #aabbbb
+        .media
+          float: none
+          margin-right: 0
+          max-width: inherit
+          img
+            width: 100%
+        .detail
+          padding: 20px 20px 15px 20px
+        blockquote
+          margin: 0 0 23px 0
+          font-size: 16px
+          color: rgb(90, 90, 90)
+        .meta
+          font-size: 14px
+          color: rgb(90, 90, 90)
+          line-height: 1.5
+          font-weight: bold
+        .readmore
+          margin-top: 20px
+          background-color: #3b3c7a
+          padding: 10px 30px
+          display: inline-block
+          font-size: 21px
+          text-transform: uppercase
+          color: white
+          line-height: 1.44
+          font-weight: 300
+
+@media screen and (min-width: 480px)
+  .testimonial__list
+    .testimonial__list__item
+      margin-bottom: 40px
+      max-width: 100%
+      .mea
+        overflow: hidden
+      .media
+        max-width: inherit
+        float: left
+        margin-right: 16px
+      .detail
+        padding-top: 31px
+        padding-right: 20px
+      blockquote
+        margin: 0 0 15px 0
+      .meta
+        font-size: 14px
+      &.testimonial__list__item--featured
+        margin: 45px 0
+        width: 100%
+        .media
+          float: none
+          margin-right: 0
+          max-width: inherit
+        .detail
+          padding: 35px 35px 25px 35px
+        blockquote
+          margin: 0 0 23px 0
+          font-size: 23px
+        .meta
+          font-size: 17px
+@media screen and (min-width: 768px)
+  .testimonial__filter
+    margin: 71px auto 50px auto
+  .testimonial__list
+    .testimonial__list__item
+      .media
+        max-width: inherit
+        img
+          width: 100%
+@media screen and (min-width: 1024px)
+  .testimonial__block
+    .loadmore
+      button
+        width: 217px
+        height: 60px
+    .desktop
+      display: block !important
+    .mobile
+      display: none !important
+
+  .testimonial__list
+    overflow: hidden
+    margin: 0 -15px
+    .testimonial__list__item
+      padding: 0 15px
+      float: left
+      width: 50%
+      .mea
+        overflow: hidden
+      .media
+        max-width: 190px
+        float: left
+        margin-right: 16px
+      blockquote
+        font-size: 18px
+      .meta
+        font-size: 14px
+      &.testimonial__list__item--featured
+        width: 100%
+        margin: 50px 0
+        .media
+          max-width: 364px
+          margin-right: 55px
+          float: left
+          img
+            display: block
+        .detail
+          padding: 55px 63px 25px 0
+        blockquote
+          font-size: 24px
+          margin-bottom: 21px
+        .readmore
+          margin-top: 28px
+

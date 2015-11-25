@@ -1,0 +1,143 @@
+// Variable
+@import variable
+
+// Fontface
+@import fontface
+*
+  margin: 0
+  padding: 0
+  -webkit-print-color-adjust:exact
+  -moz-print-color-adjust:exact
+  -moz-print-color-adjust:exact
+  print-color-adjust:exact
+.container 
+  width: 1090px
+  margin: auto
+  padding-top: 50px 
+.logo
+  width: 100%
+  display: inline-block
+  text-align: right
+  img
+    width: 406px
+h1
+  font-family: 'MuseoSans'
+  font-size: 50px
+  color: #237a9b
+  display: inline-block
+  width: 100%
+  margin-top: 30px
+  margin-bottom: 20px
+.table
+  color: #4d4e4d
+  width: 100%
+  display: inline-block
+  .tr, .th
+    width: 100%
+    display: inline-block
+    .td
+      float: left
+      &:nth-child(1)
+        width: 250px
+        
+      &:nth-child(2)
+        width: calc(100% - 310px - 250px)
+        &.description
+          p
+            font-size: 25px
+            font-family: 'NeuzeitGro-Reg'
+            text-align: left
+      &:nth-child(3)
+        width: 310px
+        float: right
+        &.price
+          text-align: right
+          span
+            font-size: 50px
+            font-family: 'NeuzeitGro-Reg'
+    &.total
+      margin-top: 10px
+      .td
+        width: 430px
+        float: right
+        background: #96d6ee
+        padding: 15px 31px
+        label
+          font-family: 'MuseoSans'
+          font-size: 50px
+          color: #237a9b
+        span
+          font-size: 50px
+          font-family: 'NeuzeitGro-Reg'
+          float: right
+          
+  .th
+    margin-bottom: 31px
+    .td
+      label
+        font-family: 'MuseoSans'
+        font-size: 37px
+        color: #237a9b
+      &:nth-child(1)
+        width: 250px
+      &:nth-child(2)
+        width: calc(100% - 310px - 250px)
+      &:nth-child(3)
+        width: 310px
+  .tr
+    margin-bottom: 30px
+    label
+          font-size: 25px
+          font-family: 'NeuzeitGro-Reg'
+          &.ip
+            float: left
+            padding-left: 35px
+            background: url(../images/sprites/ip-discuss-icon.png) no-repeat left center
+            background-size: 29px
+          &.could
+            float: left
+            padding-top: 12px
+            padding-left: 35px
+            min-height: 32px
+            background: url(../images/sprites/time-discuss-icon.png) no-repeat left center
+            background-size: 29px
+          &.money
+            float: left
+            padding-left: 35px
+            min-height: 32px
+            background: url(../images/sprites/money-discuss-icon.png) no-repeat left center
+            background-size: 29px
+          &.time
+            float: left
+            padding-top: 12px
+            padding-left: 35px
+            min-height: 32px
+            background: url(../images/sprites/could-discuss-icon.png) no-repeat left center
+            background-size: 29px
+          &.other
+            float: left
+            padding-top: 12px
+            padding-left: 35px
+            min-height: 32px
+            background: url(../images/sprites/other-discuss-icon.png) no-repeat left center
+            background-size: 29px
+
+.user
+  label
+    color: #fff
+    width: 50px
+    height: 106px
+    display: inline-block
+    background: url(../images/sprites/user1.png) no-repeat
+    background-size: contain
+    line-height: 130px
+    font-size: 29px
+    text-align: center
+    vertical-align: top
+  span
+    display: inline-block
+    font-family: 'NeuzeitGro-Reg'
+    font-size: 37px
+    line-height: 136px
+    color: #4d4e4d
+    margin-left: 21px 

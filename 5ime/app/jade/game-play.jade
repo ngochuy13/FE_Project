@@ -1,0 +1,76 @@
+extends layouts/layout
+
+block vars
+  -title = 'Homepage'
+  -bodyClass = 'puzzle-game'
+
+block container
+  .outmost-wrapper
+    .wrapper
+      .main
+        include includes/game-puzzle.jade
+        include includes/game-change-accessories.jade
+      include includes/loading.jade
+
+block modal
+  #loading-layer
+    .spinner
+      span.bounce1
+      span.bounce2
+      span.bounce3
+  #replay-modal.style-1.modal.fade(tabindex='-1', role='dialog', aria-hidden='true', data-backdrop="static")
+    .modal-dialog
+      .modal-content
+        .modal-body
+          h1 bạn đã hết thời gian vui lòng bắt đầu lại
+          p.text-center
+            button.btn.btn-library.btn-replay(type='button', data-dismiss='modal') chơi lại
+  #extra-info-modal.style-2.modal.fade(tabindex='-1', role='dialog', aria-hidden='true', data-backdrop="static")
+    .modal-dialog
+      .modal-content
+        .modal-body
+          h1 Thong tin nhan thuong
+          form#extra-info-form(method="POST", action="")
+            .failed-message Thông tin của bạn gửi chưa thành công. Vui lòng gửi lại nhé.
+            .form-group
+              .title Họ và tên
+              +input('text','name','asdas asda')
+            .form-group
+              .title Email
+              +input('text','email','asd@asd')
+            .form-group
+              .title Số điện thoại
+              +input('text','phone','1231231 21')
+            .form-group
+              .title Địa chỉ
+              +input('text','address','asdasd')
+            .form-group.text-center.submission
+              button.btn-library.fake Share
+              a(target="_blank", data-share-url="http://www.google.com.vn" href="#").btn-library.real Share
+  #crop-avatar-modal.style-1.style-1-ext.modal.fade(tabindex='-1', role='dialog', aria-hidden='true', data-backdrop="static")
+    .modal-dialog
+      .modal-content
+        .modal-body
+          #uploaded-avatar
+          .submission
+            button.btn-library.btn-ok(type='button') Xong
+            button.btn-library.btn-cancel(type='button', data-dismiss='modal') Huỷ 
+  #message-modal.style-1.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-body
+          h1.message
+          .submission
+            button.btn-library(type='button', data-dismiss="modal") OK
+  #instruction-modal.style-1.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-body
+          h1.message(style="font-size: 24px;") Bạn cần kéo và thả những phụ kiện xe vào vị trí thích hợp để hoàn thành trò chơi.
+          .submission
+            button.btn-library(type='button', data-dismiss="modal") OK
+
+block pagescript
+  // build:js scripts/game.js
+  script(src='/scripts/game.js')
+  // endbuild

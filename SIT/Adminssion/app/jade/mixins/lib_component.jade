@@ -1,0 +1,78 @@
+//- club category card
+mixin clubs-category-card(image_src,name)
+  a(href="#").clubs-card
+    .clubs-image
+      img(src=image_src, alt="club_cat_image")
+    .clubs-name 
+      p !{name}
+//- gallery card
+mixin gallery-card(club_name,glr_desc,fb_link,group,...items)
+  .gallery-card
+    .gallery-slider-wrapper
+      .gallery-slider.owl-carousel 
+          each item,index in items
+            a.gallery-item(data-order=index, href=item, rel="prettyPhoto["+club_name+"]")
+              img(src=item, alt=club_name)
+      .gallery-counter
+        .counter-inner-wrapper
+          span.fa.fa-camera
+          span.current
+          span.slash /
+          span.total
+    .gallery-info-wrapper
+      .gallery-club-name !{club_name}
+      .gallery-desc !{glr_desc}
+      .gallery-foot-link
+        a(href="#") 
+          span.fa.fa-link
+          | !{fb_link}
+//- accordion
+mixin scholarship-accordion(accordion_id)
+  .accordion-wrapper
+    .panel-group(role='tablist', aria-multiselectable='true', id=accordion_id)
+      block
+
+mixin accordion_inner_panel(panel_title,parent_id,head_id,body_id,body_state,head_state)
+  .panel.panel-default
+    .panel-heading(role='tab',id=head_id,class=head_state)
+      .panel-title
+        a(role='button',data-toggle='collapse',data-parent='#'+parent_id,href='#'+body_id,aria-expanded='true',aria-controls='#'+body_id) 
+          | !{panel_title}
+    .panel-collapse.collapse(role='tabpanel',aria-labelledby='#'+head_id,id=body_id, class=body_state)
+      .panel-body
+        block
+
+//- skewed-page-header
+mixin skewed-header(banner_img,sm_img,banner_title,...breadcrumb_links)
+  section.section-banner-list(style="background-image: url("+banner_img+");", data-sm-bg="url("+sm_img+")")
+    img.bg-img(src=banner_img, alt="banner_image")
+    img.bg-img-sm(src=sm_img, alt="banner_image")
+    .section-banner-list__after
+      span
+    .section-banner-list__content
+      .container
+        ul.breadcrumb
+          each item in breadcrumb_links
+            li: a(href="#") !{item}
+        h1 !{banner_title}
+
+//- t4-page-header
+mixin t4-banner-header(banner_img,sm_img)
+  section.section-banner-list.style-2(style="background-image: url("+banner_img+");", data-sm-bg="url("+sm_img+")") 
+    img.bg-img(src=banner_img, alt="banner_image") 
+    .section-banner-list__after
+      span
+    if block
+      block
+
+//- T6 Campus card
+mixin T6campus-card(img_src,campus_name,line1,line2)
+  .full-campus-card
+    .campus-img
+      img(src=img_src, alt="campus")
+    .campus-info
+      .campus-name !{campus_name}
+      .campus-address-info
+        p !{line1}
+        p !{line2}
+      a(href="#").viewmap-link View Map

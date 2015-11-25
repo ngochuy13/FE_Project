@@ -1,0 +1,145 @@
+extends layouts/template
+
+block vars
+  -title = 'Course Details'
+  -bodyClass = ''
+
+block container 
+  .section.section-banner-video.imagefill
+    img(src="images/banner-1.jpg", alt="")
+    a(href="https://www.youtube.com/embed/1U2DKKqxHgE?rel=0&amp;wmode=transparent").popup-video
+      span.icon-video
+      span.text Watch the Programme Introduction
+
+  .section.section-course-details
+      .tab-control
+        ul.nav.nav-pills
+          li.active
+            a(data-toggle='pill', href='#tab-1') 
+              span 
+              | PROGRAMME OVERVIEW
+          li
+            a(data-toggle='pill', href='#tab-2') 
+              span 
+              | MODULE SYNOPSIS
+          li
+            a(data-toggle='pill', href='#tab-3') 
+              span 
+              | ELIGIBILITY
+          li
+            a(data-toggle='pill', href='#tab-4') 
+              span 
+              | TUITION FEES
+          li
+            a(data-toggle='pill', href='#tab-5') 
+              span 
+              | STUDY TRIP
+          li
+            a(data-toggle='pill', href='#tab-6') 
+              span 
+              | CONTACT US
+      .tab-content.course-details__tab-content
+        .container
+          .breadcrumb 
+            a(href='#tab-4') ADMISSIONS 
+            | / 
+            a(href='#tab-4') UNDERGRADUATE PROGRAMMES 
+            | / 
+            a(href='#tab-4') PHYSICAL SCIENCE & ENGINEERING
+
+          .title Master of Engineering Technology & <br/>Bachelor of Engineering with Honours in <br/>Sustainable Infrastructure Engineering (Building Services)
+          
+        #tab-1.tab-pane.fade.in.active
+          .container
+            .content
+              .editor
+                h3 Programme Overview
+                p The Sustainable Infrastructure Engineering (SIE) (Building Services) programme is developed in consultation with the Building and Construction Authority (BCA), Singapore. The programme encompasses all the necessary engineering disciplines that are required for the building services industries in Singapore. Students will go through rigorous academic training that is conducted by highly qualified professors and senior managers from the industry, and will read modules which are highly relevant to the building services industries.
+                h4 Curriculum
+                p The SIE (Building Services) programme aims to groom students to be both practice-oriented and industry-ready. Students will be trained in the areas of Efficient Energy Management, Heating, Ventilation and Air-Conditioning (HVAC) and Building Information Modelling (BIM).
+                p One major highlight of the programme is the eight-to 12-month Integrated Work Study Programme (IWSP) which will equip students with the practical training much desired by employers. During the IWSP, students will be involved in the day-to-day operations and will confront challenges just like an employee of the host organisation.
+                p Students who perform well in the BEng (Hons) programme may proceed to take the Master of Engineering Technology degree (MEngTech) which will have a strong emphasis on human factors, systems engineering and project management.
+                p Students who opt for the MEngTech will also take on a Capstone project formulated on actual working experience during the IWSP. The project may revolve around innovative solutions to existing processes. In line with the government’s initiatives on clean energy and safety at the workplace, students may also be able to obtain professional certifications in Green Mark Certification, Fire Services Safety Management and Workplace Safety and Health.
+                h4 Accreditation
+                p Accreditation of the programme will be sought with the Engineering Accreditation Board.
+                h4 Career Opportunities
+                p Statistics from government agencies and employment trends point to a great demand for graduates trained in building services focusing on green buildings, HVAC and BIM. SIE (Building Services) graduates, well-equipped with the necessary knowledge and skills, will assimilate with ease into the building construction and services industries.
+
+
+        #tab-2.tab-pane.fade
+          .container
+            .content
+              h1 h1. Bootstrap heading
+              h2 h2. Bootstrap heading
+              h3 h3. Bootstrap heading
+              h4 h4. Bootstrap heading
+              h5 h5. Bootstrap heading
+              h6 h6. Bootstrap heading
+              
+              hr 
+              //- Standard button
+              button.btn.btn-default(type='button') Default
+              //- Provides extra visual weight and identifies the primary action in a set of buttons
+              button.btn.btn-primary(type='button') Primary
+              //- Indicates a successful or positive action
+              button.btn.btn-success(type='button') Success
+              //- Contextual button for informational alert messages
+              button.btn.btn-info(type='button') Info
+              //- Indicates caution should be taken with this action
+              button.btn.btn-warning(type='button') Warning
+              //- Indicates a dangerous or potentially negative action
+              button.btn.btn-danger(type='button') Danger
+              //- Deemphasize a button by making it look like a link while maintaining button behavior
+              button.btn.btn-link(type='button') Link
+              
+              hr 
+              .bs-example(data-example-id='simple-table')
+                table.table
+                  caption Optional table caption.
+                  thead
+                    tr
+                      th #
+                      th First Name
+                      th Last Name
+                      th Username
+                  tbody
+                    tr
+                      th(scope='row') 1
+                      td Mark
+                      td Otto
+                      td @mdo
+                    tr
+                      th(scope='row') 2
+                      td Jacob
+                      td Thornton
+                      td @fat
+                    tr
+                      th(scope='row') 3
+                      td Larry
+                      td the Bird
+                      td @twitter
+              hr 
+              .media
+                .media-left
+                  a(href='#')
+                    img.media-object(src='images/logo-home.png', alt='media image')
+                .media-body
+                  h4.media-heading Media heading
+                  |     ...
+
+        #tab-3.tab-pane.fade
+          .container
+            h3 HOME 3
+            p Some content.
+        #tab-4.tab-pane.fade
+          .container
+            h3 HOME 4
+            p Some content.
+        #tab-5.tab-pane.fade
+          .container
+            h3 HOME 5
+            p Some content.
+        #tab-6.tab-pane.fade
+          .container
+            h3 HOME 6
+            p Some content.

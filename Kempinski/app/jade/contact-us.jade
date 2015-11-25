@@ -1,0 +1,93 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Contact Us'
+  -bodyClass = ''
+  -bannerIMG = 'contact-us/banner.jpg'
+  -page = 'contact-us'
+block breadcrumb  
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#"
+      },{
+        "text": "MIDDLE EAST",
+        "href":"#"
+      },{
+        "text": "EMIRATES PALACE",
+        "href":"#"
+      },{
+        "text": "CONTACT US",
+        "href":"#"
+      }])
+
+block container    
+  .inner
+    main#main  
+      section.section-block.contact-section
+        +page-title-description("CONTACT US","Emirates Palace", "If you would like to receive more information about the Emirates Palace, you may fill up the information below and share your enquiries/requests with us. We will be more than happy to assist you.")
+        .contact-wrap.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+          .contact-form
+              .contact-block
+                form.form-horizontal.form-horizontal-style
+                  .container.contact-container
+                    .contact-header
+                      dl.dl-horizontal
+                        dt Address:
+                        dd Emirates Palace, West Corniche Road, P.O.Box - 39999, Abu Dhabi
+                        dt Telephone:
+                        dd 
+                          a(href="tel:://971-2-690-9000" title="+971 2 690 9000") +971 2 690 9000
+                        dt Fax:
+                        dd 
+                          a(href="tel:://971-2-690-9999" title="+971 2 690 9999") +971 2 690 9999
+                        dt Email contact:
+                        dd 
+                          a(href="mailto:reservations@emiratespalace.ae" title="reservations@emiratespalace.ae") reservations@emiratespalace.ae
+                    .title Hotel Department
+                    .form-wrap
+                      +select-control-horizontal("Choose Hotel Department")
+                    .title Personal Details
+                    .form-wrap
+                      +select-control-horizontal("Title:")
+                      +input-control-horizontal("First Name*:", "first-name", true)
+                      +input-control-horizontal("Last Name*:", "last-name", true)
+                    .title.clearfix
+                      dl.dl-horizontal
+                        dt Address
+                    .form-wrap
+                      +input-control-horizontal("Street 1:", "street-1")
+                      +input-control-horizontal("Street 2:", "street-2")
+                      +input-control-horizontal("Zip Code:", "street-3", false)
+                      +input-control-horizontal("City*:", "street-4", true)
+                      +select-control-horizontal("Country:")
+                    .title.clearfix
+                      dl.dl-horizontal
+                        dt Contact Details
+                    .form-wrap
+                      +input-control-horizontal("Email*:", "email", true)
+                      +input-control-horizontal("Telephone No*:", "telephone", true)
+                      +input-control-horizontal("Fax:", "fax")
+                    .title.clearfix
+                      dl.dl-horizontal
+                        dt Comments
+                    .form-wrap
+                      .form-group
+                        .col-sm-2.control-label-wrap
+                          label.control-label(for="comment") Add your comments
+                        .col-sm-10
+                          textarea#comment
+                  .text-center
+                    .form-privacy
+                      .checkbox-group
+                        label(for="privacy") 
+                          input(type="checkbox" name="privacy", id="privacy")
+                          span.checkbox-face.fa.fa-check
+                          | Check here if you would like to receive updates about Kempinski Hotels
+                      .privacy-review
+                        | Your privacy is important to us. please take a minute to review our .
+                        a(href="#") privacy policy
+                        | .
+                    .submit-button
+                      input(type="submit", value="SUBMIT DETAILS").btn.btn-default

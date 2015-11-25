@@ -1,0 +1,113 @@
+.pb-30
+  margin-bottom: 30px
+.section-block
+  &.pd-b
+    padding-bottom: 25px
+  &.pd-t 
+    padding-top: 25px
+    @media (max-width: 767px)
+      padding-top: 0
+  &.gray
+    background: #f3f3f3 
+   
+.section-title
+  padding: 35px 0 38px 0
+  background: #fff  
+  overflow: hidden
+  @media (max-width: 767px)
+    padding-top: 20px 
+  &.article-blog__title
+    // margin: 0
+    padding: 40px 0 105px 0
+  &.gray
+    background: #f3f3f3  
+  .container
+    background: inherit
+  h1.block-title
+    font-size: 20px
+    letter-spacing: 6px
+    line-height: 1.44
+    color: #010101
+    margin: 0
+    font-weight: 300
+    text-transform: uppercase
+    font-family: "Helvetica"
+    text-align: center
+    &+.sub-title
+      font-size: 20px
+      margin-top: 8px
+      .sub-child-title
+        margin-top: 21px
+  h2.block-title, .block-title
+    font-size: 18px
+    letter-spacing: 6px
+    line-height: 1.44
+    color: #000
+    margin: 0
+    font-weight: 300
+    text-transform: uppercase
+    &+.sub-title
+      font-size: 18px
+  .sub-title
+    padding: 0 130px
+    font-style: italic
+    margin-top: 11px
+    position: relative
+    display: inline-block
+    min-width: 413px
+    max-width: 100%
+    line-height: 1.44
+    color: #000
+    background: inherit
+    .line
+      position: absolute
+      left: 0
+      top: 50%
+      width: 100%
+      height: 1px
+      background: #bca845
+    span
+      white-space: nowrap
+      text-transform: none
+      font-style: italic
+      letter-spacing: normal
+      position: relative
+      z-index: 9
+      background: inherit
+      padding: 0 15px
+      font-family: $kc-ff
+      display: block
+      
+    @media screen and (max-width:767px)
+      padding: 0 50px
+      min-width: 0px
+      .line
+        min-width: 0px
+      span
+        white-space: initial  
+    @media screen and (max-width:560px)
+      padding: 0 30px
+      span
+        padding: 0 20px
+  .description
+    font-size: 14px
+    color: #50504d
+    max-width: 680px
+    margin: 20px auto 0 auto
+  .sub-child-title
+    font-size: 10px
+    font-family: "Helvetica"
+    letter-spacing: 5px
+    color: #000
+    text-transform: uppercase
+    margin-top: 18px
+
+@media (max-width: 639px)
+  .section-title 
+    padding: 35px 0 15px 0
+    h1.block-title
+      font-size: 18px
+    h2.block-title
+      font-size: 16px
+    .star-block
+      margin-top: 5px

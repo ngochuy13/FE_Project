@@ -1,0 +1,103 @@
+extends layouts/template
+
+block vars
+  -title = 'T11'
+  -bodyClass = 'T11-template'
+
+block pagescript
+  // build:js scripts/school-finder.js
+  script(src='/scripts/school-finder.js')
+  // endbuild
+
+block container
+  +skewed-header("images/banner/T11-banner.png","images/banner/T12-banner-sm.png",'Programme Finder','HOME','FINACIAL','LOANS')
+  section.page-intro
+    .page-intro_before
+      span
+    .container
+      .row
+        .col-md-12
+          .page-intro-block
+            .intro-header
+              h2 FIND A PROGRAMME
+            .intro-subtitle
+              h3 Find a suitable programme related to your Diploma
+            .intro-desc.notice
+              p *All diplomas/qualifications not listed will be reviewed on a case-by-case basis.
+    .container.school-finder
+      .row
+        form(method="GET" data-url="http://localhost:9001").school-finder-form.form-inline
+          .col-sm-3.col-sm-offset-1
+            select.select1.selectpicker
+              option(disabled selected) Choose a Polytechnic
+              option Singapore Polytechnic
+              option Ngee Ann Polytechnic
+              option Nanyang Polytechnic
+              option Temasek Polytechnic
+              option Republic Polytechnic
+          .col-sm-5
+            select.select2.selectpicker
+              option(disabled selected) Choose a Diploma
+              option Mechatronics & Robotics
+              option Mechatronics & Robotics
+              option Mechatronics & Robotics
+              option Mechatronics & Robotics
+              option Mechatronics & Robotics
+              option Mechatronics & Robotics
+              option Mechatronics & Robotics
+              option Mechatronics & Robotics
+              option Mechatronics & Robotics
+              option Mechatronics & Robotics
+              option Mechatronics & Robotics 
+          .col-sm-2  
+            button.btn.submit.school-finder-submit(type="submit") Show me!
+      .row
+        .result-container
+          .col-sm-4
+            a(href="#").result-block
+              .result-info
+                .result-title MEngTech & BEng (Hons) Sustainable Infrastructure Engineering (Land)
+                .awarded-by Awarded by:
+                .award-giver-campus Singapore Institute of Technology
+          .col-sm-4
+            a(href="#").result-block
+              .result-info
+                .result-title MEngTech & BEng (Hons) Sustainable Infrastructure Engineering (Land)
+                .awarded-by Awarded by:
+                .award-giver-campus Singapore Institute of Technology
+          .col-sm-4
+            a(href="#").result-block
+              .result-info
+                .result-title B (Hons) Accountancy
+                .awarded-by Awarded by:
+                .award-giver-campus Singapore Institute of Technology
+          .col-sm-4
+            a(href="#").result-block
+              .result-info
+                .result-title MEngTech & BEng (Hons) Sustainable Infrastructure Engineering (Land)
+                .awarded-by Awarded by:
+                .award-giver-campus Singapore Institute of Technology    
+          .col-sm-4
+            a(href="#").result-block
+              .result-info
+                .result-title MEngTech & BEng (Hons) Sustainable Infrastructure Engineering (Land)
+                .awarded-by Awarded by:
+                .award-giver-campus Singapore Institute of Technology
+          .col-sm-4
+            a(href="#").result-block
+              .result-info
+                .result-title MEngTech & BEng (Hons) Sustainable Infrastructure Engineering (Land)
+                .awarded-by Awarded by:
+                .award-giver-campus Singapore Institute of Technology
+          .col-sm-4
+            a(href="#").result-block
+              .result-info
+                .result-title B (Hons) Accountancy
+                .awarded-by Awarded by:
+                .award-giver-campus Singapore Institute of Technology
+          .col-sm-4
+            a(href="#").result-block
+              .result-info
+                .result-title MEngTech & BEng (Hons) Sustainable Infrastructure Engineering (Land)
+                .awarded-by Awarded by:
+                .award-giver-campus Singapore Institute of Technology            

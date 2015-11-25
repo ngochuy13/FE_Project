@@ -1,0 +1,35 @@
+.share-popup-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 9999;
+    @include device {
+        transform: translate(0%, -50%);
+        left: auto;
+        right: 0;
+    }
+    .button.rainbow {
+        width: 170px;
+        height: 170px;
+        div.bgw {
+            width: 168px;
+            height: 168px;
+            padding: 20px 0;
+            box-shadow: none;
+            .share-text {
+                margin-bottom: 8px;
+            }
+            .icon {
+                width: 45px;
+                background-size: cover;
+                display: inline-block;
+                margin: 0 11px;
+            }
+            .share-fb {}
+            .share-tw {}
+            .share-mail {}
+        }
+    }
+}

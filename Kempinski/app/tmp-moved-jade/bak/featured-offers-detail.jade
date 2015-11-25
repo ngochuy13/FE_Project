@@ -1,0 +1,21 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Home'
+  -bodyClass = ''
+  -bannerIMG = 'home/banner.jpg'
+block container    
+  .inner
+    main#main
+      .full-width-article-list
+        +full-width-article('dining/dining-1.jpg')
+          +short-article("Welcome to the", "Kempinski Gourmet Experience", "Our passion for food, produce and beverages, made from the most painstakingly sourced ingredients, is rooted in our heritage. We go to extraordinary lengths to share our love affair with food.", "Lorem ipsum Do ea est mollit non cillum aliquip ut dolore mollit consequat minim id fugiat voluptate dolore officia ullamco proident in ea incididunt aliqua Ut dolor consequat.")
+      .container.featured-offers
+        h1.title Featured offers
+        .section-find-location__content
+          .row.hotel-source
+            +hotel-source-item__price('images/find-location/interest-beach.jpg', 'Beach' , 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.' , '200' , '#' )
+            +hotel-source-item__price('images/find-location/interest-family.jpg', 'Family' , 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.' , '200' , '#' )
+            +hotel-source-item__price('images/find-location/interest-golf.jpg', 'Golf' , 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.' , '200' , '#' )
+            +hotel-source-item__price('images/find-location/interest-skiing.jpg', 'Skiing' , 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.' , '200' , '#' )
+           

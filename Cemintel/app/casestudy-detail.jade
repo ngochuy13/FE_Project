@@ -1,0 +1,236 @@
+extends layouts/default
+
+block content
+	.detail-layout-1.case-study-detail-page
+		.casestudy-banner.detail-layout-1-banner
+			.container
+				.banner-inner
+					.title
+						p.small.white Case Studies 
+						h3.white.bold Case Study 1
+					.banner-icon.casestudy-detail-icon
+						.action.psr
+							.share.toggleClick.share-toggle(target=".share-popup-block")
+							include includes/share_popup.jade
+							.fav.toggleActive
+		.casestudy-detail-content
+			.video-block
+				.container
+					.video-wrapper
+						#searchPlayer.video-player(data-id='nfWlot6h_JM')
+						.if-overlay
+							img(src="images/search/overlay.jpg", alt="")
+						.play-btn
+						.video-time.p
+							span.white
+					.video-icon.pull-right.casestudy-detail-icon
+						.action.psr
+							.toggleClick.video-share.share-toggle(target=".share-popup-block")
+							include includes/share_popup.jade
+							a.heart-icon.video-favourite.cup(title="Add Video To Favorite")
+					.clearfix
+					.col-sm-8.col-sm-offset-2.col-xs-12.video-content
+						.title-block.title.tac
+							h3.grey.bold Brief
+							.divider
+								span
+						.content-block
+							p.p Tasmanian builder Rod Nichols recently used CSR Cemintel’s new pre-finished lightweight walling solution, the Cemintel Designer Series™, for the construction of his own home, a stunning two storey house with sweeping views of Tranmere.
+							<br/>
+							<br/>
+							p.p Rod, the owner of Nichols Developments Pty Ltd, says, “Being my own home, I was looking for an external cladding product that was new to the market and different to the main stream range of available products.
+							<br/>
+							<br/>
+							p.p Additionally, I needed one that would allow me to complete the project in the least amount of time possible."
+
+			.solution-block.grey-bgc
+				.container
+					.row
+						.solution-title.title.tac
+							.col-sm-8.col-sm-offset-2.col-xs-12.title-block
+								h3.grey.bold Solution
+								.divider
+									span
+						//- .solution-slide
+							.container
+								.row
+									.col-md-8.col-md-offset-2.col-xs-12.master.pss
+										//- .white-border
+										section.paw-carousel-wrap.hidden-xs
+											.paw-carousel
+												.paw-carousel-items-wrap
+													.paw-carousel-item
+														//- img.paw-carousel-item-media(src="images/case-study/case-detail/solution-big-image.jpg", alt="")
+														img.paw-carousel-item-media(src="images/case-study/case-detail/x.gif" data-src="images/case-study/case-detail/solution-big-image.jpg")
+													.paw-carousel-item
+														//- img.paw-carousel-item-media(src="images/case-study/case-detail/solution-big-image.jpg", alt="")
+														img.paw-carousel-item-media(src="images/case-study/case-detail/x.gif" data-src="images/case-study/case-detail/solution-big-image.jpg")
+													.paw-carousel-item
+														//- img.paw-carousel-item-media(src="images/case-study/case-detail/solution-big-image.jpg", alt="")
+														img.paw-carousel-item-media(src="images/case-study/case-detail/x.gif" data-src="images/case-study/case-detail/solution-big-image.jpg")
+													.paw-carousel-item
+														//- img.paw-carousel-item-media(src="images/case-study/case-detail/solution-big-image.jpg", alt="")
+														img.paw-carousel-item-media(src="images/case-study/case-detail/x.gif" data-src="images/case-study/case-detail/solution-big-image.jpg")
+													.paw-carousel-item
+														//- img.paw-carousel-item-media(src="images/case-study/case-detail/solution-big-image.jpg", alt="")
+														img.paw-carousel-item-media(src="images/case-study/case-detail/x.gif" data-src="images/case-study/case-detail/solution-big-image.jpg")
+												a.paw-carousel-prev.solution-main-slide.paw-carousel-button
+													img(src="images/case-study/case-detail/prev-big-slide.png" alt="Previous")
+												a.paw-carousel-next.solution-main-slide.paw-carousel-button
+													img(src="images/case-study/case-detail/next-big-slide.png" alt="Previous")
+												.paw-carousel-mask.paw-carousel-mask-l.hide-med
+												.paw-carousel-mask.paw-carousel-mask-r.hide-med
+											nav.paw-carousel-thumbs
+												ul.paw-carousel-thumbs-items
+													li.paw-carousel-nav-item.active
+														a.img(href="#")
+															img(src="images/case-study/case-detail/solution-small-image1.jpg")
+													li.paw-carousel-nav-item
+														a.img(href="#")
+															img(src="images/case-study/case-detail/solution-small-image2.jpg")
+													li.paw-carousel-nav-item
+														a.img(href="#")
+															img(src="images/case-study/case-detail/solution-small-image3.jpg")
+													li.paw-carousel-nav-item
+														a.img(href="#")
+															img(src="images/case-study/case-detail/solution-small-image4.jpg")
+													li.paw-carousel-nav-item
+														a.img(href="#")
+															img(src="images/case-study/case-detail/solution-small-image4.jpg")
+												//- a.slick-prev.slick-arrow
+													//- img(src="images/case-study/case-detail/prev-thumb.png" alt="Previous")
+												//- a.slick-next.slick-arrow
+													//- img(src="images/case-study/case-detail/next-thumb.png" alt="Previous")
+										.solution-swiper-slider.visible-xs
+											.swiper-container
+												.swiper-wrapper
+													.swiper-slide.img
+														a(href="#")
+															img(src="images/case-study/case-detail/solution-big-image.jpg")
+													.swiper-slide.img
+														a(href="#")
+															img(src="images/case-study/case-detail/solution-big-image.jpg")
+													.swiper-slide.img
+														a(href="#")
+															img(src="images/case-study/case-detail/solution-big-image.jpg")
+													.swiper-slide.img
+														a(href="#")
+															img(src="images/case-study/case-detail/solution-big-image.jpg")
+												.swiper-pagination
+												.swiper-button-prev.swiper-button
+												.swiper-button-next.swiper-button
+						include includes/casestudy-detail/solution_slide.jade
+						.solution-content
+							.container
+								.row
+									.col-md-8.col-md-offset-2.col-xs-12
+										.solution-main-content
+											.main-content-inner
+												p.p Rod adds, “Generally speaking, our building company’s needs for a walling solution are the following – a product that is different, structurally sound, and offers a complete system. The Cemintel Designer Series range met all these requirements, while also offering the advantage of a wide range of panels in different textures and colours.”
+												<br/>
+												p.p A first in the Australian market, Cemintel’s Designer Series is an innovative range of lightweight and durable, pre-finished panels. The range of textures and colours available, provides designers and builders with any number of design options, including a striking look for the whole structure, through to making a clear statement on a feature wall. The Cemintel Designer Series also leverages a unique and innovative fixing system, which rapidly reduces installation time. The panels are simply attached to the housing frame using a unique clip fix system and are installed by carpenters using existing tools, thereby eliminating the need for additional tradesmen. Rod adds, “The installation was definitely easier than alternative materials. As soon as we got an understanding of what we were dealing with, the complete system ensured it was relatively easy to install.” Rod chose the Cemintel Designer Series Smooth Cream panels as the main external façade material, which ensured a minimalist look was achieved due to its high level finish and visible horizontal joints. The Textured Sandstone panel was selected as the feature material onthe parapets around the top of the home.
+												<br/>
+												p.p The Textured panels offer both a depth of colour and intricate texture, which complements the Smooth panels perfectly well. Together they create a real point of difference to the home. The house was designed with our life style in mind, so I was after a contemporary and sleek finish,” says Rod.
+												<br/>
+											.solution-used-product.hidden-xs
+												.used-product-title
+													p.p Used Product:
+												.used-product
+													.row
+														.col-sm-3
+															a(href="#")
+																.img-info.bdrz
+																	img(src="images/thum1.png")
+																.info-box.tac
+																	p.p Designer Series™ Urban
+														.col-sm-3
+															a(href="#")
+																.img-info.bdrz
+																	img(src="images/thum1.png")
+																.info-box.tac
+																	p.p Designer Series™ Urban
+											.solution-readmore.visible-xs
+												a.button.rainbow(href="#")
+													.bgw Read More
+
+
+			.related-casestudy-block
+				.container
+					.row
+						.related-casestudy-title.title.tac
+							.col-sm-8.col-sm-offset-2.col-xs-12.title-block
+								h3.grey.bold Related Case Studies
+								.divider
+									span
+						.related-casestudy-content
+								.col-sm-3.col-xs-12.related-casestudy-inner
+									.related-item
+										.related-img.img.has-action
+											a
+												img(src="images/case-study/case-detail/realted-case-study-image1.png")
+											.action
+												.heart-icon
+												.share-icon.hidden-xs.toggleClick.share-toggle(target=".share-popup-block")
+												include includes/share_popup.jade
+												a(href="#").button.view.rainbow 
+													div.bgw View
+										.related-header
+											a(href="#" target='_blank')
+												p.p.bold Case Study 1
+										.related-content
+											p.p Minions ipsum eiusmod aute potatoooo sit amet enim officia voluptate.
+								.col-sm-3.col-xs-12.related-casestudy-inner
+									.related-item
+										.related-img.img.has-action
+											a
+												img(src="images/case-study/case-detail/realted-case-study-image2.png")
+											.action
+												.heart-icon
+												.share-icon.hidden-xs.toggleClick.share-toggle(target=".share-popup-block")
+												include includes/share_popup.jade
+												a(href="#").button.view.rainbow 
+													div.bgw View
+										.related-header
+											a(href="#" target='_blank')
+												p.p.bold Case Study 2
+										.related-content
+											p.p Minions ipsum eiusmod aute potatoooo sit amet enim officia voluptate.
+								.col-sm-3.col-xs-12.related-casestudy-inner
+									.related-item
+										.related-img.img.has-action
+											a
+												img(src="images/case-study/case-detail/realted-case-study-image3.png")
+											.action
+												.heart-icon
+												.share-icon.hidden-xs.toggleClick.share-toggle(target=".share-popup-block")
+												include includes/share_popup.jade
+												a(href="#").button.view.rainbow 
+													div.bgw View
+										.related-header
+											a(href="#" target='_blank')
+												p.p.bold Case Study 3
+										.related-content
+											p.p Minions ipsum eiusmod aute potatoooo sit amet enim officia voluptate.
+								.col-sm-3.col-xs-12.related-casestudy-inner
+									.related-item
+										.related-img.img.has-action
+											a
+												img(src="images/case-study/case-detail/realted-case-study-image4.png")
+											.action
+												.heart-icon
+												.share-icon.hidden-xs.toggleClick.share-toggle(target=".share-popup-block")
+												include includes/share_popup.jade
+												a(href="#").button.view.rainbow 
+													div.bgw View
+										.related-header
+											a(href="#" target='_blank')
+												p.p.bold Case Study 4
+										.related-content
+											p.p Minions ipsum eiusmod aute potatoooo sit amet enim officia voluptate.
+			.division-block
+				.container
+					.division
+
+
+
+	include includes/feature.jade

@@ -1,0 +1,45 @@
+// Created by Huy on 4/7/2015.
+extends layouts/layout
+
+block vars
+  -title = 'The Story'
+  -bodyClass = 'the-story'
+block container
+  .section.section-video
+    .video-section
+      .video-bg
+        .bg-block.active(video-item="1")
+          span.play-icon
+          +parallax-video("Video parallax", "images/the-story/video-bg.jpg", "images/the-story/modern.mp4", "video/mp4")
+        .bg-block(video-item="2")
+          +parallax-video("Video parallax", "images/the-story/video-bg.jpg", "images/the-story/luxury.mp4", "video/mp4")
+        .bg-block(video-item="3")
+          +parallax-video("Video parallax", "images/the-story/video-bg.jpg", "images/the-story/luxury.mp4", "video/mp4")
+      .video-thumb-box
+        .container
+         .video-list
+           ul
+            li.inactive(video-item="1")
+              a(href="#" title="Antique Car")
+                .video-thumb
+                  +video('images/the-story/modern.mp4', 'video/mp4')
+                  +img('', 'images/the-story/video-thumb-1.jpg')
+                // .video-info
+                //   h5 Antique Car
+                //   p Donec quam risus, ornare ac semper
+            li(video-item="2")
+              a(href="#" title="Antique Car")
+                .video-thumb
+                  +video('images/the-story/luxury.mp4', 'video/mp4')
+                  +img('', 'images/the-story/video-thumb-2.jpg')
+                // .video-info
+                //   h5 Antique Car
+                //   p Donec quam risus, ornare ac semper
+            li(video-item="3")
+             a(href="#" title="The Party")
+                .video-thumb
+                  +video('images/the-story/luxury.mp4', 'video/mp4')
+                  +img('', 'images/the-story/video-thumb-3.jpg')
+            //     .video-info
+            //       h5 The Party
+            //       p Donec quam risus, ornare ac semper

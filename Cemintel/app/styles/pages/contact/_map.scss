@@ -1,0 +1,161 @@
+.contact-map-section {
+    .img {
+        .map-block {
+            padding: 5px;
+            height: 478px;
+            // background: #b9dcff;
+            width: 100%;
+            position: relative;
+            z-index: 100;
+            @include mobile {
+                height: 280px;
+            }
+            .map-container {
+                width: calc(100% + 10px);
+                height: 478px;
+                background: pink;
+                margin: -5px;
+                @include mobile {
+                    height: 280px;
+                }
+            }
+            .locations-section-inside-map {
+                position: absolute;
+                top: 5px;
+            }
+        }
+    }
+}
+
+.locations {
+    border-left: 15px solid rgba(255, 255, 255, 0.95);
+    border-right: 15px solid rgba(255, 255, 255, 0.95);
+    @include mobile {
+        border: none;
+    }
+    .location {
+        min-height: auto;
+        background-color: rgba(255, 255, 255, 0.95);
+        margin-bottom: 3px;
+        position: relative;
+        width: 100%;
+        @include transition(0.6s);
+        @include mobile {
+            border-bottom: 1px solid #cacaca;
+            margin-bottom: 0;
+        }
+        &.active {
+            i {
+                @include rotate(180deg);
+            }
+        }
+        .letter {
+            width: 35px;
+            height: 35px;
+            font-size: 20px;
+            background-color: black;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            display: block;
+            float: left;
+            border-radius: 50%;
+            line-height: 35px;
+            margin-top: 30px;
+            margin-right: 15px;
+            @include transition(0.6s);
+            @include mobile {
+                margin-top: 17px;
+            }
+        }
+        .h4-wrapper {
+            @include transition(0.6s);
+            display: table;
+            margin: 0;
+            width: calc(100% - 50px);
+            height: 91px;
+            @include mobile {
+                height: 70px;
+            }
+            h4 {
+                cursor: pointer;
+                margin: 0;
+                color: #000;
+                font-size: 15px;
+                display: inline-block;
+                line-height: 1.3;
+                display: table-cell;
+                vertical-align: middle;
+                position: relative;
+                z-index: 10;
+            }
+        }
+        i {
+            @include transition(0.6s);
+            position: absolute;
+            top: 38px;
+            right: 0;
+            @include mobile {
+                top: 27px;
+            }
+        }
+        .info {
+            display: none;
+            clear: both;
+            padding-left: 50px;
+            margin-top: -30px;
+            padding-bottom: 50px;
+            .p {
+                @include smdesktop {
+                    font-size: 12px;
+                }
+            }
+            p {
+                margin-bottom: 0;
+                line-height: 30px;
+                a {
+                    &:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            @include mobile {
+                margin: 0 -15px;
+                background: #f1f1f1;
+                padding: 20px 15px;
+            }
+            .map-info-buttons {
+                margin-top: 20px;
+                margin-bottom: 5px;
+                .button {
+                    width: 120px;
+                    text-align: center;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    &.expanded {
+        .location:not(.active) {
+            .h4-wrapper {
+                height: 55px;
+                @include mobile {
+                    height: 70px;
+                }
+            }
+            .letter {
+                margin-top: 10px;
+                @include mobile {
+                    margin-top: 17px;
+                }
+            }
+            i {
+                top: 20px;
+                @include mobile {
+                    top: 27px;
+                }
+            }
+        }
+    }
+}

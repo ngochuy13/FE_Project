@@ -1,0 +1,684 @@
+
+
+.car-noah-detail
+  .block-left-middle, .car-section-content .nav-5 .tooltip-title-container
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6)
+  .block-ow-caption 
+    .block-top-middle
+      text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.6)
+    .block-left-middle
+      position: relative
+      width: 100%
+      top: 290px
+      left: 15%
+      text-align: center
+      max-width: 520px
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4)
+
+  .block-ow-caption
+    &.with-banner  
+      -webkit-transition: opacity 0.3s
+      -moz-transition: opacity 0.3s
+      -ms-transition: opacity 0.3s
+      -o-transition: opacity 0.3s
+      transition: opacity 0.3s
+      .block-banner
+        height: 52px
+        line-height: 44px
+        font-size: 18px
+        background: url('../images/Cars/Noah/bg-label-description.png') no-repeat center top
+        text-transform: uppercase
+        color: white
+      &.active
+        opacity: 0
+
+.block-tooltip-outslide
+  position: absolute
+  top: 0
+  left: 0
+
+.section-slide-noah
+  .banner-intel-scaling-item
+    position: relative
+  .block-car-slide
+    position: absolute
+    top: 100px
+    left: 7%
+    .car-move
+      position: relative
+      left: 647px
+      top: 189px
+      width: 573px
+      -webkit-transition: left 3s, top 3s, width 3s
+      -moz-transition: left 3s, top 3s, width 3s
+      -ms-transition: left 3s, top 3s, width 3s
+      -o-transition: left 3s, top 3s, width 3s
+      transition: left 3s, top 3s, width 3s
+      transform: translateZ(0)
+      img 
+        max-width: 100%
+      &.active
+        left: -220px
+        top: 80px
+        width: 1008px
+  .block-control
+    .block-content
+      display: block
+      width: 232px
+      margin: 0 auto
+    .nav
+      position: absolute
+      bottom: 40px
+      width: 232px
+      height: 92px
+      .icon 
+        background: url('../images/Cars/Noah/section-slide-noah-nav.png') no-repeat 0px -90px
+        width: 92px
+        height: 92px
+        position: relative
+        float: left
+        &.icon-2
+          background-position: -140px 0px
+      .title 
+        float: left
+        width: 40px
+        font-size: 16px
+        text-align: center
+        color: #FFF
+        border-bottom: 1px solid #fff
+        position: relative
+        top: 26px
+      .selected
+        background: url('../images/Cars/Noah/section-slide-noah-nav.png') no-repeat -250px -52px
+        width: 92px
+        height: 92px
+        position: absolute
+        top: 0
+        left: 0
+        -webkit-transition: left 0.3s
+        -moz-transition: left 0.3s
+        -ms-transition: left 0.3s
+        -o-transition: left 0.3s
+        transition: left 0.3s
+        
+      &.active
+        .icon
+          background-position: 0px 0px
+        .icon-2
+          background-position: -140px -92px
+        .selected
+          left: 131px
+
+
+.carousel-furniture-car-navigation
+  position: absolute
+  left: 0
+  bottom: 30px
+  width: 100%
+  z-index: 1
+  display: none
+  &.active
+    display: block    
+  .container
+    background: url('../images/Cars/Noah/bg-nav-new.png') no-repeat center top
+    width: 180px
+    height: 110px
+    position: relative
+    span 
+      position: absolute
+      // background: url('../images/icons/icon-carousel-furniture-car-navigation-prev.png') no-repeat center top
+      width: 15px
+      height: 24px
+      top: 41px
+      left: 0
+      cursor: pointer
+      &.next
+        left: auto
+        right: 0px
+        // background-image: url('../images/icons/icon-carousel-furniture-car-navigation-next.png')
+    .slide-title
+      font-size: 18px
+      line-height: 1.5
+      color: #003399
+      text-align: center
+      max-width: 100px
+      margin: 45px auto 0
+      text-transform: uppercase
+  &.slide-2   
+    .container
+      background: url('../images/Cars/Noah/bg-nav-new-2.png') no-repeat center top
+      .slide-title
+        color: #006666
+  &.slide-3   
+    .container
+      background: url('../images/Cars/Noah/bg-nav-new-3.png') no-repeat center top
+      .slide-title
+        color: #ea3560
+
+.owl-carousel-furniture-car
+  
+  .banner-intel-scaling-item
+    position: absolute
+  
+  .block-tooltip img
+    display: none
+  
+  .block-text
+    font-size: 12px
+    color: #fff
+    line-height: 1.5
+    text-align: left
+    position: absolute
+    left: 200px
+    bottom: 25px
+    z-index: 99
+  
+  .block-ow-caption
+    z-index: 99
+    .block-top-middle
+      max-width: none
+      width: 100%
+      left: 0
+      top: 62px
+      transform: translateZ(0)
+      .title 
+        font-size: 45px
+        color: #003399
+        line-height: 1.3
+        padding-bottom: 0px
+      .description p
+        font-size: 16px
+        font-weight: bold
+        color: rgb( 51, 51, 51 )
+        line-height: 1.5
+  .slide-2
+    .block-ow-caption
+      .block-top-middle
+        .title 
+          color: #006666
+  .slide-3
+    .block-ow-caption
+      .block-top-middle
+        .title 
+          color: #ea3560
+          padding-bottom: 92px
+    .block-text
+      color: #121212
+  .block-tab-car-control
+    position: absolute
+    top: 140px
+    left: 0
+    width: 100%
+    z-index: 9999
+    .block-control
+      background: url('../images/Cars/Noah/bg-block-tab-car-control.png') no-repeat
+      width: 910px
+      height: 72px
+      display: block
+      margin: 0 auto
+      padding: 9.5px 45px 0
+      a 
+        font-size: 12px
+        color: #fff
+        display: inline-block
+        padding: 14px 10px 14px
+        text-align: center
+        position: relative
+        margin-right: 5px
+        &:before
+          content: ''
+          position: absolute
+          top: 30px
+          left: -5px
+          background: url('../images/Cars/Noah/icon-block-tab-car-control.png') no-repeat
+          width: 5px
+          height: 5px
+        &:hover, &:focus
+          text-decoration: none
+        &.active
+          background-color: #bb2a4d
+        &:first-child:before
+          content: none
+  .block-tab-car-content
+    .only-mobile
+      display: none
+    .block-img
+      opacity: 0
+      position: absolute
+      top: 0
+
+      -webkit-transition: opacity 1s
+      -moz-transition: opacity 1s
+      -ms-transition: opacity 1s
+      -o-transition: opacity 1s
+      transition: opacity 1s      
+      &.active
+        opacity: 1
+
+  .block-balloon
+    > img 
+      position: absolute
+      z-index: 99
+      top: 40px
+      left: 23%
+      width: auto
+    .balloon-2
+      left: 30%
+      top: 175px
+    &.active
+      > img
+        top: -190px
+        -webkit-transition: top 7s
+        -moz-transition: top 7s
+        -ms-transition: top 7s
+        -o-transition: top 7s
+        transition: top 7s  
+        &.balloon-2
+          top: 175px
+
+
+  .block-car-open-door
+    .car
+      position: absolute
+      top: 260px
+      left: 23%
+      width: auto
+    .door
+      position: absolute
+      top: 266px
+      left: 48.2%
+      width: 251px
+      opacity: 1
+      img 
+        opacity: 1
+        width: auto
+        position: absolute
+      .open
+        display: none
+      &.active
+        top: 260px
+        left: 47%
+        width: 291px
+        .close
+          display: none
+        .open 
+          display: block
+      &.active.move
+        left: 55%
+
+        -webkit-transition: left 2s
+        -moz-transition: left 2s
+        -ms-transition: left 2s
+        -o-transition: left 2s
+        transition: left 2s
+  .block-arrow
+    opacity: 0
+    .arrow
+      position: absolute
+      width: 5px
+      height: 5px 
+      background: url('../images/Cars/Noah/bg-arrow.png')
+      z-index: 99
+      -webkit-transition: all 2s
+      -moz-transition: all 2s
+      -ms-transition: all 2s
+      -o-transition: all 2s
+      transition: all 2s
+      
+      span
+        font-size: 14px
+        color: #FFF
+        position: absolute
+        display: none
+      &:before, &:after
+        content: ""
+        background: url('../images/Cars/Noah/icon-arrow.png')
+        width: 11px
+        height: 5px
+        display: block
+        position: absolute
+        top: -4px
+        left: -3px
+      &:after
+        background-position: -37px 0px
+        top: auto
+        bottom: -5px
+      &.horizontal
+        &:before, &:after
+          top: -3px
+          left: -5px
+          background-position: 0px -8px
+          width: 5px
+          height: 11px
+        &:after
+          left: auto
+          right: -5px
+          background-position: -11px -8px
+
+      &.arrow-1
+        top: 410px
+        left: 52.5%
+        height: 28px
+      &.arrow-2
+        top: 580px
+        left: 52.5%
+        height: 23px
+        opacity: 0
+      &.arrow-3
+        top: 620px
+        left: 51.9%
+        height: 5px
+        width: 30px
+    &.active
+      opacity: 1
+      &.active.move 
+        .arrow-1
+          top: 300px
+          height: 266px
+          span 
+            top: 120px
+            left: 6px
+            display: block
+        .arrow-2    
+          opacity: 1
+          span 
+            top: 2px
+            left: 10px
+            display: block
+        .arrow-3
+          width: 125px
+          left: 48.9%
+          span 
+            top: 6px
+            left: 50px
+            display: block
+
+
+.section-car-detail.car-noah
+  .section-car-detail-content-performance .block-description, .section-car-detail-content-safety
+    &.single-item
+      .owl-carousel-car-view-nav
+        display: none
+      .item
+        position: relative
+    .block-description
+      bottom: 95px
+      height: 66px
+      .container
+        padding: 0 70px
+  .block-nav
+    position: absolute
+    bottom: 165px
+    left: 0
+    width: 100%
+    z-index: 99
+    .container
+      position: relative
+    a 
+      position: absolute
+      background: url('../images/Cars/Ractis/icon-slider-popup.png') no-repeat 
+      width: 60px
+      height: 60px
+      top: 13px
+      left: 0px
+      cursor: pointer
+      &.next
+        left: auto
+        right: 0px
+        background-position: -69px 0px
+  .block-logo
+    position: absolute
+    bottom: 25px
+    left: 0
+    width: 100%
+    img   
+      margin: 0 auto
+      display: block
+
+.car-noah.section-change-color-car
+  height: 830px
+  .section-change-color-car-content
+    background: url('../images/Cars/Noah/bg-section-change-color.jpg') repeat-x top left #ebebeb
+    padding-top: 100px
+  .block-lists-car
+    width: 855px
+    height: 469px
+  .block-text
+    position: absolute
+    bottom: 10px
+    left: 0
+    width: 100%
+
+
+
+@media screen and (max-width: 1432px)
+  .block-ow-caption.with-banner
+    .block-left-middle
+      left: 20%
+  .section-slide-noah 
+    .block-car-slide
+      top: 140px
+      left: 10%
+      .car-move
+        width: 473px
+        &.active
+          left: 0px
+          top: 120px
+          width: 946px
+
+@media screen and (max-width: 1024px)
+  .car-noah-detail
+    .banner-intel-scaling-item
+      max-width: 100%
+      width: 100%
+      height: auto
+      left: 0
+      transform: none
+      img 
+        max-width: 100%
+    
+    .section-slide-noah
+      height: auto
+      img 
+        margin: 0 auto
+        display: block
+        width: 100%
+      .block-car-slide, .block-control
+        display: none
+    
+    .block-ow-caption.with-banner 
+      position: relative
+      .block-left-middle
+        position: relative
+        left: 0
+        top: 0
+        width: 100%
+        margin: 20px auto 20px
+        .title, .title-small, .price , .editor-content p
+          color: #ff0066
+          text-shadow: none
+        .title-small
+          background: none
+          position: relative
+          &:before
+            background: #ff0066
+        .title
+          margin-bottom: 20px
+        .price
+          bottom: -5px
+          right: 0
+          width: 100%
+          text-align: center
+          font-weight: 100
+        .block-banner
+          margin-bottom: 10px
+
+    .section-furniture-car
+      height: auto
+      .block-balloon, .block-car-open-door, .block-arrow
+        display: none
+      .item-furniture-car
+        .image-center
+          width: 100%
+          height: auto
+          transform: none
+          left: 0
+          height: 799px
+          overflow: hidden
+        .block-text
+          position: relative
+          left: 0
+          top: 20px
+          width: 100%
+          text-align: left
+          color: #666
+          padding-left: 10px
+        .block-ow-caption
+          position: relative
+          .block-top-middle
+            position: relative
+            left: 0
+            top: 0
+            width: 100%
+            margin: 0px auto
+            text-shadow: none
+            .description
+              padding: 0 15px
+            .title
+              position: relative
+              width: 100%
+              left: 0
+              top: 0
+              margin: 20px 0 0 0
+              font-size: 40px
+              padding-bottom: 0
+
+    .block-tab-car-content
+      max-height: 799px
+      .only-mobile
+        display: block
+        opacity: 0
+        position: relative
+    .block-tab-car-control
+      position: absolute
+      top: 700px
+      left: 0
+      .block-control
+        background: url('../images/Cars/Noah/bg-block-tab-car-control-small.png') no-repeat center
+        width: 440px
+        height: 117px
+        overflow: hidden
+        position: relative
+        a 
+          width: 350px
+          height: 107px
+          line-height: 107px
+          padding: 0
+          font-size: 16px
+          background: none
+          display: none
+          &.active
+            background: none
+            display: block
+          &:before
+            content: none
+      .block-control-nav-mobile
+        width: 440px
+        position: relative
+        margin: 0 auto
+        .prev , .next
+          position: absolute
+          left: 18px
+          top: 52px
+          width: 16px
+          height: 32px
+          z-index: 99
+        .next
+          left: auto
+          right: 20px
+    
+    .block-tooltip-outslide 
+      position: relative
+      .block-popup
+        padding-bottom: 0
+        > div
+          display: none
+          &.active
+            display: block            
+
+    .carousel-furniture-car-navigation
+      position: absolute
+      top: 590px
+      left: 0
+      bottom: auto
+
+    .block-tooltip
+      display: none
+    
+    .car-noah.section-change-color-car
+      height: auto
+      .section-change-color-car-content
+        padding-bottom: 50px
+        padding-top: 50px
+      .block-text
+        position: relative
+        bottom: 0
+        margin-top: 20px
+
+
+  .car-noah-detail 
+    .car-noah.section-change-color-car 
+      .block-lists-car
+        width: auto
+        max-width: 100%
+        height: auto
+        background-size: 100%  100% 
+
+
+@media screen and (max-width: 768px)  
+  .car-noah-detail 
+    .car-noah.section-change-color-car .section-change-color-car-content
+      padding-top: 0
+    .section-furniture-car 
+      .item-furniture-car 
+        .image-center
+          height: auto
+      .carousel-furniture-car-navigation
+        top: 570px
+    .block-tab-car-control
+      position: relative
+      top: 0
+      left: 0
+      .block-control-nav-mobile
+        max-width: 100%
+        z-index: 2
+      .block-control
+        max-width: 100%
+        background-size: 100% 100%
+        z-index: 1
+        a 
+          max-width: 100%
+          padding: 0
+
+@media screen and (max-width: 595px)  
+  .car-noah-detail 
+    .section-furniture-car 
+      .carousel-furniture-car-navigation
+        top: 450px
+
+@media screen and (max-width: 490px)  
+  .car-noah-detail 
+    .section-furniture-car 
+      .carousel-furniture-car-navigation
+        top: 235px
+
+
+.ie8
+  .block-ow-caption
+    &.with-banner.active
+      display: none
+  .owl-carousel-furniture-car .block-tab-car-content .block-img
+    display: none
+    &.active
+      display: block
+        

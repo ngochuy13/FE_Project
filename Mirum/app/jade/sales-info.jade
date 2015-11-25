@@ -1,0 +1,22 @@
+extends layouts/layout
+
+block vars
+  -title = 'Sales Information'
+  -bodyClass = 'body-sales-info'
+block container
+  .section
+    +parallax("Sales Information", "images/sale-info-bg.jpg")
+  .section.section-sales-info
+    .container
+      .sales-info-wrap
+        +introduction-text('SALES INFORMATION').sales-info-text
+          p Hang Lung Properties herewith presents comprehensive sales information for 29-39 Blue Pool Road, Happy Valley.
+  .section.section-masonry-component
+    .container
+      .masonry-wrap
+        include includes/masonry-sale-document
+
+block pagescript
+  // build:js scripts/masonry.js
+  script(src='/bower_components/masonry/dist/masonry.pkgd.min.js')
+  // endbuild

@@ -1,0 +1,110 @@
+mixin section-title(title, subtitle, subChildTitle)
+  .section-title.text-center&attributes(attributes)
+    .container
+      h2.block-title.wow.fadeInUp(data-wow-duration="1s")!=title
+      .sub-title.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.05s")
+        span.line
+        span.text!=subtitle
+      .sub-child-title.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.1s")!=subChildTitle
+mixin page-title(title, subtitle, subChildTitle)
+  .page-title.section-title.text-center&attributes(attributes)
+    .container
+      h1.block-title.wow.fadeInUp(data-wow-duration="1s")!=title
+      .sub-title.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.05s")
+        span.line
+        span.text!=subtitle
+      .sub-child-title.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.1s")!=subChildTitle
+mixin page-title-description(title, subtitle, description)
+  .page-title.section-title.text-center&attributes(attributes)
+    .container
+      h1.block-title.wow.fadeInUp(data-wow-duration="1s")!=title
+      .sub-title.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.05s")
+        span.line
+        span.text!=subtitle
+      .description.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.1s")!=description
+mixin section-title-noline(title, subtitle)
+  .section-title.no-line.text-center&attributes(attributes)
+    .container
+      h2.block-title.wow.fadeInUp(data-wow-duration="1s")!=title
+      .sub-title.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.05s")
+        span.text!=subtitle
+mixin page-title-noline(title, subtitle)
+  .section-title.no-line.text-center&attributes(attributes)
+    .container
+      h1.block-title.wow.fadeInUp(data-wow-duration="1s")!=title
+      .sub-title.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.05s")
+        span.text!=subtitle
+mixin section-title-star(title, subtitle)
+  .section-title.text-center&attributes(attributes)
+    .container
+      h2.block-title.wow.fadeInUp(data-wow-duration="1s")!=title
+      .sub-title.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.05s")
+        span.line
+        span.text!=subtitle
+      .star-block.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.1s")
+        span.star-icon
+        span.star-icon
+        span.star-icon
+        span.star-half-icon
+mixin page-title-star(title, subtitle)
+  .page-title.section-title.text-center&attributes(attributes)
+    .container
+      h1.block-title.wow.fadeInUp(data-wow-duration="1s")!=title
+      .sub-title.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.05s")
+        span.line
+        span.text!=subtitle
+      .star-block.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.1s")
+        span.star-icon
+        span.star-icon
+        span.star-icon
+        span.star-half-icon
+mixin filter-select(tabs)
+  .filter-select&attributes(attributes)
+    span.bg-filter-select
+    //-span.bg-filter-select_active
+    .filter-wrap.container
+      .owl-carousel.filter-slide(role='tablist')
+        each val, index in tabs
+          - if( index == 0 ) {
+            div.item.selected(role='presentation')
+              +link(val.text, val.link)(aria-controls='#{val.link}' role='tab' data-toggle='tab' data-index="#{index}")
+              span.bullet.animating.bounce-in
+          - } else {
+            div.item(role='presentation')
+              +link(val.text, val.link)(aria-controls='#{val.link}' role='tab' data-toggle='tab' data-index="#{index}")
+              span.bullet.animating.bounce-in
+          - }
+      .cover-after
+      .cover-before
+
+mixin cta-btngroup(title1,link1,title2,link2)
+  .cta-btns&attributes(attributes)
+    a(href=link1, title=title1).btn.btn-default-outline.btn-futher-info!=title1
+    a(href=link2, title=title2).btn.btn-default.btn-book-now!=title2
+
+mixin cta-btngroup-1(title1,link1)
+  .cta-btns&attributes(attributes)
+    a(href=link1, title=title1).btn.btn-default-outline.btn-futher-info!=title1
+
+mixin cta-btngroup-2(title2,link2)
+  .cta-btns&attributes(attributes)
+    a(href=link2, title=title2).btn.btn-default.btn-book-now!=title2
+          
+mixin filter-select-sync(tabs)
+  .filter-select&attributes(attributes)
+    span.bg-filter-select
+    //-span.bg-filter-select_active
+    .filter-wrap.container
+      .owl-carousel.filter-slide(role='tablist')
+        each val, index in tabs
+          - if( index == 0 ) {
+            div.item.selected(role='presentation')
+              +link(val.text, "#")(data-index='#{index}' role='tab' data-toggle='tab')
+              span.bullet.animating.bounce-in
+          - } else {
+            div.item(role='presentation')
+              +link(val.text, "#")(data-index='#{index}' role='tab' data-toggle='tab')
+              span.bullet.animating.bounce-in
+          - }
+      .cover-after
+      .cover-before

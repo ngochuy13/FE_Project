@@ -1,0 +1,537 @@
+extends layouts/layout
+
+block vars
+  -title = 'Car Ractis'
+  -bodyClass = 'car-detail '
+
+  -ractisEngText = {}
+  -ractisEngText.banner= {}
+  -ractisEngText.banner.bannerContent= []
+  -ractisEngText.banner.bannerContent[0] = {}
+  -ractisEngText.banner.bannerContent[0].titleSmall= 'Open-minded'
+  -ractisEngText.banner.bannerContent[0].title= 'RACTIS'
+  -ractisEngText.banner.bannerContent[0].price= '$168,890 up'
+  -ractisEngText.banner.bannerContent[0].description= '<p>Start the engine and follow your heart to the freedom of the great outdoors.</p>'
+  -ractisEngText.banner.bannerContent[1] = {}
+  -ractisEngText.banner.bannerContent[1].titleSmall= 'Open-minded'
+  -ractisEngText.banner.bannerContent[1].title= 'RACTIS'
+  -ractisEngText.banner.bannerContent[1].price= '$168,890 up'
+  -ractisEngText.banner.bannerContent[1].description= '<p>Start the engine and follow your heart to the freedom of the great outdoors.</p>'
+  -ractisEngText.banner.bannerControl= []
+  -ractisEngText.banner.bannerControl[0]= 'Picnic view'
+  -ractisEngText.banner.bannerControl[1]= 'Beach view'
+
+  -ractisEngText.roof= {}
+  -ractisEngText.roof.smallText= 'Immerse yourself in a journey brimming <br/> with limitless skies and magnificent scenery.'
+  -ractisEngText.roof.title= '59 INCH'
+  -ractisEngText.roof.subTitle= 'SUPER WIDE PANORAMIC MOONROOF <br/> WITH POWERED SHADE*'
+  -ractisEngText.roof.noteText= '*Exclusive for Ractis Verso'
+
+  -ractisEngText.dropzone= {}
+  -ractisEngText.dropzone.instruction= 'Drag your luggage <br/> to here'
+  -ractisEngText.dropzone.smallText=  'Stop and go wherever and whenever you want, <br/> carefree – knowing that everything is ready for you!'
+  -ractisEngText.dropzone.title=  'GIANT'
+  -ractisEngText.dropzone.subTitle=  'TRUNK SPACE'
+  -ractisEngText.dropzone.text=  'Enjoy a light and relaxing journey <br/> while your super-spacious trunk carries the load.'
+
+  -ractisEngText.carDetail=  {}
+  -ractisEngText.carDetail.tabTitle= []
+  -ractisEngText.carDetail.tabTitle[0]= 'EXTERIOR'
+  -ractisEngText.carDetail.tabTitle[1]= 'INTERIOR'
+  -ractisEngText.carDetail.tabTitle[2]= 'PERFORMANCE'
+  -ractisEngText.carDetail.tabTitle[3]= 'SAFETY'
+
+  -ractisEngText.carDetail.tooltipLandingExterior= {}
+  -ractisEngText.carDetail.tooltipLandingExterior.description= 'A chic streamlined body made for dynamic free runs through nature.'
+  -ractisEngText.carDetail.tooltipLandingExterior.tooltips= []
+  -ractisEngText.carDetail.tooltipLandingExterior.tooltips[0]= '16-inch alloy wheels (Exclusive for Ractis Verso)'
+  -ractisEngText.carDetail.tooltipLandingExterior.tooltips[1]= 'Projector halogen headlights with auto leveling control'
+  -ractisEngText.carDetail.tooltipLandingExterior.tooltips[2]= 'All new designed grille'
+  -ractisEngText.carDetail.tooltipLandingExterior.tooltips[3]= 'Power adjustable and retractable door mirrors'
+  -ractisEngText.carDetail.tooltipLandingExterior.tooltips[4]= 'LED brakelights and LED taillights'
+
+  -ractisEngText.carDetail.tooltipLandingInterior= {}
+  -ractisEngText.carDetail.tooltipLandingInterior.description= 'Upgraded luxurious interior adds comfort and tranquility to even quick trips.'
+  -ractisEngText.carDetail.tooltipLandingInterior.noteText= 'Overseas model shown'
+  -ractisEngText.carDetail.tooltipLandingInterior.tooltips= []
+  -ractisEngText.carDetail.tooltipLandingInterior.tooltips[0]= 'Smart Entry & Push Start System (Exclusive for Ractis Verso)'
+  -ractisEngText.carDetail.tooltipLandingInterior.tooltips[1]= '7-inch wide touch panel monitor audio system'
+  -ractisEngText.carDetail.tooltipLandingInterior.tooltips[2]= 'Automatic climate control with pollen filtration'
+  -ractisEngText.carDetail.tooltipLandingInterior.tooltips[3]= 'Leather shift lever & leather steering wheel (Exclusive for Ractis Verso)'
+  -ractisEngText.carDetail.tooltipLandingInterior.tooltips[4]= 'One-touch fold-flat function for rear seats creates 1,388L of storage space'
+
+  -ractisEngText.carDetail.tooltipLandingPerformance= {}
+  -ractisEngText.carDetail.tooltipLandingPerformance.description= 'Enjoy effortless precision driving with revved-up power and unrestrained performance'
+  -ractisEngText.carDetail.tooltipLandingPerformance.tooltips= []
+  -ractisEngText.carDetail.tooltipLandingPerformance.tooltips[0]= '7-speed super CVT-i transmission with +/- mode'
+  -ractisEngText.carDetail.tooltipLandingPerformance.tooltips[1]= 'Gear shift paddle (Exclusive for Ractis Verso)'
+  -ractisEngText.carDetail.tooltipLandingPerformance.tooltips[2]= '1,497cc VVT-i engine with Smart Stop System'
+
+  -ractisEngText.carDetail.tooltipLandingSafety= {}
+  -ractisEngText.carDetail.tooltipLandingSafety.tooltips= []
+  -ractisEngText.carDetail.tooltipLandingSafety.tooltips[0]= 'Driver\'s seat and front passenger airbags'
+  
+  -ractisEngText.colors= {}
+  -ractisEngText.colors.description= 'Eight different colors that match the vibrant lifestyle of your choice.'
+  -ractisEngText.colors.colorNames= []
+  -ractisEngText.colors.colorNames[0]= 'Silver'
+  -ractisEngText.colors.colorNames[1]= 'White Pearl CS'
+  -ractisEngText.colors.colorNames[2]= 'Grey Metallic'
+  -ractisEngText.colors.colorNames[3]= 'Black'
+  -ractisEngText.colors.colorNames[4]= 'Bronze'
+  -ractisEngText.colors.colorNames[5]= 'Light Blue <br/> Mica Metcallic'
+  -ractisEngText.colors.colorNames[6]= 'Satin Blue'
+  -ractisEngText.colors.colorNames[7]= 'Deep Amethyst'
+
+block pagescript
+  //- Dep only for car detail page
+  // build:js scripts/car-detail-dep.js
+  script(src='/scripts/lib-js/rangeslider.js')
+  script(src='/scripts/lib-js/interact-1.2.4.js')
+  script(src='/scripts/lib-js/jquery.panelSnap.js')
+  // endbuild
+
+  // build:js scripts/car-detail.js
+  script(src='/scripts/lib-js/general-ui.js')
+  script(src='/scripts/lib-js/car-change-color-slide.js')
+  script(src='/scripts/lib-js/car-unique-characters.js')
+  script(src='/scripts/lib-js/car-detail-interaction.js')
+  // endbuild
+  
+block container
+  .car-ractis-detail
+    //- section-slider-view
+    .section.section-slider-view.car-ractis
+      .owl-carousel-car-view
+        .item.banner-intel-scaling-item
+          picture
+            source(srcset='images/Cars/Ractis/banner-small-1.jpg', media='(max-width: 768px)')
+            img(src='images/Cars/Ractis/banner-1.jpg', alt='Home banner.', data-width='1920', data-height='799')
+          .content
+            .block-ow-caption
+              .block-top-middle
+                .title-small !{ractisEngText.banner.bannerContent[0].titleSmall}
+                h1.title
+                  | !{ractisEngText.banner.bannerContent[0].title}
+                  .price !{ractisEngText.banner.bannerContent[0].price}
+                .description
+                  .editor-content !{ractisEngText.banner.bannerContent[0].description}
+        .item.banner-intel-scaling-item
+          picture
+            source(srcset='images/Cars/Ractis/banner-small-2.jpg', media='(max-width: 768px)')
+            img(src='images/Cars/Ractis/banner-2.jpg', alt='Home banner.', data-width='1920', data-height='799')
+          .content
+            .block-ow-caption.color-blue
+              .block-top-middle
+                .title-small !{ractisEngText.banner.bannerContent[1].titleSmall}
+                .title
+                  | !{ractisEngText.banner.bannerContent[1].title}
+                  .price !{ractisEngText.banner.bannerContent[1].price}
+                .description
+                  .editor-content !{ractisEngText.banner.bannerContent[1].description}
+      .owl-carousel-car-view-nav
+        .block-content
+          span !{ractisEngText.banner.bannerControl[0]}
+          .nav
+            //- a.picnic.active(href='#picnic', data-index='0', title='#'+ractisEngText.banner.bannerControl[0]) &nbsp;
+            //- a.beach(title='Beach', data-index='1', href='#'+ractisEngText.banner.bannerControl[1]) &nbsp;
+            a(href='#', title='#'+ractisEngText.banner.bannerControl[0]) &nbsp;
+          span !{ractisEngText.banner.bannerControl[1]}
+    //- section-super-wide
+    .section.section-super-wide
+      .section-super-wide-content
+        .block-img.image-vertical-middle
+          .block-sky
+            .item
+              img(src='images/Cars/Ractis/img-sky-1.png', alt='img sky')
+            .item
+              img(src='images/Cars/Ractis/img-sky-3.png', alt='img sky')
+            .item
+              img(src='images/Cars/Ractis/img-sky-2.png', alt='img sky')
+          .block-cloudy
+            img(src='images/Cars/Ractis/cloud-export.png', alt='img cloudy')
+            img(src='images/Cars/Ractis/cloud-export.png', alt='img cloudy')
+            img(src='images/Cars/Ractis/cloud-export.png', alt='img cloudy')
+          .block-wide.image-vertical-middle
+            picture
+              source(srcset='images/Cars/Ractis/img-small-11.png', media='(max-width: 767px)')
+              img(src='images/Cars/Ractis/img-11.png', alt='Home banner.')
+          .block-caption
+            .small-text !{ractisEngText.roof.smallText}
+            .title !{ractisEngText.roof.title}
+            .sub-title !{ractisEngText.roof.subTitle}
+            .note-text !{ractisEngText.roof.noteText}
+    
+    //- car-drag
+    .section.section-car-drag
+      .section-car-drag-content
+        .block-drag-item.item-picnic.show
+          img.draggable.drag-drop.item-1(src='images/Cars/Ractis/car-drap-4.png', alt='item 1', data-x='695', data-y='380', data-dx='695', data-dy='380')
+          img.draggable.drag-drop.item-2(src='images/Cars/Ractis/car-drap-5.png', alt='item 2', data-x='815', data-y='290', data-dx='815', data-dy='290')
+        .block-drag-item.item-beach
+          img.draggable.drag-drop.item-1(src='images/Cars/Ractis/car-drap-6.png', alt='item 1', data-x='914', data-y='410', data-dx='914', data-dy='410')
+          img.draggable.drag-drop.item-2(src='images/Cars/Ractis/car-drap-7.png', alt='item 2', data-x='775', data-y='298', data-dx='775', data-dy='298')
+          img.draggable.drag-drop.item-3(src='images/Cars/Ractis/car-drap-10.png', alt='item 3', data-x='655', data-y='395', data-dx='655', data-dy='395')
+        .block-car
+          picture
+            source(srcset='images/Cars/Ractis/car-drap-2.png', media='(max-width: 1023px)')
+            img(src='images/Cars/Ractis/car-drap-2.png', alt='Home banner.')
+          .block-drag-container.dropzone
+            span !{ractisEngText.dropzone.instruction}
+        .block-car-mobile
+          img.img-beach.show(src='images/Cars/Ractis/car-drap-beach-mobile.png', alt='beach.')
+          img.img-picnic(src='images/Cars/Ractis/car-drap-picnic-mobile.png', alt='picnic.')
+        .block-caption
+          .small-text !{ractisEngText.dropzone.smallText}
+          .title !{ractisEngText.dropzone.title}
+          .sub-title !{ractisEngText.dropzone.subTitle}
+          .text !{ractisEngText.dropzone.text}
+    //- car-detail
+    .section.section-car-detail
+      .section-car-detail-navigation
+        .container
+          .tab.tab-1.active(data-id='1')
+            span !{ractisEngText.carDetail.tabTitle[0]}
+            .icon.icon-1 &nbsp;
+          .tab.tab-2(data-id='2')
+            span !{ractisEngText.carDetail.tabTitle[1]}
+            .icon.icon-2 &nbsp;
+          .tab.tab-3(data-id='3')
+            span !{ractisEngText.carDetail.tabTitle[2]}
+            .icon.icon-3 &nbsp;
+          .tab.tab-4(data-id='4')
+            span !{ractisEngText.carDetail.tabTitle[3]}
+            .icon.icon-4 &nbsp;
+      .section-car-detail-content
+        #tab-1.active
+          .section-car-detail-content-exterior.car-section-content
+            .block-img.image-center
+              picture
+                source(srcset='images/Cars/Ractis/img-small-12.jpg', media='(max-width: 800px)')
+                img(src='images/Cars/Ractis/img-13.jpg', alt='Car detail', data-x='0', data-y='0')
+              .block-tooltip
+                +tooltip('tooltip-exterior-1','44.5','67.3')
+                +tooltip('tooltip-exterior-2','32.61','56.8')
+                +tooltip('tooltip-exterior-3','63.5','43.3')
+                +tooltip('tooltip-exterior-4','55.3','78.1')
+                +tooltip('tooltip-exterior-5','60','47.5')
+            .block-description
+              .editor-content
+                p !{ractisEngText.carDetail.tooltipLandingExterior.description}
+            .block-popup
+              .tooltip-navigation
+                .container
+                  span.prev &nbsp;
+                  .editor-content.tooltip-title-container &nbsp;
+                  span.next &nbsp;
+                .close-btn
+                  a(href='#', title='close') &nbsp;
+              // Tooltip detail item
+              #tooltip-exterior-1.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{ractisEngText.carDetail.tooltipLandingExterior.tooltips[2]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Ractis/01_exterior_01.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-exterior-2.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{ractisEngText.carDetail.tooltipLandingExterior.tooltips[1]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Ractis/01_exterior_02.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-exterior-3.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{ractisEngText.carDetail.tooltipLandingExterior.tooltips[4]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Ractis/01_exterior_03.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-exterior-4.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{ractisEngText.carDetail.tooltipLandingExterior.tooltips[0]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Ractis/01_exterior_04.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-exterior-5.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{ractisEngText.carDetail.tooltipLandingExterior.tooltips[3]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Ractis/01_exterior_05.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+        #tab-2
+          .section-car-detail-content-interior.car-section-content
+            // Image with tooltip
+            .block-img.image-drag
+              picture
+                source(srcset='images/Cars/Ractis/img-small-4.jpg', media='(max-width: 767px)')
+                img(src='images/Cars/Ractis/img-4.jpg', alt='Car detail', data-x='0', data-y='0')
+              .block-text
+                p !{ractisEngText.carDetail.tooltipLandingInterior.noteText}
+              .block-tooltip.light
+                +tooltip('tooltip-interior-1','92','29.2')
+                +tooltip('tooltip-interior-2','26.3','23.5')
+                +tooltip('tooltip-interior-3','9.5','40.2')
+                +tooltip('tooltip-interior-4','13.5','33.7')
+                +tooltip('tooltip-interior-5','7.5','28.2')
+            .block-description
+              .editor-content
+                p !{ractisEngText.carDetail.tooltipLandingInterior.description}
+            .block-popup
+              .tooltip-navigation
+                .container
+                  span.prev &nbsp;
+                  .editor-content.tooltip-title-container &nbsp;
+                  span.next &nbsp;
+                .close-btn
+                  a(href='#', title='close') &nbsp;
+              // Tooltip detail item
+              #tooltip-interior-1.tooltip-detail-content.tooltip-sliding-content(data-type='range-slider')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{ractisEngText.carDetail.tooltipLandingInterior.tooltips[4]}
+                // range slider type: images container
+                .images-container
+                  img(src='images/Cars/Ractis/02_Interior_01a.jpg', alt='fold-flat 1', style='opacity: 0;max-width: 100%;')
+                  .item
+                    img(src='images/Cars/Ractis/02_Interior_01a.jpg', alt='fold-flat 1')
+                  .item
+                    img(src='images/Cars/Ractis/02_Interior_01b.jpg', alt='fold-flat 2')
+                  .item
+                    img(src='images/Cars/Ractis/02_Interior_01c.jpg', alt='fold-flat 3')
+                .nav
+                  input.tooltip-content-range-slider(type='range', min='0', max='100', step='10', value='0')
+                  a(href='#', data-index='2') &nbsp;
+              #tooltip-interior-2.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{ractisEngText.carDetail.tooltipLandingInterior.tooltips[0]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Ractis/02_Interior_02.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-interior-3.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{ractisEngText.carDetail.tooltipLandingInterior.tooltips[2]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Ractis/02_Interior_03.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-interior-4.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{ractisEngText.carDetail.tooltipLandingInterior.tooltips[3]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Ractis/02_Interior_04a.jpg', alt='fold-flat 1')
+                  .item.image-center
+                    img(src='images/Cars/Ractis/02_Interior_04b.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-interior-5.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{ractisEngText.carDetail.tooltipLandingInterior.tooltips[1]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Ractis/02_Interior_05.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              //- #tooltip-interior-5.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+              //-   .icon-tooltip-phone &nbsp;
+              //-   p.tooltip-title !{ractisEngText.carDetail.tooltipLandingInterior.tooltips[4]}
+              //-   .images-container
+              //-     .item
+              //-       img(src='images/Cars/Ractis/02_Interior_04.jpg', alt='fold-flat 1')
+              //-   .dots-nav
+              //-     a(href='#', data-index='1') &nbsp;
+        #tab-3
+          .section-car-detail-content-performance.car-section-content
+            // Image with tooltip
+            .block-img.image-drag
+              picture
+                source(srcset='images/Cars/Ractis/img-small-9.jpg', media='(max-width: 767px)')
+                img(src='images/Cars/Ractis/img-14.jpg', alt='Car detail')
+              .block-tooltip.light
+                +tooltip('tooltip-perf-1','48.7','49.7')
+                +tooltip('tooltip-perf-2','79.2','43.1')
+                +tooltip('tooltip-perf-3','88.7','67.8')
+            .block-description
+              .editor-content
+                p !{ractisEngText.carDetail.tooltipLandingPerformance.description}
+            .block-popup
+              .tooltip-navigation
+                .container
+                  span.prev &nbsp;
+                  .editor-content.tooltip-title-container &nbsp;
+                  span.next &nbsp;
+                .close-btn
+                  a(href='#', title='close') &nbsp;
+              // Tooltip detail item
+              #tooltip-perf-1.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{ractisEngText.carDetail.tooltipLandingPerformance.tooltips[0]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Ractis/03_Performance_01.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-perf-2.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{ractisEngText.carDetail.tooltipLandingPerformance.tooltips[1]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Ractis/03_Performance_02.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-perf-3.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{ractisEngText.carDetail.tooltipLandingPerformance.tooltips[2]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Ractis/03_Performance_03.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+        //- #tab-4
+        //-   .section-car-detail-content-performance.car-section-content.tab-content-car-carousel
+        //-     // Image with carousel
+        //-     .owl-carousel-car-view
+        //-       .item.image-center
+        //-         img(src='images/Cars/Ractis/04_Safety_01.jpg', alt='PERFORMANCE 1')
+        //-       .item.image-center
+        //-         img(src='images/Cars/Ractis/04_Safety_en.jpg', alt='PERFORMANCE 2')
+                  
+        //-     .owl-carousel-car-view-nav
+        //-       .container
+        //-         .nav-5
+        //-           a.prev(href="#") &nbsp;
+        //-           .editor-content.tooltip-title-container
+        //-             p !{ractisEngText.carDetail.tooltipLandingSafety.tooltips[0]}
+        //-             p &nbsp;
+        //-           a.next(href="#") &nbsp; 
+        #tab-4
+          .section-car-detail-content-performance.car-section-content.tab-content-car-carousel
+            // Image with carousel
+            .block-img.image-center
+              img(src='images/Cars/Ractis/04_Safety_01.jpg', alt='Car detail')
+            .block-description
+              .editor-content
+                p !{ractisEngText.carDetail.tooltipLandingSafety.tooltips[0]}
+            .block-popup &nbsp;
+
+    //- change-color-car
+    .section.section-change-color-car
+      .section-change-color-car-content
+        .container
+          .block-lists-car(style="background-image: url(images/Cars/Ractis/00_shadow.png)")
+            img.img-create-height.hide(src='images/Cars/Ractis/06_LightBlueMicaMetcallic.png', alt='')
+
+            .car.light-blue.active
+              img(src='images/Cars/Ractis/06_LightBlueMicaMetcallic.png', alt='Car 1')
+            .car.silver
+              img(src='images/Cars/Ractis/01_Sliver.png', alt='Car 1')
+            .car.white-perarlcs
+              img(src='images/Cars/Ractis/02_WhitePearlCS.png', alt='Car 1')
+            .car.gery-metallic
+              img(src='images/Cars/Ractis/03_GreyMetallic.png', alt='Car 1')
+            .car.black
+              img(src='images/Cars/Ractis/04_Black.png', alt='Car 1')
+            .car.bronze
+              img(src='images/Cars/Ractis/05_Bronze.png', alt='Car 1')
+            .car.deep-amethyst
+              img(src='images/Cars/Ractis/08_DeepAmethyst.png', alt='Car 1')
+            .car.satin-blue
+              img(src='images/Cars/Ractis/07_Satin Blue.png', alt='Car 1')
+
+            svg#mask-view(xmlns='http://www.w3.org/2000/svg', width='848px', height='371px', viewbox='0 0 848 371', xmlns:xlink='http://www.w3.org/1999/xlink')
+              defs
+                pattern#car-embed(patternunits='userSpaceOnUse', width='848', height='371')
+                  image#masked-image(xlink:href='images/Cars/Ractis/06_LightBlueMicaMetcallic.png', x='0', y='0', width='848', height='371')
+              circle#walt-embed(cx='50', cy='50', r='40', stroke='none', fill='url(#car-embed)') &nbsp;
+          
+          .block-desctiption
+            .editor-content
+              p !{ractisEngText.colors.description}
+          
+          .block-lists-color
+            .color-item(data-color='silver')
+              .icon.silver
+                img(src='images/Cars/Ractis/bg-color-car-1.png', alt='')
+              span !{ractisEngText.colors.colorNames[0]}
+            .color-item(data-color='white-perarlcs')
+              .icon.white-perarlcs
+                img(src='images/Cars/Ractis/bg-color-car-2.png', alt='')
+              span !{ractisEngText.colors.colorNames[1]}
+            .color-item(data-color='gery-metallic')
+              .icon.gery-metallic
+                img(src='images/Cars/Ractis/bg-color-car-3.png', alt='')
+              span !{ractisEngText.colors.colorNames[2]}
+            .color-item(data-color='black')
+              .icon.black
+                img(src='images/Cars/Ractis/bg-color-car-4.png', alt='')
+              span !{ractisEngText.colors.colorNames[3]}
+            .color-item(data-color='bronze')
+              .icon.bronze
+                img(src='images/Cars/Ractis/bg-color-car-5.png', alt='')
+              span !{ractisEngText.colors.colorNames[4]}
+            .color-item.active(data-color='light-blue')
+              .icon.light-blue
+                img(src='images/Cars/Ractis/bg-color-car-6.png', alt='')
+              span !{ractisEngText.colors.colorNames[5]}
+            .color-item(data-color='satin-blue')
+              .icon.satin-blue
+                img(src='images/Cars/Ractis/bg-color-car-7.png', alt='')
+              span !{ractisEngText.colors.colorNames[6]}
+            .color-item(data-color='deep-amethyst')
+              .icon.deep-amethyst
+                img(src='images/Cars/Ractis/bg-color-car-8.png', alt='')
+              span !{ractisEngText.colors.colorNames[7]}
+
+    //- components-car
+    .section.section-components-car
+      .section-components-car-content
+        .container
+          .row
+            //- .col-lg-4.col-md-6.col-sm-6.col-xs-12.second.col-lg-push-4
+            //-   .block-img
+            //-     img(src='images/Cars/Ractis/components-car-3.png', alt='Component 1')
+            //- .col-lg-4.col-md-6.col-sm-6.col-xs-12.col-lg-push-4
+            //-   .block-description
+            //-     .small-text Code
+            //-     .title-text 1NZ-FE
+            //-     .small-text Type
+            //-     .title-text L4 DOHC 16-valve VVT-i Engine with Smart Stop System
+            //-     .small-text Displacement
+            //-     .title-text 1,497cc
+            //-     .small-text Max. Output
+            //-     .title-text 80 (109) / 6,000 KW (PS) / rpm
+            //-     .small-text Max. Torque
+            //-     .title-text 136 (13.8) / 4,800 Nm (kg-m) / rpm
+            //- .col-lg-4.col-md-12.col-sm-12.col-xs-12.first.col-lg-pull-8
+            //-   .block-component.first
+            //-     .block-img
+            //-       img(src='images/Cars/Ractis/components-car-1.png', alt='Component 1')
+            //-     .block-title 16-inch Alloy wheels
+            //-   .block-component
+            //-     .block-img
+            //-       img(src='images/Cars/Ractis/components-car-2.png', alt='Component 1')
+            //-     .block-title Smart entry & push start system
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12
+              .block-downlink
+                a(href='#', title='Download e-Catalogue')
+                  i.fa.fa-download  
+                  span Download e-Catalogue
+                img(src='images/Cars/Ractis/cat-small.png', alt='Download')
+                a(href='#', title='Download Specification Sheet')
+                  i.fa.fa-download  
+                  span Download Specification Sheet
+    
+    //- interest
+    .section.section-interest
+      +interest('YOU MAY ALSO HAVE INTEREST')

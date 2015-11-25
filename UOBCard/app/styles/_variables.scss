@@ -1,0 +1,20 @@
+// Color
+$main-text-color: #7D7D7D;
+$main-title-color: #212121;
+$red : #EC182B;
+$grey: #E6E6E6;
+$light-grey: #FAFAFA;
+$dark-grey: #4A4A4A;
+$blue: #003E7D;
+$btn-blue: #0c3577;
+
+// Media query
+$old-iphone-mobile: "only screen and (min-width: 320px)and (max-width : 320px)";
+$special-mobile: "only screen and (min-width: 435px)and (max-width : 480px)";
+$small-mobile: "only screen and (max-width : 480px)";
+$mobile: "only screen and (max-width : 767px)";
+$tablet: "only screen and (min-width: 768px) and (max-width : 1023px)";
+$both: "only screen and (max-width : 1023px)";
+$tablet-desktop: "only screen and (min-width: 768px)";
+$desktop: "only screen and (min-width : 1024px)";
+$small-desktop: "only screen and (min-width: 992px)";

@@ -1,0 +1,159 @@
+header#header
+  .header-top
+    .container
+      .block-language-search
+        .select-lang
+          select.selectpicker
+            option(value="") Language
+            option(value="ENG") ENG
+            option(value="ENG 2") ENG 1
+
+        .block-search-form 
+          form(action="#{search}").form-search
+            .search-tooltip-wrapper
+              .searchBox
+                button.searchButton.btn.btn-default(type='submit', name='search', value='Search') &nbsp;
+                input.searchTextbox.form-control(name='search', type='text', maxlength='1000', placeholder="Search" , value="Search")
+                //- .predictiveSearchHolder 
+                //- span.hide.search-keyword-placeholder Keyword
+
+  .container
+    .header 
+      .logo.pull-left
+        +link-img("images/logo.png", "Far East", "#")
+      .block-navbar.pull-right
+        // Static navbar
+        nav.navbar.navbar-default
+          .container-fluid
+            .navbar-header
+              button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            #navbar.navbar-collapse.collapse
+              ul.nav.navbar-nav.navbar-right
+                li.home-link
+                  .hidden-sm.hidden-xs
+                    +link-img("images/icon-home.png", "Home", homepage)
+                    +link-img("images/icon-home-active.png", "Home", homepage).active
+                  .visible-sm.visible-xs
+                    a(href='#{homepage}') Home
+                li.residential-link
+                  a(href="#{residential}", alt="Residential")
+                    | Residential Property
+                    span.caret
+                  .dropdown-menu
+                    .row                      
+                      .col-md-3.col-cus-left
+                        // required for floating
+                        // Nav tabs
+                        ul.nav.nav-tabs.tabs-left
+                          li
+                            a(href='#tab-1', data-toggle='tab') Guide to Buying & Renting
+                          li.active
+                            a(href='#tab-2', data-toggle='tab') Find Properties
+                          li
+                            a(href='#tab-3', data-toggle='tab') The Far East Difference
+                          li
+                            a(href='#tab-4', data-toggle='tab') Get Assistance
+                      .col-md-9.col-cus-right
+                        // Tab panes
+                        .tab-content
+                          #tab-1.tab-pane
+                            .row
+                              .col-md-12
+                                | Guide to Buying & Renting
+                          #tab-2.tab-pane.active 
+                            .row
+                              .col-md-4
+                                .title-menu Popular Categories
+                                ul 
+                                  li
+                                    a(href='#') Upcoming Launches
+                                  li
+                                    a(href='#') Completed Projects
+                                  li
+                                    a(href='#') Freehold Properties
+                                  li
+                                    a(href='#') Ultra Luxury Properties
+                              .col-md-8
+                                form(action="#{search}")
+                                  .block-search
+                                    .title-menu Property Search 
+                                    .content.row
+                                      .col-md-4
+                                        .check
+                                          input(type='radio', name="type_buy", checked)
+                                          label Buy
+                                        .check
+                                          input(type='radio', name="type_buy")
+                                          label Rent
+                                      .form-group.col-md-8
+                                        input.form-control(type='input', name="")
+                                  .block-type
+                                    .title-menu Property Types 
+                                    .content
+                                      .check
+                                        input(type='checkbox', checked)
+                                        label All Property Types
+                                      .check
+                                        input(type='checkbox')
+                                        label Condo & Apartments 
+                                      .check
+                                        input(type='checkbox')
+                                        label HDB
+                                      .check
+                                        input(type='checkbox')
+                                        label Landed Property
+                                      .check
+                                        input(type='checkbox')
+                                        label New Homes
+                                      .check
+                                        input(type='checkbox')
+                                        label Others
+                                  .block-location
+                                    .title-menu Location 
+                                    .content
+                                      .check
+                                        input(type='checkbox', checked)
+                                        label All
+                                      .check
+                                        input(type='checkbox')
+                                        label North
+                                      .check
+                                        input(type='checkbox')
+                                        label South
+                                      .check
+                                        input(type='checkbox')
+                                        label East
+                                      .check
+                                        input(type='checkbox')
+                                        label West
+                                  .block-price
+                                    .title-menu Price
+                                    .content
+                                      .ranger-slider
+                                        input.price-ranger(data-hide-from-to='false')
+                                        .ranger-view(data-ranger=".price-ranger")
+
+                                  .block-submit
+                                    button.btn.btn-default(type='submit') 
+                                      | Search
+                                      i.fa.fa-angle-right
+                          #tab-3.tab-pane 
+                            .row
+                              .col-md-12
+                                | The Far East Difference
+                          #tab-4.tab-pane 
+                            .row
+                              .col-md-12
+                                | Get Assistance
+                      
+
+                li.commercial-link
+                  +link('Commercial Property' , '#')
+                li.apartments-link
+                  +link('Hotels & Service Apartments' , '#')
+                li.retail-link
+                  +link('Retail, Food & Beverages' , retail)

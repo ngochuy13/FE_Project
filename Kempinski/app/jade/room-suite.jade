@@ -1,0 +1,68 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Room & Suite'
+  -bodyClass = ''
+  -bannerIMG = 'rooms-suites/banner.jpg'
+  -page = 'room-suite'
+
+block breadcrumb  
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#" 
+      },{
+        "text": "MIDDLE EAST",
+        "href":"#"
+      },{
+        "text": "EMIRATES PALACE",
+        "href":"#"
+      },{
+        "text": "ROOMS & SUITES",
+        "href":"#"
+      }])
+
+block container    
+  .inner
+    main#main
+      section.section-room-suite.grand-room-name
+        +page-title("LUXURY ROOMS", " ignite a sense of balance", "ULTIMATE RELAXATION").gray
+
+      section.experience-gallery-section.venues-7000-sqm-section.wow.fadeIn(data-wow-duration="0.5s" data-wow-delay="0.5s")
+        include includes/room-suite-items 
+      .section-article-blog.section-service
+        +section-title("A PALACE JUST FOR YOU", "Word Class Luxury", "YOUR DESIRES SERVED").gray
+        .section-article-blog__content.wow.fadeIn(data-wow-duration="0.5s")
+          +filter-select-sync([
+            {
+              "text": "KHALEEJ SUITE"
+            },
+            {
+              "text": "ROYAL SUITE"
+            },
+            {
+              "text": "PALACE SUITE"
+            },
+            {
+              "text": "CORAL ROOM"
+            },{
+              "text": "KHALEEJ SUITE 1"
+            },
+            {
+              "text": "ROYAL SUITE 1"
+            },
+            {
+              "text": "PALACE SUITE 1"
+            },
+            {
+              "text": "CORAL ROOM 1"
+            }
+          ])(data-sync=".owl-sync-content .service-slide")
+          .owl-sync-content.service-slide-wrap.section-article-blog
+            .container
+              .service-slide.owl-carousel              
+                +service-item('rooms-suites/service-1.jpg', 'KHALEEJ SUITE', '<p>Your stay in the Emirates Palace Suite will transport you to your own private world of opulence and grandeur when you choose a Khaleej Suite. This experience will be the benchmark by which you measure your every hotel experience...</p>')(data-index='1')
+                +service-item('rooms-suites/service-2.jpg', 'KHALEEJ DELUXE SUITE', '<p>Your Khaleej Deluxe Suite will take your breath away with its spectacular 180-degree scenic view of the Arabian Gulf and its turquoise blue waters. The stunning vista and the pure lavishness of your Emirates Palace Suite surroundings will have you coming back for years to come.</p>')(data-index='2')
+                +service-item('rooms-suites/service-3.jpg', 'ROYAL KHALEEJ SUITE', '<p>As with every guest in an Emirates Palace suite, you are our VIP, and the Royal Khaleej Suite will remind you of this every day. A passion for detail in architecture and design not only provides the foundation of the Emirates Palace but is the basis for every experience created and memory made here...</p>')(data-index='3')
+                +service-item('rooms-suites/service-1.jpg', 'DIAMOND ROOM', '<p>Your stay in the Emirates Palace Suite will transport you to your own private world of opulence and grandeur when you choose a Khaleej Suite. This experience will be the benchmark by which you measure your every hotel experience...</p>')(data-index='4')

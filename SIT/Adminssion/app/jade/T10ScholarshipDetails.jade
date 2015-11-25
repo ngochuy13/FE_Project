@@ -1,0 +1,130 @@
+extends layouts/template
+
+block vars
+  -title = 'T10 Scholarship Details'
+  -bodyClass = 'grey-last-block'
+
+block container
+  +skewed-header("images/banner/scholarship-details-banner.png","images/banner/scholarship-details-banner-sm.png",'SIT Scholarship','HOME','FINACIAL','LOANS')
+  section.page-intro
+    .page-intro_before
+      span
+    .container
+      .row
+        .col-md-12
+          .page-intro-block
+            .intro-header
+              h2 INTRODUCTION
+            .intro-subtitle
+              h3 Invest in your future
+            .intro-desc
+              p SIT administers a variety 
+                a(href="#") of 
+              | loan schemes to assist students with the payment of tuition fees and other education expenses such as the Overseas Immersion Programme. Undergraduate students may choose to utilise any of the following loan schemes available for AY2015/16.
+    .page-intro_after
+      span
+  section.page-main-body.has-bg(style="background-image: url('images/scholarshipdetail-bg.jpg');")
+    .container
+      .row
+        .col-md-12
+          .body-title
+            .symbol-img
+              img(src="images/scholarship-hat.png", alt="symbol")
+            .body-name
+              h2 WHO IS IT FOR 
+      .row
+        .col-md-4
+          .diamond-block
+            .diamond-img
+              img(src="images/diamond-icon/diamond-book.png", alt="diamond")
+            .diamond-desc
+              .title CREAM OF THE CROP
+              .text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam impedit ab hic! 
+        .col-md-4
+          .diamond-block
+            .diamond-img
+              img(src="images/diamond-icon/diamond-award.png", alt="diamond")
+            .diamond-desc
+              .title OUTSTANDING ACHIEVERS
+              .text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi saepe ad labore.  
+        .col-md-4
+          .diamond-block
+            .diamond-img
+              img(src="images/diamond-icon/diamond-fire.png", alt="diamond")
+            .diamond-desc 
+              .title DRIVEN BY PASSION
+              .text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam sequi eum, impedit.
+  section.page-main-body.red-theme
+    .container
+      .row
+        .col-md-12
+          h3 ELIGIBILITY CRITERIA
+        .col-md-12
+          .criteria-box
+            .row
+              .col-md-6
+                a(href="#").criteria Singapore Citizen/ Singapore Permanent Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad vel earum doloremque, ex quam a cupiditate officia, soluta perspiciatis consequuntur, aut officiis iusto sint consequatur ipsum quis in, vero laudantium!
+              .col-md-6  
+                a(href="#").criteria Singapore Citizen/ Singapore Permanent Resiedents only
+              .col-md-6
+                a(href="#").criteria Singapore Citizen/ Singapore Permanent Resiedents only
+              .col-md-6  
+                a(href="#").criteria Singapore Citizen/ Singapore Permanent Resiedents only 
+    .page-main_after
+      span
+  section.course-detail-testimonial(style="background-image: url('images/course-details/testimonial-bg.png')")
+      .container
+        .row
+          .testimonial-carousel.owl-carousel
+            .testimonial-carousel-item
+              .text-block
+                h2.text-center WHAT OUR GRADUATES SAY
+                .text-block-desc.text-center
+                  p  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis fugit accusantium porro maxime, soluta voluptatem sequi autem explicabo provident a, eum esse dolorem consequuntur fugiat inventore debitis libero qui, unde!"
+              .author-block.text-center
+                span.author-avatar
+                  span.bg
+                  img(src="images/demo-img/author-demo1.png", alt="author")
+                span.author-name Shirley Lam
+            .testimonial-carousel-item
+              .text-block
+                h2.text-center WHAT OUR GRADUATES SAY
+                .text-block-desc.text-center.text-italic
+                  p  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis fugit accusantium porro maxime, soluta voluptatem sequi autem explicabo provident a, eum esse dolorem consequuntur fugiat inventore debitis libero qui, unde!"
+              .author-block.text-center
+                span.author-avatar
+                  span.bg
+                  img(src="images/demo-img/author-demo1.png", alt="author")
+                span.author-name Shirley Lam
+            .testimonial-carousel-item
+              .text-block
+                h2.text-center WHAT OUR GRADUATES SAY
+                .text-block-desc.text-center.text-italic
+                  p  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis fugit accusantium porro maxime, soluta voluptatem sequi autem explicabo provident a, eum esse dolorem consequuntur fugiat inventore debitis libero qui, unde!"
+              .author-block.text-center
+                span.author-avatar
+                  span.bg
+                  img(src="images/demo-img/author-demo1.png", alt="author")
+                span.author-name Shirley Lam
+  section.page-main-body.grey-theme
+    .container
+      .row
+        .col-md-12
+          .body-title
+            .symbol-img
+              img(src="images/process-checker.png", alt="symbol")
+            .body-name
+              h2 APPLICATION PROCESS
+      .row.app-process-row
+        .col-md-12
+          .proccess-timeline.owl-carousel
+            .app-proccess-text
+              .period ADMISSIONS PERIOD
+              p Ensure you meet the eligiility criteria
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, quasi non repellat.                    
+            .app-proccess-text
+              .period APRIL TO MAY
+              p Lorem ipsum dolor. ipsum dolor sit amet, consectetur adipisicing elit. Eos, quasi non repellat.                     
+            .app-proccess-text
+              .period LATE MAY
+              p Final outcome of scholarships

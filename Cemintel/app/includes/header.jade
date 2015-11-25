@@ -1,0 +1,187 @@
+header
+	.container
+		.row
+			.col-md-3.col-sm-3.col-xs-3.cemintel-logo
+				a(href="/index.html").logo
+					img(src="images/logo.png", alt="")
+			.col-md-9.col-sm-9.pull-right.pss.hidden-xs.top-navigation
+				.icons
+					.search-icon
+					.fav-icon(target="#fav-popup").toggleClick
+					.fav-popup#fav-popup.hidden-xs
+						.button.rainbow.w100p.cud.tal.not-hover
+							.bgw
+								.box
+									.p.bold.dib
+										p My Favourites 
+											span.p.xsmall (36 total)
+									a(href="#").button.rainbow.pull-right
+										.bgw View all
+									ul
+										li
+											a(href="#")
+												img(src="images/thum1.png")
+										li
+											a(href="#")
+												img(src="images/thum2.png")
+										li
+											a(href="#")
+												img(src="images/thum3.png")
+										li
+											a(href="#")
+												img(src="images/thum4.png")
+										li
+											a(href="#")
+												img(src="images/thum5.png")
+										li
+											a(href="#")
+												img(src="images/thum6.png")
+									a(target=".share-popup-block").p.small.share-favourites.fwn.toggleClick
+										.share-icon
+										span
+											| Share my Favourites
+										include share_popup.jade
+									a(href="#").p.small.located.fwn
+										.located-icon
+										span
+											| Locate the nearest dealer
+				.menu
+					ul
+						li 
+							a.button.rainbow.bottom(href="/product-list.html")
+								div.bgw products
+							.sub-menu
+								.container
+									.row
+										.col-md-6.col-sm-6.product-left
+											a(href="#").img
+												img(src="images/menu/img1.jpg")
+											a(href="#").h3.white designer Series™
+											.p.small.white.design-des  
+												p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dicta incidunt vitae delectus quam consequatur culpa, ut, libero vel rem numquam, quos reiciendis animi veniam quod quibusdam, eum veritatis nostrum.
+											a.button.solid-btn Explore Designer Series™ 
+										.col-md-6.col-sm-6.product-right
+											.row
+												.col-md-6.col-sm-6.product-right-item
+													a(href="#").white
+														.img
+															img(src="images/menu/img2.jpg")
+														h4 facades
+												.col-md-6.col-sm-6.product-right-item
+													a(href="#").white
+														.img
+															img(src="images/menu/img3.jpg")
+														h4 ceiling
+												.col-md-6.col-sm-6.product-right-item
+													a(href="#").white
+														.img
+															img(src="images/menu/img4.jpg")
+														h4 flooring
+												.col-md-6.col-sm-6.product-right-item
+													a(href="#").white
+														.img
+															img(src="images/menu/img5.jpg")
+														h4 walling
+						li.active
+							a.button.rainbow.bottom(href="/casestudy-list.html")
+								div.bgw case studies
+						li 
+							a.button.rainbow.bottom(href="#")
+								div.bgw resources
+							.sub-menu
+								.sub-menu-case-studies
+									.link-section
+										.p.small.white.tac.ttc
+											a(href="/installation-guide.html").db.white installation guides
+											a(href="#").db.white Other PDFs
+											a(href="#").db.white Videos
+									.login-section
+										//- toggle class logged for 2 state
+										form(action="").form-login#form-login
+											.p.small.white.tac
+												p Log in
+											input(type="email" placeholder="Email Address" required name="login_email").gl-input
+											input(type="password" placeholder="Password" required name="login_pass").gl-input
+											.p.xsmall.white.dib.links
+												a(href="#") Not a member? Sign up
+											button(type="submit").solid-btn.pull-right Submit
+											.p.xsmall.white.dib.links
+												a(href="#") I forgot my Password
+										.logout
+											h4.tac Welcome
+											.p.small.white.tac.ttc
+												p jonathan dominguez
+											.tac
+												button(type="submit").solid-btn Log out
+						li 
+							a.button.rainbow.bottom(href="#")
+								div.bgw contact
+							.sub-menu
+								.sub-menu-contact
+									.p.small.white.tac
+										a(href="/contact.html").white.db Contact Us
+										a(href="#").white.db Find a Professional
+						li 
+							a.button.rainbow.bottom(href="#")
+								div.bgw about us
+							.sub-menu
+								.sub-menu-about
+									ul.p.small.white.tac
+										li
+											a(href="/whoiscemintel.html").white.db Who is Cemintel
+										li
+											a(href="/our-offer.html").white.db Our Offer
+										li.active
+											a(href="/news.html").white.db News
+										li
+											a(href="#").white.db Warranty and Safety
+										li
+											a(href="#").white.db Design Links
+			.hidden-sm.hidden-md.hidden-lg.col-xs-6.mobile-navigation
+				.menu-mobile
+					.icons-m
+						.search-icon-m
+							.icon
+						.hbg-menu
+							.icon
+					ul.nav-bar
+						li
+							a(href="#") Products
+							.arrow
+							ul.sub-menu-m
+								li
+									a(href="#") Designer Series
+								li
+									a(href="#") Designer Series
+								li
+									a(href="#") Designer Series
+								li
+									a(href="#") Designer Series
+								li
+									a(href="#") Designer Series
+						li
+							a(href="#") Case Studies
+							.arrow
+							ul.sub-menu-m
+								li
+									a(href="#") Designer Series
+								li
+									a(href="#") Designer Series
+								li
+									a(href="#") Designer Series
+								li
+									a(href="#") Designer Series
+								li
+									a(href="#") Designer Series
+						li
+							a(href="#") Products
+							.arrow
+						li
+							a(href="#") Products
+							.arrow
+						li
+							a(href="#") Products
+							.arrow
+						li
+							a(href="#").fav-icon
+

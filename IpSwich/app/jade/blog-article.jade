@@ -1,0 +1,170 @@
+extends layouts/layout
+
+block vars
+  -title = 'Ipswich Article'
+  -bodyClass = 'article'
+
+block pagescript
+  
+
+block container
+  .inner
+    main#main(style="min-height: 800px")
+      section
+        .story-intro.orange.text-center(style="background-image: url(images/blog-article-story.jpg)")
+          .story
+            .container
+              .row
+                .col-xs-12
+                  .title Things to do in & around Ipswich
+                  .separator 
+                  .description Subtitle lorem ipusm dolor et vitae
+      section.detail-content
+        .container
+          .row
+            .article-content.text-editor.col-xs-12.col-md-9
+              .text-content
+                .article-caption
+                  p Uciet quassum idignita etur? Tae con rem veliquae estio. Et asit es dus dolenis rem. Natesse accus volupidusam alit velicae laccaborum quis eribus niandit vent.
+                p Feris in re con ped magnim quos as modio et, te consero cones sinvere sseque volume verumqu aerovitiat quo blam atum faceperiosto te evendis esti audantis exceptation niscid minci bea quiberore, consequae. Itatqui conseque nime porporumquae imi, ipsame laceper untorem estenim ilibus qui bearibusam, sita prempor ibusda vellentium quid et rem id qui officiis derem sequam si temodita quas etur, si rectore catur? Evellabores nusant quo te pro optur sim reprectium rae velent ommo iunt moluptat ex eri autatia velique ma esector sed es aliquuntium sam, ut volupta turitassin consendiat la quas a seniend iaecull orenis consendest, nimenis et volum eum etur maionet aut hilluptis aut adionsequiam idundant voluptur, simusandanto est, nonsequam voluptur?
+                .text-center
+                  .separator
+                p 
+                  i Nequi sequisqui apicte corporum que ma pro coria init officatur, veri nis maxim nobitin ciisimin commodisti nietum quibere aspe laut autem rerio magnatis et archillabo. Saperit aliquis quis cumet parum re conectem et plaborp ossequis aut maximol uptatus audisqui quam aris porem vendam ad enis acersperunfaccus as et maximinveles inctati vent pro corem reic tem. Nam, sequam quaspedi reptis autat.
+                .text-center
+                  .separator
+                p Rum quiderae prore velitam deritiae nem quisimintur ad utem. Et quate volupta tiorectium volorendi nis veribuscium quam dollacc aborit andempo rature plabore quid essit, optae con rerferio ero tem laccae simaximus.
+                p Um apictotaturi temodis reicidentio. Perci ius quam hilit vit voluptatur sit es alias quo verrum laccum repudamus, qui ommodi venimol orporrovitia demperes es ipsam qui duciti adipsandus et alit, ut ut a nossunt. Um sam laborporem rectis volest, occus et porehento bero testiis nonsedios eliaepra sequas sant.
+                p Adi nestiumqui nones voloribusa velitatem quisimos dellaut volorit eos cuptisi utectem poribus ciaspieni consed quaerumquo dignam ad qui rerro doluptat dolo odio et ra voloriae. Acestio. Et lacepernam que nobis estrum ent.
+                p Icidunt, ipsam, sam as ab ilique sequat.
+                p Occullo voluptatur, serum quo maiorporia none pro qui asperem velesequatem aut est, et aspidebist eumquatium ea cum quia de deliqui derum haritibus volorpos secaten isciet vendistioria quidemque nim laborum ut reheniam aut poriatem non prae acesedia voluptaqui berferis rem quae nonsed est est lia ab id molorro moluptatur aliqui beat ut et venis volo earumqu undae. Ati nos ni ut veliquiatio et quos simet la quunturitia non et quid et vent eiusant ioneste enda qui ullaciati ut aut evelendam adi vererum eos deni di alibusdae nessimp oremporpor aut ea 
+              .slide-content
+                #slider.flexslider
+                  ul.slides
+                    li(data-thumb="images/slide_1.jpg")
+                      img(src='images/slide_1.jpg')
+                    li(data-thumb="images/slide_2.jpg")
+                      img(src='images/slide_2.jpg')
+                    li(data-thumb="images/slide_3.jpg")
+                      img(src='images/slide_3.jpg')
+                    li(data-thumb="images/slide_1.jpg")
+                      img(src='images/slide_1.jpg')
+                #carousel.flexslider.thumb
+                  ul.slides
+                    li(data-thumb="images/slide_1.jpg")
+                      img(src='images/slide_1.jpg')
+                    li(data-thumb="images/slide_2.jpg")
+                      img(src='images/slide_2.jpg')
+                    li(data-thumb="images/slide_3.jpg")
+                      img(src='images/slide_3.jpg')
+                    li(data-thumb="images/slide_1.jpg")
+                      img(src='images/slide_1.jpg')
+              .text-content
+                p Ve con ped magnim quos as modio et, te consero cones sinvere sseque volume verumqu aerovitiat quo blam atum faceperiosto te evendis esti audantis exceptation niscid minci bea quiberore, consequae. Itatqui conseque nime porporumquae imi, ipsame laceper untorem estenim ilibus qui bearibusam, sita prempor ibusda vellentium quid et rem id qui officiis derem sequam si temodita quas etur, si rectore catur? Evellabores nusant quo te pro optur sim reprectium rae velent ommo iunt moluptat ex eri autatia velique ma esector sed es aliquuntium sam, ut volupta turitassin consendiat la quas a seniend iaecull orenis consendest, nimenis et volum eum etur maionet aut hilluptis aut adionsequiam idundant voluptur, simusandanto est, nonsequam voluptur?
+                p Adi nestiumqui nones voloribusa velitatem quisimos dellaut volorit eos cuptisi utectem poribus ciaspieni consed quaerumquo dignam ad qui rerro doluptat dolo odio et ra voloriae. Acestio. Et lacepernam que nobis estrum ent.
+                p Icidunt, ipsam, sam as ab ilique sequat.
+                p Occullo voluptatur, serum quo maiorporia none pro qui asperem velesequatem aut est, et aspidebist eumquatium ea cum quia de deliqui derum haritibus volorpos secaten isciet vendistioria quidemque nim laborum ut reheniam aut poriatem non prae acesedia voluptaqui berferis rem quae nonsed est est lia ab id molorro moluptatur aliqui beat ut et venis volo earumqu undae. Ati nos ni ut veliquiatio et quos simet la quunturitia non et quid et vent eiusant ioneste enda qui ullaciati ut aut evelendam adi vererum eos deni di alibusdae nessimp oremporpor aut ea.
+
+                .blog-comment
+                  .comment-label Comments
+                  .comment.row
+                    .col-xs-3.col-sm-2
+                      .avatar
+                        img(src="images/avatar3.jpg")
+                    .col-xs-8.col-sm-10
+                      .comment-info
+                        .author JOHN DOE
+                        .date 
+                          span.fa.fa-calendar
+                          | 2 hours ago
+                      .content-content While Cameron has had a great night, I suspect his problems in some way have only just begun.
+                  .comment.row
+                    .col-xs-3.col-sm-2
+                      .avatar
+                        img(src="images/avatar4.jpg")
+                    .col-xs-8.col-sm-10
+                      .comment-info
+                        .author ALLON POE
+                        .date 
+                          span.fa.fa-calendar
+                          | 6 hours ago
+                      .content-content The debate over EU membership is likely to come up pretty quickly and could prove a significant distraction for business and government.
+
+                  .comment.row
+                    .col-xs-3.col-sm-2
+                      .avatar
+                        img(src="images/avatar5.jpg")
+                    .col-xs-8.col-sm-10
+                      textarea.your-comment( placeholder="Your comment...  ")
+            .side-bar.col-xs-12.col-md-3
+              .category-block
+                .title CATEGORIES
+                .separator
+                ul
+                  li
+                    a(href="#") CATEGORIES LOREM IPSUM
+                  li
+                    a(href="#") CATEGORIES LOREM
+                  li
+                    a(href="#") CATEGORIES LOREM IPSUM ET VITAGE
+                  li
+                    a(href="#") CATEGORIES LOREM
+                  li
+                    a(href="#") CATEGORIES LOREM IPSUMET VITAGE
+                  li
+                    a(href="#") CATEGORIES LOREM IPSUM
+                  li
+                    a(href="#") CATEGORIES LOREM VITAGE
+              .tag-block.text-center
+                .title TAGS
+                .separator
+                ul
+                  li
+                    a(href="") MARKETS
+                  li
+                    a(href="") EVENTS
+                  li
+                    a(href="") SPORT
+                  li
+                    a(href="") ANNUAL EVENTS
+                  li
+                    a(href="") CULTURE
+                  li
+                    a(href="") TOURISM
+                  li
+                    a(href="") MARKETS
+                  li
+                    a(href="") EVENTS
+                  li
+                    a(href="") SPORT
+                  li
+                    a(href="") ANNUAL Events
+                  li
+                    a(href="") CULTURE
+                  li
+                    a(href="") TOURISM
+      section.blog-footer
+        .col-xs-12.col-md-4
+          .left.row
+            .story-intro.orange.text-center(style="background-image: url(images/footer_blog_1.jpg)")
+              .story
+                .col-xs-12
+                  .title Lorem Ipsum  Dolor
+                  .separator 
+                  .description Lorem Ipsum dolor et vitae un <br/>priviso dor lorem ipsum
+        .col-xs-12.col-md-4
+          .middle.row
+            .story-intro.orange.text-center(style="background-image: url(images/footer_blog_2.jpg)")
+              .story
+                .col-xs-12
+                  .title Lorem Ipsum  Dolor Et Vitae
+                  .separator 
+                  .description Lorem Ipsum dolor et vitae un <br/>priviso dor lorem ipsum
+        .col-xs-12.col-md-4
+          .right.row
+            .story-intro.orange.text-center(style="background-image: url(images/footer_blog_3.jpg)")
+              .story
+                .col-xs-12
+                  .title Lorem Ipsum  Dolor
+                  .separator 
+                  .description Lorem Ipsum dolor et vitae un <br/>priviso dor lorem ipsum

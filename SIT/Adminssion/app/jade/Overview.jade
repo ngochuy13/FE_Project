@@ -1,0 +1,86 @@
+extends layouts/template
+
+block vars
+  -title = 'T5 Loans'
+  -bodyClass = ''
+
+block container
+  +skewed-header("images/banner/banner-loans.png","images/banner/banner-loans-sm.png",'Overview','Loans','ACADEMICS','OVERSEAS IMMERSION PROGRAMME')
+  section.page-intro
+    .page-intro_before
+      span
+    .container
+      .row
+        .col-md-12
+          .page-intro-block
+            .intro-header
+              h2 MAKING EDUCATION AFFORDABLE
+            .intro-subtitle
+              h3 Invest in your future
+            .intro-desc
+              p SIT administers a variety of loan schemes to assist students with the payment of tuition fees and other education expenses such as the Overseas Immersion Programme. Undergraduate students may choose to utilise any of the following loan schemes available for AY2015/16. 
+    .page-intro_after
+      span
+  section.page-main-body
+    .container
+      .row
+        .col-md-12
+          .body-title
+            .symbol-img
+              img(src="images/loans-icon.png", alt="symbol")
+            .body-name
+              h2 LOANS AVAILABLE
+            .body-subtitle
+              h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis.
+        .col-md-10.col-md-offset-1
+          .loans-table
+            table
+              thead
+                tr
+                  th(width="30.8%") 
+                    div SCHEMES
+                  th(width="20.5%") 
+                    div CITIZENSHIP
+                  th(width="48.7%") 
+                    div HELPS TO COVER
+              tbody
+                tr
+                  th 
+                    a(href="#") Tuition Fee Loan
+                  th 
+                    div SC/SPR/IS
+                      span.asterisk *
+                  th 
+                    div Lorem ipsum dolor sit amet. ipsum dolor. ipsum dolor sit amet, consectetur adipisicing.
+                tr
+                  th 
+                    a(href="#") SIT Study Loan
+                  th 
+                    div Duration1
+                      span.asterisk *
+                  th 
+                    div 10% of subsidised tuition fees payable by SCs; Living allowance of S$3,600 per academic year
+                tr
+                  th 
+                    a(href="#") CPF Education Scheme
+                  th 
+                    div Duration1
+                      span.asterisk *
+                  th 
+                    div Price1
+                tr
+                  th 
+                    a(href="#") Overseas Student Programme Loan
+                  th 
+                    div Duration1
+                  th 
+                    div Price1
+        .col-md-10.col-md-offset-1
+          .note
+            span.bold Note:
+            br
+            span.asterisk * 
+            p Costs are estimates and are dependent on prevailing currency exchange rates and flight ticket prices.
+            br
+            span.asterisk **
+            p Costs are estimates and are dependent on prevailing currency exchange rates and flight ticket prices.

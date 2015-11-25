@@ -1,0 +1,38 @@
+extends layouts/template
+
+block vars
+  -title = 'T9 Campus'
+  -bodyClass = 'node-type-t9-template'
+block container
+  +skewed-header("images/banner/Campus-banner.png","images/banner/Campus-banner-sm.png",'Campus Locations','home','Contact us')
+  section.page-intro
+    .page-intro_before
+      span
+    .container
+      .row
+        .col-md-12
+          .page-intro-block
+            .intro-header
+              h2 OUR CAMPUSES
+            .intro-subtitle
+              h3 Lorem Ipsum Dolor Sit Amet
+            .intro-desc
+              p An SIT building will be constructed within the grounds of the each of the five Polytechnics. This model allows close proximity to our polytechnic partners will allow greater synergy and efficiency by giving SIT students greater access to existing resources within each Polytechnic.
+    .page-intro_after
+      span
+
+  section.page-main-body
+    .container
+      .row
+        .col-md-4.col-sm-6
+          +T6campus-card('images/campus-img/campus1.jpg','SIT@DOVER',"10 Dover Drive,","Singapore 138683")
+        .col-md-4.col-sm-6
+          +T6campus-card('images/campus-img/campus2.jpg',"SIT@SP BUILDING","Singapore Polytechnic","510 Dover Road, Singapore 139660")
+        .col-md-4.col-sm-6
+          +T6campus-card('images/campus-img/campus3.jpg',"SIT@NP BUILDING","Ngee Ann Polytechnic","537 Clementi Road, Singapore 599493")
+        .col-md-4.col-sm-6
+          +T6campus-card('images/campus-img/campus4.jpg','SIT@TP BUILDING',"Temasek Polytechnic","Blk 29B Tampines Ave 1, #05-01, Singapore 528694")
+        .col-md-4.col-sm-6
+          +T6campus-card('images/campus-img/campus6.jpg','SIT@NYP BUILDING',"Nanyang Polytechnic","172A Ang Mo Kio Ave 8, Singapore 567739 (beside Blk Q of NYP campus)")
+        .col-md-4.col-sm-6
+          +T6campus-card('images/campus-img/campus5.jpg','SIT@RP BUILDING',"Republic Polytechnic","43 Woodlands Avenue 9, Singapore 737729")

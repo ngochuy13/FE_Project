@@ -1,0 +1,93 @@
+extends layouts/book-template
+
+block vars
+  -title = 'Booking Step'
+  -bodyClass = 'booking-step'
+  -bannerIMG = ''
+  -page = 'booking-step-1'
+block container  
+  .inner
+    main#main(style="min-height: 800px;")
+      .section-tab
+        +filter-select([
+          {
+            "text": "YOU BOOKING"
+          },
+          {
+            "text": "GUEST DETAILS"
+          },
+          {
+            "text": "CONFIRAMATION"
+          }
+        ])
+        
+      .section-special-offers.section-block
+        .page-title.section-title.text-center
+          .container
+            h1.block-title.wow.fadeInUp(data-wow-duration="1s") MY RESERVATION
+            .sub-title.style-2.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.05s")
+              span
+                span.line-before
+                span.text Choose your room
+                span.line-after
+      .section-booking-content
+        .container
+          .row
+            .col-xs-12.col-sm-12.col-md-9.booking-results
+              .content-step-0
+                .big.big-booking-date-range-picker-container(data-target-input-1="#start-date" data-target-input-2="#end-date")
+                  input#start-date(type="hidden" data-format="DD-MM-YYYY")
+                  input#end-date(type="hidden" data-format="DD-MM-YYYY")
+                .submission.text-center
+                  button(type="submit" form="form" value="NEXT STEP").btn.btn-default.btn-lg
+                    | NEXT STEP
+                    span.arrow-white
+            .col-xs-12.col-sm-12.col-md-3
+              .col-services-info
+                .block-services-short
+                  .row
+                    .services-item
+                      .col-xs-2.text-center.icon
+                        span.fa.fa-wifi
+                      .col-xs-10
+                        span Free Wifi
+                    .services-item
+                      .col-xs-2.text-center.icon
+                        span.fa.fa-check
+                      .col-xs-10
+                        span Best Rates Guaranteed
+                    .services-item
+                      .col-xs-2.text-center.icon
+                        span.fa.fa-user
+                      .col-xs-10
+                        span Customised assistance
+                .row
+                  .col-xs-12.col-sm-6.col-md-12
+                    .block-media.full
+                      .media-wrap
+                        +img('media' , 'booking-step/img-1.jpg')
+                  .col-xs-12.col-sm-6.col-md-12
+                    .block-description
+                      .title GOING BEYOND
+                      .editor-content
+                        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad totam atque sint eius tempora, perferendis.
+                      .information
+                        .address
+                          span.fa.fa-map-marker
+                          span West Corniche Road, P.O.Box - 39999, Abu Dhabi
+                        .phone
+                          span.fa.fa-phone
+                          a(href="tel:://971-2-690-9000" title="+971 2 690 9000") +971 2 690 9000
+                      .cta-btns.wide
+                        a(href="#", title="Book Now").btn.btn-default-outline FURTHER INFORMATION
+                .block-policy
+                  p 
+                    a(href="#", title="Guarantee Policy") Guarantee Policy
+                  p Guarantee is mandatory to reserve the room.
+                  p &nbsp;
+                  p 
+                    a(href="#", title="Terms & Conditions") Terms & Conditions
+                  p 
+                    a(href="#", title="Privacy Policy") Privacy Policy
+                  p 
+                    a(href="#", title="Children Policy") Children Policy

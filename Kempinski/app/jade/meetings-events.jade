@@ -1,0 +1,67 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Meetings Events'
+  -bodyClass = ''
+  -bannerIMG = 'meetings-events/banner-1.jpg'
+  -page = 'meetings-events'
+block pagescript
+
+block breadcrumb  
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#"
+      },{
+        "text": "MIDDLE EAST",
+        "href":"#"
+      },{
+        "text": "EMIRATES PALACE",
+        "href":"#"
+      },{
+        "text": "MEETINGS & EVENTS",
+        "href":"#"
+      }])
+      
+block container    
+  .inner
+    main#main
+      section.section-block.gray
+        +page-title("A WORLD CLASS VENUE BEYOND COMPARE", "primier meeting", "AWARD WINING VENUE").gray
+        .section-room-suites-item__content.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+          +room-suites-item('meetings-events/img-1.jpg', 'Events , conferemces meetings and sports', '<p>The premier meeting and conference destination in the city, Emirates Palace attracts business drivers and key decision makers from around the world to its beautiful front steps.</p><br/><p>A royal wedding, an auditorium hosting the world’s greatest orchestras, operas and 42 meeting and conference rooms, Emirates Palace offers a world class award winning venue and the most flexible and technologically advanced conference expertise. With such diverse venue options, the Palace plays host to a spectacular cultural calendar including the Abu Dhabi Summer Season, Abu Dhabi Film Festival and the best in world sports.</p><br/><p>A destination that caters to every need and desire, the Palace is where decisions are made. Download our incentive brochure.</p>', [])
+            +cta-btngroup('PLAN YOUR EVENT','#','ENQUIRIES','#').wide
+      
+      section.experience-gallery-section.venues-7000-sqm-section 
+        +section-title("VENUE 7,000 SQM", "Auditorium and Ballrooms", "OVER 40 MEETING ROOMS").gray
+        include includes/venues-7000-sqm
+
+      .section-article-blog
+        +section-title("WHY ABU DHABI", "Word Class Luxury", "DISTINGUISH YOUR EVENT").gray.article-blog__title 
+        .section-article-blog__content.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+          .container
+            .row
+              +article-blog-item('meetings-events/img-2.jpg', 'AT A GLANCE', 'Emirates Palace is located in the cosmopolitan ', '<p>City of Abu Dhabi, the capital and largest emirate in the United Arab Emirates. Strategically located along the landmark, eight-kilometre Corniche, guests have access to the main business areas, cultural and leisure attractions that Abu Dhabi has to offer.</p><br><p>The Emirate of Abu Dhabi has gained notoriety for its captivating cultural appeal and for being an architectural wonderland with some of the world’s most visually stunning buildings. With signature experiences like pearl diving, souk shopping and desert traditions that are a testament to its history, Abu Dhabi is a special place to behold.</p><br><p><strong>Highlights</strong><p><ul><li>Abu Dhabi Golf Club</li><li>Ferrari World</li><li>Heritage Village</li><li>Qasr Al Hosn</li><li>Sheikh Zayed Grand Mosque</li><li>Yas Marina Circuit</li><li>Zayed Centre</li></ul><br><p>For all enquiries, please contact us at <a href="mailto:mice@emiratespalace.ae">mice@emiratespalace.ae</a> or call us at +971 2 690 7951.</p>').col-xs-12.col-sm-4  
+
+              +article-blog-item('meetings-events/img-3.jpg', 'ABOUT THE PALACE', 'Few key facts about Emirates Palace:', '<ul><li>1 kilometre from wing to wing; 100 hectares total area</li><li>1.3 kilometre stretch of private beach with an underwater museum that guests can discover as they snorkel</li><li>394 rooms and suites, ranging from 55 sqm to 680 sqm</li><li>42 meeting and conference rooms</li><li>Ballroom with a guest capacity of 2,400 theatre style</li><li>Auditorium with seated guest capacity of 1,100</li><li>The outdoor terraces and grounds collectively provide function space for up to 20,000 guests</li><li>Emirates Palace is home to 13 restaurants, cafés and bars featuring cuisines from around the world</li><li>For a taste of true Emirati culture, guests can visit Emirates Palace Bedouin tent.</li></ul><p>For all enquiries, please contact us at <a href="mailto:mice@emiratespalace.ae">mice@emiratespalace.ae</a> or call us at +971 2 690 7951.</p>').col-xs-12.col-sm-4
+
+              +article-blog-item('meetings-events/img-4.jpg', 'YOUR INCENTIVES', 'Distinguish your event with local experience.', '<p>Use an incentive to build relationships between business associates, clients or staff members. In Abu Dhabi, you have various opportunities to create unforgettable memories:</p><br><p><ul><li>Sport Challenges at the Palace</li><li>Pamper, Relax & Taste at the Palace</li><li>The “Musts” besides the Palace</li><li>Nuggets: Turnkey Incentive Programs</li></ul></p><br><p>Download our <a>incentive brochure</a>.<br/>For all enquiries, please contact us at <a href="mailto:mice@emiratespalace.ae">mice@emiratespalace.ae</a> or call us at +971 2 690 7951.</p>').col-xs-12.col-sm-4
+                +cta-btngroup-1('further information', '#')
+
+      //- section.room-suite-section
+      //-   +section-title("WEDDING IN ABU DHABI", "breathtaking ballroom", "TIMELESS ARCHITECTURAL").gray
+      //-   .offers.pb-30
+      //-     .container
+      //-       +room-enquiry('offer/offer-1.jpg', 'Christmas', '<p>Get away from the Christmas rush and enjoy your holidays in a more spectacular manner: Celebrate Christmas at Hotel Taschenbergpalais Kempinski Dresden</p>', 'Rates form').wow.fadeInUp(data-wow-duration="0.5s" data-wow-delay="0.2s")
+      //-       +room-enquiry('offer/offer-2.jpg', 'Dresden Art & Culture', '<p>What would be more attractive than planning a stay in Saxony’s capital, choosing Hotel Taschenbergpalais Kempinski Dresden and finding a variety of packages and special offers?</p>', 'Rates form').wow.fadeInUp(data-wow-duration="0.5s" data-wow-delay="0.4s")
+      //-       +room-enquiry('offer/offer-3.jpg', 'Semper Opera', '<p>Reside in a royal ambience, enjoy culinary delights and take pleasure in the most exquisite musical performances.</p>', 'Rates form').wow.fadeInUp(data-wow-duration="0.5s" data-wow-delay="0.6s")
+      //- section.section-sport-experience
+      //-   +masonry-media().masonry-sport-experience
+      //-     +masonry-info-item('SPORTS<br>WITH 100\'S OF HECTARES', '<p>Within 100 hectares of luscious gardens and lawns, and along 1.3 km of pristine beach, enjoy a plethora of activities for all athletic levels and ages. Play a game of tennis with our professional Resident Tennis Coach on one of our four floodlight tennis courts, or gather your friends for an energetic hour of beach volleyball. If you’re looking for something in the water, choose from our wide selection of water sport activities.</p>', 'sport-gallery').grid-item--width2.grid-item--height2
+      //-     +masonry-media-item('experience/sport/sport-1.jpg,', 'SOCCER', 'Lorem ipsum Ut laboris cupidatat.', 'PRIVATE BAY').grid-item--width2.grid-item--height2
+      //-     +masonry-media-item('experience/sport/sport-2.jpg', 'SOCCER', 'Lorem ipsum Ut laboris cupidatat.', 'PRIVATE BAY').grid-item--width2.grid-item--height2
+      //-     +masonry-media-item('experience/sport/sport-3.jpg', 'SOCCER', 'Lorem ipsum Ut laboris cupidatat.', 'PRIVATE BAY')
+      //-     +masonry-media-item('experience/sport/sport-4.jpg', 'SOCCER', 'Lorem ipsum Ut laboris cupidatat.', 'PRIVATE BAY')
+      //-     +masonry-media-item('experience/sport/sport-5.jpg', 'SOCCER', 'Lorem ipsum Ut laboris cupidatat.', 'PRIVATE BAY')
+      //-     +masonry-media-item('experience/sport/sport-6.jpg', 'SOCCER', 'Lorem ipsum Ut laboris cupidatat.', 'PRIVATE BAY')

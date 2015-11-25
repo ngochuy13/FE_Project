@@ -1,0 +1,27 @@
+extends layouts/layout
+
+block vars
+  -title = 'Demo Bootstrap Components'
+  -bodyClass = 'car-detail'
+
+block container
+  .section.section-slider-view
+    include includes/section-slider-view
+  .section.section-super-wide
+    include includes/section-super-wide
+  .section.section-car-detail
+    include includes/section-car-detail
+  .section.section-change-color-car
+    include includes/section-change-color-car
+  .section.section-components-car
+    include includes/section-components-car
+  .section.section-interest
+    include includes/section-interest
+
+block pagescript
+  //- Dep only for car detail page
+  // build:js scripts/car-detail-dep.js
+  script(src='/scripts/lib-js/rangeslider.js')
+  script(src='/scripts/lib-js/interact-1.2.4.js')
+  script(src='/scripts/lib-js/jquery.panelSnap.js')
+  // endbuild

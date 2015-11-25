@@ -1,0 +1,144 @@
+mixin sectionResidental(title , img_1, img_2, img_3, img_4, description_short , link)  
+  section.residental-property-section&attributes(attributes)
+    .container
+      .row
+        .col-md-12
+          .title= title
+          .residental-property-block.hidden-sm.hidden-xs
+            .main-img-strip
+              img(src="#{img_1}", alt="main residental img")
+            .information-strip
+              .icon-banner-div
+                a(href="#")
+                  img(src="#{img_2}", alt="Greenwood mews icon")
+              .link-img-div
+                a(href="#")
+                  img(src="#{img_3}", alt="link1")
+              .link-img-div
+                a(href="#")
+                  img(src="#{img_4}", alt="link2")
+              .view-all-div
+                .words-div
+                  a(href="#{link}")
+                    h3 VIEW ALL
+                      span.fa.fa-angle-right
+                    p!= description_short
+          .visible-sm.visible-xs
+            .mobile-slide
+              .slide-wrap.owl-carousel(data-nav='true')
+                .slide-item
+                  img(src="images/residential/greenwood_mews_mobile_1.jpg", alt="")
+                .slide-item
+                  img(src="images/residential/greenwood_mews_mobile_1.jpg", alt="")
+                .slide-item
+                  img(src="images/residential/greenwood_mews_mobile_1.jpg", alt="")
+
+mixin sectionSlider(img)
+  #main-slide-section&attributes(attributes)
+    .slide-wrap.owl-carousel
+      .slide-item
+        a(href="#", title="GREENWOOD NEWS")
+          img(src="#{img}", alt="Slide 1")
+            
+mixin sectionSliderVideo(src, img)
+  #main-slide-section&attributes(attributes)
+    .hidden-sm.hidden-xs
+      .video-wrap(video-src="#{src}")
+      video#really-cool-video.video-js.vjs-default-skin(controls='false', muted="", loop="true", preload='auto', width='100%', height='670', poster='#{img}', data-setup='{ "controls": false, "autoplay": true, "preload": "auto", "loop": "true" }')
+        source(src='#{src}', type='video/mp4')
+    .visible-sm.visible-xs
+      .video-img-mobile
+        img(src="#{img}", alt="")
+
+mixin searchItem(img)
+  .search-item
+    .image
+      img(src="images/#{img}")
+    .info
+      .title For Sale - Alba Residential
+      .attribute
+        .time 99 Year Lease
+        .number 8 Cairnhill Rise
+      .rating
+        ul.rating-control
+          li
+            label
+              input.no-icheck(type="radio", name="rating", checked)
+              span.rate-1
+          li
+            label
+              input.no-icheck(type="radio", name="rating")
+              span.rate-2
+          li
+            label
+              input.no-icheck(type="radio", name="rating")
+              span.rate-3
+          li
+            label
+              input.no-icheck(type="radio", name="rating")
+              span.rate-4
+          li
+            label
+              input.no-icheck(type="radio", name="rating")
+              span.rate-5
+    .right-block
+      .user-tool
+        .check
+          input(type="checkbox")
+        //- .heart.active
+      .price S$
+        span 3,020,000 
+      .note (Starting from) 
+      .small-text S$ 2849.06 psf
+      .small-text 1060 sqft / 98 sqm
+mixin sectionLates-item(img, link)
+  .slide-item&attributes(attributes)
+    .cover
+      a(href="#{link}" title="New lates")
+        img(src="#{img}", alt="")
+    .content
+      if block
+        block
+
+mixin sectionLates()
+  #lates-section&attributes(attributes)
+    .container
+      .text-center.what-the-lates WHAT'S THE LATEST
+      .filter-control
+        .btn-group(role="group", aria-label="...")
+          button.btn.active(type="button") NEWS
+          button.btn(type="button") PROPERTY MARKET
+          button.btn(type="button") TOOLS & RESOURCES
+      .slide-wrap.owl-carousel
+        .slide-item
+          .cover
+            a(href="#" title="New lates")
+              img(src="images/news-1.jpg", alt="")
+          .content
+            .date 13 Jan 2015
+            .description Far East Land and Sino Land Joint Venture acquires The Westin Sydney and Heritage Retail
+            a.read-more(href="#", title="") Read more
+        .slide-item
+          .cover
+            a(href="#" title="New lates")
+              img(src="images/news-2.jpg", alt="")
+          .content
+            .date 13 Jan 2015
+            .description Far East Land and Sino Land Joint Venture acquires The Westin Sydney and Heritage Retail
+            a.read-more(href="#", title="") Read more
+        .slide-item
+          .cover
+            a(href="#" title="New lates")
+              img(src="images/news-3.jpg", alt="")
+          .content
+            .date 13 Jan 2015
+            .description Far East Land and Sino Land Joint Venture acquires The Westin Sydney and Heritage Retail
+            a.read-more(href="#", title="") Read more
+        .slide-item
+          .cover
+            a(href="#" title="New lates")
+              img(src="images/news-3.jpg", alt="")
+          .content
+            .date 13 Jan 2015
+            .description Far East Land and Sino Land Joint Venture acquires The Westin Sydney and Heritage Retail
+            a.read-more(href="#", title="") Read more

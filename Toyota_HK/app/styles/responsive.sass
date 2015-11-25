@@ -1,0 +1,972 @@
+// Responsive
+// Info
+// Desktop: 1100px
+// Tablet:  1024px 800px 768px
+// Mobile:  640px 568px 480px 320px
+
+@media only screen and (max-width: 1200px)
+  body
+
+
+@media only screen and (max-width: 980px)
+  // =================   Ganeral ================= //
+  .our-partners .content-our-partners-header, 
+  .our-partners .content-about-us-header, 
+  .about-us .content-our-partners-header, 
+  .about-us .content-about-us-header
+    padding-top: 0
+  // =================   .section-tab ================= //
+  .section-tab-navigation 
+    .tab-item a
+      font-size: $h3-md
+  // =================   .section-parallax ================= //
+  .section-parallax 
+    .block-img
+      background: none
+      > img 
+        opacity: 1
+    .block-content h1
+      font-size: $h1-md
+    .editor-content p
+      font-size: $p-md
+  .our-partners .content-our-partners-header h1, 
+  .our-partners .content-about-us-header h1, 
+  .about-us .content-our-partners-header h1, 
+  .about-us .content-about-us-header h1
+    font-size: $h1-md
+  // =================   .section-parallax-header ================= //
+  .section-parallax-header 
+    .block-content 
+      h1
+        margin-top: 20px
+        font-size: $h1-md
+      .description
+        font-size: $h4-md
+
+  // =================   section-awards-accolades ================= //
+  .section-awards-accolades .description .content
+    margin-bottom: 20px
+  // =================   product-item ================= //
+  .product-item 
+    text-align: center
+    .block-img img 
+      display: inline-block
+    .block-info 
+      .title
+        font-size: $h1-md
+        margin-top: 40px
+        line-height: 1
+      .description
+        font-size: $h4-md
+  // =================   Home ================= // 
+  .home
+    .content-home-1 .editor-content p, .content-home-2 .editor-content p,
+    .section-home-3 .content-home-3,
+    .section-gallery-home-4 .block-text,
+    .section-home-5 .block-title, .section-home-5 .block-title-sub, .section-home-5 .block-btn a
+      font-size: $h1-md
+    .section-gallery-home-4 .block-btn a
+      font-size: $h3-md
+      width: auto
+      height: auto
+      padding: 16px 32px 15px 32px
+    .section-home-5 .block-btn a
+      width: auto
+      height: auto
+      padding: 16px 32px 15px 32px      
+    .section-home-3 .content-home-3
+      max-width: 580px
+      
+  // =================   training-cap ================= //  
+  .training-cap-page    
+    .section-detail-training-cap ul
+      background: none
+      padding-left: 0
+      display: inline-block
+      width: 100%
+      height: auto
+      li ,li.cyan.left
+        position: relative
+        left: 0
+        top: 0
+        bottom: 0
+        right: 0
+        padding: 20px
+        border-radius: 10px
+        max-width: 75%  
+        text-align: center
+        margin: 0 auto 20px 
+        h2 
+          font-size: $h2-md 
+          margin-top: 10px
+        &.green 
+          background-color: #8a9e3d
+        &.cyan 
+          background-color: #6ac9cd
+        &.red 
+          background-color: #e41d40
+        &.yellow 
+          background-color: #f68b33
+        &.d-blue 
+          background-color: #3d4a7e
+        &.l-orange 
+          background-color: #f48a34
+        &.orange 
+          background-color: #e04b25
+          h2 
+            margin-top: 0
+  .support-contact-info
+    margin-top: 20px
+    a
+      font-size: $p-md
+      max-width: 75%
+      height: auto
+      padding: 20px
+  // =================   our-courses ================= //     
+  .catalogue 
+    h1
+      font-size: $h1-md
+    .description .editor-content p, .btn-download a, .section-detail-level .text-small
+      font-size: $h4-md
+    .section-list-level .course-level
+      max-width: 286px
+      margin: 0 auto 20px
+    .section-detail-level 
+      .panel-title a
+        font-size: $h3-md
+        line-height: 1
+        padding: 20px 20px 20px 0
+        display: inline-block
+        width: 100%
+        position: relative
+        height: auto
+        .fa 
+          position: absolute
+          margin-top: 0
+          top: calc( 50% - 15px )
+          right: 0
+      .course-detail-item
+        font-size: $h4-md
+        .text 
+          width: calc(100% - 195px)
+          line-height: 1.4
+          padding-top: 19px
+  // =================   .panel-default  ================= //
+  .panel-default 
+    > .panel-heading
+      .panel-title
+        a
+          font-size: $h4-md
+          .fa 
+            font-size: $h4-md
+  // =================   .case-study-item  ================= //
+  .case-study-item
+    .title
+      font-size: $h4-md
+  // =================   benmark ================= //
+  .section-subscription-benefits,.section-subscription-works,.privacy-promise-section
+    h2
+      font-size: $h1-md + 3
+    .item-vertical-wrapper
+      h3
+        font-size: $h2-md
+      span
+        font-size: $h4-md
+  .privacy-promise-section
+    p
+      font-size: $h3-md
+      line-height: 1.3
+  .section-benchmarking-study
+    h1
+      font-size: $h1-md + 3
+
+  .block-benchmark-region
+    margin-bottom: 30px
+    a 
+      position: relative
+      display: block
+      .title
+        top: 40%
+    img
+      width: 100%
+    .link-down
+      margin-top: 17px
+      a
+        font-size: $h4-md - 4
+  .section-subscription-benefits .row
+    margin-left: -10px
+    margin-right: -10px
+  .subscription-benefit-section
+    .item-vertical-wrapper .block-img img
+      width: auto
+
+  // =================   Contact Us ================= //
+  .contact-us
+    h1 
+      font-size: $h1-md   
+    .section-we-help 
+      .phone, .title  
+        font-size: $h2-md
+    .section-our-offices 
+      .block-img .title
+        font-size: $h1-md
+    .block-description
+      font-size: $h4-md
+  //====================insights==========================//
+  .insight-article-item
+    .block-info
+      .block-type
+        font-size: $h4-md
+        a
+          font-size: $h1-md
+      .block-save-article
+        a
+          font-size: $h4-md
+      .block-description
+        font-size: $h4-md
+      .block-title
+        a
+          font-size: $h1-md - 3
+
+  body.insights-article
+    .section-article-detail
+      .content
+        h2
+          font-size: $h1-md - 3
+        .meta
+          font-size: $h4-md
+    .recommend
+      font-size: $h1-md - 3
+      margin-top: 35px
+    .block-info
+      .block-description
+        .editor-content
+          p
+            font-size: $h4-md
+    .block-insights-list
+      margin-bottom: 90px
+  // =================   career ================= //
+  body.careers-page
+    .section-career-intro
+      h1
+        font-size: $h1-md
+        margin-top: 60px
+      .description
+        font-size: $h3-md
+    .section-careers-opening
+      .opening-career-section
+        .text-center
+          font-size: $h1-md
+      .item
+        .item-vertical-wrapper
+          h3
+            font-size: $h1-md + 3
+          span
+            font-size: $h4-md
+  // =================   about-us ================= //
+  .about-us
+    .section-parallax
+      .block-img
+        background-size: cover
+      .block-content
+        h1
+          font-size: $h1-md
+  // =================   section-awards-accolades ================= //
+  .section-awards-accolades
+    h1
+      font-size: $h1-md
+    .description
+      .content
+        h2
+          font-size: $h1 + 10
+        p
+          font-size: $p-md + 1  
+  // =================   event-page ================= //
+  .event-page .section-event-upcoming .block-events-list .block-event-item .block-read-more
+    text-align: center
+    left: 0
+
+@media only screen and (max-width: 768px)
+  h4
+    font-size: $h4-md 
+  .content-vertical-middle
+    top: 0
+    +transform(translateY(0))  
+  // =================   .section-tab ================= //
+  .section-tab-navigation, .section-tab-navigation.tab-study
+    .container
+      padding: 0
+      margin: 0
+    .tab-wapper
+      position: relative    
+      font-size: 0  
+    .tab-item
+      width: 100%
+      max-width: none
+      height: 67px
+      text-align: left
+      top: 0
+      border-bottom: 1px solid $white
+      &.active, &:hover
+        height: 67px
+        border-bottom: 1px solid $white
+        .block-icon
+          height: 37px
+          width: 37px
+          margin: 10px 20px 0 0
+      .block-icon
+        height: 37px
+        width: 37px
+        margin: 10px 20px 0 0
+        float: right
+        img
+          max-height: 100%
+      &:hover a , a
+        font-size: $h1-xs
+        color: $blue-zodiac
+        line-height: 67px
+        padding-left: 20px
+        display: inline-block
+        width: 100%
+        vertical-align: top
+      &:hover a , &.active a
+        color: $white
+
+  // =================   Home ================= // 
+  .home
+    .content-home-1 .editor-content p, .content-home-2 .editor-content p,
+    .section-home-3 .content-home-3,
+    .section-gallery-home-4 .block-text,
+    .section-home-5 .block-title, .section-home-5 .block-title-sub, .section-home-5 .block-btn a
+      font-size: $h1-xs + 10
+    .section-gallery-home-4 .block-btn a
+      font-size: $h3-xs
+      width: auto
+      height: auto
+      padding: 16px 32px 15px 32px
+    .section-gallery-home-4
+      padding-bottom: 20px 
+      background: $blue-zodiac
+      .owl-dots, .content
+        position: relative
+        top: 0
+        padding-top: 20px
+    .section-home-5 
+      border-top: 1px solid $white
+      .block-btn a
+        width: auto
+        height: auto
+        padding: 16px 32px 15px 32px      
+    .section-home-3 .content-home-3
+      max-width: 500px
+      top: 20px
+    .block-down-icon
+      position: relative
+      margin: 20px 0 0px
+  // =================   insight-article-item ================= //
+  .insight-article-item 
+    .block-info 
+      .block-title a
+        font-size: $h3-md
+      .block-description .editor-content p
+        font-size: $h4-md
+  body.insights-article 
+    .section-article-detail 
+      .content h2
+        font-size: $h2-md
+  // =================   catalogue ================= //
+  .catalogue 
+    h1
+      font-size: $h2-md
+    .description .editor-content p, .btn-download a,  .section-detail-level .text-small
+      font-size: $h4-md
+    .section-detail-level .btn-download
+      position: relative
+    .section-detail-level .course-detail-item .text
+      padding-bottom: 10px
+  // =================   career ================= //
+  body.careers-page
+    .section-career-intro
+      h1
+        font-size: $h2-md
+        margin-top: 60px
+      .description
+        font-size: $h4-md
+    .section-careers-opening
+      .opening-career-section
+        .text-center
+          font-size: $h2-md
+      .item
+        .item-vertical-wrapper
+          h3
+            font-size: $h2-md + 3
+          span
+            font-size: $p-md
+  // =================   Contact Us ================= //
+  .contact-us
+    h1 
+      font-size: $h2-md   
+    .section-we-help 
+      .phone a, .title  
+        font-size: $h3-md
+    .section-our-offices 
+      .block-img .title
+        font-size: $h2-md
+    .block-description
+      font-size: $h4-md
+  
+  // =================   .section-parallax ================= //
+  .section-parallax 
+    .block-img
+      background: none
+      > img 
+        opacity: 1
+        margin-bottom: 0
+  .our-partners .section-parallax .block-content h1, .about-us .section-parallax .block-content h1
+    padding: 0 10px
+    font-size: $h2-md
+  .our-partners .content-our-partners-header .container .description, .our-partners .content-about-us-header .container .description, .about-us .content-our-partners-header .container .description, .about-us .content-about-us-header .container .description
+    max-width: 100%
+    padding: 0 10px
+    font-size: $h2-md
+  // =================   section-parallax  &&  .section-parallax-header ================= //
+  .privacy-promise-section
+    margin-bottom: 30px
+    .block-img
+      max-width: 300px
+      display: block
+      margin: 0 auto
+  .section-parallax , .section-parallax-header 
+    max-height: none
+    .block-content 
+      position: relative
+      background: $blue-zodiac
+      color: $white
+      padding-bottom: 0px
+      h1
+        margin-top: 20px
+        font-size: $h2-md
+      .description
+        font-size: $p-md
+        margin-bottom: 20px
+    .content-research-innovation
+      color: $white
+
+  // =================   benchmark    ================= //
+  .section-subscription-benefits .row .item
+    height: auto
+    padding-bottom: 40px
+  .section-benchmark-sub-heafer .section-parallax-header
+    max-height: none
+  // =================   section-awards-accolades ================= //
+  .section-awards-accolades 
+    h1
+      font-size: $h2-md
+    .description .content
+      position: relative
+      .item
+        position: absolute
+        top: 50%
+        left: 0
+        right: 0
+        margin: 0 auto
+        transform: translateY(-50%)
+        -webkit-transform: translateY(-50%)
+        -moz-transform: translateY(-50%)
+      h2
+        font-size: $h3-md
+        margin-top: 10%
+      .sub-title
+        font-size: $h4-md
+      p 
+        font-size: $p-md
+  // =================   training-cap ================= //      
+  .training-cap-page 
+    .section-detail-training-cap h1
+      font-size: $h2-md
+    .section-detail-training-cap ul li h2, .section-detail-training-cap ul li.cyan.left h2
+      font-size: $h3-md
+    a p 
+      font-size: $p-md
+      line-height: 1.4
+    .section-detail-training-cap ul li.orange a h2
+      font-size: $h3-md
+    .support-contact-info a
+      font-size: $p-md
+      max-width: 75%
+      height: auto
+      padding: 20px
+  // =================   consulting-template ================= //
+  .panel-default
+    > .panel-heading
+      + .panel-collapse
+        > .panel-body
+          padding-bottom: 0
+      .panel-title
+        a
+          font-size: $h4-md
+          .fa 
+            font-size: $h3-md 
+  .editor-content
+    p
+      font-size: $p-xs
+      line-height: 1.44
+
+  body.consulting-template, body.analytics
+    .industries-practices
+      margin-left: 0
+      margin-right: 0
+      margin-top: 35px
+    .section-detail
+      .container
+        padding: 20px 20px 0 20px
+  // =================   Contact Us ================= //
+  .about-us
+    .content-about-us-header
+      color: $white
+    .section-parallax
+      .block-content
+        h1
+          font-size: $h1-xs !important
+  // =================   Event Page ================= //
+  .event-page .section-event-upcoming .block-events-list .block-event-item .block-read-more
+    text-align: center
+  // =================   product-detail ================= //
+  body.product-detail
+    .product-detail-contact .row > .col-xs-12
+      margin-bottom: 30px
+    .product-detail-contact .btn
+      margin-top: 0
+  
+
+@media only screen and (max-width: 767px)
+  body.consulting-template, body.analytics
+    .panel-default
+      margin-bottom: 20px
+
+  // =================   General ================= //
+  h4
+    font-size: $h4-xs
+  .page-wrapper
+    margin-bottom: -90px
+  #footer, .page-wrapper:after
+    height: 90px
+  // =================   .parallax , .parallax-header ================= //
+  .section-parallax,.section-parallax-header 
+    .block-img img
+      margin-bottom: 0
+    .block-content 
+      h1
+        font-size: $h1-xs
+        margin-bottom: 10px
+      .description, .editor-content p
+        font-size: $h4-xs
+  .our-partners .section-parallax .block-content h1, 
+  .about-us .section-parallax .block-content h1
+    font-size: $h1-xs
+  // =================   .section-awards-accolades ================= //
+  .section-awards-accolades .description
+    margin-bottom: 20px
+  // =================   .industries-practices ================= //
+  .industries-practices .item
+    font-size: $h4-xs
+
+  // =================   Home ================= // 
+  .home
+    .content-home-1 .editor-content p, .content-home-2 .editor-content p
+      padding-top: 15px    
+    .content-home-1 .editor-content p, .content-home-2 .editor-content p,
+    .section-home-3 .content-home-3,
+    .section-gallery-home-4 .block-text,
+    .section-home-5 .block-title, .section-home-5 .block-title-sub, .section-home-5 .block-btn a
+      font-size: $h1-xs
+    .section-gallery-home-4 .block-btn a
+      font-size: $h3-xs
+      width: auto
+      height: auto
+      padding: 16px 32px 15px 32px
+    .section-gallery-home-4
+      padding-bottom: 20px 
+      background: $blue-zodiac
+      .owl-dots, .content
+        position: relative
+        top: 0
+        padding: 20px 20px 0 20px
+    .section-home-5 
+      border-top: 1px solid $white
+      .block-btn a
+        width: auto
+        height: auto
+        padding: 16px 32px 15px 32px      
+    .section-home-3 
+      .content-home-3
+        max-width: 500px
+        top: 20px
+      .block-image
+        bottom: 0
+        padding: 35px 20px 20px 20px
+    .block-down-icon
+      position: relative
+      margin: 20px 0 0px
+  // =================   .section-tab ================= //
+  .section-tab-navigation
+    .tab-item, .tab-item.active, .tab-item:hover, 
+    .tab-item:hover a, .tab-item a
+      height: 47px
+      line-height: 47px
+      font-size: $h4-xs
+  .section-tab-navigation .tab-item.active .block-icon, 
+  .section-tab-navigation .tab-item:hover .block-icon, 
+  .section-tab-navigation.tab-study .tab-item.active .block-icon, 
+  .section-tab-navigation.tab-study .tab-item:hover .block-icon
+    margin: 5px 20px 0 0
+  // =================   our-partners ================= //
+  .our-partners
+    h1
+      font-size: $h1-xs
+    p 
+      font-size: $p-xs
+  // =================   section-awards-accolades ================= //
+  .section-awards-accolades   
+    h1
+      font-size: $h1-xs
+      margin-top: 40px
+      margin-bottom: 25px
+    .description .content
+      width: 280px
+      height: 280px
+  
+  // =================   product-item ================= //
+  .product-item 
+    .block-img img
+      margin-bottom: 0
+    a 
+      text-decoration: none
+    .block-info
+      position: relative
+      padding: 10px 0
+      color: $black 
+      .title
+        font-size: $h1-xs
+        margin-top: 0
+      .description .editor-content p
+        font-size: $h4-xs
+  // =================   product-detail ================= //
+  body.product-detail 
+    h1 , .product-detail-contact h1
+      font-size: $h2-xs
+    h4 , .product-detail-contact h2
+      font-size: $h4-xs
+    .product-detail-contact .btn
+      font-size: $h4-xs
+      height: auto
+    .product-detail-contact p
+      font-size: $p-xs      
+    .product-detail-contact .row > .col-xs-12
+      margin-bottom: 20px
+    .features-and-contact 
+      .section .media
+        width: 100%
+        margin-bottom: 20px
+    .product-detail-contact h2.type
+      margin-bottom: 20px
+  // =================   training-cap-page ================= //
+  .training-cap-page 
+    .section-detail-training-cap
+      h1 
+        font-size: $h1-xs
+        margin: 30px 0 20px 0
+      ul li,  ul li.cyan.left
+        max-width: 100%
+        h2 
+          font-size: $h2-xs
+    .support-contact-info a
+      max-width: 100%
+      border-radius: 10px 
+  // =================   our-courses ================= //     
+  .catalogue 
+    .section-list-level .row
+      margin-left: -10px
+      margin-right: -10px
+  // =================   catalogue ================= //
+  .catalogue 
+    .section-detail-level .course-detail-item .block-star span
+      font-size: 20px
+    .panel-default > .panel-heading .panel-title a
+      font-size: $h3-xs
+    h1
+      font-size: $h1-xs
+      margin-top: 20px
+    .description .editor-content p, .btn-download a, .section-detail-level .text-small
+      font-size: $h4-xs
+    .section-detail-level 
+      .block-top
+        margin-top: 20px
+        h1 
+          margin-top: 0
+      .panel-title
+        margin-bottom: 0
+        a
+          padding: 10px 20px 10px 0
+          font-size: $h3-xs
+      .course-detail-item
+        font-size: $h3-xs
+        line-height: normal
+        padding-top: 10px
+        .text
+          padding-top: 0
+    .btn-download a
+      height: 45px
+      line-height: 45px
+    .section-detail-level .text-small
+      margin-top: 0px
+    .panel-default > .panel-heading .panel-title a .fa
+      font-size: $h2-xs
+      position: absolute
+      top: 50%
+      +transform(translateY(-50%)) 
+  // =================   panel-default ================= //
+  .panel-default
+    > .panel-heading
+      .panel-title
+        a
+          font-size: $h4-xs 
+          .fa
+            font-size: $h4-xs
+  // =================   case-study-item ================= //
+  .case-study-item
+    margin-bottom: 15px
+    .title
+      font-size: $h4-xs
+      padding-top: 5px
+      padding-bottom: 15px
+  // =================   benmark ================= //
+  .section-subscription-benefits,.section-subscription-works,.privacy-promise-section
+    h2
+      font-size: $h1-xs
+      margin: 20px 0
+    .item-vertical-wrapper
+      h3
+        font-size: $h2-xs
+      span
+        font-size: $h4-xs
+  // =================   privacy-promise-section ================= //
+  .privacy-promise-section p
+      font-size: $p-xs
+      line-height: 1.3
+  // =================   section-benchmarking-study ================= //
+  .section-benchmarking-study
+    .row
+      margin-bottom: 0px
+    h1
+      font-size: $h1-xs + 3
+      margin: 20px 0 15px 0
+  .link-down
+    a
+      font-size: $h4-md - 4
+  .article
+    .block-type
+      margin-top: 5px 
+  .insight-article-item
+    padding-right: 14px
+    .block-img
+      width: 100%
+      padding-right: 0
+      margin-bottom: 5px
+    .block-info
+      width: 100%
+      .fa
+        font-size: 21px
+        margin-right: 5px
+        &.fa-file-text
+          font-size: 20px
+      .block-type
+        font-size: $h4-xs
+        .article &
+          margin-top: -7px
+        a
+          font-size: $h4-md - 4
+          font-size: $h1-xs
+      .block-save-article
+        .video &
+          margin-top: -6px
+        a
+          font-size: $h4-xs
+      .block-title
+        a
+          font-size: $h4-xs
+  .block-img
+    width: 100%
+    padding-right: 0          
+    img
+      width: 100%
+      padding-right: 0
+      margin-bottom: 10px
+
+
+  // =================   insights-article ================= //  
+  body.insights-article
+    .block-info .block-description 
+      font-size: $h4-xs
+      .editor-content p
+        font-size: $h4-xs
+      .read-more
+        font-size: $h4-xs
+    .recommend
+      font-size: $h1-xs - 3
+      margin-top: 35px
+    .section-article-detail
+      .content
+        .editor-content
+          padding-bottom: 30px
+        h2
+          font-size: $h1-xs - 3
+        .meta
+          font-size: $h4-xs
+          margin-bottom: 20px
+      .article-detail-header
+        .bookmark
+          float: none
+          text-align: center
+          display: block
+          font-size: $h4-xs
+      .article-detail-wrapper
+        .article-interaction
+          > ul
+            text-align: center
+            margin-bottom: 5px            
+            > li
+              float: none
+              width: 23%
+              padding: 0
+              margin: 0
+              > a span.icon
+                .fa
+                  font-size: 27px
+      .article-detail-footer
+        margin-bottom: 30px
+        margin-top: 15px
+        &:after
+          top: -15px
+        &:after
+          top: auto
+          bottom: -15px
+  // =================   careers-page ================= //            
+  body.careers-page   
+    .section-career-intro
+      h1
+        font-size: $h1-xs
+        margin-top: 30px
+      .description
+        font-size: $h3-xs
+        padding-left: 15px
+        padding-right: 15px
+    .section-careers-opening
+      padding-bottom: 40px
+      .opening-career-section
+        .text-center
+          font-size: $h1-xs
+          padding-top: 8px
+          padding-bottom: 10px
+      .item
+        .item-vertical-wrapper
+          h3
+            font-size: $h1-xs + 3
+            margin-bottom: 20px
+          span
+            font-size: $h4-xs
+  // =================   block-filter ================= //
+  .block-filter 
+    margin-top: 20px
+    [class^='filter']
+      width: 100%
+      border-bottom: 1px solid $white
+    .bootstrap-select .filter-option, .btn
+      height: 35px
+      line-height: 35px
+      font-size: $h2-xs
+    .bootstrap-select.btn-group .dropdown-toggle .caret
+      top: 12px
+    .bootstrap-select.btn-group .dropdown-menu a
+      font-size: $h3-xs
+      line-height: 1
+      height: auto
+    .bootstrap-select.btn-group > .dropdown-menu
+      top: 49px
+  // =================   Even Page ================= //
+  .event-page .section-event-upcoming .block-events-list .block-event-item .block-read-more .btn-read-more
+    width: 192px !important
+  .event-page 
+    .block-filter
+      border: none
+    .block-filter .bootstrap-select.btn-group .dropdown-toggle .filter-option
+      border-right: 0
+      border-bottom: 1px solid $blue-zodiac
+    .section-header .block-content 
+      .description
+        margin-top: 20px 
+        .title
+          font-size: $h1-xs
+        p 
+          font-size: $h4-xs
+    .section-event-upcoming .container
+      .title
+        font-size: $h1-xs
+        margin: 0
+      .block-events-list .block-event-item 
+        .block-title p
+          font-size: $h1-xs
+          line-height: 1.3
+        .block-title span
+          font-size: $h3-xs
+          line-height: 1.3
+        .block-time 
+          .month
+            font-size: $h1-xs
+            line-height: 1.2
+          .day
+            font-size: $h1-xs + 10
+            line-height: 1.2
+          .daytime
+            font-size: $h1-xs
+            line-height: 1.2
+
+
+
+  // =================   Contact Us ================= //  
+  .section-we-help 
+    .info 
+      margin-bottom: 45px
+      &:before
+        width: 100%
+        height: 2px
+        right: 0
+        top: auto
+        bottom: -20px
+    & .row > div:last-child .info 
+      margin-bottom: 0
+  .contact-us
+    h1 
+      font-size: $h1-xs   
+      margin-top: 30px
+    .section-we-help 
+      .title
+        margin-bottom: 10px
+      .desc 
+        margin-bottom: 15px
+      .phone a,.email a, .title 
+        font-size: $h2-xs
+      .desc 
+        font-size: $h4-xs
+    .section-our-offices 
+      .block-img .title
+        font-size: $h1-xs
+    .block-description
+      font-size: $h4-xs
+  .section-our-offices 
+    .block-description 
+      padding-top: 0
+      margin-bottom: 20px
+      .desc
+        height: auto
+        margin-bottom: 15px

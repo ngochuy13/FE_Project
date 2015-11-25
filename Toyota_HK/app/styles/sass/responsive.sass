@@ -1,0 +1,395 @@
+// Responsive
+// Info
+// Desktop: 1100px
+// Tablet:  1024px 800px 768px
+// Mobile:  640px 568px 480px 320px
+
+@media screen and (max-width: 1224px)
+  .posts-list-wrapper
+    .post-item
+      width: 30%
+
+
+@media screen and (max-width: 1199px)
+  .section-components-car-content .block-component
+    width: 50%
+    display: inline-block
+    &.first
+      border: none
+      border-right: 1px solid #EBEBEB
+
+
+@media screen and (max-width: 1024px)
+  .car-detail-05.about-page .car-gallery-paging
+    left: 10px
+  .sub-page-banner 
+    height: auto
+    .block-caption
+      position: relative
+      top: 0
+      left: 0
+      .block-right-middle
+        position: relative
+        left: 0
+        top: 0
+        width: 100%
+        padding: 20px 
+    img
+      width: 100%
+      height: auto
+      margin: 0
+      left: 0
+    .block-caption 
+      .title
+        font-size: 75px
+      .description .editor-content p
+        padding-right: 0
+  .about-page
+    .sub-page-banner 
+      >p
+        line-height: 211px
+        display: block
+        margin: 0 auto
+        width: 100%
+        font-size: 30px
+  .post-item
+    width: 30%
+
+  // section-car-drag 
+  .car-detail .section-car-drag 
+    height: auto
+    .block-drag-item, .block-car
+      display: none !important
+    .block-caption
+      position: relative
+      top: 0
+      left: 0
+      width: 100%
+      margin-bottom: 50px
+      .title-small, .description .editor-content p
+        font-size: 14px
+      .title
+        font-size: 75px
+      > div
+        text-shadow: none
+    .block-car-mobile
+      display: block
+      img.show 
+        display: block
+        max-width: 100%
+        margin: 0 auto
+
+
+@media screen and (max-width: 1023px)
+  // .section-super-wide .section-super-wide-content .block-wide img 
+  //   width: 100%
+  .section-change-color-car-content #masked-image,
+  .section-change-color-car-content #mask-view,
+  .section-change-color-car-content .block-lists-car,
+  .section-change-color-car-content .block-lists-car img
+    max-width: 100%
+    overflow: hidden
+
+@media screen and (max-width: 1010px)
+  // change color 
+  .section-change-color-car-content 
+    .block-lists-car
+      height: auto
+      min-height: inherit
+    .img-create-height
+      display: block !important
+      opacity: 0
+    #mask-view
+      position: absolute
+      left: 0
+      top: 0
+      bottom: auto
+
+  // car-detail-05
+  .car-detail-05.about-page .car-gallery-paging
+    left: auto
+    right: 50%
+
+    
+
+@media screen and (max-width: 980px)
+  .section-change-color-car-content .block-lists-color .color-item
+    margin: 0 28px 10px
+  .car-detail .owl-carousel .owl-item .master-banner-item img
+    min-height: inherit
+  .master-banner-wrapper .master-banner-item .wheel-banner-item.show-text .master-banner-detail
+    position: relative
+    top: 0px
+    left: 0
+    width: 100%
+    max-width: none
+  .master-banner-wrapper .owl-controls
+    display: block
+  .master-banner-wrapper .owl-carousel .owl-controls .owl-nav .owl-prev, 
+  .master-banner-wrapper .owl-carousel .owl-controls .owl-nav .owl-next
+    top: 32.5%
+    background: url(../images/homes/icon-next-01-small.png) no-repeat center center
+    width: 18px
+    height: 35px
+    right: 10px
+    z-index: 9999
+  .master-banner-wrapper .owl-carousel .owl-controls .owl-nav .owl-prev
+    left: 10px
+    background-image: url(../images/homes/icon-prev-01-small.png)
+
+
+@media screen and (max-width: 768px)
+  
+  // car change color
+  .block-lists-car
+    .car img 
+      max-width: 100%
+
+  // section-components-car
+  .section-components-car-content .container
+    width: 100%
+    .block-img img 
+      max-width: 100%
+    .block-description
+      padding-top: 0
+    .block-component
+      width: 50%
+      float: left 
+      border: none
+      &.first
+        border-right: 1px solid #EBEBEB
+    .block-downlink 
+      a
+        padding: 0 33px
+      img 
+        display: none
+        
+
+  // .section-super-wide
+  .section-super-wide .section-super-wide-content 
+    .block-cloudy img, .block-sky img
+      left: 0
+      transform: none
+    .block-wide
+      position: absolute
+      width: 100%
+      height: 100%
+
+
+@media screen and (max-width: 767px)
+  // ----  Genaral
+  .section 
+    padding-bottom: 7.81%
+    margin-bottom: 7.81%
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      width: 80%
+      height: 1px
+      background: #ccc
+      bottom: 0
+      left: 10%
+  .block-img img 
+    width: auto
+    max-width: 100%
+  .image-vertical-middle
+    position: relative
+    top: 0
+    left: 0
+    -webkit-transform: none
+    transform: none
+
+  // ----  Home Page ----  //
+  .posts-list-wrapper 
+    .bg-gray
+      display: none
+    .post-item
+      width: 100%
+      max-width: 399px
+      margin: 0 auto 20px
+      position: relative !important
+      top: 0 !important
+      left: 0 !important
+      float: none
+      & a:nth-child(2)
+        width: 100%
+        height: auto
+        text-align: center
+        img 
+          min-height: inherit
+          width: 100%
+      &:nth-last-child(1), &:nth-last-child(2)
+        border-bottom: 1px solid #EBEBEB
+      &:last-child
+        border: none
+  .post-social-widgets
+    .fb-like
+      float: left
+
+
+  // ----  section-slider-view
+  .section-slider-view .owl-caption 
+    .title-small, .description .editor-content p
+      font-size: 14px
+    .title
+      font-size: 75px
+    > div
+      text-shadow: none
+
+  // ----  section-super-wide 
+  .section-super-wide 
+    img 
+      margin-bottom: 0
+      left: 0
+      -webkit-transform: none
+      -ms-transform: none
+      transform: none
+    .section-super-wide-content
+      height: auto
+      .block-img:nth-child(2)
+        display: none
+    .block-caption
+      position: relative
+      top: 0
+      left: 0
+      padding: 5%
+      background-color: #FFF
+      .small-text
+        font-size: 14px
+        color: #333
+      .title
+        font-size: 75px
+        color: #039
+        text-shadow: none
+      .sub-title
+        font-size: 22.5px
+        color: #039
+        text-shadow: none
+      .note-text
+        font-size: 12px
+        color: #333
+
+  
+  // ----  section-change-color-car 
+  .section-change-color-car-content 
+    padding-bottom: 5%
+    .block-lists-car
+      min-height: inherit
+    .block-desctiption .editor-content p
+      font-size: 17px
+      line-height: 1.5
+    .block-lists-color .color-item
+      padding: 0 2% 10px
+      width: 25%
+      margin: 0
+      max-width: inherit
+      .icon
+        width: 100%
+        height: auto
+        img 
+          max-width: 100%
+
+  // ----  container
+  .section-components-car-content .container,.container
+    width: 100%
+
+  // ----  section-components-car-content 
+  .section-components-car-content 
+    .container
+      .block-component
+        width: 50%
+        text-align: center
+        margin-top: 20px
+        padding-top: 20px
+        border-top: 1px solid #ccc
+        &.first
+          border-right: none
+      .block-title, .title-text
+        font-size: 14px
+      .col-lg-push-4
+        .block-img
+          height: auto
+      .block-img
+        height: 154px
+      .block-downlink
+        padding-top: 0
+        a  
+          text-align: left
+          padding: 0
+          display: block
+          top: 0
+          font-size: 14px
+          > i 
+            margin-top: 0
+        > img 
+          display: none
+  
+  .about-page
+    .sub-page-banner
+      >p
+        line-height: 1.5
+        display: block!important
+        margin: 0 auto
+        width: 100%
+        padding: 0
+        display: block
+        text-align: center
+        bottom: 0
+        height: auto
+        max-width: inherit
+        top: auto
+  // ----  section-interest-content
+  .section-interest
+    padding-bottom: 0
+    &:before
+      content: none
+  .section-interest-content 
+    padding: 0
+    .title
+      font-size: 18px
+    .block-lists-interest .item-interest
+      padding: 0 20px 
+
+  // car-detail-02
+  // .car-detail-02 
+  //   .section-slider-view 
+  //     .owl-caption  .block-right-middle
+  //       position: relative
+  //       top: 0
+  //       left: 0
+  //       width: auto
+  //   .section-super-wide .block-caption.color-blue .title
+  //     font-size: 60px 
+  //   .section-super-wide .block-caption
+  //     top: 0
+  //     left: 0
+  //     width: auto
+  
+  // ----  Car detail 05
+  .car-detail-05
+    &.about-page  
+      padding-bottom: 0
+      .car-gallery-paging
+        left: 50%
+        margin-left: -138px
+    .section-components-car-content
+      margin-top: 20px
+
+  // after-sales
+  .after-sales
+    .tooltip-carousel-content
+      padding: 0 20px
+      .block-info p
+        text-align: left
+
+        
+  // table specification-car
+  .section-specification-car
+    table , tbody , tr , td 
+      display: block
+      width: 100% !important
+
+@media screen and (max-width: 414px)
+  .section-change-color-car-content .block-lists-color .color-item.active .icon
+    background-size: 100%

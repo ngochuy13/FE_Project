@@ -1,0 +1,242 @@
+/* Video Gallery Styling - 17 April 2015 */
+
+.two__col--wrapper, .hero__video--wrapper {
+	margin: 20px 0;
+	overflow: auto;
+	position: relative;
+}
+
+.two__col--wrapper.dropdown__selector {
+  height: 80px;
+  overflow: inherit;
+}
+
+.two__col--div {
+	float: left;
+	width: 50%;
+}
+
+.hero__video--wrapper {
+	border-bottom: 3px solid #000;
+	padding-bottom: 25px;
+}
+
+.hero__video--wrapper > div:first-child {
+	width: 65.5%;
+}
+
+.hero__video--wrapper > div:first-child + div {
+	width: 34%;
+}
+
+.content__wrapper {
+	padding-top: 15px;
+}
+
+.content__wrapper p {
+	line-height: 29px;
+}
+
+.content__wrapper h3 {
+	margin: 0;
+	font-size: 15px;
+}
+
+.content__wrapper img {
+	float: none !important;
+	margin: 0 !important;
+	width: 100% !important;
+	height: 120px !important;
+	background: none !important;
+}
+
+.two__col--div select {
+	width: 80%;
+}
+
+.video__gallery--wrapper {
+  overflow: auto;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.video__gallery--wrapper > div {
+	float: left;
+	width: 33.33333%;
+	margin-top: 10px;
+	box-sizing: border-box;
+}
+
+.video__gallery--wrapper > .three__col--div .content__wrapper a {
+	display: block;
+	position: relative;
+}
+
+.video__gallery--wrapper > .three__col--div .content__wrapper a:before, .video__sidebar a:before {
+	content: "";
+  	background: url("../img/play-icon-small.png") no-repeat 0 0;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+.video__gallery--wrapper > .three__col--div .content__wrapper {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.video__gallery--wrapper > .three__col--div {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.video__gallery--wrapper .content__wrapper h3 {
+	font-size: 15px;
+	text-align: left;
+}
+
+.lightbox__video--container {
+	display: none;
+}
+
+.video__sidebar a img {
+	width: 100%;
+	height: 100px;
+}
+
+.video__sidebar a {
+	display: block;
+	position: relative;
+}
+
+.video__sidebar span {
+	color: #667787;
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: bold;
+	margin: 0 0 5px;
+	display: block;
+}
+
+.video__sidebar a:hover > span {
+	color: #000 !important;
+}
+
+.v__title {
+	margin: 5px 0 0 !important;
+	text-transform: none !important;
+}
+
+.video__sidebar a:before {
+	top: -30px;
+}
+
+.video__pagi--wrapper {
+	width: 100%;
+	background-color: #f3f3f3;
+	margin: 15px 0;
+	text-align: center;
+}
+
+.video__pagi--wrapper ul {
+	display: inline-block;
+	margin: 10px 0 !important;
+	padding: 0 !important;
+}
+
+.video__pagi--wrapper ul li {
+	float: left;
+	margin-left: 35px;
+	list-style: none;
+	font-size: 13px;
+	color: #7c7c7c;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.video__pagi--wrapper ul li.active, .video__pagi--wrapper ul li:hover  {
+	color: #ae8c04;
+}
+
+.video__pagi--wrapper ul li:first-child {
+	margin-left: 0;
+}
+
+.prev__link, .next__link {
+	font-size: 13px;
+	color: #7c7c7c;
+	font-weight: 600;
+	text-transform: uppercase;
+  	margin: 10px 20px;
+  	position: relative;
+  	cursor: pointer;
+}
+
+.prev__link:hover, .next__link:hover {
+	color: #ae8c04;
+}
+
+.prev__link:hover::before {
+	content: "";
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	background: url("../img/prev-arrow-hover.png") no-repeat 0 0;
+	left: 0;
+	top: 3px;
+}
+
+.next__link:hover::before {
+	content: "";
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	background: url("../img/next-arrow-hover.png") no-repeat 0 0;
+	right: 0;
+	top: 3px;
+}
+
+.prev__link span, .next__link span {
+	display: inline-block;
+}
+
+.prev__link span {
+	margin-left: 20px
+}
+
+.next__link span {
+	margin-right: 20px
+}
+
+.prev__link {
+	float: left;
+}
+
+.prev__link:before, .next__link:before {
+	content: "";
+	width: 15px;
+	height: 15px;
+	position: absolute;
+}
+
+.prev__link:before {
+  	background: url("../img/prev-arrow.png") no-repeat 0 0;
+	left: 0;
+	top: 3px;
+}
+
+.next__link:before {
+  	background: url("../img/next-arrow.png") no-repeat 0 0;
+	right: 0;
+	top: 3px;
+}
+
+.next__link {
+	float: right;
+}

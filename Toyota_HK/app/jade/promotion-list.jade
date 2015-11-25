@@ -1,0 +1,122 @@
+extends layouts/layout
+
+block vars
+  -title = 'Promotion List'
+  -bodyClass = 'promotion-list' 
+
+block pagescript
+  // build:js scripts/home-dep.js
+  //- script(src='/scripts/lib-js/__static__.js')
+  script(src='/scripts/lib-js/imagesloaded.pkgd.min.js')
+  script(src='/scripts/lib-js/masonry.pkgd.min.js')
+  // endbuild
+
+block container
+
+  .about-page.promotion-list
+    .sub-page-banner
+      p Promotion List
+      img(src='images/form/banner.jpg', title='', alt='')
+    .posts-list-wrapper
+      h2.page-title Promotion List
+      .block-filter
+        ul#listcategory.cars-family-filter-list
+          li
+            a.cars-filter-selected(href='http://localhost:1469/en-us/new-toyota/promotion-list/', title='All', data-type='all') All
+          li
+            a(href='http://localhost:1469/en-us/new-toyota/promotion-list/category-launching/', title='Category Launching') Category Launching
+          li
+            a(href='http://localhost:1469/en-us/new-toyota/promotion-list/category-summer/', title='Category summer') Category summer
+      .posts-list
+        .grid-sizer(style='width: 30%')  
+        .gutter-sizer(style='width: 4.5454545%')  
+        span.bg-gray.col-1  
+        span.bg-gray.col-2  
+        .post-item.cate-01
+          span.cate-icon Category 1
+          a(href='#', title='Lorem ipsum dolor')
+            img(src='images/homes/post-thumb-1.jpg', alt='Post thumb')
+          h3.post-item__title
+            a(href='#', title='Lorem ipsum dolor') Lorem ipsum dolor
+          p.post-item__short-desc
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a elit mollis, pulvinar massa eu, tempor ipsum. Donec id vestibulum libero. Maecenas enim mauris
+          a.post-item__link.post-item__link--view-more(href='#', title='')
+            i.fa.fa-list
+            |  read more
+          .post-social-widgets
+            .fb-like(data-href='https://developers.facebook.com/docs/plugins/', data-layout='button_count', data-action='like', data-show-faces='false', data-share='true')
+        .post-item.cate-02
+          span.cate-icon Category 2
+          a(href='#', title='Lorem ipsum dolor')
+            img(src='images/homes/post-thumb-2.jpg', alt='Post thumb')
+          h3.post-item__title
+            a(href='#', title='Lorem ipsum dolor') Lorem ipsum dolor
+          p.post-item__short-desc
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a elit mollis, pulvinar massa eu, tempor ipsum. Donec id vestibulum libero. Maecenas enim mauris
+          a.post-item__link.post-item__link--view-more(href='#', title='')
+            i.fa.fa-list
+            |  read more
+          .post-social-widgets
+            .fb-like(data-href='https://developers.facebook.com/docs/plugins/', data-layout='button_count', data-action='like', data-show-faces='false', data-share='true')
+        .post-item.cate-03
+          span.cate-icon Category 3
+          a(href='#', title='Lorem ipsum dolor')
+            img(src='images/homes/post-thumb-3.jpg', alt='Post thumb')
+          h3.post-item__title
+            a(href='#', title='Lorem ipsum dolor') Lorem ipsum dolor
+          p.post-item__short-desc
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a elit mollis, pulvinar massa eu, tempor ipsum. Donec id vestibulum libero. Maecenas enim mauris
+          a.post-item__link.post-item__link--view-more(href='#', title='')
+            i.fa.fa-list
+            |  read more
+          .post-social-widgets
+            .fb-like(data-href='https://developers.facebook.com/docs/plugins/', data-layout='button_count', data-action='like', data-show-faces='false', data-share='true')
+        .post-item.cate-02
+          span.cate-icon Category 2
+          a(href='#', title='Lorem ipsum dolor')
+            img(src='images/homes/post-thumb-4.jpg', alt='Post thumb')
+          h3.post-item__title
+            a(href='#', title='Lorem ipsum dolor') Lorem ipsum dolor
+          p.post-item__short-desc
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a elit mollis, pulvinar massa eu, tempor ipsum. Donec id vestibulum libero. Maecenas enim mauris
+          a.post-item__link.post-item__link--view-more(href='#', title='')
+            i.fa.fa-list
+            |  read more
+          .post-social-widgets
+            .fb-like(data-href='https://developers.facebook.com/docs/plugins/', data-layout='button_count', data-action='like', data-show-faces='false', data-share='true')
+        .post-item.cate-03
+          span.cate-icon Category 3
+          a(href='#', title='Lorem ipsum dolor')
+            img(src='images/homes/post-thumb-5.jpg', alt='Post thumb')
+          h3.post-item__title
+            a(href='#', title='Lorem ipsum dolor') Lorem ipsum dolor
+          p.post-item__short-desc
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a elit mollis, pulvinar massa eu, tempor ipsum. Donec id vestibulum libero. Maecenas enim mauris
+          a.post-item__link.post-item__link--view-more(href='#', title='')
+            i.fa.fa-list
+            |  read more
+          .post-social-widgets
+            .fb-like(data-href='https://developers.facebook.com/docs/plugins/', data-layout='button_count', data-action='like', data-show-faces='false', data-share='true')
+        .post-item.cate-02
+          span.cate-icon Category 2
+          a(href='#', title='Lorem ipsum dolor')
+            img(src='images/homes/post-thumb-6.jpg', alt='Post thumb')
+          h3.post-item__title
+            a(href='#', title='Lorem ipsum dolor') Lorem ipsum dolor
+          p.post-item__short-desc
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a elit mollis, pulvinar massa eu, tempor ipsum. Donec id vestibulum libero. Maecenas enim mauris
+          a.post-item__link.post-item__link--view-more(href='#', title='')
+            i.fa.fa-list
+            |  read more
+          .post-social-widgets
+            .fb-like(data-href='https://developers.facebook.com/docs/plugins/', data-layout='button_count', data-action='like', data-show-faces='false', data-share='true')
+    .pagination
+      ul.pager
+        li
+          a.back.disabled(href='#', title='#') Back
+        li
+          a.active(href='http://localhost:1469/en-us/new-toyota/promotion-list/?page=1', title='http://localhost:1469/en-us/new-toyota/promotion-list/?page=1') 1
+        li
+          a(href='http://localhost:1469/en-us/new-toyota/promotion-list/?page=2', title='http://localhost:1469/en-us/new-toyota/promotion-list/?page=2') 2
+        li
+          a.next(href='http://localhost:1469/en-us/new-toyota/promotion-list/?page=1', title='http://localhost:1469/en-us/new-toyota/promotion-list/?page=1') Next

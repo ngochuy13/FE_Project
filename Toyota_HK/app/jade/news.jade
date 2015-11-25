@@ -1,0 +1,94 @@
+extends layouts/layout
+
+block vars
+	-title = 'News'
+	-bodyClass = 'news' 
+
+block container
+	//- .aftersales-infor.feature-img
+	//- 	.sub-page-banner
+	//- 		p 資訊中心
+	//- 		img(src='images/news/feature-news.jpg', title='', alt='')
+	.sub-page-banner.feature-img
+		p 資訊中心
+		picture
+			source(srcset='images/news/feature-news-mobile.jpg', media='(max-width: 767px)')
+			source(srcset='images/news/feature-news.jpg', media='(max-width: 1280px)')
+			img.master-banner-img.intel-scaling(src='images/news/feature-news.jpg', alt='', data-width='1920', data-height='411')
+	.news-content
+		.inner
+			h2.page-title.custom-page-title 新聞
+			.news-select
+				ul#listcategory.cars-family-filter-list
+					li
+						a.cars-filter-selected(href='#', title='All', data-type='all') 全部月份
+					li
+						a(href='#', title='Category Launching') 全部月份
+					li
+						a(href='#', title='Category summer') 全部月份
+				ul#listcategory.cars-family-filter-list.list-filter-2
+					li
+						a.cars-filter-selected(href='#', title='All', data-type='all') 全部月份
+					li
+						a(href='#', title='Category Launching') 全部月份
+					li
+						a(href='#', title='Category summer') 全部月份
+				//- .dropdown
+				//- 	button.btn.btn-default.dropdown-toggle#dropdownNews1(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="true") 全部月份
+				//- 		span.caret
+				//- 	ul.dropdown-menu(aria-labelledby="dropdownNews1")
+				//- 		li
+				//- 			a(href="#") 全部月份
+				//- 			a(href="#") 全部月份
+				//- 			a(href="#") 全部月份
+				//- 			a(href="#") 全部月份
+				//- 			a(href="#") 全部月份
+				//- .dropdown.dropdown2
+				//- 	button.btn.btn-default.dropdown-toggle#dropdownNews2(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="true") 全部月份
+				//- 		span.caret
+				//- 	ul.dropdown-menu(aria-labelledby="dropdownNews2")
+				//- 		li
+				//- 			a(href="#") 全部月份
+				//- 			a(href="#") 全部月份
+				//- 			a(href="#") 全部月份
+				//- 			a(href="#") 全部月份
+				//- 			a(href="#") 全部月份
+			.news-list
+				ul
+					li
+						.col.news-img
+							a(href="#")
+								img(src='images/news/news-list1.jpg', title='', alt='')
+						.col.news-details
+							p.news-date 2015年11月16日
+							a.title(href="#") TMC參加19屆 ITS世界大會
+							p.caption 豐田汽車公司（TMC）將奧地利從10月22日至2015年10月26日舉辦的公司展示展台在19 ITS世界大會在維也納。
+							a.tools.exel(href="#") 了解更多
+					li
+						.col.news-img
+							a(href="#")
+								img(src='images/news/news-list1.jpg', title='', alt='')
+						.col.news-details
+							p.news-date 2015年11月16日
+							a.title(href="#") TMC參加19屆 ITS世界大會
+							p.caption 豐田汽車公司（TMC）將奧地利從10月22日至2015年10月26日舉辦的公司展示展台在19 ITS世界大會在維也納。
+							a.tools.pdf(href="#") 了解更多
+					li
+						.col.news-img
+							a(href="#")
+								img(src='images/news/news-list1.jpg', title='', alt='')
+						.col.news-details
+							p.news-date 2015年11月16日
+							a.title(href="#") TMC參加19屆 ITS世界大會
+							p.caption 豐田汽車公司（TMC）將奧地利從10月22日至2015年10月26日舉辦的公司展示展台在19 ITS世界大會在維也納。
+							a.tools.pdf(href="#") 了解更多
+			.news-pagination
+				ul
+					li
+						a.prev.no-direct(href="#") <
+						a.first.active(href="#") 1
+						a(href="#") 2
+						a(href="#") 3
+						a(href="#") 4
+						a(href="#") 5
+						a.next(href="#") >

@@ -1,0 +1,43 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Press-Room'
+  -bodyClass = ''
+  -bannerIMG = 'press-room-detail/banner-1.jpg'
+  -page = 'pressroom'
+block pagescript
+
+block breadcrumb  
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#"
+      },{
+        "text": "EXPERIENCES",
+        "href":"#"
+      }])
+
+
+block container
+  .inner
+    main#main
+      .section-press-room.section-block.gray
+        +page-title("AMG DRIVING PERFORMANCE COOPERATION", "Mercedes-AMG", "AFFALTERBACH AND THE THREE KEMPINSKI HOTELS").gray
+      .section-press-room
+        .press-room-detail-content
+          .content
+            .container
+              .block-wrap
+                .media
+                  +img("Pressroom detail", "restaurant-detail/img-1.jpg")
+                .editor-content.description
+                  p
+                    h2 DRIVING TO 3 KEMPINSKI HOTEL OVER 300KM...
+                    |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis erat nec fringilla scelerisque. Curabitur bibendum lectus ac felis laoreet, eget imperdiet enim faucibus. Integer eu lorem id neque fermentum venenatis. Aliquam dictum, ante pulvinar accumsan finibus, libero quam dignissim eros, eget convallis magna ligula at libero. Etiam quis eros id orci luctus vestibulum. Nullam egestas sed sem in vehicula. Aenean vitae tellus quis ex condimentum ullamcorper. Nulla justo sapien, euismod eu tristique eget, bibendum sit amet tortor. Nullam nec metus sed orci placerat lacinia in a justo. Donec eu pharetra odio. Donec eleifend hendrerit quam accumsan finibus. Nunc maximus orci sapien, sed consectetur nibh semper ac. Vivamus at libero ut leo imperdiet semper a eu sem. Fusce dignissim dignissim quam eget auctor. Suspendisse luctus quam ut ex scelerisque vulputate.
+                    br
+                    br
+                    |Donec sollicitudin diam quis enim tristique, semper cursus massa gravida. Nulla quis lorem in leo fermentum faucibus. Phasellus accumsan egestas nibh, a venenatis augue pharetra vel. Nam volutpat sapien justo, non porttitor enim elementum id. Morbi feugiat augue a nulla condimentum sollicitudin. Donec et libero facilisis, elementum purus a, mattis ligula. Vivamus ligula dolor, ullamcorper in elit ut, vestibulum congue ipsum. Sed in luctus erat. Donec ac ante ac risus iaculis sodales. Phasellus quis arcu non tortor rutrum varius. Proin aliquet sapien nec risus ornare mollis. Cras id odio id magna suscipit vulputate. Curabitur velit orci, aliquet vitae eros id, feugiat porttitor ligula.
+                    br
+                    br
+                    |Nulla justo sapien, euismod eu tristique eget, bibendum sit amet tortor. Nullam nec metus sed orci placerat lacinia in a justo. Donec eu pharetra odio. Donec eleifend hendrerit quam accumsan finibus. Nunc maximus orci sapien, sed consectetur nibh semper ac. Vivamus at libero ut leo imperdiet semper a eu sem. Fusce dignissim dignissim quam eget auctor. Suspendisse luctus quam ut ex scelerisque vulputate.

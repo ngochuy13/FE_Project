@@ -1,0 +1,17 @@
+{
+  "name": "gulp",
+  "private": true,
+  "dependencies": {
+    "modernizr": "2.8.3",
+    "bourbon": "3.2.4",
+    "jquery": "1.11.1",
+    "nicescroll": "3.5.6",
+    "jquery-accordion": "",
+    "tooltipster": "3.3.0",
+    "bootstrap-select": "^1.6.3",
+    "bootstrap-sass": "3.2.0",
+    "matchHeight": "https://github.com/liabru/jquery-match-height.git",
+    "cookies-js": "1.2.1",
+    "owl-carousel2": ""
+  }
+}

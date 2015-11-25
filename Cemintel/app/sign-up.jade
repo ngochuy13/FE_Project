@@ -1,0 +1,65 @@
+extends layouts/default
+
+block content
+	.sign-up-page
+		.title-page
+			.container
+				.icon
+					img(src="images/signup-icon.png", alt="")
+				h3.bold Sign up
+		.content-page
+			.container.notsuccess
+				.row
+					.p.col-md-12
+						.bold Register for CSR Cemintel
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.	
+					.form-sign-up
+						form(action="" name="sign-up-page-form" id="sign-up-page-form")
+							.col-sm-10.col-md-8
+								.row
+									form(action="" name="" id="contact-form")
+										.col-sm-6.col-md-4.col-xs-8
+											+dropDown('Mr.', 'title')
+										.clearfix
+										.col-sm-6
+											input.gl-input(type="text" placeholder="First Name" required name="fname")
+										.col-sm-6
+											input.gl-input(type="text" placeholder="Last Name" required name="lname")
+										.col-sm-6
+											+dropDown('What describes you?', 'describes')
+										.col-sm-6
+											input.gl-input(type="text" placeholder="Company Name" required name="company")
+										.col-sm-6
+											input.gl-input(type="text" placeholder="Address" required name="address")
+										.col-sm-6
+											input.gl-input(type="text" placeholder="Suburb" required name="suburb")
+										.col-sm-6
+											+dropDown('Select your State', 'state')
+										.col-sm-6
+											input.gl-input(type="text" placeholder="Post Code" required name="postcode")
+										.col-sm-6
+											input.gl-input(type="email" placeholder="Email Address" required name="email")
+										.col-sm-6
+											input.gl-input(type="text" placeholder="Phone" required name="phone")
+										.col-sm-6
+											input.gl-input#password(type="password" placeholder="Password" required name="password")
+										.col-sm-6
+											input.gl-input(type="password" placeholder="Confirm Password" required name="confirmPassword" data-rule-equalto="#password")
+										.col-sm-9.col-xs-9
+											label(for="agree").label-agree
+												input#agree(type="checkbox" required name="term")
+												.checkBox
+												p Would you like to receive more informations about Cemintel?
+										.col-sm-3.col-xs-3
+											button(type="submit").button.rainbow.pull-right.button-signup.button-having-loading
+												.overlay
+													.relative-container
+														img(src="images/loading.png" alt="Loading")
+												div.bgw Register
+										.col-xs-4.col-xs-offset-4
+											.error-mess.tac
+												span.small You've entered wrong password !
+			.container.sign-up-success.p
+				div.bold You are in! Welcome
+				p _Your account has been successfully created. But you'll need to verify your account by clicking a link in the account creation confirmation email. Please make sure you verify your account within 24 hours. Or your account creation will be cancelled and you will have to register again. Please check your junk/spam mailbox as some of our emails may go directly to your spam mail box._<br/><br/>
+				div.bold We have sent you an email to confirm it.

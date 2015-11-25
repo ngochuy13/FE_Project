@@ -1,0 +1,80 @@
+mixin input(type, name, value)
+  - if(typeof(value) ==='undefined'){
+      input(type="#{type}", name="#{name}")&attributes(attributes)
+  - }else{
+      input(type="#{type}", name="#{name}", value ="#{value}")&attributes(attributes)
+  -}
+
+mixin input-with-icon(type, name, value, placeholder, iconClass)
+  - if(typeof(placeholder) ==='undefined'){
+  - placeholder = ""
+  - }
+  - if(typeof(iconClass) ==='undefined'){
+  - iconClass = ""
+  - }
+  .input-with-icon&attributes(attributes)
+    +input(type, name, value)(placeholder="#{placeholder}").form-control
+    span.fa(class="#{iconClass}")
+
+mixin datepicker(placeholder, name, value)
+  - if(typeof(placeholder) ==='undefined'){
+  - placeholder = "Arrival Date"
+  - }
+  +input-with-icon('text', name, value, placeholder, "fa-calendar").date-picker&attributes(attributes)
+
+mixin fake-datepicker(placeholder, name, value, id, isReadonly)
+  - if(typeof(placeholder) ==='undefined'){
+  - placeholder = "Arrival Date"
+  - }
+  - if(typeof(placeholder) ==='undefined'){
+  - placeholder = ""
+  - }
+  - if(typeof(iconClass) ==='undefined'){
+  - iconClass = ""
+  - }
+  .input-with-icon&attributes(attributes)
+    +input('hidden', name, value)(placeholder="#{placeholder}" readonly="#{isReadonly}")
+    div(id="#{id}").form-control.type-input!=placeholder
+    span.icon-calendar
+mixin input-control-horizontal(label, id, required)
+  .form-group
+    .col-sm-2.control-label-wrap
+      label.control-label(for="#{id}")!=label    
+    .col-sm-10
+      - if (required===true)
+        input.form-control(id="#{id}" type="text", required)
+      - else
+        input.form-control(id="#{id}" type="text")
+mixin input-control-horizontal-short(label, id, required)
+  .form-group
+    .col-sm-4.control-label-wrap
+      label.control-label(for="#{id}")!=label    
+    .col-sm-8
+      - if (required===true)
+        input.form-control(id="#{id}" type="text", required)
+      - else
+        input.form-control(id="#{id}" type="text")
+mixin select-control(label)
+  .form-group
+    label.control-label!=label
+    .select-wrap
+      select.bootstrap-select
+        option PLEASE SELECT
+        option Hotel 1
+        option Hotel 2
+        option Hotel 3
+        option Hotel 4
+        option Hotel 5
+        option Hotel 6
+        option Hotel 7
+        option Hotel 8
+        option Hotel 9
+mixin input-control(label, id, required)
+  .form-group
+    label.control-label(for="#{id}")!=label
+    - if (required===true)
+      input.form-control(id="#{id}" type="text", required)
+    - else
+      input.form-control(id="#{id}" type="text")
+
+

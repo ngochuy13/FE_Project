@@ -1,0 +1,258 @@
+extends layouts/layout
+
+block vars
+	-title = 'Awards'
+	-bodyClass = 'awards' 
+
+block container
+	.sub-page-banner.feature-img
+		p 資訊中心
+		picture
+			source(srcset='images/news/feature-news-mobile.jpg', media='(max-width: 767px)')
+			source(srcset='images/news/feature-news.jpg', media='(max-width: 1280px)')
+			img.master-banner-img.intel-scaling(src='images/news/feature-news.jpg', alt='', data-width='1920', data-height='411')
+	.awards-content
+		.inner
+			.section.section-specification-car
+				.container
+					h3.heading-awards 本節介紹豐田從代表了汽車行業的各個領域的團體獲得的獎項。
+					h2.title 獲得獎項
+					.table-content
+						table
+							tbody
+								tr 
+									td(rowspan="5").title Toyota
+									td Yahoo! 
+									td 2010 - 2012 感情品牌大獎
+										img(src='images/awards/yahoo-hk.png', title='', alt='')
+								tr 
+									td Automobile
+									td 2010 - 2012 年度最高銷量品牌
+								tr 
+									td CarPlus
+									td 2010 - 2013 最佳銷售品牌
+								tr 
+									td CazBuyer
+									td 2011 我最喜愛多用途車品牌
+								tr 
+									td East Touch
+									td Touch Brands 2010-2011
+								tr 
+									td(rowspan="3").title Toyota 86
+									td CarPlus
+									td 2012 轎跑車王
+								tr 
+									td CarPlus + HIM
+									td 2012 轎跑車王
+								tr 
+									td TopGear
+									td 2012 Coupe of the Year
+								tr 
+									td(rowspan="2").title Toyota Ractics
+									td CarPlus
+									td 2011 日本揭背車王
+								tr 
+									td JESSICAR
+									td 2011 JESSICAR 2011 Awards
+								tr 
+									td(rowspan="2").title Toyota Camry
+									td Automobile
+									td 2009 最佳豪華家庭房車
+								tr 
+									td CarPlus
+									td 2011 日本行政車王(Camry Hybrid)
+								tr 
+									td(rowspan="2").title Toyota Corolla
+									td Car1.hk
+									td 2010 最佳家庭車首選(編輯之選)
+								tr 
+									td Car1.hk
+									td 2011 最佳家庭車首選(讀者之選)
+								tr
+									td(rowspan="5").title Toyota Alphard
+									td Automobile
+									td 2009 - 2013 最佳豪華多用途汽車
+								tr 
+									td CarPlus
+									td 2009, 2011 & 2012 豪華MPV車王
+								tr 
+									td Car1.hk
+									td 2011 最佳多用途車售選(讀者之選)
+								tr 
+									td Car1.hk
+									td 2011 最佳多用途車售選(編輯之選)
+								tr 
+									td CazBuyer
+									td 2010 我最喜愛易手汽車品牌–豪華多用途車
+								tr
+									td(rowspan="4").title Toyota Vellfire
+									td Automobile
+									td 2010 & 2011 最佳豪華多用途車
+								tr 
+									td Car1.hk
+									td 2011 最佳多用途車售選(讀者之選)
+								tr 
+									td Car1.hk
+									td 2011 最佳多用途車售選(編輯之選)
+								tr 
+									td CazBuyer
+									td 2010 我最喜愛易手汽車品牌–豪華多用途車
+								tr
+									td(rowspan="6").title Toyota Noah
+									td Automobile
+									td 2011-2013 最佳中型多用途車
+								tr 
+									td Automobile
+									td 2010 最佳汽車銅獎
+								tr 
+									td Automobile
+									td 2009 最佳多用途汽車
+								tr 
+									td CarPlus
+									td 2012 MPV車王
+								tr 
+									td CarPlus
+									td 2011 中型多用途車王
+								tr 
+									td CarPlus
+									td 2010 & 2013 最佳銷售型號
+			//- h2.page-title.custom-page-title.heading-awards 本節介紹豐田從代表了汽車行業的各個領域的團體獲得的獎項。
+			//- .awards-box
+			//- 	.inner
+			//- 		h3 獲得獎項
+			//- 		.awards-table
+			//- 			.row-awards
+			//- 				.col.awards-car Toyota
+			//- 				.col.awards-img 
+			//- 					img(src='images/awards/yahoo-hk.png', title='', alt='')
+			//- 				.col.awards-details
+			//- 					ul
+			//- 						li
+			//- 							.col.awards-details-name Yahoo!
+			//- 							.col.awards-details-time 2010 - 2012 感情品牌大獎
+			//- 						li
+			//- 							.col.awards-details-name Automobile
+			//- 							.col.awards-details-time 2010 - 2012 年度最高銷量品牌
+			//- 						li
+			//- 							.col.awards-details-name CarPlus
+			//- 							.col.awards-details-time 2010 - 2013 最佳銷售品牌
+			//- 						li
+			//- 							.col.awards-details-name CazBuyer
+			//- 							.col.awards-details-time 2011 我最喜愛多用途車品牌
+			//- 						li
+			//- 							.col.awards-details-name East Touch
+			//- 							.col.awards-details-time Touch Brands 2010-2011
+			//- 			.row-awards
+			//- 				.col.awards-car Toyota 86
+			//- 				.col.awards-img
+			//- 				.col.awards-details
+			//- 					ul
+			//- 						li
+			//- 							.col.awards-details-name CarPlus
+			//- 							.col.awards-details-time 2012 轎跑車王
+			//- 						li
+			//- 							.col.awards-details-name CarPlus + HIM
+			//- 							.col.awards-details-time 2012 轎跑車王
+			//- 						li
+			//- 							.col.awards-details-name TopGear
+			//- 							.col.awards-details-time 2012 Coupe of the Year
+			//- 			.row-awards
+			//- 				.col.awards-car Toyota Ractics
+			//- 				.col.awards-img 
+			//- 				.col.awards-details
+			//- 					ul
+			//- 						li
+			//- 							.col.awards-details-name CarPlus
+			//- 							.col.awards-details-time 2011 日本揭背車王
+			//- 						li
+			//- 							.col.awards-details-name JESSICAR
+			//- 							.col.awards-details-time 2011 JESSICAR 2011 Awards
+			//- 			.row-awards
+			//- 				.col.awards-car Toyota Camry
+			//- 				.col.awards-img 
+			//- 				.col.awards-details
+			//- 					ul
+			//- 						li
+			//- 							.col.awards-details-name Automobile
+			//- 							.col.awards-details-time 2009 最佳豪華家庭房車
+			//- 						li
+			//- 							.col.awards-details-name CarPlus
+			//- 							.col.awards-details-time 2011 日本行政車王(Camry Hybrid)
+			//- 			.row-awards
+			//- 				.col.awards-car Toyota Corolla
+			//- 				.col.awards-img 
+			//- 				.col.awards-details
+			//- 					ul
+			//- 						li
+			//- 							.col.awards-details-name Car1.hk
+			//- 							.col.awards-details-time 2010 最佳家庭車首選(編輯之選)
+			//- 						li
+			//- 							.col.awards-details-name Car1.hk
+			//- 							.col.awards-details-time 2011 最佳家庭車首選(讀者之選)
+			//- 			.row-awards
+			//- 				.col.awards-car Toyota Alphard
+			//- 				.col.awards-img 
+			//- 				.col.awards-details
+			//- 					ul
+			//- 						li
+			//- 							.col.awards-details-name Automobile
+			//- 							.col.awards-details-time 2009 - 2013 最佳豪華多用途汽車
+			//- 						li
+			//- 							.col.awards-details-name CarPlus
+			//- 							.col.awards-details-time 2009, 2011 & 2012 豪華MPV車王
+			//- 						li
+			//- 							.col.awards-details-name Car1.hk
+			//- 							.col.awards-details-time 2011 最佳多用途車售選(讀者之選)
+			//- 						li
+			//- 							.col.awards-details-name Car1.hk
+			//- 							.col.awards-details-time 2011 最佳多用途車售選(編輯之選)
+			//- 						li
+			//- 							.col.awards-details-name CazBuyer
+			//- 							.col.awards-details-time 2010 我最喜愛易手汽車品牌–豪華多用途車
+			//- 			.row-awards
+			//- 				.col.awards-car Toyota Vellfire
+			//- 				.col.awards-img 
+			//- 				.col.awards-details
+			//- 					ul
+			//- 						li
+			//- 							.col.awards-details-name Automobile
+			//- 							.col.awards-details-time 2010 & 2011 最佳豪華多用途車
+			//- 						li
+			//- 							.col.awards-details-name Car1.hk
+			//- 							.col.awards-details-time 2011 最佳多用途車售選(讀者之選)
+			//- 						li
+			//- 							.col.awards-details-name Car1.hk
+			//- 							.col.awards-details-time 2011 最佳多用途車售選(編輯之選)
+			//- 						li
+			//- 							.col.awards-details-name CazBuyer
+			//- 							.col.awards-details-time 2010 我最喜愛易手汽車品牌–豪華多用途車
+			//- 			.row-awards
+			//- 				.col.awards-car Toyota Noah
+			//- 				.col.awards-img 
+			//- 				.col.awards-details
+			//- 					ul
+			//- 						li
+			//- 							.col.awards-details-name Automobile
+			//- 							.col.awards-details-time 2011-2013 最佳中型多用途車
+			//- 						li
+			//- 							.col.awards-details-name Automobile
+			//- 							.col.awards-details-time 2010 最佳汽車銅獎
+			//- 						li
+			//- 							.col.awards-details-name Automobile
+			//- 							.col.awards-details-time 2009 最佳多用途汽車
+			//- 						li
+			//- 							.col.awards-details-name CarPlus
+			//- 							.col.awards-details-time 2012 MPV車王
+			//- 						li
+			//- 							.col.awards-details-name CarPlus
+			//- 							.col.awards-details-time 2011 中型多用途車王
+			//- 						li
+			//- 							.col.awards-details-name CarPlus
+			//- 							.col.awards-details-time 2010 & 2013 最佳銷售型號
+
+
+
+
+
+
+

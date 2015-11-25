@@ -1,0 +1,70 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Meetings Events Details'
+  -bodyClass = ''
+  -bannerIMG = 'home/banner.jpg'
+  -page = 'meetings-events'
+block pagescript
+
+block breadcrumb
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#"
+      },{
+        "text": "MIDDLE EAST",
+        "href":"#"
+      },{
+        "text": "EMIRATES PALACE",
+        "href":"#"
+      },{
+        "text": "MEETINGS & EVENTS",
+        "href":"#"
+      },{
+        "text": "EMIRATES CENTRE",
+        "href":"#"
+      }])
+
+block container    
+  .inner
+    main#main
+      section.section-block.gray
+        +page-title("EMIRATES PALACE VENUES", "Explore Emirates Palace", "AUDITORIUM AND BALLROOM").gray
+      
+        .room-suite-gallery.wow.fadeIn(data-wow-duration="0.5s")
+          +filter-select([
+            {
+              "text": "CONFERENCE CENTRE",
+              "link": "#conference-centre"
+            },
+            {
+              "text": "ISLAND CENTRE",
+              "link": "#island-centre"
+            },
+            {
+              "text": "EMIRATES CENTRE",
+              "link": "#emirates-centre"
+            },
+            {
+              "text": "BUSINESS CENTRE",
+              "link": "#business-centre"
+            },
+            {
+              "text": "TERRACES & EXHIBITION",
+              "link": "#terraces-exhibition"
+            }
+          ])
+          .tab-content.white
+            #conference-centre.tab-pane.active(role='tabpanel')
+              +meetings-article-blog('CONFERENCE CENTRE' , 'meetings-events/img-gallery-1.jpg' , 'meetings-events/img-gallery-2.jpg').mt-40
+            #island-centre.tab-pane(role='tabpanel')
+              +meetings-article-blog('ISLAND CENTRE' , 'meetings-events/img-gallery-2.jpg' , 'meetings-events/img-gallery-2.jpg').mt-40
+            #emirates-centre.tab-pane(role='tabpanel')
+              +meetings-article-blog('EMIRATES CENTRE' , 'meetings-events/img-gallery-1.jpg' , 'meetings-events/img-gallery-1.jpg').mt-40
+            #business-centre.tab-pane(role='tabpanel')
+              +meetings-article-blog('BUSINESS CENTRE' , 'meetings-events/img-gallery-2.jpg' , 'meetings-events/img-gallery-1.jpg').mt-40
+            #terraces-exhibition.tab-pane(role='tabpanel')
+              +meetings-article-blog('TERRACES & EXHIBITION' , 'meetings-events/img-gallery-1.jpg' , 'meetings-events/img-gallery-2.jpg').mt-40
+            

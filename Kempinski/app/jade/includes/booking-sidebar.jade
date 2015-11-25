@@ -1,0 +1,59 @@
+.side-bar
+  form#side-form
+    .title YourReservation
+    .booking-summary
+      p
+        | Chosen Hotel: Emirates Palace, UAE<br/>
+        | Dates: Oct 31, 2015 to Nov 5, 2015<br/>
+        | Rooms: 1 room for <br/>
+        | People: 1 adult and 0 children<br/>
+    
+    .block
+      .title Modify Search
+      .row
+        .col-xs-12.col-sm-6
+          .input-with-icon
+            input#checkin.form-control(type='undefined', name='CheckIn', value='', placeholder='Check-in')
+            span.fa.fa-calendar
+        .col-xs-12.col-sm-6
+          .input-with-icon
+            input#checkout.form-control(type='undefined', name='CheckOn', value='', placeholder='Check-out')
+            span.fa.fa-calendar
+    
+    .block
+      .title Rooms Needed
+      .form-group
+        .select-wrap
+          select.bootstrap-select
+            option No Rooms
+            option 1
+            option 2
+            option 3
+      .form-group
+        label.control-label No ADULTS PER ROOM
+        .select-wrap
+          select.bootstrap-select
+            option 0
+            option 1
+            option 2
+      .form-group
+        label.control-label CHILDREN 0-5
+        .select-wrap
+          select.bootstrap-select
+            option 0
+            option 1
+            option 2
+      .form-group
+        label.control-label CHILDREN 6-12
+        .select-wrap
+          select.bootstrap-select
+            option 0
+            option 1
+            option 2
+      a(href="#").link Agent / Promotional code
+      .btn-group.cta-btns.wide
+        input(type="submit", value="SUBMIT DETAILS").btn.btn-default
+      a(href="#").link Terms & Conditions
+      a(href="#").link Privacy Policy
+      a(href="#").link Children Policy
+

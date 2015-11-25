@@ -1,0 +1,31 @@
+mixin thumbs-profile(img, title, listItem)
+  .thumbs-profile&attributes(attributes)
+    article.thumbs-1
+      figure
+        img(src="images/#{img}", alt="#{title}").img-responsive
+      .info
+        h2.title-1!=title
+        ul
+          each item in listItem
+            li
+              span!=item.text
+        if block
+          block
+      .clearfix
+
+mixin car-price-item(name, image, link, isNew)
+  .cars-list__item.col-xs-12.col-sm-6.col-md-3.col-lg-3&attributes(attributes)
+    a.car-info(href='#{link}', title='#{name}')
+      img(src='images/price-list/#{image}', alt='#{name}')
+      - if(isNew)
+        span.car-new New
+      span.car-name #{name}
+    if block
+      block
+
+mixin car-price-item-detail(models)
+  .models
+    each model in models
+      .car-model
+        span.car-model-name= model.name
+        span.car-model-price= model.price

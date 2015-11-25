@@ -1,0 +1,582 @@
+extends layouts/layout
+
+block vars
+  -title = 'Car Sienta'
+  -bodyClass = 'car-detail zh-HK'
+
+  -sientaTcText = {}
+  -sientaTcText.banner= {}
+  -sientaTcText.banner.bannerContent= []
+  -sientaTcText.banner.bannerContent[0] = {}
+  -sientaTcText.banner.bannerContent[0].titleSmall= '享樂7人同行'
+  -sientaTcText.banner.bannerContent[0].title= 'Sienta'
+  -sientaTcText.banner.bannerContent[0].price= '即將公佈'
+  -sientaTcText.banner.bannerContent[0].description= '<p>無論同一家人，定係同一班Friend，<br/>就係鍾意載著一車熱鬧嘅氣氛，<br/>一齊同行。</p>'
+  -sientaTcText.banner.bannerContent[1] = {}
+  -sientaTcText.banner.bannerContent[1].titleSmall= '享樂7人同行'
+  -sientaTcText.banner.bannerContent[1].title= 'Sienta'
+  -sientaTcText.banner.bannerContent[1].price= '$189,800 起'
+  -sientaTcText.banner.bannerContent[1].description= '<p>無論同一家人，定係同一班Friend，<br/>就係鍾意載著一車熱鬧嘅氣氛，<br/>一齊同行。</p>'  
+  -sientaTcText.banner.bannerControl= []
+  -sientaTcText.banner.bannerControl[0]= '暢遊'
+  -sientaTcText.banner.bannerControl[1]= '放鬆'
+
+  -sientaTcText.runs= {}
+  -sientaTcText.runs.smallTitle= ''
+  -sientaTcText.runs.title= '電動雙趟隨意門'
+  -sientaTcText.runs.description= '<p>就算遇上再迫嘅車位，左右兩邊都可以輕鬆上落，<br/>能夠隨意，先至得人鍾意。<br/>特低地台設計，上落更方便</p>'
+  -sientaTcText.runs.noteText= ''
+  -sientaTcText.runs.arrowText= []
+  -sientaTcText.runs.arrowText[0]= '650mm'
+  -sientaTcText.runs.arrowText[1]= '1145mm'
+  -sientaTcText.runs.arrowText[2]= '330mm'
+
+  -sientaTcText.wideLong= {}
+  -sientaTcText.wideLong.title= '位位闊落誠實真正7人車'
+  -sientaTcText.wideLong.description= '就算７個大人，都坐得落！對腳仲可以伸展闊落，咁先至稱得上「真正７人車」！'
+
+  -sientaTcText.changeChair= {}
+  -sientaTcText.changeChair.title= '收納達人'
+  -sientaTcText.changeChair.subTitle= '靈活後排座椅'
+  -sientaTcText.changeChair.description= '收納秘技 - 將後排一拉收落中排位置，騰出更多空間，畀你收納更多。'
+
+
+  -sientaTcText.carDetail=  {}
+  -sientaTcText.carDetail.tabTitle= []
+  -sientaTcText.carDetail.tabTitle[0]= '矚目外型'
+  -sientaTcText.carDetail.tabTitle[1]= '型格設計'
+  -sientaTcText.carDetail.tabTitle[2]= '性能表現'
+  -sientaTcText.carDetail.tabTitle[3]= '安全系統'
+
+  -sientaTcText.carDetail.tooltipLandingExterior= {}
+  -sientaTcText.carDetail.tooltipLandingExterior.description= '一身出眾外表，充滿玩味！V shape頭燈，Sharp醒外形，<br/>突破沉悶，先能夠突圍而出。'
+  -sientaTcText.carDetail.tooltipLandingExterior.tooltips= []
+  -sientaTcText.carDetail.tooltipLandingExterior.tooltips[0]= '自動開關LED車頭燈連光線高低調校'
+  -sientaTcText.carDetail.tooltipLandingExterior.tooltips[1]= '前霧燈'
+  -sientaTcText.carDetail.tooltipLandingExterior.tooltips[2]= '16吋 合金輪圈'
+  -sientaTcText.carDetail.tooltipLandingExterior.tooltips[3]= '遙控電動門附設一按式電動側門開關, 電索功能及阻力探測器'
+  -sientaTcText.carDetail.tooltipLandingExterior.tooltips[4]= '電動調校門邊鏡連指揮燈'
+  -sientaTcText.carDetail.tooltipLandingExterior.tooltips[5]= 'LED刹車燈'
+
+  -sientaTcText.carDetail.tooltipLandingInterior= {}
+  -sientaTcText.carDetail.tooltipLandingInterior.description= '內櫳闊落，配合劇院式座椅設計，前景一望無阻，舒適感加空間感，兩樣有晒都唔算貪心。'
+  -sientaTcText.carDetail.tooltipLandingInterior.tooltips= []
+  -sientaTcText.carDetail.tooltipLandingInterior.tooltips[0]= '儀錶板連 4.2吋彩色TFT多功能顯示屏'
+  -sientaTcText.carDetail.tooltipLandingInterior.tooltips[1]= '可作5/5滾摺式中排座椅'
+  -sientaTcText.carDetail.tooltipLandingInterior.tooltips[2]= '第三排座椅簡易一拉式摺合功能'
+  -sientaTcText.carDetail.tooltipLandingInterior.tooltips[3]= '寬敞行李空間'
+  -sientaTcText.carDetail.tooltipLandingInterior.tooltips[4]= '全新中控台設計'
+
+  -sientaTcText.carDetail.tooltipLandingPerformance= {}
+  -sientaTcText.carDetail.tooltipLandingPerformance.description= 'Enjoy effortless precision driving with revved-up power and unrestrained performance'
+  -sientaTcText.carDetail.tooltipLandingPerformance.tooltips= []
+  -sientaTcText.carDetail.tooltipLandingPerformance.tooltips[0]= '1,496 cc  汽缸容量'
+  -sientaTcText.carDetail.tooltipLandingPerformance.tooltips[1]= '直列式四汽缸雙頂凸輪軸16氣閥VVT-iE 引擎連智能停車熄匙系統'
+  -sientaTcText.carDetail.tooltipLandingPerformance.tooltips[2]= '超級智慧型無段變速自動波箱'
+  -sientaTcText.carDetail.tooltipLandingPerformance.tooltips[3]= 'HYBRID SYSTEM'
+
+  -sientaTcText.carDetail.tooltipLandingSafety= {}
+  -sientaTcText.carDetail.tooltipLandingSafety.tooltips= []
+  -sientaTcText.carDetail.tooltipLandingSafety.tooltips[0]= '雙安全氣囊'
+  -sientaTcText.carDetail.tooltipLandingSafety.tooltips[1]= 'Safety 2'
+  -sientaTcText.carDetail.tooltipLandingSafety.tooltips[2]= 'Safety 3'
+  -sientaTcText.carDetail.tooltipLandingSafety.noteText= '圖片為海外型號'
+  
+  -sientaTcText.colors= {}
+  -sientaTcText.colors.description= ''
+  -sientaTcText.colors.colorNames= []
+  -sientaTcText.colors.colorNames[0]= '跳躍黃'
+  -sientaTcText.colors.colorNames[1]= '珍珠白'
+  -sientaTcText.colors.colorNames[2]= '青草綠'
+  -sientaTcText.colors.colorNames[3]= '型閃銀'
+  -sientaTcText.colors.colorNames[4]= '火辣紅'
+  -sientaTcText.colors.colorNames[5]= '低調黑'
+  -sientaTcText.colors.colorNames[6]= '閃電藍'
+  -sientaTcText.colors.colorNames[7]= '復刻啡'
+
+
+
+block pagescript
+  //- Dep only for car detail page
+  // build:js scripts/car-detail-dep.js
+  script(src='/scripts/lib-js/rangeslider.js')
+  script(src='/scripts/lib-js/interact-1.2.4.js')
+  script(src='/scripts/lib-js/jquery.panelSnap.js')
+  // endbuild
+
+  // build:js scripts/car-detail.js
+  script(src='/scripts/lib-js/general-ui.js')
+  script(src='/scripts/lib-js/car-change-color-slide.js')
+  script(src='/scripts/lib-js/car-unique-characters.js')
+  script(src='/scripts/lib-js/car-detail-interaction.js')
+  // endbuild
+
+block container
+  script.
+    //- var priceCar = '189,800';
+  .car-sienta-detail
+    //- section-slider-view
+    .section.section-slider-view
+      .owl-carousel-car-view
+        .item.banner-intel-scaling-item
+          picture
+            source(srcset='images/Cars/Sienta/banner-small-1.jpg', media='(max-width: 768px)')
+            img(src='images/Cars/Sienta/banner-1.jpg', alt='Home banner.', data-width='1920', data-height='799')
+          .content
+            .block-ow-caption
+              .block-left-middle
+                .title-small !{sientaTcText.banner.bannerContent[0].titleSmall}
+                h1.title
+                  | !{sientaTcText.banner.bannerContent[0].title}
+                  .price !{sientaTcText.banner.bannerContent[0].price}
+                .description
+                  .editor-content !{sientaTcText.banner.bannerContent[0].description}
+      //-   .item.banner-intel-scaling-item
+      //-     picture
+      //-       source(srcset='images/Cars/Sienta/banner-small-2.jpg', media='(max-width: 767px)')
+      //-       img(src='images/Cars/Sienta/banner-2.jpg', alt='Home banner.', data-width='1920', data-height='799')
+      //-     .content
+      //-       .block-ow-caption
+      //-         .block-left-middle
+      //-           .title-small !{sientaTcText.banner.bannerContent[1].titleSmall}
+      //-           .title
+      //-             | !{sientaTcText.banner.bannerContent[1].title}
+      //-             .price !{sientaTcText.banner.bannerContent[1].price}
+      //-           .description
+      //-             .editor-content !{sientaTcText.banner.bannerContent[1].description}
+      //- .owl-carousel-car-view-nav
+      //-   .block-content
+      //-     span !{sientaTcText.banner.bannerControl[0]}
+      //-     .nav
+      //-       a.picnic.active(data-index='0')  
+      //-       a.beach(data-index='1')  
+      //-     span !{sientaTcText.banner.bannerControl[1]}
+    
+    .section.section-car-run-sienta
+      .banner-intel-scaling-item
+        .block-content
+          .block-car
+            picture
+              source(srcset='images/Cars/Sienta/car-with-door.png', media='(max-width: 1024px)')
+              img(src='images/Cars/Sienta/car-without-door.png', alt='Home banner.')
+            .block-wheel
+              img(src='images/Cars/Sienta/wheel.png', alt='Wheel').wheel-1
+              img(src='images/Cars/Sienta/wheel.png', alt='Wheel').wheel-2
+            .block-door
+              img(src='images/Cars/Sienta/car-door.png', alt='Home banner.').close
+              img(src='images/Cars/Sienta/car-door-open.png', alt='Home banner.').open
+              .icon-click
+                img(src='images/Cars/Sienta/icon-click.png', alt='icon-click.')
+            .block-arrow
+              .arrow.arrow-1.horizontal
+                span
+                  | !{sientaTcText.runs.arrowText[0]}
+              .arrow.arrow-2
+                span
+                  | !{sientaTcText.runs.arrowText[1]}
+              .arrow.arrow-3
+                span
+                  | !{sientaTcText.runs.arrowText[2]}
+          .block-description
+            .block-ow-caption.color-green
+              .block-right-middle
+                .title-small.no-bg !{sientaTcText.runs.smallTitle}
+                .title  !{sientaTcText.runs.title}
+                .description
+                  .editor-content
+                    | !{sientaTcText.runs.description}
+      .block-text
+        | !{sientaTcText.runs.noteText}
+
+    
+
+    .section.section-wide-long
+      .block-img.banner-intel-scaling-item
+        picture
+          source(srcset='images/Cars/Sienta/img-23-small.jpg', media='(max-width: 767px)')
+          img(src='images/Cars/Sienta/img-23.jpg', alt='Car detail', data-x='0', data-y='0')
+      
+      .block-ow-caption.color-green
+        .block-top-middle
+          .title
+            | !{sientaTcText.wideLong.title}
+          .description
+            .editor-content 
+              p !{sientaTcText.wideLong.description}
+
+
+    //- section-light-in-car
+    .car-camry-detail
+      .section.section-super-wide
+        .section-super-wide-content.section-light-in-car
+          .images-container
+            .item.banner-intel-scaling-item
+              picture
+                source(srcset='images/Cars/Sienta/img-19.png', media='(max-width: 1024px)')
+                img(src='images/Cars/Sienta/img-22.jpg', alt='fold-flat 3')
+            .item.banner-intel-scaling-item
+              picture
+                source(srcset='images/Cars/Sienta/img-18.png', media='(max-width: 1024px)')
+                img(src='images/Cars/Sienta/img-21.jpg', alt='fold-flat 3')
+            .item.banner-intel-scaling-item
+              picture
+                source(srcset='images/Cars/Sienta/img-17.png', media='(max-width: 1024px)')
+                img(src='images/Cars/Sienta/img-20.jpg', alt='fold-flat 1')
+          .section-light-in-car-content
+            .block-ow-caption
+              .block-img
+                img(src='images/Cars/Sienta/img-16.png', alt='fold-flat 1')
+              .block-caption.color-green
+                .title !{sientaTcText.changeChair.title}
+                .sub-title !{sientaTcText.changeChair.subTitle}
+                .note-text  !{sientaTcText.changeChair.description}
+            .nav
+              input.tooltip-content-range-slider(type='range', min='0', max='100', step='50', value='0')
+
+
+    //- car-detail
+    .section.section-car-detail
+      .section-car-detail-navigation
+        .container
+          .tab.tab-1.active(data-id='1')
+            span !{sientaTcText.carDetail.tabTitle[0]}
+            .icon.icon-1 &nbsp;
+          .tab.tab-2(data-id='2')
+            span !{sientaTcText.carDetail.tabTitle[1]}
+            .icon.icon-2 &nbsp;
+          .tab.tab-3(data-id='3')
+            span !{sientaTcText.carDetail.tabTitle[2]}
+            .icon.icon-3 &nbsp;
+          //- .tab.tab-4(data-id='4')
+          //-   span !{sientaTcText.carDetail.tabTitle[3]}
+          //-   .icon.icon-4 &nbsp;
+      .section-car-detail-content
+        #tab-1.active
+          .section-car-detail-content-exterior.car-section-content
+            .block-img.image-center
+              picture
+                source(srcset='images/Cars/Sienta/img-24.jpg', media='(max-width: 767px)')
+                img(src='images/Cars/Sienta/img-24.jpg', alt='Car detail', data-x='0', data-y='0')
+              .block-tooltip
+                +tooltip('tooltip-exterior-1','29.3','41.1')
+                +tooltip('tooltip-exterior-2','38.5','64.1')
+                +tooltip('tooltip-exterior-3','48.5','64.3')
+                +tooltip('tooltip-exterior-4','61','55.5')
+                +tooltip('tooltip-exterior-5','54','36.3')
+                +tooltip('tooltip-exterior-6','67.5','36.3')
+            .block-description
+              .editor-content
+                p !{sientaTcText.carDetail.tooltipLandingExterior.description}
+            .block-popup
+              .tooltip-navigation
+                .container
+                  span.prev &nbsp;
+                  .editor-content.tooltip-title-container &nbsp;
+                  span.next &nbsp;
+                .close-btn
+                  a(href='#', title='close') &nbsp;
+              // Tooltip detail item
+              #tooltip-exterior-1.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone
+                  img(src='images/Cars/Ractis/icon-popup-phone.png', alt='')
+                p.tooltip-title !{sientaTcText.carDetail.tooltipLandingExterior.tooltips[0]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Sienta/01_exterior_01.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-exterior-2.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone
+                  img(src='images/Cars/Ractis/icon-popup-phone.png', alt='')
+                p.tooltip-title !{sientaTcText.carDetail.tooltipLandingExterior.tooltips[1]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Sienta/01_exterior_04.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-exterior-3.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone
+                  img(src='images/Cars/Ractis/icon-popup-phone.png', alt='')
+                p.tooltip-title !{sientaTcText.carDetail.tooltipLandingExterior.tooltips[2]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Sienta/01_exterior_05.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-exterior-4.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone
+                  img(src='images/Cars/Ractis/icon-popup-phone.png', alt='')
+                p.tooltip-title !{sientaTcText.carDetail.tooltipLandingExterior.tooltips[3]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Sienta/01_exterior_06.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-exterior-5.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone
+                  img(src='images/Cars/Ractis/icon-popup-phone.png', alt='')
+                p.tooltip-title !{sientaTcText.carDetail.tooltipLandingExterior.tooltips[4]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Sienta/01_exterior_03.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-exterior-6.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone
+                  img(src='images/Cars/Ractis/icon-popup-phone.png', alt='')
+                p.tooltip-title !{sientaTcText.carDetail.tooltipLandingExterior.tooltips[5]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Sienta/01_exterior_02.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+        #tab-2
+          .section-car-detail-content-interior.car-section-content
+            // Image with tooltip
+            .block-img.image-drag
+              picture
+                source(srcset='images/Cars/Sienta/img-2.jpg', media='(max-width: 767px)')
+                img(src='images/Cars/Sienta/img-2.jpg', alt='Car detail', data-x='0', data-y='0')
+              .block-tooltip.light
+                +tooltip('tooltip-interior-1','6.3','15.5')
+                +tooltip('tooltip-interior-2','63.1','36.2')
+                +tooltip('tooltip-interior-3','83.5','36.2')
+                +tooltip('tooltip-interior-4','91.5','64.7')
+                +tooltip('tooltip-interior-5','3.3','30.5')
+            .block-description
+              .editor-content
+                p !{sientaTcText.carDetail.tooltipLandingInterior.description}
+            .block-text
+              .editor-content 
+                p Overseas model shown
+                p Two options for interior colour
+            .block-popup
+              .tooltip-navigation
+                .container
+                  span.prev &nbsp;
+                  .editor-content.tooltip-title-container &nbsp;
+                  span.next &nbsp;
+                .close-btn
+                  a(href='#', title='close') &nbsp;
+              // Tooltip detail item
+              #tooltip-interior-1.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone
+                  img(src='images/Cars/Ractis/icon-popup-phone.png', alt='')
+                p.tooltip-title !{sientaTcText.carDetail.tooltipLandingInterior.tooltips[0]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Sienta/02_Interior_01a.jpg', alt='fold-flat 1')
+                  .item.image-center
+                    img(src='images/Cars/Sienta/02_Interior_01b.jpg', alt='fold-flat 1')
+                  //- .item.image-center
+                  //-   img(src='images/Cars/Sienta/02_Interior_01c.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+                  a(href='#', data-index='2') &nbsp;
+                  //- a(href='#', data-index='3') &nbsp;
+              #tooltip-interior-2.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone
+                  img(src='images/Cars/Ractis/icon-popup-phone.png', alt='')
+                p.tooltip-title !{sientaTcText.carDetail.tooltipLandingInterior.tooltips[1]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Sienta/02_Interior_02.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-interior-3.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone
+                  img(src='images/Cars/Ractis/icon-popup-phone.png', alt='')
+                p.tooltip-title !{sientaTcText.carDetail.tooltipLandingInterior.tooltips[2]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Sienta/02_Interior_03.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-interior-4.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone
+                  img(src='images/Cars/Ractis/icon-popup-phone.png', alt='')
+                p.tooltip-title !{sientaTcText.carDetail.tooltipLandingInterior.tooltips[3]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Sienta/02_Interior_04a.jpg', alt='fold-flat 1')
+                  .item.image-center
+                    img(src='images/Cars/Sienta/02_Interior_04b.jpg', alt='fold-flat 1')
+                  .item.image-center
+                    img(src='images/Cars/Sienta/02_Interior_04c.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+                  a(href='#', data-index='2') &nbsp;
+                  a(href='#', data-index='3') &nbsp;
+              #tooltip-interior-5.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone
+                  img(src='images/Cars/Ractis/icon-popup-phone.png', alt='')
+                p.tooltip-title !{sientaTcText.carDetail.tooltipLandingInterior.tooltips[4]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Sienta/02_Interior_05.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+                .block-text
+                  .editor-content 
+                    p Overseas model shown
+        #tab-3
+          .section-car-detail-content-performance.car-section-content.tab-content-car-carousel
+            // Image with carousel
+            .owl-carousel-car-view
+              .item.image-center
+                img(src='images/Cars/Sienta/03_Performance_01.jpg', alt='Performance 1')
+              .item.image-center
+                img(src='images/Cars/Sienta/03_Performance_01b.jpg', alt='Performance 1b')
+              .item.image-center
+                img(src='images/Cars/Sienta/03_Performance_02.jpg', alt='Performance 2')
+              //- .item.image-center
+              //-   img(src='images/Cars/Sienta/03_Performance_03.jpg', alt='Performance 3')
+                  
+            .owl-carousel-car-view-nav
+              .container
+                .nav-5
+                  a.prev(href="#") &nbsp;
+                  .editor-content.tooltip-title-container
+                    p !{sientaTcText.carDetail.tooltipLandingPerformance.tooltips[0]}
+                    p.hide !{sientaTcText.carDetail.tooltipLandingPerformance.tooltips[1]}
+                    p.hide !{sientaTcText.carDetail.tooltipLandingPerformance.tooltips[2]}
+                  a.next(href="#") &nbsp;
+        //- #tab-4
+        //-   .section-car-detail-content-performance.car-section-content
+        //-     // Image with carousel
+        //-     .block-img.image-center
+        //-       img(src='images/Cars/Sienta/04_Safety_01.jpg', alt='Safety 1')
+        //-     .block-description
+        //-       .editor-content
+        //-         p !{sientaTcText.carDetail.tooltipLandingSafety.tooltips[0]}
+        //-     .block-popup &nbsp;
+        //-     .block-text
+        //-       .editor-content 
+        //-         p !{sientaTcText.carDetail.tooltipLandingSafety.noteText}
+
+    //- change-color-car
+    .section.section-change-color-car
+      .section-change-color-car-content
+        .container
+          .block-lists-car(style="background-image: url(images/Cars/Sienta/00_shadow.png)")
+            img.img-create-height.hide(src='images/Cars/Sienta/01_yellowGreen.png', alt='')
+
+            .car.color-1.active
+              img(src='images/Cars/Sienta/01_yellowGreen.png', alt='Car 1')
+            .car.color-2
+              img(src='images/Cars/Sienta/02_white.png', alt='Car 1')
+            .car.color-3
+              img(src='images/Cars/Sienta/03_green.png', alt='Car 1')
+            .car.color-4
+              img(src='images/Cars/Sienta/04_sliver.png', alt='Car 1')
+            .car.color-5
+              img(src='images/Cars/Sienta/05_red.png', alt='Car 1')
+            .car.color-6
+              img(src='images/Cars/Sienta/06_black.png', alt='Car 1')
+            .car.color-7
+              img(src='images/Cars/Sienta/07_blue.png', alt='Car 1')
+            .car.color-8
+              img(src='images/Cars/Sienta/08_brown.png', alt='Car 1')
+
+            svg#mask-view(xmlns='http://www.w3.org/2000/svg', width='931px', height='390px', viewbox='0 0 931 390', xmlns:xlink='http://www.w3.org/1999/xlink')
+              defs
+                pattern#car-embed(patternunits='userSpaceOnUse', width='931', height='390')
+                  image#masked-image(xlink:href='images/Cars/Sienta/01_yellowGreen.png', x='0', y='0', width='931', height='390')
+              circle#walt-embed(cx='50', cy='50', r='40', stroke='none', fill='url(#car-embed)')
+          
+          .block-desctiption
+            .editor-content
+              p !{sientaTcText.colors.description}
+          
+          .block-lists-color
+            .color-item(data-color='color-1').active
+              .icon.color-1
+                img(src='images/Cars/Sienta/bg-color-car-1.png', alt='')
+              span !{sientaTcText.colors.colorNames[0]}
+            .color-item(data-color='color-2')
+              .icon.color-2
+                img(src='images/Cars/Sienta/bg-color-car-2.png', alt='')
+              span !{sientaTcText.colors.colorNames[1]}
+            .color-item(data-color='color-3')
+              .icon.color-3
+                img(src='images/Cars/Sienta/bg-color-car-3.png', alt='')
+              span !{sientaTcText.colors.colorNames[2]}
+            .color-item(data-color='color-4')
+              .icon.color-4
+                img(src='images/Cars/Sienta/bg-color-car-4.png', alt='')
+              span !{sientaTcText.colors.colorNames[3]}
+            .color-item(data-color='color-5')
+              .icon.color-5
+                img(src='images/Cars/Sienta/bg-color-car-5.png', alt='')
+              span !{sientaTcText.colors.colorNames[4]}
+            .color-item(data-color='color-6')
+              .icon.color-6
+                img(src='images/Cars/Sienta/bg-color-car-6.png', alt='')
+              span !{sientaTcText.colors.colorNames[5]}
+            .color-item(data-color='color-7')
+              .icon.color-7
+                img(src='images/Cars/Sienta/bg-color-car-7.png', alt='')
+              span !{sientaTcText.colors.colorNames[6]}
+            .color-item(data-color='color-8')
+              .icon.color-8
+                img(src='images/Cars/Sienta/bg-color-car-8.png', alt='')
+              span !{sientaTcText.colors.colorNames[7]}
+
+    //- specification-car
+    .section.section-specification-car
+      .container
+        h2.title HIGHLIGHTED SPECIFICATION
+        .table-content
+          table
+            tbody
+              tr 
+                td(rowspan="2").title Dimensions & Weights
+                td Overall Length x Overall Width x <br/>Overall Height (mm) 
+                td 4,400 x 1,695 x 1,460
+              tr 
+                td Seating Capacity (including driver)
+                td 5
+
+              tr 
+                td(rowspan="4").title Engine
+                td Type
+                td Valve VVT-iE Engine with Start Stop <br/>System
+              tr 
+                td Displacement (cc)
+                td 1496
+              tr 
+                td *Max. Output   kW (PS) / rpm
+                td 80 (109) / 6,000
+              tr 
+                td *Max. Torque   Nm (kg-m) / rpms
+                td 136 (13.9) / 4,400
+                
+              tr 
+                td(rowspan="3").title Chassis
+                td Transmission Type
+                td CVT
+              tr 
+                td Fuel Consumption
+                td 23.4 km/L (JC08 mode)
+              tr 
+                td Tyre & Wheel 
+                td 175/65 R15 Alloy Wheel <br/>(Corolla Super Luxury)<br/>175/65 R15 Full Wheel Cap<br/>(Corolla Luxury)
+
+    //- components-car
+    .section.section-components-car
+      .section-components-car-content
+        .container
+          .row
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12
+              .block-downlink
+                a(href='#', title='Download e-Catalogue')
+                  i.fa.fa-download  
+                  span Download e-Catalogue
+                img(src='images/Cars/Sienta/car-small.png', alt='Download')
+                a(href='#', title='Download Specification Sheet')
+                  i.fa.fa-download  
+                  span Download Specification Sheet
+    
+    //- interest
+    .section.section-interest
+      +interest('YOU MAY ALSO HAVE INTEREST')

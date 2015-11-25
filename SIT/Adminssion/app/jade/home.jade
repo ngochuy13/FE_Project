@@ -1,0 +1,56 @@
+extends layouts/template
+
+block vars
+  -title = 'Home'
+  -bodyClass = 'homepage'
+
+block container 
+  .section.grid-mode.home-grid.clearfix
+    .grid-sizer
+    
+    .grid-item.col-xs-12.col-sm-6.col-md-4(data-grid-order='1')
+      a(href="#", target="_blank")
+        .media
+          +img('media 1', 'home/img-1.jpg')
+          +img('media 1', 'home/img-1-grayscale.jpg').img-grayscale
+        .overlap-info
+          h1 WHY SIT
+    
+    .grid-item.col-xs-12.col-sm-6.col-md-4(data-grid-order='3')
+      a(href="#", target="_blank")
+        .media
+          +img('media 1', 'home/img-2.jpg')
+          +img('media 1', 'home/img-2-grayscale.jpg').img-grayscale
+        .overlap-info
+          h1 FINANCIAL
+    .grid-item.col-xs-12.col-sm-6.col-md-4(data-grid-order='5')
+      a(href="#", target="_blank")
+        .media
+          +img('media 1', 'home/img-3.jpg')
+          +img('media 1', 'home/img-3-grayscale.jpg').img-grayscale
+        .overlap-info
+          h1 LIFE@SIT
+    .grid-item.col-xs-12.col-sm-6.col-md-4(data-grid-order='4')
+      a(href="#", target="_blank")
+        .media
+          +img('media 1', 'home/img-6.jpg')
+          +img('media 1', 'home/img-6-grayscale.jpg').img-grayscale
+        .overlap-info
+          h1 CAMPUS
+            br 
+            | LOCATION
+    .grid-item.col-xs-12.col-sm-6.col-md-4(data-grid-order='2')
+      a(href="#", target="_blank")
+        .media
+          +img('media 1', 'home/img-4.jpg')
+          +img('media 1', 'home/img-4-grayscale.jpg').img-grayscale
+        .overlap-info
+          h1 ACADEMICS
+
+    .grid-item.col-xs-12.col-sm-6.col-md-4(data-grid-order='6')
+      a(href="#", target="_blank")
+        .media
+          +img('media 1', 'home/img-5.jpg')
+          +img('media 1', 'home/img-5-grayscale.jpg').img-grayscale
+        .overlap-info
+          h1 SCHOLARSHIP 

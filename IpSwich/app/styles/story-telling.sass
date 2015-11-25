@@ -1,0 +1,165 @@
+body.story-telling
+  .story-intro
+    height: 1000px
+    border-bottom: 0
+    &:before
+      display: none
+    .image-caption
+      text-align: center
+      margin-bottom: 9px
+    .title
+      margin-bottom: 22px
+    .separator
+      height: 8px
+      margin-bottom: 18px
+    .description
+      font-size: 24px
+      margin: 0 60px 37px 60px
+      line-height: 1.2
+    .meta
+      font-size: 14px
+    .readmore
+      margin-top: 35px
+      padding-top: 44px
+      font-weight: 100
+      .fa
+        padding-left: 8px
+        font-size: 16px
+        line-height: 1
+        vertical-align: baseline
+    &.block-wakeup
+      padding-top: 312px
+      .image-caption
+        img
+          width: 65px
+    &.block-taste
+      padding-top: 293px
+      .image-caption
+        margin-bottom: 10px
+        img
+          width: 53px
+    &.block-hike
+      padding-top: 159px
+      .image-caption
+        img
+          width: 155px
+    &.block-enjoy
+      padding-top: 312px
+      .image-caption
+        img
+          width: 65px
+  .storytelling-footer
+    width: 100%
+    display: table
+    .story-intro 
+      height: 0
+      padding-top: calc(100% - 33px)
+      position: relative
+      &:after
+        content: ""
+        width: 100%
+        height: 100%
+        display: inline-block
+        position: absolute
+        top: 0 
+        left: 0
+        background: rgba(0, 0, 0, 0.5)
+        opacity: 0
+        transition: opacity 500ms
+        z-index: 0
+      &:hover
+        .story
+          .title
+            color: #fff
+        &:after
+          opacity: 1
+      .story
+        position: absolute
+        z-index: 1
+        top: 50%
+        -webkit-transform: translateY(-50%)
+        -ms-transform: translateY(-50%)
+        transform: translateY(-58%)
+        width: 100%
+        max-height: 375px
+        .image-caption
+          img
+        .title    
+          margin-top: 12px
+          font-size: 48px
+          margin-bottom: 31px
+          line-height: 1.2
+        .separator
+          margin-bottom: 17px
+          height: 8px
+    .shop
+      .story
+        // transform: translateY(-66%)
+      .story-intro .description
+        margin: 0 130px 37px 130px
+      .story-intro.orange .separator
+        background: #feb61a
+      .image-caption
+        img
+          width: 49px
+    .wander
+      .story
+         transform: translateY(-55%)
+      .story-intro .title
+        margin-top: 12px
+      .story-intro .description
+        margin: 0 90px 37px 90px
+      .story-intro.orange .separator
+        background: #dd317e
+      .image-caption
+        img
+          width: 150px
+    .dine
+      .story
+        transform: translateY(-57%)
+      .story-intro .title
+        margin-top: 0px
+      .story-intro .description
+        margin: 0 130px 37px 130px
+      .story-intro.orange .separator
+        background: #4fdad2
+      .image-caption
+        margin-bottom: 0
+        img
+          width: 46px
+    .story-intro .description
+      font-size: 24px
+      margin-bottom: 42px
+      font-family: 'Bitter', Arial, sans-serif
+      font-style: normal
+      font-weight: bold
+      line-height: 1.3
+  @media screen and (max-width: 1599px)
+    .storytelling-footer
+      .story
+        transform: translateY(-50%)!important
+      .story-intro
+        .description
+          margin: 0 60px 37px 60px!important
+
+  @media screen and (min-width: 992px) and (max-width: 1024px)
+    .storytelling-footer .story-intro
+      .story
+        .description
+          font-size: 18px
+    .storytelling-footer .story-intro .story .title
+      font-size: 36px
+      margin-bottom: 15px
+    .storytelling-footer .story-intro .story .separator
+      margin-bottom: 8px
+  @media screen and (max-width: 566px)
+    .storytelling-footer .story-intro
+      .story
+        .description
+          font-size: 18px
+    .storytelling-footer .story-intro .story .title
+      font-size: 36px
+      margin-bottom: 15px
+    .storytelling-footer .story-intro .story .separator
+      margin-bottom: 8px
+

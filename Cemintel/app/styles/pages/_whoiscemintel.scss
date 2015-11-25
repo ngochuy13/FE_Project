@@ -1,0 +1,70 @@
+.who-is-cemintel {
+    padding-bottom: 90px;
+    .page-title {
+        width: 100%;
+        min-height: 155px;
+        height: 155px;
+        background-image: url('../images/whoiscemintel/whoiscemintel.jpg');
+        background-size: cover;
+        display: table;
+        width: 100%;
+        h3 {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+    }
+    .content-page {
+        padding: 40px 0 50px 0;
+        .about-product {
+            .intro {
+                margin-bottom: 40px;
+                .brief {
+                    margin-bottom: 35px;
+                }
+            }
+            .products {
+                @include clearfix();
+                section {
+                    opacity: 0;
+                    margin-bottom: 50px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    @include clearfix();
+                    .info {
+                        @include mobile {
+                            margin-top: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .innovate-block {
+        padding-bottom: 0;
+        .innovate-block-inner {
+            padding-top: 0;
+            .first-image-block {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .about-cemintel {
+        padding: 60px 0;
+        ul {
+            list-style-type: disc;
+            padding-left: 15px;
+            li {
+                line-height: 1.8;
+                margin-bottom: 30px;
+                @include device {
+                    font-size: 12px;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+// Created by Huy on 4/7/2015.
+mixin video(src, type)
+  video&attributes(attributes)
+    source(src="#{src}", type="#{type}")
+    if block
+      block

@@ -1,0 +1,49 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Spa Offers'
+  -bodyClass = ''
+  -bannerIMG = 'spa-offers/banner.jpg'
+
+block breadcrumb  
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#"
+      },{
+        "text": "MIDDLE EAST",
+        "href":"#"
+      },{
+        "text": "EMIRATES PALACE",
+        "href":"#"
+      },{
+        "text": "FACILITES",
+        "href":"#"
+      },{
+        "text": "SPA",
+        "href":"#"
+      },{
+        "text": "SPECIAL OFFERS",
+        "href":"#"
+      }])
+block container    
+  .inner
+    main#main
+      section.section-room-suite.grand-room-name
+        +page-title("SPECIAL OFFERS", "at Emerites Palace Spa", "ULTIMATE RELAXATION").gray
+        .section-spa-offers.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+          .container
+            +spa-offer-item("spa-offers/img-offer-1.jpg", "WELLNESS & SPA PACKAGES", "<p>No matter where you are in the world, and whatever the reason for your trip, it's always important to dedicate some time to yourself to relax and unwind.</p>")
+            +spa-offer-item("spa-offers/img-offer-2.jpg", "ROMANCE PACKAGES", "<p>One of the most treasured gifts amongst couples, is time well spent together. At Kempinski, we will do everything in our power to make your dreams come true!</p>")
+            +spa-offer-item("spa-offers/img-offer-3.jpg", "WELLNESS & SPA PACKAGES", "<p>No matter where you are in the world, and whatever the reason for your trip, it's always important to dedicate some time to yourself to relax and unwind.</p>")
+      .section-article-blog 
+        +section-title("SPECIAL OFFERS", "Word Class Luxury", "YOUR DESIRES SERVED").gray.article-blog__title
+        .section-article-blog__content.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+          .container
+            .row               
+              +article-blog-item('spa-offers/img-offer-4.jpg', 'CONCIERGE SERVICE', 'Emirates Palace is located in the cosmopolitan', '<p>We don’t sleep, so you can. Need a private jet or a last minute gift? Perhaps an invitation or tickets to a VIP event, we can assist you anytime of the day for making restaurant reservations, arranging for spa services, recommending night life hot spots, booking transportation, procurement of tickets to special events and assisting with various travel arrangements and tours of local attractions.</p><br><p>For more information, contact our concierge desk at <a href="mailto:concierge@emiratespalace.ae" title="concierge@emiratespalace.ae">concierge@emiratespalace.ae</a></p>').col-sm-4.col-xs-12 
+              +article-blog-item('spa-offers/img-offer-5.jpg', 'BUTLER SERVICE', 'Few key facts about Emirates Palace:', '<p>Your personal Butler is ready to welcome you and meet your every need, from unpacking your luggage to advice on local customs and traditions. The  preferences ready for your arrival.</p>').col-sm-4.col-xs-12
+              +article-blog-item('spa-offers/img-offer-6.jpg', 'KID\'S CLUB', 'Distinguish your event with local experience.', '<p>The Kid\'s Club is a safe and happy place for our young princes and princesses where they make new friends, learn new skills and most importantly, can play all day long. We want you to feel as relaxed and carefree as your kids. This is the major reason why families spend their holiday with us year on year.</p>').col-sm-4.col-xs-12
+                .link-find
+                  a(href="#") Find out more

@@ -1,0 +1,40 @@
+header#header 
+  .top-header
+    .container-fluid
+      .row 
+        .top-logo.col-xs-4.col-xs-push-4.col-md-3.col-md-push-0
+          .logo   
+            +link-img('logo.png', 'Logo', "home.html")
+        .top-panel.col-xs-4.col-xs-push-4.col-md-3.col-md-push-6.hide-phone  
+          a(href="http://KEMPINSKI.COM" target="_blank").back-to-corp-link
+            |KEMPINSKI HOTELS         
+            span.fa.fa-angle-down       
+          ul
+            li 
+              .dropdown    
+                .dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+                  | ENGLISH   
+                  span.fa.fa-angle-down
+                ul.dropdown-menu(aria-labelledby='dropdownMenu1')
+                  li
+                    a(href='#') ENGLISH    
+                  li
+                    a(href='#') ENGLISH 2       
+            li
+              a(href="#", title="Login")
+                span.user-icon
+                span.text-login Login       
+        .top-slogan.col-xs-12.col-xs-pull-0.col-md-6.col-md-pull-3
+          .text-big emirates palace arabian gulf       
+          .text-small
+            span
+              span.line.line-before
+              |Beyond 5-Star Luxury           
+              span.line.line-after 
+          .star-block
+            span.star-icon
+            span.star-icon   
+            span.star-icon
+            span.star-icon  
+            span.star-icon       
+  

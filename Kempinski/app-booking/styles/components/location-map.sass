@@ -1,0 +1,159 @@
+section.map-section
+  .block-map-container
+    position: relative
+    min-height: 336px
+    margin-bottom: 30px
+    .map-text
+      padding-right: 100px
+      padding-top: 36px
+      .title
+        font-family: $kcd-ff
+        font-size: 22px
+        color: #010101
+        letter-spacing: 4px
+      .description
+        margin-top: 23px
+    .map-container
+      position: absolute
+      top: 0
+      left: 50%
+      width: 50%
+      overflow: hidden
+      .map-viewer
+        min-height: 336px
+        iframe
+          min-height: 336px
+        &.right-control
+          .gmnoprint
+            left: auto !important
+            right: 5px !important
+          .map-reset
+            left: auto !important
+            right: 20px !important
+      .firstHeading 
+        font-family: 'KingsCaslon',Arial,sans-serif
+        font-size: 30px
+      .map-overlay
+        position: absolute
+        right: 0
+        top: 0
+        z-index: 1
+        background: rgba(255,255,255,0.8)
+        height: 100%
+        min-width: 270px
+        padding: 66px 20px 20px 20px
+        &.left 
+          left: 20px
+          right: inherit
+        .date
+          color: #4b4d52
+          font-size: 15px
+          width: 100%
+          text-align: center
+          font-family:  $kcd-ff
+        .time
+          color: #000
+          font-size: 21px
+          width: 100%
+          text-align: center
+          font-family:  $kcd-ff
+          margin-top: 7px
+        .weather
+          font-size: 55px
+          color: #4b4d52
+          width: 100%
+          text-align: center
+          font-family:  $kcd-ff
+          font-weight: 300  
+          margin-top: 5px 
+          .wi
+            font-size: 36px
+            color: #0099f1
+            margin-left: 18px
+        .contact
+          position: absolute
+          bottom: 18px
+          text-align: center
+          left: 20px
+          right: 5px
+          font-family: $kcd-ff
+          .line
+            text-align: left
+            font-size: 11px
+            margin: 7px 0px
+            line-height: 1
+            padding-left: 18px
+            letter-spacing: 1px
+            a
+              color: #333
+            .fa
+              font-size: 16px
+              vertical-align: middle
+              margin-right: 7px
+              margin-left: -16px
+    &.full-width
+      height: 720px
+      .map-container
+        width: 100%
+        left: 0
+        .map-viewer
+          min-height: 720px
+          iframe
+            min-height: 720px
+  .weather
+    .temp-number
+      display: inline-block
+      vertical-align: middle
+    img
+      max-height: 80px
+      display: inline-block
+      vertical-align: middle
+
+  @media screen and (max-width:1169px)
+    .block-map-container
+      margin-top: 0
+      padding: 0 15px
+      .map-text
+        text-align: center
+        padding-right: 0px
+        padding-top: 0px
+        margin-bottom: 20px
+      .map-container
+        position: relative
+        left: 0
+        width: 100%
+        .map-overlay
+          min-width: 0  
+.gm-style > div:nth-child(2), .gm-style-mtc
+  display: none
+.gmnoprint
+  right: auto
+  left: 5px
+.map-reset
+  position: absolute
+  bottom: 84px
+  left: 15px
+  z-index: 2
+  background: #FFF
+  padding: 8px
+  line-height: 1
+  border-radius: 2px
+  a
+    color: #686868
+    text-decoration: none
+    &:focus, &:active
+      text-decoration: none
+    &:hover
+      color: #323232
+
+
+@media screen and (max-width:560px)
+  section.map-section .block-map-container .map-container .map-overlay
+    position: static
+    padding: 15px 0
+    .contact
+      position: static
+  section.map-section .block-map-container .map-text .title
+    font-size: 16px
+  section.map-section .block-map-container .map-text .description
+    margin-top: 5px

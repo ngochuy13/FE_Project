@@ -1,0 +1,482 @@
+extends layouts/layout
+
+block vars
+  -title = 'Car Camry'
+  -bodyClass = 'car-detail en-US'
+
+  -camryEngText = {}
+  -camryEngText.banner= {}
+  -camryEngText.banner.bannerContent= []
+  -camryEngText.banner.bannerContent[0] = {}
+  -camryEngText.banner.bannerContent[0].titleSmall= 'Entrepreneurial '
+  -camryEngText.banner.bannerContent[0].title= 'CAMRY'
+  -camryEngText.banner.bannerContent[0].price= '$289,450 up'
+  -camryEngText.banner.bannerContent[0].description= '<p>Cruise the metropolis with glory and style in the superior vehicle you deserve.</p>'
+
+  -camryEngText.magnificient= {}
+  -camryEngText.magnificient.smallText= 'Dazzling LED daytime running lamps highlight the vehicle\'s sublime exterior'
+  -camryEngText.magnificient.title= 'Spark of Pride'
+
+  -camryEngText.interiorLight= {}
+  -camryEngText.interiorLight.smallText= 'Luxurious interior with state-of-the-art equipment that delivers a perfect driving experience.'
+  -camryEngText.interiorLight.title= 'Cutting-edge Glamour'
+  -camryEngText.interiorLight.note= []
+  -camryEngText.interiorLight.note[0]= 'A steering wheel of exquisite design and sheer precision'
+  -camryEngText.interiorLight.note[1]= 'All new dashboard design with 4.2" full colour TFT multi-information display'
+  -camryEngText.interiorLight.note[2]= 'Illuminating blue lighting that exudes breathtaking charm'
+  -camryEngText.interiorLight.noteText= 'Overseas model shown'
+
+  -camryEngText.carDetail=  {}
+  -camryEngText.carDetail.tabTitle= []
+  -camryEngText.carDetail.tabTitle[0]= 'EXTERIOR'
+  -camryEngText.carDetail.tabTitle[1]= 'INTERIOR'
+  -camryEngText.carDetail.tabTitle[2]= 'PERFORMANCE'
+  -camryEngText.carDetail.tabTitle[3]= 'SAFETY'
+
+  -camryEngText.carDetail.tooltipLandingExterior= {}
+  -camryEngText.carDetail.tooltipLandingExterior.description= 'A top-notch executive sedan with a stunning appearance to match your prestige.'
+  -camryEngText.carDetail.tooltipLandingExterior.tooltips= []
+  -camryEngText.carDetail.tooltipLandingExterior.tooltips[0]= 'Exclusive front grill design'
+  -camryEngText.carDetail.tooltipLandingExterior.tooltips[1]= 'Fog lamp'
+  -camryEngText.carDetail.tooltipLandingExterior.tooltips[2]= 'LED daytime running lamps'
+
+  -camryEngText.carDetail.tooltipLandingInterior= {}
+  -camryEngText.carDetail.tooltipLandingInterior.description= 'A cool, modern interior provides perpetual driving pleasure for your vibrant lifestyle.'
+  -camryEngText.carDetail.tooltipLandingInterior.tooltips= []
+  -camryEngText.carDetail.tooltipLandingInterior.tooltips[0]= 'All new dashboard design with 4.2-inch full colour TFT multi-information display'
+  -camryEngText.carDetail.tooltipLandingInterior.tooltips[1]= 'Dual zone automatic climate control with nanoeTM air purifying function'
+  -camryEngText.carDetail.tooltipLandingInterior.tooltips[2]= 'Spacious Luggage Compartment'
+  -camryEngText.carDetail.tooltipLandingInterior.tooltips[3]= 'Power Moonroof'
+  -camryEngText.carDetail.tooltipLandingInterior.tooltips[4]= 'Power rear window sunshade'
+  -camryEngText.carDetail.tooltipLandingInterior.tooltips[5]= 'Power rear window sunshade'
+
+  -camryEngText.carDetail.tooltipLandingPerformance= {}
+  -camryEngText.carDetail.tooltipLandingPerformance.tooltips= []
+  -camryEngText.carDetail.tooltipLandingPerformance.tooltips[0]= 'Dynamic performance powered by 2.5 Litre L4 DOHC 16-value with Dual VVT-i Engine (Available in Camry Premium)'
+  -camryEngText.carDetail.tooltipLandingPerformance.tooltips[1]= '205 PS total system output and 23.8km/L fuel consumption – the only executive sedan in its class'
+
+  -camryEngText.carDetail.tooltipLandingSafety= {}
+  -camryEngText.carDetail.tooltipLandingSafety.tooltips= []
+  -camryEngText.carDetail.tooltipLandingSafety.tooltips[0]= '8 SRS airbags (Dual front, side and front & rear curtain shield airbags)'
+  
+  -camryEngText.colors= {}
+  -camryEngText.colors.description= '8 stylish colours to complement the vehicle\'s imposing exterior.'
+  -camryEngText.colors.colorNames= []
+  -camryEngText.colors.colorNames[0]= 'White Crystal Shine'
+  -camryEngText.colors.colorNames[1]= 'Silver Metallic'
+  -camryEngText.colors.colorNames[2]= 'Grey Mica Metallic'
+  -camryEngText.colors.colorNames[3]= 'Dark Steel Mica'
+  -camryEngText.colors.colorNames[4]= 'Stunning Black Mica'
+  -camryEngText.colors.colorNames[5]= 'Red Mica Metallic'
+  -camryEngText.colors.colorNames[6]= 'True Blue Mica Metallic'
+  -camryEngText.colors.colorNames[7]= 'Dark Black Blue Metallic'
+
+block pagescript
+  //- Dep only for car detail page
+  // build:js scripts/car-detail-dep.js
+  script(src='/scripts/lib-js/rangeslider.js')
+  script(src='/scripts/lib-js/interact-1.2.4.js')
+  script(src='/scripts/lib-js/jquery.panelSnap.js')
+  // endbuild
+
+  // build:js scripts/car-detail.js
+  script(src='/scripts/lib-js/general-ui.js')
+  script(src='/scripts/lib-js/car-change-color-slide.js')
+  script(src='/scripts/lib-js/car-unique-characters.js')
+  script(src='/scripts/lib-js/car-detail-interaction.js')
+  // endbuild
+
+block container
+  .car-camry-detail
+
+    //- slider-auto
+    .section.section-slider-auto
+      .owl-carousel-car-auto
+        .item.banner-intel-scaling-item.item-show-mobile
+          picture
+            source(srcset='images/Cars/Camry/banner-new-small.jpg', media='(max-width: 640px)')
+            source(srcset='images/Cars/Camry/fake-banner-new-medium.jpg', media='(max-width: 1023px)')
+            img(src='images/Cars/Camry/banner-new-4.jpg', alt='Home banner.', data-width='1920', data-height='799')
+        .item.banner-intel-scaling-item(data-delay="1100", data-duration="1300")
+          picture
+            source(srcset='images/Cars/Camry/banner-new-small.jpg', media='(max-width: 640px)')
+            source(srcset='images/Cars/Camry/fake-banner-new-medium.jpg', media='(max-width: 1023px)')
+            img(src='images/Cars/Camry/banner-new-2.jpg', alt='Home banner.', data-width='1920', data-height='799')
+        .item.banner-intel-scaling-item(data-delay="100", data-duration="1000")
+          picture
+            source(srcset='images/Cars/Camry/banner-new-small.jpg', media='(max-width: 640px)')
+            source(srcset='images/Cars/Camry/fake-banner-new-medium.jpg', media='(max-width: 1023px)')
+            img(src='images/Cars/Camry/banner-new-1.jpg', alt='Home banner.', data-width='1920', data-height='799')
+      .block-ow-caption
+        .block-right-middle
+          .title-small !{camryEngText.banner.bannerContent[0].titleSmall}
+          h1.title
+            | !{camryEngText.banner.bannerContent[0].title}
+            .price !{camryEngText.banner.bannerContent[0].price}
+          .description
+            .editor-content !{camryEngText.banner.bannerContent[0].description}
+
+    //- slider-auto
+    .section.section-slider-auto.section-slider-auto-2
+      .owl-carousel-car-auto
+        .item.banner-intel-scaling-item.item-show-mobile
+          picture
+            source(srcset='images/Cars/Camry/banner-animation-small.jpg', media='(max-width: 767px)')
+            source(srcset='images/Cars/Camry/fake-banner-animation-medium.jpg', media='(max-width: 1023px)')
+            img(src='images/Cars/Camry/banner-animation-5.jpg', alt='Home banner.', data-width='1920', data-height='799')
+        .item.banner-intel-scaling-item(data-delay="2000", data-duration="600")
+          picture
+            source(srcset='images/Cars/Camry/banner-animation-small.jpg', media='(max-width: 767px)')
+            source(srcset='images/Cars/Camry/fake-banner-animation-medium.jpg', media='(max-width: 1023px)')
+            img(src='images/Cars/Camry/banner-animation-4.jpg', alt='Home banner.', data-width='1920', data-height='799')
+        .item.banner-intel-scaling-item(data-delay="1400", data-duration="600")
+          picture
+            source(srcset='images/Cars/Camry/banner-animation-small.jpg', media='(max-width: 767px)')
+            source(srcset='images/Cars/Camry/fake-banner-animation-medium.jpg', media='(max-width: 1023px)')
+            img(src='images/Cars/Camry/banner-animation-3.jpg', alt='Home banner.', data-width='1920', data-height='799')
+        .item.banner-intel-scaling-item(data-delay="800", data-duration="600")
+          picture
+            source(srcset='images/Cars/Camry/banner-animation-small.jpg', media='(max-width: 767px)')
+            source(srcset='images/Cars/Camry/fake-banner-animation-medium.jpg', media='(max-width: 1023px)')
+            img(src='images/Cars/Camry/banner-animation-2.jpg', alt='Home banner.', data-width='1920', data-height='799')
+        .item.banner-intel-scaling-item(data-delay="200", data-duration="600")
+          picture
+            source(srcset='images/Cars/Camry/banner-animation-small.jpg', media='(max-width: 767px)')
+            source(srcset='images/Cars/Camry/fake-banner-animation-medium.jpg', media='(max-width: 1023px)')
+            img(src='images/Cars/Camry/banner-animation-1.jpg', alt='Home banner.', data-width='1920', data-height='799')
+        
+      .block-ow-caption
+        .block-right-middle
+          .title-small.no-bg !{camryEngText.magnificient.smallText}
+          .title !{camryEngText.magnificient.title}
+      
+
+    //- section-light-in-car
+    .section.section-super-wide
+      .section-super-wide-content.section-light-in-car
+        .block-image-size
+          picture
+            source(srcset='images/Cars/Camry/img-19.jpg', media='(max-width: 640px)')
+            img(src='images/Cars/Camry/img-5.jpg', alt='fold-flat 3')
+        .images-container
+          .item.banner-intel-scaling-item(data-title=camryEngText.interiorLight.note[2])
+            picture
+              source(srcset='images/Cars/Camry/img-23.jpg', media='(max-width: 640px)')
+              source(srcset='images/Cars/Camry/fake-img-23.jpg', media='(max-width: 1023px)')
+              img(src='images/Cars/Camry/img-5.jpg', alt='fold-flat 3')
+          .item.banner-intel-scaling-item(data-title=camryEngText.interiorLight.note[1])
+            picture
+              source(srcset='images/Cars/Camry/img-22.jpg', media='(max-width: 640px)')
+              source(srcset='images/Cars/Camry/fake-img-22.jpg', media='(max-width: 1023px)')
+              img(src='images/Cars/Camry/img-3.jpg', alt='fold-flat 3')
+          .item.banner-intel-scaling-item(data-title=camryEngText.interiorLight.note[0])
+            picture
+              source(srcset='images/Cars/Camry/img-19.jpg', media='(max-width: 640px)')
+              source(srcset='images/Cars/Camry/fake-img-19.jpg', media='(max-width: 1023px)')
+              img(src='images/Cars/Camry/img-1.jpg', alt='fold-flat 1')
+        .section-light-in-car-content
+          .block-ow-caption
+            .block-caption.color-blue
+              .small-text !{camryEngText.interiorLight.smallText}
+              .title !{camryEngText.interiorLight.title}
+              .note-text !{camryEngText.interiorLight.note[0]}
+          .nav
+            input.tooltip-content-range-slider(type='range', min='0', max='100', step='50', value='0')
+        .block-text
+          p !{camryEngText.interiorLight.noteText}
+
+    //- car-detail
+    .section.section-car-detail
+      .section-car-detail-navigation
+        .container
+          .tab.tab-1.active(data-id='1')
+            span !{camryEngText.carDetail.tabTitle[0]}
+            .icon.icon-1 &nbsp;
+          .tab.tab-2(data-id='2')
+            span !{camryEngText.carDetail.tabTitle[1]}
+            .icon.icon-2 &nbsp;
+          .tab.tab-3(data-id='3')
+            span !{camryEngText.carDetail.tabTitle[2]}
+            .icon.icon-3 &nbsp;
+          .tab.tab-4(data-id='4')
+            span !{camryEngText.carDetail.tabTitle[3]}
+            .icon.icon-4 &nbsp;
+      .section-car-detail-content
+        #tab-1.active
+          .section-car-detail-content-exterior.car-section-content
+            .block-img.image-center
+              picture
+                source(srcset='images/Cars/Camry/img-21.jpg', media='(max-width: 800px)')
+                img(src='images/Cars/Camry/img-13.jpg', alt='Car detail', data-x='0', data-y='0')
+              .block-tooltip
+                +tooltip('tooltip-exterior-1','24.3','62.1')
+                +tooltip('tooltip-exterior-2','33.5','75.8')
+                +tooltip('tooltip-exterior-3','39.5','59.3')
+            .block-description
+              .editor-content
+                p !{camryEngText.carDetail.tooltipLandingExterior.description}
+            .block-popup
+              .tooltip-navigation
+                .container
+                  span.prev &nbsp;
+                  .editor-content.tooltip-title-container &nbsp;
+                  span.next &nbsp;
+                .close-btn
+                  a(href='#', title='close') &nbsp;
+              // Tooltip detail item
+              #tooltip-exterior-1.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{camryEngText.carDetail.tooltipLandingExterior.tooltips[0]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Camry/01_Exterior_02.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-exterior-2.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{camryEngText.carDetail.tooltipLandingExterior.tooltips[1]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Camry/01_Exterior_03.jpg', alt='fold-flat 2')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-exterior-3.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{camryEngText.carDetail.tooltipLandingExterior.tooltips[2]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Camry/01_Exterior_01.jpg', alt='fold-flat 2')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+        #tab-2
+          .section-car-detail-content-interior.car-section-content
+            // Image with tooltip
+            .block-img.image-drag
+              img(src='images/Cars/Camry/img-7.jpg', alt='Car detail')
+              picture
+                source(srcset='images/Cars/Camry/img-7.jpg', media='(max-width: 767px)')
+                source(srcset='images/Cars/Camry/img-7.jpg', media='(max-width: 1280px)')
+                img(src='images/Cars/Camry/img-7.jpg', alt='Car detail', data-x='0', data-y='0')
+              .block-tooltip
+                +tooltip('tooltip-interior-1','25.3','22.5')
+                +tooltip('tooltip-interior-3','22.5','45.2')
+                +tooltip('tooltip-interior-4','80.5','52.7')
+                +tooltip('tooltip-interior-5','50.5','15.7')
+                //- +tooltip('tooltip-interior-6','67.5','12.7')
+                +tooltip('tooltip-interior-7','94.5','40.7')
+            .block-description
+              .editor-content
+                p !{camryEngText.carDetail.tooltipLandingInterior.description}
+            .block-popup
+              .tooltip-navigation
+                .container
+                  span.prev &nbsp;
+                  .editor-content.tooltip-title-container &nbsp;
+                  span.next &nbsp;
+                .close-btn
+                  a(href='#', title='close') &nbsp;
+              // Tooltip detail item
+              #tooltip-interior-1.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{camryEngText.carDetail.tooltipLandingInterior.tooltips[0]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Camry/02_Interior_01.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-interior-3.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{camryEngText.carDetail.tooltipLandingInterior.tooltips[1]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Camry/02_Interior_02.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-interior-4.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{camryEngText.carDetail.tooltipLandingInterior.tooltips[2]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Camry/02_Interior_04.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-interior-5.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{camryEngText.carDetail.tooltipLandingInterior.tooltips[3]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Camry/it-camry1.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              //- #tooltip-interior-6.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+              //-   .icon-tooltip-phone &nbsp;
+              //-   p.tooltip-title !{camryEngText.carDetail.tooltipLandingInterior.tooltips[4]}
+              //-   .images-container
+              //-     .item.image-center
+              //-       img(src='images/Cars/Camry/02_Interior_03.jpg', alt='fold-flat 1')
+              //-   .dots-nav
+              //-     a(href='#', data-index='1') &nbsp;
+              #tooltip-interior-7.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{camryEngText.carDetail.tooltipLandingInterior.tooltips[5]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Camry/02_Interior_03b.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+        #tab-3
+          .section-car-detail-content-performance.car-section-content.tab-content-car-carousel
+            // Image with carousel
+            .owl-carousel-car-view(data-nav="true")
+              .item.image-center
+                img(src='images/Cars/Camry/img-16.jpg', alt='fold-flat 1')
+              .item.image-center
+                img(src='images/Cars/Camry/img-14.jpg', alt='fold-flat 2')
+
+            .owl-carousel-car-view-nav
+              .container
+                .nav-5
+                  a.prev(href="#") &nbsp;
+                  .editor-content.tooltip-title-container
+                    p !{camryEngText.carDetail.tooltipLandingPerformance.tooltips[0]}
+                    p.hide !{camryEngText.carDetail.tooltipLandingPerformance.tooltips[1]}
+                  a.next(href="#") &nbsp;
+        #tab-4
+          .section-car-detail-content-interior.car-section-content
+            // Image with tooltip
+            .block-img.image-center
+              img(src='images/Cars/Camry/img-10.jpg', alt='Car detail')
+            .block-description
+              .editor-content
+                p !{camryEngText.carDetail.tooltipLandingSafety.tooltips[0]}
+            .block-popup &nbsp;
+
+
+    //- change-color-car
+    .section.section-change-color-car
+      .section-change-color-car-content
+        .container
+          .block-lists-car(style="background-image: url(images/Cars/Camry/00_shadow.png)")
+            img.img-create-height.hide(src='images/Cars/Camry/05_AttitudeBlackMica.png', alt='')
+
+            .car.pearl-white
+              img(src='images/Cars/Camry/01_WhitePeralCrystalShine.png', alt='Car 1')
+            .car.silver
+              img(src='images/Cars/Camry/02_SliverMetallic.png', alt='Car 1')
+            .car.dark-gray
+              img(src='images/Cars/Camry/03_GreyMicaMetallic.png', alt='Car 1')
+            .car.deep-blue-mine
+              img(src='images/Cars/Camry/04_AttitudeBlackMica.png', alt='Car 1')
+            .car.hyun-black.active
+              img(src='images/Cars/Camry/05_AttitudeBlackMica.png', alt='Car 1')
+            .car.red-mica-meta
+              img(src='images/Cars/Camry/06_RedMicaMetallic.png', alt='Car 1')
+            .car.blue-diamond
+              img(src='images/Cars/Camry/07_TureBlueMicaMetallic.png', alt='Car 1')
+            .car.deep-blue-diamond
+              img(src='images/Cars/Camry/08_DarkBlackBlueMetallic.png', alt='Car 1')
+
+            svg#mask-view(xmlns='http://www.w3.org/2000/svg', width='936', height='451', viewbox='0 0 936 451', xmlns:xlink='http://www.w3.org/1999/xlink')
+              defs
+                pattern#car-embed(patternunits='userSpaceOnUse', width='936', height='451')
+                  image#masked-image(xlink:href='images/Cars/Camry/05_AttitudeBlackMica.png', x='0', y='0', width='936', height='451')
+              circle#walt-embed(cx='50', cy='50', r='40', stroke='none', fill='url(#car-embed)') &nbsp;
+          
+          .block-desctiption
+            .editor-content
+              p !{camryEngText.colors.description}
+          
+          .block-lists-color
+            .color-item(data-color='pearl-white')
+              .icon.pearl-white
+                img(src='images/Cars/Camry/bg-color-car-1.png', alt='')
+              span !{camryEngText.colors.colorNames[0]}
+            .color-item(data-color='silver')
+              .icon.silver
+                img(src='images/Cars/Camry/bg-color-car-2.png', alt='')
+              span !{camryEngText.colors.colorNames[1]}
+            .color-item(data-color='dark-gray')
+              .icon.dark-gray
+                img(src='images/Cars/Camry/bg-color-car-3.png', alt='')
+              span !{camryEngText.colors.colorNames[2]}
+            .color-item(data-color='deep-blue-mine')
+              .icon.deep-blue-mine
+                img(src='images/Cars/Camry/bg-color-car-4.png', alt='')
+              span !{camryEngText.colors.colorNames[3]}
+            .color-item.active(data-color='hyun-black')
+              .icon.hyun-black
+                img(src='images/Cars/Camry/bg-color-car-5.png', alt='')
+              span !{camryEngText.colors.colorNames[4]}
+            .color-item(data-color='red-mica-meta')
+              .icon.red-mica-meta
+                img(src='images/Cars/Camry/bg-color-car-6.png', alt='')
+              span !{camryEngText.colors.colorNames[5]}
+            .color-item(data-color='blue-diamond')
+              .icon.blue-diamond
+                img(src='images/Cars/Camry/bg-color-car-7.png', alt='')
+              span !{camryEngText.colors.colorNames[6]}
+            .color-item(data-color='deep-blue-diamond')
+              .icon.deep-blue-diamond
+                img(src='images/Cars/Camry/bg-color-car-8.png', alt='')
+              span !{camryEngText.colors.colorNames[7]}
+    
+    //- specification-car
+    .section.section-specification-car
+      .container
+        h2.title HIGHLIGHTED SPECIFICATION
+        .table-content
+          table
+            tbody
+              tr 
+                td(rowspan="2").title Dimensions & Weights
+                td Overall Length x Overall Width x <br/>Overall Height (mm) 
+                td 4,400 x 1,695 x 1,460
+              tr 
+                td Seating Capacity (including driver)
+                td 5
+
+              tr 
+                td(rowspan="4").title Engine
+                td Type
+                td Valve VVT-iE Engine with Start Stop <br/>System
+              tr 
+                td Displacement (cc)
+                td 1496
+              tr 
+                td *Max. Output   kW (PS) / rpm
+                td 80 (109) / 6,000
+              tr 
+                td *Max. Torque   Nm (kg-m) / rpms
+                td 136 (13.9) / 4,400
+                
+              tr 
+                td(rowspan="3").title Chassis
+                td Transmission Type
+                td CVT
+              tr 
+                td Fuel Consumption
+                td 23.4 km/L (JC08 mode)
+              tr 
+                td Tyre & Wheel 
+                td 175/65 R15 Alloy Wheel <br/>(Corolla Super Luxury)<br/>175/65 R15 Full Wheel Cap<br/>(Corolla Luxury)
+
+
+    //- components-car
+    .section.section-components-car
+      .section-components-car-content
+        .container
+          .row
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12
+              .block-downlink
+                a(href='#', title='下載介紹書')
+                  i.fa.fa-download  
+                  | 下載介紹書
+                img(src='images/Cars/Camry/img-12.jpg', alt='Download')
+                a(href='#', title='下載汽車規格表')
+                  i.fa.fa-download  
+                  | 下載汽車規格表
+
+    //- interest
+    .section.section-interest
+      +interest('您可能有興趣')
+      

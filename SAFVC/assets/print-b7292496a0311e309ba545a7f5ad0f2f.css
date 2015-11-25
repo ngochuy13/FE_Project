@@ -1,0 +1,160 @@
+/* ==|== print styles =======================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+  /* line 8, ../../_sass/print.scss */
+  * {
+    background: transparent !important;
+    overflow: visible !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    -webkit-filter: none !important;
+            filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  /* Black prints faster: h5bp.com/s */
+  /* line 9, ../../_sass/print.scss */
+  a, a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 10, ../../_sass/print.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 11, ../../_sass/print.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 12, ../../_sass/print.scss */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  /* Don't show links for images, or javascript/internal links */
+  /* line 13, ../../_sass/print.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 14, ../../_sass/print.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* h5bp.com/t */
+  /* line 15, ../../_sass/print.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  /* line 16, ../../_sass/print.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+  /* line 18, ../../_sass/print.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 19, ../../_sass/print.scss */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  /* Show stuff */
+  /* line 23, ../../_sass/print.scss */
+  .tab,
+  .widget-accordion .accordion section,
+  .widget-hometab .newsletter .content,
+  .widget-hometab .newsletter .home-3cols,
+  .faux,
+  .date,
+  .social,
+  .block-link {
+    display: block !important;
+    clear: both;
+  }
+
+  /* Hide stuff */
+  /* line 33, ../../_sass/print.scss */
+  .right-aux,
+  .mobile-menu,
+  .nav-wrap,
+  .nav.col,
+  .internal .nav.col,
+  .internal-header,
+  .nav-col-header,
+  #ft {
+    display: none !important;
+  }
+
+  /* Fix stuff */
+  /* line 45, ../../_sass/print.scss */
+  .content-col {
+    width: 100% !important;
+  }
+
+  /* line 49, ../../_sass/print.scss */
+  #hd {
+    display: none !important;
+  }
+
+  /* line 53, ../../_sass/print.scss */
+  h1 {
+    position: relative !important;
+    margin: 0 !important;
+    left: 0 !important;
+  }
+
+  /* line 59, ../../_sass/print.scss */
+  .mobile-top-btn {
+    display: none !important;
+  }
+
+  /* line 63, ../../_sass/print.scss */
+  .internal__content table {
+    background: none !important;
+  }
+  /* line 66, ../../_sass/print.scss */
+  .internal__content table tr:first-child td {
+    border-left: 1px solid #b9b9b9 !important;
+    font-size: em(12px) !important;
+  }
+  /* line 71, ../../_sass/print.scss */
+  .internal__content table tr:first-child + tr td:first-child {
+    width: 10% !important;
+  }
+  /* line 75, ../../_sass/print.scss */
+  .internal__content table tr td:first-child {
+    border-top: none !important;
+  }
+  /* line 79, ../../_sass/print.scss */
+  .internal__content table td {
+    font-size: em(13px) !important;
+    color: #695d59 !important;
+    border-left: 1px solid #b9b9b9 !important;
+    border-right: none !important;
+    border-bottom: 1px solid #b9b9b9 !important;
+  }
+  /* line 87, ../../_sass/print.scss */
+  .internal__content table td, .internal__content table th {
+    display: table-cell !important;
+  }
+  /* line 89, ../../_sass/print.scss */
+  .internal__content table tr:first-child td {
+    width: auto !important;
+  }
+}

@@ -1,0 +1,514 @@
+button.btn-burger
+  span.burger
+header#header
+  .active-cursor
+  .colorful-bar
+    span.sp-1
+    span.sp-2
+    span.sp-3
+    span.sp-4
+    span.sp-5
+  .container
+    .clearfix
+      .search-info-wrapper
+        .search-info
+          .weather
+            span 9&deg;C 
+            span.icon.icon-wt-sunny
+          .search-toggler
+            button#search 
+              | Search
+              span.fa.fa-search
+      .logo.pull-left
+        h1
+          +link-img("images/logo.png", "IPswich", homepage)
+      .navigation
+        ul
+          li.active
+            +link("See, Do & Stay", seeDoStay)
+            .sub-level.mega-menu.type-1
+              .row
+                .col-xs-12.col-md-4.sep
+                  .sub-wrap
+                    +link("See & Do", seeDo).title
+                    .sub-links
+                      +link("Farming, Food & Produce", seeDo)
+                      +link("Scenic Drives & Walks", seeDo)
+                      +link("Towns", seeDo)
+                      +link("Entertainment", seeDo)
+                      +link("Wineries, Vineyards & Breweries", seeDo)
+                      +link("Historical Sites & Heritage Locations", seeDo)
+                      a(href="#", title="View All Things to See & Do").visible-md.visible-lg.view-all
+                        | View All Things to See & Do
+                        //- .fa.fa-arrow-circle-o-right
+                .col-xs-12.col-md-4.sep
+                  .sub-wrap
+                    +link("What's On", whatOn).title
+                    .sub-links
+                      +link("Exhibitions & Shows", whatOn)
+                      +link("Sporting Events", whatOn)
+                      +link("Festivals & Celebrations", whatOn)
+                      +link("Theatre, Shows & Performances", whatOn)
+                      +link("Workshops", whatOn)
+                      a(href="#", title="View All Events").visible-md.visible-lg.view-all
+                        | View All Events
+                        //- .fa.fa-arrow-circle-o-right
+                .col-xs-12.col-md-4.sep
+                  .sub-wrap
+                    +link("Stay", stay).title
+                    .sub-links
+                      +link("Bed & Breakfast", stay)
+                      +link("Cabins & Cottages", stay)
+                      +link("Caravan & Camping", stay)
+                      +link("Farmstays", stay)
+                      +link("Hotels & Motels", stay)
+                      a(href="#", title="View All Accomodation").visible-md.visible-lg.view-all
+                        | View All Accomodation
+                        //- .fa.fa-arrow-circle-o-right
+              .row
+                .col-xs-12
+                  .info
+                    span.info-text  Visit our Information Centre for more information on things to Do, See, and Places to Stay.
+                    span.break | 
+                    span.map-view View Map.
+          li
+            +link("Themes", themes)
+            .sub-level.mega-menu.type-1
+              .row
+                .col-xs-12.col-md-4.sep
+                  .sub-wrap
+                    +link("See & Do", seeDo).title
+                    .sub-links
+                      +link("Farming, Food & Produce", seeDo)
+                      +link("Scenic Drives & Walks", seeDo)
+                      +link("Towns", seeDo)
+                      +link("Entertainment", seeDo)
+                      +link("Wineries, Vineyards & Breweries", seeDo)
+                      +link("Historical Sites & Heritage Locations", seeDo)
+                      a(href="#", title="View All Things to See & Do").visible-md.visible-lg.view-all
+                        | View All Things to See & Do
+                        //- .fa.fa-arrow-circle-o-right
+                .col-xs-12.col-md-4.sep
+                  .sub-wrap
+                    +link("What's On", whatOn).title
+                    .sub-links
+                      +link("Exhibitions & Shows", whatOn)
+                      +link("Sporting Events", whatOn)
+                      +link("Festivals & Celebrations", whatOn)
+                      +link("Theatre, Shows & Performances", whatOn)
+                      +link("Workshops", whatOn)
+                      a(href="#", title="View All Events").visible-md.visible-lg.view-all
+                        | View All Events
+                        //- .fa.fa-arrow-circle-o-right
+                .col-xs-12.col-md-4.sep
+                  .sub-wrap
+                    +link("Stay", stay).title
+                    .sub-links
+                      +link("Bed & Breakfast", stay)
+                      +link("Cabins & Cottages", stay)
+                      +link("Caravan & Camping", stay)
+                      +link("Farmstays", stay)
+                      +link("Hotels & Motels", stay)
+                      a(href="#", title="View All Accomodation").visible-md.visible-lg.view-all
+                        | View All Accomodation
+                        //- .fa.fa-arrow-circle-o-right
+              .row
+                .col-xs-12
+                  .info
+                    span.info-text  Visit our Information Centre for more information on things to Do, See, and Places to Stay.
+                    span.break | 
+                    span.map-view View Map.
+            //- .sub-level.mega-menu.type-1
+              .row
+                .col-xs-12.col-md-4.sep
+                  .sub-wrap
+                    .sub-links.sub-title
+                      +link("Food & Wine", seeDo)
+                      +link("The Great Outdoors", seeDo)
+                      +link("Thrill Seeking", seeDo)
+                      +link("Family Fun", seeDo)
+                      +link("Historical", seeDo)
+                      +link("Planes, Trains & Automobiles", seeDo)
+                .col-xs-12.col-md-4.sep
+                  .sub-wrap
+                    +link("Vendors:", whatOn).title
+                    .sub-links
+                      +link("Wineries, Vineyards  Breweries", whatOn)
+                      +link("Farming, Food & Produce", whatOn)
+                      +link("Dining & Eating Out", whatOn)
+                      +link("Markets", whatOn)
+                      a(href="#", title="View All Events").visible-md.visible-lg.view-all
+                        | View All Events
+                        //- .fa.fa-arrow-circle-o-right
+                .col-xs-12.col-md-4.sep
+                  .sub-wrap
+                    +link("Itineraries:", stay).title
+                    .sub-links
+                      +link("Day Trips:", stay).sub-title
+                      +link("- Ipswich Cellar Door Experience", stay)
+                      +link("- Float, Sniff & Swill", stay)
+                      +link("- Scenic Rim Highland Tour", stay)
+                      +link("2 Day/Weekenders:", stay).sub-title
+                      +link("- Wine Lovers Escape", stay)
+                      a(href="#", title="View All Accomodation").visible-md.visible-lg.view-all
+                        | View All Accomodation
+                        //- .fa.fa-arrow-circle-o-right
+              .row
+                .col-xs-12
+                  .info
+                    span.info-text  Visit our Information Centre for more information on things to Do, See, and Places to Stay.
+                    span.break | 
+                    span.map-view View Map.
+          li
+            +link("About", about)
+            .sub-level.mega-menu.type-1
+              .row
+                .col-xs-12.col-md-4.sep
+                  .sub-wrap
+                    +link("See & Do", seeDo).title
+                    .sub-links
+                      +link("Farming, Food & Produce", seeDo)
+                      +link("Scenic Drives & Walks", seeDo)
+                      +link("Towns", seeDo)
+                      +link("Entertainment", seeDo)
+                      +link("Wineries, Vineyards & Breweries", seeDo)
+                      +link("Historical Sites & Heritage Locations", seeDo)
+                      a(href="#", title="View All Things to See & Do").visible-md.visible-lg.view-all
+                        | View All Things to See & Do
+                        //- .fa.fa-arrow-circle-o-right
+                .col-xs-12.col-md-4.sep
+                  .sub-wrap
+                    +link("What's On", whatOn).title
+                    .sub-links
+                      +link("Exhibitions & Shows", whatOn)
+                      +link("Sporting Events", whatOn)
+                      +link("Festivals & Celebrations", whatOn)
+                      +link("Theatre, Shows & Performances", whatOn)
+                      +link("Workshops", whatOn)
+                      a(href="#", title="View All Events").visible-md.visible-lg.view-all
+                        | View All Events
+                        //- .fa.fa-arrow-circle-o-right
+                .col-xs-12.col-md-4.sep
+                  .sub-wrap
+                    +link("Stay", stay).title
+                    .sub-links
+                      +link("Bed & Breakfast", stay)
+                      +link("Cabins & Cottages", stay)
+                      +link("Caravan & Camping", stay)
+                      +link("Farmstays", stay)
+                      +link("Hotels & Motels", stay)
+                      a(href="#", title="View All Accomodation").visible-md.visible-lg.view-all
+                        | View All Accomodation
+                        //- .fa.fa-arrow-circle-o-right
+              .row
+                .col-xs-12
+                  .info
+                    span.info-text  Visit our Information Centre for more information on things to Do, See, and Places to Stay.
+                    span.break | 
+                    span.map-view View Map.
+          li
+            +link("History", history)
+            .sub-level.mega-menu.type-1
+              .row
+                .col-xs-12.col-md-4.sep
+                  .sub-wrap
+                    +link("See & Do", seeDo).title
+                    .sub-links
+                      +link("Farming, Food & Produce", seeDo)
+                      +link("Scenic Drives & Walks", seeDo)
+                      +link("Towns", seeDo)
+                      +link("Entertainment", seeDo)
+                      +link("Wineries, Vineyards & Breweries", seeDo)
+                      +link("Historical Sites & Heritage Locations", seeDo)
+                      a(href="#", title="View All Things to See & Do").visible-md.visible-lg.view-all
+                        | View All Things to See & Do
+                        //- .fa.fa-arrow-circle-o-right
+                .col-xs-12.col-md-4.sep
+                  .sub-wrap
+                    +link("What's On", whatOn).title
+                    .sub-links
+                      +link("Exhibitions & Shows", whatOn)
+                      +link("Sporting Events", whatOn)
+                      +link("Festivals & Celebrations", whatOn)
+                      +link("Theatre, Shows & Performances", whatOn)
+                      +link("Workshops", whatOn)
+                      a(href="#", title="View All Events").visible-md.visible-lg.view-all
+                        | View All Events
+                        //- .fa.fa-arrow-circle-o-right
+                .col-xs-12.col-md-4.sep
+                  .sub-wrap
+                    +link("Stay", stay).title
+                    .sub-links
+                      +link("Bed & Breakfast", stay)
+                      +link("Cabins & Cottages", stay)
+                      +link("Caravan & Camping", stay)
+                      +link("Farmstays", stay)
+                      +link("Hotels & Motels", stay)
+                      a(href="#", title="View All Accomodation").visible-md.visible-lg.view-all
+                        | View All Accomodation
+                        //- .fa.fa-arrow-circle-o-right
+              .row
+                .col-xs-12
+                  .info
+                    span.info-text  Visit our Information Centre for more information on things to Do, See, and Places to Stay.
+                    span.break | 
+                    span.map-view View Map.
+          li
+            +link("Seasons", seasons)
+            .sub-level.mega-menu.type-1
+              .row
+                .col-xs-12.col-md-4.sep
+                  .sub-wrap
+                    +link("See & Do", seeDo).title
+                    .sub-links
+                      +link("Farming, Food & Produce", seeDo)
+                      +link("Scenic Drives & Walks", seeDo)
+                      +link("Towns", seeDo)
+                      +link("Entertainment", seeDo)
+                      +link("Wineries, Vineyards & Breweries", seeDo)
+                      +link("Historical Sites & Heritage Locations", seeDo)
+                      a(href="#", title="View All Things to See & Do").visible-md.visible-lg.view-all
+                        | View All Things to See & Do
+                        //- .fa.fa-arrow-circle-o-right
+                .col-xs-12.col-md-4.sep
+                  .sub-wrap
+                    +link("What's On", whatOn).title
+                    .sub-links
+                      +link("Exhibitions & Shows", whatOn)
+                      +link("Sporting Events", whatOn)
+                      +link("Festivals & Celebrations", whatOn)
+                      +link("Theatre, Shows & Performances", whatOn)
+                      +link("Workshops", whatOn)
+                      a(href="#", title="View All Events").visible-md.visible-lg.view-all
+                        | View All Events
+                        //- .fa.fa-arrow-circle-o-right
+                .col-xs-12.col-md-4.sep
+                  .sub-wrap
+                    +link("Stay", stay).title
+                    .sub-links
+                      +link("Bed & Breakfast", stay)
+                      +link("Cabins & Cottages", stay)
+                      +link("Caravan & Camping", stay)
+                      +link("Farmstays", stay)
+                      +link("Hotels & Motels", stay)
+                      a(href="#", title="View All Accomodation").visible-md.visible-lg.view-all
+                        | View All Accomodation
+                        //- .fa.fa-arrow-circle-o-right
+              .row
+                .col-xs-12
+                  .info
+                    span.info-text  Visit our Information Centre for more information on things to Do, See, and Places to Stay.
+                    span.break | 
+                    span.map-view View Map.
+        form(action="", method="GET").visible-xs.visible-sm.search-form-nav
+          .search-field
+            +input('text', 'search-text', '')(placeholder="Search").form-control
+            button
+              span.fa.fa-search
+            .text-center.map-link
+              a(href="#")
+                span.fa.fa-map-marker
+                | Discover Ipswich by Map
+
+
+  .search-form-popup.hide
+    .top-space
+      .container
+        .btn-close 
+          | Close
+          span.close-icon
+    .container
+      form.search-form
+        .tab-header
+          ul.nav.nav-tabs(role='tablist')
+            li.active(role='presentation')
+              a(href='#search-all-form', data-result-target=".search-all-form-result",  aria-controls='searchall', role='tab', data-toggle='tab') Search All
+            li(role='presentation')
+              a(href='#seeanddo-form', data-result-target=".stay-form-result", aria-controls='seeanddo-form', role='tab', data-toggle='tab') See &amp; Do
+            li(role='presentation')
+              a(href='#what-on-form', data-result-target=".stay-form-result", aria-controls='what-on-form', role='tab', data-toggle='tab') What's On
+            li(role='presentation')
+              a(href='#stay-form', aria-controls='stay-form', data-result-target=".stay-form-result", role='tab', data-toggle='tab') Stay
+            li(role='presentation')
+              a(href='#new-search-form', data-result-target=".stay-form-result", aria-controls='new-search-form', role='tab', data-toggle='tab') New Search
+        .tab-content
+          #search-all-form.tab-pane.active(role='tabpanel', data-url="")
+            +input("text", "Search Text", "")(placeholder="Start Typing to Search", id="#search-input")
+            button.clear
+              | Clear 
+              span.fa.fa-refresh
+          #seeanddo-form.tab-pane(role='tabpanel', data-url="")
+            +datepicker("Arrival Date", "arrivalDate", "").search-date-picked
+            +input-with-icon("text", "numOfNights", "", "No. of Nights", "fa-moon-o")
+            +input-with-icon("text", "numOfAdults", "", "No. Adults", "fa-male")
+            +input-with-icon("text", "numOfChildren", "", "No. Children", "fa-child")
+            select.bootstrap-select.select-style-1.accomodation-select.search-select-picked
+              option(value="") Accomodation Type
+              option(value="1") Accomodation Type 1
+              option(value="2") Accomodation Type 2
+              option(value="3") Accomodation Type 3
+            button.btn.btn-primary Search
+            .clearfix
+            label(for="stay-form-flexible-date").checkbox-wrap
+              +input('checkbox', 'flexible-date', "flexible")#stay-form-flexible-date
+              span.checkbox-face
+              span.text I have flexible dates
+          #what-on-form.tab-pane(role='tabpanel', data-url="")
+            +datepicker("Arrival Date", "arrivalDate", "").search-date-picked
+            +input-with-icon("text", "numOfNights", "", "No. of Nights", "fa-moon-o")
+            +input-with-icon("text", "numOfAdults", "", "No. Adults", "fa-male")
+            +input-with-icon("text", "numOfChildren", "", "No. Children", "fa-child")
+            select.bootstrap-select.select-style-1.accomodation-select.search-select-picked
+              option(value="") Accomodation Type
+              option(value="1") Accomodation Type 1
+              option(value="2") Accomodation Type 2
+              option(value="3") Accomodation Type 3
+            button.btn.btn-primary Search
+            .clearfix
+            label(for="stay-form-flexible-date").checkbox-wrap
+              +input('checkbox', 'flexible-date', "flexible")#stay-form-flexible-date
+              span.checkbox-face
+              span.text I have flexible dates
+          #stay-form.tab-pane(role='tabpanel', data-url="")
+            +datepicker("Arrival Date", "arrivalDate", "").search-date-picked
+            +input-with-icon("text", "numOfNights", "", "No. of Nights", "fa-moon-o")
+            +input-with-icon("text", "numOfAdults", "", "No. Adults", "fa-male")
+            +input-with-icon("text", "numOfChildren", "", "No. Children", "fa-child")
+            select.bootstrap-select.select-style-1.accomodation-select.search-select-picked
+              option(value="") Accomodation Type
+              option(value="1") Accomodation Type 1
+              option(value="2") Accomodation Type 2
+              option(value="3") Accomodation Type 3
+            button.btn.btn-primary Search
+            .clearfix
+            label(for="stay-form-flexible-date").checkbox-wrap
+              +input('checkbox', 'flexible-date', "flexible")#stay-form-flexible-date
+              span.checkbox-face
+              span.text I have flexible dates
+      .live-search-result
+        .row.search-target.search-all-form-result
+          .col-xs-12.col-md-6
+            .result-type.result-type-best-match
+              .header 
+                span Best Match
+              .content
+                .title Winternats 2015
+                .mea
+                  .media
+                    +img("winternat", "search/search-medium-1.png")
+                    .meta-data
+                      .field
+                        span.big 21
+                        span.small June
+                      .field
+                        span.big 1
+                        span.small Day
+                      .field
+                        span.big $10
+                        span.small Min Entry
+                      .field
+                        span.big.fa.fa-map-marker
+                        span.small Ipswich
+                      .field
+                        span.big.fa.fa-phone
+                        span.small 0123 2343 2344
+                  .description
+                    p Itatio. Laciatia que quatem utem vendae vello in pererate vendia demqui ditatiisquo un volupta quos do lorem et consedipsum quodi coruptaquiae nihitincto eosam asecus do ipsum molori...
+                    button.btn.btn-primary View Details
+          .col-xs-12.col-md-6
+            .result-type.result-type-listing
+              .header 
+                span Other Suggestions
+                a.view-all(href="#")
+                  | View All 
+                  span.fa.fa-angle-right
+              .content
+                .row
+                  .col-md-6.result-item
+                    .mea
+                      .media
+                        +img("header result list item name", "search/search-thumb-1.png")
+                      .description
+                        span.category-name What's On
+                        span.short-excerpt Vendor Name Lorem Provision...
+                  .col-md-6.result-item
+                    .mea
+                      .media
+                        +img("header result list item name", "search/search-thumb-1.png")
+                      .description
+                        span.category-name What's On
+                        span.short-excerpt Vendor Name Lorem Provision...
+                  .col-md-6.result-item
+                    .mea
+                      .media
+                        +img("header result list item name", "search/search-thumb-1.png")
+                      .description
+                        span.category-name What's On
+                        span.short-excerpt Vendor Name Lorem Provision...
+                  .col-md-6.result-item
+                    .mea
+                      .media
+                        +img("header result list item name", "search/search-thumb-1.png")
+                      .description
+                        span.category-name What's On
+                        span.short-excerpt Vendor Name Lorem Provision...
+                  .col-md-6.result-item
+                    .mea
+                      .media
+                        +img("header result list item name", "search/search-thumb-1.png")
+                      .description
+                        span.category-name What's On
+                        span.short-excerpt Vendor Name Lorem Provision...
+                  .col-md-6.result-item
+                    .mea
+                      .media
+                        +img("header result list item name", "search/search-thumb-1.png")
+                      .description
+                        span.category-name What's On
+                        span.short-excerpt Vendor Name Lorem Provision...
+                  .col-md-6.result-item
+                    .mea
+                      .media
+                        +img("header result list item name", "search/search-thumb-1.png")
+                      .description
+                        span.category-name What's On
+                        span.short-excerpt Vendor Name Lorem Provision...
+                  .col-md-6.result-item
+                    .mea
+                      .media
+                        +img("header result list item name", "search/search-thumb-1.png")
+                      .description
+                        span.category-name What's On
+                        span.short-excerpt Vendor Name Lorem Provision...
+                  .col-md-6.result-item
+                    .mea
+                      .media
+                        +img("header result list item name", "search/search-thumb-1.png")
+                      .description
+                        span.category-name What's On
+                        span.short-excerpt Vendor Name Lorem Provision...
+                  .col-md-6.result-item
+                    .mea
+                      .media
+                        +img("header result list item name", "search/search-thumb-1.png")
+                      .description
+                        span.category-name What's On
+                        span.short-excerpt Vendor Name Lorem Provision...
+
+        .row.search-target.stay-form-result.hide
+          .col-xs-12
+            .result-type.result-type-listing
+              .header 
+                span Results
+                a.view-all(href="#")
+                  | View All 
+                  span.fa.fa-angle-right
+              .content
+                .row
+                  - for (var x = 0; x < 20; x++)  
+                    .col-xs-12.col-md-3.result-item
+                      .mea
+                        .media
+                          +img("header result list item name", "search/search-thumb-1.png")
+                        .description
+                          span.short-excerpt Vendor Name Lorem Provision... 

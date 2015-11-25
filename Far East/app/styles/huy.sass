@@ -1,0 +1,353 @@
+#lates-section
+  .title 
+    font-size: 21.016px
+    font-family: "Futura"
+    color: rgb( 51, 51, 51 )
+    text-align: left
+    line-height: 1.2
+    height: 50px
+    overflow: hidden
+    margin-bottom: 15px 
+  .note
+    font-style: italic
+  &.bg-white
+    background: none  
+    .slide-item
+      background-color: #f1f1f3
+
+.home
+  #lates-section
+    position: relative
+    // bottom: 125px
+    margin-top: -125px
+    z-index: 9
+    padding-bottom: 60px
+    .block-filter
+      display: inline-block
+      width: 100%
+      margin-bottom: 10px
+    .what-the-lates
+      float: left
+      width: auto
+      color: $white
+    .filter-control
+      float: right
+      width: auto
+      margin: 0
+      position: relative
+      bottom: 5px
+      .btn-group .btn
+        padding: 0 15px
+        line-height: 40px
+        margin-left: 1px
+        font-size: 11px
+        font-weight: normal
+        color: rgb( 153, 153, 153 )
+        text-transform: uppercase
+        border: 0
+        &.active
+          color: $white
+    .slide-item .content
+      padding: 32px 26px 15px
+      height: 223px
+      .title
+        margin-bottom: 10px
+      .description
+        font-size: 16px
+        color: #666666
+        margin-bottom: 12px
+        line-height: 18px
+      .note 
+        font-size: 13px
+        color: #666666
+      .read-more
+        margin: 0
+        position: absolute
+        bottom: 25px
+        font-size: 16px
+        &:hover
+          text-decoration: none
+  section.residental-property-section
+    padding: 52px 0 80px
+    &.bg-gray
+      background-color: #f1f1f2
+      .residental-property-block .information-strip .view-all-div
+        background-color: $white
+    .title
+      font-size: 24px
+      font-family: "Futura"
+      color: rgb( 35, 31, 32 )
+      text-transform: uppercase
+      text-align: center
+      margin-bottom: 52px
+
+#really-cool-video
+  width: 100%
+  height: 670
+  overflow: hidden
+  .vjs-tech
+    height: auto
+
+#retail-wide-image
+  .container
+    position: relative
+  .link
+    position: absolute
+    top: 0
+    left: 15px
+    width: 50%
+    height: 100%
+    &.link-right
+      left: auto
+      right: 15px
+
+.retail #lates-section .slide-item .content
+  background: -webkit-linear-gradient(#ffffff , #F1F1F3)
+  background: -o-linear-gradient(#ffffff, #F1F1F3)
+  background: -moz-linear-gradient(#ffffff, #F1F1F3)
+  background: linear-gradient(#ffffff , #F1F1F3)
+
+.search-listing-pagination
+  margin-top: 10px
+  display: inline-block
+  width: 100%
+  a 
+    font-size: 13px
+    padding: 0 4px
+    text-transform: uppercase
+    font-family: 'Futura-Heavy'
+  .page 
+    color: #000
+  .prev,.next  
+    color: #ccc
+    text-decoration: none
+
+.block-customer-support
+  .container
+    position: relative
+  .content 
+    background: url('../images/bg-support.png') no-repeat left top 
+    position: absolute
+    bottom: 0
+    right: 0
+    width: 270px
+    height: 39px
+    overflow: hidden
+    padding: 10px 20px 0
+    &.active
+      height: 428px
+    .title
+      font-size: 16.012px
+      font-family: "Futura"
+      color: rgb( 255, 255, 255 )
+      line-height: 1.5
+      text-align: left
+      padding-left: 25px
+      cursor: pointer
+    .description
+      font-size: 16.012px
+      font-family: "HelveticaNeue"
+      color: rgb( 102, 102, 102 )
+      line-height: 1.375
+      text-align: left
+      margin-top: 20px
+      margin-bottom: 15px
+    .form
+      input
+        height: 40px
+        border: 1px solid #e5e5e5
+        color: #cccccc
+        padding: 10px 15px
+        margin-bottom: 10px
+        border-radius: 0
+      textarea
+        height: 140px
+        width: 100%
+        border: 1px solid #e5e5e5
+        margin-bottom: 15px
+        padding: 10px 15px
+        color: #cccccc
+      .submit
+        width: 100%
+        height: 40px
+        border-radius: 3px
+        border: none 
+        background: $main-color
+        color: #fff 
+        text-align: center
+        line-height: 40px
+
+.modal
+  .close
+    width: 19px
+    height: 19px
+    position: absolute
+    top: 10px
+    right: 10px
+    opacity: 1
+    z-index: 999
+  .modal-dialog
+    max-width: 700px
+    width: 88%
+  .modal-content
+    border-radius: 0
+    padding: 40px 35px 0 35px
+    .modal-body
+      padding: 0
+      img 
+        margin-left: 40px
+    h2 
+      font-size: 24px
+      font-family: "Futura"
+      color: rgb( 0, 0, 0 )
+      text-transform: uppercase
+      text-align: left
+      margin-bottom: 23px
+    p 
+      font-size: 16.012px
+      font-family: "HelveticaNeue"
+      color: rgb( 102, 102, 102 )
+      line-height: 1.375
+      text-align: left
+      margin-bottom: 40px
+    input
+      height: 40px
+      border: 1px solid #e5e5e5
+      color: #cccccc
+      padding: 10px 15px
+      margin-bottom: 10px
+      border-radius: 0
+    .submit
+      width: 142px
+      height: 40px
+      border-radius: 0px
+      border: none 
+      background: $main-color
+      color: #fff 
+      text-align: center
+      line-height: 40px
+      text-transform: uppercase
+
+#modal-create-alert
+  .modal-dialog
+    max-width: 428px
+  .modal-content
+    padding: 10px 35px 30px
+    h2 
+      text-align: center
+      font-size: 24px
+      font-family: "Futura"
+      color: rgb( 0, 0, 0 )
+      text-transform: uppercase
+    p , li
+      font-size: 16.012px
+      font-family: "HelveticaNeue"
+      color: rgb( 102, 102, 102 )
+      line-height: 1.375
+      text-align: left
+      margin-bottom: 10px
+    .well
+      border: 1px solid #e5e5e5
+      border-radius: 0
+      background: #f7f7f7
+      margin-bottom: 25px
+    ul 
+      list-style-type: none
+      padding: 0
+      margin: 0
+      li 
+        line-height: 2
+        margin-bottom: 0
+      .fa 
+        margin-right: 10px
+        color: #42b742
+        font-size: 20px
+    .form-group
+      margin-bottom: 20px
+    .submit
+      width: 100%
+      .fa 
+        margin-right: 8px
+
+
+
+
+
+
+
+section.residental-property-section .residental-property-block .information-strip .link-img-div, section.residental-property-section .residental-property-block .information-strip .view-all-div
+  height: 156px
+.home
+  section.residental-property-section .residental-property-block .information-strip .link-img-div, section.residental-property-section .residental-property-block .information-strip .view-all-div
+    height: 161px
+section.residental-property-section .residental-property-block .information-strip .link-img-div
+  padding: 15px 14px 14px 14px
+
+.residental-property-section
+  .owl-carousel
+    position: relative
+    .owl-prev, .owl-next
+      position: absolute
+      top: 0
+      bottom: 0
+      margin: auto
+      width: 16px
+      height: 33px
+      font-size: 0
+      cursor: pointer
+    .owl-prev
+      left: -30px
+      background: url(../images/sprites/lates-slide-nav-left.png) no-repeat
+      background-size: contain
+    .owl-next
+      right: -30px
+      background: url(../images/sprites/lates-slide-nav-right.png) no-repeat
+      background-size: contain
+    @media screen and (max-width: 1024px)
+      .owl-nav:before
+        content: ""
+        height: 23px
+        width: 1px
+        position: absolute
+        top: calc(100% + 28px)
+        background: #d9d9db
+        left: 0
+        right: 0
+        margin: auto
+        display: inline-block
+      .owl-prev, .owl-next
+          width: 11px
+          height: 20px
+          top: calc(100% + 30px)
+          bottom: auto
+      .owl-prev
+          right: calc(50% + 30px)
+          left: auto
+      .owl-next
+          left: calc(50% + 30px)
+          right: auto
+
+@media screen and (max-width: 767px)
+  .home, .residential, .retail
+    #lates-section
+      margin: 0
+      padding-top: 20px
+      .what-the-lates
+        color: #231f20
+        width: 100%
+        text-align: center
+        margin-bottom: 20px
+      .filter-control .btn-group .btn
+        width: 100%
+        border-radius: 0px
+        margin: 0
+  .retail #lates-section .container
+    margin: 0
+  #main-slide-section 
+    .video-img-mobile
+      width: 100%
+      height: auto
+      img
+        max-width: 100%
+  .home #header .header .navbar-default li.home-link a
+    display: block

@@ -1,0 +1,64 @@
+extends layouts/layout
+
+block vars
+  -title = 'Site maps'
+  -bodyClass = ''
+  -bannerIMG = 'home/banner.jpg'
+  style(type="text/css")
+    | .container .inner h1 {font-size: 40px !important; margin: 20px 0; color: orange;}
+    | .container .inner ul {margin-top: 20px;}
+    | .container .inner ol {padding-left: 28px;}
+    | .container .inner li {margin-bottom: 20px; font-size: 20px; color: #f37a1f;}
+    | .container .inner li > ul {list-style-type: disc;}
+    | .container .inner a {text-transform: capitalize;}
+    | .container .inner a:hover, .container a:active {color: violet;}
+
+block header
+  div
+
+block container
+  main#main(style="min-height: 800px")
+    .container
+      .inner
+        h1 Site Maps 
+        ol(start="1")
+
+          li: +link("booking-step-0", 'booking-step-0.html')(target="_blank", value="1") 
+          li: +link("booking-step-1", 'booking-step-1.html')(target="_blank", value="1") 
+          li: +link("booking-step-2", 'booking-step-2.html')(target="_blank", value="1") 
+          li: +link("booking-step-3", 'booking-step-3.html')(target="_blank", value="1") 
+          
+  // build:js scripts/cdn.js
+  script(src='/bower_components/jquery/dist/jquery.js')
+  // endbuild
+
+  // build:js scripts/dep.js
+  script(src='/bower_components/pubsub/odfc-pubsub.js')
+  script(src='/scripts/filter-select.js')
+  script(src='/scripts/utils.js')
+  script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js')
+  script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js')
+  script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
+  script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js')
+  script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
+  script(src='/scripts/jquery.sticky.js')
+  script(src='/bower_components/matchHeight/jquery.matchHeight-min.js')
+  script(src='/bower_components/moment/min/moment.min.js')
+  script(src='/scripts/date-range-picker.js')
+  script(src='/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js')
+  script(src='/bower_components/picturefill/dist/picturefill.js')
+  script(src='/bower_components/jquery-validation/dist/jquery.validate.js')
+  script(src='/bower_components/bootstrap-daterangepicker/daterangepicker.js')
+  script(src='/bower_components/owl-carousel2/src/js/owl.carousel.js')
+  script(src='/bower_components/owl-carousel2/src/js/owl.lazyload.js')
+  script(src='/bower_components/owl-carousel2/src/js/owl.navigation.js')
+  script(src='/scripts/libs-js/owl.equalize.js')
+  // endbuild
+  
+  // build:js scripts/main.js
+  script(src='/scripts/main.js')
+  // endbuild
+
+  // build:js scripts/photo-gallery.js
+  script(src='/scripts/photo-gallery.js')
+  // endbuild

@@ -1,0 +1,92 @@
+footer#footer
+  .container
+    .row
+      .col-xs-12.col-md-5
+        .row
+          .col-xs-12.col-sm-6.col-md-6
+            h3 CUSTOMER SUPPORT
+            .ft-info-section
+              .customer-support
+                a(href="tel://971-02-690-9000").tel +971 (0)2 690 9000
+                a(href="mailto:booking@abu-dubai-kempinski.com").email booking@abu-dubai-kempinski.com
+            .ft-info-section
+              .social-channels
+                a(href="#" title="Facebook").social-link.fa
+                  
+                a(href="#" title="Twitter").social-link.twitter
+                  
+                a(href="#" title="GooglePlus").social-link.gplus
+                  
+                a(href="#" title="Youtube").social-link.youtube
+                  
+          .col-xs-12.col-sm-6.col-md-6.hide-phone
+            h3 HELPFUL INFO
+            .ft-info-section
+              ul.link-list
+                li
+                  +link("Golf Vacations", "#")
+                li
+                  +link("Ski & Snowboarding", "#")
+                li
+                  +link("Disney Vacations", "#")
+                li
+                  +link("vacations as advertised", "#")   
+      .col-xs-12.col-md-7
+        .row
+          .col-xs-12.col-sm-6.hide-phone
+            h3 MY ACCOUNT
+            .ft-info-section
+              .row
+                .col-xs-12.col-sm-6.col-md-6
+                  ul.link-list
+                    li
+                      +link("Weddings", "#")
+                    li
+                      +link("Accessible Travel", "#")
+                    li
+                      +link("Parks", "#")
+                    li
+                      +link("cruises", "#")
+                .col-xs-12.col-sm-6.col-md-6
+                  ul.link-list
+                    li
+                      +link("special offers", "#")
+                    li
+                      +link("partners", "#")
+          .col-xs-12.col-sm-6.col-newsletter 
+            h3 SIGN UP TO OUR NEWSLETTER
+            .ft-info-section
+              .newsletter-form
+                +input("text", "newsletterEmail", "")
+                button(type="submit") submit
+                a(href="#" title="Global Hotel Aliance").global-hotel
+                  img(src="images/icon/global-hotel.png" alt="Global Hotel Aliance")
+                .copyright.hidden-xs
+                  | &copy; 2015 Kempinksi
+            
+  .footer-nav
+    ul.list-inline.text-center   
+      li
+        +link("ABOUT US", "")
+      li
+        +link("RESIDENCES", "")
+      li
+        +link("LOYALTY", "") 
+      li
+        +link("PRESS ROOM", "")
+      li
+        +link("CAREERS", "") 
+      li
+        +link("BEST RATE", "") 
+      li
+        +link("GUARANTEE", "") 
+      li
+        +link("CONTACT US", "")
+      li
+        +link("SITE MAPS", "") 
+      li
+        +link("IMPRINT", "") 
+      li
+        +link("LEGAL", "") 
+    .text-center
+      +link("back to top", "#").back-to-top

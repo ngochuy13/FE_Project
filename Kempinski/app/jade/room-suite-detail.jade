@@ -1,0 +1,142 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Room Suites Details'
+  -bodyClass = ''
+  -bannerIMG = 'rooms-suites-detail/banner.jpg'
+  -page = 'rooms-suites'
+block pagescript
+
+block breadcrumb
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#"
+      },{
+        "text": "MIDDLE EAST",
+        "href":"#"
+      },{
+        "text": "EMIRATES PALACE",
+        "href":"#"
+      },{
+        "text": "MEETINGS & EVENTS",
+        "href":"#"
+      },{
+        "text": "WEDDINGS",
+        "href":"#"
+      }])
+
+block container    
+  .inner
+    main#main
+      section.section-block
+        +page-title-star("KHALEEJ SUITE", "Explore Emirates Palace")
+      
+      section.section-weddings-details.mw980.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+        .container
+          .row
+            .col-xs-12
+              .weddings-details__title Your private world of opulence and grandeur
+          .row
+            .col-xs-12.col-md-6
+              .weddings-details__description.editor-content
+                p Your stay in the Emirates Palace Suite will transport you to your own private world of opulence and grandeur when you choose a Khaleej Suite. This experience will be the benchmark by which you measure your every hotel experience.
+                br 
+                p Each of our Khaleej Suites features a private world-class entertainment centre, sea views of the deepest mesmerising turquoise, and contemporary décor that exudes the height of luxury living. The Khaleej Suite will inspire you in the morning, lull you to sleep at night, and give you peace and tranquillity throughout the day. This Emirates Palace Suite welcomes you to an extravagantly-dressed king size bed and a fully-appointed bathroom with your own Jacuzzi, providing the perfect backdrop for your trip to Abu Dhabi. 
+
+            .col-xs-12.col-md-6
+              .contact-block
+                .weddings-details__title Reservations
+                .contact-detail
+                  dl.dl-horizontal
+                    dt Email Contact:
+                    dd 
+                      a(href="mailto:reservations@emiratespalace.ae", title="reservations@emiratespalace.ae") reservations@emiratespalace.ae
+                    dt Telephone:
+                    dd 
+                      a(href="tel://971-2-690-9000", title="tel:+971 2 690 9000") +971 2 690 9000
+                    dt Fax:
+                    dd 
+                      a(href="tel://971-2-690-9999", title="tel:+971 2 690 9999") +971 2 690 9999
+                    dt Address:
+                    dd Emirates Palace West Corniche Road <br/>P.O.Box - 39999Abu Dhabi
+                  .cta-btns
+                    a(href='#', title='title2').btn.btn-default.btn-book-now Book now
+            .col-xs-12.col-md-12.media-block
+              .media-wrap
+                +img('media', 'rooms-suites-detail/img-1.jpg')
+            .col-xs-12.col-md-12
+              .owl-item.active
+                .slider-item.type3
+                  .room-features
+                    .title Room features & amenities
+                    ul.feature-list
+                      li
+                        span laptop-size safe
+                      li
+                        span Separate Living Room and Bedroom
+                      li
+                        span Balcony
+                      li
+                        span Powder Room
+                      li
+                        span Flat-screen TV
+                      li
+                        span Entertainment Center
+                      li
+                        span Working Desk
+                      li
+                        span 24 Hour Butler
+                      li
+                        span Lounge Area
+                      li
+                        span Baby cot allowed
+                    ul.amenities-list
+                      li
+                        span View: Sea
+                      li
+                        span View: Sea
+                      li
+                        span Décor: Contemporary
+                      li
+                        span Décor: Contemporary
+                      li
+                        span Beds: King
+                      li
+                        span Beds: King
+                      li
+                        span Maximum Occupancy: 3 Adult(s)
+                      li
+                        span Maximum Occupancy: 3 Adult(s)
+                      li
+                        span Room Size: 110 m² (1184 ft²)
+                      li
+                        span Room Size: 110 m² (1184 ft²)
+
+
+
+      section.section-article-blog.section-service
+        +section-title("EXCLUSIVE SUITES", "Word Class Luxury", "YOUR DESIRES SERVED").gray
+        .section-article-blog__content
+          +filter-select-sync([
+            {
+              "text": "KHALEEJ SUITE"
+            },
+            {
+              "text": "KHALEEJ DELUXE SUITE"
+            },
+            {
+              "text": "ROYAL KHALEEJ SUITE"
+            },
+            {
+              "text": "DIAMOND ROOM"
+            }
+          ])(data-sync=".owl-sync-content .service-slide")
+          .owl-sync-content.service-slide-wrap
+            .container
+              .service-slide.owl-carousel              
+                +service-item('rooms-suites/service-1.jpg', 'KHALEEJ SUITE', '<p>Your stay in the Emirates Palace Suite will transport you to your own private world of opulence and grandeur when you choose a Khaleej Suite. This experience will be the benchmark by which you measure your every hotel experience...</p>')(data-index='1')
+                +service-item('rooms-suites/service-2.jpg', 'KHALEEJ DELUXE SUITE', '<p>Your Khaleej Deluxe Suite will take your breath away with its spectacular 180-degree scenic view of the Arabian Gulf and its turquoise blue waters. The stunning vista and the pure lavishness of your Emirates Palace Suite surroundings will have you coming back for years to come.</p>')(data-index='2')
+                +service-item('rooms-suites/service-3.jpg', 'ROYAL KHALEEJ SUITE', '<p>As with every guest in an Emirates Palace suite, you are our VIP, and the Royal Khaleej Suite will remind you of this every day. A passion for detail in architecture and design not only provides the foundation of the Emirates Palace but is the basis for every experience created and memory made here...</p>')(data-index='3')
+                +service-item('rooms-suites/service-1.jpg', 'DIAMOND ROOM', '<p>Your stay in the Emirates Palace Suite will transport you to your own private world of opulence and grandeur when you choose a Khaleej Suite. This experience will be the benchmark by which you measure your every hotel experience...</p>')(data-index='4')

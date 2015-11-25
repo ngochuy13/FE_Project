@@ -1,0 +1,47 @@
+extends layouts/template
+
+block vars
+  -title = 'T7 Clubs'
+  -bodyClass = 'node-type-page'
+
+block container
+  +skewed-header("images/banner/banner-clubs.png","images/banner/banner-clubs-sm.png",' Lorem ipsum dolor sit amet, consectetur.','home','life@SIT')
+  section.page-intro
+    .page-intro_before
+      span
+    .container
+      .row
+        .col-md-12
+          .page-intro-block
+            .intro-header
+              h2 VIBRANT LEARNING EXPERIENCE
+            .intro-subtitle
+              h3 Nuturing Candidates as Future Leaders
+            .intro-desc
+              p SIT believes in cultivating future leaders for Singapore’s growth sectors of the economy and we offer scholarships to nurture candidates with excellent academic achievement, talent, leadership, and a passion to contribute to society for that purpose. We create opportunities for students to develop and achieve their goals through these scholarships. Students who demonstrate academic excellence and strong leadership may apply.  A good co-curricular activities record will be an added advantage.
+    .page-intro_after
+      span
+
+  section.page-main-body
+    .container
+      .row
+        .col-md-12
+          .body-title
+            .symbol-img
+              img(src="images/trophy-clubs.png", alt="symbol")
+            .body-name
+              h2 CLUBS IN SIT
+            .body-subtitle
+              h3  There are currently about 50 clubs in SIT, and they are divided into the following categories:
+      .row
+        .col-md-4
+          +clubs-category-card("images/clubs-image/sportclub1.jpg","SPORTS")       
+        .col-md-4
+          +clubs-category-card("images/clubs-image/sportclub2.jpg","ART & CULTURE")          
+        .col-md-4
+          +clubs-category-card("images/clubs-image/sportclub3.jpg","MARTIAL ARTS") 
+      .row
+        .col-md-6 
+          +clubs-category-card("images/clubs-image/sportclub4.jpg","SPECIAL INTERESTS")            
+        .col-md-6
+          +clubs-category-card("images/clubs-image/sportclub5.jpg","SPECIAL SENTENTIAT dsad asda PROJECTS")

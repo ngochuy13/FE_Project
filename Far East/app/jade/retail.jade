@@ -1,0 +1,84 @@
+extends layouts/layout
+
+block vars
+  -title = 'Retail'
+  -bodyClass = 'retail'
+block container
+   main#main
+
+    //- +sectionSlider('images/retail-slide.png')
+    +sectionSliderVideo('images/Orchard Central Food Festival (MEDZ) - 2012.mp4' , "images/retail-slide.png")
+
+    //- +sectionLates()
+    #lates-section
+      .container
+        .block-filter
+          .what-the-lates WHAT'S THE LATEST
+        .slide-wrap.owl-carousel
+          +sectionLates-item('images/block-image-10.jpg', '#')
+            .title Dom Perignon, the gastronomy journey
+            .description From now till 30th December 2015, eight of Singapore’s finest restaurants will embark on Dom Perignon’s first Gastronomy Journey.
+            .label-lates
+              span(style="border: 1px solid #000; background-color: rgba( 0, 0, 0, 0.749 )") BEDROCK BAR AND GRILL
+          +sectionLates-item('images/block-image-11.jpg', '#')
+            .title 55 days for 55 years
+            .description Enjoy great shopping deals for 55 days on Far East Organization’s 55th Anniversary.
+            .label-lates
+              span(style="border: 1px solid #c6c3a2; background-color: rgba( 198, 195, 162, 0.902 )") FEO RETAIL MALLS
+          +sectionLates-item('images/block-image-12.jpg', '#')
+            .title The new women's denim collection at LEVI'S
+            .description We’ve found our favourite – the super skinny. What's yours?
+            .label-lates
+              span(style="border: 1px solid #ee0d40; background-color: rgba( 242, 16, 81, 0.902 )") FEO RETAIL MALLS
+          +sectionLates-item('images/block-image-10.jpg', '#')
+            .title Dom Perignon, the gastronomy journey
+            .description From now till 30th December 2015, eight of Singapore’s finest restaurants will embark on Dom Perignon’s first Gastronomy Journey.
+            .label-lates
+              span(style="border: 1px solid #000; background-color: rgba( 0, 0, 0, 0.749 )") BEDROCK BAR AND GRILL
+          +sectionLates-item('images/block-image-11.jpg', '#')
+            .title 55 days for 55 years
+            .description Enjoy great shopping deals for 55 days on Far East Organization’s 55th Anniversary.
+            .label-lates
+              span(style="border: 1px solid #c6c3a2; background-color: rgba( 198, 195, 162, 0.902 )") FEO RETAIL MALLS
+          +sectionLates-item('images/block-image-12.jpg', '#')
+            .title The new women's denim collection at LEVI'S
+            .description We’ve found our favourite – the super skinny. What's yours?
+            .label-lates
+              span(style="border: 1px solid #ee0d40; background-color: rgba( 242, 16, 81, 0.902 )") FEO RETAIL MALLS
+    #gallery
+      .container
+        .thumb-block
+          a(href="", title="") 
+            img(src="images/block-image-1.jpg")
+        .thumb-block
+          a(href="", title="")
+            img(src="images/block-image-2.jpg")
+            img(src="images/block-image-2-hover.jpg").hover
+        .thumb-block
+          a(href="", title="")
+            img(src="images/block-image-3.jpg")
+            img(src="images/block-image-3-hover.jpg").hover
+        .thumb-block
+          a(href="", title="")
+            img(src="images/block-image-4.jpg")
+            img(src="images/block-image-4-hover.jpg").hover
+        .thumb-block
+          a(href="", title="")
+            img(src="images/block-image-5.jpg")
+            img(src="images/block-image-5-hover.jpg").hover
+        .thumb-block
+          a(href="", title="")
+            img(src="images/block-image-6.jpg")
+            img(src="images/block-image-6-hover.jpg").hover
+        .thumb-block
+          a(href="", title="")
+            img(src="images/block-image-7.jpg")
+            img(src="images/block-image-7-hover.jpg").hover
+        .thumb-block
+          a(href="", title="")
+            img(src="images/block-image-8.jpg")
+    #retail-wide-image
+      .container
+        img(src="images/block-image-9.jpg", width="100%")
+        a(href="http://www.fareastretail.com.sg",target="_blank", title="").link
+        a(href="http://www.kitchenlanguage.com.sg",target="_blank", title="").link.link-right

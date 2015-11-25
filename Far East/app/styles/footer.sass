@@ -1,0 +1,97 @@
+// footer
+#footer
+  background: #222222
+  padding-top: 38px
+  font-size: 16px
+  font-family: 'HelveticaNeue' , $font-family-base
+  color: rgb( 141, 145, 141 )
+  line-height: 1.5
+  .editor
+    p
+      margin-bottom: 22px
+
+  .title 
+    text-transform: uppercase
+    margin-bottom: 20px
+    font-size: 21px
+    font-family: "HelveticaNeue-CondensedBold", "HelveticaNeue-BlackCond" , $font-family-base
+    color: rgb( 141, 145, 141 )
+    font-weight: bold
+    text-transform: uppercase
+    line-height: 1.143
+
+  ul
+    list-style: none 
+    padding: 0
+    margin: 0
+    li
+      padding: 0
+    a 
+      color: $text-second
+      font-size: 13px
+      line-height: 2.308
+      &:hover 
+        text-decoration: none
+  .col-our
+    padding-left: 89px
+    padding-top: 2px
+    .title
+      margin-bottom: 15px
+  .col-connect
+    padding-left: 44px
+    padding-top: 2px
+
+
+  .block-logo-footer
+    margin-bottom: 71px
+  .block-link
+    margin-top: 40px
+    li 
+      display: inline-block
+      padding: 0 15px
+      border-left: 1px solid $text-second
+      a 
+        font-size: 14px
+      &:first-child
+        padding-left: 0
+        border-left: none
+  .copy-right
+    font-size: 14px
+  .block-col-link
+    margin-bottom: 35px
+    .title
+      margin-bottom: 12px
+  .block-social
+    margin-bottom: 42px
+    .title
+      margin-bottom: 11px
+    .content-link
+      li 
+        display: inline-block
+        padding: 0 2px
+        a 
+          width: 38px
+          height: 38px
+          display: block
+          background: url('../images/icon-social.png') no-repeat
+          &.twitter
+            background-position: -45px 0
+          &.youtube
+            background-position: -89px 0
+          &.pinterest
+            background-position: -133px 0
+          &.linkedin
+            background-position: -178px 0
+
+@media screen and (max-width: 767px)
+  #footer 
+    .col-our, .col-connect
+      padding-left: 15px
+    .block-logo-footer
+      margin-bottom: 35px
+    .copy-right
+      margin-bottom: 35px
+    .col-our
+      .block-col-link
+        float: left
+        width: 100%

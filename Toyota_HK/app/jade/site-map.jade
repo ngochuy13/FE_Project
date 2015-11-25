@@ -1,0 +1,90 @@
+extends layouts/layout
+
+block vars
+	-title = 'Site map'
+	-bodyClass = 'site-map' 
+
+block container
+	.sub-page-banner.feature-img
+		p 網站地圖
+		picture
+			source(srcset='images/sitemap/banner-sitemap-mobile.jpg', media='(max-width: 767px)')
+			source(srcset='images/sitemap/banner-sitemap.jpg', media='(max-width: 1280px)')
+			img.master-banner-img.intel-scaling(src='images/sitemap/banner-sitemap.jpg', alt='', data-width='1920', data-height='411')
+	.sitemap-content
+		.inner
+			.sitemap-box
+				ul
+					li
+						h3 全新車系
+						a(href='', title='') Ractis
+						a(href='', title='') Prius C
+						a(href='', title='') Camry
+						a(href='', title='') Noah
+						a(href='', title='') Alphard
+						a(href='', title='') Vellfire
+						.has-sublink
+							a(href='', title='') Spade
+							a.sublink(href='', title='') 預售表格
+						.has-sublink
+							a(href='', title='') Sienta
+							a.sublink(href='', title='') 預售表格
+						a(href='', title='') Mark X
+						a(href='', title='') Corolla
+						a(href='', title='') Rav4
+						a(href='', title='') Prius
+						a(href='', title='') Prius V
+						a(href='', title='') Wish
+						a(href='', title='') Previa
+						a(href='', title='') Prado
+						a(href='', title='') 尋找適合你的
+						a(href='', title='') 試駕表格
+						a(href='', title='') 價目表
+						a(href='', title='') 最新宣傳
+						a(href='', title='') 回收服務
+					li
+						h3 商用車系
+						a(href='', title='') Hiace
+						a(href='', title='') 公共小巴
+						a(href='', title='') 的士
+						a(href='', title='') 聯絡我們
+						a(href='', title='') 維修保養服務
+						a(href='', title='') 維修及駕駛貼士
+						a(href='', title='') 價目表
+					li
+						h3 二手汽車
+						a(href='', title='') 連結
+					li
+						h3 售後服務
+						a(href='', title='') 門市搜尋器
+						a(href='', title='') 服務預約
+						a(href='', title='') 召回詢價
+						a(href='', title='') 零件及配件
+						.has-sublink
+							a(href='', title='') Anti-counterfeit campaign
+							a.sublink(href='', title='') 網上查詢
+						a(href='', title='') 銷售及售後服務推廣
+						a(href='', title='') 保用
+						a(href='', title='') 豐田特快維修服務
+						a(href='', title='') 車輛檢驗證明書
+					li
+						h3 財務與保險
+						a(href='', title='') 財務介紹
+					li
+						h3 關於豐田
+						a(href='', title='') 革新技術
+						a(href='', title='') 創新科技
+						a(href='', title='') 願景
+						a(href='', title='') 發展歷史
+					li
+						h3 TRAC
+						a(href='', title='') 連結
+					li
+						h3 資訊中心
+						a(href='', title='') 新聞
+						a(href='', title='') 活動
+						a(href='', title='') 相片和影片
+					li
+						h3 聯絡我們
+						a(href='', title='') 門市搜尋器
+						a(href='', title='') 一般查詢

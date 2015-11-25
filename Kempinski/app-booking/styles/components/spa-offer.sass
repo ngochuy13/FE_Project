@@ -1,0 +1,143 @@
+.section-special-offers
+  > .section-spa-offers
+    margin-bottom: 20px
+.section-spa-offers
+  padding: 20px 0 0 0
+  margin-bottom: -20px
+  .spa-offer-item
+    padding: 30px
+    padding-right: 385px
+    position: relative
+    margin-bottom: 20px
+    overflow: hidden
+    @media (max-width: 1199px)
+      padding-right: 160px
+    @media (max-width: 991px)
+      padding-right:  30px
+    img
+      position: absolute
+      top: 0
+      left: 0
+      min-width: 100%
+      min-height: 100%
+    .content-wrap
+      position: relative
+      z-index: 1
+      background: #fff
+      padding: 23px 40px
+      .title
+        font-size: 22px
+        letter-spacing: 6px
+        color: #010101
+      .description
+        margin-top: 10px
+        margin-bottom: 15px
+        font-size: 14px
+        p         
+          color: #010101
+      .rate
+        margin-top: 2px
+        margin-left: 66px
+        // font-style: italic
+        font-family: $kc-ff
+        display: inline-block
+        width: 100%
+        vertical-align: middle
+        line-height: 1
+        color: #010101
+        span.offer-type-description
+          display: block;
+          font-size: 18px;
+          padding: 9px;
+        span.price
+          font-size: 30px;
+      .cta-btns
+        margin-top: 0px
+        .btn
+          margin-top: 0
+        .btn + .btn
+          margin-left: 8px
+        @media (max-width: 768px)
+          .btn
+            margin: 10px 8px 0px 8px
+    &.type-2          
+      .cta-btns.wide .btn
+        max-width: 175px
+      .text-valid
+        font-size: 14px
+        color: #000
+        padding-top: 11px
+    &.type-3
+      padding: 0
+      border: 1px solid #bab3ac
+      .dynamic-bg
+        background-position: center center
+        background-size: cover
+        @media (max-width: 767px)
+          background: transparent!important
+      .content-wrap 
+        padding: 0
+        .block-media
+          position: relative
+          .media-wrap
+            overflow: hidden
+            height: 278px
+            width: 100%
+          img 
+            position: relative
+            height: 100%
+            width: auto
+            display: none
+            @media (max-width: 767px)
+              display: block
+              width: 100%
+              height: auto
+              min-height: inherit
+          .media-title
+            position: absolute
+            top: 20px
+            left: 20px
+            background: rgba(200,200,200,0.8)
+            padding: 10px 15px
+            .title
+              letter-spacing: 6px
+            .sub-title
+              font-size: 12px
+              letter-spacing: 6px
+        .block-info
+          padding: 30px 15px 65px 0
+          position: relative
+          min-height: 278px
+          .cta-btns
+            position: absolute
+            left: 0
+            bottom: 30px
+            width: 100%
+      @media (max-width: 767px)
+        .content-wrap 
+          .block-info
+            min-height: inherit
+            padding: 30px
+            .cta-btns
+              position: relative
+              bottom: 0
+
+
+
+@media (max-width: 991px)
+  .section-spa-offers .spa-offer-item .content-wrap 
+    .rate
+      margin-left: 0
+    .cta-btns .btn
+      margin: 10px 0 0 0
+      &+.btn
+        margin-left: 0
+
+@media (max-width: 500px)
+  .section-spa-offers .spa-offer-item 
+    padding: 0
+    img
+      position: static
+      width: 100%
+    .content-wrap
+      padding: 25px 0 40px

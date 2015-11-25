@@ -1,0 +1,92 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Contact Us'
+  -bodyClass = ''
+  -bannerIMG = 'contact-us/banner.jpg'
+block breadcrumb  
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#"
+      },{
+        "text": "MIDDLE EAST",
+        "href":"#"
+      },{
+        "text": "EMIRATES PALACE",
+        "href":"#"
+      },{
+        "text": "CONTACT US",
+        "href":"#"
+      }])
+
+block container    
+  .inner
+    main#main
+      section.section-block.gray.contact-section
+        +page-title("CONTACT EMIRATES PALACE ","Do not hesitate", "call us today")
+        .contact-wrap
+          .container
+            .row
+              .col-xs-12.col-md-6
+                +img("Contact Us", "contact-us/contact.jpg", "contact-us/contact.jpg", "contact-us/contact.jpg").contact-cover
+              .col-xs-12.col-md-6
+                .contact-block
+                  .title Contact
+                  .contact-detail
+                    dl.dl-horizontal
+                      dt Email Contact:
+                      dd 
+                        a(href="mailto:reservations@emiratespalace.ae", title="reservations@emiratespalace.ae") reservations@emiratespalace.ae
+                      dt Telephone:
+                      dd 
+                        a(href="tel://971-2-690-9000", title="tel:+971 2 690 9000") +971 2 690 9000
+                      dt Fax:
+                      dd 
+                        a(href="tel://971-2-690-9000", title="tel:+971 2 690 9000") +971 2 690 9000
+                      dt Address:
+                      dd Emirates Palace<br/>West Corniche Road<br/>P.O.Box - 39999<br/>Abu Dhabi
+
+
+                  .contact-description
+                    p Would you like to receive more information about the Emirates Palace? Please do not hesitate to contact us, we are more than happy providing you with the same.
+                  form.form-horizontal
+                    .title Hotel Department
+                    +select-control-button("CHOOSE HOTEL DEPARTMENT")
+                    .title Personal Details
+                    +select-control-button("TITLE")
+                    +input-control-horizontal("First Name*:", "first-name", true)
+                    +input-control-horizontal("Last Name*:", "last-name", true)
+                    .title.clearfix
+                      dl.dl-horizontal
+                        dt Address
+                    +input-control-horizontal("Street 1:", "street-1")
+                    +input-control-horizontal("Street 2:", "street-2")
+                    +input-control-horizontal("Zip Code:", "street-3", false)
+                    +input-control-horizontal("City*:", "street-4", true)
+                    +select-control-horizontal("Country:")
+                    .title.clearfix
+                      dl.dl-horizontal
+                        dt Contact Details
+                    +input-control-horizontal("Email*:", "email", true)
+                    +input-control-horizontal("Telephone No*:", "telephone", true)
+                    +input-control-horizontal("Fax:", "fax")
+                    .title.clearfix
+                      dl.dl-horizontal
+                        dt Comments
+                    .form-group
+                      label.col-sm-4.control-label(for="#{id}") Add your comments
+                      .col-sm-8
+                        textarea
+                    .form-privacy
+                      .checkbox-group
+                        label(for="privacy") 
+                          input(type="checkbox" name="privacy", id="privacy")
+                          span.checkbox-face.fa.fa-check
+                          | Check here if you would like to receive updates about Kempinski Hotels
+                      .privacy-review
+                        | Privacy Mandatory: 
+                        a(href="#") Click here to review our Privacy Policy*
+                    .btn-group.cta-btns.wide
+                      input(type="submit", value="SUBMIT DETAILS").btn.btn-default

@@ -1,0 +1,51 @@
+extends layouts/template-1
+
+block vars
+  -title = 'RESTAURANTS & BARS'
+  -bodyClass = ''
+  -bannerIMG = 'dining/banner.jpg'
+  
+block breadcrumb  
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#" 
+      },{
+        "text": "MIDDLE EAST",
+        "href":"#"
+      },{
+        "text": "EMIRATES PALACE",
+        "href":"#"
+      },{
+        "text": "ROOMS & SUITES",
+        "href":"#"
+      }])
+
+block container    
+  .inner
+    main#main
+      section.section-room-suite.grand-room-name
+        +page-title("RESTAURANTS & BARS", " ignite a sense of balance", "ULTIMATE RELAXATION")
+
+      .section-room-suite-article.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+        .section-room-suite-article__content 
+          .container
+            .row.mg12  
+              +room-suite-article-item('dining/img-1.jpg', 'RESTAURANTS', '<p>Staying at the Emirates Palace is not simply about enjoying a 5 star experience. At the Emirates Palace you live a life of luxury, opulence and grandeur, combined with the presidential-level service that will see to your every desire. We promise an experience unlike any other. From the moment you walk into your 5 star room, we will deliver the ‘palace’ experience that you truly deserve as our VIP guest.</p>').match-height
+              +room-suite-article-item('dining/img-2.jpg', 'BARS','<p>Laying world class luxury at your feet, your choice of an Emirates Palace Suite guarantees you an unforgettable experience the moment you walk through the door. The lavish interiors will transport you to another world. Views of the surrounding sugar-white beaches of the Arabian Gulf will melt away your cares.</p>').match-height
+
+      +section-title("SPECIAL OFFERS", "Word Class Luxury", "YOUR DESIRES SERVED").gray
+      .section-article-blog.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+        .container
+          .row               
+            +article-blog-item('rooms-suites/room-suite-6.jpg', 'CONCIERGE SERVICE', '', '<p>We don’t sleep, so you can. Need a private jet or a last minute gift? Perhaps an invitation or tickets to a VIP event, we can assist you anytime of the day for making restaurant reservations, arranging for spa services, recommending night life hot spots, booking transportation, procurement of tickets to special events and assisting with various travel arrangements and tours of local attractions.</p><br><p>For more information, contact our concierge desk at <a href="mailto:concierge@emiratespalace.ae">concierge@emiratespalace.ae</a></p>').col-sm-4.col-xs-12.match-height 
+            +article-blog-item('rooms-suites/room-suite-7.jpg', 'BUTLER SERVICE', '', '<p>Your personal Butler is ready to welcome you and meet your every need, from unpacking your luggage to advice on local customs and traditions. The  preferences ready for your arrival.</p>').col-sm-4.col-xs-12.match-height
+            +article-blog-item('rooms-suites/room-suite-8.jpg', 'KID\'S CLUB', '', '<p>The Kid\'s Club is a safe and happy place for our young princes and princesses where they make new friends, learn new skills and most importantly, can play all day long. We want you to feel as relaxed and carefree as your kids. This is the major reason why families spend their holiday with us year on year.</p>').col-sm-4.col-xs-12.match-height
+              .link-find
+                a(href="#") Find out more              
+            +article-blog-item('rooms-suites/room-suite-6.jpg', 'CONCIERGE SERVICE', '', '<p>We don’t sleep, so you can. Need a private jet or a last minute gift? Perhaps an invitation or tickets to a VIP event, we can assist you anytime of the day for making restaurant reservations, arranging for spa services, recommending night life hot spots, booking transportation, procurement of tickets to special events and assisting with various travel arrangements and tours of local attractions.</p><br><p>For more information, contact our concierge desk at <a href="mailto:concierge@emiratespalace.ae">concierge@emiratespalace.ae</a></p>').col-sm-4.col-xs-12.match-height 
+            +article-blog-item('rooms-suites/room-suite-7.jpg', 'BUTLER SERVICE', '', '<p>Your personal Butler is ready to welcome you and meet your every need, from unpacking your luggage to advice on local customs and traditions. The  preferences ready for your arrival.</p>').col-sm-4.col-xs-12.match-height
+            +article-blog-item('rooms-suites/room-suite-8.jpg', 'KID\'S CLUB', '', '<p>The Kid\'s Club is a safe and happy place for our young princes and princesses where they make new friends, learn new skills and most importantly, can play all day long. We want you to feel as relaxed and carefree as your kids. This is the major reason why families spend their holiday with us year on year.</p>').col-sm-4.col-xs-12.match-height
+              .link-find
+                a(href="#") Find out more

@@ -1,0 +1,311 @@
+::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder, input:-moz-placeholder
+  color: $white 
+
+#header
+  height: 147px
+  border-bottom: 5px solid $main-color
+  .header-top
+    .container
+      position: relative
+    .select-lang
+      position: absolute
+      right: 175px
+      top: 25px
+      .bootstrap-select 
+        width: 150px
+        height: 39px
+        background: url("../images/bg-language.png") no-repeat 
+        > .dropdown-toggle
+          width: 150px
+          border:  none
+          background: none
+          line-height: 39px
+          padding: 0 0 0 50px
+          font-size: 12px
+          font-family: "Futura"
+          color: rgb( 150, 143, 62 )
+          text-transform: uppercase
+          box-shadow: none
+          .caret
+            display: none
+    .block-search-form
+      position: absolute
+      right: 15px
+      top: 25px
+      background: url("../images/bg-search.png") no-repeat
+      width: 150px
+      height: 39px
+      color: rgb( 255, 255, 255 )
+      .searchTextbox
+        background: none
+        border: none
+        width: 117px
+        box-shadow: none
+        margin-left: 33px
+        height: 39px
+        font-size: 12px
+        font-family: "Futura"
+        color: rgb( 255, 255, 255 )
+        text-transform: uppercase
+      .searchButton 
+        background: none
+        border: none
+        position: absolute
+        left: 12px
+        top: 2px
+        
+      
+  .header 
+    .logo
+      margin-top: 32px
+    .navbar-default
+      background: none
+      border: none
+      margin: 92px 0 0
+      .container-fluid
+        padding: 0
+      .navbar-nav > li 
+        position: inherit
+        height: 55px
+        &:hover > a
+          background: url('../images/active-li-menu.png') no-repeat bottom center
+          color: $main-color
+      li 
+        padding: 0 0 0 20px
+        margin-left: 10px
+        background: url('../images/between-li-menu.png') no-repeat 
+        &:first-child
+          padding: 0
+          margin: 0
+          background: none
+        // &:nth-child(2)
+        //   background: none
+        //   margin: 0
+        a 
+          padding: 0
+          font-size: 15px
+          font-family: "HelveticaNeue-CondensedBold", "HelveticaNeue-BlackCond" , $font-family-base
+          color: rgb( 0, 0, 0 )
+          font-weight: bold
+          text-transform: uppercase
+          line-height: 1.644
+          letter-spacing: 0px
+          height: 50px
+          .caret
+            display: none
+          &.active
+            // background: url('../images/active-li-menu.png') no-repeat bottom center
+            color: $main-color
+        &.home-link    
+          .active 
+            display: none
+          &:hover
+            a
+              display: none
+            .active
+              display: block
+              
+    li:hover > .dropdown-menu
+      display: block
+      
+    li > .dropdown-menu
+      width: 995px
+      top: 55px
+      right: 0
+      padding: 0
+      border: none
+      box-shadow: none
+      .col-cus-left
+        width: 250px
+      .col-cus-right
+        width: 745px
+        padding: 35px 0 15px 25px
+      .tabs-left
+        background: #f6f6f6
+        border: none
+        height: 100%
+        li
+          padding: 0
+          margin: 0
+          background: none
+          border: none
+          a 
+            line-height: 62px
+            height: 62px
+            width: 100%
+            font-size: 16px
+            font-family: "HelveticaNeue-CondensedBold", "HelveticaNeue-BlackCond" , $font-family-base
+            color: rgb( 0, 0, 0 )
+            font-weight: normal
+            text-transform: uppercase
+            padding-left: 20px
+            border: none
+            &:hover 
+              background: $white
+              border: none
+          &.active 
+            a
+              background: url('../images/tab-left-active-menu.png') no-repeat right center #fff
+              border: none
+
+      .title-menu
+        font-size: 16px
+        font-weight: bold
+        margin-bottom: 7px
+        color: #000
+        font-family: "HelveticaNeue-CondensedBold", "HelveticaNeue-BlackCond" , $font-family-base
+        color: rgb( 51, 51, 51 )
+        font-weight: bold
+        text-transform: uppercase
+      .col-cus-right
+        ul 
+          list-style: none
+          padding: 0
+          margin: 0
+          li 
+            margin: 0
+            padding: 0
+            background: none
+            a 
+              font-size: 14px
+              font-family: "Geneva"
+              color: rgb( 128, 128, 128 )
+              line-height: 2.5
+              text-align: left
+              text-transform: inherit
+              font-weight: normal 
+              &:hover 
+                text-decoration: none
+        label
+          font-weight: normal
+          margin-left: 10px
+          font-size: 14px
+          font-family: "Geneva"
+          color: rgb( 128, 128, 128 )
+        .form-group
+          margin-bottom: 0
+          position: relative
+          bottom: 10px
+          input
+            max-width: 290px
+            border-radius: 1px
+            border: 1px solid #d1d1d1
+        .block-type 
+          color: $text-second
+          margin-top: 20px
+          .content > .check
+            width: 37.333%
+            &:nth-child(3n)
+              width: 20%
+        .block-search
+          .check
+            margin-right: 6px
+        .block-location
+          margin-top: 20px
+          .content > .check
+            margin-right: 20px
+        .check
+          display: inline-block
+          margin-right: 8px
+          &:nth-child(3n)
+            margin-right: 0
+        .block-price
+          margin-top: 30px
+          margin-bottom: 60px
+          max-width: 90%
+          .irs-slider
+            text-indent: -9999em
+          .irs-from, .irs-to, .irs-single
+            background: none
+            top: 20px
+            font-size: 11.273px
+            font-family: "Futura"
+            color: rgb( 141, 145, 141 )
+            text-transform: uppercase
+            line-height: 2.182
+
+        .block-submit
+          text-align: right
+          padding-right: 15px
+          margin-top: 12px
+          .btn 
+            background: $main-color
+            color: $white
+            padding: 8px 15px 8px 20px
+            border: none
+            text-transform: uppercase
+            font-size: 16px
+            font-family: "HelveticaNeue-CondensedBold", "HelveticaNeue-BlackCond" , $font-family-base
+            color: rgb( 255, 255, 255 )
+            font-weight: bold
+            text-transform: uppercase
+            line-height: 1
+            height: 50px
+            .fa 
+              margin-left: 10px
+
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus
+  background: none
+
+.home
+  #header .header .navbar-default li.home-link 
+    .active
+      display: block
+    a
+      display: none
+.residential, .search
+  #header .header .navbar-default .navbar-nav > li.residential-link > a
+    color: $main-color
+.commercial
+  #header .header .navbar-default .navbar-nav > li.commercial-link > a
+    color: $main-color
+.apartments
+  #header .header .navbar-default .navbar-nav > li.apartments-link > a
+    color: $main-color
+.retail
+  #header .header .navbar-default .navbar-nav > li.retail-link > a
+    color: $main-color
+      
+
+@media screen and (max-width: 767px)
+  .block-language-search
+    display: none
+  #header .header .navbar-default
+    top: 60px
+    position: absolute
+    right: 0px
+    width: 100%
+    z-index: 9999
+    margin: 0
+    .navbar-toggle
+      right: 15px
+    .navbar-collapse
+      background: $white
+      text-align: center
+      top: 37px
+      position: relative
+    .navbar-nav > li
+      height: auto 
+      padding: 0
+      a
+        height: auto
+        line-height: 2.5
+      .dropdown-menu
+        display: none
+  
+  .home #header .header .navbar-default li.home-link a
+    display: block
+
+@media screen and (max-width: 640px)
+  .residential
+    section.enquiries-box-section 
+      .phone-number-block.phone-icon
+        padding-left: 10px
+        background: none
+      .enquiries-text
+        font-size: 24px
+      .phone-number-block .phone
+        font-size: 18px
+      .contact-action .btn-group .btn
+        padding: 22px 21px

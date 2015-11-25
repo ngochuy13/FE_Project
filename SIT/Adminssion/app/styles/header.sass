@@ -1,0 +1,436 @@
+.header-left
+  position: fixed
+  width: 300px
+  height: 100%
+  left: -300px
+  top: 0
+  bottom: 0
+  background: #f4f4f4
+  z-index: 9999
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out
+  box-shadow: 3px 0px 6px rgba(0,0,0,0.5)
+  .pushy
+    width: 100%
+    height: 100%
+          
+  .block-menu-social
+    width: 100%
+    position: relative
+    height: 100%
+    // right: 300px
+    right: 0
+    transition: right 0.3s ease-in-out
+    overflow-y: auto
+  &.show
+    left: 0
+    // width: 300px
+    // transition: width 0.3s
+    .block-menu-social
+      right: 0
+      transition: right 0.3s
+    .logo 
+      a 
+        width: 162px
+        height: 72px
+        transition: all 0.3s
+        img 
+          width: 162px
+          height: 72px
+          transition: all 0.3s
+  
+  .pushy
+    background: #fff
+    font-family: $oswald   
+    a
+      text-transform: capitalize
+      line-height: 1.5
+    a:hover,a:focus,a:active
+      background: none
+      text-decoration: none
+    ul.main-menu
+      min-height: 93vh
+      padding: 20px 0 0 0
+      position: relative
+      li.main-menu-item
+        border-bottom: 1px solid #e0e0e0
+        >a
+          display: block
+          width: 100%
+          padding: 13px 60px
+          font-size: 16px
+          font-weight: normal
+          color: #666666
+          vertical-align: 5%
+          &.active
+            background: rgb(247, 216, 216)
+          @media (max-width: 640px)
+            font-size: 12px
+            padding: 13px 45px
+        &.has-sub
+          >a:before
+            content: '\f104'
+            font-size: 16px
+            font-family: FontAwesome
+            display: inline
+            margin-left: -21px
+            margin-right: 14px
+            color: #bfbfbf
+            vertical-align: 5%
+            @media (max-width: 640px)
+              font-size: 12px  
+          &.active
+            ul.sub-menu
+              left: 0
+               
+    ul.sub-menu
+      list-style: none
+      padding: 0
+      position: absolute
+      top: 0
+      bottom: 0
+      width: 100%
+      left: -100%
+      background: #ffffff
+      // box-shadow: 3px 0 12px rgba(0,0,0,0.5)
+      transition: 0.1s ease-in-out
+      li.parent-title
+        background: #ed4035
+        width: 100%
+        height: 80px
+        display: table
+        >a
+          font-size: 18px
+          color: $white
+          // display: block
+          display: table-cell
+          vertical-align: middle
+          padding: 0 60px 0 30px
+          text-transform: uppercase
+          line-height: 1.2
+          letter-spacing: 0.5px
+          @media (max-width: 640px)
+            padding: 0 60px 0 25px
+      li.back-button
+        font-size: 13px
+        >a
+          display: block
+          color: #bfbfbf
+          font-weight: normal
+          padding: 5px 30px 6px
+          background: $black
+          position: relative
+          @media (max-width: 640px)
+            padding: 5px 25px 6px
+          &:before
+            content: '\f0da'
+            font-family: FontAwesome
+            font-size: 15px
+            position: absolute
+            right: 26px
+            top: 6px        
+      li.sub-menu-item
+        border-bottom: 1px solid #e0e0e0
+        &.has-sub
+          >a:before
+            content: '\f104'
+            font-size: 16px
+            font-family: FontAwesome
+            display: inline
+            margin-left: -21px
+            margin-right: 14px
+            color: #bfbfbf
+            vertical-align: bottom
+            @media (max-width: 640px)
+              font-size: 12px
+          &.active
+            ul.sub-sub-menu
+              left: 0 
+        >a
+          display: block
+          padding: 15px 17px 15px 50px
+          font-size: 16px
+          font-weight: normal
+          color: #666666
+          letter-spacing: 0.5px
+          @media (max-width: 640px)
+            font-size: 12px
+            padding: 15px 17px 15px 45px
+          &.active
+            background: rgb(247, 216, 216)
+
+    ul.sub-sub-menu
+      list-style: none
+      padding: 0
+      position: absolute
+      top: 0
+      bottom: 0
+      width: 100%
+      left: -100%
+      background: #ffffff
+      // box-shadow: 3px 0 12px rgba(0,0,0,0.5)
+      transition: left 0.1s ease
+      li.sub-sub-menu-item
+        border-bottom: 1px solid #e0e0e0
+        >a
+          display: block
+          padding: 15px 17px 15px 50px
+          font-size: 16px
+          font-weight: normal
+          color: #666666
+          letter-spacing: 0.5px
+          @media (max-width: 640px)
+            font-size: 12px
+            padding: 15px 17px 15px 45px
+          &.active
+            background: rgb(247, 216, 216)      
+                          
+.block-bottom
+  position: relative
+  .btn-block
+    padding-left: 22px
+    margin-bottom: 52px
+    a 
+      display: inline-block
+      border: none
+      border-bottom: 3px solid #a70913
+      background: #fc0c1b
+      padding: 0 15px
+      font-size: 11px
+      color: rgb( 255, 255, 255 )
+      line-height: 1.778
+      text-align: left
+      text-transform: uppercase
+      text-decoration: none 
+  .social-block
+    padding-left: 0px
+    text-align: center
+    margin: -35px 0 9px 0
+    a 
+      display: inline-block
+      border: none
+      font-size: 30px
+      padding: 0
+      margin: 0 18px
+      color: #4c4c4c
+      transition: opacity 0.4s ease
+      &.facebook-square
+        color: #0055be
+      &.instagram
+        color: #ad6a00
+      &.twitter-square
+        color: #00c0ff
+      &.youtube-square
+        color: #a30000
+      &:hover
+        opacity: 0.3
+      @media (max-width: 640px)
+        font-size: 35px  
+  .copy-right
+    // margin-top: 20px
+    font-size: 11px
+    color: #909294
+    line-height: 1.333
+    text-align: center
+    font-family: $openSans
+    @media (max-width: 640px)
+      font-size: 9px
+      margin-top: -12px
+      a
+        font-size: 35px
+#container
+  position: relative
+  left: 0px
+  right: 0
+  width: 100%
+  
+  
+.sticky-wrapper
+  position: relative
+  z-index: 5
+
+#container
+  transition: margin-left 0.3s ease-in-out  
+  position: fixed
+  overflow-x: hidden
+  padding: 80px 0 0 0
+#container.show
+  margin: 0px 0 0 300px
+  
+.sticky-wrapper.show
+  .header-bar
+    margin: 0 0 0 300px
+    position: fixed
+    overflow-x: hidden
+.sticky-wrapper    
+  .header-bar
+    padding: 10px 0px
+    width: 100%
+    left: 0
+    background: #ffffff
+    z-index: 5
+    transition: margin 0.3s ease-in-out
+    box-shadow: 3px 3px 12px rgba(0,0,0,0.7)
+    position: fixed
+    overflow-x: hidden
+    .container
+      width: 980px
+      padding: 0
+@media (max-width: 480px)
+  .header-left
+    width: 80vw
+    left: -80vw
+  #container
+    padding: 74px 0 0 0  
+  #container.show
+    margin: 0px 0 0 80vw
+  .sticky-wrapper.show
+    .header-bar
+      margin: 0 0 0 80vw
+  .sticky-wrapper    
+    .header-bar
+      .container
+        padding: 0 25px
+      
+
+
+.page-wrapper
+  .block-bottom
+    padding: 70px 0
+    background: url('../images/banner/dotted-background.png') center 30px repeat-x white
+    background-size: contain
+
+.grey-last-block
+  .page-wrapper
+    .block-bottom
+      background: url('../images/banner/dotted-background.png') center 30px repeat-x #f4f4f4
+      background-size: cover
+.T11-template
+  .page-wrapper
+    background-color: #F0F3F6 
+    .block-bottom
+      background: url('../images/banner/footer1.png') center bottom repeat-x
+      background-color: #F0F3F6
+
+.homepage
+  .page-wrapper
+    .block-bottom
+      height: 150px
+      padding: 55px 0 0 0
+      display: none
+      background-position: center 71px
+@media (max-width: 993px)
+  .page-wrapper
+    .block-bottom
+      padding: 55px 0
+      background-image: url('../images/banner/mobile-dotted-background.png') 
+      background-position: center bottom
+      background-size: 150%
+  .homepage
+    .page-wrapper
+      .block-bottom
+        display: block
+        background-position: center bottom
+@media (max-width: 640px)
+  .page-wrapper
+    .block-bottom
+      padding: 55px 0
+      background-image: url('../images/banner/mobile-dotted-background.png')
+      background-position: center bottom
+      background-size: 50%
+  .homepage
+    .page-wrapper
+      .block-bottom
+        background-position: center bottom
+        background-size: contain
+.burger-wrapper,.logo-wrapper,.cta_button-wrapper
+  display: inline-block
+  vertical-align: middle
+  line-height: 55px
+.burger-wrapper
+  margin-right: 34px  
+.logo-wrapper
+  width: 14%
+.cta_button-wrapper
+  float: right    
+button.burger
+  background: none
+  border:none
+  display: inline-block
+  &:hover,&:active,&:focus
+    outline: none
+  span.bar
+    display: block
+    width: 17px
+    height: 3px
+    background: #908e8f
+    border-radius: 20px
+    & + span.bar
+      margin-top: 2px
+  &.active
+    span.bar
+      background: #ed4035
+             
+.btn.cta_btn
+  padding: 9px 29px
+  font-size: 14px
+  font-weight: bold
+  font-family: $f-mont
+  font-weight: bold
+  color: #333333
+  border: 1px solid #cccccc
+  border-radius: 3px
+  span.fa
+    margin-left: 5px
+    font-size: 16px
+  &.white_cta
+    color: $white
+    border: 2px solid #cccccc
+    border-radius: 3px
+    font-size: 14px
+    padding: 11px 42px
+.sticky-wrapper
+  height: auto!important
+@media (max-width: 993px)
+  .burger-wrapper
+    margin-right: 15px
+  .logo-wrapper
+    width: 33%
+  .cta_button-wrapper
+    a.cta_btn
+      padding: 9px 15px
+
+@media (max-width: 768px)
+  .burger-wrapper
+    margin-left: 15px
+  .cta_button-wrapper
+    margin-right: 15px
+    vertical-align: bottom
+    line-height: 5
+
+@media (max-width: 480px)
+  .burger-wrapper
+    margin-right: 5px
+    margin-left: 0
+    button.burger
+      padding: 1px 0
+      span.bar
+        width: 11px
+        height: 2px
+      span.bar + span.bar
+        margin-top: 2px  
+  .logo-wrapper
+    width: 110px
+    height: 50px
+    margin-bottom: 9px
+    margin-left: 8px
+  .cta_button-wrapper
+    margin-right: 0
+    line-height: 3.5
+    a.cta_btn
+      font-size: 10px
+      padding: 5px 10px
+      line-height: 1.9
+      span.fa
+        font-size: 11px
+        vertical-align: middle
+        margin-bottom: 2px    

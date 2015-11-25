@@ -1,0 +1,96 @@
+extends layouts/template
+
+block vars
+  -title = 'Tuition Fee Loan'
+  -bodyClass = ''
+
+block container
+  +skewed-header("images/banner/tuition-banner.png","images/banner/tuition-banner-sm.png",'Tuition Fee Loan','HOME','FINACIAL','LOANS')
+  section.page-intro
+    .page-intro_before
+      span
+    .container
+      .row
+        .col-md-12
+          .page-intro-block
+            .intro-header
+              h2 MAKING EDUCATION AFFORDABLE
+            .intro-subtitle
+              h3 Invest in your future
+            .intro-desc
+              p SIT administers a variety of loan schemes to assist students with the payment of tuition fees and other education expenses such as the Overseas Immersion Programme. Undergraduate students may choose to utilise any of the following loan schemes available for AY2015/16.
+    .page-intro_after
+      span          
+  section.page-main-body
+    .container.accordion-container
+      .row
+        .col-md-12
+          +scholarship-accordion('tuition_accordion')
+            +accordion_inner_panel('Does SIT allow successful applicants to defer commencement of their studies for 1 to 2 years after they have been offered a place? ','tuition_accordion','head1','body1','in','active')
+              .row
+                .col-md-12
+                  .text-block
+                    h3 LOREM TITLE
+                    .text-block-desc
+                      p Lorem ipsum 
+                        a.red-link(href="#") dolor.
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae necessitatibus quisquam expedita culpa amet ad voluptatum iusto doloribus aperiam perspiciatis dolorem, repellendus aliquam sint. Fugiat, aut, molestias! Recusandae, blanditiis, dolor. ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, non. 
+                      p Lorem ipsum dolor. 
+                      p Lorem ipsum dolor. 
+                      p Lorem ipsum dolor. 
+                      p Lorem ipsum dolor.
+                      ul
+                        li item1  
+                        li item1  
+                        li item1  
+                        li item1  
+                        li item1  
+
+            +accordion_inner_panel('Quantum of Loan Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non earum enim in fugit soluta ipsa odio, accusamus, nisi perferendis amet quibusdam dignissimos, expedita odit. Nobis non, maiores praesentium inventore qui.','tuition_accordion','head2','body2','','')
+              .row
+                .col-md-12
+                  ul.tuition-list
+                    li TUT1
+                    li TUT2
+                    li TUT3
+                    li TUT4
+            +accordion_inner_panel('Application Procedure','tuition_accordion','head3','body3','','')
+              .row
+                .col-md-12
+                  ul.tuition-list
+                    li TUT1
+                    li TUT2
+                    li TUT3
+                    li TUT4
+            +accordion_inner_panel('Administration of Loan','tuition_accordion','head4','body4','','')
+              .row
+                .col-md-12
+                  ul.tuition-list
+                    li TUT1
+                    li TUT2
+                    li TUT3
+                    li TUT4
+            +accordion_inner_panel('Guarantor Requirements','tuition_accordion','head5','body5','','')
+              .row
+                .col-md-12
+                  ul.tuition-list
+                    li TUT1
+                    li TUT2
+                    li TUT3
+                    li TUT4
+            +accordion_inner_panel('Loan Interest','tuition_accordion','head6','body6','','')
+              .row
+                .col-md-12
+                  ul.tuition-list
+                    li TUT1
+                    li TUT2
+                    li TUT3
+                    li TUT4
+            +accordion_inner_panel('Repayment & Late Payment Charges','tuition_accordion','head7','body7','','')
+              .row
+                .col-md-12
+                  ul.tuition-list
+                    li TUT1
+                    li TUT2
+                    li TUT3
+                    li TUT4                                                          

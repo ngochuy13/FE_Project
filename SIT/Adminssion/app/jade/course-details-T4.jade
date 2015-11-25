@@ -1,0 +1,320 @@
+extends layouts/template
+
+block vars
+  -title = 'Course Details T4'
+  -bodyClass = 'T4-template grey-last-block'
+
+block container
+  .inner-content
+    +t4-banner-header("images/course-details/course-detail-banner-bg.png" , "images/course-details/course-detail-banner-bg-sm.png" )
+      .titles-wrapper
+        .container
+          ul.breadcrumb
+            li: a(href="#") HOME
+            li: a(href="#") ACADEMICS
+            li: a(href="#") UNDERGRADUATES PROGRAMMES
+            li: a(href="#") ENGINEERING     
+          h1 Sustainable Infrastructure Engineering
+            br
+            | (Building Services), MEngTech and BEng (Hons)
+          .button-wrapper
+            a(href="https://www.youtube.com/watch_popup?v=Lv-sY_z8MNs").btn.playbtn.hidden-lg.hidden-md
+              span.fa.fa-play-circle-o
+              | Watch the video
+            a(href="https://www.youtube.com/watch_popup?v=Lv-sY_z8MNs").btn.playbtn.hidden-sm.hidden-xs.popup-video
+              span.fa.fa-play-circle-o
+              | Watch the video  
+            a(href="#").btn.cta_btn.white_cta APPLY NOW  
+              span.fa.fa-angle-right
+
+    section.page-intro
+      .page-intro_before
+        span
+              
+      section.course-detail-main-body
+        .container
+          .row
+            .col-md-8.editor-content
+              .text-block.black-font.white-bg
+                h2 PROGRAMME OVERVIEW
+                .text-block-desc 
+                  p Developed in consultation with the Building and Construction Authority (BCA), Singapore, the programme encompasses all the necessary engineering disciplines that are required for the building services industries in Singapore. Students will go through rigorous academic training that is conducted by highly qualified professors and senior managers from the industry, and will read modules which are highly relevant to the building services industries. 
+
+              .text-block.black-font.white-bg
+                h2 CURRICULUM
+                .text-block-desc 
+                  p The SIE (Building Services) programme aims to groom students to be both practice-oriented and industry-ready. Students will be trained in the areas of Efficient Energy Management, Heating, Ventilation and Air-Conditioning (HVAC) and Building Information Modelling (BIM).
+                  p One major highlight of the programme is the eight-to 12-month Integrated Work Study Programme (IWSP) which will equip students with the practical training much desired by employers. During the IWSP, students will be involved in the day-to-day operations and will confront challenges just like an employee of the host organisation. 
+                  p Students who perform well in the BEng (Hons) programme may proceed to take the Master of Engineering Technology degree (MEngTech) which will have a strong emphasis on human factors, systems engineering and project management.
+                  p Students who opt for the MEngTech will also take on a Capstone project formulated on actual working experience during the IWSP. The project may revolve around innovative solutions to existing processes. In line with the government’s initiatives on clean energy and safety at the workplace, students may also be able to obtain professional certifications in Green Mark Certification, Fire Services Safety Management and Workplace Safety and Health.
+              .text-block.black-font.white-bg
+                h2 CAREER OPPORTUNITIES
+                .text-block-desc 
+                  p Statistics from government agencies and employment trends point to a great demand for graduates trained in building services focusing on green buildings, HVAC and BIM. SIE (Building Services) graduates, well-equipped with the necessary knowledge and skills, will assimilate with ease into the building construction and services industries.
+              .text-block.black-font.white-bg
+                h2 ACCREDITATION
+                .text-block-desc
+                  p Accredited by the Engineering Accreditation Board    
+            .col-md-4.widget-right
+              .text-block.black-font.border-red.skewed-block
+                h3 ELIGIBILITY & EXEMPTION
+                .text-block-desc 
+                  p Diploma holders from any of the five local polytechnics and A-level graduates are welcome to apply. 
+                  p LStudents with relevant engineering background ie. Diploma in Aerospace, Mechanical, Mechatronics, Civil, Environmental and Electrical Engineering  may apply for exemption of modules up to a maximum of two trimesters. 
+                  p For students with non-relevant engineering background, i.e. Diploma from other engineering disciplines, exemption of modules will be considered on a case-by-case basis.
+              .text-block.black-font.links-block.useful-links.border-red.skewed-block
+                h3 SCHOLARSHIPS
+                .text-block-desc
+                  a(href="#") Related Scholarship name
+                  a(href="#") Related Scholarship name
+                  
+              .text-block.black-font.links-block.useful-links.border-red.skewed-block
+                h3 USEFUL LINKS
+                .text-block-desc
+                  a(href="#") Download Programme Brochure
+                  a(href="#") Tuition Fees
+                  a(href="#") Contact Us
+
+        .main-body-after       
+          span.background
+          span.diagonal
+
+      section.course-detail-study-trip(style="background-image: url('images/course-details/study-trip-bg.png')")
+        .container
+          .row
+            .col-md-12
+              .text-block.white-font
+                h2 Study Trip
+                .text-block-desc 
+                  p Regional Immersion In Sustainable Engineering (RISE) will create opportunities for you to visit key infrastructure facilities and projects in the region. You will gain first-hand experience in communicating with engineers, designers and operators who are working on various phases of a project such as those in design and construction.
+          .row
+            .T4_responsive_carousel.owl-carousel
+              .resp-carousel-item
+                img(src="images/course-details/course-details-t4.jpg", alt="study_trip")
+              .resp-carousel-item
+                img(src="images/course-details/course-details-t4_2.jpg", alt="study_trip")
+              .resp-carousel-item
+                img(src="images/course-details/course-details-t4_3.jpg", alt="study_trip")
+      
+      section.course-detail-testimonial(style="background-image: url('images/course-details/testimonial-bg.png')")
+        .container
+          .row
+            .testimonial-carousel.owl-carousel
+              .testimonial-carousel-item
+                .text-block
+                  h2.text-center WHAT OUR GRADUATES SAY
+                  .text-block-desc.text-center
+                    p  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis fugit accusantium porro maxime, soluta voluptatem sequi autem explicabo provident a, eum esse dolorem consequuntur fugiat inventore debitis libero qui, unde!"
+                .author-block.text-center
+                  span.author-avatar
+                    span.bg
+                    img(src="images/demo-img/author-demo1.png", alt="author")
+                  span.author-name Shirley Lam
+              .testimonial-carousel-item
+                .text-block
+                  h2.text-center WHAT OUR GRADUATES SAY
+                  .text-block-desc.text-center.text-italic
+                    p  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis fugit accusantium porro maxime, soluta voluptatem sequi autem explicabo provident a, eum esse dolorem consequuntur fugiat inventore debitis libero qui, unde!"
+                .author-block.text-center
+                  span.author-avatar
+                    span.bg
+                    img(src="images/demo-img/author-demo1.png", alt="author")
+                  span.author-name Shirley Lam
+              .testimonial-carousel-item
+                .text-block
+                  h2.text-center WHAT OUR GRADUATES SAY
+                  .text-block-desc.text-center.text-italic
+                    p  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis fugit accusantium porro maxime, soluta voluptatem sequi autem explicabo provident a, eum esse dolorem consequuntur fugiat inventore debitis libero qui, unde!"
+                .author-block.text-center
+                  span.author-avatar
+                    span.bg
+                    img(src="images/demo-img/author-demo1.png", alt="author")
+
+                  span.author-name Shirley Lam        
+
+      section.course-detail-modules-synosis
+        .container
+          .row
+            .col-md-12
+              h2 MODULE SYPNOSIS
+            .col-md-12
+              .module-tab
+                ul.resp-tabs-list.year-list
+                  li YEAR 1
+                  li YEAR 2
+                  li YEAR 3
+                  li YEAR 4       
+                .resp-tabs-container.module-list
+                  .tab-panel
+                    ul.course-list-group
+                      li.course-item
+                        a(href="#") SIE1001 Mechanics of Engineering Materials
+                        div.course-item_detail
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, consequatur!
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, consequatur!
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, consequatur!
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, consequatur!
+                      li.course-item
+                        a(href="#") SIE1002 Engineering Math I
+                        div.course-item_detail
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, quia!
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, quia!
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, quia!
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, quia!
+                      li.course-item
+                        a(href="#") SIE1003 C Programming
+                        div.course-item_detail
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quo.
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quo.
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quo.
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quo.
+                      li.course-item
+                        a(href="#") SIE1004 Measurements and Sensor Technology
+                        div.course-item_detail
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, quos?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, quos?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, quos?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, quos?
+                      li.course-item
+                        a(href="#") SIE2016 Effective Communication Objectives
+                        div.course-item_detail
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, commodi?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, commodi?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, commodi?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, commodi?
+                      li.course-item
+                        a(href="#") SIE1007 Dynamics of Machines
+                        div.course-item_detail
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, expedita.
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, expedita.
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, expedita.
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, expedita.
+                      li.course-item
+                        a(href="#") SIE1008 Engineering Math IIA
+                        div.course-item_detail
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, molestias.
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, molestias.
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, molestias.
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, molestias.
+                      li.course-item
+                        a(href="#") SIE1009 Heat Exchanger and Heat Pump
+                        div.course-item_detail
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, tempore?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, tempore?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, tempore?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, tempore?
+                      li.course-item
+                        a(href="#") SIE1012 Construction Drawing for Building Services   
+                        div.course-item_detail
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, enim!
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, enim!
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, enim!
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, enim!
+                      li.course-item
+                        a(href="#") SIE2004 Materials Selection for Engineering Structure
+                        div.course-item_detail
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, eaque.
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, eaque.
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, eaque.
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, eaque.
+                      li.course-item
+                        a(href="#") SIE1011 Regional Immersion in Sustainable Engineering (RISE)
+                        div.course-item_detail
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                  .tab-panel
+                    ul.course-list-group
+                      li.course-item
+                        a(href="#") YEAR2 Lorem ipsum
+                        div.course-item_detail
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                      li.course-item
+                        a(href="#") YEAR2 Lorem ipsum
+                        div.course-item_detail
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                      li.course-item
+                        a(href="#") YEAR2 Lorem ipsum
+                        div.course-item_detail
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                  .tab-panel
+                    ul.course-list-group
+                      li.course-item
+                        a(href="#") YEAR3 Lorem ipsum
+                        div.course-item_detail
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                      li.course-item
+                        a(href="#") YEAR3 Lorem ipsum
+                        div.course-item_detail
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                      li.course-item
+                        a(href="#") YEAR3 Lorem ipsum
+                        div.course-item_detail
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                  .tab-panel
+                    ul.course-list-group
+                      li.course-item
+                        a(href="#") YEAR4 Lorem ipsum
+                        div.course-item_detail
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                      li.course-item
+                        a(href="#") YEAR4 Lorem ipsum
+                        div.course-item_detail
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                      li.course-item
+                        a(href="#") YEAR4 Lorem ipsum
+                        div.course-item_detail
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, cum?
+        .modules-sypnosis-after
+          span              
+
+      section.course-detail-campus-location
+        .container
+          .row
+            .col-md-12
+              h2 CAMPUS LOCATION
+          .row
+            .col-md-4.col-xs-6.text-center
+              .campus-location-card
+                .media
+                  img(src="images/course-details/campus_location1.jpg", alt="study_trip")
+                .info
+                  a(href="#") SIT@DOVER
+                  p 10 Dover Drive
+                  p Singapore 138683    
+            .col-md-4.col-xs-6.text-center
+              .campus-location-card
+                .media
+                  img(src="images/course-details/campus_location2.jpg", alt="study_trip")
+                .info
+                  a(href="#") SIT@SP BUILDING
+                  p 500 Dover Road
+                  p Singapore 129651

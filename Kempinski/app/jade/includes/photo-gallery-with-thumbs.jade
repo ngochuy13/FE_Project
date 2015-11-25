@@ -1,0 +1,108 @@
++filter-select([
+  {
+    "text": "ALL",
+    "link": "#type-0"
+  },{
+    "text": "HOTEL GROUNDS",
+    "link": "#type-1"
+  },
+  {
+    "text": "FACILITIES",
+    "link": "#type-2"
+  },
+  {
+    "text": "ROOMS & SUITE",
+    "link": "#type-3"
+  },
+  {
+    "text": "DINING",
+    "link": "#type-4"
+  },
+  {
+    "text": "LOUNGES & BARS",
+    "link": "#type-5"
+  }
+])(data-target="#hotel-photo-gallery" data-wow-duration="1s" data-wow-delay="0.1s").photo-gallery-filter.wow.fadeIn
+#hotel-photo-gallery.photo-gallery.photo-gallery-with-thumb.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+  .container
+    .photo-container
+      .photo-wrapper
+        .placeholder
+        .item(data-type="type-3" data-index="0").active
+          +lazy-img('title', 'home/img-3.jpg')
+        .item(data-type="type-2" data-index="1")
+          +lazy-img('title', 'home/img-2.jpg')
+        .item(data-type="type-1" data-index="2")
+          +lazy-img('title', 'home/img-1.jpg')
+        .item(data-type="type-4" data-index="3")
+          +lazy-img('title', 'home/img-3.jpg')
+        .item(data-type="type-2" data-index="4")
+          +lazy-img('title', 'home/img-2.jpg')
+        .item(data-type="type-5" data-index="5")
+          +lazy-img('title', 'home/img-1.jpg')
+        .item(data-type="type-3" data-index="6")
+          +lazy-img('title', 'home/img-3.jpg')
+        .item(data-type="type-4" data-index="7")
+          +lazy-img('title', 'home/img-2.jpg')
+        .item(data-type="type-1" data-index="8")
+          +lazy-img('title', 'home/img-1.jpg')
+        .item(data-type="type-5" data-index="9")
+          +lazy-img('title', 'home/img-3.jpg')
+        .item(data-type="type-2" data-index="10")
+          +lazy-img('title', 'home/img-2.jpg')
+        .item(data-type="type-1" data-index="11")
+          +lazy-img('title', 'home/img-1.jpg')
+      .photo-gallery-control
+        span#photo-gallery-next.next
+        span#photo-gallery-prev.prev
+    #photo-gallery-thumbnails.photo-gallery-thumbnails
+      .hidden.storage
+        .thumb-item(data-type="type-3" data-index="0").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%201%20cat%203').owl-lazy
+        .thumb-item(data-type="type-2" data-index="1").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%202%20cat%202').owl-lazy
+        .thumb-item(data-type="type-1" data-index="2").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%203%20cat%201').owl-lazy
+        .thumb-item(data-type="type-4" data-index="3").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%204%20cat%204').owl-lazy
+        .thumb-item(data-type="type-2" data-index="4").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%205%20cat%202').owl-lazy
+        .thumb-item(data-type="type-5" data-index="5").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%206%20cat%205').owl-lazy
+        .thumb-item(data-type="type-3" data-index="6").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%207%20cat%203').owl-lazy
+        .thumb-item(data-type="type-4" data-index="7").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%208%20cat%204').owl-lazy
+        .thumb-item(data-type="type-1" data-index="8").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%209%20cat%201').owl-lazy
+        .thumb-item(data-type="type-5" data-index="9").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%2010%20cat%205').owl-lazy
+        .thumb-item(data-type="type-2" data-index="10").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%2011%20cat%202').owl-lazy
+        .thumb-item(data-type="type-1" data-index="11").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%2012%20cat%201').owl-lazy
+      .owl-carousel.photo-thumbs(data-margin="4")
+        .thumb-item.thumb-active(data-type="type-3" data-index="0").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%201%20cat%203').owl-lazy
+        .thumb-item(data-type="type-2" data-index="1").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%202%20cat%202').owl-lazy
+        .thumb-item(data-type="type-1" data-index="2").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%203%20cat%201').owl-lazy
+        .thumb-item(data-type="type-4" data-index="3").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%204%20cat%204').owl-lazy
+        .thumb-item(data-type="type-2" data-index="4").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%205%20cat%202').owl-lazy
+        .thumb-item(data-type="type-5" data-index="5").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%206%20cat%205').owl-lazy
+        .thumb-item(data-type="type-3" data-index="6").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%207%20cat%203').owl-lazy
+        .thumb-item(data-type="type-4" data-index="7").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%208%20cat%204').owl-lazy
+        .thumb-item(data-type="type-1" data-index="8").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%209%20cat%201').owl-lazy
+        .thumb-item(data-type="type-5" data-index="9").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%2010%20cat%205').owl-lazy
+        .thumb-item(data-type="type-2" data-index="10").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%2011%20cat%202').owl-lazy
+        .thumb-item(data-type="type-1" data-index="11").text-center
+          img( alt='photo thumb', data-src='http://placehold.it/200x200&text=Image%2012%20cat%201').owl-lazy

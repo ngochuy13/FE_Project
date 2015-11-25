@@ -1,0 +1,83 @@
+extends layouts/layout
+
+block vars
+  -title = 'Homepage'
+  -bodyClass = 'puzzle-game'
+
+block container
+  .outmost-wrapper
+    .wrapper
+      .main
+        .content
+          include includes/player-entries-header-tabs.jade
+          include includes/game-list-submission.jade
+      include includes/loading
+block modal  
+  #submission-modal-1.modal.fade.style-1.style-1-ext-2(tabindex='-1', role='dialog', aria-labelledby='submissionModal', aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          h4.modal-title Xe co vo tinh
+        .modal-body
+          .screenshot-container
+            +img("Hình ảnh mặc định","default-image.png")
+          p.author Người tham gia:
+            span Trần Văn Xu
+          .fb-interaction.text-center
+            span Like
+            .count 12
+            span Share
+            .count 24
+  #submission-modal-2.modal.fade.style-1.style-1-ext-2(tabindex='-1', role='dialog', aria-labelledby='submissionModal', aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          h4.modal-title Tim mong mo
+        .modal-body
+          .screenshot-container
+            +img("Hình ảnh mặc định","default-image.png")
+          p.author Người tham gia:
+            span Trần Văn Đang 
+          .fb-interaction.text-center
+            span Like
+            .count 12
+            span Share
+            .count 24
+  #submission-modal-3.modal.fade.style-1.style-1-ext-2(tabindex='-1', role='dialog', aria-labelledby='submissionModal', aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          h4.modal-title Khong phai dang vua dau
+        .modal-body
+          .screenshot-container
+            +img("Hình ảnh mặc định","default-image.png")
+          p.author Người tham gia:
+            span Trần Văn Ăn
+          .fb-interaction.text-center
+            span Like
+            .count 12
+            span Share
+            .count 24
+  #submission-modal-4.modal.fade.style-1.style-1-ext-2(tabindex='-1', role='dialog', aria-labelledby='submissionModal', aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          h4.modal-title la dang rong ra
+        .modal-body
+          .screenshot-container
+            +img("Hình ảnh mặc định","default-image.png")
+          p.author Người tham gia:
+            span Trần Văn Cơm 
+          .fb-interaction.text-center
+            span Like
+            .count 12
+            span Share
+            .count 24

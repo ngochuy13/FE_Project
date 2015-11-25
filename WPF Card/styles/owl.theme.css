@@ -1,0 +1,214 @@
+/*
+* 	Owl Carousel Owl Demo Theme 
+*	v1.3.3
+*/
+
+.owl-theme .owl-controls{
+	margin-top: 10px;
+	text-align: center;
+}
+
+/* Styling Next and Prev buttons */
+
+.owl-theme .owl-controls .owl-buttons div{
+	color: #FFF;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+	margin: 5px;
+	padding: 3px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	background: #869791;
+	filter: Alpha(Opacity=50);/*IE7 fix*/
+	opacity: 0.5;
+}
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+.owl-theme .owl-controls.clickable .owl-buttons div:hover{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+	text-decoration: none;
+}
+
+/* Styling Pagination*/
+
+.owl-theme .owl-controls .owl-page{
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+}
+.owl-theme .owl-controls .owl-page span{
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin: 5px 7px;
+	filter: Alpha(Opacity=50);/*IE7 fix*/
+	opacity: 0.5;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background: #869791;
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+}
+
+/* If PaginationNumbers is true */
+
+.owl-theme .owl-controls .owl-page span.owl-numbers{
+	height: auto;
+	width: auto;
+	color: #FFF;
+	padding: 2px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+/* preloading images */
+.owl-item.loading{
+	min-height: 150px;
+	background: url(AjaxLoader.gif) no-repeat center center
+}
+
+
+/* Custom Theming */
+.owl-theme{
+  margin: 0 40px;
+  width: auto;
+}
+.owl-theme .owl-controls .owl-dot {
+  display: inline-block;
+}
+.owl-theme .owl-controls .owl-dot span {
+  background: #fff;
+  opacity: 1;
+  margin: 5px 29px;
+  width: 12px;
+  height: 12px;
+  display: block;
+  border-radius: 6px;
+}
+.owl-theme .owl-controls .owl-dot.active span {
+  background: #90d0ba;
+}
+.owl-theme .owl-controls {
+  margin-top: 0px;
+}
+.owl-theme .owl-stage-outer {
+  padding: 110px 0 26px;
+}
+
+.owl-theme .item {
+  padding: 0 9px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  text-align: center;
+  
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+.no-touch .owl-theme .item:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.owl-theme .item a {
+  display: inline-block;
+  background: url('../images/bg-thumb-carousel.png') no-repeat 0 1px;
+  padding: 41px 0 0px 0;
+  -webkit-perspective: 1500px;
+  -moz-perspective: 1500px;
+  -ms-perspective: 1500px;
+  -o-perspective: 1500px;
+  perspective: 1500px;
+
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+.ie9 .owl-theme .item a{
+  background-image: url('../images/ie9-bg-thumb-carousel.png');
+}
+.ios_devies .owl-theme .item a {
+  padding-top: 45px;
+}
+.owl-theme .item span {
+  -webkit-transform: translateX(2px) translateY(-9px) translateZ(-20px) rotateX(-17deg) rotateY(20deg) rotateZ(-0.6deg) scaleX(1.05) scaleY(1.08);
+  -webkit-transform-origin: 50% 50%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform: translateX(2px) translateY(-9px) translateZ(-20px) rotateX(-17deg) rotateY(20deg) rotateZ(-0.6deg) scaleX(1.05) scaleY(1.08);
+  -moz-transform-origin: 50% 50%;
+  -moz-transform-style: preserve-3d;
+  -ms-transform: translateX(2px) translateY(-9px) translateZ(-20px) rotateX(-17deg) rotateY(20deg) rotateZ(-0.6deg) scaleX(1.05) scaleY(1.08);
+  -ms-transform-origin: 50% 50%;
+  -ms-transform-style: preserve-3d;
+  -o-transform: translateX(2px) translateY(-9px) translateZ(-20px) rotateX(-17deg) rotateY(20deg) rotateZ(-0.6deg) scaleX(1.05) scaleY(1.08);
+  -o-transform-origin: 50% 50%;
+  -o-transform-style: preserve-3d;
+  transform: translateX(2px) translateY(-9px) translateZ(-20px) rotateX(-17deg) rotateY(20deg) rotateZ(-0.6deg) scaleX(1.05) scaleY(1.08);
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+  display: inline-block;
+
+  /*-webkit-transform: rotateX(4deg) rotateY(-28deg) rotateZ(-1.5deg) scaleX(1.13) scaleY(1.06);
+  -webkit-transform-origin: 0% 0%;*/
+  max-width: 216px;
+}
+.ios_devies .owl-theme .item span {
+  -webkit-transform: translateX(6px) translateY(-9px) translateZ(-20px) rotateX(-17deg) rotateY(20deg) rotateZ(-2deg) scaleX(1.05) scaleY(1.08);
+  -moz-transform: translateX(6px) translateY(-9px) translateZ(-20px) rotateX(-17deg) rotateY(20deg) rotateZ(-2deg) scaleX(1.05) scaleY(1.08);
+  -ms-transform: translateX(6px) translateY(-9px) translateZ(-20px) rotateX(-17deg) rotateY(20deg) rotateZ(-2deg) scaleX(1.05) scaleY(1.08);
+  -o-transform: translateX(6px) translateY(-9px) translateZ(-20px) rotateX(-17deg) rotateY(20deg) rotateZ(-2deg) scaleX(1.05) scaleY(1.08);
+  transform: translateX(6px) translateY(-9px) translateZ(-20px) rotateX(-17deg) rotateY(20deg) rotateZ(-2deg) scaleX(1.05) scaleY(1.08);
+}
+.owl-theme .item span:before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background: -webkit-linear-gradient(left, #000 ,transparent);
+  background: -o-linear-gradient(right, #000, transparent); 
+  background: -moz-linear-gradient(right, #000, transparent); 
+  background: linear-gradient(to right, #000 ,transparent); 
+  left: -1;
+  top: 0;
+  opacity: 0.4;
+  border-left: 1px solid transparent;
+}
+.owl-theme .item span img {
+  border: 1px solid transparent; 
+}
+
+@media (max-width: 768px) {
+	.owl-theme .item {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+	.owl-theme.owlcarousel .item a {
+    -webkit-transform: scale(1)!important;
+    -ms-transform: scale(1)!important;
+    -o-transform: scale(1)!important;
+    transform: scale(1)!important;
+  }
+  .owl-theme .owl-controls .owl-dot span {
+    margin: 5px;
+  }
+}

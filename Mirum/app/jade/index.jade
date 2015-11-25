@@ -1,0 +1,26 @@
+extends layouts/layout
+
+block vars
+  -title = 'Landing'
+  -bodyClass = 'landing'
+block container
+  //- .section.section-video
+  //-   +parallax-video("Video parallax", "the-story/video-bg.jpg", "images/the-story/home.mp4", "video/mp4")
+  //- .section.section-intro-text
+  //-   +introduction-text('Introduction').the-intro-text
+  //-     p Donec quam risus, ornare ac semper vitae, pellentesque non purus. Donec sollicitudin pellentesque sapien, at lobortis risus. Integer quis ultrices diam. Aenean orci urna, sagittis nec nunc non, placerat scelerisque tellus. Phasellus varius sodales quam ac mollis. Vivamus eu pretium neque. Suspendisse porta nulla rutrum risus facilisis, quis sagittis lacus viverra. Nullam ac magna pharetra, bibendum dui nec, vestibulum eros.
+  //-     p Vivamus eleifend, orci sed vestibulum sagittis, nisi elit porta nisl, eget elementum eros dui at tortor. Proin consequat sollicitudin bibendum. In non velit nisi. Donec condimentum eros diam, vel vestibulum mi sodales a. Fusce nec commodo magna. Donec nec massa quis turpis auctor iaculis quis ac nisl. Nam augue dui, auctor a sapien vel, tincidunt mattis ligula. Nam in tortor vel velit rhoncus congue vitae a lacus.
+  .section.section-landing
+      +parallax('Landing', "images/the-address/img-index-update.jpg")
+        include includes/popup-index
+  //- .section.section-text-block
+  //-   .block-text-content
+  //-     .container.clearfix
+  //-       .editor-content
+  //-         .row
+  //-           .col-xs-12.col-sm-6.col-md-4.col-lg-4
+  //-             p Donec quam risus, ornare ac semper vitae, pellentesque non purus. Donec sollicitudin pellentesque sapien, at lobortis risus. Integer quis ultrices diam. Aenean orci urna, sagittis nec nunc non, placerat scelerisque tellus. Phasellus varius sodales quam ac mollis. Vivamus eu pretium neque. Suspendisse porta nulla rutrum risus facilisis, quis sagittis lacus viverra. Nullam ac magna pharetra, bibendum dui nec, vestibulum eros.
+  //-           .col-xs-12.col-sm-6.col-md-4.col-lg-4
+  //-             p Vivamus eleifend, orci sed vestibulum sagittis, nisi elit porta nisl, eget elementum eros dui at tortor. Proin consequat sollicitudin bibendum. In non velit nisi. Donec condimentum eros diam, vel vestibulum mi sodales a. Fusce nec commodo magna. Donec nec massa quis turpis auctor iaculis quis ac nisl. Nam augue dui, auctor a sapien vel, tincidunt mattis ligula. Nam in tortor vel velit rhoncus congue vitae a lacus.
+  //-           .col-xs-12.col-sm-6.col-md-4.col-lg-4
+  //-             p Donec quam risus, ornare ac semper vitae, pellentesque non purus. Donec sollicitudin pellentesque sapien, at lobortis risus. Integer quis ultrices diam. Aenean orci urna, sagittis nec nunc non, placerat scelerisque tellus. Phasellus varius sodales quam ac mollis. Vivamus eu pretium neque. Suspendisse porta nulla rutrum risus facilisis, quis sagittis lacus viverra. Nullam ac magna pharetra, bibendum dui nec, vestibulum eros.

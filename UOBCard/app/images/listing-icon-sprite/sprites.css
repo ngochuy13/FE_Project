@@ -1,0 +1,70 @@
+.reward-icon, .reward-icon-grey, .cash-back-icon, .cash-back-icon-grey, .platium-icon, .platium-icon-grey, .travel-icon, .travel-icon-grey, .shopping-icon, .shopping-icon-grey, .all-card-icon{
+	background: url(sprites.png) no-repeat;
+}
+
+.reward-icon{
+	background-position: 0 0;
+	width: 60px;
+	height: 50px;
+}
+
+.reward-icon-grey{
+	background-position: -65px 0;
+	width: 60px;
+	height: 50px;
+}
+
+.cash-back-icon{
+	background-position: 0 -55px ;
+	width: 60px;
+	height: 50px;
+}
+
+.cash-back-icon-grey{
+	background-position: -65px -55px ;
+	width: 60px;
+	height: 50px;
+}
+
+.platium-icon{
+	background-position: 0 -110px ;
+	width: 60px;
+	height: 50px;
+}
+
+.platium-icon-grey{
+	background-position: -65px -110px ;
+	width: 60px;
+	height: 50px;
+}
+
+.travel-icon{
+	background-position: 0 -165px ;
+	width: 60px;
+	height: 50px;
+}
+
+.travel-icon-grey{
+	background-position: -65px -165px ;
+	width: 60px;
+	height: 50px;
+}
+
+.shopping-icon{
+	background-position: -150px 0;
+	width: 60px;
+	height: 50px;
+}
+
+.shopping-icon-grey{
+	background-position: -215px 0;
+	width: 60px;
+	height: 50px;
+}
+
+.all-card-icon{
+	background-position: -150px -55px ;
+	width: 60px;
+	height: 50px;
+}
+

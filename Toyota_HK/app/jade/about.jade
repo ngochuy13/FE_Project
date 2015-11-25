@@ -1,0 +1,222 @@
+extends layouts/layout
+
+block vars
+  -title = 'About'
+  -bodyClass = 'about' 
+
+block container
+
+  .about-page
+    .sub-page-banner
+      p 關於豐田
+      picture
+        source(srcset='images/about/about-banner-mobile.jpg', media='(max-width: 767px)')
+        source(srcset='images/about/about-banner.jpg', media='(max-width: 1280px)')
+        img.master-banner-img.intel-scaling(src='images/about/about-banner.jpg', alt='', data-width='1920', data-height='411')
+    .about-page-wrapper
+      .social-sharing-widgets
+        p 分享
+        ul.social-sharing-list
+          li
+            a.facebook(href='#', title='Facebook') Facebook
+          li
+            a.twitter(href='#', title='Twitter') Twitter
+          li
+            a.google(href='#', title='Google +') Google +
+          li
+            a.instagram(href='#', title='Instagram') Instagram
+      h2.page-title 安全技術
+      .media-wrapper
+        iframe(width='1160', height='450', src='https://www.youtube.com/embed/GUjYIaUGmqU', frameborder='0', allowfullscreen='')
+      hr
+      h3.has-arrow.has-arrow--block 交通安全是一份共同責任：豐田的三位一體綜合安全舉措
+      p
+        | 豐田朝著“交通事故零死傷”的終極目標，貫徹人、車、交通環境三位一體的綜合安全舉措。同時，對駕駛者和行人開展交通安全教育
+        br
+        |             以創造一個安全的交通環境
+        br
+        |             綜合安全管理理念成為支撐安全技術的核心理念，目的是消除交通意外傷亡。
+      img.block-img-01(src='images/about/about-content-img-01.jpg', title='', alt='')
+      .block-content
+        .row
+          .col-xs-12.col-sm-6.col-md-6.col-lg-6
+            h3.has-arrow 架駛者
+            p
+              | 豐田強調交通安全的教育，因為60年代Toyota提供安全駕駛技術講座司機和交通安全教育活動，為幼兒園的孩子，幼兒園的幼兒和青少年。其他教育活動，如“動手交通安全活動”和“豐田交通安全運動”已連續舉辦了廣泛的人口。
+              br
+              br
+              |                   100多萬圖示交通安全書籍幼兒園兒童和幼兒園的幼兒已經送了，因為豐田公司於1969年發布他們。
+              br
+              br
+              |                   此外，交通安全教育活動，通過與豐田的海外機構連接的使用率正在擴大。
+          .col-xs-12.col-sm-6.col-md-6.col-lg-6
+            img(src='images/about/about-content-img-02.jpg', title='', alt='', height='274')
+      .block-content
+        .row
+          .col-xs-12.col-sm-6.col-md-6.col-lg-6.pull-right
+            h3.has-arrow.block-content-title--alt 追求車輛安全
+            p
+              | 豐田一直貫徹“安全”的措施來幫助創建更安全的車輛。豐田通過各種事故調查的數據分析事故和乘客受傷的原因。這些事故都是在各種模擬重演創建反式技術。此外，在實際的滿量程車輛實驗啟動車輛之前進行的。隨後，這些技術的有效性是通過評估可能發生的任何事故檢查。我們力求從實際的事故要學會不斷滿足業界越來越高標準的安全性。
+          .col-xs-12.col-sm-6.col-md-6.col-lg-6.pull-left
+            img(src='images/about/about-content-img-03.jpg', title='', alt='', height='274')
+      .block-content
+        .row
+          .col-xs-12.col-sm-6.col-md-6.col-lg-6
+            h3.has-arrow 一個安全的交通環境的創造
+            p
+              | 豐田積極致力於與日本政府對實現安全的交通環境，以幫助減少交通事故的數量通過參加日本汽車製造商協會。最近，提出了具有“所有的交通參與者共存的安心”的基本思想的政策，並強調更多的“行車安全配置的實現，是從觀以人為本的地步。”
+              br
+              br
+              |                   此外，豐田將積極參與，並與日本政府合作，幫助制定基本的交通安全計劃。
+              br
+              br
+              |                   豐田將繼續支持適合交通環境的建設，將驗證其成果通過持續的研究進展。為了實現革命性的安全運輸系統，汽車與交通環境之間的團結是至關重要的。豐田正在積極採取幫助實現這一目標的一部分。
+              br
+              br
+              |                   關於豐田與智能交通系統，未來的流動性社會，規劃公共活動等舉措的更多信息可在“智能交通系統”頁面上找到。
+          .col-xs-12.col-sm-6.col-md-6.col-lg-6
+            img(src='images/about/about-content-img-04.jpg', title='', alt='', height='274')
+      hr
+      .block-tabs
+        ul.nav.nav-tabs.nav-justified.nav-responsive(role='tablist')
+          li.active
+            a(href='#tab-content-01', role='tab', data-toggle='tab') 共同運
+          li
+            a(href='#tab-content-02', role='tab', data-toggle='tab') 需要全面
+          li
+            a(href='#tab-content-03', role='tab', data-toggle='tab') 這段
+          li
+            a(href='#tab-content-04', role='tab', data-toggle='tab') 段文字
+          li
+            a(href='#tab-content-05', role='tab', data-toggle='tab') 細讀及
+        .tab-content
+          #tab-content-01.tab-pane.active(role='tabpanel')
+            h3.has-arrow.has-arrow--block 為駕駛者在泊車時提供更佳的視線及操作提醒
+            p.paragraph-style-01
+              | *ISMC(Integrated Safety Management Concept)旨在創建能夠將各系統加以整合、共同運行的安全體系，而非各系統單獨運行。在每個可能的危險級別中，從停車到無法避免的碰撞，甚至是在碰撞後緊急對應，都提供了最佳駕駛支持。而豐田的目標就是開發安全車輛和建立在“綜合安全管理理念（ISMC）”基礎上的技術​​。
+            img(src='images/about/about-content-img-05.jpg', title='', alt='')
+            .block-content.block-content--alt-01
+              .row
+                .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                  h3 超聲波聲納間距檢測
+                  p
+                    | 超聲波傳感器安置在保險槓角落，檢測與物體的距離並以聲音和警示燈通知駕駛者。
+                    br
+                    br
+                    |                         並且還配有利用轉向操作和角度的轉向傳感器。可檢測接近障礙物的距離，並以間隙聲納指示燈和蜂鳴器來告知駕駛者。
+                .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                  img(src='images/about/about-content-img-06.jpg', title='', alt='')
+            .media-wrapper.media-wrapper--alt-01
+              iframe(width='1160', height='450', src='https://www.youtube.com/embed/0N_pderSBpM', frameborder='0', allowfullscreen='')
+            .block-content
+              .row
+                .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                  h3 倒車監控裝置協助倒車入庫
+                  p
+                    | 攝像頭安裝在車輛後側，在倒車入庫時顯示影像。
+                    br
+                    br
+                    |                         根據方向盤的操作，將出現一條引導線。通過幫助駕駛者確認倒車空間從而順利泊車。該裝置能夠方便駕駛者泊車。
+                .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                  img(src='images/about/about-content-img-07.jpg', title='', alt='')
+            .media-wrapper.media-wrapper--alt-02
+              iframe(src='https://player.vimeo.com/video/65265099?color=ffffff&title=0&byline=0&portrait=0', width='1160', height='450', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+            .block-content
+              .row
+                .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                  h3 倒車監控裝置協助倒車入庫
+                  p
+                    | 攝像頭安裝在車輛後側，在倒車入庫時顯示影像。
+                    br
+                    br
+                    |                         根據方向盤的操作，將出現一條引導線。通過幫助駕駛者確認倒車空間從而順利泊車。該裝置能夠方便駕駛者泊車。
+                .block-content-mini-slider.col-xs-12.col-sm-6.col-md-6.col-lg-6
+                  .block-content-mini-slider__item
+                    img(src='images/about/about-content-img-08.jpg', title='', alt='')
+                  .block-content-mini-slider__item
+                    img(src='images/about/about-content-img-08.jpg', title='', alt='')
+          #tab-content-02.tab-pane(role='tabpanel')
+            h3.has-arrow.has-arrow--block [CONTENT 2]
+          #tab-content-03.tab-pane(role='tabpanel')
+            h3.has-arrow.has-arrow--block [CONTENT 3]
+          #tab-content-04.tab-pane(role='tabpanel')
+            h3.has-arrow.has-arrow--block [CONTENT 4]
+          #tab-content-05.tab-pane(role='tabpanel')
+            h3.has-arrow.has-arrow--block [CONTENT 5]
+    hr
+    .about-page-wrapper.about-page-wrapper--alt
+      h3.has-arrow.has-arrow--block 設計，研發 / 製造
+      p
+        | 你現在看到的文章並不是真正的內容，這段文字的作用只在於表達及示範在某個特定的位置裡，將會出現的文字數量及排行設計。請不必細讀及編輯這段沒有真正內容的文字，而由於需要全面發揮其作用，所以這段文字將有可能重複，或以不同字體及尺寸款式和顏色等狀態出現。你現在看到的文章並不是真正的內容，這段文字的作用只在於表達及示範在某個特定的位置裡，將會出現的文字數量及排行設計。
+    .carousel-with-thumbnail
+      .main-image
+        img#main-image(src='images/about/carousel-main-img-01.jpg', alt='', title='')
+      p.main-image__caption 你現在看到的文章並不是真正的內容，這段文字的作用只在於表達及示範在某個特定的位置裡。
+      .car-gallery-carousel-wrapper
+        
+        #car-gallery-carousel.car-gallery-carousel
+          .car-gallery-carousel__item.car-gallery-carousel__item--active(data-src='images/about/carousel-main-img-01.jpg', data-download='images/about/carousel-main-img-01.jpg')
+            img(src='images/about/car-carousel-thumb-01.jpg', alt='', title='')
+          .car-gallery-carousel__item(data-src='images/about/carousel-main-img-02.jpg', data-download='images/about/carousel-main-img-02.jpg')
+            img(src='images/about/car-carousel-thumb-02.jpg', alt='', title='')
+          .car-gallery-carousel__item(data-src='images/about/carousel-main-img-03.jpg', data-download='images/about/carousel-main-img-03.jpg')
+            img(src='images/about/car-carousel-thumb-03.jpg', alt='', title='')
+          .car-gallery-carousel__item(data-src='images/about/carousel-main-img-04.jpg', data-download='images/about/carousel-main-img-04.jpg')
+            img(src='images/about/car-carousel-thumb-04.jpg', alt='', title='')
+          .car-gallery-carousel__item(data-src='images/about/carousel-main-img-01.jpg', data-download='images/about/carousel-main-img-01.jpg')
+            img(src='images/about/car-carousel-thumb-01.jpg', alt='', title='')
+          .car-gallery-carousel__item(data-src='images/about/carousel-main-img-02.jpg', data-download='images/about/carousel-main-img-02.jpg')
+            img(src='images/about/car-carousel-thumb-03.jpg', alt='', title='')
+          .car-gallery-carousel__item(data-src='images/about/carousel-main-img-03.jpg', data-download='images/about/carousel-main-img-03.jpg')
+            img(src='images/about/car-carousel-thumb-02.jpg', alt='', title='')
+          .car-gallery-carousel__item(data-src='images/about/carousel-main-img-04.jpg', data-download='images/about/carousel-main-img-04.jpg')
+            img(src='images/about/car-carousel-thumb-01.jpg', alt='', title='')
+          .car-gallery-carousel__item(data-src='images/about/carousel-main-img-01.jpg', data-download='images/about/carousel-main-img-01.jpg')
+            img(src='images/about/car-carousel-thumb-04.jpg', alt='', title='')
+          .car-gallery-carousel__item(data-src='images/about/carousel-main-img-02.jpg', data-download='images/about/carousel-main-img-02.jpg')
+            img(src='images/about/car-carousel-thumb-03.jpg', alt='', title='')
+        .car-gallery-paging
+          p
+            strong GALLERY
+          p.car-gallery-sum
+            span#car-gallery-current  
+            | /
+            span#car-gallery-sum  
+        .download-wrapper
+          a#car-gallery-download-btn.car-gallery-download-btn(href='images/about/carousel-main-img-01.jpg', title='') Download
+    .about-page-wrapper
+      .row.common-list-wrapper
+        h3.has-arrow.has-arrow--block 研發 / 製造
+        ul.common-list.col-sx-12.col-sm-12.col-md-6.col-lg-6
+          li 你現在看到的文章並不是真正的內容，將會出現的文字數量及排行設計。
+          li 你現在看到的文章並不是真正的內容，這段文字的作用只在於表達及示範在某個特定的位置裡。
+          li 你現在看到的文章並不是真正的內容。
+          li 你現在看到的文章並不是真正的內容，這段文字的作用只在於表達及示範在某個特定的位置裡。
+        ul.common-list.col-sx-12.col-sm-12.col-md-6.col-lg-6
+          li 你現在看到的文章並不是真正的內容。
+          li 你現在看到的文章並不是真正的內容，這段文字的作用只在於表達及示範在某個特定的位置裡。
+          li 你現在看到的文章並不是真正的內容。
+          li 你現在看到的文章並不是真正的內容，這段文字的作用只在於表達及示範在某個特定的位置裡。
+          li 你現在看到的文章並不是真正的內容。
+      hr.hr--alt-01
+      h3.discover-more-title 探索更多
+      .discover-more-box
+        .row
+          .block-discover-item.col-xs-12.col-sm-6.col-md-4.col-lg-4
+            .block-discover-item__img-clip
+              img(src='images/about/about-content-img-09.jpg', title='', alt='')
+            h4 預約試駕
+            p.short-desc 網上立即預約試駕最新車款，感受豐田魅力。
+            a.discover-more-btn(href='#', title='了解更多') 了解更多
+          .block-discover-item.col-xs-12.col-sm-6.col-md-4.col-lg-4
+            .block-discover-item__img-clip
+              img(src='images/about/about-content-img-10.jpg', title='', alt='')
+            h4 預約維修服務
+            p.short-desc 豐田特快維修，我們確保在60分鐘內，便可替你的座駕完成標準維修檢查。
+            a.discover-more-btn(href='#', title='了解更多') 了解更多
+          .block-discover-item.col-xs-12.col-sm-6.col-md-4.col-lg-4
+            .block-discover-item__img-clip
+              img(src='images/about/about-content-img-11.jpg', title='', alt='')
+            h4 資訊中心
+            p.short-desc 瀏覽豐田最新、資訊、活動相片和影片。
+            a.discover-more-btn(href='#', title='了解更多') 了解更多

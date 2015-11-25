@@ -1,0 +1,55 @@
+.activity-section
+  z-index: 3
+  position: fixed
+  top: 49px
+  right: 0px
+  .activity-window
+    position: fixed
+    width: 35%
+    float: left
+    background: $activity-bg
+    right: 0
+    top: 49px
+    bottom: 0
+    z-index: 1
+    .title-bar
+      background: $actitivybar-bg
+      color: $actitivybar-color
+      font-size: 22px
+      text-align: center
+      padding: 12px 0px
+      float: left 
+      width: 100%
+    .wrapper
+      width: 100%
+      float: left
+      height: calc(100% - 49px) 
+      padding: 0 10px 
+      box-sizing: border-box
+      .content 
+        width: 100%
+        float: left
+        height: 100%
+        overflow: overlay 
+        .card-wrapper
+          .card
+            border: 1px solid $actitivybar-bg
+
+    &.min
+      bottom: auto
+      left: calc(100% - 47px)
+      .title-bar
+        padding: 0
+        .btn-avtivity-show
+          float: left
+          position: relative
+        .text
+          display: none
+        .btn-avtivity-hide
+          display: none
+      .content
+        display: none
+
+
+        
+

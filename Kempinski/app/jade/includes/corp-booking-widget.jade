@@ -1,0 +1,17 @@
+.form-inline
+  .form-group.location-form-group
+    +input('text', 'location', 'Where would you like to go?')
+  .form-group
+    +datepicker("Check-in", "CheckIn", "")
+  .form-group
+    +datepicker("Check-out", "CheckOut", "")
+  .form-group
+    select.bootstrap-select.select-style-2.guest-quantity-select
+      option(value="") N Guests
+      option(value="1") 1 Guest
+      option(value="2") 2 Guests
+      option(value="3") 3 Guests
+      option(value="4") 4 Guests
+      option(value="5") 5 Guests
+  .form-group
+    button(type="submit") Show Prices

@@ -1,0 +1,522 @@
+extends layouts/layout
+
+block vars
+  -title = 'Ipswich Homepage'
+  -bodyClass = 'events-page'
+
+block pagescript
+  
+
+block container
+  .inner
+    main#main(style="min-height: 800px")
+      .section.article-list-filter
+        .container
+          .row
+            .col-xs-12.col-sm-6.blog-title
+              | What's On 
+            .col-xs-12.col-sm-6.text-right.article-listing-view-mode-control
+              | View: 
+              button.btn-grid.active Grid
+              button.btn-list Boxed
+              button.btn-map Map
+      .section.article-list-filter.border-top
+        .container
+          .row
+            .col-xs-12.filter-select
+              .select-wrap
+                span.text Show
+                select.bootstrap-select.select-style-1.accomodation-select-1.search-select-picked
+                  option(value="") All
+                  option(value="1") Lorem ipsum dolor sit amet, consec
+                  option(value="2") Lorem ipsum dolor sit amet, consec
+                  option(value="3") Lorem ipsum dolor sit amet, consec
+              //- .select-wrap
+              //-   select.bootstrap-select.select-style-1.accomodation-select-2.search-select-picked
+              //-     option(value="") Aailability
+              //-     option(value="1") Lorem ipsum dolor
+              //-     option(value="2") Lorem ipsum dolor
+              //-     option(value="3") Lorem ipsum dolor
+              .select-wrap
+                span.text Order by
+                select.bootstrap-select.select-style-1.accomodation-select-3.search-select-picked
+                  option(value="") Name
+                  option(value="1") Accomodation Type 1
+                  option(value="2") Lorem ipsum dolor sit amet, consec
+                  option(value="3") Lorem ipsum dolor sit amet, consec
+              button.clear
+                | Clear 
+                span.fa.fa-refresh
+      .section.article-listing.grid-mode.blog-grid
+        .grid-sizer
+        article.grid-item.grid-item--width2.grid-item--height2.col-xs-12.col-md-4(data-grid-order='1')
+          .media
+            a(href="#", title="Rich in history")
+              +img('media 1', 'article/article-1-thumb.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 21
+            .detail
+              .date-label
+                span 23 JUNE | SPORTS
+              a(href="#", title="Rich in history")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title Ipswich Races
+              .meta-data
+                  .field
+                    span.big 21
+                    span.small June
+                  .field
+                    span.big 1
+                    span.small Day
+                  .field
+                    span.big $10
+                    span.small Min Entry
+                  .field
+                    span.big.fa.fa-map-marker
+                    span.small Ipswich
+                  .field
+                    a(href="tel:012 2343 2344", title="012 2343 2344")
+                      span.big.fa.fa-phone
+                      span.small 012 2343 2344
+                    //- .field
+                    //-   span.big.fa.fa-star
+                    //-   span.small 3.5
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='2')
+          .media
+            a(href="#", title="SEQ’s Wine Region")
+              +img('media 2', 'article/article-2-thumb.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 12
+            .detail
+              .date-label
+                span 18 JULY | FESTIVAL
+              a(href="#", title="Rich in history")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title Lorem Ipsum
+              .meta-data
+                  .field
+                    span.big 21
+                    span.small June
+                  .field
+                    span.big 1
+                    span.small Day
+                  .field
+                    span.big $10
+                    span.small Min Entry
+                  .field
+                    span.big.fa.fa-map-marker
+                    span.small Ipswich
+                  .field
+                    a(href="tel:012 2343 2344", title="012 2343 2344")
+                      span.big.fa.fa-phone
+                      span.small 012 2343 2344
+                    //- .field
+                    //-   span.big.fa.fa-star
+                    //-   span.small 3.5
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='3')
+          .media
+            a(href="#", title="5 Magical Day Trips")
+              +img('media 3', 'article/article-3-thumb.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 12
+            .detail
+              .date-label
+                span 18 JULY | FESTIVAL
+              a(href="#", title="Rich in history")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title Rich in history
+              .meta-data
+                  .field
+                    span.big 21
+                    span.small June
+                  .field
+                    span.big 1
+                    span.small Day
+                  .field
+                    span.big $10
+                    span.small Min Entry
+                  .field
+                    span.big.fa.fa-map-marker
+                    span.small Ipswich
+                  .field
+                    a(href="tel:012 2343 2344", title="012 2343 2344")
+                      span.big.fa.fa-phone
+                      span.small 012 2343 2344
+                    //- .field
+                    //-   span.big.fa.fa-star
+                    //-   span.small 3.5
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='4')
+          .media
+            a(href="#", title="SEQ’s Wine Region")
+              +img('media 2', 'article/article-2-thumb.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 12
+            .detail
+              .date-label
+                span 18 JULY | FESTIVAL
+              a(href="#", title="Rich in history")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title Lorem Ipsum
+              .meta-data
+                  .field
+                    span.big 21
+                    span.small June
+                  .field
+                    span.big 1
+                    span.small Day
+                  .field
+                    span.big $10
+                    span.small Min Entry
+                  .field
+                    span.big.fa.fa-map-marker
+                    span.small Ipswich
+                  .field
+                    a(href="tel:012 2343 2344", title="012 2343 2344")
+                      span.big.fa.fa-phone
+                      span.small 012 2343 2344
+                    //- .field
+                    //-   span.big.fa.fa-star
+                    //-   span.small 3.5
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='6')
+          .media
+            a(href="#", title="5 Magical Day Trips")
+              +img('media 3', 'article/article-3-thumb.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 12
+            .detail
+              .date-label
+                span 18 JULY | FESTIVAL
+              a(href="#", title="Rich in history")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title Rich in history
+              .meta-data
+                  .field
+                    span.big 21
+                    span.small June
+                  .field
+                    span.big 1
+                    span.small Day
+                  .field
+                    span.big $10
+                    span.small Min Entry
+                  .field
+                    span.big.fa.fa-map-marker
+                    span.small Ipswich
+                  .field
+                    a(href="tel:012 2343 2344", title="012 2343 2344")
+                      span.big.fa.fa-phone
+                      span.small 012 2343 2344
+                    //- .field
+                    //-   span.big.fa.fa-star
+                    //-   span.small 3.5
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+        article.grid-item.grid-item--width2.grid-item--height2.col-xs-12.col-md-4(data-grid-order='5')
+          .media
+            a(href="#", title="Rich in history")
+              +img('media 1', 'article/article-1-thumb.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 21
+            .detail
+              .date-label
+                span 23 JUNE | SPORTS
+              a(href="#", title="Rich in history")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title Ipswich Races
+              .meta-data
+                  .field
+                    span.big 21
+                    span.small June
+                  .field
+                    span.big 1
+                    span.small Day
+                  .field
+                    span.big $10
+                    span.small Min Entry
+                  .field
+                    span.big.fa.fa-map-marker
+                    span.small Ipswich
+                  .field
+                    a(href="tel:012 2343 2344", title="012 2343 2344")
+                      span.big.fa.fa-phone
+                      span.small 012 2343 2344
+                    //- .field
+                    //-   span.big.fa.fa-star
+                    //-   span.small 3.5
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+        article.grid-item.grid-item--width2.grid-item--height2.col-xs-12.col-md-4(data-grid-order='7')
+          .media
+            a(href="#", title="Rich in history")
+              +img('media 1', 'article/article-1-thumb.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 21
+            .detail
+              .date-label
+                span 23 JUNE | SPORTS
+              a(href="#", title="Rich in history")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title Ipswich Races
+              .meta-data
+                  .field
+                    span.big 21
+                    span.small June
+                  .field
+                    span.big 1
+                    span.small Day
+                  .field
+                    span.big $10
+                    span.small Min Entry
+                  .field
+                    span.big.fa.fa-map-marker
+                    span.small Ipswich
+                  .field
+                    a(href="tel:012 2343 2344", title="012 2343 2344")
+                      span.big.fa.fa-phone
+                      span.small 012 2343 2344
+                    //- .field
+                    //-   span.big.fa.fa-star
+                    //-   span.small 3.5
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='8')
+          .media
+            a(href="#", title="SEQ’s Wine Region")
+              +img('media 2', 'article/article-2-thumb.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 12
+            .detail
+              .date-label
+                span 18 JULY | FESTIVAL
+              a(href="#", title="Rich in history")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title Lorem Ipsum
+              .meta-data
+                  .field
+                    span.big 21
+                    span.small June
+                  .field
+                    span.big 1
+                    span.small Day
+                  .field
+                    span.big $10
+                    span.small Min Entry
+                  .field
+                    span.big.fa.fa-map-marker
+                    span.small Ipswich
+                  .field
+                    a(href="tel:012 2343 2344", title="012 2343 2344")
+                      span.big.fa.fa-phone
+                      span.small 012 2343 2344
+                    //- .field
+                    //-   span.big.fa.fa-star
+                    //-   span.small 3.5
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='9')
+          .media
+            a(href="#", title="5 Magical Day Trips")
+              +img('media 3', 'article/article-3-thumb.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 12
+            .detail
+              .date-label
+                span 18 JULY | FESTIVAL
+              a(href="#", title="Rich in history")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title Rich in history
+              .meta-data
+                  .field
+                    span.big 21
+                    span.small June
+                  .field
+                    span.big 1
+                    span.small Day
+                  .field
+                    span.big $10
+                    span.small Min Entry
+                  .field
+                    span.big.fa.fa-map-marker
+                    span.small Ipswich
+                  .field
+                    a(href="tel:012 2343 2344", title="012 2343 2344")
+                      span.big.fa.fa-phone
+                      span.small 012 2343 2344
+                    //- .field
+                    //-   span.big.fa.fa-star
+                    //-   span.small 3.5
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='10')
+          .media
+            a(href="#", title="Rich in history")
+              +img('media 1', 'article/article-1-thumb.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 21
+            .detail
+              .date-label
+                span 23 JUNE | SPORTS
+              a(href="#", title="Rich in history")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title Ipswich Races
+              .meta-data
+                  .field
+                    span.big 21
+                    span.small June
+                  .field
+                    span.big 1
+                    span.small Day
+                  .field
+                    span.big $10
+                    span.small Min Entry
+                  .field
+                    span.big.fa.fa-map-marker
+                    span.small Ipswich
+                  .field
+                    a(href="tel:012 2343 2344", title="012 2343 2344")
+                      span.big.fa.fa-phone
+                      span.small 012 2343 2344
+                    //- .field
+                    //-   span.big.fa.fa-star
+                    //-   span.small 3.5
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar    
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='12')
+          .media
+            a(href="#", title="SEQ’s Wine Region")
+              +img('media 2', 'article/article-2-thumb.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 12
+            .detail
+              .date-label
+                span 18 JULY | FESTIVAL
+              a(href="#", title="Rich in history")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title Lorem Ipsum
+              .meta-data
+                  .field
+                    span.big 21
+                    span.small June
+                  .field
+                    span.big 1
+                    span.small Day
+                  .field
+                    span.big $10
+                    span.small Min Entry
+                  .field
+                    span.big.fa.fa-map-marker
+                    span.small Ipswich
+                  .field
+                    a(href="tel:012 2343 2344", title="012 2343 2344")
+                      span.big.fa.fa-phone
+                      span.small 012 2343 2344
+                    //- .field
+                    //-   span.big.fa.fa-star
+                    //-   span.small 3.5
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+        article.grid-item.grid-item--width2.grid-item--height2.col-xs-12.col-md-4(data-grid-order='11')
+          .media
+            a(href="#", title="5 Magical Day Trips")
+              +img('media 3', 'article/article-3-thumb.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 12
+            .detail
+              .date-label
+                span 18 JULY | FESTIVAL
+              a(href="#", title="Rich in history")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title Rich in history
+              .meta-data
+                  .field
+                    span.big 21
+                    span.small June
+                  .field
+                    span.big 1
+                    span.small Day
+                  .field
+                    span.big $10
+                    span.small Min Entry
+                  .field
+                    span.big.fa.fa-map-marker
+                    span.small Ipswich
+                  .field
+                    a(href="tel:012 2343 2344", title="012 2343 2344")
+                      span.big.fa.fa-phone
+                      span.small 012 2343 2344
+                    //- .field
+                    //-   span.big.fa.fa-star
+                    //-   span.small 3.5
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+      .container
+          a(href="#").btn.btn-primary.loadmore Load More

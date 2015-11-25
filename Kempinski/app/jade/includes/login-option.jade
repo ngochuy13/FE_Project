@@ -1,0 +1,58 @@
+.login-option
+  .col-xs-12.col-sm-3
+    .title Login for Special rates
+  .col-xs-12.col-sm-6
+    .type Membership
+    ul.nav.nav-tabs.tab-radio(role='tablist')
+      li.active(role='presentation')
+        .radio-group.acc-type
+          a(href='#nologin', aria-controls='home', role='tab')
+            label
+              input(type="radio" name="profile-type" checked)
+              span.checkbox-face
+              | Not Login
+        
+      li.active(role='presentation')
+        .radio-group.acc-type
+          a(href='#kempinski-profile', aria-controls='kempinski-profile', role='tab')
+            label
+              input(type="radio" name="profile-type")
+              span.checkbox-face
+              | Kempinski Profile
+        
+      li.active(role='presentation')
+        .radio-group.acc-type
+          a(href='#discovery-member', aria-controls='discovery-member', role='tab')
+            label
+              input(type="radio" name="profile-type")
+              span.checkbox-face
+              | Discovery Member
+        
+    .tab-content
+      #nologin.tab-pane.fade.active(role='tabpanel')
+      #kempinski-profile.tab-pane.fade(role='tabpanel')
+        form.form-horizontal.form-horizontal-style
+          .title Discovery Member
+          +input-control-horizontal("Username*:", "Username", true)
+          +input-control-horizontal("Password*:", "Password", true)
+          .form-group
+            .col-xs-12
+              .btn-group.cta-btns.wide
+                input(type="submit", value="SUBMIT DETAILS").btn.btn-default
+      #discovery-member.tab-pane.fade(role='tabpanel')
+        form.form-horizontal.form-horizontal-style
+          .title Discovery Member
+          +input-control-horizontal("Username*:", "Username", true)
+          +input-control-horizontal("Password*:", "Password", true)
+          .form-group
+            .col-xs-12
+              .btn-group.cta-btns.wide
+                input(type="submit", value="SUBMIT DETAILS").btn.btn-default
+
+  .col-xs-12.col-sm-3
+    .form-group.currency-type
+      .select-wrap
+        select.bootstrap-select
+          option VIEW RATES IN USD
+          option VIEW RATES IN USD
+          option VIEW RATES IN USD

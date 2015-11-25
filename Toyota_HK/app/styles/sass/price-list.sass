@@ -1,0 +1,40 @@
+.price-list
+  .cars-list__item .car-name
+    padding-top: 21px
+    padding-bottom: 10px
+  .cars-list
+    max-width: 1160px
+    padding-top: 0
+    .cars-list__item
+      height: auto
+      padding-bottom: 60px
+      padding-top: 10px
+      border-bottom: 1px solid #ebebeb
+      .models
+        display: table
+        margin: 0 auto
+        font-size: 12px
+      .car-model
+        display: table-row
+        line-height: 22px
+      .car-new
+        background: url('../images/icons/icon-new-car-list.jpg') no-repeat
+        width: 47px
+        height: 11px
+        position: absolute
+        top: -10px
+        left: 44%
+
+        font-size: 14px
+        line-height: 1
+        color: #eb1a30
+        padding-left: 20px
+        text-transform: uppercase
+      .car-model-name, .car-model-price
+        font-size: 13px
+        text-align: left
+        display: table-cell
+      .car-model-name
+        padding-right: 10px
+      &:last-child, &:nth-last-child(2), &:nth-last-child(3), &:nth-last-child(4)
+        border-bottom: none

@@ -1,0 +1,187 @@
+extends layouts/layout
+
+block vars
+  -title = 'Form Account Info'
+  -bodyClass = 'home' 
+
+block container
+  .about-page
+    .sub-page-banner
+      p 關於豐田
+      picture
+        source(srcset='images/about/about-banner-mobile.jpg', media='(max-width: 767px)')
+        source(srcset='images/about/about-banner.jpg', media='(max-width: 1280px)')
+        img.master-banner-img.intel-scaling(src='images/about/about-banner.jpg', alt='', data-width='1920', data-height='411')
+    .container
+      // validate-form class is for js use, BE no use
+      form.perosnal-info-form.info-form.validate-form(action='/', method='POST')
+        .form-content
+          .form-head
+            h2.title
+              | Recall Inquiry
+            p.description
+              span#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_lblChatNotificationFullTextPre Required Fields
+              span.req-desc *
+          .type-1
+            .form-group.gender
+              .field-title
+                span#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_lblInfo
+          .type-1
+            .form-group.gender
+              .field-title
+                span#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_LocalizedLabel1 Gender
+                span.req-desc *
+              .radio
+                .input-wrapper.radio-ui.radioUI.radio-primary
+                  label
+                    input(type='radio', name='gender', value='Mr')
+                    | Mr
+                  span.attributes.hide(data-rule-required='true', data-msg-required='Please select your gender')
+                .input-wrapper.radio-ui.radioUI.radio-primary
+                  label
+                    input(type='radio', name='gender', value='Ms')
+                    | Ms
+                  span.attributes.hide(data-rule-required='true', data-msg-required='Please select your gender')
+              // Each error message will be placed withint form-group: Here
+          // Begin Registered Name(Family/Company Name)  Registered Name(Given Name)
+          .type-2.clearfix
+            .form-group.col.col-1-2
+              .input-wrapper
+                label.field-title
+                  span#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_LocalizedLabel2
+                    | Registered Name
+                    br
+                    | (Family/Company Name)
+                  span.req-desc *
+                input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_txtRegisteredNameFamily.form-control(name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$txtRegisteredNameFamily', type='text', placeholder='Please enter english')
+                span.attributes.hide(data-rule-required='true', data-msg-required='Please input your Company Name')
+            .form-group.col.col-1-2
+              .input-wrapper
+                label.field-title
+                  span#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_LocalizedLabel3
+                    | Registered Name
+                    br
+                    | (Given Name)
+                  span.req-desc *
+                input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_txtRegisteredNameGivenName.form-control(name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$txtRegisteredNameGivenName', type='text', placeholder='Please enter english')
+                span.attributes.hide(data-rule-required='true', data-msg-required='Please input your Given Name')
+          // End Registered Name(Family/Company Name)  Registered Name(Given Name)
+          // Begin Registered Owner's Chinese Name(if any)
+          .type-1
+            .form-group
+              .input-wrapper
+                label.field-title
+                  span#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_LocalizedLabel7 Registered Owner's Chinese Name(if any)
+                input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_txtRegisteredOwnerChineseName.form-control(name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$txtRegisteredOwnerChineseName', type='text')
+          // End Registered Owner's Chinese Name(if any)
+          // Begin Contact Person Family Name(if different from above)  Contact Person Given Name(if different from above)
+          .type-2.clearfix
+            .form-group.col.col-1-2
+              .input-wrapper
+                label.field-title
+                  span#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_LocalizedLabel8 Contact Person Family Name(if different from above)
+                input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_txtContactPersonFamilyName.form-control(name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$txtContactPersonFamilyName', type='text', placeholder='')
+            .form-group.col.col-1-2
+              .input-wrapper
+                label.field-title
+                  span#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_LocalizedLabel9 Contact Person Given Name(if different from above)
+                input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_txtContactPersonGivenName.form-control(name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$txtContactPersonGivenName', type='text', placeholder='')
+          // End Contact Person Family Name(if different from above)  Contact Person Given Name(if different from above)
+          // Begin Contact Person Chinese Name(if any)
+          .type-1
+            .form-group
+              .input-wrapper
+                label.field-title
+                  span#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_LocalizedLabel10 Contact Person Chinese Name(if any)
+                input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_txtContactPersonChineseName.form-control(name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$txtContactPersonChineseName', type='text')
+          // End Contact Person Chinese Name(if any)
+          // Begin HKID(first letter with 3 digits)/ CI No
+          .type-1
+            .form-group
+              .input-wrapper
+                label.field-title
+                  span#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_LocalizedLabel11 HKID(first letter with 3 digits)/ CI No
+                  span.req-desc *
+                input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_txtHKIDCINo.form-control(name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$txtHKIDCINo', type='text')
+                span.attributes.hide(data-rule-required='true', data-msg-required='Please input your Company Name')
+          // End HKID(first letter with 3 digits)/ CI No
+          // Begin Mailing Address
+          .type-1
+            .form-group.charcount
+              .input-wrapper
+                label.field-title
+                  span#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_LocalizedLabel12 Mailing Address
+                  span.req-desc *
+                textarea#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_txtMailingAddress.form-control(name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$txtMailingAddress', rows='2', cols='20', placeholder='', maxlength='500')
+                span.attributes.hide(data-rule-required='true', data-msg-required='Please input your Company Name')
+              .text-right.counter-message
+                span.counter 500 
+                |  characters remaining
+          // End Mailing Address
+          // Begin Mobile
+          .type-1
+            .form-group
+              .input-wrapper
+                label.field-title
+                  span#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_LocalizedLabel13 Mobile
+                  span.req-desc *
+                input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_txtMobile.form-control(name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$txtMobile', type='text')
+                span.attributes.hide(data-rule-required='true', data-msg-required='Please input your Home Phone number', data-rule-phone='true', data-msg-phone='Please enter a valid phone number')
+          // End Mobile
+          // Begin Home
+          .type-1
+            .form-group
+              .input-wrapper
+                label.field-title
+                  span#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_LocalizedLabel14 Home
+                input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_txtHome.form-control(name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$txtHome', type='text')
+                span.attributes.hide(data-rule-phone='true', data-msg-phone='Please enter a valid phone number')
+          // End Home
+          // Begin Email
+          .type-1
+            .form-group
+              .input-wrapper
+                label.field-title
+                  span#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_LocalizedLabel15 Email
+                  span.req-desc *
+                input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_txtEmail.form-control(name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$txtEmail', type='text')
+                span.attributes.hide(data-rule-required='true', data-msg-required='Please input your Email Address', data-rule-email='true', data-msg-email='Pleawse enter a valid email address')
+          // End Email
+        hr
+        .form-content
+          h2.title
+            | Recall Inquiry
+          // Begin Number of Vehicle Inquiry
+          .type-1
+            .form-group
+              .input-wrapper
+                label.field-title
+                  span#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_LocalizedLabel16 Number of Vehicle Inquiry
+                  span.req-desc *
+                select#numvehicleinquiry.form-control(name='numvehicleinquiry')
+                  option(value='') Please select
+                  option(value='1') 1
+                  option(value='2') 2
+                  option(value='3') 3
+                  option(value='4') 4
+                  option(value='5') 5
+                  option(value='6') 6
+                  option(value='7') 7
+                  option(value='8') 8
+                  option(value='9') 9
+                  option(value='10') 10
+                span.attributes.hide(data-rule-required='true', data-msg-required='Please select number of car')
+          // End Number of Vehicle Inquiry
+          // Begin Upload
+          .type-1
+            .form-group
+              .input-wrapper
+                .field-item.upload-data
+                  label.choose-file() Choose File
+                    input.upload-file(type='file', name='cv')
+                  p.select-file Select resume file
+          // End Upload
+          #templateNumberVehicleInquiry
+          .submission
+            a.common-btn.btn-gray(href='#') Cancel
+            input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_btnSubmit.submit.btn.btn-primary(type='submit', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$btnSubmit', value='Submit')

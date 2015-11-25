@@ -1,0 +1,36 @@
+//- Created by Huy on 4/6/2015.
+.unit-list
+  .container
+    .house-drawing
+      +link('', 'images/the-house/house-drawing.png')(target="_blank")
+        +img('', 'images/the-house/house-drawing.png').main-img
+        +img('', 'images/the-house/unit/23a.png')(name="23A")
+        +img('', 'images/the-house/unit/29b.png')(name="23B")
+        +img('', 'images/the-house/unit/29a.png')(name="25A")
+        +img('', 'images/the-house/unit/25b.png')(name="25B")
+        +img('', 'images/the-house/unit/27a.png')(name="27A")
+        +img('', 'images/the-house/unit/29b.png')(name="27B")
+        +img('', 'images/the-house/unit/29a.png')(name="29A")
+        +img('', 'images/the-house/unit/29b.png')(name="29B")
+        +img('', 'images/the-house/unit/29a.png')(name="31A")
+        +img('', 'images/the-house/unit/29b.png')(name="31B")
+        +img('', 'images/the-house/unit/29a.png')(name="33A")
+        +img('', 'images/the-house/unit/29b.png')(name="33B")
+        +img('', 'images/the-house/unit/29a.png')(name="35A")
+        +img('', 'images/the-house/unit/29b.png')(name="35B")
+        +img('', 'images/the-house/unit/29a.png')(name="37A")
+        +img('', 'images/the-house/unit/29b.png')(name="37B")
+        +img('', 'images/the-house/unit/29a.png')(name="39A")
+        +img('', 'images/the-house/unit/39b.png')(name="39B")
+    h2.title Select Unit Below
+    .unit-section
+
+//- Handlebar template
+script(type="text/template").unit-list-template.template.
+  <ul>
+    {{#each units}}
+    <li data-item="{{id}}">
+      <a title="{{title}}" href="#"></a>
+    </li>
+    {{/each}}
+  </ul>

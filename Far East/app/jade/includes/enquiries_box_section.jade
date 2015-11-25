@@ -1,0 +1,48 @@
+//- mixin enquiry_number(number,loc_from,phone)
+//-   .number-block
+//-     if phone==1
+//-       .phone-icon
+//-         img(src="images/phone-icon.png", alt="phone_icon")
+//-     .number-and-info      
+//-       h3 !{number}
+//-       p Calling from !{loc_from}
+
+//- section.enquiries-box-section
+//-   .container.enquiries-box
+//-     .row
+//-       .col-md-2.col-sm-12.col-xs-12
+//-         .band-block
+//-           h3 ENQUIRIES?
+//-       .col-md-8.col-sm-12.col-xs-12.phone-number-block
+//-         +enquiry_number("6534-8000","Singapore",1)
+//-         +enquiry_number("0-800-1-931000","Indonesia",0)
+//-         +enquiry_number("400-653-4800","China",0)
+//-       .col-md-2.col-sm-12.col-xs-12
+//-         .contact-us-block
+//-           .buttons-div
+//-             .chat-btn
+//-               a(href="#") CHAT
+//-             .email-btn
+//-               a(href="#") EMAIL
+//-             .visit-btn
+//-               a(href="#") VISIT
+
+section.enquiries-box-section
+  .container
+    .enquiries-wrap
+      .enquiries-text ENQUIRIES?
+      .phone-number-block.phone-icon
+        .phone 6534-8000
+        .country Calling from Singapore
+      .phone-number-block
+        .phone 0-800-1-931000
+        .country Calling from Indonesia
+      .phone-number-block
+        .phone 400-653-4800
+        .country Calling from Chine
+      .contact-action
+        .btn-group(role="group", aria-label="...")
+          button.btn(type="button") CHAT
+          button.btn(type="button") EMAIL
+          button.btn(type="button") VISIT
+

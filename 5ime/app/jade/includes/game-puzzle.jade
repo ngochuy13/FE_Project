@@ -1,0 +1,55 @@
+#puzzle-wrapper.section.puzzle-wrapper.active
+  +img("", "game/bg-game-1.png").bg
+  .accessories-container
+    .accessories
+      .image-container.shape_1-container
+        +img("", "game/game-accessories/banh.png").shape.draggable.shape_1
+      .image-container.shape_2-container
+        +img("", "game/game-accessories/banh_2.png").shape.draggable.shape_2
+      .image-container.shape_3-container
+        +img("", "game/game-accessories/gac-chan.png").shape.draggable.shape_3
+      .image-container.shape_4-container
+        +img("", "game/game-accessories/may-2.png").shape.draggable.shape_4
+      .image-container.shape_5-container
+        +img("", "game/game-accessories/de-truoc.png").shape.draggable.shape_5
+      .image-container.shape_6-container
+        +img("", "game/game-accessories/bung-trong.png").shape.draggable.shape_6
+      .image-container.shape_7-container
+        +img("", "game/game-accessories/yen-xe.png").shape.draggable.shape_7
+      .image-container.shape_8-container
+        +img("", "game/game-accessories/de-sau.png").shape.draggable.shape_8
+      .image-container.shape_9-container
+        +img("", "game/game-accessories/dau-xe.png").shape.draggable.shape_9
+      .image-container.shape_10-container
+        +img("", "game/game-accessories/yem_1.png").shape.draggable.shape_10
+      .image-container.shape_11-container
+        +img("", "game/game-accessories/phuoc-nhun.png").shape.draggable.shape_11
+      .image-container.shape_12-container
+        +img("", "game/game-accessories/yem-sau.png").shape.draggable.shape_12
+      .image-container.shape_13-container
+        +img("", "game/game-accessories/mat-na-nho.png").shape.draggable.shape_13
+      .image-container.shape_14-container
+        +img("", "game/game-accessories/may-1.png").shape.draggable.shape_14
+      .image-container.shape_15-container
+        +img("", "game/game-accessories/baga.png").shape.draggable.shape_15
+  .frames-container
+    +img("", "game/sym-full.png").sym-full-image
+    #frames.skeleton-motobike.hide
+      #shape_1.shape_1.bubble
+      #shape_2.shape_2.bubble
+      #shape_3.shape_3.bubble
+      #shape_4.shape_4.bubble
+      #shape_5.shape_5.bubble
+      #shape_6.shape_6.bubble
+      #shape_7.shape_7.bubble
+      #shape_8.shape_8.bubble
+      #shape_9.shape_9.bubble
+      #shape_10.shape_10.bubble
+      #shape_11.shape_11.bubble
+      #shape_12.shape_12.bubble
+      #shape_13.shape_13.bubble
+      #shape_14.shape_14.bubble
+      #shape_15.shape_15.bubble
+    button.btn.btn-library.btn-complete.hide(type='button', data-toggle='modal', data-target='#myModal') Hoàn tất
+    .timer-countdown
+      #timer-text

@@ -1,0 +1,83 @@
+.section-car-detail-content-interior
+  .block-img
+    +img('Car detail' , 'car-detail/img-4.jpg')
+    .block-tooltip
+      .tooltip-1(data-tooltip='1')
+        .icon-tooltip.top
+      .tooltip-2(data-tooltip='2')
+        .icon-tooltip.top
+      .tooltip-3(data-tooltip='3')
+        .icon-tooltip.top
+      .tooltip-4(data-tooltip='4')
+        .icon-tooltip.top
+      .tooltip-5(data-tooltip='5')
+        .icon-tooltip.top
+  .block-content
+    .description Lorem ipsum dolor sit amet consectetuer adipiscing elit, <br/>sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+  .block-popup
+    .block-popup-content.block-popup-fold-flat
+      .owl-carousel-popup
+        .item(data-hash="fold-flat-1")
+          +img('fold-flat 1' , 'car-detail/img-5.jpg')
+          //- .content
+          //-   .owl-caption
+          //-     .editor-content  
+          //-       p One touch fold-flat function for rear seats create 1,388L of storage space
+        .item(data-hash="fold-flat-2")
+          +img('fold-flat 2' , 'car-detail/img-6.jpg')
+          .content
+        .item(data-hash="fold-flat-3")
+          +img('fold-flat 3' , 'car-detail/img-7.jpg')
+          //- .content
+          //-   .owl-caption
+          //-     .editor-content
+          //-       p One touch fold-flat function for rear seats create 1,388L of storage space
+      .owl-carousel-popup-nav
+        .block-content-popup
+          .container
+            .owl-caption
+              .editor-content
+                p One touch fold-flat function for rear seats create 1,388L of storage space
+            span.prev
+            div.nav
+              a(href="#fold-flat-1", title='change slider').active
+              a(href="#fold-flat-2", title='change slider')
+              a(href="#fold-flat-3", title='change slider')
+            span.next
+          div.close
+            a(href='#',title="close")
+
+    .block-popup-content.block-popup-automatic-control
+      .owl-carousel-popup
+        .item(data-hash="automatic-control-1")
+          +img('automatic-control 1' , 'car-detail/img-8.jpg')
+          //- .content
+          //-   .owl-caption
+          //-     .editor-content  
+          //-       p Automatic climate control with pollen filtration
+        .item(data-hash="automatic-control-2")
+          +img('automatic-control 2' , 'car-detail/img-8.jpg')
+          //- .content
+          //-   .owl-caption
+          //-     .editor-content  
+          //-       p Automatic climate control with pollen filtration
+        .item(data-hash="automatic-control-3")
+          +img('automatic-control 3' , 'car-detail/img-8.jpg')
+          //- .content
+          //-   .owl-caption
+          //-     .editor-content  
+          //-       p Automatic climate control with pollen filtration
+      .owl-carousel-popup-nav.dots
+        .block-content-popup
+          .container
+            .owl-caption
+              .editor-content
+                p Automatic climate control with pollen filtration
+            span.prev
+            div.nav
+              a(href="#automatic-control-1").active
+              a(href="#automatic-control-2")
+              a(href="#automatic-control-3")
+            span.next
+          div.close
+            a(href='#',title="close")

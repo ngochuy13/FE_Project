@@ -1,0 +1,14 @@
+extends layouts/corp-template
+
+block vars
+  -title = 'Meetings & events'
+  -bodyClass = ''
+  -bannerIMG = 'home/banner.jpg'
+block container    
+  .inner
+    main#main
+      .full-width-article-list
+        +full-width-article('dining/dining-1.jpg')
+          +short-article("Welcome to the", "Kempinski Gourmet Experience", "Our passion for food, produce and beverages, made from the most painstakingly sourced ingredients, is rooted in our heritage. We go to extraordinary lengths to share our love affair with food.", "Lorem ipsum Do ea est mollit non cillum aliquip ut dolore mollit consequat minim id fugiat voluptate dolore officia ullamco proident in ea incididunt aliqua Ut dolor consequat.")
+        +full-width-article('dining/dining-1.jpg').reverse
+          +short-article("Welcome to the", "Kempinski Gourmet Experience", "Our passion for food, produce and beverages, made from the most painstakingly sourced ingredients, is rooted in our heritage. We go to extraordinary lengths to share our love affair with food.", "Lorem ipsum Do ea est mollit non cillum aliquip ut dolore mollit consequat minim id fugiat voluptate dolore officia ullamco proident in ea incididunt aliqua Ut dolor consequat.")

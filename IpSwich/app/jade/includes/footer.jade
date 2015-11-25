@@ -1,0 +1,92 @@
+footer#footer
+  .container
+    .row
+      .col-sx-12.col-md-3
+        .subscribe-form
+          .description
+            p Sign up for monthly updates, and stay informed on great events, deals and more
+          form(method="POST", action="")
+            +input("text", "subscribe-email", "")(placeholder="Your Email").email.form-control
+            button.btn.btn-primary.btn-block Go
+      .col-sx-12.col-md-3
+        .related-links
+          .title 
+            span Lorem Ipsum
+            a.visible-xs-inline-block.visible-sm-inline-block(role='button', data-toggle='collapse', href='#related-link-1', aria-expanded='true', aria-controls='related-link-1')
+              .fa.fa-angle-down
+              .fa.fa-angle-up
+          ul#related-link-1.collapse.in
+            li
+              +link("Lorem ipsum Ut magna ut ", "#")
+            li
+              +link("Excepteur Excepteur in sit.", "#")
+            li
+              +link("Sit sit occaecat aliqua cupidatat.", "#")
+            li
+              +link("Magna ut quis esse Excepteur", "#")
+            li
+              +link("Ut quis esse Excepteur", "#")
+            li
+              +link("Occaecat aliqua cupidatat", "#")
+      .col-sx-12.col-md-3
+        .related-links
+          .title 
+            span Lorem Ipsum
+            a.visible-xs-inline-block.visible-sm-inline-block(role='button', data-toggle='collapse', href='#related-link-2', aria-expanded='true', aria-controls='related-link-2')
+              .fa.fa-angle-down
+              .fa.fa-angle-up
+          ul#related-link-2.collapse.in
+            li
+              +link("Lorem ipsum Ut magna ut ", "#")
+            li
+              +link("Excepteur Excepteur in sit.", "#")
+            li
+              +link("Sit sit occaecat aliqua cupidatat.", "#")
+            li
+              +link("Magna ut quis esse Excepteur", "#")
+            li
+              +link("Ut quis esse Excepteur", "#")
+            li
+              +link("Occaecat aliqua cupidatat", "#")
+      .col-sx-12.col-md-3
+        .related-links
+          .title 
+            span Lorem Ipsum
+            a.visible-xs-inline-block.visible-sm-inline-block(role='button', data-toggle='collapse', href='#related-link-3', aria-expanded='true', aria-controls='related-link-3')
+              .fa.fa-angle-down
+              .fa.fa-angle-up
+          ul#related-link-3.collapse.in
+            li
+              +link("Lorem ipsum Ut magna ut ", "#")
+            li
+              +link("Excepteur Excepteur in sit.", "#")
+            li
+              +link("Sit sit occaecat aliqua cupidatat.", "#")
+            li
+              +link("Magna ut quis esse Excepteur", "#")
+            li
+              +link("Ut quis esse Excepteur", "#")
+            li
+              +link("Occaecat aliqua cupidatat", "#")
+    .copyright
+      .fa.fa-map-marker
+      | 
+      +link("Ipswich Visitor Information Centre", "#")
+      | 
+      span.visible-md-inline-block.visible-lg-inline-block &nbsp;|&nbsp;
+      span 14 Queen Victoria Parade, Ipswich 
+      span.visible-md-inline-block.visible-lg-inline-block &nbsp;|&nbsp;
+      span &copy; Discover Ipswich | Website design by Clemenger BBDO Brisbane 
+      span.visible-md-inline-block.visible-lg-inline-block &nbsp;|&nbsp;
+      .social-channels
+        strong Stay up to Date:
+        +link("facebook","#").fa.fa-facebook
+        +link("instagram","#").fa.fa-instagram
+        +link("youtube","#").fa.fa-youtube
+        +link("skype","#").fa.fa-skype
+  .colorful-bar
+    span.sp-1
+    span.sp-2
+    span.sp-3
+    span.sp-4
+    span.sp-5

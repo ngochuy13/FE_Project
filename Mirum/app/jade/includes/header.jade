@@ -1,0 +1,74 @@
+header#header
+  .loading-block
+    .loading-icon
+  .container.clearfix
+    .col-sm-12
+      .header-overlayer
+      .columns
+        .logo
+          +link-img('images/logo.png', 'Blue pool road', '#')
+      .columns.menu
+        .nav-collapsed
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        .navigation
+          ul
+            li.has-sub
+              +link('The House', theAddress).active
+              ul.sub-menu
+                li
+                  +link('Urban Oasis', '#urban-oasis')
+                li
+                  +link('Premier International Locales', '#city-list')
+                li
+                  +link('Central Business District', '#central-district')
+                li
+                  +link('Location Map', '#location-map')
+            li.has-sub
+              +link('The Design', theHouse)
+              ul.sub-menu
+                li
+                  +link('A Sumptuous Home', '#sumptuous-home')
+                li
+                  +link('The Layout Plan', '#layout-plan')
+                li
+                  +link('The Floor Plan', '#floor-plan')
+                li
+                  +link('Design', '#design')
+            li
+              +link('The Story', theStory)
+            li
+              +link('The Gallery', theGallery)
+            li.has-sub
+              +link('Sales Information', salesInfo)
+              ul.sub-menu
+                li
+                  +link('Sales Brochure', '#sales-brochure')
+                li
+                  +link('Price List', '#price-list')
+                li
+                  +link('Register of Transactions', '#transactions')
+                li
+                  +link('Deed of mutual covenant', '#mutual-covenant')
+                li
+                  +link('Aerial Photograph', '#aerial-photograph')
+                li
+                  +link('Sales Arrangement', '#sales-arrangements')
+                li
+                  +link('Tender Documents', '#tender-documents')
+            li
+              +link('The Contact', theContact)
+      //- .columns.lang
+      //-   span EN
+      .columns.lang
+        .dropdown
+          a(id="dLabel",data-target="#",href="#",data-toggle="dropdown",aria-haspopup="true",role="button",aria-expanded="false") ENG
+            span.caret
+          ul.dropdown-menu(role="menu",aria-labelledby="dLabel")
+            li 
+              +link('EN 1', '#')
+            li 
+              +link('EN 2', '#')
+            li 
+              +link('EN 3', '#')

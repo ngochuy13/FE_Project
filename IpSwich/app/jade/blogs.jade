@@ -1,0 +1,274 @@
+extends layouts/layout
+
+block vars
+  -title = 'Ipswich Homepage'
+  -bodyClass = 'blog-page'
+
+block pagescript
+  
+
+block container
+  .inner
+    main#main(style="min-height: 800px")
+      .section.article-list-filter
+        .container
+          .row 
+            .col-xs-12.col-sm-6.blog-title
+              | Blog
+            .col-xs-12.col-sm-6.text-right.article-listing-view-mode-control
+              | View: 
+              button.btn-grid.active Grid
+              button.btn-list List
+      .section.article-listing.grid-mode.blog-grid
+        .article-wrap
+          .grid-sizer
+          article.grid-item.grid-item--width2.grid-item--height2.row(data-grid-order='1')
+            .media
+              a(href="#", title="Rich in History")
+                +img('media 1', 'article/article-1-thumb.jpg')
+            .overlay-info
+              .interact
+                button 
+                  .fa.fa-heart
+                  | 21
+              .detail
+                .type-label Food & wine
+                a(href="#", title="Rich in History")
+                  .description Lorem ipsum Tempor pariatur esse sed.
+                  .title Lorem Ipsum Dolor
+                  .description.list-mode-description  Lorem ipsum Tempor pariatur esse sed.
+                .excerpt Cessimusciis por as et et vollat fugia voluptiscit, omnisqui to molo consequ istessimus duntiis tiorum, eum untiore perchil mos ad quis dellatur am aliquam, cum veliquost, iustis alibus sum quas nim et ium quibero mod ullor aut aribus porent volorem dolupie ntemqui deserit officabo. 
+
+              a(href="#").readmore Read More
+            .bottom-bar
+          article.grid-item.row(data-grid-order='2')
+            .media
+              a(href="#", title="SEQ’s Wine Region")
+                +img('media 2', 'article/article-2-thumb.jpg')
+            .overlay-info
+              .interact
+                button 
+                  .fa.fa-heart
+                  | 12
+              .detail
+                .type-label THE GREAT OUTDOORS
+                a(href="#", title="Rich in History")
+                  .description Lorem ipsum Tempor pariatur esse sed.
+                  .title Lorem Ipsum
+                  .description.list-mode-description  Lorem ipsum Tempor pariatur esse sed.
+                .excerpt Cessimusciis por as et et vollat fugia voluptiscit, omnisqui to molo consequ istessimus duntiis tiorum, eum untiore perchil mos ad quis dellatur am aliquam, cum veliquost, iustis alibus sum quas nim et ium quibero mod ullor aut aribus porent volorem dolupie ntemqui deserit officabo. 
+
+              a(href="#").readmore Read More
+            .bottom-bar
+          article.grid-item.row(data-grid-order='3')
+            .media
+              a(href="#", title="5 Magical Day Trips")
+                +img('media 3', 'article/article-3-thumb.jpg')
+            .overlay-info
+              .interact
+                button 
+                  .fa.fa-heart
+                  | 12
+              .detail
+                .type-label THRILL SEEKING
+                a(href="#", title="Rich in History")
+                  .description Lorem ipsum Tempor pariatur esse sed.
+                  .title Rich in History
+                  .description.list-mode-description  Lorem ipsum Tempor pariatur esse sed.
+                .excerpt Cessimusciis por as et et vollat fugia voluptiscit, omnisqui to molo consequ istessimus duntiis tiorum, eum untiore perchil mos ad quis dellatur am aliquam, cum veliquost, iustis alibus sum quas nim et ium quibero mod ullor aut aribus porent volorem dolupie ntemqui deserit officabo. 
+
+              a(href="#").readmore Read More
+            .bottom-bar
+          article.grid-item.row(data-grid-order='4')
+            .media
+              a(href="#", title="SEQ’s Wine Region")
+                +img('media 2', 'article/article-2-thumb.jpg')
+            .overlay-info
+              .interact
+                button 
+                  .fa.fa-heart
+                  | 12
+              .detail
+                .type-label HISTORICAL
+                a(href="#", title="Rich in History")
+                  .description Lorem ipsum Tempor pariatur esse sed.
+                  .title Lorem Ipsum
+                  .description.list-mode-description  Lorem ipsum Tempor pariatur esse sed.
+                .excerpt Cessimusciis por as et et vollat fugia voluptiscit, omnisqui to molo consequ istessimus duntiis tiorum, eum untiore perchil mos ad quis dellatur am aliquam, cum veliquost, iustis alibus sum quas nim et ium quibero mod ullor aut aribus porent volorem dolupie ntemqui deserit officabo. 
+
+              a(href="#").readmore Read More
+            .bottom-bar
+          article.grid-item.row(data-grid-order='6')
+            .media
+              a(href="#", title="5 Magical Day Trips")
+                +img('media 3', 'article/article-3-thumb.jpg')
+            .overlay-info
+              .interact
+                button 
+                  .fa.fa-heart
+                  | 12
+              .detail
+                .type-label FAMILY FUN
+                a(href="#", title="Rich in History")
+                  .description Lorem ipsum Tempor pariatur esse sed.
+                  .title Rich in History
+                  .description.list-mode-description  Lorem ipsum Tempor pariatur esse sed.
+                .excerpt Cessimusciis por as et et vollat fugia voluptiscit, omnisqui to molo consequ istessimus duntiis tiorum, eum untiore perchil mos ad quis dellatur am aliquam, cum veliquost, iustis alibus sum quas nim et ium quibero mod ullor aut aribus porent volorem dolupie ntemqui deserit officabo. 
+
+              a(href="#").readmore Read More
+            .bottom-bar
+          article.grid-item.grid-item--width2.grid-item--height2.row(data-grid-order='5')
+            .media
+              a(href="#", title="Rich in History")
+                +img('media 1', 'article/article-1-thumb.jpg')
+            .overlay-info
+              .interact
+                button 
+                  .fa.fa-heart
+                  | 21
+              .detail
+                .type-label CATEGORY LOREM IPSUM
+                a(href="#", title="Rich in History")
+                  .description Lorem ipsum Tempor pariatur esse sed.
+                  .title Ipswich Races
+                  .description.list-mode-description  Lorem ipsum Tempor pariatur esse sed.
+                .excerpt Cessimusciis por as et et vollat fugia voluptiscit, omnisqui to molo consequ istessimus duntiis tiorum, eum untiore perchil mos ad quis dellatur am aliquam, cum veliquost, iustis alibus sum quas nim et ium quibero mod ullor aut aribus porent volorem dolupie ntemqui deserit officabo. 
+
+              a(href="#").readmore Read More
+            .bottom-bar
+          article.grid-item.grid-item--width2.grid-item--height2.row(data-grid-order='7')
+            .media
+              a(href="#", title="Rich in History")
+                +img('media 1', 'article/article-1-thumb.jpg')
+            .overlay-info
+              .interact
+                button 
+                  .fa.fa-heart
+                  | 21
+              .detail
+                .type-label CATEGORIES LOREM VITAGE
+                a(href="#", title="Rich in History")
+                  .description Lorem ipsum Tempor pariatur esse sed.
+                  .title Ipswich Races
+                  .description.list-mode-description  Lorem ipsum Tempor pariatur esse sed.
+                .excerpt Cessimusciis por as et et vollat fugia voluptiscit, omnisqui to molo consequ istessimus duntiis tiorum, eum untiore perchil mos ad quis dellatur am aliquam, cum veliquost, iustis alibus sum quas nim et ium quibero mod ullor aut aribus porent volorem dolupie ntemqui deserit officabo. 
+
+              a(href="#").readmore Read More
+            .bottom-bar
+          article.grid-item.row(data-grid-order='8')
+            .media
+              a(href="#", title="SEQ’s Wine Region")
+                +img('media 2', 'article/article-2-thumb.jpg')
+            .overlay-info
+              .interact
+                button 
+                  .fa.fa-heart
+                  | 12
+              .detail
+                .type-label Food & wine
+                a(href="#", title="Rich in History")
+                  .description Lorem ipsum Tempor pariatur esse sed.
+                  .title Lorem Ipsum
+                  .description.list-mode-description  Lorem ipsum Tempor pariatur esse sed.
+                .excerpt Cessimusciis por as et et vollat fugia voluptiscit, omnisqui to molo consequ istessimus duntiis tiorum, eum untiore perchil mos ad quis dellatur am aliquam, cum veliquost, iustis alibus sum quas nim et ium quibero mod ullor aut aribus porent volorem dolupie ntemqui deserit officabo. 
+
+              a(href="#").readmore Read More
+            .bottom-bar
+          article.grid-item.row(data-grid-order='9')
+            .media
+              a(href="#", title="5 Magical Day Trips")
+                +img('media 3', 'article/article-3-thumb.jpg')
+            .overlay-info
+              .interact
+                button 
+                  .fa.fa-heart
+                  | 12
+              .detail
+                .type-label Food & wine
+                a(href="#", title="Rich in History")
+                  .description Lorem ipsum Tempor pariatur esse sed.
+                  .title Rich in History
+                  .description.list-mode-description  Lorem ipsum Tempor pariatur esse sed.
+                .excerpt Cessimusciis por as et et vollat fugia voluptiscit, omnisqui to molo consequ istessimus duntiis tiorum, eum untiore perchil mos ad quis dellatur am aliquam, cum veliquost, iustis alibus sum quas nim et ium quibero mod ullor aut aribus porent volorem dolupie ntemqui deserit officabo. 
+
+              a(href="#").readmore Read More
+            .bottom-bar
+
+          article.grid-item.row(data-grid-order='10')
+            .media
+              a(href="#", title="Rich in History")
+                +img('media 1', 'article/article-1-thumb.jpg')
+            .overlay-info
+              .interact
+                button 
+                  .fa.fa-heart
+                  | 21
+              .detail
+                .type-label Food & wine
+                a(href="#", title="Rich in History")
+                  .description Lorem ipsum Tempor pariatur esse sed.
+                  .title Ipswich Races
+                  .description.list-mode-description  Lorem ipsum Tempor pariatur esse sed.
+                .excerpt Cessimusciis por as et et vollat fugia voluptiscit, omnisqui to molo consequ istessimus duntiis tiorum, eum untiore perchil mos ad quis dellatur am aliquam, cum veliquost, iustis alibus sum quas nim et ium quibero mod ullor aut aribus porent volorem dolupie ntemqui deserit officabo. 
+
+              a(href="#").readmore Read More
+            .bottom-bar    
+          article.grid-item.row(data-grid-order='12')
+            .media
+              a(href="#", title="SEQ’s Wine Region")
+                +img('media 2', 'article/article-2-thumb.jpg')
+            .overlay-info
+              .interact
+                button 
+                  .fa.fa-heart
+                  | 12
+              .detail
+                .type-label Food & wine
+                a(href="#", title="Rich in History")
+                  .description Lorem ipsum Tempor pariatur esse sed.
+                  .title Lorem Ipsum
+                  .description.list-mode-description  Lorem ipsum Tempor pariatur esse sed.
+                .excerpt Cessimusciis por as et et vollat fugia voluptiscit, omnisqui to molo consequ istessimus duntiis tiorum, eum untiore perchil mos ad quis dellatur am aliquam, cum veliquost, iustis alibus sum quas nim et ium quibero mod ullor aut aribus porent volorem dolupie ntemqui deserit officabo. 
+
+              a(href="#").readmore Read More
+            .bottom-bar
+          article.grid-item.grid-item--width2.grid-item--height2.row(data-grid-order='11')
+            .media
+              a(href="#", title="5 Magical Day Trips")
+                +img('media 3', 'article/article-3-thumb.jpg')
+            .overlay-info
+              .interact
+                button 
+                  .fa.fa-heart
+                  | 12
+              .detail
+                .type-label Food & wine
+                a(href="#", title="Rich in History")
+                  .description Lorem ipsum Tempor pariatur esse sed.
+                  .title Rich in History
+                  .description.list-mode-description  Lorem ipsum Tempor pariatur esse sed.
+                .excerpt Cessimusciis por as et et vollat fugia voluptiscit, omnisqui to molo consequ istessimus duntiis tiorum, eum untiore perchil mos ad quis dellatur am aliquam, cum veliquost, iustis alibus sum quas nim et ium quibero mod ullor aut aribus porent volorem dolupie ntemqui deserit officabo. 
+
+              a(href="#").readmore Read More
+            .bottom-bar
+        .side-bar.col-xs-12.col-md-3
+          .category-block
+            .title CATEGORIES
+            .separator
+            ul
+              li
+                a(href="#") FOOD & WINE
+              li
+                a(href="#") THE GREAT OUTDOORS
+              li
+                a(href="#") THRILL SEEKING
+              li
+                a(href="#") HISTORICAL
+              li
+                a(href="#") FAMILY FUN
+              li
+                a(href="#") CATEGORY LOREM IPSUM
+              li
+                a(href="#") CATEGORIES LOREM VITAGE
+      .container
+          a(href="#").btn.btn-primary.loadmore Load More

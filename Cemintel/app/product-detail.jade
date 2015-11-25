@@ -1,0 +1,228 @@
+extends layouts/default
+
+block content
+	.detail-layout-1.product-detail-page
+		.casestudy-banner.detail-layout-1-banner
+			.container
+				.banner-inner
+					.title
+						p.small.white Products
+						h3.white.bold Designer Series™ i-Cube
+					.banner-icon.casestudy-detail-icon
+						.action.psr
+							.share.toggleClick.share-toggle(target=".share-popup-block")
+							include includes/share_popup.jade
+							.fav.toggleActive
+		.casestudy-detail-content
+			//- .video-block
+			//- 	.container
+			//- 		.video-wrapper
+			//- 			#searchPlayer.video-player(data-id='nfWlot6h_JM')
+			//- 			.if-overlay
+			//- 				img(src="images/search/overlay.jpg", alt="")
+			//- 			.play-btn
+			//- 			.video-time.p
+			//- 				span.white
+			//- 		.video-icon.pull-right.casestudy-detail-icon
+			//- 			.action.psr
+			//- 				.toggleClick.video-share.share-toggle(target=".share-popup-block")
+			//- 				include includes/share_popup.jade
+			//- 				a.heart-icon.video-favourite.cup(title="Add Video To Favorite")
+			//- 		.clearfix
+			//- 		.col-sm-8.col-sm-offset-2.col-xs-12.video-content
+			//- 			.title-block.title.tac
+			//- 				h3.grey.bold Brief
+			//- 				.divider
+			//- 					span
+			//- 			.content-block
+			//- 				p.p Tasmanian builder Rod Nichols recently used CSR Cemintel’s new pre-finished lightweight walling solution, the Cemintel Designer Series™, for the construction of his own home, a stunning two storey house with sweeping views of Tranmere.
+			//- 				<br/>
+			//- 				<br/>
+			//- 				p.p Rod, the owner of Nichols Developments Pty Ltd, says, “Being my own home, I was looking for an external cladding product that was new to the market and different to the main stream range of available products.
+			//- 				<br/>
+			//- 				<br/>
+			//- 				p.p Additionally, I needed one that would allow me to complete the project in the least amount of time possible."
+			.product-slider-block
+				include includes/casestudy-detail/solution_slide.jade
+			.btns-group
+				.container
+					.row
+						a(href="#").button.rainbow
+							div.bgw download manual
+						a(href="#").button.rainbow
+							div.bgw download brochure
+						a(href="#").button.rainbow.view-installation-video
+							div.bgw View installation video
+						a(href="#").button.rainbow
+							div.bgw sample request
+						a(href="#").button.rainbow
+							div.bgw CAD drawning
+						<!-- 16:9 aspect ratio -->
+					.embed-responsive
+						iframe.embed-responsive-item.installation-video(src='https://www.youtube.com/watch?v=y6Sxv-sUYtM')
+			.products-block
+				.container
+					.row
+						.col-sm-3
+							.img-box.bdrz
+								img(src="images/product-detail/detail-1.jpg", alt="")
+								span.db.tac Quartz
+							.img-box.bdrz
+								img(src="images/product-detail/detail-2.jpg", alt="")
+								span.db.tac Onyx
+						.col-sm-8.col-sm-offset-1
+							.info-box
+								a(href='#' target='_blank')
+									h3 A natural but contemporary panel
+								.p 
+									p The Cemintel Designer Series is a modern, innovative and distinctive range of pre-finished cement-bonded fibrous wood particle panels ideal for any facade application, and unique in the australian market.
+									p &nbsp;
+									p The Cemintel Designer Series™ range gives you the opportunity to tailor a look for your lifestyle… so you can be bold and make a statement or use a product which will complement and blend in with the remaining materials of your home.
+							.info-box
+								.p 
+									p The Cemintel Designer Series™ offers:
+									ul
+										li
+											a(href='#' target='_blank') 
+												span Unique aesthetic appeal, which is lightweight and durable.
+										li
+											a(href='#' target='_blank') 
+												span An innovative fixing system, which rapidly reduces installation time.
+										li 
+											a(href='#' target='_blank') 
+												span A multi layered painting system designed for long lasting performance.
+										li 
+											a(href='#' target='_blank') 
+												span A high level of texture and depth of colour making it superior to existing brick or fibre cement facades.
+										li 
+											a(href='#' target='_blank') 
+												span A variety of textures and colours.
+										li 
+											a(href='#' target='_blank') 
+												span Horizontal and Vertical installation options.
+					//- .row
+					//- 	.col-sm-3
+					//- 		.img-box
+					//- 			img(src="images/product-detail/img2.png", alt="")
+					//- 			span.db.tac Onyx
+					//- 	.col-sm-8.col-sm-offset-1
+					//- 		.info-box
+					//- 			.p 
+					//- 				p The Cemintel Designer Series™ offers:
+					//- 				ul
+					//- 					li
+					//- 						a(href='#' target='_blank') 
+					//- 							span Unique aesthetic appeal, which is lightweight and durable.
+					//- 					li
+					//- 						a(href='#' target='_blank') 
+					//- 							span An innovative fixing system, which rapidly reduces installation time.
+					//- 					li 
+					//- 						a(href='#' target='_blank') 
+					//- 							span A multi layered painting system designed for long lasting performance.
+					//- 					li 
+					//- 						a(href='#' target='_blank') 
+					//- 							span A high level of texture and depth of colour making it superior to existing brick or fibre cement facades.
+					//- 					li 
+					//- 						a(href='#' target='_blank') 
+					//- 							span A variety of textures and colours.
+					//- 					li 
+					//- 						a(href='#' target='_blank') 
+					//- 							span Horizontal and Vertical installation options.
+			.video-block.grey-bgc
+				.container
+					.row
+						.col-sm-8.col-sm-offset-2
+							.title-block.title.tac
+								h3.grey.bold Brief
+								.divider
+									span
+							.video-wrapper
+								#searchPlayer.video-player(data-id='nfWlot6h_JM')
+								.if-overlay
+									img(src="images/search/overlay.jpg", alt="")
+								.play-btn
+								.video-time.p
+									span.white
+							.video-icon.pull-right.casestudy-detail-icon
+								.action.psr
+									.toggleClick.video-share.share-toggle(target=".share-popup-block")
+									include includes/share_popup.jade
+									a.heart-icon.video-favourite.cup(title="Add Video To Favorite")
+							.video-content
+								.content-block.p
+									div.bold 
+										a(href='#' target='_blank') Tutorial How to install Urban Designer Series?
+									p Minions ipsum la bodaaa poulet tikka masala ullamco commodo potatoooo laboris et duis. Ad reprehenderit laboris pepete gelatooo. Bee do bee do bee do sit amet nisi wiiiii voluptate ut minim et. Po kass adipisicing duis poopayee bappleees aaaaaah laboris. Para tú aaaaaah veniam cillum labore poulet tikka masala consequat tulaliloo ad hana dul sae.
+							
+			.related-casestudy-block
+				.container
+					.row
+						.related-casestudy-title.title.tac
+							.col-sm-8.col-sm-offset-2.col-xs-12.title-block
+								h3.grey.bold Related products
+								.divider
+									span
+						.related-casestudy-content
+								.col-sm-3.col-xs-12
+									.related-item
+										.related-img.img.has-action
+											a
+												img(src="images/case-study/case-detail/realted-case-study-image1.png")
+											.action
+												.heart-icon
+												.share-icon.hidden-xs.toggleClick.share-toggle(target=".share-popup-block")
+												include includes/share_popup.jade
+												a(href="#").button.view.rainbow 
+													div.bgw View
+										a(href="#").bold ExpressWall™
+										.related-content.p
+											p Minions ipsum eiusmod aute potatoooo sit amet enim officia voluptate.
+								.col-sm-3.col-xs-12
+									.related-item
+										.related-img.img.has-action
+											a
+												img(src="images/case-study/case-detail/realted-case-study-image2.png")
+											.action
+												.heart-icon
+												.share-icon.hidden-xs.toggleClick.share-toggle(target=".share-popup-block")
+												include includes/share_popup.jade
+												a(href="#").button.view.rainbow 
+													div.bgw View
+										a(href="#").bold Mosaic™
+										.related-content.p
+											p Minions ipsum eiusmod aute potatoooo sit amet enim officia voluptate.
+								.col-sm-3.col-xs-12
+									.related-item
+										.related-img.img.has-action
+											a
+												img(src="images/case-study/case-detail/realted-case-study-image3.png")
+											.action
+												.heart-icon
+												.share-icon.hidden-xs.toggleClick.share-toggle(target=".share-popup-block")
+												include includes/share_popup.jade
+												a(href="#").button.view.rainbow 
+													div.bgw View
+										a(href="#").bold BareStone™
+										.related-content.p
+											p Minions ipsum eiusmod aute potatoooo sit amet enim officia voluptate.
+								.col-sm-3.col-xs-12
+									.related-item
+										.related-img.img.has-action
+											a
+												img(src="images/case-study/case-detail/realted-case-study-image4.png")
+											.action
+												.heart-icon
+												.share-icon.hidden-xs.toggleClick.share-toggle(target=".share-popup-block")
+												include includes/share_popup.jade
+												a(href="#").button.view.rainbow 
+													div.bgw View
+										a(href="#").bold Cemintel™ Weatherboard
+										.related-content.p
+											p Minions ipsum eiusmod aute potatoooo sit amet enim officia voluptate.
+			.division-block
+				.container
+					.division
+
+
+
+	include includes/feature.jade

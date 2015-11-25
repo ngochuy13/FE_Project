@@ -1,0 +1,54 @@
+.navigation
+  width: 100%
+  position: relative
+  height: 145px
+  background: url($imgPath+'nav-bg.png') no-repeat
+  background-size: 100%
+  z-index: 10
+  margin-bottom: -45px
+  padding: 25px 56px 0
+  ul
+    height: 100%
+    top: 0
+    font-size: 0
+    margin: 0 -10px 0 -9px
+    li
+      font-size: 0
+      display: inline-block
+      margin: 0 9px 0 10px
+  .btn-home,
+  .btn-feature,
+  .btn-param,
+  .btn-color,
+  .btn-gallery,
+  .btn-price
+    transition: none
+    display: inline-block
+    width: 136px
+    height: 49px
+    background: url($imgPath+'nav-btn.png') no-repeat top left
+    background-size: 600% auto
+  .btn-home
+    &.active,&:hover
+      background-position: 0 100%
+  .btn-feature
+    background-position: -136px 0
+    &.active,&:hover
+      background-position: -136px 100%
+  .btn-param
+    background-position: -272px 0
+    &.active,&:hover
+      background-position: -272px 100%
+  .btn-color
+    background-position: -408px 0
+    &.active,&:hover
+      background-position: -408px 100%
+  .btn-gallery
+    background-position: -544px 0
+    &.active,&:hover
+      background-position: -544px 100%
+  .btn-price
+    background-position: -680px 0
+    &.active,&:hover
+      background-position: -680px 100%
+

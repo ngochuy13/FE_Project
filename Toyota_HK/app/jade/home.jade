@@ -1,0 +1,651 @@
+extends layouts/layout
+
+block vars
+  -title = 'Home'
+  -bodyClass = 'home'
+
+block pagescript
+  // build:js scripts/home-dep.js
+  //- script(src='/scripts/lib-js/__static__.js')
+  script(src='/scripts/lib-js/imagesloaded.pkgd.min.js')
+  script(src='/scripts/lib-js/masonry.pkgd.min.js')
+  // endbuild
+
+block modal-helpful-link
+  #helpful-link-list__widget.helpful-link-list__wrapper
+    ul#helpful-link-list.helpful-link-list
+      li
+        a(href='#').icon.icon-1
+        a(href='#') Order a catalogue
+      li
+        a(href='#').icon.icon-5
+        a(href='#') Book a service
+      li
+        a(href='#').icon.icon-6
+        a(href='#') Get a pricelist
+      li
+        a(href='#').icon.icon-7
+        a(href='#') Share this page
+      li
+        a(href='#').icon.icon-8
+        a(href='#') Insurance brochure
+      li
+        a(href='#').icon.icon-9
+        a(href='#') PARTS / ACCESSORY INQUIRY
+
+block container
+  .home
+    .page-content-wrapper
+      #master-banner-wrapper.master-banner-wrapper
+        a.find-toyota(href='#', title='Find your perfect Toyota') Find your perfect Toyota
+        //- .wheel-wrapper
+        //-   #wheel-control.wheel-control.wheel-control--compact
+        //-     span.hover-state.hover-state--state-01(data-state='group-characrers__action')
+        //-       span Action
+        //-     span.hover-state.hover-state--state-02(data-state='group-characrers__thinking')
+        //-       span Thinking
+        //-     span.hover-state.hover-state--state-03(data-state='group-characrers__feeling')
+        //-       span Feeling
+        //-     #group-characrers__action.group-characters.group-characrers__action.hide
+        //-       a.wheel-control__item.wheel-control__item--pos1(href='#', data-slide-id='peaceful', title='Peaceful') Peaceful
+        //-       a.wheel-control__item.wheel-control__item--pos2(href='#', data-slide-id='modern', title='Modern') Modern
+        //-       a.wheel-control__item.wheel-control__item--pos3(href='#', data-slide-id='tough', title='Tough') Tough
+        //-       a.wheel-control__item.wheel-control__item--pos4(href='#', data-slide-id='romantic', title='Romantic') Romantic
+        //-       a.wheel-control__item.wheel-control__item--pos5(href='#', data-slide-id='thoughful', title='Thoughful') Thoughful
+        //-       a.wheel-control__item.wheel-control__item--pos6(href='#', data-slide-id='efficient', title='Efficient') Efficient
+        //-     #group-characrers__thinking.group-characters.group-characrers__thinking.hide
+        //-       a.wheel-control__item.wheel-control__item--pos1(href='#', data-slide-id='peaceful-1', title='Peaceful') Peaceful-1
+        //-       a.wheel-control__item.wheel-control__item--pos2(href='#', data-slide-id='modern-1', title='Modern') Modern-1
+        //-       a.wheel-control__item.wheel-control__item--pos3(href='#', data-slide-id='tough-1', title='Tough') Tough-1
+        //-       a.wheel-control__item.wheel-control__item--pos4(href='#', data-slide-id='romantic-1', title='Romantic') Romantic-1
+        //-       a.wheel-control__item.wheel-control__item--pos5(href='#', data-slide-id='thoughful-1', title='Thoughful') Thoughful-1
+        //-       a.wheel-control__item.wheel-control__item--pos6(href='#', data-slide-id='efficient-1', title='Efficient') Efficient-1
+        //-     #group-characrers__feeling.group-characters.group-characrers__feeling.hide
+        //-       a.wheel-control__item.wheel-control__item--pos1(href='#', data-slide-id='peaceful-2', title='Peaceful') Peaceful-2
+        //-       a.wheel-control__item.wheel-control__item--pos2(href='#', data-slide-id='modern-2', title='Modern') Modern-2
+        //-       a.wheel-control__item.wheel-control__item--pos3(href='#', data-slide-id='tough-2', title='Tough') Tough-2
+        //-       a.wheel-control__item.wheel-control__item--pos4(href='#', data-slide-id='romantic-2', title='Romantic') Romantic-2
+        //-       a.wheel-control__item.wheel-control__item--pos5(href='#', data-slide-id='thoughful-2', title='Thoughful') Thoughful-2
+        //-       a.wheel-control__item.wheel-control__item--pos6(href='#', data-slide-id='efficient-2', title='Efficient') Efficient-2
+        //-     .small-control
+        //-       span
+        #master-banner-carousel.master-banner
+          //- .master-banner-item
+          //-   .wheel-banner-item.wheel-banner-item--sample.wheel-banner-item--active.center-detail(data-id='sample', data-wheel-control='sample')
+          //-     .master-banner-content
+                
+          //-       picture
+          //-         source(srcset='images/homes/home-small-2.jpg', media='(max-width: 1023px)')
+          //-         source(srcset='images/homes/home-2.jpg', media='(max-width: 1280px)')
+          //-         img.master-banner-img.intel-scaling(src='images/homes/home-2.jpg', alt='Master banner.', data-width='1920', data-height='677')
+          //-       .master-banner-detail-wrap
+          //-         .master-banner-detail
+          //-           p.master-banner-item__title.text-center Explore different character
+          //-   .center-detail.wheel-banner-item.wheel-banner-item.center-detail(data-id='modern', data-wheel-control='modern')
+          //-     .master-banner-content
+                
+          //-       picture
+          //-         source(srcset='images/homes/home-small-1.jpg', media='(max-width: 1023px)')
+          //-         source(srcset='images/homes/home-1.jpg', media='(max-width: 1280px)')
+          //-         img.master-banner-img.intel-scaling(src='images/homes/home-1.jpg', alt='Master banner.', data-width='1920', data-height='677')
+          //-       .master-banner-detail-wrap
+          //-         .master-banner-detail
+          //-           p.master-banner-item__title Prius C
+          //-           p.master-banner-item__short-desc
+          //-             | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+          //-           a.common-btn.master-banner-item__explore(href='#', title='Explore') Explore
+          //-   .center-detail.wheel-banner-item.center-detail(data-id='tough', data-wheel-control='tough')
+          //-     .master-banner-content
+                
+          //-       picture
+          //-         source(srcset='images/homes/home-small-2.jpg', media='(max-width: 1023px)')
+          //-         source(srcset='images/homes/home-2.jpg', media='(max-width: 1280px)')
+          //-         img.master-banner-img.intel-scaling(src='images/homes/home-2.jpg', alt='Master banner.', data-width='1920', data-height='677')
+          //-       .master-banner-detail-wrap
+          //-         .master-banner-detail
+          //-           p.master-banner-item__title GT 86
+          //-           p.master-banner-item__short-desc
+          //-             | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+          //-           a.common-btn.master-banner-item__explore(href='#', title='Explore') Explore
+          //-   .center-detail.wheel-banner-item.center-detail(data-id='romantic', data-wheel-control='romantic')
+          //-     .master-banner-content
+                
+          //-       picture
+          //-         source(srcset='images/homes/home-small-5.jpg', media='(max-width: 1023px)')
+          //-         source(srcset='images/homes/home-5.jpg', media='(max-width: 1280px)')
+          //-         img.master-banner-img.intel-scaling(src='images/homes/home-5.jpg', alt='Master banner.', data-width='1920', data-height='677')
+          //-       .master-banner-detail-wrap
+          //-         .master-banner-detail
+          //-           p.master-banner-item__title Alphard
+          //-           p.master-banner-item__short-desc
+          //-             | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+          //-           a.common-btn.master-banner-item__explore(href='#', title='Explore') Explore
+          //-   .center-detail.wheel-banner-item.center-detail(data-id='thoughful', data-wheel-control='thoughful')
+          //-     .master-banner-content
+                
+          //-       picture
+          //-         source(srcset='images/homes/home-small-2.jpg', media='(max-width: 1023px)')
+          //-         source(srcset='images/homes/home-2.jpg', media='(max-width: 1280px)')
+          //-         img.master-banner-img.intel-scaling(src='images/homes/home-2.jpg', alt='Master banner.', data-width='1920', data-height='677')
+          //-       .master-banner-detail-wrap
+          //-         .master-banner-detail
+          //-           p.master-banner-item__title Camry
+          //-           p.master-banner-item__short-desc
+          //-             | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+          //-           a.common-btn.master-banner-item__explore(href='#', title='Explore') Explore
+          //-   .center-detail.wheel-banner-item.center-detail(data-id='peaceful', data-wheel-control='peaceful')
+          //-     .master-banner-content
+                
+          //-       picture
+          //-         source(srcset='images/homes/home-small-6.jpg', media='(max-width: 1023px)')
+          //-         source(srcset='images/homes/home-6.jpg', media='(max-width: 1280px)')
+          //-         img.master-banner-img.intel-scaling(src='images/homes/home-6.jpg', alt='Master banner.', data-width='1920', data-height='677')
+          //-       .master-banner-detail-wrap
+          //-         .master-banner-detail
+          //-           p.master-banner-item__title Mark X
+          //-           p.master-banner-item__short-desc
+          //-             | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+          //-           a.common-btn.master-banner-item__explore(href='#', title='Explore') Explore
+          //-   .center-detail.wheel-banner-item.center-detail(data-id='efficient', data-wheel-control='efficient')
+          //-     .master-banner-content
+                
+          //-       picture
+          //-         source(srcset='images/homes/home-small-2.jpg', media='(max-width: 1023px)')
+          //-         source(srcset='images/homes/home-2.jpg', media='(max-width: 1280px)')
+          //-         img.master-banner-img.intel-scaling(src='images/homes/home-2.jpg', alt='Master banner.', data-width='1920', data-height='677')
+          //-       .master-banner-detail-wrap
+          //-         .master-banner-detail
+          //-           p.master-banner-item__title Noah
+          //-           p.master-banner-item__short-desc
+          //-             | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+          //-           a.common-btn.master-banner-item__explore(href='#', title='Explore') Explore
+          //-   .center-detail.wheel-banner-item.wheel-banner-item.center-detail(data-id='modern-1', data-wheel-control='modern')
+          //-     .master-banner-content
+                
+          //-       picture
+          //-         source(srcset='images/homes/home-small-1.jpg', media='(max-width: 1023px)')
+          //-         source(srcset='images/homes/home-1.jpg', media='(max-width: 1280px)')
+          //-         img.master-banner-img.intel-scaling(src='images/homes/home-1.jpg', alt='Master banner.', data-width='1920', data-height='677')
+          //-       .master-banner-detail-wrap
+          //-         .master-banner-detail
+          //-           p.master-banner-item__title Corolla
+          //-           p.master-banner-item__short-desc
+          //-             | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+          //-           a.common-btn.master-banner-item__explore(href='#', title='Explore') Explore
+          //-   .center-detail.wheel-banner-item.center-detail(data-id='tough-1', data-wheel-control='tough')
+          //-     .master-banner-content
+                
+          //-       picture
+          //-         source(srcset='images/homes/home-small-2.jpg', media='(max-width: 1023px)')
+          //-         source(srcset='images/homes/home-2.jpg', media='(max-width: 1280px)')
+          //-         img.master-banner-img.intel-scaling(src='images/homes/home-2.jpg', alt='Master banner.', data-width='1920', data-height='677')
+          //-       .master-banner-detail-wrap
+          //-         .master-banner-detail
+          //-           p.master-banner-item__title Previa
+          //-           p.master-banner-item__short-desc
+          //-             | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+          //-           a.common-btn.master-banner-item__explore(href='#', title='Explore') Explore
+          //-   .center-detail.wheel-banner-item.center-detail(data-id='romantic-1', data-wheel-control='romantic')
+          //-     .master-banner-content
+                
+          //-       picture
+          //-         source(srcset='images/homes/home-small-5.jpg', media='(max-width: 1023px)')
+          //-         source(srcset='images/homes/home-5.jpg', media='(max-width: 1280px)')
+          //-         img.master-banner-img.intel-scaling(src='images/homes/home-5.jpg', alt='Master banner.', data-width='1920', data-height='677')
+          //-       .master-banner-detail-wrap
+          //-         .master-banner-detail
+          //-           p.master-banner-item__title Prius
+          //-           p.master-banner-item__short-desc
+          //-             | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+          //-           a.common-btn.master-banner-item__explore(href='#', title='Explore') Explore
+          //-   .center-detail.wheel-banner-item.center-detail(data-id='thoughful-1', data-wheel-control='thoughful')
+          //-     .master-banner-content
+                
+          //-       picture
+          //-         source(srcset='images/homes/home-small-2.jpg', media='(max-width: 1023px)')
+          //-         source(srcset='images/homes/home-2.jpg', media='(max-width: 1280px)')
+          //-         img.master-banner-img.intel-scaling(src='images/homes/home-2.jpg', alt='Master banner.', data-width='1920', data-height='677')
+          //-       .master-banner-detail-wrap
+          //-         .master-banner-detail
+          //-           p.master-banner-item__title Prius V
+          //-           p.master-banner-item__short-desc
+          //-             | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+          //-           a.common-btn.master-banner-item__explore(href='#', title='Explore') Explore
+          //-   .center-detail.wheel-banner-item.center-detail(data-id='peaceful-1', data-wheel-control='peaceful')
+          //-     .master-banner-content
+                
+          //-       picture
+          //-         source(srcset='images/homes/home-small-6.jpg', media='(max-width: 1023px)')
+          //-         source(srcset='images/homes/home-6.jpg', media='(max-width: 1280px)')
+          //-         img.master-banner-img.intel-scaling(src='images/homes/home-6.jpg', alt='Master banner.', data-width='1920', data-height='677')
+          //-       .master-banner-detail-wrap
+          //-         .master-banner-detail
+          //-           p.master-banner-item__title RAV4
+          //-           p.master-banner-item__short-desc
+          //-             | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+          //-           a.common-btn.master-banner-item__explore(href='#', title='Explore') Explore
+          //-   .center-detail.wheel-banner-item.center-detail(data-id='efficient-1', data-wheel-control='efficient')
+          //-     .master-banner-content
+                
+          //-       picture
+          //-         source(srcset='images/homes/home-small-2.jpg', media='(max-width: 1023px)')
+          //-         source(srcset='images/homes/home-2.jpg', media='(max-width: 1280px)')
+          //-         img.master-banner-img.intel-scaling(src='images/homes/home-2.jpg', alt='Master banner.', data-width='1920', data-height='677')
+          //-       .master-banner-detail-wrap
+          //-         .master-banner-detail
+          //-           p.master-banner-item__title Hiace
+          //-           p.master-banner-item__short-desc
+          //-             | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+          //-           a.common-btn.master-banner-item__explore(href='#', title='Explore') Explore
+          //-   .center-detail.wheel-banner-item.wheel-banner-item.center-detail(data-id='modern-2', data-wheel-control='modern')
+          //-     .master-banner-content
+                
+          //-       picture
+          //-         source(srcset='images/homes/home-small-1.jpg', media='(max-width: 1023px)')
+          //-         source(srcset='images/homes/home-1.jpg', media='(max-width: 1280px)')
+          //-         img.master-banner-img.intel-scaling(src='images/homes/home-1.jpg', alt='Master banner.', data-width='1920', data-height='677')
+          //-       .master-banner-detail-wrap
+          //-         .master-banner-detail
+          //-           p.master-banner-item__title Coaster
+          //-           p.master-banner-item__short-desc
+          //-             | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+          //-           a.common-btn.master-banner-item__explore(href='#', title='Explore') Explore
+          //-   .center-detail.wheel-banner-item.center-detail(data-id='tough-2', data-wheel-control='tough')
+          //-     .master-banner-content
+                
+          //-       picture
+          //-         source(srcset='images/homes/home-small-2.jpg', media='(max-width: 1023px)')
+          //-         source(srcset='images/homes/home-2.jpg', media='(max-width: 1280px)')
+          //-         img.master-banner-img.intel-scaling(src='images/homes/home-2.jpg', alt='Master banner.', data-width='1920', data-height='677')
+          //-       .master-banner-detail-wrap
+          //-         .master-banner-detail
+          //-           p.master-banner-item__title 86
+          //-           p.master-banner-item__short-desc
+          //-             | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+          //-           a.common-btn.master-banner-item__explore(href='#', title='Explore') Explore
+          //-   .center-detail.wheel-banner-item.center-detail(data-id='romantic-2', data-wheel-control='romantic')
+          //-     .master-banner-content
+                
+          //-       picture
+          //-         source(srcset='images/homes/home-small-5.jpg', media='(max-width: 1023px)')
+          //-         source(srcset='images/homes/home-5.jpg', media='(max-width: 1280px)')
+          //-         img.master-banner-img.intel-scaling(src='images/homes/home-5.jpg', alt='Master banner.', data-width='1920', data-height='677')
+          //-       .master-banner-detail-wrap
+          //-         .master-banner-detail
+          //-           p.master-banner-item__title Alphard
+          //-           p.master-banner-item__short-desc
+          //-             | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+          //-           a.common-btn.master-banner-item__explore(href='#', title='Explore') Explore
+          //-   .center-detail.wheel-banner-item.center-detail(data-id='thoughful-2', data-wheel-control='thoughful')
+          //-     .master-banner-content
+                
+          //-       picture
+          //-         source(srcset='images/homes/home-small-2.jpg', media='(max-width: 1023px)')
+          //-         source(srcset='images/homes/home-2.jpg', media='(max-width: 1280px)')
+          //-         img.master-banner-img.intel-scaling(src='images/homes/home-2.jpg', alt='Master banner.', data-width='1920', data-height='677')
+          //-       .master-banner-detail-wrap
+          //-         .master-banner-detail
+          //-           p.master-banner-item__title Hiace
+          //-           p.master-banner-item__short-desc
+          //-             | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+          //-           a.common-btn.master-banner-item__explore(href='#', title='Explore') Explore
+          //-   .center-detail.wheel-banner-item.center-detail(data-id='peaceful-2', data-wheel-control='peaceful')
+          //-     .master-banner-content
+                
+          //-       picture
+          //-         source(srcset='images/homes/home-small-6.jpg', media='(max-width: 1023px)')
+          //-         source(srcset='images/homes/home-6.jpg', media='(max-width: 1280px)')
+          //-         img.master-banner-img.intel-scaling(src='images/homes/home-6.jpg', alt='Master banner.', data-width='1920', data-height='677')
+          //-       .master-banner-detail-wrap
+          //-         .master-banner-detail
+          //-           p.master-banner-item__title Coaster
+          //-           p.master-banner-item__short-desc
+          //-             | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+          //-           a.common-btn.master-banner-item__explore(href='#', title='Explore') Explore
+          //-   .center-detail.wheel-banner-item.center-detail(data-id='efficient-2', data-wheel-control='efficient')
+          //-     .master-banner-content
+                
+          //-       picture
+          //-         source(srcset='images/homes/home-small-2.jpg', media='(max-width: 1023px)')
+          //-         source(srcset='images/homes/home-2.jpg', media='(max-width: 1280px)')
+          //-         img.master-banner-img.intel-scaling(src='images/homes/home-2.jpg', alt='Master banner.', data-width='1920', data-height='677')
+          //-       .master-banner-detail-wrap
+          //-         .master-banner-detail
+          //-           p.master-banner-item__title Sienta
+          //-           p.master-banner-item__short-desc
+          //-             | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+          //-           a.common-btn.master-banner-item__explore(href='#', title='Explore') Explore
+          .master-banner-item.master-banner-item--promotion.master-banner-item--promotion-01(data-wheel-control='')
+            picture
+              source(srcset='images/homes/home-3-mobile.jpg', media='(max-width: 1020px)')
+              source(srcset='images/homes/home-3.jpg', media='(max-width: 1280px)')
+              img.master-banner-img.intel-scaling(src='images/homes/home-3.jpg?ext=.jpg', alt='Toyota', data-width='1920', data-height='677')
+            .master-banner-detail
+              p.master-banner-item__title
+                | Toyota
+                br
+                span Best deal of the year!
+              p.master-banner-item__short-desc *For vehicles by 31 December 2015. Terms and conditions apply.
+              a.common-btn.master-banner-item__explore(href='#', title='Find out more') Find out more
+          .master-banner-item.master-banner-item--promotion.master-banner-item--promotion-02(data-wheel-control='')
+            picture
+              source(srcset='images/Cars/PriusC/bg-prius-c-mobile.jpg', media='(max-width: 1020px)')
+              source(srcset='images/Cars/PriusC/bg-prius-c.jpg', media='(max-width: 1280px)')
+              img.master-banner-img.intel-scaling(src='images/Cars/PriusC/bg-prius-c.jpg', alt='PRIUS C', data-width='1920', data-height='677')
+            .master-banner-detail
+              p.master-banner-item__title PRIUS C
+              p.master-banner-item__short-desc Lorem ipsum Est cupidatat sed incididunt laboris ex sunt nostrud ullamco voluptate sit labore 
+              a.common-btn.master-banner-item__explore(href='/new-cars/prius-c', title='Find out more') Explore
+          .master-banner-item.master-banner-item--promotion.master-banner-item--promotion-02(data-wheel-control='')
+            picture
+              source(srcset='images/Cars/86/bg-86-mobile.jpg', media='(max-width: 1020px)')
+              source(srcset='images/Cars/86/bg-86.jpg', media='(max-width: 1280px)')
+              img.master-banner-img.intel-scaling(src='images/Cars/86/bg-86.jpg', alt='GT 86', data-width='1920', data-height='677')
+            .master-banner-detail
+              p.master-banner-item__title GT 86
+              p.master-banner-item__short-desc Lorem ipsum Est cupidatat sed incididunt laboris ex sunt nostrud ullamco voluptate sit labore 
+              a.common-btn.master-banner-item__explore(href='/new-cars/86', title='Find out more') Explore
+          .master-banner-item.master-banner-item--promotion.master-banner-item--promotion-02(data-wheel-control='')
+            picture
+              source(srcset='images/Cars/Rav-4/bg-rav-4-mobile.jpg', media='(max-width: 1020px)')
+              source(srcset='images/Cars/Rav-4/bg-rav-4.jpg', media='(max-width: 1280px)')
+              img.master-banner-img.intel-scaling(src='images/Cars/Rav-4/bg-rav-4.jpg', alt='RAV 4', data-width='1920', data-height='677')
+            .master-banner-detail
+              p.master-banner-item__title RAV 4
+              p.master-banner-item__short-desc Lorem ipsum Est cupidatat sed incididunt laboris ex sunt nostrud ullamco voluptate sit labore 
+              a.common-btn.master-banner-item__explore(href='/new-cars/rav-4', title='Find out more') Explore
+
+          //- This block is for demo purpose of right column text
+          //- .master-banner-item.master-banner-item--promotion.master-banner-item--promotion-03(data-wheel-control='')
+          //-   picture
+          //-     source(srcset='images/homes/home_5.jpg?ext=.jpg', media='(max-width: 1020px)')
+          //-     source(srcset='images/homes/home_5.jpg?ext=.jpg', media='(max-width: 1280px)')
+          //-     img.master-banner-img.intel-scaling(src='images/homes/home-5.jpg?ext=.jpg', alt='Impossible <br/> to ignore', data-width='1920', data-height='677')
+          //-   .master-banner-detail
+          //-     p.master-banner-item__title PRIUS C
+          //-     p.master-banner-item__short-desc Lorem ipsum Est cupidatat sed incididunt laboris ex sunt nostrud ullamco voluptate sit labore 
+          //-     a.common-btn.master-banner-item__explore(href='http://google.com', title='Find out more') Explore
+      a#helpful-link-list-mobile-trigger.mobile-trigger-btn(href='#helpful-link-list__widget', title='')
+      .exploring-toyota-family
+        h2.page-title Our family member
+        ul#cars-family-filter-list.cars-family-filter-list
+          li
+            a.cars-filter-selected(href='#', title='All', data-type='all') All
+          li
+            a(href='#', title='Travel', data-type='travel') Travel
+          li
+            a(href='#', title='Travel', data-type='family') Family
+        #cars-list-carousel-wrapper.cars-family-filter-wrapper.cars-family-filter-wrapper--loading
+          .jcarousel(dir='rtl')
+            #cars-list-carousel-back.cars-family-filter.line-1
+              .cars-quick-view-item(data-index='0', data-type='hatchback', style='width: 74px;')
+                img(src='/Toyota/media/Cars/Ractis/Rastic_02.png?ext=.png', alt='Ractis')
+              .cars-quick-view-item(data-index='1', data-type='hatchback', style='width: 74px;')
+                img(src='/Toyota/media/Cars/Prius-C/Pirus_C_02.png?ext=.png', alt='Prius C')
+              .cars-quick-view-item(data-index='2', data-type='hatchback', style='width: 74px;')
+                img(src='/Toyota/media/Cars/Spade/spade_002.jpg?ext=.jpg', alt='SPADE')
+              .cars-quick-view-item(data-index='3', data-type='mpv', style='width: 74px;')
+                img(src='/Toyota/media/Cars/Sienta/sienta_002.jpg?ext=.jpg', alt='SIENTA')
+              .cars-quick-view-item(data-index='4', data-type='mpv', style='width: 74px;')
+                img(src='/Toyota/media/Cars/Wish/Wish_02.png?ext=.png', alt='WISH')
+              .cars-quick-view-item(data-index='5', data-type='mpv', style='width: 74px;')
+                img(src='/Toyota/media/Cars/Noah/noah-002.jpg?ext=.jpg', alt='NOAH')
+              .cars-quick-view-item(data-index='6', data-type='mpv', style='width: 74px;')
+                img(src='/Toyota/media/Cars/Prius-V/Prius_V_02.png?ext=.png', alt='PRIUS V')
+              .cars-quick-view-item(data-index='7', data-type='mpv', style='width: 74px;')
+                img(src='/Toyota/media/Cars/Previa/Previa_02.png?ext=.png', alt='PREVIA')
+              .cars-quick-view-item(data-index='8', data-type='mpv', style='width: 74px;')
+                img(src='/Toyota/media/Cars/Alphard-and-Vellfire/Alphard_02.png?ext=.png', alt='ALPHARD')
+              .cars-quick-view-item(data-index='9', data-type='mpv', style='width: 74px;')
+                img(src='/Toyota/media/Cars/Alphard-and-Vellfire/Vellfire_02.png?ext=.png', alt='VELLFIRE')
+              .cars-quick-view-item(data-index='10', data-type='sedan', style='width: 74px;')
+                img(src='/Toyota/media/Cars/Corolla/Corolla_02.png?ext=.png', alt='Corolla')
+              .cars-quick-view-item(data-index='11', data-type='sedan', style='width: 74px;')
+                img(src='/Toyota/media/Cars/Camry/camry02.png?ext=.png', alt='Camry')
+              .cars-quick-view-item(data-index='12', data-type='sedan', style='width: 74px;')
+                img(src='/Toyota/media/Cars/Mark-X/MarkX_02.png?ext=.png', alt='MARK X')
+              .cars-quick-view-item(data-index='13', data-type='sedan', style='width: 74px;')
+                img(src='/Toyota/media/Cars/Prius/Prius_02.png?ext=.png', alt='PRIUS')
+              .cars-quick-view-item(data-index='14', data-type='suv', style='width: 74px;')
+                img(src='/Toyota/media/Cars/RAV4/Rav4_02.png?ext=.png', alt='RAV4')
+              .cars-quick-view-item(data-index='15', data-type='suv', style='width: 74px;')
+                img(src='/Toyota/media/Cars/Prado/Prado_002.jpg?ext=.jpg', alt='PRADO')
+              .cars-quick-view-item(data-index='16', data-type='sport car', style='width: 74px;')
+                img(src='/Toyota/media/Cars/86/86-002.jpg?ext=.jpg', alt='86')
+              .cars-quick-view-item(data-index='17', data-type='van', style='width: 74px;')
+                img(src='/Toyota/media/Cars/Hiace/hiace02.png?ext=.png', alt='Hiace')   
+          .jcarousel.jcarousel--center
+            #cars-list-carousel-front.cars-family-filter.line-2
+              .cars-quick-view-item(data-index='0', data-type='hatchback', style='width: 136px;')
+                a(href='http://toyotadev.projectuat.com/en/new-toyota/ractis/', title='Explore')
+                  img(src='/Toyota/media/Cars/Ractis/Rastic_01.png?ext=.png', alt='Ractis')
+                .car-info
+                  p.car-name Ractis
+                  span.car-short-desc $175,910 up
+                  a.common-btn(href='http://toyotadev.projectuat.com/en/new-toyota/ractis/', title='Explore') Explore
+              .cars-quick-view-item(data-index='1', data-type='hatchback', style='width: 136px;')
+                a(href='http://toyotadev.projectuat.com/en/new-toyota/prius-c/', title='Explore')
+                  img(src='/Toyota/media/Cars/Prius-C/Pirus_C_01.png?ext=.png', alt='Prius C')
+                .car-info
+                  p.car-name Prius C
+                  span.car-short-desc $234,500 
+                  a.common-btn(href='http://toyotadev.projectuat.com/en/new-toyota/prius-c/', title='Explore') Explore
+              .cars-quick-view-item(data-index='2', data-type='hatchback', style='width: 136px;')
+                a(href='http://toyotadev.projectuat.com/en/new-toyota/spade/', title='Explore')
+                  img(src='/Toyota/media/Cars/Spade/spade_001.jpg?ext=.jpg', alt='SPADE')
+                .car-info
+                  p.car-name SPADE
+                  span.car-short-desc $178,710 
+                  a.common-btn(href='http://toyotadev.projectuat.com/en/new-toyota/spade/', title='Explore') Explore
+              .cars-quick-view-item(data-index='3', data-type='mpv', style='width: 136px;')
+                a(href='http://toyotadev.projectuat.com/en/new-toyota/sienta/', title='Explore')
+                  img(src='/Toyota/media/Cars/Sienta/sienta_001.jpg?ext=.jpg', alt='SIENTA')
+                .car-info
+                  p.car-name SIENTA
+                  span.car-short-desc $234,920 
+                  a.common-btn(href='http://toyotadev.projectuat.com/en/new-toyota/sienta/', title='Explore') Explore
+              .cars-quick-view-item(data-index='4', data-type='mpv', style='width: 136px;')
+                a(href='http://toyotadev.projectuat.com/en/new-toyota/wish/', title='Explore')
+                  img(src='/Toyota/media/Cars/Wish/Wish_01.png?ext=.png', alt='WISH')
+                .car-info
+                  p.car-name WISH
+                  span.car-short-desc $215,460 up
+                  a.common-btn(href='http://toyotadev.projectuat.com/en/new-toyota/wish/', title='Explore') Explore
+              .cars-quick-view-item(data-index='5', data-type='mpv', style='width: 136px;')
+                a(href='http://toyotadev.projectuat.com/en/new-toyota/noah/', title='Explore')
+                  img(src='/Toyota/media/Cars/Noah/noah-001.jpg?ext=.jpg', alt='NOAH')
+                .car-info
+                  p.car-name NOAH
+                  span.car-short-desc $299,075 up
+                  a.common-btn(href='http://toyotadev.projectuat.com/en/new-toyota/noah/', title='Explore') Explore
+              .cars-quick-view-item(data-index='6', data-type='mpv', style='width: 136px;')
+                a(href='http://toyotadev.projectuat.com/en/new-toyota/prius-v/', title='Explore')
+                  img(src='/Toyota/media/Cars/Prius-V/Prius_V_01.png?ext=.png', alt='PRIUS V')
+                .car-info
+                  p.car-name PRIUS V
+                  span.car-short-desc $436,100 
+                  a.common-btn(href='http://toyotadev.projectuat.com/en/new-toyota/prius-v/', title='Explore') Explore
+              .cars-quick-view-item(data-index='7', data-type='mpv', style='width: 136px;')
+                a(href='http://toyotadev.projectuat.com/en/new-toyota/previa/', title='Explore')
+                  img(src='/Toyota/media/Cars/Previa/Previa_01.png?ext=.png', alt='PREVIA')
+                .car-info
+                  p.car-name PREVIA
+                  span.car-short-desc $399,700 up
+                  a.common-btn(href='http://toyotadev.projectuat.com/en/new-toyota/previa/', title='Explore') Explore
+              .cars-quick-view-item(data-index='8', data-type='mpv', style='width: 136px;')
+                a(href='http://toyotadev.projectuat.com/en/new-toyota/alphard/', title='Explore')
+                  img(src='/Toyota/media/Cars/Alphard-and-Vellfire/Alphard_01.png?ext=.png', alt='ALPHARD')
+                .car-info
+                  p.car-name ALPHARD
+                  span.car-short-desc $535,000 up
+                  a.common-btn(href='http://toyotadev.projectuat.com/en/new-toyota/alphard/', title='Explore') Explore
+              .cars-quick-view-item(data-index='9', data-type='mpv', style='width: 136px;')
+                a(href='http://toyotadev.projectuat.com/en/new-toyota/vellfire/', title='Explore')
+                  img(src='/Toyota/media/Cars/Alphard-and-Vellfire/Vellfire_01.png?ext=.png', alt='VELLFIRE')
+                .car-info
+                  p.car-name VELLFIRE
+                  span.car-short-desc $620,000 
+                  a.common-btn(href='http://toyotadev.projectuat.com/en/new-toyota/vellfire/', title='Explore') Explore
+              .cars-quick-view-item(data-index='10', data-type='sedan', style='width: 136px;')
+                a(href='http://toyotadev.projectuat.com/en/new-toyota/corolla/', title='Explore')
+                  img(src='/Toyota/media/Cars/Corolla/Corolla_01.png?ext=.png', alt='Corolla')
+                .car-info
+                  p.car-name Corolla
+                  span.car-short-desc $194,600 up
+                  a.common-btn(href='http://toyotadev.projectuat.com/en/new-toyota/corolla/', title='Explore') Explore
+              .cars-quick-view-item(data-index='11', data-type='sedan', style='width: 136px;')
+                a(href='http://toyotadev.projectuat.com/en/new-toyota/camry/', title='Explore')
+                  img(src='/Toyota/media/Cars/Camry/camry01_1.png?ext=.png', alt='Camry')
+                .car-info
+                  p.car-name Camry
+                  span.car-short-desc $289,450 up
+                  a.common-btn(href='http://toyotadev.projectuat.com/en/new-toyota/camry/', title='Explore') Explore
+              .cars-quick-view-item(data-index='12', data-type='sedan', style='width: 136px;')
+                a(href='http://toyotadev.projectuat.com/en/new-toyota/mark-x/', title='Explore')
+                  img(src='/Toyota/media/Cars/Mark-X/MarkX_01.png?ext=.png', alt='MARK X')
+                .car-info
+                  p.car-name MARK X
+                  span.car-short-desc $299,950 
+                  a.common-btn(href='http://toyotadev.projectuat.com/en/new-toyota/mark-x/', title='Explore') Explore
+              .cars-quick-view-item(data-index='13', data-type='sedan', style='width: 136px;')
+                a(href='http://toyotadev.projectuat.com/en/new-toyota/prius/', title='Explore')
+                  img(src='/Toyota/media/Cars/Prius/Prius_01.png?ext=.png', alt='PRIUS')
+                .car-info
+                  p.car-name PRIUS
+                  span.car-short-desc $366,100 up
+                  a.common-btn(href='http://toyotadev.projectuat.com/en/new-toyota/prius/', title='Explore') Explore
+              .cars-quick-view-item(data-index='14', data-type='suv', style='width: 136px;')
+                a(href='http://toyotadev.projectuat.com/en/new-toyota/rav4/', title='Explore')
+                  img(src='/Toyota/media/Cars/RAV4/Rav4_01.png?ext=.png', alt='RAV4')
+                .car-info
+                  p.car-name RAV4
+                  span.car-short-desc $319,060 up
+                  a.common-btn(href='http://toyotadev.projectuat.com/en/new-toyota/rav4/', title='Explore') Explore
+              .cars-quick-view-item(data-index='15', data-type='suv', style='width: 136px;')
+                a(href='http://toyotadev.projectuat.com/en/new-toyota/prado/', title='Explore')
+                  img(src='/Toyota/media/Cars/Prado/Prado_001.jpg?ext=.jpg', alt='PRADO')
+                .car-info
+                  p.car-name PRADO
+                  span.car-short-desc $599,900 up
+                  a.common-btn(href='http://toyotadev.projectuat.com/en/new-toyota/prado/', title='Explore') Explore
+              .cars-quick-view-item(data-index='16', data-type='sport car', style='width: 136px;')
+                a(href='http://toyotadev.projectuat.com/en/new-toyota/86/', title='Explore')
+                  img(src='/Toyota/media/Cars/86/86_001.jpg?ext=.jpg', alt='86')
+                .car-info
+                  p.car-name 86
+                  span.car-short-desc $415,450 up
+                  a.common-btn(href='http://toyotadev.projectuat.com/en/new-toyota/86/', title='Explore') Explore
+              .cars-quick-view-item(data-index='17', data-type='van', style='width: 136px;')
+                a(href='http://toyotadev.projectuat.com/en/commercial-vehicles/hiace/', title='Explore')
+                  img(src='/Toyota/media/Cars/Hiace/hiace.png?ext=.png', alt='Hiace')
+                .car-info
+                  p.car-name Hiace
+                  span.car-short-desc $309,008 up
+                  a.common-btn(href='http://toyotadev.projectuat.com/en/commercial-vehicles/hiace/', title='Explore') Explore
+      .posts-list-wrapper
+        h2.page-title What happening in Toyota
+        .posts-list
+          .grid-sizer(style='width: 30%')  
+          .gutter-sizer(style='width: 4.5454545%')  
+          span.bg-gray.col-1  
+          span.bg-gray.col-2  
+          .post-item.cate-01
+            span.cate-icon Category 1
+            a(href='#', title='Lorem ipsum dolor')
+              img(src='images/homes/post-thumb-1.jpg', alt='Post thumb')
+            h3.post-item__title
+              a(href='#', title='Lorem ipsum dolor') Lorem ipsum dolor
+            p.post-item__short-desc
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a elit mollis, pulvinar massa eu, tempor ipsum. Donec id vestibulum libero. Maecenas enim mauris
+            a.post-item__link.post-item__link--view-more(href='#', title='')
+              i.fa.fa-download
+              |  download now
+            .post-social-widgets
+              .fb-like(data-href='https://developers.facebook.com/docs/plugins/', data-layout='button_count', data-action='like', data-show-faces='false', data-share='true')
+          .post-item.cate-02
+            span.cate-icon Category 2
+            a(href='#', title='Lorem ipsum dolor')
+              img(src='images/homes/post-thumb-2.jpg', alt='Post thumb')
+            h3.post-item__title
+              a(href='#', title='Lorem ipsum dolor') Lorem ipsum dolor
+            p.post-item__short-desc
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a elit mollis, pulvinar massa eu, tempor ipsum. Donec id vestibulum libero. Maecenas enim mauris
+            a.post-item__link.post-item__link--view-more(href='#', title='')
+              i.fa.fa-list
+              |  read more
+            .post-social-widgets
+              .fb-like(data-href='https://developers.facebook.com/docs/plugins/', data-layout='button_count', data-action='like', data-show-faces='false', data-share='true')
+          .post-item.cate-03
+            span.cate-icon Category 3
+            a(href='#', title='Lorem ipsum dolor')
+              img(src='images/homes/post-thumb-3.jpg', alt='Post thumb')
+            h3.post-item__title
+              a(href='#', title='Lorem ipsum dolor') Lorem ipsum dolor
+            p.post-item__short-desc
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a elit mollis, pulvinar massa eu, tempor ipsum. Donec id vestibulum libero. Maecenas enim mauris
+            a.post-item__link.post-item__link--view-more(href='#', title='')
+              i.fa.fa-list
+              |  read more
+            .post-social-widgets
+              .fb-like(data-href='https://developers.facebook.com/docs/plugins/', data-layout='button_count', data-action='like', data-show-faces='false', data-share='true')
+          .post-item.cate-02
+            span.cate-icon Category 2
+            a(href='#', title='Lorem ipsum dolor')
+              img(src='images/homes/post-thumb-4.jpg', alt='Post thumb')
+            h3.post-item__title
+              a(href='#', title='Lorem ipsum dolor') Lorem ipsum dolor
+            p.post-item__short-desc
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a elit mollis, pulvinar massa eu, tempor ipsum. Donec id vestibulum libero. Maecenas enim mauris
+            a.post-item__link.post-item__link--view-more(href='#', title='')
+              i.fa.fa-list
+              |  read more
+            .post-social-widgets
+              .fb-like(data-href='https://developers.facebook.com/docs/plugins/', data-layout='button_count', data-action='like', data-show-faces='false', data-share='true')
+          .post-item.cate-03
+            span.cate-icon Category 3
+            a(href='#', title='Lorem ipsum dolor')
+              img(src='images/homes/post-thumb-5.jpg', alt='Post thumb')
+            h3.post-item__title
+              a(href='#', title='Lorem ipsum dolor') Lorem ipsum dolor
+            p.post-item__short-desc
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a elit mollis, pulvinar massa eu, tempor ipsum. Donec id vestibulum libero. Maecenas enim mauris
+            a.post-item__link.post-item__link--view-more(href='#', title='')
+              i.fa.fa-list
+              |  read more
+            .post-social-widgets
+              .fb-like(data-href='https://developers.facebook.com/docs/plugins/', data-layout='button_count', data-action='like', data-show-faces='false', data-share='true')
+          .post-item.cate-02
+            span.cate-icon Category 2
+            a(href='#', title='Lorem ipsum dolor')
+              img(src='images/homes/post-thumb-6.jpg', alt='Post thumb')
+            h3.post-item__title
+              a(href='#', title='Lorem ipsum dolor') Lorem ipsum dolor
+            p.post-item__short-desc
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a elit mollis, pulvinar massa eu, tempor ipsum. Donec id vestibulum libero. Maecenas enim mauris
+            a.post-item__link.post-item__link--view-more(href='#', title='')
+              i.fa.fa-list
+              |  read more
+            .post-social-widgets
+              .fb-like(data-href='https://developers.facebook.com/docs/plugins/', data-layout='button_count', data-action='like', data-show-faces='false', data-share='true')
+          .post-item.cate-02
+            span.cate-icon Category 2
+            a(href='#', title='Lorem ipsum dolor')
+              img(src='images/homes/post-thumb-6.jpg', alt='Post thumb')
+            h3.post-item__title
+              a(href='#', title='Lorem ipsum dolor') Lorem ipsum dolor
+            p.post-item__short-desc
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a elit mollis, pulvinar massa eu, tempor ipsum. Donec id vestibulum libero. Maecenas enim mauris
+            a.post-item__link.post-item__link--view-more(href='#', title='')
+              i.fa.fa-list
+              |  read more
+            .post-social-widgets
+              .fb-like(data-href='https://developers.facebook.com/docs/plugins/', data-layout='button_count', data-action='like', data-show-faces='false', data-share='true')
+      .homepage-footer-box
+        //- img.surver-car.animation-left-right(src='images/homes/survey-car-small.png')
+        a#survey-box-trigger.survey-box-trigger.surver-car.animation-right-left(href='#', title='Help us improve our site')
+          img(src='images/homes/survey-car-big.png')
+        #survey-box.survey-box
+          // <a id="close-survey-box-btn" href="#" title="Close" class="close-survey-box-btn">Close</a>
+          p Would you help us improve our site by completing our short survey?
+          a.take-survey-btn(href='#', title='#') Go
+

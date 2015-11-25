@@ -1,0 +1,521 @@
+extends layouts/layout
+
+block vars
+  -title = 'Car Prius C'
+  -bodyClass = 'car-detail'
+
+  -priusCEngtext = {}
+  -priusCEngtext.banner= {}
+  -priusCEngtext.banner.bannerContent= []
+  -priusCEngtext.banner.bannerContent[0] = {}
+  -priusCEngtext.banner.bannerContent[0].titleSmall= 'CHIC'
+  -priusCEngtext.banner.bannerContent[0].title= 'PRIUS C'
+  -priusCEngtext.banner.bannerContent[0].price= '$189,800 up'
+  -priusCEngtext.banner.bannerContent[0].description= '<p>Make your debut in a car that\'s chic, smart and playful – just like you.</p>'
+
+  -priusCEngtext.colors= {}
+  -priusCEngtext.colors.titleSmall= '深紅色'
+  -priusCEngtext.colors.description= 'Hop in for a fashionable drive and show the world your true colours!'
+  -priusCEngtext.colors.colorNames= []
+  -priusCEngtext.colors.colorNames[0]= 'Super White II'
+  -priusCEngtext.colors.colorNames[1]= 'Lime White Pearl Crystal Shine'
+  -priusCEngtext.colors.colorNames[2]= 'Silver Metallic'
+  -priusCEngtext.colors.colorNames[3]= 'Greymetalic'
+  -priusCEngtext.colors.colorNames[4]= 'Black Mica'
+  -priusCEngtext.colors.colorNames[5]= 'Super Red V'
+  -priusCEngtext.colors.colorNames[6]= 'Orange Pearl Crystal Shine'
+  -priusCEngtext.colors.colorNames[7]= 'Yellow'
+  -priusCEngtext.colors.colorNames[8]= 'Yellow Mica Metallic'
+  -priusCEngtext.colors.colorNames[9]= 'Cool Soda Metallic'
+
+
+
+  -priusCEngtext.carDetail=  {}
+  -priusCEngtext.carDetail.tabTitle= []
+  -priusCEngtext.carDetail.tabTitle[0]= 'EXTREIOR'
+  -priusCEngtext.carDetail.tabTitle[1]= 'INTERIOR'
+  -priusCEngtext.carDetail.tabTitle[2]= 'PERFORMANCE'
+  -priusCEngtext.carDetail.tabTitle[3]= 'SAFETY'
+
+  -priusCEngtext.carDetail.tooltipLandingExterior= {}
+  -priusCEngtext.carDetail.tooltipLandingExterior.description= 'Take centre stage with a dynamic design and streamlined exterior.'
+  -priusCEngtext.carDetail.tooltipLandingExterior.tooltips= []
+  -priusCEngtext.carDetail.tooltipLandingExterior.tooltips[0]= 'All new front grille'
+  -priusCEngtext.carDetail.tooltipLandingExterior.tooltips[1]= 'LED headlamp with auto levelling and LED front fog lamp'
+  -priusCEngtext.carDetail.tooltipLandingExterior.tooltips[2]= 'New StyleRear lamps'
+  -priusCEngtext.carDetail.tooltipLandingExterior.tooltips[3]= '15-inch alloy wheels'
+  -priusCEngtext.carDetail.tooltipLandingExterior.noteText= 'Overseas model shown'
+
+  -priusCEngtext.carDetail.tooltipLandingInterior= {}
+  -priusCEngtext.carDetail.tooltipLandingInterior.description= 'A cosy cabin accented in alluring piano-black, for an unparalleled driving experience.'
+  -priusCEngtext.carDetail.tooltipLandingInterior.tooltips= []
+  -priusCEngtext.carDetail.tooltipLandingInterior.tooltips[0]= 'Electronic tuning radio /CD player with 6 speakers'
+  -priusCEngtext.carDetail.tooltipLandingInterior.tooltips[1]= 'Combination meter with multi-information display'
+  -priusCEngtext.carDetail.tooltipLandingInterior.tooltips[2]= 'Multi-function steering wheel with touch tracer display function'
+  -priusCEngtext.carDetail.tooltipLandingInterior.tooltips[3]= 'Piano-black accents that are both stylish and luxurious'
+
+  -priusCEngtext.carDetail.tooltipLandingPerformance= {}
+  -priusCEngtext.carDetail.tooltipLandingPerformance.tooltips= []
+  -priusCEngtext.carDetail.tooltipLandingPerformance.tooltips[0]= 'Hybrid system'
+  -priusCEngtext.carDetail.tooltipLandingPerformance.tooltips[1]= 'Electronically controlled CVT'
+  -priusCEngtext.carDetail.tooltipLandingPerformance.tooltips[2]= 'ECO mode and EV mode'
+
+  -priusCEngtext.carDetail.tooltipLandingSafety= {}
+  -priusCEngtext.carDetail.tooltipLandingSafety.tooltips= []
+  -priusCEngtext.carDetail.tooltipLandingSafety.tooltips[0]= '9 SRS airbags'
+  -priusCEngtext.carDetail.tooltipLandingSafety.tooltips[1]= '205 PS總系統輸出及23。8 km/ L耗油量。 同級唯一油電混合動力的行政座駕。'
+  -priusCEngtext.carDetail.tooltipLandingSafety.tooltips[2]= 'Full security at play, powered by 7 cutting-edge safety features'
+  
+  
+
+block pagescript
+  //- Dep only for car detail page
+  // build:js scripts/car-detail-dep.js
+  script(src='/scripts/lib-js/rangeslider.js')
+  script(src='/scripts/lib-js/interact-1.2.4.js')
+  script(src='/scripts/lib-js/jquery.panelSnap.js')
+  // endbuild
+
+  // build:js scripts/car-detail.js
+  script(src='/scripts/lib-js/general-ui.js')
+  script(src='/scripts/lib-js/car-change-color-slide.js')
+  script(src='/scripts/lib-js/car-unique-characters.js')
+  script(src='/scripts/lib-js/car-detail-interaction.js')
+  // endbuild
+
+block container
+  .car-prius-c-detail
+    //- .section-owl-carousel
+    .section.section-prius-c-banner.section-async-owl-carousel
+      .owl-carousel-bg-car
+        .item.image-center
+          picture
+            source(srcset='images/Cars/PriusC/banner-1-mobile.jpg', media='(max-width: 1023px)')
+            img(src='images/Cars/PriusC/banner-1.jpg', alt='Home banner.', data-width='1920', data-height='799')
+          .content
+            .block-ow-caption
+              .block-top-middle
+                .title-small !{priusCEngtext.banner.bannerContent[0].titleSmall}
+                h1.title
+                  | !{priusCEngtext.banner.bannerContent[0].title}
+                  .price  !{priusCEngtext.banner.bannerContent[0].price}
+                .description
+                  .editor-content
+                    | !{priusCEngtext.banner.bannerContent[0].description}
+        .item.image-center
+          picture
+            source(srcset='images/Cars/PriusC/banner-2-mobile.jpg', media='(max-width: 1023px)')
+            img(src='images/Cars/PriusC/banner-2.jpg', alt='Home banner.', data-width='1920', data-height='799')
+          .content
+            .block-ow-caption
+              .block-top-middle
+                .title-small !{priusCEngtext.banner.bannerContent[0].titleSmall}
+                .title
+                  | !{priusCEngtext.banner.bannerContent[0].title}
+                  .price  !{priusCEngtext.banner.bannerContent[0].price}
+                .description
+                  .editor-content
+                    | !{priusCEngtext.banner.bannerContent[0].description}
+        .item.image-center
+          picture
+            source(srcset='images/Cars/PriusC/banner-3-mobile.jpg', media='(max-width: 1023px)')
+            img(src='images/Cars/PriusC/banner-3.jpg', alt='Home banner.', data-width='1920', data-height='799')
+          .content
+            .block-ow-caption
+              .block-top-middle
+                .title-small !{priusCEngtext.banner.bannerContent[0].titleSmall}
+                .title
+                  | !{priusCEngtext.banner.bannerContent[0].title}
+                  .price  !{priusCEngtext.banner.bannerContent[0].price}
+                .description
+                  .editor-content
+                    | !{priusCEngtext.banner.bannerContent[0].description}
+      .owl-carousel-car
+        .item.active
+          picture
+            img(src='images/Cars/PriusC/banner-car-1.png', alt='Home banner.', data-width='1920', data-height='799')
+        .item
+          picture
+            img(src='images/Cars/PriusC/banner-car-2.png', alt='Home banner.', data-width='1920', data-height='799')
+        .item
+          picture
+            img(src='images/Cars/PriusC/banner-car-3.png', alt='Home banner.', data-width='1920', data-height='799')
+
+    //- change-color-car-slider
+    .section.section-change-color-car-slider
+      .block-content
+        .slider
+          .handles
+          .mask-wrap
+
+            .mask.supperwhite(data-color="supperwhite", data-title=priusCEngtext.colors.colorNames[0])
+              .wrapper
+                .rect
+                  .image-center
+                    img.bg-car(src='images/Cars/PriusC/01_SUPERWHITE_bg.png', alt='')
+                  img(src='images/Cars/PriusC/01_SUPERWHITE.png', alt='')
+
+            .mask.limewhitepearlcrystalshine(data-color="limewhitepearlcrystalshine", data-title=priusCEngtext.colors.colorNames[1])
+              .wrapper
+                .rect
+                  .image-center
+                    img.bg-car(src='images/Cars/PriusC/02_LIMEWHITEPEARLCRYSTALSHINE_bg.png', alt='')
+                  img(src='images/Cars/PriusC/02_LIMEWHITEPEARLCRYSTALSHINE.png', alt='')
+
+            .mask.silvermetallic(data-color="silvermetallic", data-title=priusCEngtext.colors.colorNames[2])
+              .wrapper
+                .rect
+                  .image-center
+                    img.bg-car(src='images/Cars/PriusC/03_SILVER_METALLIC_bg.png', alt='')
+                  img(src='images/Cars/PriusC/03_SILVER METALLIC.png', alt='')
+
+            .mask.greymetallic(data-color="greymetallic", data-title=priusCEngtext.colors.colorNames[3])
+              .wrapper
+                .rect
+                  .image-center
+                    img.bg-car(src='images/Cars/PriusC/04_GREYMETALLIC_bg.png', alt='')
+                  img(src='images/Cars/PriusC/04_GREYMETALLIC.png', alt='')
+
+            .mask.black(data-color="black", data-title=priusCEngtext.colors.colorNames[4])
+              .wrapper
+                .rect
+                  .image-center
+                    img.bg-car(src='images/Cars/PriusC/05_black_bg.png', alt='')
+                  img(src='images/Cars/PriusC/05_black.png', alt='')
+
+            .mask.superredv(data-color="superredv", data-title=priusCEngtext.colors.colorNames[5])
+              .wrapper
+                .rect
+                  .image-center
+                    img.bg-car(src='images/Cars/PriusC/06_SuperRedV_bg.png', alt='')
+                  img(src='images/Cars/PriusC/06_SuperRedV.png', alt='')
+
+            .mask.orangepearlcrystalshine(data-color="orangepearlcrystalshine", data-title=priusCEngtext.colors.colorNames[6])
+              .wrapper
+                .rect
+                  .image-center
+                    img.bg-car(src='images/Cars/PriusC/07_orange_bg.png', alt='')
+                  img(src='images/Cars/PriusC/07_ORANGE PEARL CRYSTAL SHINE.png', alt='')
+
+            .mask.yellow(data-color="yellow", data-title=priusCEngtext.colors.colorNames[7])
+              .wrapper
+                .rect
+                  .image-center
+                    img.bg-car(src='images/Cars/PriusC/08_Yellow_bg.png', alt='')
+                  img(src='images/Cars/PriusC/08_Yellow.png', alt='')
+
+            .mask.yellowmicametallic(data-color="yellowmicametallic", data-title=priusCEngtext.colors.colorNames[8])
+              .wrapper
+                .rect
+                  .image-center
+                    img.bg-car(src='images/Cars/PriusC/09_YELLOW_MICA_METALLIC_bg.png', alt='')
+                  img(src='images/Cars/PriusC/09_YELLOW MICA METALLIC.png', alt='')
+
+            .mask.coolsodametallic(data-color="coolsodametallic", data-title=priusCEngtext.colors.colorNames[9])
+              .wrapper
+                .rect
+                  .image-center
+                    img.bg-car(src='images/Cars/PriusC/10_COOLSodaMetallic_bg.png', alt='')
+                  img(src='images/Cars/PriusC/10_COOLSodaMetallic.png', alt='')
+
+        .container        
+          .block-ow-caption
+            .block-top-middle
+              .title-small !{priusCEngtext.colors.titleSmall}
+              .description
+                .editor-content
+                  p !{priusCEngtext.colors.description}
+
+          .block-lists-color
+            .color-item(data-index="1", data-color='supperwhite').active
+              .icon.supperwhite
+                img(src='images/Cars/PriusC/bg-color-car-1.png', alt='')
+            .color-item(data-index="2", data-color='limewhitepearlcrystalshine')
+              .icon.limewhitepearlcrystalshine
+                img(src='images/Cars/PriusC/bg-color-car-2.png', alt='')
+            .color-item(data-index="3", data-color='silvermetallic')
+              .icon.silvermetallic
+                img(src='images/Cars/PriusC/bg-color-car-3.png', alt='')
+            .color-item(data-index="4", data-color='greymetallic')
+              .icon.greymetallic
+                img(src='images/Cars/PriusC/bg-color-car-4.png', alt='')
+            .color-item(data-index="5", data-color='black')
+              .icon.black
+                img(src='images/Cars/PriusC/bg-color-car-5.png', alt='')
+            .color-item(data-index="6", data-color='superredv')
+              .icon.superredv
+                img(src='images/Cars/PriusC/bg-color-car-6.png', alt='')
+            .color-item(data-index="7", data-color='orangepearlcrystalshine')
+              .icon.orangepearlcrystalshine
+                img(src='images/Cars/PriusC/bg-color-car-7.png', alt='')
+            .color-item(data-index="8", data-color='yellow')
+              .icon.yellow
+                img(src='images/Cars/PriusC/bg-color-car-8.png', alt='')
+            .color-item(data-index="9", data-color='yellowmicametallic')
+              .icon.yellowmicametallic
+                img(src='images/Cars/PriusC/bg-color-car-9.png', alt='')
+            .color-item(data-index="10", data-color='coolsodametallic')
+              .icon.coolsodametallic
+                img(src='images/Cars/PriusC/bg-color-car-10.png', alt='')
+
+    //- car-detail
+    .section.section-car-detail.car-prius-c
+      .section-car-detail-navigation
+        .container
+          .tab.tab-1.active(data-id='1')
+            span !{priusCEngtext.carDetail.tabTitle[0]}
+            .icon.icon-1 &nbsp;  
+          .tab.tab-2(data-id='2')
+            span !{priusCEngtext.carDetail.tabTitle[1]}
+            .icon.icon-2 &nbsp;  
+          .tab.tab-3(data-id='3')
+            span !{priusCEngtext.carDetail.tabTitle[2]}
+            .icon.icon-3 &nbsp;  
+          .tab.tab-4(data-id='4')
+            span !{priusCEngtext.carDetail.tabTitle[3]}
+            .icon.icon-4 &nbsp;  
+      .section-car-detail-content
+        #tab-1.active
+          .section-car-detail-content-exterior.car-section-content
+            .block-img.image-center
+              picture
+                source(srcset='images/Cars/PriusC/img-1-mobile.jpg', media='(max-width: 800px)')
+                img(src='images/Cars/PriusC/img-1.jpg', alt='Car detail', data-x='0', data-y='0')
+              .block-tooltip
+                +tooltip('tooltip-exterior-1','24','59.8')
+                +tooltip('tooltip-exterior-2','31.5','49.8')
+                +tooltip('tooltip-exterior-3','70','37.9')
+                +tooltip('tooltip-exterior-4','70','56')
+            .block-description
+              .editor-content
+                p !{priusCEngtext.carDetail.tooltipLandingExterior.description}
+            .block-popup
+              .tooltip-navigation
+                .container
+                  span.prev &nbsp;
+                  .editor-content.tooltip-title-container &nbsp;
+                  span.next &nbsp;
+                .close-btn
+                  a(href='#', title='close') &nbsp;
+              // Tooltip detail item
+              #tooltip-exterior-1.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{priusCEngtext.carDetail.tooltipLandingExterior.tooltips[0]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/PriusC/ex-pri1.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-exterior-2.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{priusCEngtext.carDetail.tooltipLandingExterior.tooltips[1]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/PriusC/ex-pri2.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-exterior-3.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{priusCEngtext.carDetail.tooltipLandingExterior.tooltips[2]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/PriusC/ex-pri3.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-exterior-4.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{priusCEngtext.carDetail.tooltipLandingExterior.tooltips[3]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/PriusC/ex-pri4.jpg', alt='fold-flat 1')
+                .block-text
+                  p !{priusCEngtext.carDetail.tooltipLandingExterior.noteText}
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+        #tab-2
+          .section-car-detail-content-interior.car-section-content
+            // Image with tooltip
+            .block-img.image-drag
+              picture
+                source(srcset='images/Cars/PriusC/img-2-mobile.jpg', media='(max-width: 1023px)')
+                img(src='images/Cars/PriusC/img-2.jpg', alt='Car detail', data-x='0', data-y='0')
+              .block-tooltip.light
+                +tooltip('tooltip-interior-1','43.5','26.2')
+                +tooltip('tooltip-interior-2','55.5','12.2')
+                +tooltip('tooltip-interior-3','72.5','31.7')
+                +tooltip('tooltip-interior-4','48','87.2')
+            .block-description
+              .editor-content
+                p !{priusCEngtext.carDetail.tooltipLandingInterior.description}
+            .block-popup
+              .tooltip-navigation
+                .container
+                  span.prev &nbsp;
+                  .editor-content.tooltip-title-container &nbsp;
+                  span.next &nbsp;
+                .close-btn
+                  a(href='#', title='close') &nbsp;
+              // Tooltip detail item
+              #tooltip-interior-1.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{priusCEngtext.carDetail.tooltipLandingInterior.tooltips[0]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/PriusC/02_Interior_05.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-interior-2.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{priusCEngtext.carDetail.tooltipLandingInterior.tooltips[1]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/PriusC/02_Interior_03a.jpg', alt='fold-flat 1')
+                  .item.image-center
+                    img(src='images/Cars/PriusC/02_Interior_03b.jpg', alt='fold-flat 1')
+                  .item.image-center
+                    img(src='images/Cars/PriusC/02_Interior_03c.jpg', alt='fold-flat 1')
+                  .item.image-center
+                    img(src='images/Cars/PriusC/02_Interior_03d.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+                  a(href='#', data-index='2') &nbsp;
+                  a(href='#', data-index='3') &nbsp;
+                  a(href='#', data-index='4') &nbsp;
+              #tooltip-interior-3.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{priusCEngtext.carDetail.tooltipLandingInterior.tooltips[2]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/PriusC/02_Interior_06.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-interior-4.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{priusCEngtext.carDetail.tooltipLandingInterior.tooltips[3]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/PriusC/02_Interior_01.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+        #tab-3
+          .section-car-detail-content-performance.car-section-content.tab-content-car-carousel
+            // Image with carousel
+            .owl-carousel-car-view(data-nav="true")
+              .item.image-center
+                img(src='images/Cars/PriusC/03_Performance_01.jpg', alt='fold-flat 1')
+              .item.image-center
+                img(src='images/Cars/PriusC/03_Performance_02.jpg', alt='fold-flat 1')
+              .item.image-center
+                img(src='images/Cars/PriusC/03_Performance_03.jpg', alt='fold-flat 1')
+
+            .owl-carousel-car-view-nav
+              .container
+                .nav-5
+                  a.prev(href="#") &nbsp;
+                  .editor-content.tooltip-title-container
+                    p !{priusCEngtext.carDetail.tooltipLandingPerformance.tooltips[0]}
+                    p.hide !{priusCEngtext.carDetail.tooltipLandingPerformance.tooltips[1]}
+                    p.hide !{priusCEngtext.carDetail.tooltipLandingPerformance.tooltips[2]}
+                  a.next(href="#") &nbsp;
+        //- #tab-4
+        //-   .section-car-detail-content-performance.car-section-content.tab-content-car-carousel
+        //-     // Image with carousel
+        //-     .owl-carousel-car-view(data-nav="true")
+        //-       .item.image-center
+        //-         img(src='images/Cars/PriusC/04_Safety_01.jpg', alt='fold-flat 1')
+        //-       //- .item.image-center
+        //-       //-   img(src='images/Cars/PriusC/04_Safety_02.jpg', alt='fold-flat 1')
+        //-       //- .item.image-center
+        //-       //-   img(src='images/Cars/PriusC/04_Safety_03.jpg', alt='fold-flat 1')
+
+        //-     .owl-carousel-car-view-nav
+        //-       .container
+        //-         .nav-5
+        //-           a.prev(href="#") &nbsp;
+        //-           .editor-content.tooltip-title-container
+        //-             p !{priusCEngtext.carDetail.tooltipLandingSafety.tooltips[0]}
+        //-             //- p.hide !{priusCEngtext.carDetail.tooltipLandingSafety.tooltips[1]}
+        //-             //- p.hide !{priusCEngtext.carDetail.tooltipLandingSafety.tooltips[2]}
+        //-           a.next(href="#") &nbsp;
+        #tab-4
+          .section-car-detail-content-performance.car-section-content
+            // Image with carousel
+            .block-img.image-center
+              img(src='images/Cars/PriusC/04_Safety_01.jpg', alt='fold-flat 1')
+            .block-description
+              .editor-content
+                p !{priusCEngtext.carDetail.tooltipLandingSafety.tooltips[0]}
+            .block-popup &nbsp;
+
+    //- specification-car
+    .section.section-specification-car
+      .container
+        h2.title HIGHLIGHTED SPECIFICATION
+        .table-content
+          table
+            tbody
+              tr
+                td.title(rowspan='2') 車身量度及重量  
+                td 全長 x 全闊 x 全高  (mm)
+                td 3,995 x 1,695 x 1,450
+              tr
+                td 座位容量  (連司機)
+                td 5
+              tr
+                td.title(rowspan='4') 引擎
+                td 類型
+                td 直列式四汽缸雙頂凸輪軸16氣閥VVT-i 引擎
+              tr
+                td 汽缸容量 (cc)
+                td 1,497
+              tr
+                td *最大馬力 kW (PS) / rpm
+                td 54 (73) / 4,800
+              tr
+                td *最大扭力 (kg-m) / rpms
+                td 111 (11.3) / 4,000
+              tr
+                td.title(rowspan='3') 電動馬達
+                td 類型
+                td 同步交流電動馬達 (恆久磁石)
+              tr
+                td 最大馬力 kW (PS)
+                td 45 (61)
+              tr
+                td 最大扭力 Nm (kg-m)
+                td 169 (17.2)
+              tr
+                td.title(rowspan='1') 總系統輸出
+                td 輸出最大馬力 kW (PS)
+                td 74 (101)
+              tr
+                td.title(rowspan='3') 車身
+                td 傳動系統
+                td 電子控制無段變速系統
+              tr
+                td 油耗
+                td 17.8 km/L (JC08 mode)
+              tr
+                td 輪胎及輪圈
+                td 185/60R15 合金輪圈
+
+    //- components-car
+    .section.section-components-car
+      .section-components-car-content
+        .container
+          .row
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12
+              .block-downlink
+                a(href='#', title='Download e-Catalogue')
+                  i.fa.fa-download  
+                  span Download e-Catalogue
+                img(src='images/Cars/PriusC/car-small.png', alt='Download')
+                a(href='#', title='Download Specification Sheet')
+                  i.fa.fa-download  
+                  span Download Specification Sheet
+
+    //- interest
+    .section.section-interest
+      +interest('YOU MAY ALSO HAVE INTEREST')
+
+      

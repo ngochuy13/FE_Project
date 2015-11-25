@@ -1,0 +1,205 @@
+body.map
+  .range-slider-control.range-slider-control-2
+    width: 290px
+  .article-list-filter
+    display: block!important
+  .section.article-list-filter .filter-select.filter-mobile
+    margin-top: 0px
+    margin-bottom: 0px
+    .select-wrap
+      width: 294px
+      margin: auto
+      float: none
+      padding: 15px 0
+    .filter-tab
+      margin: 0 -25px
+      background: #cacaca
+      a
+        display: inline-block
+        width: 33.333%
+        text-align: center
+        padding: 11px 0px
+        &.active
+          background: #f68124
+        span
+          display: inline-block
+          color: #fff
+          font-size: 16px
+          font-family: $ss-ff
+          font-weight: bold
+          &.see-do
+            background: url(../images/icon-features-sprite.png) no-repeat
+            padding-left: 28px
+            background-size: 22px
+            background-position: 0px 4px
+          &.what-on
+            background: url(../images/icon-features-sprite.png) no-repeat
+            padding-left: 28px
+            background-size: 22px
+            background-position: 0px -27px
+          &.stay
+            background: url(../images/icon-features-sprite.png) no-repeat
+            padding-left: 28px
+            background-size: 22px
+            background-position: 0px -53px
+    .select-wrap
+      .accomodation-select-2
+        width: 100%
+#map-container
+  border-width: 1px
+  border-style: solid
+  border-color: #ccc #ccc #999 #ccc
+  -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px
+  -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px
+  box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px
+  width: 100%
+  position: relative
+#map
+  width: 100%
+  position: relative
+.info-window
+  width: 205px
+  padding: 9px
+  background: #fff
+  border: 1px solid #007AFF
+  border-radius: 5px
+  position: relative
+  margin-bottom: 30px
+  box-shadow: 15px 15px 0 rgba(0,0,0,0.08)
+  &:after
+    content: ""
+    position: absolute
+    height: 15px
+    width: 36px
+    background: url("../images/icons/map-arrow-shadow.png") no-repeat
+    background-size: contain
+    bottom: -31px
+    left: 36px
+    right: 0
+    margin: auto
+    opacity: 0.08
+  &:before
+    content: ""
+    position: absolute
+    height: 15px
+    width: 36px
+    background: url("../images/icons/map-arrow.png") no-repeat
+    background-size: contain
+    top: 100%
+    left: 0
+    right: 0
+    margin: auto
+  a.img-link
+    display: block
+    width: 100%
+    height: 0
+    padding-top: 66.6666%
+    position: relative
+    img
+      width: 100%
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+  label
+    width: 100%
+    font-size: 18px
+    text-align: center
+    margin: 8px 0
+    font-family: $bt-ff
+    color: #635d5f
+    line-height: 1  
+  a.btn-view
+    background-color: #007aff
+    color: #fff
+    font-size: 16px
+    font-family: $ss-ff
+    width: 100%
+    display: inline-block
+    padding: 9px 0
+    text-align: center
+    border-radius: 3px
+    
+body.map
+  .map-filter
+    background: url(../images/map_filter_bg.png) transparent
+    z-index: 1  
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+  .section.article-list-filter
+    background: transparent
+    .filter-select
+      margin-top: 19px
+      margin-bottom: 17px
+  .range-slider-control
+    padding: 6px 0 10px 0
+    width: 216px
+    float: left
+  .section.article-list-filter .filter-select .select-wrap .accomodation-select-1
+    width: 178px
+  .section.article-list-filter .filter-select .select-wrap .accomodation-select-2
+    width: 300px
+  .star-rating-wrapper
+    padding: 6px 0 10px 0
+    margin-left: 36px
+    display: inline-block
+    >label
+      font-weight: normal
+      font-size: 16px
+      margin-bottom: 0px
+    >span
+      display: block
+  .option-filter
+    float: left
+    display: none
+  .section.article-list-filter .filter-select button.clear
+    float: right
+  .input-with-icon
+    position: relative
+    margin: 10px 20px 0px 0
+    float: left
+  .map-filter-msg
+    background: url(../images/icons/icon-map.png) no-repeat
+    background-size: contain
+    background-position: left top
+    height: 30px
+    padding: 7px 0
+    padding-left: 33px
+    margin: 18px 0 0px 60px
+    display: inline-block
+    font-size: 18px
+    line-height: 1
+
+  @media screen and (max-width: 1024px)
+    .range-slider-control
+      width: 180px
+  @media screen and (max-width: 991px)
+    .container
+      width: 100%
+    #map-container
+      border-width: 0px
+    .section.article-list-filter.border-top
+      border-top: 0px
+    .search-info-wrapper, .logo, .navigation
+      display: none
+  @media screen and (min-width: 1024px) and (max-width: 1200px)
+    .section.article-list-filter .filter-select .select-wrap .accomodation-select-1
+      width: 151px!important
+    .section.article-list-filter .filter-select .select-wrap .accomodation-select-2
+      width: 135px!important
+  @media screen and (max-height: 320px)
+    .info-window
+      width: 130px
+      label
+        font-size: 10px
+      a.btn-view
+        font-size: 12px
+        padding: 2px 0
+    .filter-mobile
+      .select-wrap
+        display: none
+
+
+

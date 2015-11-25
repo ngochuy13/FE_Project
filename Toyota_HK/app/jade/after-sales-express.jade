@@ -1,0 +1,57 @@
+extends layouts/layout
+
+block vars
+	-title = 'After sale general information'
+	-bodyClass = 'after-sales' 
+
+block container
+	.sub-page-banner.feature-img
+		p 資訊中心
+		picture
+			source(srcset='images/after-sales-express/feature-express-mobile.jpg', media='(max-width: 767px)')
+			source(srcset='images/after-sales-express/feature-express.jpg', media='(max-width: 1280px)')
+			img.master-banner-img.intel-scaling(src='images/after-sales-express/feature-express.jpg', alt='', data-width='1920', data-height='411')
+	.salesexpress-content
+		.inner
+			h2.page-title.custom-page-title Toyota EXPRESS Maintenance Service
+			h3.express-title Save your precious time with Toyota's EXPRESS Maintenance Service
+			p.caption-express Toyota’s EXPRESS Maintenance Service features two efficient and skilled technicians working together to handle your vehicle maintenance, enabling an entire standard check-up process to be completed in just <span>60 minutes</span>. Arrive at the service centre and pick up your car on time to receive a complimentary coupon for <span>$100 worth of fuel</span>!
+			.express-box
+				.inner
+					.col.item
+						.img-item
+							img(src='images/after-sales-express/icon-1.png', title='', alt='')
+						p Enjoy priority service when arriving at the Service Centre at the booking time
+					.col.item-direct
+						img(src='images/after-sales-express/icon-direct.png', title='', alt='')
+					.col.item
+						.img-item
+							img(src='images/after-sales-express/icon-2.png', title='', alt='')
+						p Two professional technicians, using state-of-the-art technology and computerised equipment, to complete the full-service check-up process
+					.col.item-direct
+						img(src='images/after-sales-express/icon-direct.png', title='', alt='')
+					.col.item
+						.img-item
+							img(src='images/after-sales-express/icon-3.png', title='', alt='')
+						p Takes only 60 minutes to complete an entire standard check-up process
+					.col.item-direct
+						img(src='images/after-sales-express/icon-direct.png', title='', alt='')
+					.col.item
+						.img-item
+							img(src='images/after-sales-express/icon-4.png', title='', alt='')
+						p Complimentary Coupon for $100 Worth of Fuel
+			h3.express-title Arrive & Pick up On Time to Enjoy Priority Arrangements
+			.expess-like
+				ul
+					li Priority Service
+					li Complete in just 60 minutes
+					li Two professional technicians to complete an entire standard service check-up process
+					li Efficient, convenient and reliable 
+					li Complimentary coupon for $100 worth of fuel
+			.express-note
+				ul 
+					li * <span>Book</span> your EXPRESS Maintenance Service now
+					li + Receive a complimentary coupon for $100 worth of fuel by arriving at our centre and picking up your serviced vehicle ON TIME.
+					li * Toyota’s EXPRESS Maintenance Service is only applicable to standard maintenance service check-ups and vehicles with mileage under 100,000km.
+					li * Repair jobs other than a standard service check-up will take longer time.
+			a.book-express-link(href='#', title='Book now') Book now

@@ -1,0 +1,33 @@
+.booking-results
+  .row.login-option
+    .col-xs-12.col-sm-3
+      .title Login for Special rates
+    .col-xs-12.col-sm-6
+      .type Membership
+      .radio-group.acc-type
+        label
+          input(type="radio" name="profile-type" checked)
+          span.checkbox-face
+          | Kempinski Profile
+      .radio-group.acc-type
+        label
+          input(type="radio" name="profile-type")
+          span.checkbox-face
+          | Discovery Member
+      .radio-group.acc-type
+        label
+          input(type="radio" name="profile-type")
+          span.checkbox-face
+          | Not Login
+    .col-xs-12.col-sm-3
+      .form-group.currency-type
+        .select-wrap
+          select.bootstrap-select
+            option VIEW RATES IN USD
+            option VIEW RATES IN USD
+            option VIEW RATES IN USD
+  +booking-result-item('Khaleej Deluxe Suite','choose-room/room-1.jpg', 'true' , 'room_1')
+  +booking-result-item('Royal Khaleej Suite','choose-room/room-2.jpg', 'false' , 'room_2')
+  +booking-result-item('Palace Pearl Suite','choose-room/room-3.jpg', 'false' , 'room_3')
+  +booking-result-item('2 Bedroom Palace Suite','choose-room/room-4.jpg', 'false' , 'room_4')
+  +booking-result-item('3 Bedroom Palace Suite','choose-room/room-5.jpg', 'false' , 'room_5')

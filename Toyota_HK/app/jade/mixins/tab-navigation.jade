@@ -1,0 +1,54 @@
+//- A tab container that can expand full width, with equal space distributed to each item.
+mixin tab-study(tabActive)
+	- if(typeof tabActive === 'undefined') tabActive = ['','','',''];
+	- var tab1 = tabActive[0];
+	- var tab2 = tabActive[1];
+	- var tab3 = tabActive[2];
+	.section.section-tab-navigation.tab-study
+		.container
+			.tab-wapper
+				.tab-item(class="#{tab1}")
+					a(href="#{trainingCap}" , title="Capabilities")
+						.block-icon
+							+img('Capabilities' ,'study/icon-navigitaion-1.png')
+						| Capabilities
+				.tab-item(class="#{tab2}")
+					a(href="#{facaulty}" , title="Faculty")
+						.block-icon
+							+img('Faculty' ,'study/icon-navigitaion-2.png')
+						| Faculty
+				.tab-item(class="#{tab3}")
+					a(href="#{ourCourses}" , title="Our Courses")
+						.block-icon
+							+img('Our Courses' ,'study/icon-navigitaion-3.png')
+						| Our Courses
+
+mixin tab-services(tabActive)
+	- if(typeof tabActive === 'undefined') tabActive = ['','','',''];
+	- var tab1 = tabActive[0];
+	- var tab2 = tabActive[1];
+	- var tab3 = tabActive[2];
+	- var tab4 = tabActive[3];
+	.section.section-tab-navigation.tab-services
+		.container
+			.tab-wapper
+				.tab-item(class="#{tab1}")
+					a(href="#{services}" , title="Services")
+						.block-icon
+							+img('Services' ,'services/icon-navigitaion-1.png')
+						| Services
+				.tab-item(class="#{tab2}")
+					a(href="#{processes}" , title="Processes")
+						.block-icon
+							+img('Processes' ,'services/icon-navigitaion-2.png')
+						| Processes
+				.tab-item(class="#{tab3}")
+					a(href="#{industries}" , title="Industries")
+						.block-icon
+							+img('Industries' ,'services/icon-navigitaion-3.png')
+						| Industries
+				.tab-item(class="#{tab4}")
+					a(href="#{functions}" , title="Functions")
+						.block-icon
+							+img('Functions' ,'services/icon-navigitaion-4.png')
+						| Functions

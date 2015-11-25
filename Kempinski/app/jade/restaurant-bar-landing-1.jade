@@ -1,0 +1,50 @@
+extends layouts/template-1
+
+block vars
+  -title = 'RESTAURANTS & BARS'
+  -bodyClass = ''
+  -bannerIMG = 'restaurant/banner-1.jpg'
+  -page = 'restaurant-bar'
+block pagescript
+
+block breadcrumb  
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#"
+      },{
+        "text": "MIDDLE EAST",
+        "href":"#"
+      },{
+        "text": "EMIRATES PALACE",
+        "href":"#"
+      },{
+        "text": "RESTAURANTS & BARS",
+        "href":"#"
+      }])
+
+block container  
+  .inner
+    main#main
+      section.section-block.gray
+        +page-title("Restaurants IN Abu Dhabi", "award-winning cuisine", "global platter of authentic cuisine").gray
+        .section-room-suites-item__content.wow.fadeInUp(data-wow-duration="0.5s")
+          +restaurant-item('restaurant/img-3.jpg', 'Mezzaluna Italian Restaurant', '<p>Take a culinary tour of Italy with Mezzaluna restaurant, known for the best Italian food in Abu Dhabi. Regional dishes from across the beautiful country of Italy form a menu that is truly unique, and lovingly prepared by the genius hands and heart of our passionate Chef.</p><br><p><strong>Email Contact:</strong> <a href="mailto: restaurants@emiratespalace.ae">restaurants@emiratespalace.ae</a><br/><strong>Telephone:</strong> <a href="tel://971-2-690-7999">+971 2 690 7999</a><br/><strong>Opening Hours:</strong> 10:00am - 1:00am<br/><strong>All-Day-Dining:</strong> Everyday 10:00am - 1:00am<br/><strong>Dress Code:</strong> Smart Casual<br/><strong>Capacity:</strong> 40 (Indoor)</p>', [])
+
+      section.experience-gallery-section.emirates-palace-restaurant-section 
+        +section-title("EMIRATES PALACE RESTAURANTS", "Explore Emirates Palace", "GENEROUS HOSPITALITY").gray
+        include includes/emirates-palace-restaurant
+
+      +section-title("BREATHTAKING SCENIC VIEWS", "Dining at Emirates Palace", "traditionnal gazebos or terrace").gray
+      .section-article-blog.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+        .container
+          .row
+            +article-blog-item('restaurant/img-4.jpg', 'Al fresco dining', 'If breathtaking scenic views are high on your wish list, you cannot go wrong with dining at Emirates Palace where you can enjoy a relaxed outdoor dining experience in one of our restaurants.', '</p>BBQ Al Qasr restaurant offers an Al fresco dining experience with gazebos located on the sand. You can also relax with a shisha and or a drink in the lounge area.</p>').col-sm-4.col-xs-12.match-height
+            +article-blog-item('restaurant/img-5.jpg', 'Signature Dish', '<p>Emirates Palace Camel Burger</p><br><p>Taste the rich flavours of the region with the Emirates Palace signature dish, the 24 karat gold Camel Burger</p>', '<p>A unique Arabic twist on a classic American favourite, the sumptuous camel mince patty is infused with local spices and offset by a touch of truffle mayonnaise on a gold-dusted bun.</p>').col-sm-4.col-xs-12.match-height
+            +article-blog-item('restaurant/img-6.jpg', 'Lounges & Bars at Emirates Palace', '', '<p>Whether you are looking for a thrilling nightlife experience, a relaxed social setting or the perfect place to meet, Emirates Palace provides every option. Regular musician performances, Cuban lifestyle experiences, premium cognacs and rare cigars, cocktails or light dining, the Palace caters for all tastes.</p>').col-sm-4.col-xs-12.match-height
+              +cta-btngroup-1('further information', '#')
+            +article-blog-item('restaurant/img-4.jpg', 'Al fresco dining', 'If breathtaking scenic views are high on your wish list, you cannot go wrong with dining at Emirates Palace where you can enjoy a relaxed outdoor dining experience in one of our restaurants.', '</p>BBQ Al Qasr restaurant offers an Al fresco dining experience with gazebos located on the sand. You can also relax with a shisha and or a drink in the lounge area.</p>').col-sm-4.col-xs-12.match-height
+            +article-blog-item('restaurant/img-5.jpg', 'Signature Dish', '<p>Emirates Palace Camel Burger</p><br><p>Taste the rich flavours of the region with the Emirates Palace signature dish, the 24 karat gold Camel Burger</p>', '<p>A unique Arabic twist on a classic American favourite, the sumptuous camel mince patty is infused with local spices and offset by a touch of truffle mayonnaise on a gold-dusted bun.</p>').col-sm-4.col-xs-12.match-height
+            +article-blog-item('restaurant/img-6.jpg', 'Lounges & Bars at Emirates Palace', '', '<p>Whether you are looking for a thrilling nightlife experience, a relaxed social setting or the perfect place to meet, Emirates Palace provides every option. Regular musician performances, Cuban lifestyle experiences, premium cognacs and rare cigars, cocktails or light dining, the Palace caters for all tastes.</p>').col-sm-4.col-xs-12.match-height
+              +cta-btngroup-1('further information', '#')

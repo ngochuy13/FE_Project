@@ -1,0 +1,186 @@
+header#header
+  .navigation-top-container
+    .top-logo
+      a(href='#', title='toyota')
+        img(src='images/logos/top-logo.png', alt='Logo')
+    .links-lang
+      .external-links
+        //- .links-group
+        //-   a(href='http://crown-motors.com/tch/main/index.aspx', target='_blank', title='Crown Motors') Crown Motors
+        //- .links-group
+        //-   a(href='http://www.toyota-global.com/', target='_blank', title='Toyota Global') Toyota Global
+        .header-buttons
+          
+          a(href="#", target='_blank', title='Book a test drive') 
+            img(src="images/icons/helpful-link-list-icon-3-small.png", alt="icon" class="icon")
+            span Book A Test Drive
+        .header-buttons
+          
+          a(href="#", target='_blank', title='Trade in Service') 
+            img(src="images/icons/helpful-link-list-icon-15-small.png", alt="icon" class="icon")
+            span Trade-in Services
+        .header-buttons
+          
+          a(href="#", target='_blank', title='Subscribe letter') 
+            img(src="images/icons/helpful-link-list-icon-10-small.png", alt="icon" class="icon")
+            span Subscribe E-Newsletter  
+      .form-search
+        form(action='/')
+          input.search(type='text', name='search', placeholder='Search')
+          input.submit(type='submit', value='')
+      .langs
+        .links-group
+          a(href='#', target='_blank', title='Toyota Global') 繁體中文
+  .navigation-container.overflow
+    .wsmenucontainer.clearfix
+      .wsmenuexpandermain.slideLeft
+        a#navToggle.animated-arrow.slideLeft(href='#')
+          span
+          span
+          span
+      .logo
+        +link-img('images/logos/top-logo.png', 'toyota', 'home.html')
+      .wsmenucontent.overlapblackbg
+      .header
+        nav.wsmenu.slideLeft.clearfix
+          ul.wsmenu-list
+            li.only-mobile
+              .form-search
+                form(action='/')
+                  input.search(type='text', name='search', placeholder='Search')
+                  input.submit(type='submit', value='')
+              .langs
+                .links-group
+                  a(href='#', target='_blank', title='Toyota Global') 繁體中文
+            li
+              a.active(href='home.html', title='Home')
+                span Home
+            li
+              a#new-car-menu-item(href='#', title='New Toyota')
+                span New Toyota
+              .megamenu.clearfix.new-car
+                +navigation-car-item('car-detail.html','Ractis', 'menu/car-1.png', '$169,890 up')
+                +navigation-car-item('car-detail.html','Prius C', 'menu/car-2.png', '$158,890 up')
+                +navigation-car-item('car-detail-02.html','Camry', 'menu/car-3.png', '$228,900 up')
+                +navigation-car-item('car-detail.html','Noah', 'menu/car-4.png', '$278,990 up')
+                +navigation-car-item('car-detail.html','Alphard', 'menu/car-5.png', '$216,800 up')
+                +navigation-car-item('car-detail.html','Vellfire', 'menu/car-6.png', '$288,900 up')
+                +navigation-car-item('car-detail.html','Spade', 'menu/car-7.png', '$198,090 up')
+                +navigation-car-item('car-detail.html','Sienta', 'menu/car-8.png', '$169,890 up')
+                +navigation-car-item('car-detail.html','Mark X', 'menu/car-9.png', '$189,900 up')
+                +navigation-car-item('car-detail-05.html','Corolla', 'menu/car-10.png', '$188,590 up')
+                +navigation-car-item('car-detail.html','Rav4', 'menu/car-11.png', '$315,800 up')
+                +navigation-car-item('car-detail.html','Prius', 'menu/car-12.png', '$208,000 up')
+                +navigation-car-item('car-detail.html','Prius V', 'menu/car-13.png', '$169,580 up')
+                +navigation-car-item('car-detail.html','Wish', 'menu/car-14.png', '$189,000 up')
+                +navigation-car-item('car-detail.html','Previa', 'menu/car-15.png', '$259,900 up')
+                +navigation-car-item('car-detail.html','Prado', 'menu/car-16.png', '$300,800 up')
+                +navigation-car-item('car-detail.html','Crown Royal', 'menu/car-17.png', '$228,800 up')
+                .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                  hr
+                  ul.mainnav-sub__help-links.wsmenu-submenu-sub
+                    li
+                      +link('Find your matches', "#")
+                    li
+                      +link('Test-drive form', "#")
+                    li
+                      +link('Price list', "#")
+                    li
+                      +link('Promotions list', "#")
+                    li
+                      +link('Trade-in services', "#")
+            li
+              a(href='#', title='Commercial Vehicle')
+                span Commercial Vehicle
+            li
+              a(href='#', title='Use Toyota')
+                span Use Toyota
+            li
+              a(href='after-sales.html', title='Aftersales')
+                span Aftersales
+              ul.megamenu.clearfix.submenu-link
+                li.col-xs-12.col-sm-12.col-md-4.col-lg-3.link-default(style='height: 58px;').vcenter
+                  a(target='_self', href='http://toyotadev.projectuat.com/en/after-sales/service-outlet/', title='Service Outlet') Service Outlet
+                li.col-xs-12.col-sm-12.col-md-4.col-lg-3.link-default(style='height: 58px;').vcenter
+                  a(target='_blank', href='http://toyotadev.projectuat.com/en/after-sales/service-booking/', title='Service Booking') Service Booking
+                li.col-xs-12.col-sm-12.col-md-4.col-lg-3.link-default(style='height: 58px;').vcenter
+                  a(target='_self', href='http://toyotadev.projectuat.com/en/after-sales/recall-inquiry/', title='Vehicle Safety Recall Inquiry') Vehicle Safety Recall Inquiry
+                li.col-xs-12.col-sm-12.col-md-4.col-lg-3.link-default(style='height: 58px;').vcenter
+                  a(target='_self', href='http://toyotadev.projectuat.com/en/after-sales/maintenance-service/', title='Maintenance Service') Maintenance Service
+                li.col-xs-12.col-sm-12.col-md-4.col-lg-3.link-default(style='height: 58px;').vcenter
+                  a(target='_self', href='http://toyotadev.projectuat.com/en/after-sales/parts-accessories/', title='Parts Accessories') Parts Accessories
+                li.col-xs-12.col-sm-12.col-md-4.col-lg-3.link-default(style='height: 58px;').vcenter
+                  a(target='_self', href='http://toyotadev.projectuat.com/en/after-sales/service-package-promotions/', title='Service Package & Promotions') Service Package & Promotions
+                li.col-xs-12.col-sm-12.col-md-4.col-lg-3.link-default(style='height: 58px;').vcenter
+                  a(target='_self', href='http://toyotadev.projectuat.com/en/after-sales/maintenance-driving-tips/', title='Maintenance and Driving Tips') Maintenance and Driving Tips
+                li.col-xs-12.col-sm-12.col-md-4.col-lg-3.link-default(style='height: 58px;').vcenter
+                  a(target='_self', href='http://toyotadev.projectuat.com/en/after-sales/warranty/', title='Warranty') Warranty
+                li.col-xs-12.col-sm-12.col-md-4.col-lg-3.link-default(style='height: 58px;').vcenter
+                  a(target='_self', href='http://toyotadev.projectuat.com/en/after-sales/express/', title='Toyota ') Toyota "Express" Maintenance Service
+                li.col-xs-12.col-sm-12.col-md-4.col-lg-3.link-default(style='height: 58px;').vcenter
+                  a(target='_self', href='http://toyotadev.projectuat.com/en/after-sales/free-pre-check-for-license-renewal/', title='Free Pre-check for License  Renewal') Free Pre-check for License  Renewal
+                li.col-xs-12.col-sm-12.col-md-4.col-lg-3.link-default(style='height: 58px;').vcenter
+                  a(target='_self', href='http://toyotadev.projectuat.com/en/after-sales/toyota-1st-time-check-up/', title='Toyota 1st time Check Up') Toyota 1st time Check Up
+                li.col-xs-12.col-sm-12.col-md-4.col-lg-3.link-default(style='height: 58px;').vcenter
+                  a(target='_self', href='http://toyotadev.projectuat.com/en/after-sales/vehicle-inspection-cert/', title='Vehicle Inspection Cert') Vehicle Inspection Cert
+
+            li
+              span.wsmenu-click
+                i.wsmenu-arrow.fa.fa-angle-down
+              span.wsmenu-click
+                i.wsmenu-arrow.fa.fa-angle-down
+              a(target='_self', href='#', title='Finance & Insurance')
+                span Finance & Insurance
+              ul.megamenu.clearfix.submenu-link
+                li.col-xs-12.col-sm-12.col-md-4.col-lg-3.link-default.vcenter(style='height: 58px;')
+                  a(target='_self', href='http://toyotadev.projectuat.com/en/finance-insurance/finance/', title='Finance Intro') Finance Intro
+                li.col-xs-12.col-sm-12.col-md-4.col-lg-3.link-default.vcenter.has-subsub(style='height: 58px;')
+                  span.wsmenu-click
+                    i.wsmenu-arrow.fa.fa-angle-down
+                  a(target='_self', href='http://toyotadev.projectuat.com/en/finance-insurance/insurance/', title='Insurance Programs') Insurance Programs
+                  ul.megamenu-sub.wsmenu-submenu
+                    li
+                      a(target='_self', href='http://toyotadev.projectuat.com/en/finance-insurance/insurance/contact-us-enquiry/', title='Insurance Program Enquiry') Insurance Program Enquiry
+
+            li
+              a(href='#', title='Toyota Corporate')
+                span Toyota Corporate
+            li
+              a(href='about.html', title='About Toyota')
+                span About Toyota
+              ul.megamenu.clearfix.submenu-link
+                li.col-xs-12.col-sm-12.col-md-4.col-lg-3.link-default
+                  a(title='Innovative technologies' ,href='#') Innovative technologies
+                  ul.megamenu-sub.wsmenu-submenu
+                    li
+                      +link('submenu-lv2' , '#')
+                    li
+                      +link('submenu-lv2' , '#')
+
+                li.col-xs-12.col-sm-12.col-md-4.col-lg-3.link-default
+                  +link('Innovation and Technology' , '#')
+                li.col-xs-12.col-sm-12.col-md-4.col-lg-3.link-default
+                  +link('Vision' , '#')
+                li.col-xs-12.col-sm-12.col-md-4.col-lg-3.link-default
+                  +link('Development History' , '#')
+                li.col-xs-12.col-sm-12.col-md-4.col-lg-3.link-default
+                  +link('Awards' , '#')
+            li
+              a(href='#', title='E-Magazine')
+                span E-Magazine
+            li.only-mobile
+              .external-links
+                .links-group
+                  a(href='http://crown-motors.com/tch/main/index.aspx', target='_blank', title='Crown Motors') Crown Motors
+                .links-group
+                  a(href='http://www.toyota-global.com/', target='_blank', title='Toyota Global') Toyota Global
+                .links-group
+                  a(href='#', target='_blank', title='Trac') Trac
+                .links-group
+                  a(href='#', target='_blank', title='Media Center') Media Center
+              .external-links    
+                .links-default
+                  a(href='#', target='_blank', title='Privacy policy') Privacy policy
+                .links-default
+                  a(href='#', target='_blank', title='Legal claims') Legal claims
+

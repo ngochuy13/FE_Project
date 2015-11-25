@@ -1,0 +1,119 @@
+include ../mixins/all
+block vars
+  -title = 'Site'
+  -bodyClass = ''
+- var homepage                = "home.html";
+- var physical                = "physical_science_engineering.html";
+- var courseDetail            = "course-details.html";
+doctype html
+//[if IE 8]><html lang="en" class="no-js ie ie8"><![endif]
+//[if IE 9]><html lang="en" class="no-js ie ie9"><![endif]
+//[if gt IE 9]><!
+html(class="no-js", lang="en")
+  //<![endif]
+  head
+    meta(charset="utf-8")
+    //[if IE]><meta http-equiv="X-UA-Compatible" content="IE=8"><![endif]
+    title=title
+    meta(name="description", content="")
+    meta(name="keywords", content="")
+    meta(name="robots", content="index, follow")
+    meta(name="author", content="")
+
+    meta(name='viewport', content='initial-scale=1.0,user-scalable=no,maximum-scale=1')
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='HandheldFriendly', content='True')
+    meta(name='apple-mobile-web-app-status-bar-style', content='black')
+
+    link(href='https://fonts.googleapis.com/css?family=Oswald:400,300,700&subset=latin,latin-ext', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Raleway:400,600', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800', rel='stylesheet', type='text/css')
+
+    //- link(rel="shortcut icon", href="images/favicon.ico", type="image/x-icon")
+    link(rel="stylesheet", href="styles/bootstrap.css")
+    link(rel="stylesheet", href="styles/main.css")
+    //- link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", rel="stylesheet")
+
+    <!--[if lt IE 8]>
+    <link rel='stylesheet' href='styles/IE8.css'>
+    <![endif]-->
+
+    //- script include within the block build:js -- endbuild will be combined into one file and the url as stated after build:js
+    // build:js scripts/modernizr.js
+    script(src='/bower_components/modernizr/modernizr.js')
+    // endbuild
+  body(class=bodyClass)
+    include ../includes/header-right
+    include ../includes/header-top
+    #container
+      .page-wrapper
+        block container
+        .block-bottom
+          .social-block.hidden-lg.hidden-md
+            a(href="#", target="_blank").facebook-square
+              span.fa.fa-facebook-square
+            a(href="#", target="_blank").instagram
+              span.fa.fa-instagram
+            a(href="#", target="_blank").twitter-square
+              span.fa.fa-twitter-square
+            a(href="#", target="_blank").youtube-square
+              span.fa.fa-youtube-square
+          .copy-right.hidden-lg.hidden-md Copyright 2015. Singapore Institute of Technology.    
+          
+
+    //- cdn links
+    //- jQuery https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js
+
+    // build:js scripts/cdn.js
+    script(src='/bower_components/jquery/dist/jquery.js')
+    // endbuild
+
+    // build:js scripts/dep.js
+    //- script(src='/bower_components/webslidemenu/js/webslidemenu.js')
+    //- script(src='/bower_components/pushy/js/pushy.js')
+    script(src='/bower_components/pubsub/odfc-pubsub.js')
+    script(src='/bower_components/isotope/dist/isotope.pkgd.js')
+    script(src='/scripts/imagefill.js')
+    
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
+    script(src='/bower_components/jquery-colorbox/jquery.colorbox.js')
+    //- script(src='/bower_components/lightbox2/dist/js/lightbox.js')
+    script(src='/bower_components/prettyphoto/js/jquery.prettyPhoto.js')
+    script(src='/bower_components/respond/src/respond.js')
+    //- script(src='/bower_components/jquery-appear/src/jquery.appear.js')
+    //- script(src='/bower_components/jquery-lazyload-any/src/jquery.lazyload-any.js')
+    //- script(src='/bower_components/radioUI/odfc-radio.js')
+    //- script(src='/bower_components/nicescroll/jquery.nicescroll.min.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js')
+    script(src='/bower_components/bootstrap-select/dist/js/bootstrap-select.js')
+    //- script(src='/bower_components/selectUI/odfc-select.js')
+    //- script(src='/bower_components/jquery-accordion/js/jquery.accordion.js')
+    //- script(src='/bower_components/slick.js/slick/slick.min.js')
+    //- script(src='/bower_components/jquery-placeholder/jquery.placeholder.min.js')
+    script(src='/bower_components/jquery-sticky/jquery.sticky.js')
+    //- script(src='/bower_components/jquery-cookie/jquery.cookie.js')
+    script(src='/bower_components/ttaccord/js/easyResponsiveTabs.js')
+    //- script(src='/bower_components/tooltipster/js/jquery.tooltipster.min.js')
+    script(src='/bower_components/owl-carousel2/dist/owl.carousel.js')
+    //- script(src='/bower_components/superslides/dist/jquery.superslides.js')
+    script(src='/bower_components/matchHeight/jquery.matchHeight.js')
+    //- script(src='/bower_components/gray/js/jquery.gray.min.js')
+    // endbuild
+  
+    // build:js scripts/components.js
+    script(src='/scripts/nav.js')
+    // endbuild
+
+    block pagescript
+
+    // build:js scripts/main.js
+    //- script(src='/scripts/nav.js')
+    script(src='/scripts/main.js')
+    // endbuild
+    script.
+      //- Your master script stays here
+      //- This block will be override on each page.
+    //[if lt IE 8]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]
+    noscript JavaScript is off. Please enable to view full site.

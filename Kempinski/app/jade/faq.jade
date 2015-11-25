@@ -1,0 +1,23 @@
+extends layouts/template-1
+
+block vars
+  -title = 'FAQ'
+  -bodyClass = ''
+  -bannerIMG = 'faq/banner.jpg'
+block container    
+  .inner
+    main#main
+      +page-title("FAQ", "Frequently Asked Questions", "THE ANSWERS TO YOUR QUESTIONS").gray
+
+      .container.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+        .faq-section 
+          .editor-content  
+            h2 GET YOUR QUESTION ANSWERED 
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam tellus ut feugiat sollicitudin. Aliquam porta tortor sed ipsum porttitor gravida. Morbi massa mi, iaculis non nibh sed, pellentesque tristique ex. Suspendisse pellentesque malesuada leo, eget auctor erat scelerisque ut. Nunc in imperdiet erat. Fusce vestibulum cursus tincidunt. Proin ut metus imperdiet, fermentum le.
+        .faq-list
+          #accordion.panel-group(role='tablist', aria-multiselectable='true')
+           
+            +panel-collapse-item("Q: Lorem ipsum dolor sit amet, consectetur adipiscing elit?", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt ultrices sapien, eu porta neque elementum quis....", "tab-item-content-1")
+            +panel-collapse-item("Q: Lorem ipsum dolor sit amet?", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "tab-item-content-2")
+            +panel-collapse-item("Q: Lorem ipsum dolor sit amet Pellentesque tincidunt ultrices sapien?", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt ultrices sapien, eu porta neque elementum quis. Vestibulum eros tortor, efficitur ac justo in, sollicitudin faucibus felis.", "tab-item-content-3")
+            +panel-collapse-item("Q: Lorem ipsum dolor sit amet Pellentesque tincidunt ultrices sapien, eu porta neque elementum quis?", "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt ultrices sapien, eu porta neque elementum quis. Vestibulum eros tortor, efficitur ac justo in, sollicitudin faucibus felis..", "tab-item-content-4")

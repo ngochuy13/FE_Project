@@ -1,0 +1,136 @@
+.product-list-block {
+    .product-list-banner {
+        .title {
+            margin-top: 33px;
+            .sub-title {
+                position: relative;
+                p {
+                    @include mobile {
+                        padding-right: 33px;
+                    }
+                }
+                .dotdotdot {
+                    .expand-subtitle {
+                        display: none !important;
+                    }
+                }
+                .expand-subtitle {
+                    color: #fff;
+                    position: absolute;
+                    top: 5px;
+                    right: 0;
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    padding-top: 5px;
+                    margin-top: -5px;
+                    display: inline-block !important;
+                    cursor: pointer;
+                }
+                .collapse-subtitle {
+                    color: #fff;
+                    position: absolute;
+                    bottom: 10px;
+                    right: 0;
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    padding-top: 5px;
+                    margin-top: -5px;
+                    display: none;
+                    cursor: pointer;
+                }
+                .dotdotdot {
+                    @include mobile {
+                        height: 30px;
+                    }
+                }
+                .original {
+                    .expand-subtitle {
+                        display: none !important;
+                    }
+                }
+                .is-truncated {
+                    .expand-subtitle {
+                        display: inline-block !important;
+                    }
+                }
+            }
+        }
+    }
+    .product-list-content {
+        padding: 50px 0;
+        @include mobile {
+            padding: 25px 0;
+        }
+        .product-list {
+            overflow: hidden;
+            padding-top: 55px;
+            &:first-child {
+                padding-top: 0;
+            }
+            @include mobile {
+                padding-top: 35px;
+                &:first-child {
+                    padding-top: 0;
+                }
+            }
+            ;
+        }
+        .header {
+            overflow: hidden;
+            h3 {
+                margin-top: 0;
+                color: #808080;
+            }
+            .divider {
+                margin-bottom: 50px;
+                @include mobile {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .title {
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
+        .list-items {
+            overflow: hidden;
+            .item-inner {
+                margin-bottom: 50px;
+                @include mobile {
+                    margin-bottom: 15px;
+                }
+                @include xmobile {
+                    width: 100%;
+                }
+                .item-inner-image {
+                    margin-bottom: 18px;
+                    @include mobile {
+                        margin-bottom: 15px;
+                        .heart-icon {
+                            top: 20%;
+                        }
+                        .view {
+                            bottom: 20%;
+                        }
+                        &.big-image {
+                            .heart-icon {
+                                top: 25%;
+                            }
+                            .view {
+                                bottom: 25%;
+                            }
+                        }
+                    }
+                }
+                .item-inner-header {
+                    p {
+                        margin-bottom: 2px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,139 @@
+extends layouts/layout
+
+block vars
+  -title = 'Home'
+  -bodyClass = 'home'
+block container
+  main#main
+
+    //- +sectionSlider('images/home/banner-1.jpg')
+    +sectionSliderVideo('images/Far East Organization Corporate TVC (EN).mp4', 'images/home/banner-1.jpg')
+
+    //- +sectionLates()
+    #lates-section.bg-white
+      .container
+        .block-filter
+          .what-the-lates WHAT'S THE LATEST
+          .filter-control
+            .btn-group(role="group", aria-label="...")
+              button.btn(type="button", data-type="residential") Residential Property
+              button.btn(type="button", data-type="commercial") Commercial Property
+              button.btn(type="button", data-type="apartments") Hotels & Service Apartments
+              button.btn(type="button", data-type="retail") Retail, Food & Beverages
+        .data-content-filter.hide
+          +sectionLates-item('images/home/img-1.jpg', '#').residential
+            .title Luxurious seafront living in West Coast
+            .description Final 4 units of 1+study with sea view! Prices from $1.2m.
+            .note * Terms and conditions apply.
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/home/img-2.jpg', '#').commercial
+            .title Set in the vicinity of Marina Bay
+            .description 62-storey residential development with access to retail and F&B amenities on the 1st level. 
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/home/img-3.jpg', '#').apartments
+            .title Condominium Townhouses
+            .description Look forward to the experience of living in a landed residence while enjoying full condominium facilities and security features.
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/home/img-1.jpg', '#').retail
+            .title Luxurious seafront living in West Coast
+            .description Final 4 units of 1+study with sea view! Prices from $1.2m.
+            .note * Terms and conditions apply.
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/news-1.jpg', '#').residential
+            .title Luxurious seafront living in West Coast
+            .description Final 4 units of 1+study with sea view! Prices from $1.2m.
+            .note * Terms and conditions apply.
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/news-2.jpg', '#').commercial
+            .title Set in the vicinity of Marina Bay
+            .description 62-storey residential development with access to retail and F&B amenities on the 1st level. 
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/news-3.jpg', '#').apartments
+            .title Condominium Townhouses
+            .description Look forward to the experience of living in a landed residence while enjoying full condominium facilities and security features.
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/news-1.jpg', '#').retail
+            .title Luxurious seafront living in West Coast
+            .description Final 4 units of 1+study with sea view! Prices from $1.2m.
+            .note * Terms and conditions apply.
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/home/img-1.jpg', '#').residential
+            .title Luxurious seafront living in West Coast
+            .description Final 4 units of 1+study with sea view! Prices from $1.2m.
+            .note * Terms and conditions apply.
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/home/img-2.jpg', '#').commercial
+            .title Set in the vicinity of Marina Bay
+            .description 62-storey residential development with access to retail and F&B amenities on the 1st level. 
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/home/img-3.jpg', '#').apartments
+            .title Condominium Townhouses
+            .description Look forward to the experience of living in a landed residence while enjoying full condominium facilities and security features.
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/home/img-1.jpg', '#').retail
+            .title Luxurious seafront living in West Coast
+            .description Final 4 units of 1+study with sea view! Prices from $1.2m.
+            .note * Terms and conditions apply.
+            a.read-more(href="#", title="") Read more
+        .slide-wrap.owl-carousel
+          +sectionLates-item('images/home/img-1.jpg', '#').residential
+            .title Luxurious seafront living in West Coast
+            .description Final 4 units of 1+study with sea view! Prices from $1.2m.
+            .note * Terms and conditions apply.
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/home/img-2.jpg', '#').commercial
+            .title Set in the vicinity of Marina Bay
+            .description 62-storey residential development with access to retail and F&B amenities on the 1st level. 
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/home/img-3.jpg', '#').apartments
+            .title Condominium Townhouses
+            .description Look forward to the experience of living in a landed residence while enjoying full condominium facilities and security features.
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/home/img-1.jpg', '#').retail
+            .title Luxurious seafront living in West Coast
+            .description Final 4 units of 1+study with sea view! Prices from $1.2m.
+            .note * Terms and conditions apply.
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/news-1.jpg', '#').residential
+            .title Luxurious seafront living in West Coast
+            .description Final 4 units of 1+study with sea view! Prices from $1.2m.
+            .note * Terms and conditions apply.
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/news-2.jpg', '#').commercial
+            .title Set in the vicinity of Marina Bay
+            .description 62-storey residential development with access to retail and F&B amenities on the 1st level. 
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/news-3.jpg', '#').apartments
+            .title Condominium Townhouses
+            .description Look forward to the experience of living in a landed residence while enjoying full condominium facilities and security features.
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/news-1.jpg', '#').retail
+            .title Luxurious seafront living in West Coast
+            .description Final 4 units of 1+study with sea view! Prices from $1.2m.
+            .note * Terms and conditions apply.
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/home/img-1.jpg', '#').residential
+            .title Luxurious seafront living in West Coast
+            .description Final 4 units of 1+study with sea view! Prices from $1.2m.
+            .note * Terms and conditions apply.
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/home/img-2.jpg', '#').commercial
+            .title Set in the vicinity of Marina Bay
+            .description 62-storey residential development with access to retail and F&B amenities on the 1st level. 
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/home/img-3.jpg', '#').apartments
+            .title Condominium Townhouses
+            .description Look forward to the experience of living in a landed residence while enjoying full condominium facilities and security features.
+            a.read-more(href="#", title="") Read more
+          +sectionLates-item('images/home/img-1.jpg', '#').retail
+            .title Luxurious seafront living in West Coast
+            .description Final 4 units of 1+study with sea view! Prices from $1.2m.
+            .note * Terms and conditions apply.
+            a.read-more(href="#", title="") Read more
+
+
+    +sectionResidental('RESIDENTIAL PROPERTY' , 'images/home/img-4.jpg' , 'images/home/img-5.jpg' , 'images/home/img-6.jpg' , 'images/home/img-7.jpg' , 'FAR EAST PROPERTIES ' , residential).bg-gray
+
+    +sectionResidental('HOTELS & SERVICE APARTMENTS' , 'images/home/img-8.jpg' , 'images/home/img-9.jpg' , 'images/home/img-10.jpg' , 'images/home/img-11.jpg' , 'FAR EAST HOTELS & SERVICE APARTMENTS' , '#')
+
+    +sectionResidental('RETAIL, FOOD & BEVERAGE' , 'images/home/img-12.jpg' , 'images/home/img-13.jpg' , 'images/home/img-14.jpg' , 'images/home/img-15.jpg' , 'RETAIL, FOOD & BEVERAGES' , retail).bg-gray

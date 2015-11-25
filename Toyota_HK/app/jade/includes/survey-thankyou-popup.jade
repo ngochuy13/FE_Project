@@ -1,0 +1,30 @@
+//a.btn.btn-primary(data-toggle='modal', href='#survey-popup') Trigger modal
+#survey-thankyou-popup.survey-popup.survey-thankyou-popup.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal')
+          span(sr-only) Close
+      .modal-body
+        form.validate-form(action='/', method='POST')
+          +input('hidden', 'recordId', '')
+          .question.question-1
+            h3 Thank you for your valuable feedback.
+            p.request-title If you would like us to contact you to understand more about your responses, please leave your details and one of our representatives will be in touch.
+            p.question-title We will not share your details with any third parties.
+            .answer.reviewer-details
+              .form-group
+                label.control-label.text-left(for='reviewerName') Name
+                .input
+                  input#reviewerName.form-control(type='text')
+              .form-group
+                label.control-label.text-left(for='reviewerEmail') Email
+                .input
+                  input#reviewerEmail.form-control(type='text')
+              .form-group
+                label.control-label.text-left(for='reviewerTelephone') Telephone
+                .input
+                  input#reviewerTelephone.form-control(type='text')
+            .submission.text-center
+              span.error.hide Please fill in your answer
+              button.btn.common-btn.forward(data-question="2") Submit

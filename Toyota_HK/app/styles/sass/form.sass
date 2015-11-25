@@ -1,0 +1,683 @@
+.survey-popup
+  .modal-content
+    margin: 150px auto 0 auto
+    max-width: 560px
+    max-height: 545px
+    border: none
+    border-radius: 0
+    box-shadow: none
+    text-align: center
+  .modal-header
+    position: absolute
+    right: 0
+    z-index: 2
+  .modal-body
+    height: 100%
+    padding-bottom: 100px
+  h3
+    font-size: 24px
+    color: red
+    margin-top: 18px
+    margin-bottom: 35px
+  .question
+    font-size: 18px
+    color: rgb(102, 102, 102)
+    line-height: 1.4
+  p.question-title
+    margin-top: 32px
+  .submission
+    padding-bottom: 30px
+    position: absolute
+    bottom: 0
+    text-align: center
+    width: 100%
+    left: 0
+    .common-btn
+      width: 146px
+      height: 52px
+      border-color: transparent
+      border-radius: 0
+      &.acitve, &:hover, &:focus
+        border-color: red
+        color: red
+        background: transparent
+        outline: none
+    span.error
+      color: red
+      font-size: 12px
+      display: block
+      margin-bottom: 5px
+  .modal-header
+    border: none
+    padding: 0
+  .close
+    background: url(../images/close-icon.png) no-repeat left top
+    width: 24px
+    height: 24px
+    font-size: 0
+    opacity: 1
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+    border: none
+    margin: 20px
+  .answer
+    margin-top: 22px
+    textarea
+      margin-top: -10px
+      width: 480px
+      height: 100px
+      padding: 20px
+      max-width: 100%
+      font-size: 14px
+      text-align: center
+      resize: none
+      display: block
+      margin: 0 auto
+    small
+      font-size: 12px
+  .star-rating
+    margin-top: 21px
+    input
+      width: 1px
+      height: 1px
+      visibility: hidden
+      position: absolute
+  .stars
+    font-size: 0
+    a
+      width: 28px
+      height: 27px
+      display: inline-block
+      margin: 0 10px
+      background: url(../images/stars-rating-icon.png) no-repeat -50px 0
+      &.active
+        background-position: 0 0
+  .rating-description
+    font-size: 12px
+    color: red
+    margin: 20px
+  .radioUI
+    display: inline-block
+    margin: 0 17px
+    label
+      white-space: nowrap
+  .form-group
+    margin-bottom: 24px
+    .control-label
+      width: 95px
+      float: left
+      font-size: 16px
+      line-height: 2.2
+      font-weight: normal
+    .input
+      overflow: hidden
+      display: block
+      input
+        border-radius: 0
+  &.survey-thankyou-popup
+    .modal-body
+      padding: 15px 55px 100px 55px
+
+
+
+
+@media screen and (max-width: 480px)
+  .survey-popup
+    .modal-content
+      margin: 0 auto
+    h3
+      font-size: 18px
+      margin-bottom: 10px
+    p.question-title
+      margin-top: 15px
+      font-size: 14px
+    .answer
+      margin-top: 15px
+    .submission .common-btn
+      width: 100px
+      height: 40px
+// datepicker
+.datepicker-group  
+  .icon
+    position: absolute
+    top: 26px
+    right: 6px
+    background: url('../images/icons/icon-datepicker.png') no-repeat
+    width: 24px
+    height: 24px
+    cursor: pointer
+  .form-control:focus
+    border-color: #ec1a24
+.datepicker-dropdown    
+  width: 250px
+  border-radius: 0
+  border-color: #ec1a24
+  padding: 5px
+.datepicker   
+  table
+    width: 100%
+    tr th.datepicker-switch
+      color: #ec1a24
+      text-transform: uppercase
+    tr th.prev, tr th.next
+      &:before
+        content: ''
+        background: url('../images/icons/icon-datepicker-prev.png') no-repeat
+        width: 8px
+        height: 11px
+        position: absolute
+        top: 14px
+    tr th.next:before
+      background-image: url('../images/icons/icon-datepicker-next.png')
+
+    tr td.active.active,tr td.active.active:hover  
+      background: #ec1a24
+      color: #fff
+      border-radius: 0
+      
+    // tr td.old, tr td.new 
+    //   text-indent: -999999em
+
+.datepicker-dropdown.datepicker-orient-bottom:before,
+.datepicker-dropdown.datepicker-orient-bottom:after
+  content: none  
+// end style huypham
+
+.info-form
+  input:focus
+    outline: none
+  hr
+    background: #ececec
+    height: 1px
+  .form-content
+    max-width: 100%
+    width: 840px
+    margin: 0 auto
+  .form-title
+    margin-top: 42px
+    font-size: 40px
+    color: rgb(102, 102, 102)
+    line-height: 1.5
+    text-align: center
+    font-weight: bold
+  .introduction
+    padding-top: 33px
+    .title
+      margin-bottom: 25px
+    .description
+      font-size: 16px
+      color: rgb(102, 102, 102)
+      line-height: 1.5
+      margin-bottom: 47px
+    ul
+      font-size: 0
+      li
+        display: inline-block
+        vertical-align: top
+        width: 110px
+        text-align: center
+        position: relative
+        &:before
+          display: block
+          width: 16px
+          height: 23px
+          background: url(../images/trade-in-services/double-arrow-right.png) top left no-repeat
+          position: absolute
+          left: -8px
+          top: 10px
+          content: ""
+        &:first-child:before
+          display: none
+        p
+          color: red
+          font-size: 14px
+          line-height: 1.8
+          padding: 0 15px
+
+  .type-1, .type-2
+    max-width: 510px
+  .ErrorLabel
+    display: none
+  .col-1-2
+    float: left
+    width: 50%
+    max-width: 250px
+    &:first-child
+      margin-right: 10px
+  .common-btn, input[type='submit']
+    background: #ed1b24
+    border-radius: 0
+    display: inline-block
+    border: none
+    width: 146px
+    height: 52px
+    line-height: 52px
+    font-size: 16px
+    vertical-align: top
+    text-transform: uppercase
+    padding: 0
+    &:hover
+      background: #600
+      color: white
+    &.btn-gray
+      background: #666
+  .radio, .checkbox
+    margin: 0
+  .form-group
+    margin-bottom: 35px
+    position: relative
+  h2.title
+    font-size: 28px
+    color: rgb(235, 25, 36)
+    line-height: 1.2
+    margin-bottom: 0
+  .form-head 
+    margin-bottom: 31px
+    .description
+      font-size: 14px
+      color: rgb(102, 102, 102)
+      line-height: 1.7
+      text-align: left
+      font-weight: normal
+      span.req-desc
+        color: red
+  .field-title
+    font-weight: normal
+    font-size: 16px
+    color: rgb(102, 102, 102)
+    line-height: 1
+    span.req-desc
+      color: red
+  .form-group
+    input[type='text'], input[type='email'], input[type='date'], textarea
+      &.form-control:focus
+        border: solid 2px #868686
+    &.has-error
+      input[type='text'], input[type='email'], input[type='date'], textarea
+        &.form-control:focus
+          border: solid 2px red
+  .radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"]
+    margin-left: 0
+    margin-top: 0
+  input[type="text"], input[type="email"], textarea, .bootstrap-select
+    border-radius: 0
+    box-shadow: none
+  .form-group
+    select.bs-select-hidden
+      display: block!important
+      position: absolute
+      width: 1px
+      height: 1px
+      border-bottom: 1px solid transparent
+    .bootstrap-select
+      display: block
+      button
+        .filter-option
+          color: #555
+        .glyphicon
+          font-size: 0
+          background: url(../images/chevron-arrow-icons.png) no-repeat 0 -50px
+          width: 9px
+          top: 12px
+          height: 7px
+          position: absolute
+      .dropdown-menu.open
+        border-radius: 6px
+        top: 0
+        bottom: auto
+        margin: 0
+        border: 2px solid #f00
+        ul li a
+          color: #f00
+      .btn-info
+        border-radius: 0
+        border: 1px solid #ccc
+        background: transparent
+        color: #ccc
+        .caret
+          border-top-color: #ccc
+    textarea
+      display: block
+      width: 100%
+      height: 34px
+      padding: 6px 12px
+      font-size: 14px
+      line-height: 1.42857143
+      color: #555
+      background-color: #fff
+      background-image: none
+      border: 1px solid #ccc
+      height: 140px
+    &.charcount
+      .counter-message
+        font-size: 11px
+        position: absolute
+        width: 100%
+      .counter
+        text-align: right
+  .radio-group
+    .ui-radio
+      font-size: 0
+      width: 86px
+      display: inline-block
+
+  .type-3
+    max-width: 750px
+    .radio-group
+      margin: 0 -15px
+    .ui-radio
+      padding: 0 15px
+    .checkbox-group
+      margin: 0 -15px
+      font-size: 0
+    .ui-checkbox
+      width: 33.333%
+      display: inline-block
+      padding: 0 15px
+  .gender
+    .radioUI
+      display: inline-block
+      width: 86px
+  .car-model 
+    margin-bottom: 25px
+    .title
+      margin-bottom: 30px
+    .field-title
+      margin-bottom: 15px
+    // .EditingFormErrorLabel
+    //   padding: 0 15px
+    //   position: relative
+    //   margin-top: -15px
+    //   display: block
+    .checkbox-group
+      .checkbox-primary
+        text-align: center
+        img 
+          margin-bottom: 10px
+        label 
+          background-position-x: right
+          padding-left: 22px
+          padding-right: 22px
+          text-align: left
+    
+  .captcha
+    a
+      display: inline-block
+      margin-left: 10px
+      color: #666
+      text-decoration: underline
+      font-size: 12px
+    .EditingFormControlNestedControl
+      label
+        display: none
+  
+  .agreement-radio
+    // .EditingFormErrorLabel
+    //   display: block
+    .editing-form-control-nested-control
+      display: inline
+      span
+        display: inline
+    span.inline-text
+      font-size: 14px
+      line-height: 1.8
+      display: inline
+    .ui-radio
+      display: inline
+      width: auto
+      &:first-child
+        label
+          margin-left: 0
+      label
+        display: inline
+        margin-left: 10px
+        background-position: 0 0
+        font-size: 14px
+        line-height: 1.8
+        padding-bottom: 1px
+      &.checked
+        label
+          background-position: 0 -50px
+  .agreement-checkbox
+    // .EditingFormErrorLabel
+    //   display: block
+    .ui-checkbox
+      width: auto
+    .ExplanationText
+      font-size: 14px
+    .checkbox-primary
+      label
+        margin-bottom: 0
+  // .EditingFormErrorLabel
+  //   color: red
+  //   font-size: 10px
+  .submission
+    .common-btn
+      margin: 0 18px 0 0
+  
+  .form-group
+    &.has-error
+      label.float-label.error
+        display: none!important
+        width: 100%
+        position: absolute
+        top: 100%
+        margin: 10px 0 0 0
+        z-index: 2
+        &:before
+          content: ' '
+          display: block
+          width: 0
+          height: 0
+          border-left: 5px solid transparent
+          border-right: 5px solid transparent
+          border-bottom: 5px solid red
+          position: absolute
+          top: -5px
+          left: 32px
+      &.focused
+        label.error
+          display: block!important
+      textarea, input, select, .bootstrap-select .dropdown-toggle
+        border: 1px solid red
+  label.error, span.EditingFormErrorLabel, label.error-carmodel
+    margin: 5px 0 0 0
+    background-color: red
+    color: white
+    font-weight: normal
+    padding: 12px 10px
+    font-size: 14px
+    max-width: 100%
+    display: block
+  label.error-carmodel
+    margin: 0 15px
+
+
+.info-form, .test-drive  
+  .test-drive, .info-form
+    .car-model 
+      .checkbox-group 
+        .checkbox-primary 
+          label
+            background-position-x: calc(100% - 40px)
+            padding-left: 40px
+            padding-right: 40px
+            margin-bottom: 40px
+            text-align: left
+          img
+            margin-bottom: 10px
+            max-width: 190px
+
+@media screen and (max-width: 767px)  
+  .info-form, .test-drive  
+    .test-drive, .info-form
+      .car-model 
+        .checkbox-group 
+          .checkbox-primary
+            img 
+              display: none
+            label 
+              background-position-x: 0
+              padding-left: 20px
+              padding-right: 20px
+              margin-bottom: 20px
+
+
+$color_celeste_approx: #cccccc
+$color_gray_nurse_approx: #eaeaea
+$color_mine_shaft_approx: #333333
+
+.upload-data 
+  position: relative
+  padding: 3px 0
+  margin-bottom: 35px
+  max-width: 100%
+  input 
+    width: 115px
+    height: 37px
+    opacity: 0
+    filter: alpha(opacity = 0)    
+    position: absolute
+    top: 0
+    left: 0
+    cursor: pointer
+    z-index: 1
+
+  label 
+    top: 46px
+    &.error 
+      position: absolute
+      top: 50px
+
+  .choose-file 
+    position: absolute
+    top: 0
+    left: 0
+    width: 115px
+    height: 37px
+    line-height: 37px
+    cursor: pointer
+    background: #a3a3a3
+    font-size: 14px
+    color: #fff
+    text-align: center
+    z-index: 2
+  p.select-file 
+    margin-left: 135px
+    text-align: left
+    font-weight: normal
+/* CheckboxUI Core CSS */
+
+.checkboxUI
+  position: relative
+  input[type="checkbox"]
+    position: absolute
+    opacity: 0
+    filter: alpha(opacity = 0)
+    z-index: 2
+    margin: 0
+  label
+    position: relative
+    padding-left: 25px
+    cursor: pointer
+
+// Checkbox Primary Theme
+.checkbox-primary
+  input
+    cursor: pointer
+    width: 14px
+    height: 14px
+    left: 0
+    top: 0px
+    position: absolute
+  label
+    min-height: 14px
+    display: block
+    padding-left: 22px
+    font-size: 14px
+    color: rgb(102, 102, 102)
+    margin-bottom: 24px
+    background: url(../images/checkbox-sprite.png) 0px 3px no-repeat
+    background-size: 14px auto
+  &.checked
+    label
+      background-position: 0px -97px
+  .has-error &
+    label
+      background-position: 0px -199px
+
+
+.ie8 .checkbox-primary
+  label
+    background-image: url(../images/checkbox-sprite-ie8.png)
+
+.agreement-checkbox
+  > label.error
+    float: left
+    margin-bottom: 20px
+    width: 100%
+
+/* RadioUI Core CSS */
+.radioUI
+  position: relative
+  input[type="radio"]
+    position: absolute
+    opacity: 0
+    filter: alpha(opacity = 0)
+    z-index: 2
+    margin: 0
+  label
+    position: relative
+    padding-left: 25px
+    cursor: pointer
+
+.radio-primary
+  margin-top: 10px
+  input
+    cursor: pointer
+    width: 17px
+    height: 17px
+    left: 0
+    top: 0px
+    position: absolute
+  label
+    min-height: 17px
+    display: block
+    padding-left: 22px
+    font-size: 14px
+    color: rgb(102, 102, 102)
+    background: url(../images/radio-sprite.png) 0px 1px no-repeat
+    background-size: 17px auto
+    font-weight: normal
+    .ie8 &
+      background: url(../images/radio-sprite-ie8.png) 0px 1px no-repeat
+  &.checked
+    label
+      background-position: 0px -49px
+  .has-error &
+    label
+      background-position: 0px -99px
+
+.ie8 .radio-primary
+  label
+    background-image: url(../images/radio-sprite-ie8.png)
+
+@media screen and (max-width: 767px)
+  .info-form 
+    .introduction .description
+      text-align: left
+    .type-3 .ui-checkbox
+      width: 50%
+    .col-1-2
+      width: 100%
+      max-width: inherit
+    .common-btn, input[type='submit']
+      width: 100px
+      height: 34px
+      line-height: 34px
+      font-size: 14px
+
+
+.zh-HK
+  .info-form 
+    .form-title 
+      font-size: 38px

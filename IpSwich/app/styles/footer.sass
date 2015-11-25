@@ -1,0 +1,129 @@
+// footer
+#footer
+  background: $white
+  padding-top: 30px
+  position: relative
+  &:before
+    background: url($imgPath+'pointer-bg.png') no-repeat center top
+    background-size: 73px 60px
+    width: 73px
+    height: 30px
+    content: " "
+    display: block
+    position: absolute
+    top: -30px
+    left: 50%
+    margin-left: -36px
+  .subscribe-form
+    .description
+      color: $text-sec
+      font-size: $fz-5
+      font-family: $gg-ff
+      font-style: italic
+      line-height: 1.3
+      margin-top: 9px
+      margin-bottom: 20px
+    form
+      input.email
+        margin-bottom: 14px
+      .btn-primary.btn-block
+        height: 50px
+  .related-links
+    .title 
+      font-size: 18px
+      font-weight: 600
+      color: $text-default
+      border-bottom: 1px solid #cccccc
+      padding-bottom: 10px
+      a
+        text-decoration: none
+        color: $c_orange
+        .fa 
+          color: #9b9b9b
+        .fa.fa-angle-down
+          display: none
+        .fa.fa-angle-up
+          display: block
+        &.collapsed
+          .fa.fa-angle-up
+            display: none
+          .fa.fa-angle-down
+            display: block
+    ul
+      margin: 0
+      padding: 23px 0 0 0
+      li
+        list-style: none
+        line-height: 2
+        a
+          font-size: $fz-5
+          color: $text-default
+          text-decoration: none
+          &:hover
+            color: $c_orange
+  .copyright
+    margin-top: 43px
+    margin-bottom: 64px
+    padding-top: 14px
+    border-top: 1px solid #ccc
+    .fa.fa-map-marker
+      color: $c_orange
+    .fa.fa-map-marker, span, strong, a
+      display: inline-block
+      vertical-align: middle
+    a 
+      text-decoration: underline
+    span 
+      color: #9b9b9b
+    .social-channels
+      display: inline-block
+      vertical-align: middle
+      strong
+        color: #9b9b9b
+      a
+        font-size: 0
+        text-decoration: none
+        margin-left: 15px
+        &:before
+          font-size: 24px
+
+@media only screen and (max-width: 991px)
+  #footer
+    text-align: center
+    .subscribe-form
+      margin-bottom: 35px
+      .description
+        margin-bottom: 30px
+    .related-links 
+      text-align: left
+      ul
+        padding-top: 5px
+      .title
+        padding-bottom: 13px
+        padding-top: 16px
+        a
+          .fa
+            position: absolute
+            right: 22px
+            top: 18px
+            font-size: 22px
+    .copyright
+      margin-top: 24px
+      border-top: none
+
+@media only screen and (max-width: 480px)
+  #footer
+    .copyright
+      margin: 24px 30px 24px 30px
+      >a, .fa.fa-map-marker
+        margin-bottom: 13px
+      .social-channels
+        margin-top: 11px
+        a 
+          margin-left: 22px
+@media only screen and (max-width: 410px)
+  #footer
+    .copyright
+      margin: 24px 0px
+      .social-channels a
+        margin-left: 12px

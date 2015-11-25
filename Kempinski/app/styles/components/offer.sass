@@ -1,0 +1,110 @@
+.offer
+  list-style-type: none
+  &.offer-style-1
+    background: $white
+    margin: 20px 0 0 0
+    &:first-child
+      margin: 0
+    .media-left
+      padding-right: 20px
+    .media-heading
+      font-family: $kc-ff
+      font-size: 22px
+      font-style: italic
+      color: #010101
+    .btn-book-now
+      text-transform: uppercase
+      display: inline-block
+      width: 50%
+      vertical-align: middle
+      &.w100p
+        width: 100%
+    .book
+      font-size: 0
+    .rate
+      font-style: italic
+      font-family: $kc-ff
+      display: inline-block
+      width: 50%
+      vertical-align: middle
+      line-height: 1
+      text-align: center
+      color: #010101
+    .offer-type-description
+      display: block
+      font-size: 18px
+      padding: 9px
+    .price
+      font-size: 30px
+.offer.offer-style-1
+  float: left
+  width: 100%
+  .offer-wrap
+    float: left
+    width: 100%
+    .offer-image
+      float: left
+      width: 25%
+      overflow: hidden 
+      a
+        img.media-object
+    .offer-content    
+      min-height: 159px
+      position: relative
+      float: left
+      width: 75%
+      padding: 10px 33px
+      box-sizing: border-box
+      .middle-content
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        &.left
+          left: 0px
+          padding-left: 30px
+        &.right
+          right: 0px
+@media screen and (min-width: 640px) and (max-width: 1023px)
+  .offer.offer-style-1 .offer-wrap .offer-image
+    width: 50%
+  .offer.offer-style-1 .offer-wrap .offer-content
+    width: 50%
+  .offer.offer-style-1 .offer-wrap .offer-content .middle-content
+    position: relative
+    top: 0
+    transform: translateY(0px)
+  .offer.offer-style-1 .offer-wrap .offer-image img
+    width: 100%
+    height: 100%
+  .offer.offer-style-1 .offer-wrap .offer-content .middle-content.left
+    padding-left: 0
+  .offer.offer-style-1 .offer-wrap .offer-content
+    margin: 0
+    padding: 15px
+  .offer.offer-style-1 .offer-wrap .offer-content .middle-content.right
+    margin-top: 15px
+@media screen and (max-width: 639px)
+  .room-suite-section .offers
+    margin-bottom: 35px
+  .offer.offer-style-1 .offer-wrap .offer-image
+    width: 100%
+  .offer.offer-style-1 .offer-wrap .offer-image img
+    width: 100%
+    height: auto
+  .offer.offer-style-1 .offer-wrap
+    padding-bottom:   10px
+  .offer.offer-style-1 .media-heading
+    text-align: center
+  .offer.offer-style-1 .offer-wrap .offer-content
+    width: 100%
+    padding: 0
+    margin: 0
+  .offer.offer-style-1 .offer-wrap .offer-content .middle-content
+    position: relative 
+    transform: translateY(0)
+  .offer.offer-style-1 .offer-wrap .offer-content .middle-content.left
+    left: 0px
+    padding-left: 15px
+    margin-top: 20px  
+  .offer.offer-style-1 .offer-wrap .offer-content .middle-content.right
+    margin-top: 5px  

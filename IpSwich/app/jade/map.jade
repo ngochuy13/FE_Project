@@ -1,0 +1,89 @@
+extends layouts/layout
+
+block vars
+  -title = 'Ipswich Homepage'
+  -bodyClass = 'map'
+
+block pagescript
+  script(src='https://maps.googleapis.com/maps/api/js')
+  script(src='data/data.json')
+  // build:js scripts/map-dep.js
+  script(src='scripts/marker.clusterer.js')
+  // endbuild
+  // build:js scripts/map.js
+  script(src='scripts/map.js')
+  // endbuild
+block container
+  .inner
+    main#main
+      section
+        +img('map marker', 'icons/marker-pin.png')#map-marker.hide
+        +img('map marker cluster', 'icons/marker-cluster.png')#map-marker-cluster.hide
+        #map-container
+          .map-filter
+            .container.section.article-list-filter.border-top.with-3-select
+              .row
+                .col-xs-12.filter-select.hidden-sm.hidden-xs
+                  .select-wrap
+                    span.text Search
+                    select.bootstrap-select.select-style-1.accomodation-select-1.search-select-picked.type-map-filter
+                      option(value="stay") Stay
+                      option(value="type") Type
+                      option(value="what-on-event") What's On Events
+                      option(value="see-do") See & Do
+                  .option-filter(data-control='stay', style="display: block")
+                    .select-wrap
+                      select.bootstrap-select.select-style-1.accomodation-select-2.search-select-picked
+                        option(value="") Type (All)
+                        option(value="1") Lorem ipsum dolo
+                        option(value="2") Lorem ipsum do
+                        option(value="3") Lorem ipsum dolo
+                    .range-slider-control
+                      label Price pp/night
+                      #map-range-slider-1
+                    .star-rating-wrapper
+                      label Min.Star Rating
+                      +input('hidden', 'starVal','3').star-rating
+                  .option-filter(data-control='type', style="display: none", data-clear-btn="false")
+                    span.map-filter-msg Currently showing most popular places of interest
+                  .option-filter(data-control='what-on-event', style="display: none")
+                    .select-wrap
+                      select.bootstrap-select.select-style-1.accomodation-select-2.search-select-picked
+                        option(value="") Type(All)
+                        option(value="1") Lorem ipsum dolo
+                        option(value="2") Lorem ipsum do
+                        option(value="3") Lorem ipsum dolo
+                    +datepicker("From DD-MM-YY", "arrivalDate", "").search-date-picked
+                    +datepicker("To DD-MM-YY", "arrivalDate", "").search-date-picked
+                  .option-filter(data-control='see-do', style="display: none")
+                    .select-wrap
+                      select.bootstrap-select.select-style-1.accomodation-select-2.search-select-picked
+                        option(value="") Wineries, Vineyards and Breweries
+                        option(value="1") Lorem ipsum dolo
+                        option(value="2") Lorem ipsum do
+                        option(value="3") Lorem ipsum dolo
+                    .range-slider-control.range-slider-control-2
+                      label Entry Price
+                      #map-range-slider-2
+                  
+
+                  button.clear
+                    | Clear 
+                    span.fa.fa-refresh
+                .col-xs-12.filter-select.filter-mobile.visible-xs.visible-sm
+                  .filter-tab
+                    a(href="javascript:").active
+                      span.icon.see-do See & Do
+                    a(href="javascript:")
+                      span.icon.what-on What's On
+                    a(href="javascript:")
+                      span.icon.stay Stay
+
+                  .select-wrap
+                    select.bootstrap-select.select-style-1.accomodation-select-2.search-select-picked
+                      option(value="") Show All
+                      option(value="1") Lorem ipsum dolo
+                      option(value="2") Lorem ipsum do
+                      option(value="3") Lorem ipsum dolo
+          #map
+        

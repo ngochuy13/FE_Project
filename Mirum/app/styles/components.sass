@@ -1,0 +1,1073 @@
+//==================================== General ====================================//
+html, body
+	overflow-x: hidden
+	overflow-y: auto
+
+.page-wrapper
+	padding-top: 106px
+
+h2
+	line-height: 2.991
+	border-top: 1px solid $muesli
+	border-bottom: 1px solid $muesli
+	display: inline-block
+
+img
+	height: auto
+
+#main
+	overflow: hidden
+
+.section > .container, .section .parallax .container
+	margin: 0 auto
+
+.close-popup
+	width: 35px
+	height: 35px
+	font-size: 0
+	background: url("#{$imgPath}the-address/close-icon.png") no-repeat center transparent
+	position: absolute
+	top: 15px
+	right: 15px
+	z-index: 30
+	+transition(opacity 1.5s ease)
+
+//==================================== Text block ====================================//
+.block-text-content
+	padding-top: 30px
+	.editor-content
+		text-align: left
+
+//==================================== City List ====================================//
+.city-list
+	.city-block
+		float: left
+		width: 33.333%
+		height: 878px
+		overflow: hidden
+		position: relative
+		+transition(width 0.5s ease)
+		&.active
+			width: 80%
+			.caption
+				top: 200%
+			.open-link,
+			.caption
+				opacity: 0
+				z-index: -1
+			.city-info,
+			.close
+				opacity: 1
+				z-index: 1
+		&.inactive
+			width: 10%
+			.caption
+				padding: 12px 10px
+		img
+			width: auto
+			max-width: inherit
+			height: 100%
+			position: absolute
+			top: 0
+			right: 0
+			+transition(all 1.5s ease)
+			&.mobile
+				display: none
+		.open-link
+			opacity: 1
+			+transition(opacity 0.5s ease)
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background: $black
+				opacity: 0.5
+				+transition(opacity 0.5s ease)
+		.caption
+			width: 100%
+			background: $overlay
+			color: $heading-color
+			font-size: $h2 + 4px
+			text-transform: none
+			text-align: center
+			line-height: 1.1
+			padding: 12px 120px
+			position: absolute
+			top: 50%
+			+transform(translateY(-50%))
+			left: 0
+			opacity: 0
+			+transition(opacity 0.5s ease)
+			&:before,
+			&:after
+				content: ""
+				display: block
+				width: 100%
+				height: 1px
+				background: #bdb8a8
+				position: absolute
+				left: 0
+			&:before
+				top: 4px
+			&:after
+				bottom: 4px
+		&:hover
+			.open-link
+				&:before
+					opacity: 0
+			.caption
+				opacity: 1
+		.city-info
+			opacity: 0
+			position: absolute
+			left: 25px
+			bottom: 30px
+			z-index: -1
+			+transition(opacity 1.5s ease)
+			.title
+				color: $natural-gray
+				font-size: $h2 + 2px
+				font-family: $font-family-base
+				text-transform: none
+				line-height: normal
+				margin-bottom: 15px
+			.editor-content
+				width: 698px
+				max-width: 100%
+				background: $overlay
+				text-align: left
+				margin: 0
+				padding: 20px 25px
+				p
+					&:first-child
+						margin-top: 0
+					&:last-child
+						margin-bottom: 0
+		.close
+			opacity: 0
+			@extend .close-style
+
+//==================================== Introduction Text ====================================//
+.introduction-text
+	height: 850px
+	.container
+		position: relative
+		top: 50%
+		+transform(translateY(-50%))
+	h1
+		font-size: 45px
+		line-height: 1.861
+		text-transform: uppercase
+		text-align: center
+		color: $heading-color
+		position: relative
+		padding-bottom: 28px
+		margin-bottom: 45px
+		&:after
+			content: ""
+			display: block
+			position: absolute
+			bottom: 0
+			left: 50%
+			width: 110px
+			height: 1px
+			background: $alto
+			margin-left: -55px
+	.editor-content
+		max-width: 900px
+	.the-house &
+		height: 580px !important
+		margin-top: 60px
+
+//==================================== Award section ====================================//
+.award-section
+	margin-bottom: 130px
+	.award-content
+		float: left
+		width: 100%
+		background: $light-gray
+		padding: 65px 80px 50px
+		.award-block
+			float: left
+			width: 50%
+			padding: 0 25px
+			&.first
+				.award-thumb
+					float: right
+				.award-info
+					text-align: right
+					margin-right: 180px
+			&.second
+				.award-thumb
+					float: left
+					margin-top: -10px
+				.award-info
+					text-align: left
+					margin-left: 125px
+		.award-info
+			color: $heading-color
+			font-size: $content-2 + 1px
+
+//==================================== Map Section ====================================//
+.map-section-container
+	height: 100%
+	position: relative
+	padding-left: 30%
+	background: #aaa
+	overflow: hidden
+	img
+		display: none
+		&.desktop
+			display: block
+			width: 70%
+			max-width: 70%
+			height: auto
+			position: absolute
+			left: 30%
+			bottom: 0
+	.open, .close
+		display: none
+	.block-address-content
+		.block-content
+			background: $overlay
+			width: 30%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 2
+			padding: 40px 30px
+			overflow-x: hidden
+			overflow-y: auto
+		h3
+			color: $natural-gray
+			font-family: $helveticaNeueLTProCn
+			font-size: 30px
+			line-height: 1.2
+			text-align: left
+			text-transform: none
+			&.caption-location-map
+				font-size: 18px
+				line-height: 30px
+		h4
+			color: $natural-gray
+			cursor: pointer
+			font-size: $h4 - 1px
+			font-family: $helveticaNeueLTProCn
+			margin-top: 25px
+			text-align: left
+			text-transform: none
+			padding-left: 15px
+			position: relative
+			&:before
+				content: ""
+				display: block
+				position: absolute
+				top: 50%
+				left: 0
+				width: 10px
+				height: 10px
+				margin-top: -5px
+				.safari &
+					margin-top: -7px
+			&.plus
+				&:before
+					// background: url("#{$imgPath}the-address/plus.png") no-repeat center transparent
+					background: url("#{$imgPath}the-address/dot.png") no-repeat center transparent
+					background-size: 10px auto
+			&.minus
+				&:before
+					// background: url("#{$imgPath}the-address/minus.png") no-repeat center transparent
+					background: url("#{$imgPath}the-address/dot.png") no-repeat center transparent
+					background-size: 10px auto
+		ul
+			display: none
+			padding-left: 15px
+			li
+				margin: 0
+				padding-bottom: 2px
+.map-section-mobile
+	display: none
+
+.section-then-now
+	.map-section-container
+		img.desktop
+			left: 0
+		.block-address-content
+			.block-content
+				left: auto
+				right: 0
+.section-full-address
+	img
+		width: 100%
+h2.title-address
+	text-align: center
+	border-top: none
+	position: relative
+	left: 50%
+	margin-bottom: 10px
+	font-size: 46px
+	line-height: 48px
+	padding-bottom: 25px
+	+transform(translateX(-50%))
+.caption-adress
+	color: #8c8c8b
+.full-address-box
+	padding: 0 20%
+.title-location-map
+	font-size: 46px
+	line-height: 100px
+	display: block
+	border: none
+	text-align: left
+
+//==================================== Video Section ====================================//
+.video-section
+	position: relative
+	.video-bg
+		.bg-block
+			display: none
+			&.active
+				display: block
+				.parallax-content
+					position: relative
+					overflow: hidden
+					> img
+						position: absolute
+						top: 0
+						display: block
+						width: 100%
+						height: auto
+						left: 50%
+						z-index: 2
+						+transform(translateX(-50%))
+	.video-thumb-box
+		width: 100%
+		background: $white
+		position: relative
+		float: left
+		.video-list
+			position: relative
+			background: $white
+
+		ul
+			li
+				display: inline-block
+				vertical-align: top
+				background: $overlay
+				max-width: 220px
+				margin-right: 14px
+				padding: 10px
+				@include box-sizing(border-box)
+				&.inactive
+					display: none
+	.video-thumb
+		float: left
+		position: relative
+		video
+			max-width: 91px
+			position: absolute
+			top: 0
+			left: 0
+		img
+			max-width: 91px
+			position: relative
+			z-index: 1
+	.video-info
+		margin-left: 101px
+		h5
+			color: $video-link
+			border-top: 1px solid $video-link
+			border-bottom: 1px solid $video-link
+			line-height: 1.7
+		p
+			color: $text-default
+			font-size: $content-2 - 1px
+			margin: 5px 0 0
+.section-video
+	.fp-tableCell
+		overflow: hidden
+		.parallax.with-video .parallax-layer video
+			width: 100%
+			max-width: inherit
+			height: 100%
+			background: #000
+	.bg-block
+		.play-icon
+			width: 128px
+			height: 128px
+			background: url("#{$imgPath}the-story/play-icon.png") no-repeat
+			position: absolute
+			top: 50%
+			left: 0
+			right: 0
+			margin-left: auto
+			margin-right: auto
+			z-index: 8
+			cursor: pointer
+			+transform(translateY(-50%))
+
+//==================================== Gallery List ====================================//
+.section-garelly-list
+	position: relative
+	margin-bottom: 38px
+	.garelly-list-wrap
+		background: $pearl-bush
+		width: 100%
+		margin: 0 auto
+		position: relative
+		.garelly-list
+			padding: 24px 17px
+			font-size: 0
+			width: 100%
+			box-sizing: border-box
+			.item
+				display: inline-block
+				width: 25%
+				.detail
+					padding: 0 3px
+		.garelly-more
+			text-align: center
+			padding-top: 67px
+			padding-bottom: 40px
+
+.slick-slider
+	margin-bottom: 0
+
+.scroll-down-cta
+	padding-bottom: 44px
+	h2
+		cursor: pointer
+	& + img
+		cursor: pointer
+
+//==================================== Masonry Gallery ====================================//
+.section-masonry-component, .section-masonry-garelly
+	position: relative
+	.grid-sizer, .item
+		width: 33.33333%
+	.masonry-wrap
+		margin: 0 -12px
+		position: relative
+		.masonry-container
+			float: left
+			width: 100%
+			.item
+				padding: 0 12px
+				padding-bottom: 10px
+				float: left
+				img
+					max-width: 100%
+				.caption
+					display: block
+					text-align: center
+					font-size: 15px
+					line-height: 1.733
+					color: $natural-gray
+					margin-top: 24px
+					margin-bottom: 10px
+
+.section-masonry-garelly
+	.grid-sizer, .item
+		width: 16.66%
+	.masonry-wrap
+		margin: 0
+		.masonry-container
+			.item
+				.detail
+					text-align: center
+
+.fancybox-skin
+	background: $overlay
+	@include border-radius(0)
+	.fancybox-close
+		@extend .close-style
+
+//==================================== Masonry Component ====================================//
+.section-masonry-component
+	.item
+		color: $text-default
+		font-size: 13px
+		line-height: 2
+		.title
+			line-height: 2.778
+			color: $titlesalesinfo
+			text-align: center
+			margin-bottom: 25px
+		.detail
+			text-align: center
+			p
+				margin-top: 10px
+				line-height: 2
+				text-align: justify
+			ul
+				display: inline-block
+				li
+					text-align: left
+					margin-bottom: 16px
+					a
+						display: block
+						font-size: 15px
+						font-family: $font-family-base
+						text-decoration: underline
+						text-align: left
+						color: $text-default
+						position: relative
+						&:after
+							width: 18px
+							height: 18px
+							display: inline-block
+							background: url("#{$imgPath}icon-down-pdf-new.png")
+							content: ''
+							margin-left: 38px
+							position: relative
+							top: 4px
+
+.sales-document
+	.item
+		padding-bottom: 24px !important
+		> .detail
+			padding: 25px 35px 27px
+			background: $masonry-card-bg
+
+//==================================== The Contact ====================================//
+.section-contact
+	height: 370px
+	width: 734px
+	position: absolute
+	top: 50%
+	left: 50%
+	background: $overlay
+	padding-top: 40px
+	margin: -175px 0 0 -367px
+	overflow-x: hidden
+	overflow-y: auto
+	.contact-content
+		height: 100% !important
+		h1
+			margin-bottom: 18px
+			color: $b-gray
+			line-height: normal
+			padding: 17px 0 40px
+			&:after
+				background: $b-gray
+				bottom: 15px
+		.editor-content
+			p
+				margin: 6px 0 5px
+			a
+				text-decoration: underline
+				color: $text-default
+
+//==================================== The House unit-list ====================================//
+.unit-list
+	text-align: center
+	margin-bottom: 20px
+	h2
+		color: $natural-gray
+		border-color: $natural-gray
+		font-family: $helveticaNeueLTProCn
+		font-size: $h2 + 4px
+		line-height: 2.6
+		margin: 40px 0 75px
+	.house-drawing
+		position: relative
+		img
+			position: absolute
+			opacity: 0
+			+transition(opacity 0.5s ease)
+			&.main-img
+				position: relative
+				opacity: 1
+			&.active
+				opacity: 0.5
+		img[name="23A"]
+			top: 87px
+			left: 56px
+		img[name="23B"]
+			top: 87px
+			left: 135px
+		img[name="25A"]
+			top: 87px
+			left: 188px
+		img[name="25B"]
+			top: 87px
+			left: 241px
+		img[name="27A"]
+			top: 87px
+			left: 308px
+		img[name="27B"]
+			top: 87px
+			left: 375px
+		img[name="29A"]
+			top: 87px
+			left: 428px
+		img[name="29B"]
+			top: 87px
+			left: 482px
+		img[name="31A"]
+			top: 87px
+			left: 535px
+		img[name="31B"]
+			top: 87px
+			left: 589px
+		img[name="33A"]
+			top: 87px
+			left: 642px
+		img[name="33B"]
+			top: 87px
+			left: 696px
+		img[name="35A"]
+			top: 87px
+			left: 749px
+		img[name="35B"]
+			top: 87px
+			left: 803px
+		img[name="37A"]
+			top: 87px
+			left: 856px
+		img[name="37B"]
+			top: 87px
+			left: 910px
+		img[name="39A"]
+			top: 87px
+			left: 963px
+		img[name="39B"]
+			top: 87px
+			left: 1016px
+	.unit-section
+		.units
+			background: $overlay
+			text-align: center
+			font-size: 0
+			li
+				display: inline-block
+				vertical-align: top
+				margin: 0 23px 30px 0
+				&:nth-child(9n)
+					margin-right: 0
+				a
+					color: $heading-color
+					display: inline-block
+					vertical-align: top
+					font-family: $helveticaNeueLTProMdCn
+					font-size: $h2 - 3px
+					text-align: center
+					text-transform: uppercase
+					//background: $light-gray
+					width: 106px
+					padding: 22px 0
+					@include transition(all 0.5s ease)
+					&:hover,
+					&:focus,
+					&.active
+						text-decoration: underline
+
+//==================================== The House floor-list ====================================//
+.floor-list
+	background: #f1f1f1
+	position: relative
+	&:after
+		height: 100%
+		content: ''
+		display: block
+		position: absolute
+		width: 50%
+		right: 0
+		top: 0
+		background: #e2e2e2
+	.selected-section
+		.selected-info
+			float: left
+			width: 50%
+			text-align: center
+		.selected-drawing
+			// height: 878px
+			float: left
+			width: 50%
+			text-align: right
+			padding-right: 50px
+			ul
+				padding: 72px 0
+				li
+					display: none
+					&.active
+						display: block
+						width: 75%
+						text-align: right
+						float: right
+		.selected-info
+			// height: 878px
+			padding-left: 20px
+			position: relative
+			z-index: 1
+			.info-list
+				margin-top: 50%
+				// +transform(translateY(-50%))
+			.title
+				font-size: $h1 + 15px
+				font-family: $helveticaNeueLTProMdCn
+				line-height: 1
+				// margin-bottom: 50px
+				width: 110px
+				position: absolute
+			.info-block
+				display: none
+				&.active
+					display: block
+				.editor-content
+					color: $dark-gray
+					font-size: $content-2 - 1px
+					max-width: 400px
+					position: absolute
+					bottom: 30px
+					left: 45px
+					p
+						line-height: 2
+					.price
+						display: block
+						margin: 45px 0
+					a
+						display: block
+						color: $dark-gray
+						margin-bottom: 10px
+						&:hover
+							text-decoration: underline
+	.drawing-section
+		position: absolute
+		left: 0
+		top: 21%
+		z-index: 1
+		width: 100%
+		padding: 0 25px 0 45px
+		.drawing-list
+			background: $overlay
+			width: 100%
+			height: 345px
+			ul
+				li
+					height: 345px
+					float: left
+					width: 33.333%
+					position: relative
+					padding: 26px 0
+					text-align: center
+					@include box-sizing(border-box)
+					&.inactive
+						display: none
+					// &:after
+					// 	content: ""
+					// 	display: block
+					// 	position: absolute
+					// 	top: 50%
+					// 	right: 0
+					// 	width: 1px
+					// 	height: 174px
+					// 	background: #cbcbcb
+					// 	margin-top: -86px
+					&:last-child
+						&:after
+							display: none
+					a
+						display: block
+						height: 100%
+						position: relative
+						padding: 6px 0 48px
+					img
+						display: inline-block
+						opacity: 0.85
+					.name
+						display: block
+						color: $tundora-2
+						font-size: 30px
+						line-height: 28px
+						text-transform: uppercase
+						opacity: 0.5
+						position: absolute
+						bottom: 0
+						left: 50%
+						font-family: $helveticaNeueLTProMdCn
+						+transform(translateX(-50%))
+				li[data-item*="floor4"]
+					img
+						margin-top: 30px
+		.drawing-info
+			background: $overlay
+			float: right
+			width: 480px
+			height: 226px
+			padding: 0 50px
+			@include box-sizing(border-box)
+			.editor-content
+				font-size: $content-2 - 1px
+				color: $dark-gray
+				text-align: left
+				opacity: 0.85
+				position: relative
+				top: 50%
+				+transform(translateY(-50%))
+				p
+					line-height: 2
+					margin: 0
+
+//==================================== The House Interior list section ====================================//
+.section-room-list
+	ul
+		font-size: 0
+		li
+			display: inline-block
+			width: 25%
+			border: 1px solid $white
+			position: relative
+			a:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background: $overlay-dark
+				opacity: 1
+				+transition(opacity 0.5s ease)
+			.caption
+				font-family: $font-family-serif-base
+				color: $heading-color
+				width: 100%
+				font-size: 16px
+				line-height: 2.778
+				text-transform: uppercase
+				text-align: center
+				padding: 8px 0
+				position: absolute
+				top: 50%
+				left: 0
+				+transform(translateY(-50%))
+				+transition(all 0.5s ease)
+				&:before, &:after
+					content: ""
+					width: 100%
+					height: 1px
+					position: absolute
+					top: 2px
+					left: 0
+					background: #bdb8a8
+					opacity: 0
+					+transition(all 0.5s ease)
+				&:after
+					top: auto
+					bottom: 2px
+			&:hover, &.active
+				a:before
+					opacity: 0
+				.caption
+					background: $overlay
+					&:before, &:after
+						opacity: 1
+//==================================== The House Interior Detail section ====================================//
+
+.room-gallery
+	.gallery-block
+		float: left
+		width: 100%
+		padding: 0 0 20px
+		background: $light-gray
+	.room-details
+		float: right
+		width: 25%
+		.room-list
+			float: left
+			max-width: 100%
+			padding-top: 35px
+			height: 521px
+			overflow: auto
+			background: $white
+			// padding-left: 13px
+			// height: 580px
+			// overflow: auto
+			.swiper-container
+				max-width: 912px
+				padding-left: 12%
+				.swiper-wrapper
+					display: block
+			.swiper-slide
+				float: left
+				display: block
+				margin-bottom: 20px
+				width: 50%
+				padding: 0 12% 0 0
+				a
+					display: block
+					overflow: hidden
+					text-align: center
+	.room-info
+		float: right
+		width: 75%
+	.gallery-list
+		background: $light-gray
+		padding: 30px
+		.gallery-item
+			height: 0
+			overflow: hidden
+			&.active
+				height: auto
+			.slider
+				img
+					width: 100%
+			.slick-prev,
+			.slick-next
+				width: 58px
+				height: 58px
+				background-color: rgba(255, 255, 255, 0.6)
+				background-size: auto
+				background-repeat: no-repeat
+				background-position: center
+				margin-top: -29px
+				&:before
+					display: none
+				&.slick-disabled
+					opacity: 0.5
+			.slick-prev
+				left: 15px
+				background-image: url("#{$imgPath}prev-arrow.png")
+			.slick-next
+				right: 15px
+				background-image: url("#{$imgPath}next-arrow.png")
+	.room-description
+		float: left
+		width: 100%
+		padding: 30px 40px
+		background: $light-gray
+		.info-block
+			display: none
+			&.active
+				display: block
+			h1
+				line-height: normal
+			p
+				color: $dark-gray
+				font-size: $content-2 - 1px
+				line-height: 2
+				margin-top: 5px
+
+//==================================== Loading section ====================================//
+.section-loading
+	.loading
+		display: block
+
+.loading
+	display: none
+	width: 100%
+	height: 650px
+	background: $overlay
+	.progress
+		width: 100%
+		display: block
+		height: 10px
+		overflow: hidden
+		border-radius: 5px
+		text-align: left
+		.progress-bar
+			border-radius: 5px
+			background: $overlay-dark
+			+transition(width 0.5s ease)
+			height: 10px
+			vertical-align: top
+			display: inline-block
+
+.section.hide
+	display: none
+
+//==================================== Landing page ====================================//
+.overlay-popup
+	position: fixed
+	z-index: 11
+	left: 0
+	top: 0
+	background: $overlay-dark
+	width: 100%
+	height: 100%
+
+.popup-index
+	z-index: 11
+	.close-popup
+		@extend .close-style
+
+.landing,
+.body-the-contact
+	.fp-tableCell
+		position: relative
+		.parallax
+			.parallax-layer
+				position: static
+				.parallax-content > img
+					position: absolute
+					left: 0
+					top: 0
+
+//==================================== Panel snap ====================================//
+.fp-section
+	overflow: hidden
+	.introduction-text
+		.the-house &
+			margin-top: 0
+
+.fp-tableCell
+	display: block
+	vertical-align: top
+
+.hide-floor
+	// display: none !important
+	opacity: 0;
+	position: absolute;
+	z-index: -10;
+	bottom: 0;
+
+//==================================== Loading ====================================//
+.loading-block
+	width: 100%
+	height: 100%
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 500
+	background: rgba(255,255,255,.7)
+	.loading-icon
+		background: url("#{$imgPath}preload.gif") no-repeat center center
+		background-size: cover
+		width: 140px
+		height: 140px
+		position: absolute
+		top: 50%
+		left: 0
+		right: 0
+		margin-left: auto
+		margin-right: auto
+		+transform(translateY(-50%))
+// iframe.ui-layout-pane
+// 	#container
+// 		> form
+// 			.loading-block
+// 				display: none
+// #container
+// 	> form
+// 		.page-wrapper
+// 			.loading-block
+// 				display: block
+
+//==================================== Page 404 ====================================//
+.page-404
+	.section-404
+		text-align: center
+		.content-404
+			position: relative
+			top: 50%
+			+transform(translateY(-70%))
+			.btn-back
+				background: $dusty-gray
+				color: $white
+				display: inline-block
+				padding: 10px 25px
+				text-transform: uppercase

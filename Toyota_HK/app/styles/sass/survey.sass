@@ -1,0 +1,82 @@
+/* == Survey == */
+
+@media screen and (min-width: 668px)
+  .homepage-footer-box
+    width: 100%
+    height: 125px
+    overflow: hidden
+    background: none
+    position: relative
+    .animate-right-left img
+      max-width: 100%
+  .survey-box-trigger
+    // display: block
+    // width: 120px
+    // height: 50px
+    // position: absolute
+    // bottom: 0
+    // left: 50%
+    // margin-left: -270px
+    // z-index: 10
+    // text-indent: 0
+    // overflow: hidden
+  .surver-car
+    position: absolute
+    right: 0
+    bottom: 0
+    &.animation-left-right
+      left: 0
+      right: auto
+    &.animation-right-left
+      left: auto
+  .survey-box
+    background: url(../images/homes/box-survey-cta.png) no-repeat 0 0
+    width: 330px
+    height: 102px
+    padding: 20px 40px 0 30px
+    position: absolute
+    right: 61%
+    bottom: 18px
+    margin-right: -327px
+    color: #ed1b24
+    display: none
+    font-size: 14px
+    p
+      margin: 0 0 14px
+      padding: 0
+    .close-survey-box-btn
+      width: 10px
+      height: 0
+      padding: 10px 0 0
+      overflow: hidden
+      text-indent: -1000em
+      display: block
+      position: absolute
+      top: 10px
+      right: 10px
+      background: url(../images/homes/icon-close-popup-01.png) no-repeat 0 0
+    .close-survey-box-btn:hover
+      opacity: 0.8
+      -moz-opacity: 0.8
+      filter: alpha(opacity=80)
+    .take-survey-btn
+      // font-family: 'josefin_bold'
+      background: url(../images/homes/icon-edit-01.png) no-repeat 0 3px
+      padding: 0 0 0 20px
+      text-transform: uppercase
+      color: #ed1b24
+      font-size: 14px
+      text-decoration: none
+      &:hover
+        background-image: url(../images/homes/icon-edit-01-hover.png)
+        color: #333
+  #survey-box-trigger
+    max-width: 185px
+    // position: relative
+    // left: 20px
+    img
+      max-width: 100%
+      width: 100%
+@media screen and (max-width: 667px)
+  .homepage-footer-box
+    display: none

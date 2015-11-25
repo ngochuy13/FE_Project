@@ -1,0 +1,87 @@
+include ../mixins/all
+block vars
+  -title = 'Site'
+  -bodyClass = ''
+- var homepage                = "home.html";
+- var eventPage               = "events.html";
+- var eventDetailPage         = "event-detail.html";
+- var stayPage                = "stay-list.html";
+- var blogs                   = "blogs.html";
+- var blogArticle             = "blog-article.html";
+- var blogs             = "blogs.html";
+- var storyTelling            = "story-telling.html";
+- var map                     = "map.html";
+doctype html
+//[if IE 8]><html lang="en" class="no-js ie ie8"><![endif]
+//[if IE 9]><html lang="en" class="no-js ie ie9"><![endif]
+//[if gt IE 9]><!
+html(class="no-js", lang="en")
+  //<![endif]
+  head
+    meta(charset="utf-8")
+    //[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]
+    title=title
+    meta(name="description", content="")
+    meta(name="keywords", content="")
+    meta(name="robots", content="index, follow")
+    meta(name="author", content="")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    //- link(rel="shortcut icon", href="images/favicon.ico", type="image/x-icon")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700,200italic,300italic,400italic,700italic")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Bitter:400,700,400italic")
+    link(rel="stylesheet", href="styles/main.css")
+    //- link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", rel="stylesheet")
+
+  body(class=bodyClass)
+    #container
+      include ../includes/header
+      .page-wrapper
+        block container
+      include ../includes/footer
+
+    //- cdn links
+    //- jQuery https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js
+
+    // build:js scripts/cdn.js
+    script(src='/bower_components/jquery/dist/jquery.js')
+    // endbuild
+
+    // build:js scripts/dep.js
+    script(src='/bower_components/checkboxUI/odfc-checkbox.js')
+    script(src='/bower_components/pubsub/odfc-pubsub.js')
+    script(src='/bower_components/radioUI/odfc-radio.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
+    script(src='/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js')
+    script(src='/bower_components/slick.js/slick/slick.min.js')
+    script(src='/bower_components/jquery-sticky/jquery.sticky.js')
+    script(src='/bower_components/owl-carousel2/dist/owl.carousel.js')
+    script(src='/bower_components/matchHeight/jquery.matchHeight.js')
+    script(src='/bower_components/moment/moment.js')
+    script(src='/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js')
+    script(src='/bower_components/nouislider/distribute/nouislider.min.js')
+    script(src='/bower_components/isotope/dist/isotope.pkgd.min.js')
+    script(src='/bower_components/lightbox2/dist/js/lightbox.min.js')
+    script(src='/bower_components/bootstrap-rating/bootstrap-rating.min.js')
+    script(src='/scripts/imagefill.js')
+    script(src='/bower_components/FlexSlider/jquery.flexslider.js')
+    // endbuild
+  
+    // build:js scripts/components.js
+    script(src='/scripts/utils.js')
+    script(src='/scripts/navigation.js')
+    script(src='/scripts/footer.js')
+    // endbuild
+
+    block pagescript
+
+    // build:js scripts/main.js
+    script(src='/scripts/main.js')
+    // endbuild
+    script.
+      //- Your master script stays here
+      //- This block will be override on each page.
+    //[if lt IE 8]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]
+    noscript JavaScript is off. Please enable to view full site.

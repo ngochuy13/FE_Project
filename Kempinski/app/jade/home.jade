@@ -1,0 +1,102 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Home'
+  -bodyClass = 'homepage-loading homepage'
+  -bannerIMG = 'home/banner.jpg'
+  -page = 'homepage'
+
+block var-2
+  -templateScriptArr = 'scripts/photo-gallery.js'
+  
+block pagescript
+  script.
+    document.addEventListener('DOMContentLoaded', function(){
+      var isRTL = document.querySelector("html").getAttribute('dir') === "rtl";
+      if( document.querySelector("body").getAttribute('class').indexOf('homepage')>=0 ){
+        document.querySelector('.hero-banner').style.transitionDuration = '1s';
+        var winW = window.innerWidth;
+        var winH = window.innerHeight;
+        var bannerH = document.querySelector('.hero-banner').offsetHeight;
+        winH = winH < 800 ? 800 : winH;
+        var heroImg = document.querySelector("#hero-img img");
+        var actualWidth = heroImg.naturalWidth * (winH / heroImg.naturalHeight)
+        if(isRTL){
+          heroImg.parentNode.style.right = - (actualWidth - winW)/2 + 'px';
+        }else{
+          heroImg.parentNode.style.left = - (actualWidth - winW)/2 + 'px';
+        }
+        heroImg.style.height = winH + 'px';
+        heroImg.style.opacity = 1;
+        
+        setTimeout(function() {
+          if (winW > 991) {
+            document.querySelector(".hero-banner").style.height = document.querySelector(".navigation").offsetHeight + 40 + document.querySelector(".top-header").offsetHeight + "px";
+            heroImg.style.top = "-100px";
+          } else {
+            document.querySelector(".hero-banner").setAttribute('style', '');
+          }
+        }, 1900);
+
+        setTimeout(function() {
+          document.querySelector("body").setAttribute('class','homepage');  
+          window.scrollTo(0, window.pageYOffset + 2);
+          document.querySelector(".navigation").setAttribute("class", 'navigation');
+          wow.sync();
+          window.scrollTo(0, window.pageYOffset - 2);
+        }, 2800);
+      }  
+    });
+block breadcrumb  
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#" 
+      },{
+        "text": "MIDDLE EAST",
+        "href":"#"
+      },{
+        "text": "EMIRATES PALACE",
+        "href":"#"
+      }])
+
+block container    
+  .inner
+    main#main 
+      section.section-block.map-section 
+        +page-title-star("A MAGICAL EXPRIENCE","in Abu Dhabi") 
+        include includes/block-map  
+      section.section-block.room-suite-section
+        +section-title("ROOMS & SUITES", "World Class Luxury", "EXCLUSIVE OFFERS").gray
+        include includes/rooms-suites
+      section.section-block.section-photo-gallery
+        +section-title("PHOTO GALLERY", "Explore Emirates Palace", "GENEROUS HOSPITALITY").gray
+        include includes/photo-gallery
+      section.section-block.experience-gallery-section
+        +section-title("EXPERIENCES TO TREASURE", "Discover the Magic of Arabiaan Hospotality", "PRIVAE BAY IN THE ARABIAN GULF").gray
+        include includes/experience-to-treasure
+  .pswp(tabindex='-1', role='dialog', aria-hidden='true')
+      .pswp__bg
+      .pswp__scroll-wrap
+        .pswp__container
+          .pswp__item
+          .pswp__item
+          .pswp__item
+        .pswp__ui.pswp__ui--hidden
+          .pswp__top-bar
+            .pswp__counter
+            button.pswp__button.pswp__button--close(title='Close (Esc)')
+            button.pswp__button.pswp__button--share(title='Share')
+            button.pswp__button.pswp__button--fs(title='Toggle fullscreen')
+            button.pswp__button.pswp__button--zoom(title='Zoom in/out')
+            .pswp__preloader
+              .pswp__preloader__icn
+                .pswp__preloader__cut
+                  .pswp__preloader__donut
+          .pswp__share-modal.pswp__share-modal--hidden.pswp__single-tap
+            .pswp__share-tooltip
+          button.pswp__button.pswp__button--arrow--left(title='Previous (arrow left)')
+          button.pswp__button.pswp__button--arrow--right(title='Next (arrow right)')
+          .pswp__caption
+            .pswp__caption__center

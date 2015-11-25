@@ -1,0 +1,328 @@
+mixin board-navigator()
+  .board-navigator
+    .agreement.select-group
+      .select-type
+        span.num 6
+      .select-control
+        .head.open
+          span Events of Default
+        ul
+          li(title="Co-Founder Details", data-href="demo-details.html#1")
+            span(data-type="details", data-number="1").icon.details 1
+            label Co-Founder Details
+          li(title="Business Description", data-href="demo-standard.html#2")
+            span(data-type="standard", data-number="2").icon.standard 2
+            label Business Description 
+          li(title="Business Name", data-href="demo-standard.html#3")
+            span(data-type="standard", data-number="3").icon.standard 3
+            label Business Name      
+          li(title="Objectives", data-href="demo-types.html#4")
+            span(data-type="types", data-number="4").icon.types 4
+            label Objectives
+
+          li(title="Directors    ", data-href="demo-details.html#5")
+            span(data-type="details", data-number="5").icon.details 5
+            label Directors    
+
+          li(title="Contributions to Date", data-href="demo-types.html#6")
+            span(data-type="types", data-number="6").icon.types 6
+            label Contributions to Date
+          li(title="Roles & Ongoing Contributions", data-href="demo-types.html#7")
+            span(data-type="types", data-number="7").icon.types 7
+            label Roles & Ongoing Contributions
+          li(title="Equity Split", data-modal="equity", data-href="demo-equity.html#8")
+            span(data-type="equity", data-number="8").icon.equity 8
+            label Equity Split
+          li(title="Unanimous Decisions", data-href="demo-options.html#9")
+            span(data-type="options", data-number="9").icon.options 9
+            label Unanimous Decisions
+          li(title="Termination of Agreement", data-href="demo-options.html#10")
+            span(data-type="options", data-number="10").icon.options 10
+            label Termination of Agreement
+          li(title="Termination Effects", data-href="demo-options.html#11")
+            span(data-type="options", data-number="11").icon.options 11
+            label Termination Effects
+          li(title="Events of Default", data-href="demo-options.html#12")
+            span(data-type="options", data-number="12").icon.options 12
+            label Events of Default
+    .agreements-list
+      a(href="demo-details.html#1").details
+        img(src="images/sprites/lemon-padding-icon.png")
+        img(src="images/sprites/lemon-hover-padding-icon.png").hover
+        span 1
+      a(href="demo-standard.html#2").standard
+        img(src="images/sprites/lemon-padding-icon.png")
+        img(src="images/sprites/lemon-hover-padding-icon.png").hover
+        span 2
+      a(href="demo-standard.html#3").standard
+        img(src="images/sprites/lemon-padding-icon.png")
+        img(src="images/sprites/lemon-hover-padding-icon.png").hover
+        span 3
+      a(href="demo-types.html#4").types
+        img(src="images/sprites/lemon-padding-icon.png")
+        img(src="images/sprites/lemon-hover-padding-icon.png").hover
+        span 4
+      a(href="demo-details.html#5").details
+        img(src="images/sprites/lemon-padding-icon.png")
+        img(src="images/sprites/lemon-hover-padding-icon.png").hover
+        span 5
+      a(href="demo-types.html#6").types
+        img(src="images/sprites/lemon-padding-icon.png")
+        img(src="images/sprites/lemon-hover-padding-icon.png").hover
+        span 6
+      a(href="demo-types.html#7").types
+        img(src="images/sprites/lemon-padding-icon.png")
+        img(src="images/sprites/lemon-hover-padding-icon.png").hover
+        span 7
+      a(href="demo-equity.html#8", data-modal="equity").equity
+        img(src="images/sprites/lemon-padding-icon.png")
+        img(src="images/sprites/lemon-hover-padding-icon.png").hover
+        span 8
+      a(href="demo-options.html#9").options
+        img(src="images/sprites/lemon-padding-icon.png")
+        img(src="images/sprites/lemon-hover-padding-icon.png").hover
+        span 9
+      a(href="demo-options.html#10").options
+        img(src="images/sprites/lemon-padding-icon.png")
+        img(src="images/sprites/lemon-hover-padding-icon.png").hover
+        span 10
+      a(href="demo-options.html#11").options
+        img(src="images/sprites/lemon-padding-icon.png")
+        img(src="images/sprites/lemon-hover-padding-icon.png").hover
+        span 11
+      a(href="demo-options.html#12").options
+        img(src="images/sprites/lemon-padding-icon.png")
+        img(src="images/sprites/lemon-hover-padding-icon.png").hover
+        span 12
+
+mixin card()
+  .card&attributes(attributes)
+    .card-content
+      .label
+        span.user.user1 J
+        span 4.02
+      .body
+        .title.ip Mary 5:35am 12/6/15 
+        .text.
+          Donec nec condimentum diam. Vivamus facilisis velit a nisi finibus efficitur. Curabitur efficitur lacus malesuada, tempor leo eget, pulvinar ante. 
+          fringilla tortor nibh. Cras ut nulla purus. Nulla vel orci id est cursus faucibus. Suspendisse porttitor, augue non finibus consequat,
+      .action.animated.fadeIn
+        a(href="javascript:").btn.btn-check
+        a(href="javascript:").btn.btn-msg
+        a(href="javascript:").btn.btn-remove
+
+mixin card-discuss-popup()
+  .card&attributes(attributes)
+    .card-content
+      a(href="javascript:").label.edit
+        span.user.user1 J
+        span 4.02
+      .body
+        .title.ip Mary 5:35am 12/6/15 
+        .text.
+          Donec nec condimentum diam. Vivamus facilisis velit a nisi finibus efficitur. Curabitur efficitur lacus malesuada, tempor leo eget, pulvinar ante. 
+          fringilla tortor nibh. Cras ut nulla purus. Nulla vel orci id est cursus faucibus. Suspendisse porttitor, augue non finibus consequat,
+      .action.animated.fadeIn
+        a(href="javascript:").btn.btn-check
+        a(href="javascript:").btn.btn-msg
+        a(href="javascript:").btn.btn-remove
+      .overlay
+        a(href="javascript:").btn.btn-close
+        .btn-wrap
+          a(href="javascript:").btn.btn-check-large AGREE
+          a(href="javascript:").btn.btn-msg-large DISCUSS
+          a(href="javascript:").btn.btn-remove-large DISAGREE
+          a(href="javascript:", data-modal="#edit-modal").btn.btn-edit-large EDIT
+          a(href="javascript:").btn.btn-history-large HISTORY
+
+    .card-comfirm
+      .text 
+        p.
+          Are you sure you want to 
+          revert to this previous version?
+      .btn-group
+        a(href="javascript:").btn.btn-ok
+        a(href="javascript:").btn.btn-cancel
+    .card-layer
+
+mixin card-discuss-single()
+  .card&attributes(attributes)
+    .card-content
+      a(href="javascript:").label.edit
+        span.user.user1 J
+        span 4.02
+      .body
+        .title.ip Mary 5:35am 12/6/15 
+        .text.
+          Donec nec condimentum diam. Vivamus facilisis velit a nisi finibus efficitur. Curabitur efficitur lacus malesuada, tempor leo eget, pulvinar ante. 
+          fringilla tortor nibh. Cras ut nulla purus. Nulla vel orci id est cursus faucibus. Suspendisse porttitor, augue non finibus consequat,
+      .action.animated.fadeIn
+        a(href="javascript:").btn.btn-check
+        a(href="javascript:").btn.btn-msg
+        a(href="javascript:").btn.btn-remove
+      .overlay
+        a(href="javascript:").btn.btn-close
+        .btn-wrap
+          a(href="javascript:").btn.btn-check-large AGREE
+          a(href="javascript:").btn.btn-msg-large DISCUSS
+          a(href="javascript:").btn.btn-remove-large DISAGREE
+          a(href="javascript:", data-modal="#edit-modal").btn.btn-edit-large EDIT
+          a(href="javascript:").btn.btn-history-large HISTORY
+
+mixin card-discuss-single-select()
+  .card.gray-lemon&attributes(attributes)
+    .card-content
+      a(href="javascript:").label.edit
+        span.user.gray-lemon
+        span 4.02
+      .body.select
+        .title Option
+        .text Donec nec condimentum diam. Vivamus facilisis velit a nisi finibus efficitur. Curabitur efficitur lacus malesuada, tempor leo eget, pulvinar ante.
+        .title Select
+        .text
+          label.checkbox-control
+            input(type="radio", name="rbox")
+            span.rb-face
+            span Fair Market Value 
+          label.checkbox-control
+            input(type="radio", name="rbox")
+            span.rb-face
+            span Nominal Value
+
+mixin card-discuss-single-info()
+  .card&attributes(attributes)
+    .card-content
+      a(href="javascript:").label.edit
+        span.user.user1 J
+        span 4.02
+      .body
+        .title Mary
+        .text
+          .line
+            label Name: 
+            span Mary Turner
+          .line
+            label Street Address:
+            span  23 Davies St
+          .line
+            label Suburb:
+            span Ashburton
+          .line
+            label Victoria
+            span Ashburton
+          
+      .action.animated.fadeIn
+        a(href="javascript:").btn.btn-check
+        a(href="javascript:").btn.btn-msg
+        a(href="javascript:").btn.btn-remove
+      .overlay
+        a(href="javascript:").btn.btn-close
+        .btn-wrap
+          a(href="javascript:").btn.btn-check-large AGREE
+          a(href="javascript:").btn.btn-msg-large DISCUSS
+          a(href="javascript:").btn.btn-remove-large DISAGREE
+          a(href="javascript:", data-modal="#edit-modal").btn.btn-edit-large EDIT
+          a(href="javascript:").btn.btn-history-large HISTORY
+mixin card-discuss()
+  .card&attributes(attributes)
+    .card-content
+      a(href="javascript:").label.edit
+        span.user.user1 J
+        span 4.02
+      .body
+        .title.ip Mary 5:35am 12/6/15 
+        .text.
+          Donec nec condimentum diam. Vivamus facilisis velit a nisi finibus efficitur. Curabitur efficitur lacus malesuada, tempor leo eget, pulvinar ante. 
+          fringilla tortor nibh. Cras ut nulla purus. Nulla vel orci id est cursus faucibus. Suspendisse porttitor, augue non finibus consequat,
+      .action.animated.fadeIn
+        a(href="javascript:").btn.btn-check
+        a(href="javascript:").btn.btn-msg
+        a(href="javascript:").btn.btn-remove
+      .overlay
+        a(href="javascript:").btn.btn-close
+        .btn-wrap
+          a(href="javascript:").btn.btn-check-large AGREE
+          a(href="javascript:").btn.btn-msg-large DISCUSS
+          a(href="javascript:").btn.btn-remove-large DISAGREE
+          a(href="javascript:", data-modal="#edit-modal").btn.btn-edit-large EDIT
+          a(href="javascript:").btn.btn-history-large HISTORY
+    .card-layer
+      span
+      span
+      span
+      span
+      span
+      span
+      span
+
+mixin card-discuss-edit()
+  .card&attributes(attributes)
+    .card-content
+      a(href="javascript:").label.edit
+        span.user.user1 J
+        span 4.02
+      .body
+        .title
+          div(data-type="text").editable
+            input(type="text", value="Mary").editer
+        .text
+          textarea Donec nec condimentum diam. Vivamus facilisis velit a nisi finibus efficitur. Curabitur efficitur lacus malesuada, tempor leo eget, pulvinar ante. fringilla tortor nibh. Cras ut nulla purus. Nulla vel orci id est cursus faucibus. Suspendisse porttitor, augue non finibus consequat,
+      .action.animated.fadeIn
+        a(href="javascript:").btn.btn-check
+        a(href="javascript:").btn.btn-msg
+        a(href="javascript:").btn.btn-remove
+      .overlay
+        a(href="javascript:").btn.btn-close
+        .btn-wrap
+          a(href="javascript:").btn.btn-check-large AGREE
+          a(href="javascript:").btn.btn-msg-large DISCUSS
+          a(href="javascript:").btn.btn-remove-large DISAGREE
+          a(href="javascript:", data-modal="#edit-modal").btn.btn-edit-large EDIT
+          a(href="javascript:").btn.btn-history-large HISTORY
+    .card-layer
+mixin card-discuss-message()
+  .card.card-message&attributes(attributes)
+    .card-content
+      a(href="javascript:").btn.btn-close
+      .label
+      .body
+        .text.
+          The options beloware for you to consider, discuss & approve, more info in the Consider area
+mixin card-discuss-invitation-sent()
+  .card.card-message.add-detail&attributes(attributes)
+    .card-content
+      .body
+        .text Invitation sent!
+        a(href="javascript:").btn.btn-add-detail Add their details
+     
+mixin card-discuss-overlay-popup()
+  .card&attributes(attributes)
+    .card-content
+      a(href="javascript:").label.edit
+        span.user.user1 J
+        span 4.02
+      .body
+        .title.ip Mary 5:35am 12/6/15 
+        .text.
+          Donec nec condimentum diam. Vivamus facilisis velit a nisi finibus efficitur. Curabitur efficitur lacus malesuada, tempor leo eget, pulvinar ante. 
+          fringilla tortor nibh. Cras ut nulla purus. Nulla vel orci id est cursus faucibus. Suspendisse porttitor, augue non finibus consequat,
+      .action.animated.fadeIn
+        a(href="javascript:").btn.btn-check
+        a(href="javascript:").btn.btn-msg
+        a(href="javascript:").btn.btn-remove
+      .overlay(style="display: block")
+        a(href="javascript:").btn.btn-close
+        .btn-wrap
+          a(href="javascript:").btn.btn-check-large.blue AGREE
+          a(href="javascript:").btn.btn-msg-large.blue DISCUSS
+    .card-comfirm
+      .text 
+        p.
+          Are you sure you want to 
+          revert to this previous version?
+      .btn-group
+        a(href="javascript:").btn.btn-ok
+        a(href="javascript:").btn.btn-cancel
+
+
+  

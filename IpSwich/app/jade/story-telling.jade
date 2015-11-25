@@ -1,0 +1,89 @@
+extends layouts/layout
+
+block vars
+  -title = 'Ipswich Article'
+  -bodyClass = 'story-telling'
+
+block pagescript
+  
+
+block container
+  .inner
+    main#main(style="min-height: 800px")
+      section
+        .story-intro.bottom-bar.block-wake-up.dark-blue.text-center(style="background-image: url(images/storytelling-1.jpg)")
+          .container
+            .row
+              .col-xs-12
+                .image-caption
+                  img(src="images/storytelling-wakeup.png", alt="")
+                .title Wake up.
+                .separator
+                .description 
+                  | To a gorgeous Ipswich morning. Lorem ipsum dolor<br/>
+                  | Et vitae do lorem ipsum priviso
+                .meta Photo: Lorem Ipsum Dolor Et Vitae proviso doriate
+                a(href="#", title="Read More").readmore Read More
+        .story-intro.bottom-bar.block-taste.dark-brown.text-center(style="background-image: url(images/storytelling-2.jpg)")
+          .container-fluid
+            .row
+              .col-xs-12.col-sm-6.col-sm-offset-6
+                .image-caption
+                  img(src="images/storytelling-food.png", alt="")
+                .title Taste
+                .separator
+                .description The local cuisine.
+                .meta Photo: Lorem Ipsuam Dolor Et Vitae proviso doriate
+                a(href="#", title="Read More").readmore Read More
+        .story-intro.bottom-bar.block-hike.light-orange.text-center(style="background-image: url(images/storytelling-3.jpg)")
+          .container-fluid
+            .row
+              .col-xs-12.col-sm-6
+                .image-caption
+                  img(src="images/storytelling-map.png", alt="")
+                .title Hike
+                .separator
+                .description To White Rock, only 10 mins<br/>from Ipswich CBD
+                .meta Photo: Lorem Ipsuam Dolor Et Vitae proviso doriate
+                a(href="#", title="Read More").readmore Read More
+        .story-intro.bottom-bar.block-enjoy.yellow.text-center(style="background-image: url(images/storytelling-4.jpg)")
+          .container
+            .row
+              .col-xs-12
+                .image-caption
+                  img(src="images/storytelling-view.png", alt="")
+                .title Enjoy
+                .separator
+                .description A relaxing afternoon lorem ipsum dolor et vitae proviso dol et lorem ipsum
+                a(href="#", title="Read More").readmore Read More
+        .storytelling-footer
+          .col-xs-12.col-md-4
+            .shop.row
+              .story-intro.orange.text-center(style="background-image: url(images/footer_storytelling_1.jpg)")
+                .story
+                  .col-xs-12
+                    .image-caption
+                      img(src="images/icons/icon-shop.png", alt="")
+                    .title Shop
+                    .separator 
+                    .description In our eclectic mix of local stores
+          .col-xs-12.col-md-4
+            .wander.row
+              .story-intro.orange.text-center(style="background-image: url(images/footer_storytelling_2.jpg)")
+                .story
+                  .col-xs-12
+                    .image-caption
+                      img(src="images/icons/icon-wander.png", alt="")
+                    .title Wander
+                    .separator 
+                    .description And find the hidden gems in the Ipswich CBD
+          .col-xs-12.col-md-4
+            .dine.row
+              .story-intro.orange.text-center(style="background-image: url(images/footer_storytelling_3.jpg)")
+                .story
+                  .col-xs-12
+                    .image-caption
+                      img(src="images/icons/icon-dine.png", alt="")
+                    .title Dine
+                    .separator 
+                    .description Find the perfect end to the perfect day

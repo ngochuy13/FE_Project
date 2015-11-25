@@ -1,0 +1,170 @@
+extends layouts/layout
+
+block vars
+  -title = 'Ipswich Homepage'
+  -bodyClass = 'home'
+
+block pagescript
+  
+
+block container
+  .inner
+    main#main(style="min-height: 800px")
+      section
+        .story-intro.home-banner.orange.text-center(style="background-image: url(images/home-story-0.jpg)")
+          .story(style="background-image: url(images/story-bg.png);background-size: cover;")
+            .container
+              .row
+                .col-xs-12
+                  .title Big Sky, Big Stars, and Fast Cars
+                  .separator
+                  .description Lorem Ipsum Dolor Et Vitae proviso doriate
+                  .meta Photo: Lorem Ipsum Dolor Et Vitae proviso doriate
+          .features(style="background-image: url(images/feature-bg.png);background-size: cover;")
+            .container
+              .row
+                .col-xs-12.col-md-4.text-center
+                  a(href="#", title="See & Do")
+                    .bubble
+                      .icon-feature.icon-feature-see-do
+                    span See & Do
+                .col-xs-12.col-md-4.text-center
+                  a(href="#", title="What's On")
+                    .bubble
+                      .icon-feature.icon-feature-what-on
+                    span What's On
+                .col-xs-12.col-md-4.text-center
+                  a(href="#", title="Stay")
+                    .bubble
+                      .icon-feature.icon-feature-stay
+                    span Stay
+      .colorful-bar
+        span.sp-1
+        span.sp-2
+        span.sp-3
+        span.sp-4
+        span.sp-5
+      .section.article-listing.grid-mode.home-grid
+        .grid-sizer
+        article.grid-item.grid-item--width2.grid-item--height2.col-xs-12.col-md-4(data-grid-order='1')
+          .media
+            a(href="#", title="Rich in history")
+              +img('media 1', 'article/article-1-thumb.jpg')
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 12
+            .detail
+              a(href="#", title="Rich in history")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title Rich in history
+            a(href="#", title="Read More").readmore Read More
+          .bottom-bar
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='2')
+          .media
+            a(href="#", title="SEQ’s Wine Region")
+              +img('media 2', 'article/article-2-thumb.jpg')
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 12
+            .detail
+              a(href="#", title="SEQ’s Wine Region")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title SEQ’s Wine Region
+            a(href="#", title="Read More").readmore Read More
+          .bottom-bar
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='3')
+          .media
+            a(href="#", title="5 Magical Day Trips")
+              +img('media 3', 'article/article-3-thumb.jpg')
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 12
+            .detail
+              a(href="#", title="5 Magical Day Trips")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title 5 Magical Day Trips
+            a(href="#", title="Read More").readmore Read More
+          .bottom-bar
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='4')
+          .media
+            a(href="#", title="Scenic Drives")
+              +img('media 4', 'article/article-4-thumb.jpg')
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 12
+            .detail
+              a(href="#", title="Scenic Drives")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title Scenic Drives
+            a(href="#", title="Read More").readmore Read More
+          .bottom-bar
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='6')
+          .media
+            a(href="#", title="3 Best Family Outings")
+              +img('media 5', 'article/article-5-thumb.jpg')
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 12
+            .detail
+              a(href="#", title="3 Best Family Outings")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title 3 Best Family Outings
+            a(href="#", title="Read More").readmore Read More
+          .bottom-bar
+        article.grid-item.grid-item--width2.grid-item--height2.col-xs-12.col-md-4(data-grid-order='5')
+          .media
+            a(href="#", title="Willowbank - QLD’s Premier Raceway ")
+              +img('media 6', 'article/article-6-thumb.jpg')
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 12
+            .detail
+              a(href="#", title="Willowbank - QLD’s Premier Raceway ")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title Willowbank - QLD’s Premier Raceway 
+            a(href="#", title="Read More").readmore Read More
+          .bottom-bar
+      section
+        a(href="#", title="location").ipswich-map.imagefill-section
+          +img('ipswich general map', 'ipswich-general-map.jpg').main-img
+          +img('ipswich general map', 'ipswich-general-map-mobile.jpg').mobile-img
+      section.hidden-xs.hidden-sm
+        .subscribe-form-landing.subscribe-form.text-center
+          .description
+            p Deals, Updates, and Discounts. Stay informed about what's happening in Ipswich.
+          form(method="POST", action="")
+            +input("text", "subscribe-email", "")(placeholder="Your Email").email.form-control
+            button.btn.btn-primary.btn-submit Go
+      section.hidden-xs.hidden-sm
+        .story-intro.bottom-bar.purple.text-center(style="background-image: url(images/home-story-1.jpg)")
+          .container
+            .row
+              .col-xs-12
+                .title In & Around Ipswich
+                .separator
+                .description Lorem Ipsum Dolor Et Vitae proviso doriate
+                .meta Photo: Lorem Ipsum Dolor Et Vitae proviso doriate
+                a(href="#", title="Read More").readmore Read More 
+      section.hidden-xs.hidden-sm
+        .story-intro.blue.text-center(style="background-image: url(images/home-story-2.jpg)")
+          .container
+            .row
+              .col-xs-12
+                .title Ipswich Walks
+                .separator
+                .description Lorem Ipsum Dolor Et Vitae proviso doriate
+                .meta Photo: Lorem Ipsum Dolor Et Vitae proviso doriate
+                a(href="#", title="Read More").readmore Read More
+                

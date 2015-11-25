@@ -1,0 +1,79 @@
+extends layouts/corp-template
+
+block header
+  include includes/header-corporate
+  block breadcrumb
+
+block vars
+  -title = 'Home'
+  -bodyClass = 'corporate'
+  -bannerIMG = 'home/banner.jpg'
+  -page = 'corporatelanding'
+
+block var-2
+  -templateScriptArr = 'scripts/photo-gallery.js'
+  
+block pagescript
+  script.
+    document.addEventListener('DOMContentLoaded', function(){
+      var isRTL = document.querySelector("html").getAttribute('dir') === "rtl";  
+    });
+block container    
+  .inner
+    main#main 
+      section.section-block
+        +page-title-star("WELCOME TO KEMPINSKI HOTELS","Hoteliers since 1897") 
+      #find-your-destination.static-map-section.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+        +img("Corporate", "corporate/image-5.jpg")
+      section#inspireme.section-block
+        +section-title("EXPERIENCES WITH KEMPINSKI", "Hoteliers since 1897", "generous hospitality")
+        include includes/corporate-experience
+      #special-offer.section-article-blog
+        +section-title("WHATS’ ON WITH KEMPINSKI", "Hoteliers since 1897", "GENEROUS HOSPITALITY").gray.article-blog__title 
+        .section-article-blog__content.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+          .container
+            .row
+              +article-blog-item('corporate/image-7.jpg', 'golf destinations', '', '<p>If sport and fitness is a part of your daily life, don\'t miss out on it during your vacation. Stay active with Kempinski!</p><ul><li><a href="#" title="GENEVA (SWITZERLAND)">GENEVA (SWITZERLAND)</a></li><li><a href="#" title="MUNICH (GERMANY)">MUNICH (GERMANY)</a></li></ul>').col-xs-12.col-sm-4
+
+                +cta-btngroup-1('further information', '#')
+
+              +article-blog-item('corporate/image-8.jpg', 'WELLNESS & SPA', '', '<p>No matter where you are in the world, and whatever the reason for your trip, it\'s always important to dedicate some time to yourself to relax and unwind.</p><ul><li><a href="#" title="VIEW HOTEL RESERVATION NUMBERS">VIEW HOTEL RESERVATION NUMBERS</a></li></ul>').col-xs-12.col-sm-4
+                +cta-btngroup-1('further information', '#')
+
+              +article-blog-item('corporate/image-9.jpg', 'FAMILY & KIDS', '', '<p>At Kempinski, we treat our younger guests just like we would any other! Enjoy some family time together while having all the fun in the world!</p>').col-xs-12.col-sm-4
+                +cta-btngroup-1('further information', '#')
+    #feature-hotel.corp-gallery.wow.fadeIn(data-wow-duration="0.5s")
+      +section-title("EMIRATES PALACE BARS", "Explore Emirates Palace", "GENEROUS HOSPITALITY").gray
+      +filter-select([
+        {
+          "text": "DUBAI",
+          "link": "#conference-centre"
+        },
+        {
+          "text": "FRANKFURT",
+          "link": "#island-centre"
+        },
+        {
+          "text": "BERLIN",
+          "link": "#emirates-centre"
+        },
+        {
+          "text": "LAS BRISAS",
+          "link": "#business-centre"
+        },
+        {
+          "text": "DIWAN L'AUBERGE",
+          "link": "#terraces-exhibition"
+        }
+      ])
+      .tab-content.white
+        #conference-centre.tab-pane.active(role='tabpanel')
+          include includes/corp-slide
+        #island-centre.tab-pane(role='tabpanel')
+          include includes/corp-slide
+        #emirates-centre.tab-pane(role='tabpanel')
+          include includes/corp-slide
+        #business-centre.tab-pane(role='tabpanel')
+          include includes/corp-slide
+        #terraces-exhibition.tab-pane(role='tabpanel')
+          include includes/corp-slide

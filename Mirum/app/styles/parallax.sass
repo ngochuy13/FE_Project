@@ -1,0 +1,21 @@
+//==================================== Parallax ====================================//
+.parallax
+	.parallax-layer
+		position: relative
+		.parallax-content
+			background-size: 100% auto
+			background-attachment: fixed
+			background-repeat: no-repeat
+			background-position: left bottom
+			> img
+				width: 100%
+				height: auto
+				position: relative
+				display: block
+	&.with-video
+		.parallax-layer
+			img
+				display: none
+			video
+				width: 100%
+				height: auto

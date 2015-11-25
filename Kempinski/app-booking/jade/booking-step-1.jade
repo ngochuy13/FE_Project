@@ -1,0 +1,155 @@
+extends layouts/book-template
+
+block vars
+  -title = 'Booking Step'
+  -bodyClass = 'booking-step'
+  -bannerIMG = ''
+  -page = 'booking-step-1'
+block container  
+  .inner
+    main#main(style="min-height: 800px;")
+      .section-tab
+        +filter-select([
+          {
+            "text": "YOU BOOKING"
+          },
+          {
+            "text": "GUEST DETAILS"
+          },
+          {
+            "text": "CONFIRAMATION"
+          }
+        ])
+
+      .section-booking-widget
+        .booking-date-range-picker-container
+        .container.text-center
+          .row.form-inline(style="position: relative;")
+            .form-group
+              .row
+                label.control-label(for="from") FROM:
+                +fake-datepicker("Check-in", "CheckIn", "14-11-2015", "checkin-date" , false)
+            .form-group
+              .row
+                label.control-label(for="to") TO:
+                +fake-datepicker("Check-out", "CheckOut", "10-12-2015", "checkout-date" , false)
+            .form-group.num-room-select
+              .row
+                label.control-label(for="room") N&deg; ROOMS:
+                .select-wrap
+                  select.select-style-2.bootstrap-select
+                    option(value='1', tabindex='-1') 01
+                    option(value='2', tabindex='-1') 02
+                    option(value='3', tabindex='-1') 03
+                    option(value='4', tabindex='-1') 04
+                    option(value='5', tabindex='-1') 05
+            .form-group.rates-select
+              .row
+                label.control-label(for="room") 
+                .select-wrap
+                  select.select-style-2.bootstrap-select
+                    option(value='', tabindex='-1') RATES IN AED
+                    option(value='1', tabindex='-1') 1 rates
+                    option(value='2', tabindex='-1') 2 rates
+                    option(value='3', tabindex='-1') 3 rates
+                    option(value='4', tabindex='-1') 4 rates
+                    option(value='5', tabindex='-1') 5 rates
+            
+
+      .section-special-offers.section-block
+        .page-title.section-title.text-center
+          .container
+            h1.block-title.wow.fadeInUp(data-wow-duration="1s") MY RESERVATION
+            .sub-title.style-2.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.05s")
+              span
+                span.line-before
+                span.text Choose your room
+                span.line-after
+
+      .section-booking-content
+        .container
+          .row
+            .col-xs-12.col-sm-12.col-md-9.booking-results
+              .block-alert
+                .alert-wrap
+                  span.icon
+                  span Sorry: Just letting you know that we only have 3 bedrooms left in April
+              .content-step-1
+                +booking-result-item-2('Coral Room','choose-room/room-1.jpg' , 'room_1', ['laptop-size safe' , 'Separate Living Room and Bedroom' , 'Balcony' , 'Powder Room' , 'Flat-screen TV' , 'Entertainment Center' , 'Working Desk' , '24 Hour Butler' , 'Lounge Area' , 'Baby cot allowed'] , ['View: Sea' , 'Décor: Contemporary', 'Beds: King' , 'Maximum Occupancy: 3 Adult(s)' , 'Room Size: 110 m² (1184 ft²)']).type-2.open
+                +booking-result-item-2('Coral Room','choose-room/room-1.jpg' , 'room_2', ['laptop-size safe' , 'Separate Living Room and Bedroom' , 'Balcony' , 'Powder Room' , 'Flat-screen TV' , 'Entertainment Center' , 'Working Desk' , '24 Hour Butler' , 'Lounge Area' , 'Baby cot allowed'] , ['View: Sea' , 'Décor: Contemporary', 'Beds: King' , 'Maximum Occupancy: 3 Adult(s)' , 'Room Size: 110 m² (1184 ft²)']).type-2
+                +booking-result-item-2('Coral Room','choose-room/room-1.jpg' , 'room_3', ['laptop-size safe' , 'Separate Living Room and Bedroom' , 'Balcony' , 'Powder Room' , 'Flat-screen TV' , 'Entertainment Center' , 'Working Desk' , '24 Hour Butler' , 'Lounge Area' , 'Baby cot allowed'] , ['View: Sea' , 'Décor: Contemporary', 'Beds: King' , 'Maximum Occupancy: 3 Adult(s)' , 'Room Size: 110 m² (1184 ft²)']).type-2
+                +booking-result-item-2('Coral Room','choose-room/room-1.jpg' , 'room_4', ['laptop-size safe' , 'Separate Living Room and Bedroom' , 'Balcony' , 'Powder Room' , 'Flat-screen TV' , 'Entertainment Center' , 'Working Desk' , '24 Hour Butler' , 'Lounge Area' , 'Baby cot allowed'] , ['View: Sea' , 'Décor: Contemporary', 'Beds: King' , 'Maximum Occupancy: 3 Adult(s)' , 'Room Size: 110 m² (1184 ft²)']).type-2
+              .room-pagination.block-pagination.text-center
+                ul.pagination
+                  li.prev 
+                    a(href='#') prev
+                  li 
+                    a(href='#') 1
+                  li 
+                    a(href='#') 2
+                  li 
+                    a(href='#') 3
+                  li 
+                    a(href='#').current 4
+                  li 
+                    a(href='#') 5
+                  li 
+                    a(href='#') 6
+                  li 
+                    a(href='#') 7
+                  li 
+                    a(href='#') 8
+                  li 
+                    a(href='#') 9
+                  li.next
+                    a(href='#') next
+              
+            .col-xs-12.col-sm-12.col-md-3
+              .col-services-info
+                .block-services-short
+                  .row
+                    .services-item
+                      .col-xs-2.text-center.icon
+                        span.fa.fa-wifi
+                      .col-xs-10
+                        span Free Wifi
+                    .services-item
+                      .col-xs-2.text-center.icon
+                        span.fa.fa-check
+                      .col-xs-10
+                        span Best Rates Guaranteed
+                    .services-item
+                      .col-xs-2.text-center.icon
+                        span.fa.fa-user
+                      .col-xs-10
+                        span Customised assistance
+                .row
+                  .col-xs-12.col-sm-6.col-md-12
+                    .block-media.full
+                      .media-wrap
+                        +img('media' , 'booking-step/img-1.jpg')
+                  .col-xs-12.col-sm-6.col-md-12
+                    .block-description
+                      .title GOING BEYOND
+                      .editor-content
+                        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad totam atque sint eius tempora, perferendis.
+                      .information
+                        .address
+                          span.fa.fa-map-marker
+                          span West Corniche Road, P.O.Box - 39999, Abu Dhabi
+                        .phone
+                          span.fa.fa-phone
+                          a(href="tel:://971-2-690-9000" title="+971 2 690 9000") +971 2 690 9000
+                      .cta-btns.wide
+                        a(href="#", title="Book Now").btn.btn-default-outline FURTHER INFORMATION
+                .block-policy
+                  p 
+                    a(href="#", title="Guarantee Policy") Guarantee Policy
+                  p Guarantee is mandatory to reserve the room.
+                  p &nbsp;
+                  p 
+                    a(href="#", title="Terms & Conditions") Terms & Conditions
+                  p 
+                    a(href="#", title="Privacy Policy") Privacy Policy
+                  p 
+                    a(href="#", title="Children Policy") Children Policy

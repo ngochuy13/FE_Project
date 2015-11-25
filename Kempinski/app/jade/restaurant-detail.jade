@@ -1,0 +1,80 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Restaurants Detail'
+  -bodyClass = ''
+  -bannerIMG = 'restaurant-detail/banner.jpg'
+  -page = 'restaurant'
+
+block breadcrumb  
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#"
+      },{
+        "text": "EXPERIENCES",
+        "href":"#"
+      }])
+
+
+block container
+  .inner
+    main#main
+      .section-press-room.section-block.gray
+        +page-title("EMIRATES PALACE RESTAURANTS", "Mezzaluna Italian Restaurants", "THE BEST ITALIAN FOOD IN ABU DHABI").gray
+      .section-press-room
+        .press-room-detail-content.type-2 
+          .content
+            .container
+              .block-wrap 
+                .media
+                  +img("Pressroom detail", "restaurant-detail/img-1.jpg")                  
+                .title MEZZALUNA ITALIAN RESTAURANTS
+                .editor-content.description
+                  p Take a culinary tour of Italy with Mezzaluna restaurant, known for the best Italian food in Abu Dhabi. Regional dishes from across the beautiful country of Italy form a menu that is truly unique, and lovingly prepared by the genius hands and heart of our passionate Chef. 
+                  br
+                  p While dining on authentic fine Italian cuisine in the surrounds of Mezzaluna’s expertly designed, custom-created terrace, it is easy to imagine yourself dining in the beautiful trattorias of Lombardia, Umbria or Toscana, with their tree-lined roads, rolling hills and sun-kissed fields. 
+                  br 
+                  p With echoes of a hot Italian summer, the Abu Dhabi weather permits you to dine al fresco with your family and friends, while trying new and exciting dishes in our award winning Italian restaurant. Two private dining rooms are also available for groups of up to 16 people and are available for early reservations for special celebrations, or to catch up with good friends over great Italian food.
+                  br
+                  p Mezzaluna has won awards as one of the top Italian restaurants in Abu Dhabi for the unique dishes and culinary offerings crafted here. Mezzaluna is located on the ground level of the Emirates Palace and has glorious views of the picture-perfect sandy beach, crystal blue waters of the Arabian Gulf and the Emirates Palace Marina.
+                  br 
+                  p “La scoperta di un piatto nuovo è più preziosa per il genere umano che la scoperta di una nuova stella.”
+                  br 
+                  p (The discovery of a new dish is more precious to human beings than the discovery of a new star.)
+                  br 
+                  p Brillat-Savarin 
+                  br 
+                  .contact-header
+                    dl.dl-horizontal
+                      dt Email contact:
+                      dd
+                        a(href='mailto:reservations@emiratespalace.ae', title='reservations@emiratespalace.ae') reservations@emiratespalace.ae
+                      dt Telephone:
+                      dd
+                        a(href='tel:://971-2-690-9000', title='+971 2 690 9000') +971 2 690 9000
+                  br 
+                  .contact-header
+                    dl.dl-horizontal
+                      dt Opening Hours:
+                      dd &nbsp;
+                      dt Lunch:
+                      dd Mon - Sun  12:30 - 15:00
+                      dt Dinner:
+                      dd Mon - Sun  19:00 - 23:00
+                  br 
+                  .contact-header
+                    dl.dl-horizontal
+                      dt Restaurant Style:
+                      dd Ala Carte, Fine Dining
+                      dt Dress Code:
+                      dd Smart Casual
+                      dt Cuisine:
+                      dd Italian
+                      dt Capacity:
+                      dd 80 (Indoor) + 40 (Outdoor)
+              +cta-btngroup('MENU','#','FLOOR PLAN','#').wide
+
+
+                  

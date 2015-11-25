@@ -1,0 +1,73 @@
+::-ms-clear
+  display: none 
+
+.btn-default-outline
+  background: transparent
+  border: 2px solid #9d938a
+  color: #333333
+  transition: all 0.3s
+  &:hover
+    background-color: #9d938a
+    color: $white
+    transition: all 0.3s
+    @media (max-width: 1024px)
+      background: transparent
+      border: 2px solid #9d938a
+      color: #333333
+.btn-default
+  border: 2px solid #9d938a
+  background: #9d938a
+  color: $white
+  transition: all 0.3s
+  &:active, &:focus, &.focus, &:active:hover, &:visited
+    border-color: #9d938a
+    background-color: #9d938a
+    color: $white
+  &:hover
+    background-color: $white
+    color: #333
+    transition: all 0.3s
+    border-color: #9d938a
+    @media (max-width: 1024px)
+      border-color: #9d938a
+      background-color: #9d938a
+      color: $white
+.bootstrap-select
+  .btn-default
+    background: transparent
+    border: 2px solid #9d938a
+    color: #333333
+    transition: all 0.3s
+    &:hover
+      background-color: #9d938a
+      color: $white
+      transition: all 0.3s
+.btn-group-justified
+  .btn + .btn
+    border-left: 0
+.cta-btns
+  font-size: 0
+  padding: 0 2px
+  display: block
+  .btn
+    margin-left: -2px
+    margin-top: 10px
+    font-size: 11px
+    text-transform: uppercase
+    &.btn-book-now
+      padding: 6px 30px
+  &.wide
+    .btn
+      max-width: 210px
+      width: 100%
+      margin-top: 10px
+      @media (max-width: 440px)
+        display: block
+
+.btn
+  font-size: 11px
+  font-weight: bold
+  outline: none!important
+  border-radius: 0
+a
+  outline: none!important

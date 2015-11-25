@@ -1,0 +1,168 @@
+// Libraries [store common libraries]
+@import libs
+
+//bootstrap css
+// @import bootstrap
+
+// Variable
+@import variable
+// Mixin
+@import mixins
+
+body 
+  font-family: $font-arial
+  font-size: 14px
+.page-wrapper
+  overflow: hidden
+  font-size: 0
+.img-responsive
+  display: block
+  max-width: 100%
+  margin: 0 auto
+
+.img-circle
+  +border-radius(50%)
+  display: block
+
+.figure
+  border: 1px solid #d2dce5
+  padding: 6px
+  margin: 0 auto
+  max-width: 342px
+  @include box-sizing(border-box)
+  img
+    display: block
+    max-width: 100%
+    width: 100%
+
+
+
+html 
+  margin: 0
+  padding: 0
+  height: 100%
+
+body 
+  margin: 0
+  padding: 0
+  height: 100%
+  overflow-x: hidden
+.about-page-wrapper
+  font-size: 14px
+
+.section 
+  position: relative
+  overflow: hidden
+  width: 100%
+  height: 100%
+
+
+// // // style
+@import lib-scss/style
+
+// // // animate-custom
+@import sass/animate-custom
+
+// // // fix-ie8
+@import sass/fix-ie8
+
+// // // Survey
+@import sass/survey
+
+// // // banner-intel-scaling-item
+@import sass/banner-intel-scaling
+
+// // // Helpful links list
+@import sass/helpful-link-list
+
+// // // promotion
+@import sass/promotion
+
+// // // master-banner
+@import sass/master-banner 
+
+// // // banner-home
+@import sass/banner-home
+ 
+// // // after-sales
+@import sass/after-sales
+
+// // // after-sales
+@import sass/news
+
+// // // after-sales
+@import sass/finance
+
+// // // after-sales
+@import sass/awards
+
+// // // site-map
+@import sass/site-map
+ 
+// // // price-list
+@import sass/price-list
+
+// // // form
+@import sass/form
+
+// // // contact-us-landing
+@import sass/contact-us-landing
+
+// // // store-locator
+@import sass/store-locator
+
+// // // section-specification
+@import sass/section-specification
+
+// // // search-result
+@import sass/search-result
+
+// // // // responsive
+// @import sass/responsive
+
+// // // font-family
+@import sass/font-family 
+
+
+.modal
+  z-index: 200002
+.modal-backdrop
+  z-index: 200001
+
+.owl-carousel
+  .fadeOutDelay
+    -webkit-animation-name: fadeOutDelay;
+    animation-name: fadeOutDelay;
+  .fadeInDelay
+    -webkit-animation-name: fadeInDelay;
+    animation-name: fadeInDelay;
+
+@-webkit-keyframes fadeOutDelay
+  0% 
+    opacity: 1;
+  30%
+    opacity: 1;
+  100% 
+    opacity: 0;
+@keyframes fadeOutDelay
+  0% 
+    opacity: 1;
+  30%
+    opacity: 1;
+  100% 
+    opacity: 0;
+
+@-webkit-keyframes fadeInDelay
+  0% 
+    opacity: 0;
+  30%
+    opacity: 0;
+  100% 
+    opacity: 1;
+@keyframes fadeInDelay
+  0% 
+    opacity: 0;
+  30%
+    opacity: 0;
+  100% 
+    opacity: 1;

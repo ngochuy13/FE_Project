@@ -1,0 +1,90 @@
+mixin survey-rating(inputName)
+  .row.star-rating
+    .col-xs-12
+      .stars
+        +link('1', '#')(data-value='1')
+        +link('2', '#')(data-value='2')
+        +link('3', '#')(data-value='3')
+        +link('4', '#')(data-value='4')
+        +link('5', '#')(data-value='5')
+        +link('6', '#')(data-value='6')
+        +link('7', '#')(data-value='7')
+        +link('8', '#')(data-value='8')
+        +link('9', '#')(data-value='9')
+        +link('10', '#')(data-value='10')
+      +input('text',inputName)(required="required")
+  if block
+    block
+
+
+//a.btn.btn-primary(data-toggle='modal', href='#survey-popup') Trigger modal
+#survey-popup.survey-popup.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal')
+          span(sr-only) Close
+      .modal-body
+        form.validate-form(action='/', method='POST')
+          .question.question-1
+            h3 Question 1 of 3
+            p.question-title Please rate your overall experience on our site today
+            .answer
+              +survey-rating("overallExp")
+                .row.rating-description
+                  .col-xs-4.text-left Poor
+                  .col-xs-4.text-center Average
+                  .col-xs-4.text-right Excellent
+            .submission.text-center
+              span.error.hide Please fill in your answer
+              button.btn.common-btn.forward(data-question="2") Next
+          .question.question-2.hide
+            h3 Question 2 of 3
+            p.question-title Were you able to do what you wanted on the site today?
+            .answer
+              .radioUI.radio-primary
+                +input('radio', 'dowhatyouwant', 'yes')(checked='checked')#dowhatyouwant-yes
+                label(for="dowhatyouwant-yes") Yes
+              .radioUI.radio-primary
+                +input('radio', 'dowhatyouwant', 'no')#dowhatyouwant-no
+                label(for="dowhatyouwant-no") No
+              .radioUI.radio-primary
+                +input('radio', 'dowhatyouwant', 'too-early')#dowhatyouwant-too-early
+                label(for="dowhatyouwant-too-early") Too early to say
+            p.question-title If not, why not
+            .answer
+              .charcount
+                textarea(maxlength=500)
+                small.counter-message
+                  span.counter 500 
+                  |  characters remaining
+            .submission.text-center
+              span.error.hide Please fill in your answer
+              button.btn.common-btn.back(data-question="1") Back
+              button.btn.common-btn.forward(data-question="3") Next
+          .question.question-3.hide
+            h3 Question 3 of 3
+            p.question-title 
+              | Thinking about your experience on our site today,
+              br.hidden-xs
+              |how likely are you to recommend us to 
+              br.hidden-xs
+              |your family or friends?
+            .answer
+              .radioUI.radio-primary
+                +input('radio', 'doyoulike', 'extremelylikely')(checked='checked')#doyoulike-extremelylikely
+                label(for="extremelylikely-yes") Extremely Likely
+              .radioUI.radio-primary
+                +input('radio', 'doyoulike', 'extremelyunlikely')#doyoulike-extremelyunlikely
+                label(for="dowhatyouwant-no") Extremely Unlikely
+            p.question-title Please tell us why?
+            .answer
+              .charcount
+                textarea(maxlength=500)
+                small.counter-message
+                  span.counter 500 
+                  |  characters remaining
+            .submission.text-center
+              span.error.hide Please fill in your answer
+              button.btn.common-btn.back(data-question="2") Back
+              button.btn.common-btn.submit Finish

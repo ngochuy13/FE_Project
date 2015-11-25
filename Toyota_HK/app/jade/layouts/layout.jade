@@ -1,0 +1,160 @@
+include ../mixins/all
+block vars
+  -title = 'Site'
+  -bodyClass = ''
+- var error404                          = "404.html";
+- var libraries                         = "libraries.html";
+- var homepage                          = "home.html";
+
+- var carRactis                         = "car-ractis.html";
+- var carCamry                          = "car-camry.html";
+- var carCorolla                        = "car-corolla.html";
+- var carPriusC                         = "car-prius-c.html";
+- var carNoah                           = "car-noah.html";
+- var carSienta                         = "car-sienta-v2.html";
+- var carSpade                          = "car-spade.html";
+
+- var afterSale                         = "after-sales.html";
+- var formAccountInfo                   = "form-account-info.html";
+- var formPersonalInfo                  = "form-personal-info.html";
+- var formTestDrive                     = "form-test-drive.html";
+- var promotionList                     = "promotion-list.html";
+- var promotionDetail                   = "promotion-detail.html";
+- var priceList                         = "price-list.html";
+- var contactUsLanding                  = "contact-us-landing.html";
+- var storeLocator                      = "store-locator.html";
+- var about                             = "about.html";
+- var searchResult                      = "search-result.html";
+doctype html
+//[if IE 8]><html lang="en" class="no-js ie ie8"><![endif]
+//[if IE 9]><html lang="en" class="no-js ie ie9"><![endif]
+//[if gt IE 9]><!
+html(class="no-js", lang="en")
+  //<![endif]
+  head
+    meta(charset="utf-8")
+    //[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]
+    title=title
+    meta(name="description", content="")
+    meta(name="keywords", content="")
+    meta(name="robots", content="index, follow")
+    meta(name="author", content="")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    //- link(rel="shortcut icon", href="images/favicon.ico", type="image/x-icon")
+
+    //- link(href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&subset=latin,latin-ext', rel='stylesheet', type='text/css')
+
+    // build:css styles/vendor.css
+    link(rel="stylesheet", href="styles/vendor.css")
+    // endbuild
+    // build:css styles/main.css
+    link(rel="stylesheet", href="styles/main.css")
+    // endbuild
+    // build:css styles/car-detail.css
+    link(rel="stylesheet", href="styles/car-detail.css")
+    // endbuild
+
+    block pagestyle
+
+    //- link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", rel="stylesheet")
+
+    //[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]
+    
+    //- script include within the block build:js -- endbuild will be combined into one file and the url as stated after build:js
+    // build:js scripts/modernizr.js
+    script(src='/bower_components/modernizr/modernizr.js')
+    // endbuild
+  body.loading(class=bodyClass)
+    #block-preload.block-preload
+      .preload-icon
+      .preload-layer
+    block modal-helpful-link
+    #container
+      .page-wrapper
+        include ../includes/header
+        block container
+      include ../includes/footer
+
+    #modal-outdate-browsers.modal.fade
+      .modal-dialog
+        .modal-content
+          button.close(type='button', data-dismiss='modal')
+            img(src="images/icon-close-popup.png", alt="")
+          .modal-body
+            .row
+              .col-sm-12.col-md-12
+                .title Did you know that your Internet Explorer is out of date?
+                .description
+                  p To get the best possible experience using our website we recommend that you upgrade to a newer version or other web browser. A list of the most popular web browsers can be found below.
+                  p Just click on the icons to get to the download page.
+                .block-browsers
+                  +link-img('images/img-ie.png' , 'ie', '#' )
+                  +link-img('images/img-firefox.png' , 'firefox', '#' )
+                  +link-img('images/img-safari.png' , 'safari', '#' )
+                  +link-img('images/img-chrome.png' , 'chrome', '#' )
+
+
+    //- //[if lt IE 9]>
+    //-   <!-- div class="message">You are using an outdated version of Internet Explorer.  For security reasons you should upgrade your browser. Please go to Windows Updates and install the latest version.</div -->
+    //-   <script src="/scripts/lib-js/warning_ielt8.js"></script>
+    //-   <![endif]
+
+    //- cdn links
+    //- jQuery https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js
+
+    // build:js scripts/cdn.js
+    script(src='/scripts/lib-js/jquery.min.js')
+    // endbuild
+
+    script.
+      jQuery(document).ready(function($) {
+        $('.ie8 #modal-outdate-browsers').modal('show');
+        });
+
+    
+    // build:js scripts/dep.js
+    script(src='/scripts/lib-js/odfc-pubsub.js')
+    script(src='/scripts/lib-js/bootstrap.min.js')
+    script(src='/scripts/lib-js/bootstrap-select.min.js')
+    script(src='/scripts/lib-js/owl.carousel.js')
+    script(src='/scripts/lib-js/jquery.matchHeight-min.js')
+    //- script(src='/scripts/lib-js/jquery.accordion.js')
+    script(src='/scripts/lib-js/components.js')
+    script(src='/scripts/lib-js/jquery.sticky.js')
+    script(src='/scripts/lib-js/jquery.appear.js')
+    script(src='/scripts/lib-js/picturefill.min.js')
+    script(src='/scripts/lib-js/webslidemenu.js')
+    script(src='/scripts/lib-js/velocity.min.js')
+    script(src='/scripts/lib-js/jquery.jcarousel.min.js')
+    script(src='/scripts/lib-js/underscore-min.js')
+    script(src='/scripts/lib-js/jquery.bxslider.js')
+    script(src='/scripts/lib-js/fancybox/jquery.fancybox.js')
+    // endbuild
+  
+    block pagescript
+        
+    // build:js scripts/form-dep.js
+    script(src='/scripts/lib-js/checkboxUI.js')
+    script(src='/scripts/lib-js/bootstrap-datepicker.js')
+    script(src='/scripts/lib-js/radioUI.js')
+    script(src='/scripts/lib-js/jquery.validate.js')
+    script(src='/scripts/lib-js/additional-methods.min.js')
+    // endbuild
+
+    // build:js scripts/form.js
+    script(src='/scripts/lib-js/form.js')
+    // endbuild
+
+    // build:js scripts/main.js
+    script(src='/scripts/lib-js/home.js')
+    script(src='/scripts/lib-js/about.js')  
+    script(src='/scripts/lib-js/aftersales.js')  
+    script(src='/scripts/survey.js')
+    script(src='/scripts/main.js')
+    // endbuild
+
+    script.
+      //- Your master script stays here
+      //- This block will be override on each page.
+    //[if lt IE 8]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]
+    noscript JavaScript is off. Please enable to view full site.

@@ -1,0 +1,104 @@
+header#header 
+  .top-header
+    .container-fluid
+      .row 
+        a.navigation-trigger(href='#')
+          span
+          span
+          span 
+        .top-logo.col-xs-4.col-xs-push-4.col-md-3.col-md-push-0
+          .logo   
+            +link-img('logo.png', 'Logo', "home.html")
+        .top-panel.col-xs-4.col-xs-push-4.col-md-3.col-md-push-6.hide-phone  
+          a(href="http://KEMPINSKI.COM" target="_blank").back-to-corp-link
+            |KEMPINSKI HOTELS         
+            span.fa.fa-angle-down       
+          ul
+            li 
+              .dropdown    
+                .dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+                  | ENGLISH   
+                  span.fa.fa-angle-down
+                ul.dropdown-menu(aria-labelledby='dropdownMenu1')
+                  li
+                    a(href='#') ENGLISH    
+                  li
+                    a(href='#') ENGLISH 2       
+            li
+              a(href="#", title="Login")
+                span.user-icon
+                span.text-login Login       
+        .top-slogan.col-xs-12.col-xs-pull-0.col-md-6.col-md-pull-3
+          .text-big emirates palace arabian gulf       
+          .text-small
+            span
+              span.line.line-before
+              |Beyond 5-Star Luxury           
+              span.line.line-after 
+          //- .star-block
+          //-   span.star-icon
+          //-   span.star-icon   
+          //-   span.star-icon
+          //-   span.star-icon  
+          //-   span.star-icon       
+  .hero-banner
+    .banner-wrapper.corporate-banner-block
+      .banner-image-block.type-1
+        .content-wrap
+          +hero-banner-img("Corporate Page", "corporate/image-1.jpg")(data-bg-url="url(images/corporate/image-1.jpg)").dynamic-bg
+      .banner-image-block.type-3
+        .content-wrap
+          +hero-banner-img("Corporate Page", "corporate/image-2.jpg")(data-bg-url="url(images/corporate/image-2.jpg)").dynamic-bg
+          .overlay(data-target="#find-your-destination")
+            .text DESTINATION
+      .banner-image-block.type-3
+        .content-wrap
+          +hero-banner-img("Corporate Page", "corporate/image-3.jpg")(data-bg-url="url(images/corporate/image-3.jpg)").dynamic-bg
+          .overlay(data-target="#inspireme")
+            .text INSPIRED ME
+      .search-form
+        p HOW MAY WE ASSIST YOU ?
+      .banner-image-block.type-3
+        .content-wrap
+          +hero-banner-img("Corporate Page", "corporate/image-11.jpg")(data-bg-url="url(images/corporate/image-11.jpg)").dynamic-bg
+          .overlay(data-target="#special-offer")
+            .text SPECIAL OFFERS
+      .banner-image-block.type-3
+        .content-wrap
+          +hero-banner-img("Corporate Page", "corporate/image-4.jpg")(data-bg-url="url(images/corporate/image-4.jpg)").dynamic-bg
+          .overlay(data-target="#feature-hotel")
+            .text FEATURED HOTEL
+    .navigation-positioning
+      .navigation
+        .navigation__content           
+          ul.navigation__link 
+            li(class={active: page === 'corporatelanding'})
+              +link("corporatelanding", homepage)
+            li(class={active: page === 'corporatedestination'})
+              +link("corporatedestination", "#")
+          ul.navigation__linkcontrol.only-phone   
+            li
+              a(href="http://KEMPINSKI.COM" target="_blank").back-to-corp-link  
+                | KEMPINSKI.COM
+                //- span.fa.fa-angle-down 
+            li
+              .dropdown   
+                .dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+                  | ENGLISH   
+                  span.fa.fa-angle-down
+                ul.dropdown-menu(aria-labelledby='dropdownMenu1')
+                  li
+                    a(href='#') ENGLISH    
+                  li
+                    a(href='#') ENGLISH 2       
+            li
+              a(href="#", title="Login")
+                span.user-icon
+                span.text-login Login    
+
+  .booking-widget 
+    .container.text-center.hide-sm
+      a.navigation-trigger(href='#').hide-phone
+        span
+        span
+        span

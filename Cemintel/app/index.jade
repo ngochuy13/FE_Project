@@ -1,0 +1,60 @@
+extends layouts/default
+
+block content
+	.container.slider-block
+		.home-slider
+			.swiper-container#home-slider
+				.overlay
+					.relative-container
+						img(src="images/loading.png" alt="Loading")
+				.swiper-wrapper
+					.swiper-slide.img
+						img.home-slide-image(src="images/home/slide.jpg", alt="")
+						.hotspot(style='top: 30%; left: 80%;', data-toggle='popover', data-trigger='click', data-placement='left', data-html='true', data-content="<div class='hotspot-container'>\
+							<div class='hotspot-image'>\
+							<img src='images/thum1.png' alt=''>\
+							</div>\
+							<div class='hotspot-info'>\
+							<p class='hotspot-name bold'>Designer Series: Urban</p>\
+							<div class='hotspot-detail'>\
+							Lorem ipsum dolor sit amet conswe adip elit aeneaning euismod.\
+							</div>\
+							</div>\
+							<a href='#' class='button rainbow'><div class='bgw bold'>View Details</div></a>\
+							<div class='heart-icon'></div>\
+							</div>")
+						.hotspot(style='top: 40%; left: 20%;', data-toggle='popover', data-trigger='click', data-placement='right', data-html='true', data-content="<div class='hotspot-container'>\
+							<div class='hotspot-image'>\
+							<img src='images/thum1.png' alt=''>\
+							</div>\
+							<div class='hotspot-info'>\
+							<p class='hotspot-name bold'>Designer Series: Urban</p>\
+							<div class='hotspot-detail'>\
+							Lorem ipsum dolor sit amet conswe adip elit aeneaning euismod.\
+							</div>\
+							</div>\
+							<a href='#' class='button rainbow'><div class='bgw bold'>View Details</div></a>\
+							<div class='heart-icon'></div>\
+							</div>")
+					.swiper-slide.img
+						img.home-slide-image(src="images/home/slide.jpg", alt="")
+					.swiper-slide.img
+						img.home-slide-image(src="images/home/slide.jpg", alt="")
+					.swiper-slide.img
+						img.home-slide-image(src="images/home/slide.jpg", alt="")
+				.swiper-pagination
+		.row
+			.col-md-10.col-md-offset-1.text-center
+				.title-block.bold
+					h1.grey Cemintel Lorem Ipsum
+					.divider.innovate-divider
+						span
+				.block-inner-description
+					p.p.big Minions ipsum commodo veniam sit amet adipisicing magna tulaliloo potatoooo duis bananaaaa aliqua. Sit amet la bodaaa ut chasy pepete hana dul sae ullamco labore. Dolore underweaaar la bodaaa po kass labore belloo! Dolore daa.
+	include includes/home/innovate.jade
+	include includes/feature.jade
+	include includes/home/styliser.jade
+	include includes/home/innovation-casestudy.jade
+	include includes/home/videos.jade
+	include includes/home/latestnew.jade
+	

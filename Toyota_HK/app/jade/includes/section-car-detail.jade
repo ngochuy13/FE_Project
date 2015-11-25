@@ -1,0 +1,24 @@
+.section-car-detail-navigation
+  .container
+    .tab.tab-1(data-id='1').active
+      span EXTERIOR
+      .icon.icon-1
+    .tab.tab-2(data-id='2')
+      span INTERIOR
+      .icon.icon-2
+    .tab.tab-3(data-id='3')
+      span PERFORMANCE
+      .icon.icon-3
+    .tab.tab-4(data-id='4')
+      span SAFETY
+      .icon.icon-4
+
+.section-car-detail-content
+  #tab-1.active
+    include section-car-detail-content-exterior
+  #tab-2
+    include section-car-detail-content-interior
+  #tab-3
+    include section-car-detail-content-performance
+  #tab-4
+    include section-car-detail-content-safety  

@@ -1,0 +1,76 @@
+//- case study article mixin
+mixin case-study(src, title)
+	.case-study-item&attributes(attributes)
+		a(href="insightsArticle" , title="#{title}")
+			.block-img
+				+img(title , src)
+			.title= title
+		if block
+			block
+
+//- Product detail section mixin for product detail page
+mixin product-detail(src, title)
+	.section.section-product-detail-item&attributes(attributes)
+		.container
+			.media
+				+img(title , src)
+			.content
+				h4.title= title
+				.block-description
+					if block
+						block
+
+//- Facaulty member mixin for Faculty page
+mixin facaulty-member(src, title_1, title_2, title_3, title_4)
+	.facaulty-member-item&attributes(attributes)
+		.block-img
+			+img(title , src)
+		.block-content
+			p= title_1
+			p= title_2
+			p -----
+			p= title_3
+			p= title_4
+
+//- Universities partner mixin for Faculty page
+mixin universities-partner-item(src, title, link)
+	.universities-partner-item&attributes(attributes)
+		a(href="#{link}" , title="#{title}")
+			.block-img
+				+img(title , src)
+				.title= title
+			.block-description
+				if block
+					block
+//- Insight article mixin for insights page
+mixin insight-article-item(src, type, typeicon, title , link)
+	.insight-article-item&attributes(attributes)
+		.block-img
+			a(href='#{link}' , title='#{title}')
+				+img(title , src)
+		.block-info
+			.block-type
+				i(class=' fa fa-#{typeicon}')
+				span= type
+			.block-save-article
+				a(href="#" , title="Save this Article")
+					i(class='fa fa-star-o')
+					span Save this Article
+			.clearfix
+			.block-title
+				+link(title , link)
+			.block-description
+				if block
+					block
+				
+//- Office location mixin for contact page
+mixin office-location-item(src, title , link)
+	.office-location-item&attributes(attributes)
+		a(title='#{title}' , href='#{link}')
+			.block-img
+				+img(title , src)
+				.overplay-hover
+				.title= title
+		.block-description
+			if block
+				block

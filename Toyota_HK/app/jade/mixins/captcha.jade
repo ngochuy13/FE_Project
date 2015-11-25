@@ -1,0 +1,18 @@
+mixin captcha()
+  .captcha&attributes(attributes)
+    .input-wrapper
+      label.field-title
+        | Recaptcha
+        span.req-desc *
+      #p_lt_ctl07_maincontent_p_lt_ctl00_editabletext_ucEditableText_widget1_ctl00_viewBiz_ncpsecuritycode.EditingFormControlNestedControl.editing-form-control-nested-control
+        div
+          label#p_lt_ctl07_maincontent_p_lt_ctl00_editabletext_ucEditableText_widget1_ctl00_viewBiz_SecurityCode_lblSecurityCode(for='p_lt_ctl07_maincontent_p_lt_ctl00_editabletext_ucEditableText_widget1_ctl00_viewBiz_SecurityCode_txtSecurityCode') Enter security code:
+        table.CaptchaTable
+          tbody
+            tr
+              td
+                input#p_lt_ctl07_maincontent_p_lt_ctl00_editabletext_ucEditableText_widget1_ctl00_viewBiz_SecurityCode_txtSecurityCode.CaptchaTextBox.form-control(name='p$lt$ctl07$maincontent$p$lt$ctl00$editabletext$ucEditableText$widget1$ctl00$viewBiz$SecurityCode$txtSecurityCode', type='text')
+              td
+                img#p_lt_ctl07_maincontent_p_lt_ctl00_editabletext_ucEditableText_widget1_ctl00_viewBiz_SecurityCode_imgSecurityCode(src='/CMSPages/Dialogs/CaptchaImage.aspx?hash=f8a94749-912c-4282-b440-3f6cbe46330c&captcha=p_lt_ctl07_maincontent_p_lt_ctl00_editabletext_ucEditableText_widget1_ctl00_viewBiz_SecurityCode&width=80&height=20', alt='Security code')
+              td
+                a(href="#") Reset Captcha

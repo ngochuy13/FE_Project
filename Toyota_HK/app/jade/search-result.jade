@@ -1,0 +1,145 @@
+extends layouts/layout
+
+block vars
+  -title = 'Search Result'
+  -bodyClass = 'search-result'
+
+block container
+  .news
+    .about-page
+      .sub-page-banner
+        picture
+          source(srcset='images/about/about-banner-mobile.jpg', media='(max-width: 767px)')
+          source(srcset='images/about/about-banner.jpg', media='(max-width: 1280px)')
+          img.master-banner-img.intel-scaling(src='images/about/about-banner.jpg', alt='', data-width='1920', data-height='411')
+    .news-content
+      .inner
+        h2.page-title.custom-page-title Search Result
+        .perosnal-info-form.info-form.form-search-result
+          .form-content
+            .form-group
+              .input-wrapper
+                div
+                  label.label.focus(for='keywords') Keywords :
+                  input.input-text.form-control(name='p$lt$ctl06$maincontent$p$lt$ctl01$ToyotaSmartSearchDialogWithResults$srchDialog$txtSearchFor', type='text', value='car', maxlength='1000', aria-invalid='false')
+            .submission
+              input.btn.btn-primary(type='submit', name='p$lt$ctl06$maincontent$p$lt$ctl01$ToyotaSmartSearchDialogWithResults$srchDialog$btnSearch', value='Search Again')
+        .inner
+          .result-list
+            h3.total-results
+              | TOTAL RESULTS: 
+              strong
+                span 27
+            ul.pager
+              a.prev.no-direct(href='/search.aspx/?searchtext=car&searchmode=anyword') <
+              a.active(href='#', title='1') 1
+              a(href='/search.aspx/?searchtext=car&searchmode=anyword&page=2', title='Page 2') 2
+              a(href='/search.aspx/?searchtext=car&searchmode=anyword&page=3', title='Page 3') 3
+              a.next(href='/search.aspx/?searchtext=car&searchmode=anyword&page=2') >
+              a.last(href='/search.aspx/?searchtext=car&searchmode=anyword&page=3', title='Last Page') >>
+            .clearfix
+            .news-list
+              ul
+                li
+                  .col.news-img
+                    a(href='/en/after-sales/service-package-promotions/sport-car/')
+                      img(src='images/news/news-list1.jpg', title='', alt='')
+                  .col.news-details
+                    p.news-date 2015 Jul 13
+                    a.title(href='/en/after-sales/service-package-promotions/sport-car/') Sport-car
+                    p.caption   
+                    a.tools.exel(href='/en/after-sales/service-package-promotions/sport-car/') Learn More
+                li
+                  .col.news-img
+                    a(href='/en/after-sales/maintenance-driving-tips/car-theft-1/')
+                      img(src='images/news/news-list1.jpg', title='', alt='')
+                  .col.news-details
+                    p.news-date 2015 Jul 17
+                    a.title(href='/en/after-sales/maintenance-driving-tips/car-theft-1/') Car theft
+                    p.caption   
+                    a.tools.exel(href='/en/after-sales/maintenance-driving-tips/car-theft-1/') Learn More
+                li
+                  .col.news-img
+                    a(href='/en/new-toyota/promotion-list/new-cars/losts-new-car-sienta/')
+                      img(src='images/news/news-list1.jpg', title='', alt='')
+                  .col.news-details
+                    p.news-date 2015 Jul 17
+                    a.title(href='/en/new-toyota/promotion-list/new-cars/losts-new-car-sienta/') losts-new-car-sienta
+                    p.caption   [Urgent] Toyota losts new car - Sienta  
+                    a.tools.exel(href='/en/new-toyota/promotion-list/new-cars/losts-new-car-sienta/') Learn More
+                li
+                  .col.news-img
+                    a(href='/en/after-sales/maintenance-driving-tips/repairing-your-car/')
+                      img(src='images/news/news-list1.jpg', title='', alt='')
+                  .col.news-details
+                    p.news-date 2015 Jul 10
+                    a.title(href='/en/after-sales/maintenance-driving-tips/repairing-your-car/') Repairing-your-car
+                    p.caption   
+                    a.tools.exel(href='/en/after-sales/maintenance-driving-tips/repairing-your-car/') Learn More
+                li
+                  .col.news-img
+                    a(href='/en/after-sales/maintenance-service/car-care-service/')
+                      img(src='images/news/news-list1.jpg', title='', alt='')
+                  .col.news-details
+                    p.news-date 2015 Jul 13
+                    a.title(href='/en/after-sales/maintenance-service/car-care-service/') Car Care Service
+                    p.caption   
+                    a.tools.exel(href='/en/after-sales/maintenance-service/car-care-service/') Learn More
+                li
+                  .col.news-img
+                    a(href='/en/after-sales/maintenance-driving-tips/car-theft-2/')
+                      img(src='images/news/news-list1.jpg', title='', alt='')
+                  .col.news-details
+                    p.news-date 2015 Jul 17
+                    a.title(href='/en/after-sales/maintenance-driving-tips/car-theft-2/') Car-care
+                    p.caption   
+                    a.tools.exel(href='/en/after-sales/maintenance-driving-tips/car-theft-2/') Learn More
+                li
+                  .col.news-img
+                    a(href='/en/new-toyota/trade-in-services/')
+                      img(src='images/news/news-list1.jpg', title='', alt='')
+                  .col.news-details
+                    p.news-date 2015 Jul 01
+                    a.title(href='/en/new-toyota/trade-in-services/') trade-in-services
+                    p.caption   Trade in services  
+                    a.tools.exel(href='/en/new-toyota/trade-in-services/') Learn More
+                li
+                  .col.news-img
+                    a(href='/en/after-sales/maintenance-service/pdi-center/')
+                      img(src='images/news/news-list1.jpg', title='', alt='')
+                  .col.news-details
+                    p.news-date 2015 Jul 13
+                    a.title(href='/en/after-sales/maintenance-service/pdi-center/') PDI Center
+                    p.caption   
+                    a.tools.exel(href='/en/after-sales/maintenance-service/pdi-center/') Learn More
+                li
+                  .col.news-img
+                    a(href='/en/home/banners/banner-home-left/')
+                      img(src='images/news/news-list1.jpg', title='', alt='')
+                  .col.news-details
+                    p.news-date 2015 Jun 12
+                    a.title(href='/en/home/banners/banner-home-left/') banner-home-left
+                    p.caption   
+                    a.tools.exel(href='/en/home/banners/banner-home-left/') Learn More
+                li
+                  .col.news-img
+                    a(href='/en/contact-us/')
+                      img(src='images/news/news-list1.jpg', title='', alt='')
+                  .col.news-details
+                    p.news-date 2015 Jun 11
+                    a.title(href='/en/contact-us/') contact-us
+                    p.caption
+                      | Email to
+                      | info@crown-motors.com                    Store Finder                    Insurance Enquiry                   Phone Directory                  Request for Catalogue                   Test Drive booking                   Service booking               ...
+                    a.tools.exel(href='/en/contact-us/') Learn More
+            .clearfix
+            .news-pagination
+              ul
+                li
+                  ul.pager
+                    a.prev.no-direct(href='/search.aspx/?searchtext=car&searchmode=anyword') <
+                    a.active(href='#', title='1') 1
+                    a(href='/search.aspx/?searchtext=car&searchmode=anyword&page=2', title='Page 2') 2
+                    a(href='/search.aspx/?searchtext=car&searchmode=anyword&page=3', title='Page 3') 3
+                    a.next(href='/search.aspx/?searchtext=car&searchmode=anyword&page=2') >
+                    a.last(href='/search.aspx/?searchtext=car&searchmode=anyword&page=3', title='Last Page') >>

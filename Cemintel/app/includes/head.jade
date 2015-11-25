@@ -1,0 +1,27 @@
+head
+	meta(charset='utf-8')
+	title Cemintel
+	meta(name='description' content='')
+	meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+	link(rel="shortcut icon", href="favicon.ico" type="image/x-icon")
+	// Place favicon.ico and apple-touch-icon.png in the root directory
+
+	// build:css styles/vendor.css
+	// bower:css
+	link(rel='stylesheet' href='../bower_components/swiper/dist/idangerous.swiper.css')
+	link(rel='stylesheet' href='../bower_components/animate/index.css')
+	link(rel="stylesheet" href="../bower_components/PaW-Carousel/public/css/otherstyles.css")
+	link(rel="stylesheet" href="../bower_components/PaW-Carousel/public/css/pawcarousel.css")
+	link(rel="stylesheet" href="../bower_components/slick-carousel/slick/slick.css")
+	link(rel="stylesheet" href="../bower_components/slick-carousel/slick/slick-theme.css")
+	// endbower
+	// endbuild
+
+	// build:css styles/main.css
+	link(rel='stylesheet' href='styles/main.css')
+	// endbuild
+
+	// build:js scripts/vendor/modernizr.js
+	script(src='../bower_components/modernizr/modernizr.js')
+	// endbuild
+include ../includes/mixins.jade

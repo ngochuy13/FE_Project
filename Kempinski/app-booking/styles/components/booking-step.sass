@@ -1,0 +1,565 @@
+.booking-step
+  background: transparent
+  .top-header
+    position: relative
+  .filter-select
+    margin-top: 35px
+    .filter-slide .item 
+      a
+        color: #969292
+      &.selected a
+        color: #000000
+    span.bg-filter-select
+      height: 14px
+    .cover-after, .cover-before
+      display: none
+    .filter-slide
+      height: 45px
+  .page-wrapper
+    background: url('../images/booking-step/bg-body.jpg') repeat-x #fff 
+  .section-tab
+    display: inline-block
+    width: 100%
+  .section-tab, .section-booking-widget, .section-title
+    background: transparent
+  .form-horizontal-style
+    padding-top: 25px
+  form.guest-info.form-horizontal-style 
+    .title
+      margin-bottom: 17px
+    .agreement
+      margin-bottom: 24px
+    .control-label-wrap
+      @media(max-width: 768px)
+        text-align: left
+  .submission
+    .btn 
+      border: 2px solid #9d938a
+      padding: 5px 32px 5px 20px
+      font-weight: normal
+      font-size: 13px
+      letter-spacing: 3px
+      position: relative
+      &:hover .arrow-white
+        background-position: -76px -137px
+    .arrow-white
+      background-image: url(/images/spritesheet.png)
+      background-position: -97px -137px
+      background-repeat: no-repeat
+      display: inline-block
+      width: 10px
+      height: 10px
+      position: absolute
+      top: 8px
+      right: 12px
+  .block-alert
+    margin-bottom: 35px
+    .alert-wrap
+      background: #e0e0e0
+      height: 52px
+    .icon 
+      background-image: url(/images/spritesheet.png)
+      background-position: -329px -162px
+      background-repeat: no-repeat
+      display: inline-block
+      width: 78px
+      height: 52px
+      margin-right: 20px
+    span 
+      font-size: 19.88px
+      font-family: "Helvetica"
+      color: #8e3333
+      font-weight: bold
+      text-align: left
+      display: inline-block
+      vertical-align: top
+      line-height: 52px
+
+
+.section-title
+  .sub-title 
+    &.style-2
+      > span
+        padding: 0
+        position: relative
+        .line-before, .line-after
+          width: 100%
+          height: 1px
+          background: #bca845 
+          position: absolute
+          top: 15px
+          max-width: 133px
+        .line-before
+          right: 100%
+          margin-right: 15px
+        .line-after
+          left: 100%
+          margin-left: 15px
+
+
+.booking-result-item-group
+  &.type-2
+    margin-bottom: 24px
+    .item 
+      .head
+        padding: 17px 0 11px
+      &:last-child .head.collapsed
+        border: none
+    .cover
+      position: relative
+      cursor: pointer
+      overflow: hidden
+      &:hover
+        .hover 
+          top: 0
+          transition: top 0.3s
+      .num-room
+        position: absolute
+        background: #9d938a
+        bottom: 0
+        right: 0
+        span 
+          color: #fff
+          padding: 10px 15px
+          font-family: $kc-ff
+          font-weight: normal
+          font-size: 16px          
+      .hover
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        top: -100%
+        background: rgba(0,0,0,0.8)
+        transition: top 0.3s
+        span
+          color: #fff
+          font-size: 20px
+          text-align: center
+          display: block
+          position: relative
+          top: 50%
+          margin-top: -14px
+    .title
+      font-family: $kc-ff
+      font-weight: normal
+      font-size: 24px
+      display: inline-block
+      color: #010101
+      margin-bottom: 8px
+    .block-info 
+      padding-left: 3px
+    .item-title
+      font-size: 14.004px
+      font-family: $kc-ff
+      color: rgb( 0, 0, 0 )
+      line-height: 2.071
+      .arrow
+        background-image: url(/images/spritesheet.png)
+        background-position: -76px -137px
+        background-repeat: no-repeat
+        display: inline-block
+        width: 10px
+        height: 10px
+        margin-right: 15px
+    .currency
+      text-align: right
+      font-size: 18.006px
+      font-family: "Helvetica"
+      color: rgb( 0, 0, 0 )
+      line-height: 1
+      display: inline-block
+      .symbols
+        display: block
+        font-size: 12.004px
+        color: rgb( 153, 153, 153 )
+        line-height: 0.8
+    .book-link
+      display: inline-block
+      vertical-align: top
+      a 
+        font-size: 9px
+        font-family: "Helvetica"
+        color: rgb( 255, 255, 255 )
+        font-weight: bold
+        text-transform: uppercase
+        line-height: 3
+        text-align: center
+        background: #9d938a
+        padding: 0 15px
+        display: block
+        margin-left: 10px
+        &:hover, &:focus, &:active
+          text-decoration: none
+    .block-detail-content
+      display: none
+      margin-bottom: 40px
+      .block-media
+        border: 5px solid #e3e3e3
+      .room-features
+        margin-top: 25px
+        margin-bottom: 25px
+        font-size: 0px
+        .title
+          text-align: center
+          width: 100%
+          margin-bottom: 15px
+      ul.feature-list, ul.amenities-list
+        padding: 0 0 0 0
+        font-size: 0px
+        color: #50504d
+        letter-spacing: 0.1px
+        vertical-align: top
+        list-style: none
+        li
+          font-size: 12px
+          padding: 2px 10px 2px 0
+          vertical-align: top
+          &:before
+            content: ''
+            display: inline-block
+            width: 4px
+            height: 4px
+            border-radius: 4px
+            background: #50504d
+            margin-right: 5px
+            margin-bottom: 2px
+
+    &.open 
+      .block-detail , .block-info
+        width: 100%
+      .block-detail .cover
+        display: none
+      .block-detail-content
+        display: block
+      .block-info
+        padding-left: 15px
+
+.col-services-info
+  background: #f1f1f1
+  margin-bottom: 25px
+
+.block-services-short
+  padding: 10px
+  @media (max-width: 992px)
+    border-bottom: 1px solid #d4d1c1
+    margin-bottom: 25px 
+  .services-item
+    font-weight: bold
+    font-family: "Helvetica"
+    line-height: 24px
+    color: #000
+    text-transform: uppercase
+    float: left
+    width: 100%
+    padding: 7px 0
+    .icon 
+      font-size: 24px
+      color: #787878
+
+.block-media
+  &.full
+    img 
+      width: 100%
+  img 
+    max-width: 100%
+
+.block-description
+  padding: 15px   
+  .title 
+    font-size: 18px
+    font-family: "Helvetica"
+    line-height: 24px
+    color: #000
+    margin-bottom: 10px
+  .information
+    margin-top: 20px
+    .fa 
+      margin-right: 10px
+    .address
+      margin-bottom: 5px
+  .cta-btns
+    margin-top: 20px
+    margin-bottom: 10px
+
+.block-policy
+  border-top: 1px solid #d4d1c1
+  padding: 25px 15px 15px 15px
+  p 
+    margin-bottom: 0
+  a 
+    text-decoration: underline
+  
+
+
+.section-booking-widget
+  position: relative
+  padding: 12px 0
+  width: 100%
+  .booking-date-range-picker-container
+    top: 45px
+  .select-wrap
+    display: inline-block
+  .form-inline 
+    font-size: 0
+    .form-group
+      padding: 0px 30px
+      position: relative
+      display: inline-block
+      vertical-align: middle
+      margin-bottom: 0
+      font-weight: normal
+      .bootstrap-select.select-style-2
+        width: 100%
+        margin-left: 10px
+        .btn
+          font-weight: normal
+          height: 32px
+          overflow: hidden
+          width: 170px
+          &:focus
+            outline: none !important
+
+      .input-with-icon
+        padding: 0
+        display: inline-block
+        margin-left: 10px
+        position: relative
+      label
+        font-family: 'Helvetica',Arial,sans-serif
+        font-size: 14px
+        font-weight: 300
+        color: #000
+        text-transform: uppercase
+        line-height: 1.308
+        text-align: left
+        height: 30px
+        line-height: 31px
+      input, button, .type-input
+        background: #fff
+        border: 1px solid #dfdede
+        border-radius: 3px
+        font-size: 13px
+        font-family: 'Helvetica',Arial,sans-serif
+        color: #000
+        text-transform: uppercase
+        line-height: 1.308
+        text-align: left
+        height: 30px
+        line-height: 31px
+        padding: 0 12px
+        font-weight: normal
+        box-shadow: none
+        &::-webkit-input-placeholder
+          font-family: 'Helvetica',Arial,sans-serif
+          color: rgb( 0, 0, 0 )
+        &:-moz-placeholder /* Firefox 18- */
+          font-family: 'Helvetica',Arial,sans-serif
+          color: rgb( 0, 0, 0 )
+        &::-moz-placeholder  /* Firefox 19+ */
+          font-family: 'Helvetica',Arial,sans-serif
+          color: rgb( 0, 0, 0 )
+        &:-ms-input-placeholder  
+          font-family: 'Helvetica',Arial,sans-serif
+          color: rgb( 0, 0, 0 )
+      .icon-calendar
+        position: absolute
+        background-image: url(/images/spritesheet.png)
+        background-position: -180px 0px
+        background-repeat: no-repeat
+        width: 37px
+        height: 30px
+        display: inline-block
+        right: 0px
+        top: 0
+      button
+        padding-top: 0
+        &[type="submit"]
+          background: #9d938a
+          font-size: 13px
+          font-family: 'Helvetica',Arial,sans-serif 
+          color: rgb( 254, 251, 251 )
+          text-transform: uppercase
+          padding: 0px 20px
+          min-width: 141px
+          transition: all 0.3s
+          text-align: center
+          width: 100%
+          &:hover
+            color: #333333
+            background: rgb( 254, 251, 251 )
+            transition: all 0.3s
+      .bootstrap-select
+        &.select-style-2
+          width: 100%
+          position: relative
+        .filter-option
+          font-family: $hvl-ff
+  .form-inline 
+    .form-control.type-input
+      border-style: solid
+      border-width: 1px
+      border-color: rgb(223, 222, 222)
+      width: 170px
+      height: 32px
+      cursor: pointer
+    .icon-calendar
+      cursor: pointer
+
+.booking-step-3
+  .section-tab
+    margin-bottom: 20px
+
+.block-message
+  border: 5px solid #dfdccc
+  padding: 26px
+  background: #fff
+  text-align: center
+  font-size: 18.987px
+  line-height: 1.422
+  font-family: $kc-ff
+  color: #000
+
+.block-review-booking-info
+  .page-title
+    padding-top: 24px
+    padding-bottom: 10px
+.info-room
+  .item
+    clear: both
+    > div
+      float: left
+      width: 50%
+      padding: 11px 11px 1px 11px
+  .title 
+    margin-top: 35px
+    white-space: nowrap
+    text-transform: none
+    letter-spacing: normal
+    font-family: $kc-ff
+    font-size: 20px
+    float: left
+    width: 100% 
+    color: #000
+
+.info-room-action
+  text-align: center
+  margin-top: 16px
+  display: inline-block
+  width: 100%
+  .cta-btns
+    display: inline-block
+    width: 100px
+    padding: 0 3.5px
+
+.block-disclaimer    
+  margin-top: 30px
+  border-top: 1px solid #dfdccc
+  padding-top: 15px
+  margin-bottom: 50px
+  .title
+    white-space: nowrap
+    text-transform: none
+    letter-spacing: normal
+    font-family: $kc-ff
+    font-size: 20px
+    float: left
+    width: 100% 
+    color: #000
+    margin-bottom: 7px
+  .editor-content p
+    font-size: 12px
+
+
+
+.package-selection-wrapper
+  border: 5px solid #eee
+  background: $white    
+  padding: 11px 14px
+  .booking-result-item-group.type-2 .title
+    margin-bottom: 1px
+  .booking-result-item-group.type-2, .cover
+    margin-bottom: 0
+  .main-information
+    padding-left: 33px
+    @media (max-width: 767px)
+      padding-left: 0px
+  .main-information, .extra-information
+    @media (max-width: 767px)
+      margin-top: 15px
+    letter-spacing: 0.1px
+    font-size: 12px
+    line-height: 1.83
+    h1, h2, h3, h4
+      margin: 0
+    a
+      font-size: 12px
+      display: block
+      text-decoration: underline
+    p
+      margin: 0
+  .field-title, .sub-total
+    font-weight: bold
+    font-size: 12px
+    line-height: 1.83
+  .sub-total
+    margin-top: 40px
+  .info-piece
+    margin-bottom: 20px
+form.guest-info.form-horizontal-style 
+  .title
+    margin-bottom: 23px
+  input
+    border: 1px solid #cfcfcf
+    border-radius: 0
+  .control-label-wrap
+    text-align: right
+    font-size: 12px
+  .control-label
+    font-weight: normal
+  .agreement
+    margin-top: 30px
+    margin-bottom: 25px
+    font-size: 11px
+    color: #010101
+    a
+      text-decoration: underline
+
+.content-step-0
+  margin-bottom: 30px
+
+@media (max-width: 1199px)
+  .section-booking-widget
+    .form-inline 
+      .form-group
+        margin-bottom: 20px
+
+@media (max-width: 767px)
+  .section-booking-widget
+    .container
+      text-align: left
+    .form-inline
+      padding: 0 20px
+      .form-group 
+        font-size: 0
+        width: 100%
+        padding: 0
+        .row
+          margin: 0
+        label
+          width: 30%
+        .input-with-icon
+          width: 60%
+          margin-left: 0
+        .select-wrap
+          width: 60%
+        .bootstrap-select.select-style-2
+          margin-left: 0
+          .btn
+            width: 100%
+            display: block
+      .rates-select, .num-room-select
+        label, .select-wrap
+          vertical-align: middle
+      .form-control.type-input
+        width: 100%

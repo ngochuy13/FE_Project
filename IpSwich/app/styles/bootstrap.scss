@@ -1,0 +1,47 @@
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap.scss";
+// Core variables and mixins
+// @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+// @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+// // Reset and dependencies
+// @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/normalize.scss";
+// @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding.scss";
+// @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/forms.scss";
+// @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/buttons.scss";
+// @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/grid.scss";
+// @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/tables.scss";
+// @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns.scss";
+// @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/utilities.scss";
+// @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/print";
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+// Transformation
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
+
+@media (min-width: 1201px) {
+  .container{
+    width: 1200px;
+  }
+}
+.btn-primary{
+  background: $c_blue_act;
+  border: 1px solid $c_blue_act;
+  &:hover, &:active{
+    background: $c_blue_act_hover;
+    border: 1px solid $c_blue_act_hover;
+  }
+}
+.form-control{
+  border-color: #d7d7d7;
+  box-shadow: none;
+  border-radius: 3px;
+  font-size: 16px;
+  color: #5e5e5e;
+  height: 50px;
+}

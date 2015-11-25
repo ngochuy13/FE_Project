@@ -1,0 +1,258 @@
+/* == Helpful links list == */
+  @media screen and (min-width: 768px) {
+    .mobile-trigger-btn {
+      display: none;
+    }
+    .helpful-link-list {
+      width: 300px;
+      height: auto;
+      /*overflow: hidden;*/
+      position: fixed;
+      z-index: 85;
+      z-index: 99999;
+      top: 280px;
+      right: -243px;
+      margin: 0 auto;
+      padding: 5px 0;
+      transition: right 0.25s ease-out;
+      -moz-transition: right 0.25s ease-out;
+      -webkit-transition: right 0.25s ease-out;  
+
+      &:before, &:after {
+        content: '';
+        background: url('../images/homes/master-banner-helpful-links-before.png') no-repeat;
+        width: 60px;
+        height: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      &:after {
+        background-image: url('../images/homes/master-banner-helpful-links-after.png');
+        top: auto; 
+        bottom: 0;
+      }
+    }
+    .helpful-link-list.fix-to-bottom {
+    }
+    .helpful-link-list:hover,
+    .helpful-link-list.helpful-link-list--active {
+      /*right: 0;*/
+    }
+      .helpful-link-list li {
+        width: 100%;
+        padding-left: 60px;
+        position: relative;
+        left: 0px;
+        background: url(../images/homes/master-banner-helpful-links-bg.png) repeat 0 0;
+      }
+        .helpful-link-list li:hover {
+        }
+        .helpful-link-list li:hover a {
+          padding-left: 10px;
+          left: -300px;  
+
+          transition: left 0.25s ease-out;
+          -moz-transition: left 0.25s ease-out;
+          -webkit-transition: left 0.25s ease-out;
+          &.icon {
+            left: 0;
+          }
+        }
+        .helpful-link-list li:last-child a {
+          height: 60px;
+        }
+        .helpful-link-list li a {
+          /*font-family: 'myriad_pro_reg';*/
+          display: block;
+          width: 100%;
+          height: 61px;
+          line-height: 61px;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 14px;
+          color: #666;
+          padding-left: 60px;  
+          left: 0;
+          position: relative;
+          background: url(../images/homes/master-banner-helpful-links-bg.png) repeat 0 0;
+
+          transition: left 0.25s ease-out;
+          -moz-transition: left 0.25s ease-out;
+          -webkit-transition: left 0.25s ease-out;        
+        }
+        .zh-HK .helpful-link-list li a {
+          font-size: 16px;
+        }
+        .helpful-link-list li a:hover {
+          color: #999;
+        }
+        .helpful-link-list li .icon {
+          width: 60px;
+          height: 60px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 99;
+          background: url(../images/icons/helpful-link-list-icon-1.png) no-repeat #fdfdfd center center;
+        }
+        .helpful-link-list li .icon-1 {
+        }
+        .helpful-link-list li .icon-2 {
+          background-image: url(../images/icons/helpful-link-list-icon-2.png);
+        }
+        .helpful-link-list li .icon-3 {
+          background-image: url(../images/icons/helpful-link-list-icon-3.png);
+        }
+        .helpful-link-list li .icon-4 {
+          background-image: url(../images/icons/helpful-link-list-icon-4.png);
+        }
+        .helpful-link-list li .icon-5 {
+          background-image: url(../images/icons/helpful-link-list-icon-5.png);
+        }
+        .helpful-link-list li .icon-6 {
+          background-image: url(../images/icons/helpful-link-list-icon-6.png);
+        }
+        .helpful-link-list li .icon-7 {
+          background-image: url(../images/icons/helpful-link-list-icon-7.png);
+        }
+        .helpful-link-list li .icon-8 {
+          background-image: url(../images/icons/helpful-link-list-icon-8.png);
+        }
+        .helpful-link-list li .icon-9 {
+          background-image: url(../images/icons/helpful-link-list-icon-9.png);
+        }
+        .helpful-link-list li .icon-10 {
+          background-image: url(../images/icons/helpful-link-list-icon-10.png);
+        }
+        .helpful-link-list li .icon-11 {
+          background-image: url(../images/icons/helpful-link-list-icon-11.png);
+        }
+        .helpful-link-list li .icon-12 {
+          background-image: url(../images/icons/helpful-link-list-icon-12.png);
+        }
+        .helpful-link-list li .icon-13 {
+          background-image: url(../images/icons/helpful-link-list-icon-13.png);
+        }
+        .helpful-link-list li .icon-14 {
+          background-image: url(../images/icons/helpful-link-list-icon-14.png);
+        }
+
+  }
+  @media screen and (max-width: 767px) {
+    .mobile-trigger-btn {
+      display: block;
+      width: 50px;
+      height: 0;
+      padding: 45px 0 0;
+      text-indent: -1000em;
+      overflow: hidden;
+      background: url(../images/homes/icon-menu-01.jpg) no-repeat center -15px;
+      position: fixed;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: 85;
+      z-index: 99999;
+      bottom: 0;
+    }
+    .mobile-trigger-btn.mobile-trigger-btn-open {
+      background-position: center -88px;
+    }
+    .helpful-link-list__wrapper {
+      position: absolute;
+      z-index: 1;
+      bottom: 30px;
+      width: 100%;
+      height: 75px;
+      // border-bottom: 1px solid #B0A987;
+      margin-top: 10px;
+    }
+    .helpful-link-list__wrapper.helpful-link-list--opened {
+      bottom: auto;
+      top: 0;
+      height: 100%;
+      border-top: none;
+      margin-top: 0;
+
+      ul {
+        background: rgba(215, 17, 27, .9);   
+        padding-top: 60px;     
+      }
+    }
+      .helpful-link-list {
+        width: 100%;
+        overflow: hidden;
+        display: none;
+        padding-top: 85px;
+      }
+      .helpful-link-list__wrapper.helpful-link-list--opened{
+        z-index: 9999;
+        position: fixed;
+        .helpful-link-list {
+          display: block;
+        }
+      }
+        .helpful-link-list li {
+          width: 50%;
+          float: left;
+          padding: 15px 0;
+          margin-bottom: 3px;
+        }
+          .helpful-link-list a {
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 12px;
+            display: block;
+            width: 100%;
+            color: #fff;
+          }
+          .helpful-link-list .icon {
+            content: " ";
+            display: block;
+            width: 25px;
+            height: 25px;
+            margin: 0 auto 15px;
+            overflow: hidden;
+            background-size: auto 100%!important;
+            &.icon-1{
+              background: url(../images/icons/helpful/helpful-mobile-1.png) no-repeat;
+            }
+            &.icon-2{
+              background: url(../images/icons/helpful/helpful-mobile-2.png) no-repeat;
+            }
+            &.icon-3{
+              background: url(../images/icons/helpful/helpful-mobile-3.png) no-repeat;
+            }
+            &.icon-4{
+              background: url(../images/icons/helpful/helpful-mobile-4.png) no-repeat;
+            }
+            &.icon-5{
+              background: url(../images/icons/helpful/helpful-mobile-5.png) no-repeat;
+            }
+            &.icon-6{
+              background: url(../images/icons/helpful/helpful-mobile-6.png) no-repeat;
+            }
+            &.icon-7{
+              background: url(../images/icons/helpful/helpful-mobile-7.png) no-repeat;
+            }
+            &.icon-8{
+              background: url(../images/icons/helpful/helpful-mobile-8.png) no-repeat;
+            }
+            &.icon-9{
+              background: url(../images/icons/helpful/helpful-mobile-9.png) no-repeat;
+            }
+            &.icon-10{
+              background: url(../images/icons/helpful/helpful-mobile-10.png) no-repeat;
+            }
+            &.icon-11{
+              background: url(../images/icons/helpful/helpful-mobile-11.png) no-repeat;
+            }
+            &.icon-12{
+              background: url(../images/icons/helpful/helpful-mobile-12.png) no-repeat;
+            }
+            &.icon-13{
+              background: url(../images/icons/helpful/helpful-mobile-13.png) no-repeat;
+            }
+          }
+  }

@@ -1,0 +1,228 @@
+extends layouts/layout
+
+block vars
+  -title = 'Libraries'
+  -bodyClass = ''
+
+block pagescript
+  script(src='scripts/lib-demo.js')
+
+block container
+  .inner
+    main#main
+      .text-center
+        h3 
+          | Please refer to 
+          strong
+            a(href="scripts/lib-demo.js") lib-demo.js 
+          | for js running on this page
+      .container
+        .row
+          .col-xs-6
+            h1 
+              | Datepicker - 
+              small
+                +link('documentation', 'https://github.com/Eonasdan/bootstrap-datetimepicker')(target="_blank")
+            +datepicker("Date", "date","")
+          br
+          .col-xs-12
+            h5 HTML
+            pre.
+              &lt;div class="input-with-icon date-picker"&gt;
+                &lt;input type="text" name="date" value="" class="form-control" placeholder="Date"&gt;&lt;span class="fa fa-calendar"&gt;&lt;/span&gt;
+              &lt;/div&gt;
+            h5 JS
+            pre.
+              $('.date-picker input').datetimepicker({
+                format: "DD/MM/YYYY",
+                icons: {
+                  date: 'fa fa-calendar',
+                  up: '',
+                  down: '',
+                  previous: 'fa fa-angle-left',
+                  next: 'fa fa-angle-right',
+                  today: '',
+                  clear: '',
+                  close: ''
+                }
+              });
+        br
+        br
+        .row
+          .col-xs-6
+            h1 
+              | Customized select - 
+              small
+                +link('documentation', 'http://silviomoreto.github.io/bootstrap-select/')(target="_blank")
+            select.bootstrap-select.select-style-1.accomodation-select
+              option(value="1") Option 1
+              option(value="2") Option 2
+              option(value="3") Option 3
+              option(value="4") Option 4
+              option(value="5") Option 5
+              option(value="6") Option 6
+          br
+          .col-xs-12
+            h5 HTML
+            pre.
+              &lt;select class="bootstrap-select select-style-1 accomodation-select"&gt;
+                &lt;option value="1"&gt;Option 1&lt;/option&gt;
+                &lt;option value="2"&gt;Option 2&lt;/option&gt;
+                &lt;option value="3"&gt;Option 3&lt;/option&gt;
+                &lt;option value="4"&gt;Option 4&lt;/option&gt;
+                &lt;option value="5"&gt;Option 5&lt;/option&gt;
+                &lt;option value="6"&gt;Option 6&lt;/option&gt;
+              &lt;/select&gt;
+            h5 JS
+            pre.
+              $('.bootstrap-select').selectpicker();
+        br
+        br
+        .row
+          .col-xs-6
+            h1 
+              | Range Slider - 
+              small
+                +link('documentation', 'http://refreshless.com/nouislider/')(target="_blank")
+            .range-slider-control(style="margin-bottom: 50px;")
+              label Price pp/night
+              #range-slider
+          br
+          .col-xs-12
+            h5 HTML
+            pre.
+              &lt;div class="range-slider-control"&gt;
+                &lt;label&gt;Price pp/night&lt;/label&gt;
+                &lt;div id="range-slider"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+            h5 JS
+            pre.
+              rangeSlider.get(0).noUiSlider.on('update', function( values, handle ) {
+                rangeSlider.find(".noUi-handle .rangeslider-tooltip").eq(handle).html("$"+values[handle]);
+              });
+        br
+        br
+        .row
+          .col-xs-6
+            h1 
+              | Rating Star - 
+              small
+                +link('documentation', 'https://github.com/dreyescat/bootstrap-rating')(target="_blank")
+            .star-rating-wrapper
+              +input('hidden', 'starVal','3').star-rating
+          br
+          .col-xs-12
+            h5 HTML
+            pre.
+              &lt;div class="star-rating-wrapper"&gt;
+                &lt;input class="star-rating" type="hidden" name="starVal" value="3" /&gt;
+              &lt;/div&gt;
+            h5 JS
+            pre.
+              $(".star-rating").rating({
+                filled: 'fa fa-star',
+                empty: 'fa fa-star-o'
+              });
+      .container
+        h1 
+          | Grid - List View - 
+          small
+            +link('documentation', 'http://isotope.metafizzy.co')(target="_blank")
+      .text-right.section.article-list-filter(style="padding-bottom: 20px;")
+        .article-listing-view-mode-control
+          | View: 
+          button.btn-grid.active Grid
+          button.btn-list Boxed
+          button.btn-map Map
+      .section.article-listing.grid-mode.home-grid.clearfix
+        .grid-sizer
+        article.grid-item.grid-item--width2.grid-item--height2.col-xs-12.col-md-4(data-grid-order='1')
+          .media
+            a(href="#", title="Rich in history")
+              +img('media 1', 'article/article-1-thumb.jpg')
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 12
+            .detail
+              a(href="#", title="Rich in history")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title Rich in history
+            a(href="#", title="Read More").readmore Read More
+          .bottom-bar
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='2')
+          .media
+            a(href="#", title="SEQ’s Wine Region")
+              +img('media 2', 'article/article-2-thumb.jpg')
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 12
+            .detail
+              a(href="#", title="SEQ’s Wine Region")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title SEQ’s Wine Region
+            a(href="#", title="Read More").readmore Read More
+          .bottom-bar
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='3')
+          .media
+            a(href="#", title="5 Magical Day Trips")
+              +img('media 3', 'article/article-3-thumb.jpg')
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 12
+            .detail
+              a(href="#", title="5 Magical Day Trips")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title 5 Magical Day Trips
+            a(href="#", title="Read More").readmore Read More
+          .bottom-bar
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='4')
+          .media
+            a(href="#", title="Scenic Drives")
+              +img('media 4', 'article/article-4-thumb.jpg')
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 12
+            .detail
+              a(href="#", title="Scenic Drives")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title Scenic Drives
+            a(href="#", title="Read More").readmore Read More
+          .bottom-bar
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='6')
+          .media
+            a(href="#", title="3 Best Family Outings")
+              +img('media 5', 'article/article-5-thumb.jpg')
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 12
+            .detail
+              a(href="#", title="3 Best Family Outings")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title 3 Best Family Outings
+            a(href="#", title="Read More").readmore Read More
+          .bottom-bar
+        article.grid-item.grid-item--width2.grid-item--height2.col-xs-12.col-md-4(data-grid-order='5')
+          .media
+            a(href="#", title="Willowbank - QLD’s Premier Raceway ")
+              +img('media 6', 'article/article-6-thumb.jpg')
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 12
+            .detail
+              a(href="#", title="Willowbank - QLD’s Premier Raceway ")
+                .description Lorem ipsum Tempor pariatur esse sed.
+                .title Willowbank - QLD’s Premier Raceway 
+            a(href="#", title="Read More").readmore Read More
+          .bottom-bar

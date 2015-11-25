@@ -1,0 +1,14 @@
+extends layouts/layout
+
+block vars
+  -title = 'Page not found'
+  -bodyClass = 'not-found'
+
+block container
+  main#main
+    .container
+      .text-center
+        h1.title
+          | 404 NOT FOUND
+          p The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+        +btn('back', "#", "").btn-back

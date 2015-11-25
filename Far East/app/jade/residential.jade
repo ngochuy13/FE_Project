@@ -1,0 +1,14 @@
+extends layouts/layout
+
+block vars
+  -title = 'Residential'
+  -bodyClass = 'residential'
+block container
+  main#main(style="min-height: 800px")
+    
+    //- include includes/slide-section
+    +sectionSliderVideo('images/Greenwood Mews 4 plus 1 bedroom Showflat.mp4' , "images/slide-1.jpg")
+
+    include includes/enquiries_box_section
+    include includes/residental-property-section
+    include includes/lates-section

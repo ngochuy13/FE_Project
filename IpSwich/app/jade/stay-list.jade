@@ -1,0 +1,487 @@
+extends layouts/layout
+
+block vars
+  -title = 'Ipswich Stay List'
+  -bodyClass = 'stay-list-page'
+
+block pagescript
+  
+
+block container
+  .inner
+    main#main(style="min-height: 800px")
+      .section.article-list-filter
+        .container
+          .row
+            .col-xs-12.col-sm-6.blog-title
+              | Stay
+            .col-xs-12.col-sm-6.text-right.article-listing-view-mode-control
+              | View: 
+              button.btn-grid.active Grid
+              button.btn-list Boxed
+              button.btn-map Map
+      .section.article-list-filter.border-top.with-3-select
+        .container
+          .row
+            .col-xs-12.filter-select
+              .select-wrap
+                span.text Show
+                select.bootstrap-select.select-style-1.accomodation-select-1.search-select-picked
+                  option(value="") All
+                  option(value="1") Lorem ipsum dolor sit amet, consec
+                  option(value="2") Lorem ipsum dolor sit amet, consec
+                  option(value="3") Lorem ipsum dolor sit amet, consec
+              .select-wrap
+                select.bootstrap-select.select-style-1.accomodation-select-2.search-select-picked
+                  option(value="") Availability
+                  option(value="1") Lorem ipsum dolor
+                  option(value="2") Lorem ipsum dolor
+                  option(value="3") Lorem ipsum dolor
+              .select-wrap
+                span.text Order by
+                select.bootstrap-select.select-style-1.accomodation-select-3.search-select-picked
+                  option(value="") Name
+                  option(value="1") Accomodation Type 1
+                  option(value="2") Lorem ipsum dolor sit amet, consec
+                  option(value="3") Lorem ipsum dolor sit amet, consec
+              button.clear
+                | Clear 
+                span.fa.fa-refresh
+      .section.article-listing.grid-mode.blog-grid.stay-grid 
+        .grid-sizer
+
+        article.grid-item.grid-item--width2.grid-item--height2.col-xs-12.col-md-4(data-grid-order='1')
+          .media
+            a(href="#", title="View Images")
+              +img('media 1', 'stay-list/img-1.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact 
+              button 
+                .fa.fa-heart
+                | 21
+            .detail
+              .date-label
+                a(href="#", title="BED & BREAKFAST ")
+                  span BED & BREAKFAST 
+              a(href="#", title="Spicers Hidden Val")
+                .title.only-list Spicers Hidden Vale
+              .meta-data
+                .field
+                  span.big.fa.fa-map-marker
+                  span.small Ipswich
+                .field
+                  a(href="tel:07 3102 3333", title="07 3102 3333")
+                    span.big.fa.fa-phone
+                    span.small 07 3102 3333
+                .field
+                  span.big $170
+                  span.small From/Per Night
+                .field
+                  span.big.fa.fa-star
+                  span.small 4.5
+              a(href="#", title="Spicers Hidden Vale")
+                .title Spicers Hidden Vale
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='2')
+          .media
+            a(href="#", title="View Images")
+              +img('media 2', 'stay-list/img-2.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 16
+            .detail
+              .date-label
+                a(href="#", title="MOTEL")
+                  span MOTEL
+              a(href="#", title="Metro Hotel Ipswich Inter..")
+                .title.only-list Metro Hotel Ipswich Inter...
+              .meta-data
+                .field
+                  span.big.fa.fa-map-marker
+                  span.small Ipswich
+                .field
+                  a(href="tel:07 3102 3333", title="07 3102 3333")
+                    span.big.fa.fa-phone
+                    span.small 07 3102 3333
+                .field
+                  span.big $100
+                  span.small From/Per Night
+                .field
+                  span.big.fa.fa-star
+                  span.small 4.5
+              a(href="#", title="Metro Hotel Ipswich Inter...")
+                .title Metro Hotel Ipswich Inter...
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='3')
+          .media
+            a(href="#", title="View Images")
+              +img('media 2', 'stay-list/img-3.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 16
+            .detail
+              .date-label
+                a(href="#", title="SERVICED APARTMENTS ")
+                  span SERVICED APARTMENTS 
+              a(href="#", title="Quest Ipswic")
+                .title.only-list Quest Ipswich
+              .meta-data
+                .field
+                  span.big.fa.fa-map-marker
+                  span.small Ipswich
+                .field
+                  a(href="tel:07 3102 3333", title="07 3102 3333")
+                    span.big.fa.fa-phone
+                    span.small 07 3102 3333
+                .field
+                  span.big $100
+                  span.small From/Per Night
+                .field
+                  span.big.fa.fa-star
+                  span.small 4.5
+              a(href="#", title="Quest Ipswich")
+                .title Quest Ipswich
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='4')
+          .media
+            a(href="#", title="View Images")
+              +img('media 2', 'stay-list/img-4.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 16
+            .detail
+              .date-label
+                a(href="#", title="BED & BREAKFAST")
+                  span BED & BREAKFAST
+              a(href="#", title="Ipswich City Mote")
+                .title.only-list Ipswich City Motel
+              .meta-data
+                .field
+                  span.big.fa.fa-map-marker
+                  span.small Ipswich
+                .field
+                  a(href="tel:07 3102 3333", title="07 3102 3333")
+                    span.big.fa.fa-phone
+                    span.small 07 3102 3333
+                .field
+                  span.big $100
+                  span.small From/Per Night
+                .field
+                  span.big.fa.fa-star
+                  span.small 4.5
+              a(href="#", title="Ipswich City Motel")
+                .title Ipswich City Motel
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='6')
+          .media
+            a(href="#", title="View Images")
+              +img('media 2', 'stay-list/img-5.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 16
+            .detail
+              .date-label
+                a(href="#", title="MOTEL")
+                  span MOTEL
+              a(href="#", title="Quest Ipswic")
+                .title.only-list Quest Ipswich
+              .meta-data
+                .field
+                  span.big.fa.fa-map-marker
+                  span.small Ipswich
+                .field
+                  a(href="tel:07 3102 3333", title="07 3102 3333")
+                    span.big.fa.fa-phone
+                    span.small 07 3102 3333
+                .field
+                  span.big $100
+                  span.small From/Per Night
+                .field
+                  span.big.fa.fa-star
+                  span.small 4.5
+              a(href="#", title="Quest Ipswich")
+                .title Quest Ipswich
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+
+        article.grid-item.grid-item--width2.grid-item--height2.col-xs-12.col-md-4(data-grid-order='5') 
+          .media
+            a(href="#", title="View Images")
+              +img('media 1', 'stay-list/img-6.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 21
+            .detail
+              .date-label
+                a(href="#", title="SERVICED APARTMENTS")
+                  span SERVICED APARTMENTS
+              a(href="#", title="Oaks Aspire")
+                .title.only-list Oaks Aspire 
+              .meta-data
+                .field
+                  span.big.fa.fa-map-marker
+                  span.small Ipswich
+                .field
+                  a(href="tel:07 3102 3333", title="07 3102 3333")
+                    span.big.fa.fa-phone
+                    span.small 07 3102 3333
+                .field
+                  span.big $170
+                  span.small From/Per Night
+                .field
+                  span.big.fa.fa-star
+                  span.small 4.5
+              a(href="#", title="Oaks Aspire ")
+                .title Oaks Aspire 
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+
+
+        article.grid-item.grid-item--width2.grid-item--height2.col-xs-12.col-md-4(data-grid-order='7')
+          .media
+            a(href="#", title="View Images")
+              +img('media 1', 'stay-list/img-1.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 21
+            .detail
+              .date-label
+                a(href="#", title="BED & BREAKFAST")
+                  span BED & BREAKFAST
+              a(href="#", title="Spicers Hidden Val")
+                .title.only-list Spicers Hidden Vale
+              .meta-data
+                .field
+                  span.big.fa.fa-map-marker
+                  span.small Ipswich
+                .field
+                  a(href="tel:07 3102 3333", title="07 3102 3333")
+                    span.big.fa.fa-phone
+                    span.small 07 3102 3333
+                .field
+                  span.big $170
+                  span.small From/Per Night
+                .field
+                  span.big.fa.fa-star
+                  span.small 4.5
+              a(href="#", title="Spicers Hidden Vale")
+                .title Spicers Hidden Vale
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='8')
+          .media
+            a(href="#", title="View Images")
+              +img('media 2', 'stay-list/img-2.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 16
+            .detail
+              .date-label
+                a(href="#", title="MOTEL")
+                  span MOTEL
+              a(href="#", title="Metro Hotel Ipswich Inter..")
+                .title.only-list Metro Hotel Ipswich Inter...
+              .meta-data
+                .field
+                  span.big.fa.fa-map-marker
+                  span.small Ipswich
+                .field
+                  a(href="tel:07 3102 3333", title="07 3102 3333")
+                    span.big.fa.fa-phone
+                    span.small 07 3102 3333
+                .field
+                  span.big $100
+                  span.small From/Per Night
+                .field
+                  span.big.fa.fa-star
+                  span.small 4.5
+              a(href="#", title="Metro Hotel Ipswich Inter...")
+                .title Metro Hotel Ipswich Inter...
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='9')
+          .media
+            a(href="#", title="View Images")
+              +img('media 2', 'stay-list/img-3.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 16
+            .detail
+              .date-label
+                a(href="#", title="SERVICED APARTMENTS ")
+                  span SERVICED APARTMENTS 
+              a(href="#", title="Quest Ipswic")
+                .title.only-list Quest Ipswich
+              .meta-data
+                .field
+                  span.big.fa.fa-map-marker
+                  span.small Ipswich
+                .field
+                  a(href="tel:07 3102 3333", title="07 3102 3333")
+                    span.big.fa.fa-phone
+                    span.small 07 3102 3333
+                .field
+                  span.big $100
+                  span.small From/Per Night
+                .field
+                  span.big.fa.fa-star
+                  span.small 4.5
+              a(href="#", title="Quest Ipswich")
+                .title Quest Ipswich
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='10')
+          .media
+            a(href="#", title="View Images")
+              +img('media 2', 'stay-list/img-4.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 16
+            .detail
+              .date-label
+                a(href="#", title="BED & BREAKFAST")
+                  span BED & BREAKFAST
+              a(href="#", title="Ipswich City Mote")
+                .title.only-list Ipswich City Motel
+              .meta-data
+                .field
+                  span.big.fa.fa-map-marker
+                  span.small Ipswich
+                .field
+                  a(href="tel:07 3102 3333", title="07 3102 3333")
+                    span.big.fa.fa-phone
+                    span.small 07 3102 3333
+                .field
+                  span.big $100
+                  span.small From/Per Night
+                .field
+                  span.big.fa.fa-star
+                  span.small 4.5
+              a(href="#", title="Ipswich City Motel")
+                .title Ipswich City Motel
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+
+        article.grid-item.col-xs-12.col-md-4(data-grid-order='12')
+          .media
+            a(href="#", title="View Images")
+              +img('media 2', 'stay-list/img-5.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 16
+            .detail
+              .date-label
+                a(href="#", title="MOTEL")
+                  span MOTEL
+              a(href="#", title="Quest Ipswic")
+                .title.only-list Quest Ipswich
+              .meta-data
+                .field
+                  span.big.fa.fa-map-marker
+                  span.small Ipswich
+                .field
+                  a(href="tel:07 3102 3333", title="07 3102 3333")
+                    span.big.fa.fa-phone
+                    span.small 07 3102 3333
+                .field
+                  span.big $100
+                  span.small From/Per Night
+                .field
+                  span.big.fa.fa-star
+                  span.small 4.5
+              a(href="#", title="Quest Ipswich")
+                .title Quest Ipswich
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+
+        article.grid-item.grid-item--width2.grid-item--height2.col-xs-12.col-md-4(data-grid-order='11')  
+          .media
+            a(href="#", title="View Images")
+              +img('media 1', 'stay-list/img-6.jpg')
+              span.view-image View Images
+          .overlay-info
+            .interact
+              button 
+                .fa.fa-heart
+                | 21
+            .detail
+              .date-label
+                a(href="#", title="SERVICED APARTMENTS")
+                  span SERVICED APARTMENTS
+              a(href="#", title="Oaks Aspire")
+                .title.only-list Oaks Aspire 
+              .meta-data
+                .field
+                  span.big.fa.fa-map-marker
+                  span.small Ipswich
+                .field
+                  a(href="tel:07 3102 3333", title="07 3102 3333")
+                    span.big.fa.fa-phone
+                    span.small 07 3102 3333
+                .field
+                  span.big $170
+                  span.small From/Per Night
+                .field
+                  span.big.fa.fa-star
+                  span.small 4.5
+              a(href="#", title="Oaks Aspire ")
+                .title Oaks Aspire 
+                a(href="#").btn.btn-primary.see-full See Full Details
+            a(href="#").readmore Read More
+          .bottom-bar
+
+      .container
+          a(href="#").btn.btn-primary.loadmore Load More

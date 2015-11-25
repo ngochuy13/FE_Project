@@ -1,0 +1,1388 @@
+@import "_variables.scss";
+@font-face {
+  font-family: 'Halter';
+  src: url('../font/halter.eot');
+  src: url('../font/halter.eot?#iefix') format("embedded-opentype"), url('../font/halter.woff') format("woff"), url('../font/halter.ttf') format("truetype"), url('../font/halter.svg#lexiaregular') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+html{
+  height: 100%;
+}
+
+input{
+  &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+.floatlabel-wrapper{
+  > label{
+    left: 0!important;
+  }
+}
+/* SelectUI Core CSS */
+
+.selectUI {
+  position: relative;
+  select {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    filter: alpha(opacity = 0);
+    left: 0;
+    top: 0;
+    z-index: 2;
+    border-bottom: 1px solid transparent;
+  }
+}
+
+/* SelectUI Theming CSS */
+
+/* SelectUI Style Primary */
+
+.select-primary {
+  height: 64px;
+  margin-bottom: 10px;
+  max-width: 320px;
+  .select-btn {
+    display: block;
+    height: 64px;
+    border: 1px solid #ebebeb;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 17px 25px 17px 23px;
+  }
+  .value {
+    display: block;
+    font-size: 0;
+    line-height: 1.5;
+    color: #cecece;
+    font-size: 18px;
+    color: #aaa;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .arrow {
+    position: absolute;
+    top: 28px;
+    right: 15px;
+    width: 13px;
+    height: 12px;
+    background: url(../images/card-register/select-arrow.png) no-repeat top left;
+    text-indent: -1000em;
+  }
+  &.active {
+    // background: $primary-color-active;
+  }
+  &.disabled {
+    .select-btn {
+      background: #cccccc;
+    }
+    .arrow {
+      border-top-color: #eeeeee;
+    }
+  }
+}
+
+// Error Styling
+.form-group-container.error{
+  input{
+    color: #f00;
+  }
+  span.separator{
+    background: #f00;
+  }
+  span.error{
+    color: $red;
+    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+    font-weight: normal;
+    display: block;
+    &:before{
+      content: "x";
+      height: 18px;
+      width: 18px;
+      display: inline-block;
+      vertical-align: top;
+      background: #f00;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 16px;
+      margin-right: 8px;
+    }
+  }
+}
+.checkbox-item{
+  span.error{
+    color: $red;
+    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+    font-weight: normal;
+    display: block;
+    &:before{
+      content: "x";
+      height: 18px;
+      width: 18px;
+      display: inline-block;
+      vertical-align: top;
+      background: #f00;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 16px;
+      margin-right: 8px;
+    }
+  }
+}
+
+.card-register-form{
+  .legend{
+    display: block !important;
+  }
+  .foot-note{
+    margin-bottom: -30px;
+    margin-top: 20px;
+  }
+  .card-wrapper{
+    position: relative;
+  }
+  .card-face{
+    max-width: 313px;
+  }
+  .card-name, .uob-card-name{
+    position: absolute;
+    color: #bbb;
+    text-shadow: 1px 1px 3px rgb(0,0,0);
+    text-transform: uppercase;
+    font-family: Halter;
+    font-size: 11px;
+    bottom: 18px;
+    left: 20px;
+    width: 200px;
+  }
+  .form-group-container-date{
+    span.error + span.error{
+      display: none!important;
+    }
+  }
+  .form-group-fulldate-group{
+    input{
+      width: 1px;
+      height: 1px;
+      position: absolute;
+    }
+    .real-date{
+      opacity: 0;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+    .date-inputs{
+      font-size: 0px;
+      color: #000;
+      span{
+        font-size: 18px;
+      }
+      input{
+        width: 30px;
+        height: 34px;
+        position: static;
+        display: inline;
+        font-size: 18px;
+        &.month-input{
+          width: 35px;
+          text-align: center;
+        }
+        &.year-input{
+          width: 50px;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  .placeholder{
+    color: rgb(153,153,153);
+  }
+  .form-group {
+    margin-top: 57px;
+    margin-bottom: 16px;
+    label.control-label{
+      margin-bottom: 7px;
+      font-weight: normal;
+      font-size: 16px;
+      color: $blue;
+    }
+    &.disabled{
+      label.control-label{
+        color: #cecece;
+      }
+    }
+    .currency-wrapper{
+      position: relative;
+      input{
+        line-height: 34px;
+        display: inline-block;
+        width: 80%;
+        margin-left: 4px;
+      }
+    }
+    .currency{
+      line-height: 35px;
+      font-size: 18px;
+      color: #000;
+    }
+  }
+  .btn-find{
+    padding: 10px 15px;
+    border: 1px solid #09A6F8;
+    background: #09A6F8;
+    img{
+      max-width: 23px;
+    }
+    &:hover{
+      background: rgb(0, 152, 235);
+    }
+  }
+  .input-control-group.date input.date-input{
+    width: 100%;
+  }
+  .customer-type-switch {
+    margin: 0;
+    label.radio-input {
+      width: 273px;
+      margin-left: 20px;
+      margin-right: 0;
+      padding: 19px 5px;
+    }
+  }
+  label.radio-input{
+    font-size: 0;
+    text-align: center;
+    font-weight: normal;
+    border: 1px solid #ebebeb;
+    background-color: #fff;
+    display: inline-block;
+    margin-right: 14px;
+    padding: 19px 15px;
+    color: #aaa;
+    cursor: pointer;
+    border-radius: 2px;
+    max-width: 42%;
+    vertical-align: top;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -webkit-transition: all .25s ease-in;
+       -moz-transition: all .25s ease-in;
+        -ms-transition: all .25s ease-in;
+         -o-transition: all .25s ease-in;
+            transition: all .25s ease-in;
+    span{
+      width: 99%;
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 18px;
+    }
+    &:before{
+      height: 100%;
+      width: 1%;
+      content: ' ';
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      .ie8 &{
+        display: none;
+      }
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+    input{
+      width: 1px;
+      height: 1px;
+      position: absolute;
+      opacity: 0;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    }
+    &.selected{
+      background: $btn-blue; 
+      border: 1px solid $btn-blue;
+      color: white;
+    }
+    &.radio-input-gender {
+      min-width: 125px;
+      text-align: center;
+      &:before{
+        display: none;
+      }
+      span{
+        width: auto;
+      }
+      .icon-male,
+      .icon-female {
+        display: inline-block;
+        vertical-align: top;      
+        width: 24px;
+        height: 24px;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+      }
+      .icon-male {
+        background-image: url('../images/card-register/icon-male.png');
+      }
+      .icon-female {
+        background-image: url('../images/card-register/icon-female.png');
+      }
+    }
+  }
+  span.separator{
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #ddd;
+  }
+  input[type="text"], input[type="email"], input[type="date"], input[type="number"]{
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    box-sizing: content-box;
+  }
+  .form-control {
+    font-size: 18px;
+    color: #000;
+  }
+  .range-block{
+    input[type='text']{
+      opacity: 0;
+      width: 1px;
+      height: 1px;
+      position: absolute;
+    }
+  }
+  .range-block .range-container {
+    margin-top: 20px;
+    margin-right: 10%;
+    .range-slider{
+      width: 100%;
+    }
+    .noUi-base{
+      z-index: 2;
+      .noUi-origin{
+        background: #d8d8d8!important;
+      }
+    }
+    .noUi-pips{
+      z-index: 1;
+    }
+    .noUi-marker.noUi-marker-normal{
+      height: 0;
+    }
+    .noUi-marker.noUi-marker-large{
+      width: 16px;
+      height: 16px;
+      top: -13px;
+      border-radius: 50%;
+      background: #d8d8d8;
+      z-index: 1;
+      &.active{
+        background: $red;
+      }
+    }
+  }
+  .yes-no-choice{
+    min-width: 100px;
+    text-align: center;
+  }
+  
+}
+.form-status-wrapper{
+  background: #EDF1F2;
+}
+
+.form-status{
+  position: relative;
+  max-width: 530px;
+  height: 137px;
+  padding: 47px 20px 30px 20px;
+
+  margin: 0 auto;
+  .icon{
+    width: 38px;
+    height: 38px;
+    display: block;
+    background: url(../images/card-register/card-form-icons.png) no-repeat top left;
+    background-size: 100px 188px;
+    // &.icon-user{
+    //   background: #000;
+    // }
+    &.icon-phone{
+      background-position: 0 -50px;
+    }
+    &.icon-check{
+      background-position: 0 -100px;
+    }
+    &.icon-like{
+      background-position: 0 -150px;
+    }
+  }
+  .text{
+    color: #9B9B9B;
+    font-size: 12px;
+    line-height: 14px;
+    display: inline-block;
+    width: 150px;
+    margin-left: -56px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  ul{
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    position: relative;
+    z-index: 2;
+    li{
+      list-style: none;
+      position: relative;
+      display: inline-block;
+      width: 25%;
+      position: absolute;
+      margin-left: -19px;
+      &.step-1{
+        left: 0;
+      }
+      &.step-2{left: 33%;}
+      &.step-3{left: 66%;}
+      &.step-4{left: 100%;}
+      &.active{
+        .icon{
+          &.icon-user{
+            background-position: -62px 0;
+          }
+          &.icon-phone{
+            background-position: -62px -50px;
+          }
+          &.icon-check{
+            background-position: -62px -100px;
+          }
+          &.icon-like{
+            background-position: -62px -150px;
+          }
+        }
+        .text{
+          color: #1399FF;
+        }
+      }
+    }
+  }
+  .border{
+    height: 2px;
+    background: #bcc8ce;
+    width: 98%;
+    position: absolute;
+    z-index: 1;
+    top: 65px;
+    left: 2px;
+  }
+}
+
+.ie8 .form-status{
+  .icon{
+    background-image: url(../images/card-register/ie8-card-form-icons.png);
+  }
+}
+
+.lead-form-wrapper {
+  margin-top: 50px;
+}
+.form-outer-bound {
+  padding: 20px;
+  border: 1px solid #e7e7e7;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+}
+
+.form-outer-bound-header {
+  .media-left {
+    padding-right : 25px;
+  }
+  .media-body {
+    padding-top: 10px;
+  }
+  .media-heading {
+    a{
+      color: #2c2c2c;
+    }
+  }
+}
+.apply-vs-sms {
+  .media-heading {
+    text-decoration: underline;
+  }
+}
+
+.or-separator {
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c2c2c;
+  text-transform: uppercase;
+}
+
+.input-control-group,
+.select-control-group {
+  margin-bottom: 20px;
+  overflow: hidden;
+  margin-top: 11px;
+}
+
+.input-control-group {
+  &.date {
+    color: $blue;
+    .floatlabel-wrapper{
+      display: inline-block;
+    }
+    input {
+      font-size: 18px;
+      width: 37px;
+      height: 34px;
+      color: #000;
+      line-height: 1.42857143;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &.property-group {
+    margin-bottom: 0;
+    .radio-input {
+      margin-bottom: 15px;
+    }
+  }
+}
+.card-thank-page, .card-register-page{
+  .header {
+    padding: 0;
+    background: none;
+    height: auto;
+    border-bottom: none;
+    .header-content h2{
+      margin-top: 10px;
+    }
+    .container {
+      position: relative;
+      background: url('../images/card-register/bgd-header.jpg') 0 0 no-repeat rgb(13,22,59);
+      height: auto;
+      min-height: 110px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border: none;
+    }
+  }
+}
+.card-thank-page{
+  input.primary-btn{
+    background: #09A6F8;
+    border-color: #09A6F8;
+    &:hover{
+      background: white;
+      color: #09A6F8;
+    }
+  }
+}
+.card-register-page {
+  background: #fff;
+  .btn-regis-done{
+    background: #09A6F8;
+    border-color: #09A6F8;
+    &:hover{
+      background: white;
+      color: #09A6F8;
+    }
+  }
+  .submission {
+    margin-top: 55px;
+    text-align: right;
+    .primary-btn{
+      background: #09A6F8;
+      border-color: #09A6F8;
+      &:hover{
+        background: white;
+        color: #09A6F8;
+      }
+    }
+  }
+  .CPF-submission-confirmation{
+    margin-top: 10px;
+    .checkbox-item{
+      margin-bottom: 0;
+    }
+    .text{
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+  }
+}
+.header-wrap, .header-card {
+  overflow: hidden;
+  padding: 0 35px;
+  .card-icon{
+    max-width: 400px;
+    margin-left: 10px;
+    height: 120px;
+    text-align: right;
+    display: block;
+    &:before {
+      content: " ";
+      display: inline-block;
+      width: 1px;
+      vertical-align: middle;
+      height: 100%;
+    }
+    img{
+      max-width: 150px;
+      max-height: 120px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+.header-content {
+  padding-left: 182px;
+  padding-right: 120px;
+  padding-top: 3px;
+  color: #fff;
+  h2 {
+    font-size: 24px;
+  }
+}
+
+.header-content .icon-car {
+  float: left;
+  width: 42px;
+  height: 37px;
+  background: url('../images/card-register/icon-car.png') 0 0 no-repeat;
+}
+.header-content .inner {
+  float: left;
+  margin-left: 15px;
+}
+.header-content p {
+  font-size: 16px;
+  margin-bottom: 0;  
+}
+.header-content p a {
+  color: #fff;
+  text-decoration: underline;
+}
+.header-content p:first-child {
+  margin-top: 4px;
+}
+
+.process-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: #e1e1e1;
+}
+.status-percent {
+  width: 2%;
+  height: 100%;
+  background: #88d435;
+  -webkit-transition: all .25s linear;
+     -moz-transition: all .25s linear;
+      -ms-transition: all .25s linear;
+       -o-transition: all .25s linear;
+          transition: all .25s linear;
+}
+
+.card-register-step {
+  // display: block !important;
+  overflow: hidden;
+}
+.card-register-step-1,
+.card-register-step-2 {
+  background-color: #EDF1F2;
+}
+
+.card-register-step-1 {
+  .form-group.last {
+    margin-bottom: 0;
+  }
+}
+
+.card-register-step-2 {
+  padding-top: 40px;
+  padding-bottom: 250px;
+}
+
+.card-register-step-3 {
+  background-color: #fff;
+  .confirm-content {
+    width: 700px;
+    overflow: hidden;
+    margin: 0 auto;    
+    h3{
+      font-weight: bold;
+      color: #333;
+    }
+  }
+  .confirm-footer {
+    padding: 40px 0 0px 0;
+    border-top: 1px solid #d6d6d6;
+    h3 small{
+      color: #7D7D7D;
+    }
+  }
+  .footer-content {
+    margin-bottom: 60px;
+    a {
+      color: $blue;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .list-1 li {
+      color: $blue;
+    }
+  }
+}
+
+.confirm-title {
+  margin: 40px 0 60px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #5c5c5c;
+  text-align: center;
+}
+.confirm-table {
+  margin-bottom: 63px;
+  font-size: 18px;
+  tbody > tr > td {
+    border-bottom: 1px solid #ddd;
+    border-top: none;
+    padding: 11px 8px;    
+  }
+  tbody > tr:first-child > td{
+    border-top: 1px solid #ddd;
+  }
+  .label-name {
+    width: 304px;
+    color: #909090;
+    text-align: right;
+  }
+  .label-data {
+    width: 304px;
+    color: #000;
+    /*text-align: left;*/
+    &.currency:before{
+      content: "S$";
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+  .space {
+    width: 34px;
+  }
+}
+
+.checkbox-item {
+  position: relative;
+  margin-bottom: 20px;
+  input[type=checkbox] {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  .checkbox-1 {
+    position: relative;
+    float: left;
+    width: 28px;
+    height: 28px;
+    background-color: #fff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 1px solid #d4d4d4;
+    cursor: pointer;
+    z-index: 2;
+  }
+  &.checked {
+    .checkbox-1 {
+      background-image: url('../images/card-register/check.png');
+    }
+  }
+  .text {
+    display: block;
+    padding-left: 50px;
+    margin-bottom: 20px;
+    font-weight: normal;
+  }
+}
+
+.submit-footer {
+  height: 192px;
+  background: url('../images/card-register/bgd-footer.jpg') 0 0 no-repeat;
+  .btn {
+    margin: 64px 15px 0;
+  }
+}
+
+.btn-1,
+.btn-2 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 24px;
+  min-width: 178px;
+   -webkit-transition: all .25s linear;
+     -moz-transition: all .25s linear;
+      -ms-transition: all .25s linear;
+       -o-transition: all .25s linear;
+          transition: all .25s linear;
+}
+.btn-2 {
+  border: 2px solid #fff;
+  color: #fff;
+  &:hover {
+    background: #fff;
+    color: $blue;
+  }
+}
+
+.btn-3 {
+  min-width: 93px;
+  padding: 11px 15px;
+  background-color: $blue;
+  border: 1px solid $blue;
+  font-size: 18px;
+  color: #fff;
+  &:hover {
+    background-color: #fff;
+    color: $blue;
+  }
+}
+
+.card-thank-page {
+  background: #fff;
+  height: 100%;
+  .content .container{
+    background: #EDF1F2;
+  }
+  .content-container {
+    min-height: 100%;
+    color: $blue;
+  }
+  .status-percent {
+    width: 92%;
+  }
+  .header {
+    padding: 0;
+    background: none;
+    height: auto;
+    border-bottom: none;
+    margin: 0;
+    width: 100%;
+    .container {
+      position: relative;
+      background: url('../images/card-register/bgd-header.jpg') 0 0 no-repeat rgb(13,22,59);
+      min-height: 110px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border: none;
+    }
+  }
+}
+
+.card-document-form {
+  overflow: hidden;
+  padding: 30px 15px 150px;  
+  .form-group {
+    margin-top: 47px;
+  }
+  .btn-1 {
+    padding: 18px 15px;
+    min-width: 350px;
+    font-size: 18px;
+  }
+  .logo-one-uob {
+    display: block;
+    margin-top: -6px;
+    margin-left: 5px;
+  }
+  .logo-uob {
+    display: block;
+    margin-top: 8px;
+    margin-right: 5px;
+  }
+}
+
+.drag-group {
+  position: relative;
+  height: 160px;
+  border: 1px dashed #b9bcc7;
+  margin: 33px 0 27px;
+  text-align: center;
+  overflow: hidden;
+  img {
+    margin-top: 20px;
+  }
+  h4 {
+    margin-top: 21px;
+    margin-bottom: 3px;
+    font-size: 28px;
+    color: $blue;
+  }
+  p {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  input[type=file]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 200px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;    
+  }
+}
+
+.identify-customer {
+  width: 720px;
+  padding: 53px 20px 90px;
+  margin: 0 auto;
+}
+
+.declaration-content {
+  padding: 20px 40px;
+  ol > li {
+    margin-bottom: 20px;
+  }
+}
+
+.modal-1 {
+  .modal-content {
+    border: 0px;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+  .tab-pane {
+    padding: 30px;
+    .inner {
+      margin-top: 30px;
+      margin-bottom: 60px;
+      padding-left: 30px;
+    }
+  }  
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: #c7c7c7 url('../images/card-register/icon-close.png') center center no-repeat;;
+    color: #fff;
+    font-weight: normal;
+    font-size: 29px;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    &:hover {
+      background-color: $blue;
+    }
+  }
+}
+
+.require-header {
+  position: relative;
+  .nav-tabs {
+    border-bottom: none;
+    padding-right: 60px;
+    li {
+      width: 25%;
+      margin-bottom: 0;
+      a {
+        margin-right: 0;
+        padding: 19px 15px 18px;
+        border-top: none;
+        border-bottom: 1px solid #e7e7e7; 
+        border-left: 1px solid #e7e7e7; 
+        border-radius: 0px;
+        font-size: 16px;
+        color: #2c2c2c;
+        text-align: center;
+        -webkit-transition: all .25s linear;
+           -moz-transition: all .25s linear;
+            -ms-transition: all .25s linear;
+             -o-transition: all .25s linear;
+                transition: all .25s linear;
+        &:hover {
+          color: #fff;
+          background-color: #d0021b;
+          border-bottom: 1px solid #d0021b; 
+          border-right: none;
+          // border-color: #d0021b;
+        }
+      }
+      &:first-child {
+        a {
+          border-left: none;
+        }
+      }
+      &.active>a:focus, 
+      &.active>a:hover,
+      &.active>a {
+        color: #fff;
+        background-color: #d0021b;
+        border-top: none;
+        border-right: none;
+        border-bottom: 1px solid #d0021b; 
+        // border-color: #d0021b;
+      }
+    }
+
+  }
+}
+
+@media #{$tablet-desktop}{
+  .card-register-step-2 {
+    .container {
+      width: 645px;
+    }
+  }
+}
+
+@media #{$tablet}{
+  .card-register-page .content-container > .sticky-wrapper{
+    height: auto !important;
+  }
+  .header-content {
+    // padding-left: 162px;
+    h2 {
+      font-size: 18px;
+    }
+  }
+  .card-document-content {
+    width: auto;
+    padding-left: 0;
+    .inner {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media #{$mobile}{
+  .form-status{
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .card-document-content {
+    width: auto;
+    padding-left: 0;
+    .inner {
+      margin: 0 auto;
+    }
+    ul {
+      li{
+        span{
+          font-size: 12px;
+        }
+        em{
+          padding-left: 14px;
+        }
+      }
+    }
+  }
+  .card-register-page {
+    .header {
+      .logo-uob {
+        img {
+          width: 60px;
+        }
+      }
+      .logo {
+        padding-top: 15px;
+        img {
+          width: 75px;
+          height: auto;
+        }
+      }
+      .container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+    .submission {
+      margin-top: 30px;
+    }
+  }
+  .media-body {
+    margin-top: 10px;
+  }
+  .header-wrap {
+    padding: 0 20px;
+  }
+  .header-content {
+    padding-left: 0;
+    padding-right: 0;
+    h2 {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .identify-customer {
+    width: auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .card-register-form {
+    .customer-type-switch label.radio-input {
+      width: 100%;
+      margin: 0 0 10px;
+    }
+    .form-group {
+      margin-top: 30px;
+      &.frm-name-card {
+        margin-top: 20px;
+      }
+    }
+
+    .range-block .range-blocks-container {
+      margin-left: 26px;
+      .noUi-marker.noUi-marker-large{
+        top: -11px;
+      }
+    }
+
+  }
+  .lead-form-wrapper {
+    margin-top: 10px;
+    .form-group {
+      margin-top: 15px;
+    }
+  }
+  .form-outer-bound {
+    .media-left {
+      padding-right: 20px;
+      img {
+        width: 40px;
+      }
+    }
+    .media-body {
+      padding-top: 0;
+      p {
+        margin-bottom: 0;
+      }
+    }
+    .media-heading {
+      font-size: 14px;
+    }
+  }
+  .card-register-step-3 {
+    .confirm-title {
+      margin-bottom: 30px;
+    }
+    .confirm-content {
+      padding: 0 20px;
+      width: 100%;
+    }
+    .confirm-footer {
+      h3 {
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+    }
+    .checkbox-item .text {
+      padding-left: 40px;
+    }
+  }
+  .require-header .nav-tabs {
+    padding-right: 0;
+    li {
+      width: 100%;
+    }
+  }
+  .modal-1 .tab-pane .inner {
+    padding-left: 20px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  .card-document-form {
+    padding: 20px 10px 40px;
+    h3 {
+      font-size: 18px;
+    }
+    .card-document-content {
+      width: auto;
+      margin-left: 0;
+      float: none;
+      .inner {
+        width: auto;
+      }
+      ul {
+        margin-top: 20px;
+        padding-left: 20px;
+      }
+    }
+  }
+  .card-register-form .card-face{
+    max-width: 300px;
+  }
+}
+
+@media only screen and (max-width : 1024px){
+  .card-page #sticky-wrapper{
+    height: auto !important;
+  }
+  .card-register-page .header, .card-thank-page .header{
+    position: static !important;
+    width: 100% !important;
+  }
+  .card-register-page, .card-thank-page {
+    .header {
+      padding: 0;
+      height: auto;
+      .container {
+        height: auto;
+      }
+    }
+  }
+}
+@media only screen and (max-width : 767px){
+  .card-register-page, .card-thank-page{
+    .header {
+      height: auto;
+      .container {
+        height: auto;
+      }
+    }
+  }
+  .header{
+    .header-wrap{
+      .card-icon, .header-content .media{
+        display: none;
+      }
+    }
+    &.in-step-1{
+      .card-icon, .header-content .media{
+        display: block;
+      } 
+    }
+  }
+  .card-register-page, .card-thank-page {
+    .header .container {
+      padding-bottom: 20px;  
+      background-size: auto 100%;
+    }
+  }
+  .card-register-form {
+    .select-primary{
+      height: 54px;
+    }
+    .select-primary .select-btn{
+      height: 54px;
+      padding: 11px 15px 8px 23px;
+    }
+    .select-primary .arrow{
+      top: 22px;
+    }
+    label.radio-input{
+      padding: 12px 9px;
+      span{
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media only screen and (max-width : 568px){
+  .card-register-page {
+    .foot-note{
+      margin-bottom: 0;
+      margin-top: 20px;
+    }
+    .payment-method{
+      label.radio-input{
+        height: 115px;
+        vertical-align: top;   
+      }
+    }
+    .btn-1, .btn-2 {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 16px;
+      min-width: 120px;
+    }
+    .confirm-table{
+      .label-name, .label-data{
+        font-size: 12px;
+      }
+    }
+  }
+  .card-document-form{
+    .btn-1{
+      min-width: inherit;
+      font-size: 16px;
+      width: 100%;
+    }
+    .card-document-content{
+      h3{
+        font-size: 14px;
+      }
+      ul{
+        list-style: disc;
+        padding-left: 15px;
+        li{
+          font-size: 12px;
+          padding-left: 0;
+          background: transparent;
+          line-height: 2;
+        }
+      }
+    } 
+  }
+}
+
+@media only screen and (max-width : 480px){
+  .card-register-page {
+    .range-block .range-blocks-container .noUi-marker.noUi-marker-large{
+      top: -7px;
+      width: 10px;
+      height: 10px;
+    }
+    .noUi-value-horizontal{
+      display: none;
+    }
+    .payment-method{
+      label.radio-input{
+        height: 140px;
+        vertical-align: top;   
+      }
+    }
+  }
+}
+.ie8 {
+  .card-register-page,
+  .card-thank-page {
+    .container {
+      width: auto;
+    }
+    .card-register-step-2 {
+      .container {
+        width: 645px;
+      }
+    }
+  }
+}

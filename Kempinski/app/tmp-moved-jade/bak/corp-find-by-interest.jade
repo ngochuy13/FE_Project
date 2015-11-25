@@ -1,0 +1,52 @@
+extends layouts/corp-template
+
+block vars
+  -title = 'Find by Interest'
+  -bodyClass = ''
+  -bannerIMG = 'home/banner.jpg'
+block container    
+  .inner
+    main#main
+      .container.find-location
+
+        .section-find-location__search
+          .row 
+            .col-md-12
+              .form-inline.text-center
+                .form-group.location-form-group
+                  +input('text', 'location', 'Where would you like to go?')
+                .form-group
+                  button(type="submit") Find a Hotel by Interest
+
+        .section-find-location__content
+          .row.hotel-source
+            +hotel-source-item('images/find-location/interest-beach.jpg', 'Beach' , 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.')
+            +hotel-source-item('images/find-location/interest-family.jpg', 'Family' , 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.')
+            +hotel-source-item('images/find-location/interest-golf.jpg', 'Golf' , 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.')
+            +hotel-source-item('images/find-location/interest-skiing.jpg', 'Skiing' , 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.')
+            +hotel-source-item('images/find-location/interest-skiing.jpg', 'Skiing' , 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.')
+            +hotel-source-item__price('images/find-location/interest-beach.jpg', 'Beach' , 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.' , '200' , '#' )
+            +hotel-source-item__price('images/find-location/interest-family.jpg', 'Family' , 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.' , '200' , '#' )
+            +hotel-source-item__price('images/find-location/interest-golf.jpg', 'Golf' , 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.' , '200' , '#' )
+            +hotel-source-item__price('images/find-location/interest-skiing.jpg', 'Skiing' , 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.' , '200' , '#' )
+            +hotel-source-item__price('images/find-location/interest-skiing.jpg', 'Skiing' , 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.' , '200' , '#' )
+
+          .row.text-center
+            nav
+              ul.pagination
+                li
+                  a(href='#', aria-label='Previous')
+                    span(aria-hidden='true') «
+                li
+                  a(href='#') 1
+                li
+                  a(href='#') 2
+                li
+                  a(href='#') 3
+                li
+                  a(href='#') 4
+                li
+                  a(href='#') 5
+                li
+                  a(href='#', aria-label='Next')
+                    span(aria-hidden='true') »

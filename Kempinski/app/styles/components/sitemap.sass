@@ -1,0 +1,48 @@
+.sitemap-content-section
+  padding: 40px 0
+  @include clearfix()
+  .sitemap-item
+    min-height: 150px
+    margin-bottom: 30px
+    &:nth-of-type(2n +1)
+      clear: both
+    @media (min-width: 768px)
+      clear: none
+      min-height: 0
+      margin-bottom: 50px
+      &:nth-of-type(2n +1)
+        clear: none 
+      &:nth-of-type(3n +1)
+        clear: both
+    @media (min-width: 991px)
+      clear: none
+      &:nth-of-type(3n +1)
+        clear: none
+      &:nth-of-type(4n +1)
+        clear: both
+    @media (max-width: 479px)
+      width: 100%
+      min-height: 0
+      margin-bottom: 50px
+    .title
+      color: #000
+      font-size: 22px
+      font-family: $kc-ff
+      position: relative
+      margin-bottom: 8px;
+      text-decoration: none
+      &:after
+        content: " ";
+        display: block;
+        height: 1px;
+        width: 100%;
+        max-width: 135px;
+        background: #877b17;
+        opacity: 0.6;
+        bottom: 2px;
+        position: absolute;
+    a
+      display: block
+      font-size: 14px
+      color: #000000
+      margin-bottom: 5px

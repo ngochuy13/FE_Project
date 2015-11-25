@@ -1,0 +1,74 @@
+.list-submission.main-wrapper
+	+img("", "top-competition-bg.jpg").bg
+	.submission-list
+		.submission.submission-loading
+			.header
+				+link('Xe co vo tinh', '#detail-1')(data-toggle="modal" data-target="#submission-modal-1").title  Lau xanh mong mo Lau xanh mong mo Lau xanh mong mo Lau xanh mong mo
+			+link-img('../images/home-bg.jpg','Lau xanh mong mo', '#detail-1')(data-toggle="modal" data-target="#submission-modal-1").detail
+			.fb-interaction.text-center
+				div.fb-share-button
+					span Share
+				.count 12
+				div.fb-like-button
+					span Like
+				.count 24
+			.spinner
+				span.bounce1
+				span.bounce2
+				span.bounce3
+		.submission
+			.header
+				+link('"Tim mong mo"', '#detail-1')(data-toggle="modal" data-target="#submission-modal-2").title Lau xanh mong mo
+			+link-img('images/entries/submission-2.jpg','Lau xanh mong mo', '#detail-1')(data-toggle="modal" data-target="#submission-modal-2").detail
+			.fb-interaction.text-center
+				div.fb-share-button
+					span Share
+				.count 12
+				div.fb-like-button
+					span Like
+				.count 24
+			.spinner
+				span.bounce1
+				span.bounce2
+				span.bounce3
+		.submission
+			.header
+				+link('Khong phai dang vua dau', '#detail-1')(data-toggle="modal" data-target="#submission-modal-3").title Lau xanh mong mo
+			+link-img('images/entries/submission-3.jpg','Lau xanh mong mo', '#detail-1')(data-toggle="modal" data-target="#submission-modal-3").detail
+			.fb-interaction.text-center
+				div.fb-share-button
+					span Share
+				.count 12
+				div.fb-like-button
+					span Like
+				.count 24
+			.spinner
+				span.bounce1
+				span.bounce2
+				span.bounce3
+		.submission
+			.header
+				+link('La dang rong ra', '#detail-1')(data-toggle="modal" data-target="#submission-modal-4").title Lau xanh mong mo
+			+link-img('images/entries/submission-4.jpg','Lau xanh mong mo', '#detail-1')(data-toggle="modal" data-target="#submission-modal-4").detail
+			.fb-interaction.text-center
+				div.fb-share-button
+					span Share
+				.count 12
+				div.fb-like-button
+					span Like
+				.count 24
+			.spinner
+				span.bounce1
+				span.bounce2
+				span.bounce3
+	.pagination
+		.text-center
+			+link("Trước", "#").side
+			+link("1", "#")
+			+link("2", "#").active
+			+link("3", "#")
+			span ...
+			+link("7", "#")
+			+link("8", "#")
+			+link("9", "#")
+			+link("Tiếp", "#").side

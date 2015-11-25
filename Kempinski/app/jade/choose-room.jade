@@ -1,0 +1,35 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Choose Room'
+  -bodyClass = ''
+  -bannerIMG = 'home/banner.jpg'
+block breadcrumb  
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#"
+      },{
+        "text": "MIDDLE EAST",
+        "href":"#"
+      },{
+        "text": "EMIRATES PALACE",
+        "href":"#"
+      },{
+        "text": "CONTACT US",
+        "href":"#"
+      }])
+
+block container    
+  .inner
+    main#main
+      section.section-block.gray.booking-room
+        +page-title("YOUR RESERVATION","Available for the Dates", "Please select your room type and rate.")
+        .booking-wrap
+          .container
+            .row
+              .col-xs-12.col-md-3
+                include includes/booking-sidebar
+              .col-xs-12.col-md-9
+                include includes/booking-results

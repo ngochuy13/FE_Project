@@ -1,0 +1,336 @@
+// ================================= Home-grid
+.homepage 
+  #container
+    // padding-left: 88px
+.home-grid
+  // min-height: 1210px
+  .grid-sizer
+    height: 0
+    width: 33.3333%
+  .grid-item
+    padding: 0
+    overflow: hidden
+    &:hover
+      .overlay-info
+        display: block
+    .overlay-info
+      display: none
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      .media 
+        img
+          min-width: 100%
+          top: 0
+    .media 
+      img
+        width: 100%
+  //   .media
+  //     height: 0
+  //     &.p100p 
+  //       padding-top: 100%
+  //     &.p120p 
+  //       padding-top: 120%
+  //     &.p64p 
+  //       padding-top: 64%
+  //     &.p150p         
+  //       padding-top: 150%
+  .no-touch &
+    &:hover
+      img.grayscale
+        filter: url("data:image/svg+xmlutf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")
+        filter: gray
+        -webkit-filter: grayscale(100%)
+        -webkit-transition: all .6s ease
+        -webkit-backface-visibility: hidden
+      .grid-item:hover
+          img.grayscale
+            filter: url("data:image/svg+xmlutf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale")
+            -webkit-filter: grayscale(0%)
+
+      .img-grayscale
+        display: block
+      .grid-item:hover
+        .img-grayscale
+          display: none
+  .img-grayscale
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+  .overlap-info
+    display: none
+    text-align: left
+    background: rgba(233, 11, 24, 0.5)
+    position: absolute
+    bottom: -44px
+    left: 0
+    width: 100%
+    padding: 20px 44px 44px
+    transition: opacity 0.4s ease
+    transform: skewY(8deg)
+    h1
+      padding-right: 50px
+      font-size: 50px
+      line-height: 1.3
+      color: #FFF
+      margin-top: 0
+      margin-bottom: 30px
+      transform: skewY(-8deg)
+      text-align: left
+    
+  .grid-item:hover
+    .overlap-info
+      display: block
+      
+
+@media (max-width: 991px)
+  .home-grid 
+    .grid-sizer
+      width: 50%
+    .overlap-info
+      display: block
+      h1
+        font-size: 35px  
+    
+// ================================= section-list-course
+.course-container
+  max-width: 800px
+  .row-course__item
+    padding: 25px 0
+    border-bottom: 1px solid #dbdbdb
+    &:after, &.after
+      border-bottom: 0
+  .row-course__title
+    font-size: 16px
+    color: #e90b18
+    font-weight: 800
+    line-height: 1.2
+    text-align: right
+    padding-top: 5px
+  .row .row-course__description
+    padding-right: 30px
+    padding-left: 30px
+    p 
+      font-size: 15px
+      font-family: $openSans
+      font-weight: 400
+      color: rgb( 102, 102, 102 )
+      line-height: 1.5
+      text-align: left
+      margin-bottom: 15px
+@media (max-width: 993px)
+  .course-container
+    .row-course__title
+      text-align: left
+      padding-right: 30px!important
+      padding-left: 30px!important
+      margin-bottom: 20px
+
+@media (max-width: 993px)
+  .course-container
+    .row-course__title
+      font-size: 13px
+    .row .row-course__description
+      p
+        font-size: 12px  
+// ================================= .section-banner-video
+.section-banner-video
+  position: relative
+  height: 385px
+  width: 100%
+  overflow: hidden
+  img 
+    width: 100%
+  a 
+    position: absolute
+    text-align: center
+    width: 260px
+    height: 122px
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    margin: auto
+    text-decoration: none
+    .icon-video
+      background: url('../images/icon-play-banner.png') no-repeat
+      width: 90px
+      height: 90px
+      display: inline-block
+    .text 
+      font-size: 15px
+      font-family: $openSans
+      color: #fff
+      line-height: 1.6
+      display: block
+      
+
+// ================================= section-course-details
+.section-course-details
+  .tab-control
+    background: #fff
+  ul 
+    max-width: 840px
+    margin: 0 auto
+    > li 
+      padding: 0 20px      
+    > li > a 
+      font-size: 14px
+      font-family: $oswald
+      color: rgb( 102, 102, 102 )
+      line-height: 60px
+      text-align: center
+      position: relative
+      padding: 0
+      span 
+        height: 5px
+        width: 0
+        position: absolute
+        left: 0
+        bottom: 0
+        background: #e90b18
+        transition: width 0.3s
+    > li > a:hover, > li > a:focus
+      background: none
+      span 
+        width: 100%
+        transition: width 0.3s
+    > li.active > a, > li.active > a:hover, > li.active > a:focus
+      background: none 
+      color: rgb( 102, 102, 102 )
+      span 
+        width: 100%
+  .course-details__tab-content
+    padding-top: 45px
+    .breadcrumb
+      text-align: center
+      padding: 0
+      margin: 0
+      a
+        font-size: 13px
+        font-family: $openSans
+        font-weight: bold 
+        color: #666666
+        text-align: center
+        margin-bottom: 25px
+    .title
+      font-family: $oswald
+      font-size: 28px
+      font-weight: bold
+      color: #e90b18
+      line-height: 1.43
+      text-align: center
+      margin-bottom: 40px
+    .content
+      background: #fff
+      padding: 40px
+      .editor
+        h3
+          margin-top: 0
+          margin-bottom: 20px 
+        h4 
+          margin-top: 40px
+          margin-bottom: 0
+        p 
+          margin-bottom: 25px
+
+
+// ================================= Banner
+.banner
+  img 
+    width: 100%
+
+// ================================= Footer
+.footer
+  .social-block
+    text-align: center
+    margin: 60px 0
+    a 
+      font-size: 65px
+      margin-left: 85px
+      color: #9a9a9a
+      &:first-child
+        margin-left: 0
+  .coppy-right
+    p 
+      font-size: 25.2px
+      font-family: $raleway
+      color: rgb( 154, 154, 154 )
+      line-height: 1.333
+      text-align: center
+
+// ================================= Menu Detail Post
+.menu-detail-post
+  .menu-stage
+    max-height: 230px
+    overflow: hidden
+    img 
+      width: 100%
+  .menu-container
+    position: relative
+    background: rgba( 200 , 0 , 15, 0.8)
+    padding-bottom: 70px
+    .overlay-submenu
+      position: absolute
+      width: 100%
+      height: 70px
+      background: #000
+      left: 0
+      bottom: 0
+    .sub-menu 
+      display: none
+    ul 
+      position: relative
+      z-index: 1
+      li 
+        display: inline-block
+        a 
+          font-size: 24px
+          // font-family: "Bebas"
+          color: rgb( 255, 255, 255 )
+          line-height: 0.833
+          text-align: left
+          line-height: 59px
+          padding: 0 45px
+          text-decoration: none
+        &.active, &:hover
+          background: #000
+          .sub-menu 
+            display: block
+            position: absolute
+            left: 25px
+            top: 71px
+            background: #000
+            li 
+              padding: 2px 20px
+              text-align: center
+              border-left: 1px solid #fff
+              &:first-child
+                border-left: none
+              a 
+                font-size: 13px
+                font-family: "Raleway"
+                color: #fff
+                line-height: 1.385
+                padding: 0
+              &.active, &:hover
+                a 
+                  color: #ffb400
+
+// ================================= Detail Post
+.section-post
+  .parallax
+    margin-bottom: 40px
+  .detail-post__title
+    font-size: 20px
+    // font-family: "Bebas"
+    color: rgb( 255, 180, 0 )
+    line-height: 1
+    text-align: left
+    margin-bottom: 15px
+    text-transform: uppercase
+  h4 
+    margin-bottom: 15px

@@ -1,0 +1,348 @@
+extends layouts/corp-template
+
+block vars
+  -title = 'Corp Special Offers'
+  -bodyClass = ''
+  -bannerIMG = 'images-corp/special-offers/banner.jpg'
+  -page = 'special-offers'
+block pagescript
+
+block breadcrumb  
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#"
+      },{
+        "text": "EXPERIENCES",
+        "href":"#"
+      }])
+
+block container  
+  .inner
+    main#main
+      .section-special-offers.section-block
+        +page-title("DESTINATION", "Since 1897, Kempinski has travelled the world", "UNIQUE DESIGNED FOR GUESTS WHO VALUE FIVE STAR").gray
+      section.section-block
+        .container
+          .legend.huge-list-legend
+            h4 IMPORTANT KEY: 
+              strong R*
+            p Click on the key to access the Residence information available at that hotel location.
+          .row
+            .col-xs-12.col-md-9
+              ul.huge-list.row
+                li.col-xs-12.col-md-4
+                  .hotels-group.hotels-continent-group
+                    .corp KEMPINSKI
+                    .title EUROPE
+                    ul.countries-list.level-2-list
+                      li
+                        h3 Austria
+                        ul
+                          li
+                            a(href='/en/jochberg/hotel-das-tirol/welcome/') Jochberg - Kitzbühel
+                            a.residence-link(href='/en/jochberg/hotel-das-tirol/welcome/') R
+                          li
+                            a(href='/en/vienna/palais-hansen/welcome/') Vienna
+                      li
+                        h3 Azerbaijan
+                        ul
+                          li
+                            a(href='/en/baku/hotel-badamdar/welcome/') Baku
+                            a.residence-link(href='/en/jochberg/hotel-das-tirol/welcome/') R
+                      li
+                        h3 Bulgaria
+                        ul
+                          li
+                            a(href='/en/bansko/hotel-grand-arena/welcome/') Bansko
+                      li
+                        h3 Croatia
+                        ul
+                          li
+                            a(href='/en/istria/hotel-adriatic/welcome/') Savudrija - Istria
+                            a.residence-link(href='/en/jochberg/hotel-das-tirol/welcome/') R
+                      li(style='clear:left;')
+                        h3 Germany
+                        ul
+                          li
+                            a(href='/en/berchtesgaden/kempinski-hotel-berchtesgaden/welcome/') Berchtesgaden - Bavarian Alps
+                          li
+                            a(href='/en/berlin/hotel-adlon/welcome/') Berlin - Adlon
+                          li
+                            a(href='/en/berlin/hotel-bristol/welcome/') Berlin - Bristol
+                          li
+                            a(href='/en/dresden/hotel-taschenbergpalais/welcome/') Dresden
+                          li
+                            a(href='/en/frankfurt/schloss-reinhartshausen/welcome/') Frankfurt - Eltville - Erbach
+                          li
+                            a(href='/en/frankfurt/hotel-gravenbruch/welcome/') Frankfurt - Gravenbruch
+                          li
+                            a(href='/en/hamburg/hotel-atlantic/welcome/') Hamburg
+                          li
+                            a(href='/en/frankfurt/falkenstein-grand/welcome/') Königstein - Falkenstein
+                          li
+                            a(href='/en/frankfurt/villa-rothschild/welcome/') Königstein - Villa Rothschild
+                          li
+                            a(href='/en/munich/hotel-vier-jahreszeiten/welcome/') Munich
+                      li
+                        h3 Hungary
+                        ul
+                          li
+                            a(href='/en/budapest/hotel-corvinus/welcome/') Budapest
+                      li
+                        h3 Italy
+                        ul
+                          li
+                            a(href='/en/venice/san-clemente-palace-kempinski/welcome/') Venice
+                      li
+                        h3 Lithuania
+                        ul
+                          li
+                            a(href='/en/vilnius/hotel-cathedral-square/welcome/') Vilnius
+                      li
+                        h3 Malta
+                        ul
+                          li
+                            a(href='/en/gozo/hotel-san-lawrenz/welcome/') San Lawrenz
+                            a.residence-link(href='/en/jochberg/hotel-das-tirol/welcome/') R
+                      li
+                        h3 Russian Federation
+                        ul
+                          li
+                            a(href='/en/gelendzhik/grand-hotel-gelendzhik/welcome/') Gelendzhik
+                          li
+                            a(href='/en/moscow/hotel-baltschug/welcome/') Moscow - Baltschug
+                          li
+                            a(href='/en/st-petersburg/hotel-moika-22/welcome/') St. Petersburg
+                      li
+                        h3 Slovakia
+                        ul
+                          li
+                            a(href='/en/strba-strbske-pleso/grand-hotel-high-tatras/welcome/') Strbske Pleso - High Tatras
+                      li
+                        h3 Slovenia
+                        ul
+                          li
+                            a(href='/en/istria/palace-portoroz/welcome/') Portoroz
+                      li
+                        h3 Spain
+                        ul
+                          li
+                            a(href='/en/marbella/hotel-bahia/welcome/') Estepona, Málaga
+                      li
+                        h3 Switzerland
+                        ul
+                          li
+                            a(href='/en/geneva/grand-hotel-geneva/welcome/') Geneva
+                          li
+                            a(href='/en/montreux/mirador-hotel/welcome/') Mont-Pelerin - Swiss Riviera
+                            a.residence-link(href='/en/jochberg/hotel-das-tirol/welcome/') R
+                          li
+                            a(href='/en/st-moritz/grand-hotel-des-bains/welcome/') St. Moritz
+                      li
+                        h3 Turkey
+                        ul
+                          li
+                            a(href='/en/belek/hotel-the-dome/welcome/') Antalya
+                          li
+                            a(href='/en/bodrum/hotel-barbaros-bay/welcome/') Bodrum
+                          li
+                            a(href='/en/istanbul/ciragan-palace/welcome/') Istanbul
+                    
+                li.col-xs-12.col-md-4
+                  .hotels-group.hotels-continent-group
+                    .corp KEMPINSKI
+                    .title MIDDLE EAST <br>&amp; AFRICA
+                    ul.countries-list.level-2-list
+                      li
+                        h3 Chad
+                        ul
+                          li
+                            a(href='/en/n-djamena/hotel-n-djamena/welcome/') N'Djamena
+                      li
+                        h3 Congo (DR)
+                        ul
+                          li
+                            a(href='/en/kinshasa/kempinski-hotel-fleuve-congo/welcome/') Kinshasa - Gombe
+                      li
+                        h3 Djibouti
+                        ul
+                          li
+                            a(href='/en/djibouti/djibouti-palace/welcome/') Djibouti
+                      li
+                        h3 Egypt
+                        ul
+                          li
+                            a(href='/en/cairo/nile-hotel/welcome/') Cairo - Nile Hotel
+                          li
+                            a(href='/en/cairo/royal-maxim-palace-kempinski-cairo/welcome/') Cairo - Royal Maxim
+                          li
+                            a(href='/en/soma-bay/hotel-soma-bay/welcome/') Soma Bay - Red Sea
+                      li
+                        h3 Ghana
+                        ul
+                          li
+                            a(href='/en/accra/hotel-gold-coast-city/welcome/') Accra - Ridge - Accra
+                      li
+                        h3 Jordan
+                        ul
+                          li
+                            a(href='/en/amman/hotel-amman/welcome/') Amman
+                          li
+                            a(href='/en/aqaba/hotel-aqaba/welcome/') Aqaba - Red Sea
+                          li
+                            a(href='/en/dead-sea/hotel-ishtar/welcome/') Ishtar - Dead Sea
+                      li
+                        h3 Kenya
+                        ul
+                          li
+                            a(href='/en/masai-mara/olare-mara/welcome/') Masai Mara - Olare Orok Conservancy
+                          li
+                            a(href='/en/nairobi/hotel-villa-rosa/welcome/') Nairobi
+                      li
+                        h3 Qatar
+                        ul
+                          li
+                            a(href='/en/doha/residences/welcome/') Doha
+                          li
+                            a(href='/en/doha/marsa-malaz-kempinski-the-pearl-doha/welcome/') The Pearl, Doha
+                      li
+                        h3 Rwanda
+                        ul
+                          li
+                            a(href='/en/kigali/hotel-des-mille-collines-managed-by-kempinski/welcome/') Kigali
+                      li
+                        h3 Saudi Arabia
+                        ul
+                          li
+                            a(href='/en/riyadh/burj-rafal-hotel/welcome/') Riyadh
+                      li
+                        h3 Seychelles
+                        ul
+                          li
+                            a(href='/en/baie-lazare/seychelles-resort/welcome/') Mahe Island
+                      li
+                        h3 United Arab Emirates
+                        ul
+                          li
+                            a(href='/en/abudhabi/emirates-palace/welcome/') Abu Dhabi
+                          li
+                            a(href='/en/ajman/hotel-ajman/welcome/') Ajman
+                          li
+                            a(href='/en/dubai/mall-of-the-emirates/welcome/') Dubai - Mall of the Emirates
+                          li
+                            a(href='/en/dubai/palm-jumeirah/welcome/') Dubai - Palm Jumeirah
+                            a.residence-link(href='/en/jochberg/hotel-das-tirol/welcome/') R
+
+                li.col-xs-12.col-md-4
+                  .hotels-group.hotels-continent-group
+                    .corp KEMPINSKI
+                    .title ASIA PACIFIC
+                    ul.countries-list.level-2-list
+                      li
+                        h3 China
+                        ul
+                          li
+                            a(href='/en/beijing/hotel-lufthansa-center/welcome/') Beijing
+                            a.residence-link(href='/en/jochberg/hotel-das-tirol/welcome/') R
+                          li
+                            a(href='en/beijing-yanqi-lake/') Beijing Yanqi Lake
+                          li
+                            a(href='/en/changsha/kempinski-hotel-changsha/welcome/') Changsha, Hunan
+                          li
+                            a(href='/en/chengdu/hotel-chengdu/welcome/') Chengdu
+                          li
+                            a(href='/en/chongqing/hotel-chongqing/welcome/') Chongqing
+                          li
+                            a(href='/en/dalian/hotel-dalian/welcome/') Dalian
+                          li
+                            a(href='/en/guiyang/hotel-guiyang/welcome/') Guiyang
+                          li
+                            a(href='/en/harbin/kempinski-hotel-harbin/welcome/') Harbin
+                          li
+                            a(href='/en/huizhou/hotel-huizhou/welcome/') Huizhou
+                          li
+                            a(href='/en/sanya/hotel-haitang-bay/welcome/') Sanya - Haitang Bay
+                            a.residence-link(href='/en/jochberg/hotel-das-tirol/welcome/') R
+                          li
+                            a(href='/en/shanghai/grand-kempinski-hotel-shanghai/welcome/') Shanghai - Pudong
+                          li
+                            a(href='/en/shanghai/the-one-executive-suites/welcome/') Shanghai - Puxi
+                          li
+                            a(href='/en/shenyang/hotel-shenyang/welcome/') Shenyang
+                          li
+                            a(href='/en/shenzhen/hotel-shenzhen/welcome/') Shenzhen
+                          li
+                            a(href='/en/suzhou/hotel-suzhou/welcome/') Suzhou
+                          li
+                            a(href='/en/taiyuan/kempinski-hotel-taiyuan/welcome/') Taiyuan
+                          li
+                            a(href='/en/wuxi/hotel-wuxi/welcome/') Wuxi
+                          li
+                            a(href='/en/xian/hotel-xian/welcome/') Xi'an
+                          li
+                            a(href='/en/xiamen/hotel-xiamen/welcome/') Xiamen
+                          li
+                            a(href='/en/yinchuan/hotel-yinchuan/welcome/') Yinchuan
+                          li
+                            a(href='/en/yixing/hotel-yixing/welcome/') Yixing
+                      li
+                        h3 India
+                        ul
+                          li
+                            a(href='/en/delhi/ambience-hotel/welcome/') Delhi
+                      li
+                        h3 Indonesia
+                        ul
+                          li
+                            a(href='/en/jakarta/hotel-indonesia/welcome/') Jakarta
+                            a.residence-link(href='/en/jochberg/hotel-das-tirol/welcome/') R
+                      li
+                        h3 Mongolia
+                        ul
+                          li
+                            a(href='/en/ulaanbaatar/hotel-khan-palace/welcome/') Ulaanbaatar
+                      li
+                        h3 Myanmar
+                        ul
+                          li
+                            a(href='/en/nay-pyi-taw/kempinski-hotel-nay-pyi-taw/welcome/') Nay Pyi Taw
+                      li
+                        h3 Thailand
+                        ul
+                          li
+                            a(href='/en/bangkok/siam-hotel/welcome/') Bangkok
+                            a.residence-link(href='/en/jochberg/hotel-das-tirol/welcome/') R
+                li.col-xs-12.col-md-4
+                  .hotels-group.hotels-group-big-top-distance
+                    .corp KEMPINSKI
+                    .title AMERICA
+                    ul.countries-list.level-2-list
+                      li
+                        h3 Panama
+                        ul
+                          li
+                            a(href='/en/saudi/hotel-al-khobar/welcome/') Emeral Bay La Guaira
+                            a.residence-link(href='/en/jochberg/hotel-das-tirol/welcome/') R
+                
+            .col-xs-12.col-md-3
+              ul.huge-list
+                li
+                  .hotels-group.hotels-continent-group
+                    .corp KEMPINSKI
+                    .title UPCOMING OPENINGS
+                    ul.countries-list.level-2-list
+                      li
+                        h3 SAUDI ARABIA
+                        ul
+                          li
+                            a(href='/en/saudi/hotel-al-khobar/welcome/') Al Khobar - opening 2016
+
+                li
+                  .hotels-group.hotels-group-big-top-distance
+                    .title PARTNER HOTELS
+                    h3 FURTHER ADVANTAGE
+                    p Kempinski Hotels' International partners for luxury stays worldwide. Global Hotel Alliance offers more than 500 hotels in 76 countries.
+
+

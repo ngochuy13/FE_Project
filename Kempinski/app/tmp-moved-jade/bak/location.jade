@@ -1,0 +1,15 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Home'
+  -bodyClass = ''
+  -bannerIMG = 'home/banner.jpg'
+block container    
+  .inner
+    main#main
+      section.map-section
+        +page-title-star("A MAGICAL EXPRIENCE","in Abu Dhabi")
+        include includes/block-map
+      include includes/five-article
+      include includes/experience-to-treasure
+      include includes/block-explore-article

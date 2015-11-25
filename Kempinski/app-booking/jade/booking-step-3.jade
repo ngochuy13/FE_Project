@@ -1,0 +1,139 @@
+extends layouts/book-template
+
+block vars
+  -title = 'Booking Step'
+  -bodyClass = 'booking-step booking-step-3'
+  -bannerIMG = ''
+  -page = 'booking-step-3'
+block container  
+  .inner
+    main#main(style="min-height: 800px;")
+      .section-tab
+        +filter-select([
+          {
+            "text": "YOU BOOKING"
+          },
+          {
+            "text": "GUEST DETAILS"
+          },
+          {
+            "text": "CONFIRAMATION"
+          }
+        ])
+
+      .section-booking-content
+        .container
+          .row
+            .col-xs-12.col-sm-12.col-md-9.booking-results
+              .content-step-3
+                .block-message
+                  | Thank you for your reservation, we looking forward to serving you.
+                  br 
+                  | An email confirmation will be sent to the 
+                  a(href="kempinski@kempinski.com") kempinski@kempinski.com
+                .block-review-booking-info                  
+                  .page-title.section-title.text-center
+                    h1.block-title.wow.fadeInUp(data-wow-duration="1s") RESERVATION CONFIRMED
+                    .sub-title.style-2.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.05s")
+                      span
+                        span.line-before
+                        span.text Your confirmation number: 412026460
+                        span.line-after
+                  .info-room
+                    .item
+                      .info-room__name.text-right Package:
+                      .info-room__value Best Flexible Rate
+                    .item
+                      .info-room__name.text-right Average Rate per Room:
+                      .info-room__value AED 2,995.69
+                    .item
+                      .info-room__name.text-right No of Adults:
+                      .info-room__value 2
+                    .item
+                      .info-room__name.text-right No. of Children:
+                      .info-room__value 0
+                    .item
+                      .info-room__name.text-right No. of Days:
+                      .info-room__value 6 days (5 nights)
+                    .item
+                      .info-room__name.text-right Dates:
+                      .info-room__value 10 December 2015 - 15 December 2015
+                    .item
+                      .info-room__name.text-right Room Type:
+                      .info-room__value Pearl Room, King Size Bed
+                    .item
+                      .info-room__name.text-right Sub Total:
+                      .info-room__value AED 12,500
+
+                    .title.text-center Additional Information
+
+                    .item
+                      .info-room__name.text-right Stay Enhancement:
+                      .info-room__value 5x Buffet Breakfast - AED 2,150
+                    .item
+                      .info-room__name.text-right Arrival Information:
+                      .info-room__value JAL155 - 10.00 AM
+                  
+                  .info-room-action
+                    .cta-btns.wide
+                      a(href="#", title="PRINT").btn.btn-default-outline PRINT
+                    .cta-btns.wide
+                      a(href="#", title="PDF").btn.btn-default-outline PDF
+                    .cta-btns.wide
+                      a(href="#", title="CALENDAR").btn.btn-default-outline CALENDAR
+                
+                .block-disclaimer
+                  .title.text-center *Disclaimer
+                  .editor-content.text-center
+                    p Earlier departures / extensions may result in a rate change. <br/>Whilst we will endaevour to oblige your special request, this request is not guaranteed.
+
+        
+            .col-xs-12.col-sm-12.col-md-3
+              .col-services-info
+                .block-services-short
+                  .row
+                    .services-item
+                      .col-xs-2.text-center.icon
+                        span.fa.fa-wifi
+                      .col-xs-10
+                        span Free Wifi
+                    .services-item
+                      .col-xs-2.text-center.icon
+                        span.fa.fa-check
+                      .col-xs-10
+                        span Best Rates Guaranteed
+                    .services-item
+                      .col-xs-2.text-center.icon
+                        span.fa.fa-user
+                      .col-xs-10
+                        span Customised assistance
+                .row
+                  .col-xs-12.col-sm-6.col-md-12
+                    .block-media.full
+                      .media-wrap
+                        +img('media' , 'booking-step/img-1.jpg')
+                  .col-xs-12.col-sm-6.col-md-12
+                    .block-description
+                      .title GOING BEYOND
+                      .editor-content
+                        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad totam atque sint eius tempora, perferendis.
+                      .information
+                        .address
+                          span.fa.fa-map-marker
+                          span West Corniche Road, P.O.Box - 39999, Abu Dhabi
+                        .phone
+                          span.fa.fa-phone
+                          a(href="tel:://971-2-690-9000" title="+971 2 690 9000") +971 2 690 9000
+                      .cta-btns.wide
+                        a(href="#", title="Book Now").btn.btn-default-outline FURTHER INFORMATION
+                .block-policy
+                  p 
+                    a(href="#", title="Guarantee Policy") Guarantee Policy
+                  p Guarantee is mandatory to reserve the room.
+                  p &nbsp;
+                  p 
+                    a(href="#", title="Terms & Conditions") Terms & Conditions
+                  p 
+                    a(href="#", title="Privacy Policy") Privacy Policy
+                  p 
+                    a(href="#", title="Children Policy") Children Policy

@@ -1,0 +1,15 @@
+mixin breadcrumb(items)
+  ol.breadcrumb.wow.fadeIn(data-wow-duration="0.4s")&attributes(attributes)
+    li.head
+    each item, index in items
+      - delay = (index+1) * 0.05
+      -if(index === items.length-1){
+        li
+          span.wow.fadeInLeft(data-wow-duration="0.7s" data-wow-delay="#{delay}s")!=item.text
+      -}else{
+        li
+          a(title="#{item.text}", href="#{item.href}")
+            span.wow.fadeInLeft(data-wow-duration="0.7s" data-wow-delay="#{delay}s")!=item.text
+      -}
+
+      

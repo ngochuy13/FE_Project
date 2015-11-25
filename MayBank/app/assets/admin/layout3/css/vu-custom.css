@@ -1,0 +1,631 @@
+.portlet.light {
+  background-color: #1b1b1b;
+}
+.page-content {
+  background: #1b1b1b;
+  padding: 30px 0 0px 0;
+  border-top: 1px solid #524614;
+}
+.container-data-char {
+  position: relative;
+  bottom: 105px;
+}
+.container-data-char:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 1px;
+  height: 65px;
+  background: #524614;
+}
+.container-data-char:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 15px;
+  width: 1px;
+  height: 65px;
+  background: #524614;
+}
+.container-data-char #total-wealth {
+  border-radius: 0;
+  border-top: 1px solid #524614;  
+}
+.portlet.light > .portlet-title > .caption > .caption-subject{
+  color: #ffd200!important;
+  font-size: 32px;
+  font-family: 'Futura Std', 'Arial', sans-serif;
+}
+.portlet.light > .portlet-title {
+    padding: 18px 0 25px;
+    margin-bottom: 0;
+}
+.portlet > .portlet-title {
+  border-bottom: 1px solid #494949;
+  border-bottom: 0;
+}
+.portlet > .portlet-title.no-border {
+  border-bottom: 0!important;
+}
+.investment .tools{
+  padding: 0 0 0 0!important;
+}
+.side-bar .portlet{
+  border: 1px solid #514614; 
+  border-radius: 0;
+  background: #202121;
+}
+.side-bar .portlet.light > .portlet-title{
+  padding: 0 0;
+}
+.side-bar .portlet.light > .portlet-title > .caption > .caption-subject{
+  color: #fff!important;
+  font-size: 21px;
+  font-family: 'Helvetica Neue Regular', 'Arial', sans-serif;
+}
+.side-bar .portlet > .portlet-title{
+  border: none;
+}
+.table {
+    background-color: transparent;
+}
+.table > thead > tr > th,
+.table > tbody > tr > td{
+  color: #fff
+}
+.primary-link {
+  color: #ffd200;
+}
+.portlet .portlet-title .portlet-toggler
+{
+  color: #959595;
+  clear: both;
+  float: left;
+  text-decoration: none;
+}
+.reports li{
+  background: transparent;
+  color: #fff;
+}
+table.no-border tr td,
+table.no-border tr th{
+  border: 0px solid !important
+}
+.info .avatar{
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+}
+.info .avatar.user{
+  border: 1px solid #514614; 
+}
+.info .avatar img{
+  height: 100%;
+}
+.info .content{
+  display: inline-block;
+  padding: 5px 0;
+  vertical-align: top;
+}
+.info .content .title{
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.info .content .description{
+  color: #fff;
+  font-size: 14px;
+}
+.info.user .content .title{
+  color: #fff;
+  font-size: 16px;
+}
+.info.user .content .description{
+  color: #fff;
+  font-size: 14px;
+}
+.info.exchange .content .title{
+  color: #fff;
+  font-size: 25px;
+}
+.info.exchange .content .description{
+  color: #fff;
+  font-size: 18px;
+}
+.add-widget{
+  padding: 40px 0;
+}
+.add-widget a{
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none 
+}
+.add-widget .fa{
+  font-size: 38px;
+  vertical-align: middle;
+  margin-right: 12px;
+}
+.portlet.light .portlet-body{
+  padding-top: 0;
+}
+.table-chart .head{
+  font-size: 21px;
+  text-transform: capitalize;
+}
+.table-chart{
+  font-size: 18px;
+}
+.table-chart .green{
+  color: #00cc33;
+  font-size: 18px;
+}
+.table-chart .red{
+  color: #ff2c3b;
+}
+.table-chart .process-td{
+  width: 180px;
+}
+.table-chart .process{
+  width: 180px;
+  height: 8px;
+  background: #323232;
+  border-radius: 10px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.table-chart .process i{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: inline-block;
+  background: #ffdd3e;
+  border-radius: 10px;
+}
+.table-chart tfoot,
+.table-chart thead{
+  background: #272727;
+  color: #fff
+}
+.table-chart tfoot tr td,
+.table-chart thead tr th{
+  vertical-align: middle;
+}
+.status{
+  font-size: 25px;
+  float: right;
+}
+.status .total{
+  display: inline-block;
+  margin-right: 35px;
+  color: #fff;
+  text-transform: uppercase;  
+}
+.status .up{
+  color: #00cc33;
+  display: inline-block;
+}
+.table-chart-pipe tbody tr{
+  border-bottom: 1px solid #494949;
+}
+.table-chart-pipe.table thead tr th{
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+}
+.table-chart-pipe.table thead tr th:last-child, .table-chart-pipe tr td:last-child{
+  text-align: right;
+}
+.table-chart-pipe.table thead tr th:first-child, .table-chart-pipe.table tbody>tr>td:first-child{
+  text-align: left;
+  padding-left: 14px;
+}
+.table-chart-pipe tr td{
+  text-align: center;
+}
+
+.table-chart-pipe tr td span.text-uppercase{
+  font-size: 21px;
+}
+.chart-tabs .nav-tabs {
+    border-bottom: 0px;
+}
+.chart-tabs .nav-tabs>li {
+    border: 1px solid #504517;
+    overflow: hidden;
+}
+.chart-tabs .nav-tabs>li:first-child{
+    border-radius: 38px 0 0 38px;
+    border-right: 0px;
+}
+.chart-tabs .nav-tabs>li:last-child{
+    border-radius: 0 38px 38px 0;
+    border-left: 0px;
+}
+.chart-tabs .nav-tabs>li:hover,
+.chart-tabs .nav-tabs>li.active{
+    background: #fed12f;
+}
+.chart-tabs .nav-tabs>li:hover a,
+.chart-tabs .nav-tabs>li.active a{
+    background: #fed12f;
+    color:#504517;
+    font-weight: bold;
+}
+.chart-tabs .nav-tabs>li>a{
+    color: #d2ad2a;
+    padding: 8px 15px;
+    background: transparent!important;
+    border: none!important;
+    font-size: 15px;
+}
+.select2-container{
+  background: transparent;
+}
+.select2-container .select2-choice{
+    background: #202121;
+    height: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 21px;
+    padding: 15px 0;
+    color: #fff;
+    border: 1px solid #504517!important;
+}
+.select2-container .select2-choice > .select2-chosen{
+  line-height: 1;
+}
+.select2-container .select2-choice .select2-arrow b {
+    background: transparent;
+}
+.select2-container .select2-choice .select2-arrow {
+    background: transparent;
+    border: 0;
+}
+.portlet.light.investment {
+  margin-top: 40px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.investment .btn-group.bootstrap-select.bs-select.form-control{
+  background: transparent;
+}
+.investment .bootstrap-select .caret{
+  top: 38%!important;
+}
+.investment .bootstrap-select .caret:before{
+  font-family: 'FontAwesome';
+  content: "\f0dd";
+}
+.investment .bootstrap-select.open .btn {
+    border: 0;
+    background-color: transparent;
+}
+.portlet.light > .portlet-title > .tools {
+  margin-top: -5px;
+}
+.investment button.btn.dropdown-toggle.selectpicker.btn-default {
+    background-color: #202121;
+    border: 1px solid #514614;
+    border-radius: 54px;
+    padding: 8px 48px 8px 28px;
+    font-size: 21px;
+    color: #fff;
+}
+.investment .dropdown-menu.open{
+  background:transparent;
+  border: 0;
+  margin-top: 8px;
+}
+.investment ul.dropdown-menu.inner.selectpicker {
+    background-color: transparent;
+    background-color: #202121;
+}
+.investment .bootstrap-select.btn-group .dropdown-menu li a{
+  color: #fff;
+  font-size: 17px;
+  text-align: center;
+}
+.investment .dropdown-menu li > a:hover, 
+.investment .dropdown-menu li > a:focus, 
+.investment .dropdown-menu .active > a, 
+.investment .dropdown-menu .active > a:hover {
+  background: #fff!important;
+    color: #000!important;
+}
+.table tbody tr th,
+.table tfoot tr td,
+.table tfoot tr th,
+.table-chart.table tbody tr>td{
+    padding: 18px 8px;
+}
+/*.table-chart.table>tbody>tr>td:first-child {
+  padding-left: 0;
+}
+.table-chart.table>tbody>tr>td:last-child {
+  padding-right: 0;
+}*/
+.table>thead>tr>td,
+.table>thead>tr>th {
+    padding: 11px 8px;
+}
+th.st-head-row.st-head-row-main {
+    display: none;
+}
+th.st-head-row {
+    font-size: 34px;
+    color: #fed12f;
+    background-color: #202121;
+}
+.table-chart .amount_currency span {
+  text-transform: uppercase;
+}
+.st-key{
+  text-align: left;
+  white-space: nowrap;
+}
+.st-val{
+  text-align: right;
+}
+.tickLabel {
+  font-size: 18px;
+  font-family: 'Helvetica Neue Regular', 'Arial', sans-serif;
+  color: rgb( 255, 255, 255 );
+}
+.chart-tabs .tab-content {
+  padding-top: 60px;
+  position: relative;
+}
+.chart-tabs .tab-content .legend {
+  position: absolute;
+  top: -40px;
+  right: 10px;
+}
+.chart-tabs .tab-content .legend .group {
+  display: inline-block;
+  margin-left: 40px;
+}
+.chart-tabs .tab-content .legend .group > div {
+  display: inline-block;
+}
+.chart-tabs .tab-content .legend .group > div.color {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  position: relative;
+  top: 3px;
+}
+.chart-tabs .tab-content .legend .group > div.legendLabel {
+  font-size: 18px;
+  font-family: 'Helvetica Neue Regular', 'Arial', sans-serif;
+  color: rgb( 255, 255, 255 );
+}
+.chart-tabs .chart {
+  height: 460px;
+}
+.amcharts-chart-div > a {
+  display: none !important;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+.stack-table.small-only.table-chart-pipe tbody tr:nth-child(5n+2) {
+    border-bottom: 0;
+    display: block;
+    width: 200%;
+    margin-top: 37px;
+}
+.stack-table.small-only.table-chart-pipe tbody tr:nth-child(5n+2) th {
+  display: block;
+}
+.stack-table.small-only.table-chart-pipe tbody tr:nth-child(5n+2) th span {
+  text-transform: uppercase;  
+}
+.stack-table.small-only .green,
+.stack-table.small-only .red{
+  color: #fff!important;
+}
+.portlet-body{
+}
+.recommend{
+  display: table;
+      padding: 10px 0;
+}
+.recommend .content{
+}
+.recommend .content .title{
+  font-size: 28px;
+  color: #fff;
+}
+.recommend .content .description{
+  font-size: 18px;
+  color: #959595;
+}
+.recommend .avatar{
+  display: inline-block;
+  vertical-align: top;
+}
+.recommend .avatar img{
+  min-width: 100%;
+  min-height: 100%;
+}
+.feeds li .col2 > .date {
+  padding-right: 0;
+}
+.video--bg,
+.intro-video {
+  max-height: 510px;
+  overflow: hidden;
+}
+.bg-video {
+  top: auto !important;
+  bottom: 0;
+}
+.icon-go-top {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 50px;
+    bottom: 50px;
+    display: none; 
+    cursor: pointer; 
+}
+.icon-go-top.show {
+  display: block;
+}
+/*
+.investment-chart text[text-anchor="middle"] tspan {
+  font-size: 150%;
+}
+.investment-chart text[text-anchor="middle"]:first-child tspan {
+  font-size: 193%;
+}
+*/
+
+@media (max-width: 800px){
+  .stacktable.large-only {
+      display: none !important;
+  }
+  .stacktable.small-only {
+      display: table !important;
+  }
+/*  .portlet.light.investment {
+      margin: 0 -15px;
+  }*/
+}
+
+@media (max-width: 767px){ 
+  .portlet.light > .portlet-title > .caption > .caption-subject {
+    font-size: 16px;
+  }
+  .status {
+    font-size: 12.5px;
+  }
+  div[class^="col-"]{
+    padding: 0 10px;
+  }
+  .portlet.light {
+    padding: 12px 0 0 0;
+  }
+  .portlet.light > .portlet-title > .caption {
+    padding: 0;
+  }
+  .status .total {
+    margin-right: 15px;
+  }
+  .portlet.light > .portlet-title {
+    border-bottom: 0;
+    padding: 0;
+    min-height: inherit;
+  }
+  .flot-x-axis > div,
+  .flot-y-axis > div,
+  .chart-tabs .nav-tabs>li>a,
+  .chart-tabs .tab-content .legend .group > div.legendLabel {
+    font-size: 9px !important;
+  }
+  .chart-tabs .tab-content .legend .group > div.color {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  }
+  .portlet.light > .portlet-title > .tools {
+    position: relative;
+    bottom: 5px;
+  }
+  .stack-table.small-only.table-chart-pipe tbody tr:nth-child(5n+2) th {
+    display: block;
+    height: 40px;
+    line-height: 30px;
+    padding: 0 8px;
+  }
+  .stack-table.small-only.table-chart-pipe tbody tr:nth-child(5n+2) th span {
+    font-size: 17px;
+  }
+  .table-chart-pipe.table thead tr th:first-child, .table-chart-pipe.table tbody>tr>td:first-child{
+    padding: 18px 8px;
+  }
+  .table-chart-pipe tr td span,
+  .table-chart .green,
+  .table-chart.table>tbody>tr>td {
+    font-size: 14px;
+  }
+  .recommend .content {
+    padding-left: 30px;
+  }
+  .icon-go-top.show {
+    display: none !important;
+  }
+  .container-data-char #total-wealth,
+  .container-data-char {
+    bottom: 0;
+    border-top: 0;
+  }
+  .container-data-char:before,
+  .container-data-char:after {
+    content: none;
+  }
+  .video--bg {
+    background: url('../../../../images/home/mobile-bg.jpg');
+    background-size: cover;
+  }
+  .bg-video {
+    display: none;
+  }
+  .investment button.btn.dropdown-toggle.selectpicker.btn-default {
+    font-size: 14px;
+  }
+  .page-container {
+    width: 100%;
+    overflow: hidden;    
+  }
+  .investment-chart,
+  .chart-tabs .chart {
+    height: 230px;
+  }
+  .investment-chart {
+    margin-top: 40px;
+  }
+  .status .up .fa {
+    position: relative;
+    top: 3px;
+  }
+  .recommend {
+    padding-top: 0;
+  }
+  .recommend .avatar {
+    padding-right: 25px;
+  }
+  #pie_chart text tspan {
+    font-size: 12px !important;
+  }
+}
+@media (max-width: 639px){
+  .recommend .content .title{
+    font-size: 14px;
+    color: #fff;
+  }
+  .recommend .content .description{
+    font-size: 9px;
+    color: #959595;
+  }
+  .chart-tabs .tab-content {
+    padding-top: 30px;
+  }
+  .chart-tabs .nav-tabs>li>a {
+    padding: 8px 7px;
+  }
+  .chart-tabs .tab-content .legend {
+    top: -35px;
+  }
+  .chart-tabs .tab-content .legend .group {
+    margin-left: 7px; 
+  }
+}
+

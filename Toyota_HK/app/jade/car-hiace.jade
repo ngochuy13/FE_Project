@@ -1,0 +1,118 @@
+extends layouts/layout
+
+block vars
+  -title = 'Car Corolla'
+  -bodyClass = 'car-detail' 
+
+
+block pagescript
+  // build:js scripts/home-dep.js
+  //- script(src='/scripts/lib-js/__static__.js')
+  script(src='/scripts/lib-js/imagesloaded.pkgd.min.js')
+  script(src='/scripts/lib-js/masonry.pkgd.min.js')
+  // endbuild
+
+block container
+
+  //- sub-page-banner
+  .simple-car-banner.img-middle
+    picture
+      source(srcset='images/Cars/Hiace/bg-hiace-mobile.jpg', media='(max-width: 1023px)')
+      source(srcset='images/Cars/Hiace/bg-hiace.jpg', media='(max-width: 1280px)')
+      img.master-banner-img.intel-scaling(src='images/Cars/Hiace/bg-hiace.jpg', alt='Master banner.', data-width='1920', data-height='677')
+    .master-banner-detail-wrap
+      .master-banner-detail
+        h1.master-banner-item__title HIACE
+        p.master-banner-item__short-desc
+          | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat
+
+  +car-carousel-gallery([
+    {
+      'mainImg': 'images/Cars/Corolla/carousel-main-img-01.jpg',
+      'thumb'  : 'images/Cars/Corolla/img-3.jpg'
+    },
+    {
+      'mainImg': 'images/Cars/Corolla/carousel-main-img-02.jpg',
+      'thumb'  : 'images/Cars/Corolla/img-4.jpg'
+    },
+    {
+      'mainImg': 'images/Cars/Corolla/carousel-main-img-03.jpg',
+      'thumb'  : 'images/Cars/Corolla/img-5.jpg'
+    },
+    {
+      'mainImg': 'images/Cars/Corolla/carousel-main-img-04.jpg',
+      'thumb'  : 'images/Cars/Corolla/img-6.jpg'
+    },
+    {
+      'mainImg': 'images/Cars/Corolla/carousel-main-img-03.jpg',
+      'thumb'  : 'images/Cars/Corolla/img-7.jpg'
+    },
+    {
+      'mainImg': 'images/Cars/Corolla/carousel-main-img-02.jpg',
+      'thumb'  : 'images/Cars/Corolla/img-3.jpg'
+    },
+    {
+      'mainImg': 'images/Cars/Corolla/carousel-main-img-01.jpg',
+      'thumb'  : 'images/Cars/Corolla/img-5.jpg'
+    }
+  ])
+  
+  //- specification-car
+  .section.section-specification-car
+    .container
+      h2.title HIGHLIGHTED SPECIFICATION
+      .table-content
+        table
+          tbody
+            tr 
+              td(rowspan="2").title Dimensions & Weights
+              td Overall Length x Overall Width x <br/>Overall Height (mm) 
+              td 4,400 x 1,695 x 1,460
+            tr 
+              td Seating Capacity (including driver)
+              td 5
+
+            tr 
+              td(rowspan="4").title Engine
+              td Type
+              td Valve VVT-iE Engine with Start Stop <br/>System
+            tr 
+              td Displacement (cc)
+              td 1496
+            tr 
+              td *Max. Output   kW (PS) / rpm
+              td 80 (109) / 6,000
+            tr 
+              td *Max. Torque   Nm (kg-m) / rpms
+              td 136 (13.9) / 4,400
+              
+            tr 
+              td(rowspan="3").title Chassis
+              td Transmission Type
+              td CVT
+            tr 
+              td Fuel Consumption
+              td 23.4 km/L (JC08 mode)
+            tr 
+              td Tyre & Wheel 
+              td 175/65 R15 Alloy Wheel <br/>(Corolla Super Luxury)<br/>175/65 R15 Full Wheel Cap<br/>(Corolla Luxury)
+
+
+  //- components-car
+  .section.section-components-car
+    .section-components-car-content
+      .container
+        .row
+          .col-lg-12.col-md-12.col-sm-12.col-xs-12
+            .block-downlink
+              a(href='#', title='Download e-Catalogue')
+                i.fa.fa-download  
+                | Download e-Catalogue
+              img(src='images/Cars/Corolla/cat-small.png', alt='Download')
+              a(href='#', title='Download Specification Sheet')
+                i.fa.fa-download  
+                | Download Specification Sheet
+
+  //- interest
+  .section.section-interest
+    +interest('YOU MAY ALSO HAVE INTEREST')

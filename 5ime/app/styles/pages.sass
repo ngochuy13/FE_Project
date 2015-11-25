@@ -1,0 +1,372 @@
+#container
+  max-width: 1024px
+  margin: 0 auto
+  position: relative
+  background: $black
+.main
+  max-width: 1024px
+  max-height: 700px
+  .content
+    position: relative  
+.section
+  position: relative
+  display: none
+  &.active
+    display: block
+  >img
+    width: 100%
+.outmost-wrapper .wrapper
+  > .main
+    margin: 0 auto
+
+#features
+  .slider-container
+    max-height: 650px
+    overflow: hidden
+.parameter-container
+  background: black
+  color: white
+  border: 14px solid #323635
+  border-radius: 7px
+  font-size: 12px
+  max-width: 714px
+  max-height: 540px
+  margin: 77px auto 0
+  overflow: auto
+  ul
+    padding: 30px 40px 40px 20px
+    li
+      padding: 6px 0 3px 0
+      border-top: 1px solid #474848
+      .title, .detail
+        float: left
+      .title
+        width: 200px
+      .detail
+        overflow: hidden
+
+#home-page
+  display: block
+  .btn-game-do-xe,
+  .btn-thong-tin-sp,
+  .btn-share-fb
+    width: 20%
+    height: 10%
+    background: url('../images/btn-game-do-xe.png') no-repeat
+    background-size: 100%
+    display: block
+    position: absolute
+    top: 56%
+    right: 3%
+  .btn-thong-tin-sp
+    background-image: url('../images/btn-thong-tin-san-pham.png')
+    top: 68%
+  .btn-share-fb
+    background-image: url('../images/btn-share-fb.png')    
+    width: 10%
+    height: 4%
+    top: 92%
+    right: 4%
+#photo-gallery  
+  .big-frame,
+  .small-frame
+    position: absolute
+    top: 8%
+    left: 21.5% 
+    height: 22%
+    width: 84%
+  .big-frame
+    // width: 57.5%
+    // height: 57%  
+    width: 77%
+    height: 77% 
+    left: 11.5%   
+    top: 14%
+    .center-img
+      // width: 84%
+      // height: 80%
+      // top: 6%
+      // left: 8.5%
+      width: 83.3%
+      height: 77%
+      top: 6.3%
+      left: 7.7%
+      position: absolute
+      >img
+        max-width: 100%
+  .small-frame
+    left: 9%
+    top: 71.5%
+    display: none
+    .owl-carousel
+      height: 100%
+      position: absolute !important
+      padding: 0 6%
+      top: 23%
+      .small-item
+        margin-left: 12%
+        border: 1px solid #fff
+      .owl-prev,
+      .owl-next
+        position: absolute
+        background: url('../images/arrow-small.png') no-repeat
+        background-size: 200% auto
+        width: 3%
+        top: 5%
+        height: 30%
+        left: 2%
+        background-position: top left
+      .owl-next
+        background-position: top right
+        left: 95%
+.motor-color-choice
+  .carousel-switcher
+    position: absolute
+    top: 15.5%
+    left: 29%
+    width: 43%
+    z-index:2
+    height: 7%
+    .trang-xanh,
+    .den-do
+      height: 100%
+      width: 37%
+      border: none
+      background: url('../images/btn-xanhtrang.png') no-repeat
+      background-size: 100%
+      display:block
+    .den-do
+      background-image: url('../images/btn-doden.png')
+      position: absolute
+      top: 0
+      right: 0
+      background-size: 100%
+  .motor-decor-carousel
+    position:absolute
+    top: -7%
+    display: none
+  .active
+    display :block !important
+  .owl-prev,
+  .owl-next
+    position: absolute
+    top: 45%
+    width: 12%
+    left: 8%    
+    height: 15%
+    background: url('../images/btn-xoay-trai.png') no-repeat
+    background-size: 100%
+  .owl-next
+    background: url('../images/btn-xoay-phai.png') no-repeat
+    left: 79%
+    background-size: 100%
+
+#upload-form
+  text-align: center
+#caption-form
+  height: 80%
+  text-align: center
+  .caption
+    .message
+      display: none
+    &.error
+      .message
+        display: inline
+        font-size: 14px
+        color: red
+        font-weight: normal
+        text-transform: none
+        margin-left: 20px
+.extra-info-form
+  position: absolute
+  top: 0
+  left: 0
+  display: block
+  margin: 0 auto
+  width: 100%
+  height: 100%
+  z-index: 22
+  .extra-info-form-positioning
+    width: 46.875%
+    height: 100%
+    margin: 36px auto 0
+    text-align: center
+  .upload-avatar
+    position: relative
+    width: 136px
+    height: 49px
+    overflow: hidden
+    margin: 0 auto
+    input
+      width: 136px
+      height: 49px
+      opacity: 0
+      font-size: 0
+      position: absolute
+      z-index: 1
+      top: 0
+      left: 0
+  .caption
+    .title
+      margin-top: 0
+      text-align: left
+      font-size: 1.7em
+      text-shadow: 1px 1px 3px rgba(0,0,0, 0.5)
+      font-weight: bold
+      color: #fff
+      text-transform: uppercase
+    textarea
+      &:focus, &:active
+        outline: none
+      border-radius: 6px
+      display: block
+      box-sizing: border-box
+      width: 100%
+      padding: 10px 20px
+      height: 40px
+      margin: 0 auto
+      background: rgba(0,0,0, 0.4)
+      -webkit-box-shadow: inset 2px 4px 4px 0px rgba(0,0,0,0.15);
+      -moz-box-shadow: inset 2px 4px 4px 0px rgba(0,0,0,0.15);
+      box-shadow: inset 2px 4px 4px 0px rgba(0,0,0,0.15);
+      border: none
+      font-size: 1.6em
+      color: white
+  .submission
+    width: 100%
+    position: absolute
+    bottom: 5%
+    left: 0
+  .page-navigation 
+    position: absolute
+    width: 100%
+    left: 0
+    top: 0
+    height: 100px
+    .btn-goto
+      top: 53px
+
+//==================================== Style HuyPham ====================================//
+.text-align-center
+  text-align: center
+.text-align-right
+  text-align: right
+img
+  max-width: 100%  
+//==================================== Page Rules ====================================//
+.header-tab
+  position: absolute
+  top: 42px
+  z-index: 99
+  float: left
+  width: 100%
+  ul
+    padding: 0 16.02%
+  li
+    float: left
+    width: 33.333%
+  &.player-entries-header-tab
+    li
+      width: 50%
+    .btn-goto
+      top: 10px
+.btn-library
+  border: none
+  width: 136px
+  height: 49px
+  background: url('../images/rules/btn.png') -156px 0px no-repeat
+  font-size: 1.8em
+  line-height: 2.03
+  font-family: $font-family-base
+  color: #d8d8d8
+  font-weight: bold
+  text-transform: uppercase
+  text-align: center
+  text-shadow: 1.5px 2.598px 2px rgb( 20, 19, 20 )
+  display: inline-block
+  transition: none 
+.btn-library:hover, .btn-library.active
+  background-position: 0px 0px  
+label.btn-library, a.btn-library
+  line-height: 3.03
+label.btn-library
+  z-index: 2
+  position: relative
+.btn-goto
+  position: absolute
+  left: 2.44%
+  top: 70px
+  z-index: 99
+  font-style: italic
+  &.btn-right
+    left: auto
+    right: 2.44%
+  a
+    font-size: 12.5px
+    line-height: 30px
+    font-family: $font-family-base
+    color: #070907
+    font-weight: bold
+    text-transform: uppercase
+    background: url(../images/rules/bg-return.png) no-repeat
+    height: 27px
+    display: block
+    padding: 0 7px 0 50px
+  &.btn-right
+    a
+      background-position: top right
+      padding: 0 50px 0 7px
+.drak-popup
+  background: black
+  color: white
+  border: 14px solid #323635
+  border-radius: 7px
+  font-size: 1.2em
+  max-width: 714px
+  max-height: 540px
+  margin: 77px auto 0
+  overflow: auto
+.reward-wrapper
+  .drak-popup
+    margin-top: 168px   
+  .git-wrapper
+    position: relative
+    font-size: 0
+    img
+      display: block
+      margin: 10px auto
+.how-to-play-wrapper
+  .drak-popup
+    margin-top: 168px  
+    .how-to-play-image
+      text-align: center
+.regulations-wrapper    
+  .drak-popup
+    margin-top: 168px
+    .regulations-text
+      padding: 45px 10px
+      font-family: $font-family-base
+      color: white
+      line-height: 1.333
+      p
+        margin-top: 2px
+        font-size: 14px
+.drak-popup-wrapper
+  background:  url(../images/rules/bg-rules.jpg) no-repeat
+  background-size: cover
+  padding-top: 168px
+  min-height: 764px
+  display: none
+  &.active
+    display: block
+  .drak-popup
+    margin: 0 auto       
+.overplay-reward-popup
+  position: absolute
+  width: 100%
+  height: 100%
+  img
+    width: 100%
+    height: 100%
+  .drak-popup
+    margin-top: 16.6%

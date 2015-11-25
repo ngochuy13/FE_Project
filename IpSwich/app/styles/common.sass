@@ -1,0 +1,239 @@
+.img-responsive
+  display: block
+  max-width: 100%
+  margin: 0 auto
+
+.img-circle
+  +border-radius(50%)
+  display: block
+
+.figure
+  border: 1px solid #d2dce5
+  padding: 6px
+  margin: 0 auto
+  max-width: 342px
+  @include box-sizing(border-box)
+  img
+    display: block
+    max-width: 100%
+    width: 100%
+
+// Triangle
+$triangle-bd: #E5EDF4
+.triangle-top-left,
+.triangle-bottom-right
+  display: block
+  position: absolute
+  @include square(0)
+
+.triangle-top-left
+  top: 2px
+  left: 2px
+  border-top: 18px solid $triangle-bd
+  border-right: 18px solid transparent
+  &.style-1
+    border-top: 13px solid $triangle-bd
+    border-right: 13px solid transparent
+
+.triangle-bottom-right
+  top: auto
+  bottom: 2px
+  right: 2px
+  border-bottom: 18px solid $triangle-bd
+  border-left: 18px solid transparent
+  &.style-1
+    border-bottom: 13px solid $triangle-bd
+    border-left: 13px solid transparent
+
+.bootstrap-datetimepicker-widget 
+  background: $calendar-widget-bg
+  border: none
+  box-shadow: none
+  border-radius: 0
+  &.dropdown-menu
+    width: 19.3em
+    &:before, &:after
+      display: none
+  .datepicker-days
+    padding-top: 12px
+    text-transform: uppercase
+    letter-spacing: 1px
+  table
+    width: 236px
+    margin: 0 auto
+    td.day
+      padding: 9px 5px 8px 5px
+      &:hover
+        background: url(../images/calendar/date-selection-bg.png) no-repeat 1px -41px
+        background-size: 30px 75px
+        color: $white
+    td.today
+      color: #eb4a4a
+      &:before
+        display: none
+    td.active
+      background: transparent
+      position: relative
+      border-radius: 50%
+      background: url(../images/calendar/date-selection-bg.png) no-repeat 1px 4px
+      background-size: 30px 75px
+      &.today
+        color: $white
+    th.dow
+      font-size: 0
+      padding-top: 17px
+      font-weight: normal
+      &:first-letter
+        font-size: 10px
+  thead 
+    th.next, th.prev
+      font-size: $fz-4
+    th.next
+      text-align: right
+    th.prev
+      text-align: left
+  
+.input-with-icon
+  position: relative
+  >.fa
+    color: #5e5e5e
+    font-size: 24px
+    position: absolute
+    top: 12px
+    right: 15px
+  &.date-picker
+    .form-control
+      background: #f8f8f8
+      &:focus
+        background: $white
+
+
+.select-style-1
+  &.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn)
+    width: 100%
+  button
+    font-size: 16px
+    padding-left: 17px
+    width: 100%
+    background: #cacaca
+    border: none
+    height: 50px
+    color: $white
+    font-weight: 300
+    &:focus, &:active
+      outline: none
+    &:hover
+      color: white
+      background: #aaa
+    span.filter-option
+      white-space: nowrap
+      text-overflow: ellipsis
+      overflow: hidden
+      width: 38px
+      line-height: 38px
+      
+  span.caret
+    border: none
+    &:before
+      content: '\F107'
+      display: block
+      font-family: 'FontAwesome'
+      font-size: 11px
+      color: $white
+      position: absolute
+      top: -5px
+      right: 0
+  &.open
+    span.caret
+      &:before
+        content: '\F106'
+    button.btn-default.dropdown-toggle
+      background: #cacaca
+      color: $white
+      box-shadow: none
+      border-bottom-left-radius: 0
+      border-bottom-right-radius: 0
+    .dropdown-menu
+      box-shadow: none
+      margin-top: 0
+      padding-top: 0
+      border: none
+      background: #cacaca
+      border-top-left-radius: 0
+      border-top-right-radius: 0
+      li > a:hover, li > a:focus
+        background: #ccc
+        outline: none
+      li
+        height: 59px
+        a
+          padding-top: 16px
+          height: 59px
+          color: $white
+          font-size: 16px
+          padding-left: 17px
+          border-top: 1px solid $white
+
+.range-slider-control
+  label
+    font-weight: normal
+    font-size: 16px
+    margin-bottom: 11px
+.noUi-target
+  border: none
+  background: $c_blue_act
+  box-shadow: none
+
+.noUi-horizontal 
+  position: relative
+  height: 3px
+  &:before, &:after
+    top: -3px
+    width: 9px
+    height: 9px
+    background: $c_blue_act
+    border-radius: 50%
+    content: " "
+    display: block
+    position: absolute
+    z-index: 1
+  &:after
+    right: 0
+  .noUi-base
+    z-index: 2
+  .noUi-connect, .noUi-background
+    background: $c_blue_act
+    box-shadow: none
+  .noUi-handle
+    width: 19px
+    height: 19px
+    top: -8px
+    left: -9px
+    box-shadow: none
+    background: $c_blue_act
+    border: 3px solid white
+    border-radius: 50%
+    position: relative
+    &:before, &:after
+      display: none
+    .rangeslider-tooltip
+      font-size: 14px
+      top: 20px
+      position: absolute
+      width: 60px
+      margin-left: -25px
+      text-align: center
+
+.icon-feature
+  width: 50px
+  height: 36px
+  background: url(../images/icon-features-sprite.png) no-repeat top left
+  background-size: 38px 200px
+  display: inline-block
+  font-size: 0
+  &.icon-feature-see-do
+    background-position: center 8px
+  &.icon-feature-what-on
+    background-position: center -47px
+  &.icon-feature-stay
+    background-position: center -88px

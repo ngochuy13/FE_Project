@@ -1,0 +1,41 @@
+.room-suite-gallery.wow.fadeIn(data-wow-duration="0.5s")
+  +filter-select([
+    {
+      "text": "Luxury Rooms",
+      "link": "#room-suites-luxyry-room"
+    },{
+      "text": "Luxury Suites",
+      "link": "#room-suites-luxury-suite"
+    }
+  ])
+  .tab-content
+    #room-suites-luxyry-room.tab-pane.active(role='tabpanel')
+      .owl-carousel(data-loop="true" data-items="1" data-auto-simpleinit="true" data-nav="true")
+        +room-suites-item('rooms-suites/room-suite-1.jpg', 'Coral Room', '<p>Our most flexible price including buffet breakfast and free Internet access. Subject to 24.32% tax and service charge.</p>', ['Laptop-size safe', 'Balcony', 'Flat-screen TV', 'Working Desk', 'Lounge Area', 'Separate Living Room & Bedroom', 'Powder Room', 'Entertainment Center'])
+          +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide
+        +room-suites-item('rooms-suites/room-suite-2.jpg', 'Pearl Room', '<p>Our most flexible price including buffet breakfast and free Internet access. Subject to 24.32% tax and service charge.</p>', ['Laptop-size safe', 'Balcony', 'Flat-screen TV', 'Working Desk', 'Lounge Area', 'Separate Living Room & Bedroom', 'Powder Room', 'Entertainment Center'])
+          +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide
+        +room-suites-item('rooms-suites/room-suite-3.jpg', 'Diamond Room', '<p>Our most flexible price including buffet breakfast and free Internet access. Subject to 24.32% tax and service charge.</p>', ['Laptop-size safe', 'Balcony', 'Flat-screen TV', 'Working Desk', 'Lounge Area', 'Separate Living Room & Bedroom', 'Powder Room', 'Entertainment Center'])
+          +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide
+    #room-suites-luxury-suite.tab-pane(role='tabpanel')
+      .owl-carousel(data-loop="true" data-items="1" data-auto-simpleinit="true" data-nav="true")
+        +room-suites-item('rooms-suites/room-suite-2.jpg', 'Khaleej Suite', '<p>Our most flexible Rate including free Internet access. The rate is based on accommodation only. Subject to 24.32% tax and service charge.</p>', ['Laptop-size safe', 'Balcony', 'Flat-screen TV', 'Working Desk', 'Lounge Area', 'Separate Living Room & Bedroom', 'Powder Room', 'Entertainment Center'])
+          +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide
+        +room-suites-item('rooms-suites/room-suite-1.jpg', 'Khaleej Deluxe Suite', '<p>Our most flexible Rate including free Internet access. The rate is based on accommodation only. Subject to 24.32% tax and service charge.</p>', ['Laptop-size safe', 'Balcony', 'Flat-screen TV', 'Working Desk', 'Lounge Area', 'Separate Living Room & Bedroom', 'Powder Room', 'Entertainment Center'])
+          +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide
+        +room-suites-item('rooms-suites/room-suite-3.jpg', 'Royal Khaleej Suite', '<p>Our most flexible Rate including free Internet access. The rate is based on accommodation only. Subject to 24.32% tax and service charge.</p>', ['Laptop-size safe', 'Balcony', 'Flat-screen TV', 'Working Desk', 'Lounge Area', 'Separate Living Room & Bedroom', 'Powder Room', 'Entertainment Center'])
+          +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide
+        +room-suites-item('rooms-suites/room-suite-2.jpg', 'Palace Pearl Suite', '<p>Our most flexible Rate including free Internet access. The rate is based on accommodation only. Subject to 24.32% tax and service charge.</p>', ['Laptop-size safe', 'Balcony', 'Flat-screen TV', 'Working Desk', 'Lounge Area', 'Separate Living Room & Bedroom', 'Powder Room', 'Entertainment Center'])
+          +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide
+        +room-suites-item('rooms-suites/room-suite-1.jpg', '2 Bedrooms Palace Suite', '<p>Our most flexible Rate including free Internet access. The rate is based on accommodation only. Subject to 24.32% tax and service charge.</p>', ['Laptop-size safe', 'Balcony', 'Flat-screen TV', 'Working Desk', 'Lounge Area', 'Separate Living Room & Bedroom', 'Powder Room', 'Entertainment Center'])
+          +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide
+        +room-suites-item('rooms-suites/room-suite-3.jpg', '3 Bedrooms Palace Suite', '<p>Our most flexible Rate including free Internet access. The rate is based on accommodation only. Subject to 24.32% tax and service charge.</p>', ['Laptop-size safe', 'Balcony', 'Flat-screen TV', 'Working Desk', 'Lounge Area', 'Separate Living Room & Bedroom', 'Powder Room', 'Entertainment Center'])
+          +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide
+    #room-suites-exclusive.tab-pane(role='tabpanel')
+      .owl-carousel(data-loop="true" data-items="1" data-auto-simpleinit="true" data-nav="true")
+        +room-suites-item('rooms-suites/room-suite-1.jpg', 'Exclusive Coral Room', '<p>Our most flexible price including buffet breakfast and free Internet access. Subject to 24.32% tax and service charge.</p>', ['Laptop-size safe', 'Balcony', 'Flat-screen TV', 'Working Desk', 'Lounge Area', 'Separate Living Room & Bedroom', 'Powder Room', 'Entertainment Center'])
+          +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide
+        +room-suites-item('rooms-suites/room-suite-2.jpg', 'Exclusive Pearl Room', '<p>Our most flexible price including buffet breakfast and free Internet access. Subject to 24.32% tax and service charge.</p>', ['Laptop-size safe', 'Balcony', 'Flat-screen TV', 'Working Desk', 'Lounge Area', 'Separate Living Room & Bedroom', 'Powder Room', 'Entertainment Center'])
+          +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide
+        +room-suites-item('rooms-suites/room-suite-3.jpg', 'Exclusive Diamond Room', '<p>Our most flexible price including buffet breakfast and free Internet access. Subject to 24.32% tax and service charge.</p>', ['Laptop-size safe', 'Balcony', 'Flat-screen TV', 'Working Desk', 'Lounge Area', 'Separate Living Room & Bedroom', 'Powder Room', 'Entertainment Center'])
+          +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide

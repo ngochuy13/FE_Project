@@ -1,0 +1,203 @@
+#search-result
+  .container
+    .bread-crumd.row
+      ol.breadcrumb.col-md-12
+        li.home
+          a(href="javascript:")
+            img(src="images/icon-home-bread-crumb.png")
+        li
+          a(href="javascript:") RESIDENTIAL PROPERTY
+        li
+          a(href="javascript:") FIND PROPERTIES
+        li.active
+          a(href="javascript:") SEARCH RESULTS
+    .side-filter
+      .large-title REFINE SEARCH OPTIONS
+
+      .filter-control.show
+        .filter-type LISTINGS FOR
+        .filter-body
+          .btn-group(role="group", aria-label="...")
+            button.btn.active(type="button") SALE
+            button.btn(type="button") RENT
+
+      .filter-control.show
+        .filter-type TYPE 
+        .filter-body
+          ul.link-list
+            li
+              a(href="javascript:") ALL RESIDENTIAL 
+            li
+              a(href="javascript:") CONDO / APARTMENT
+            li
+              a(href="javascript:") HDB
+            li
+              a(href="javascript:") LANDED PROPERTY
+            li
+              a(href="javascript:") NEW HOMES
+            li
+              a(href="javascript:") OTHERS
+
+      .filter-control.show
+        .filter-type NO. OF ROOMS 
+        .filter-body
+          ul.link-list
+            li
+              a(href="javascript:") ALL
+            li
+              a(href="javascript:") STUDIO
+            li
+              a(href="javascript:") 1 BR
+            li
+              a(href="javascript:") 2 BR
+            li
+              a(href="javascript:") 3 BR
+            li
+              a(href="javascript:") 4+ BR
+
+      .filter-control.show
+        .filter-type LOCATIONS
+        .filter-body
+          ul.link-list
+            li
+              a(href="javascript:") ALL LOCATIONS
+            li
+              a(href="javascript:") NORTH 
+            li
+              a(href="javascript:") EAST 
+            li
+              a(href="javascript:") SOUTH
+            li
+              a(href="javascript:") WEST
+            li
+              a(href="javascript:") CENTRAL
+
+      .filter-control.show
+        .filter-type PRICE
+        .filter-body
+          .ranger-slider
+            input.price-ranger(data-hide-from-to="true")
+            .ranger-view(data-ranger=".price-ranger")
+              .from 0
+              .to $50,000,000
+      .filter-control.show
+        .filter-type TENURE
+        .filter-body
+          .link-list
+            li
+              a(href="javascript:") ALL
+            li
+              a(href="javascript:") FREEHOLD
+            li
+              a(href="javascript:") 30 YEAR
+            li
+              a(href="javascript:") 60 YEAR
+            li
+              a(href="javascript:") 99 YEAR
+            li
+              a(href="javascript:") 999 YEAR
+            li
+              a(href="javascript:") UNKNOWN
+
+      .filter-control.show
+        .filter-type RATINGS & REVIEW
+        .filter-body
+          ul.rating-control
+            li
+              label
+                input.no-icheck(type="radio", name="rating", checked)
+                span.rate-1
+            li
+              label
+                input.no-icheck(type="radio", name="rating")
+                span.rate-2
+            li
+              label
+                input.no-icheck(type="radio", name="rating")
+                span.rate-3
+            li
+              label
+                input.no-icheck(type="radio", name="rating")
+                span.rate-4
+            li
+              label
+                input.no-icheck(type="radio", name="rating")
+                span.rate-5
+
+      //- .filter-control.show
+      //-   .filter-type MORE SEARCH OPTIONS
+      //-   .filter-body
+
+      button.create-alert(data-toggle='modal', href='#modal-create-alert') CREATE ALERT 
+
+    .result-content
+      .banner-slide.owl-carousel
+        a(href="javascript:", title="")
+          img(src="images/search-banner.jpg", width="100%")
+        a(href="javascript:", title="")
+          img(src="images/search-banner.jpg", width="100%")
+      .search-action
+        .search-terms
+          span.text Search results for: 
+          span.terms ALBA
+        button.select-all-btn.pull-right SELECT ALL
+        button.sms-btn.pull-right(data-toggle="modal",data-target="#modal-message-preview") SMS SELECTED
+      .search-status
+        .result-count 5 PROPERTIES FOUND
+        .result-filter
+          ul
+            li
+              a(href="javascript:") PHOTO VIEW
+            li
+              a.active(href="javascript:") LIST VIEW
+            li
+              a(href="javascript:") MAP VIEW
+        .result-paging
+          .num-per-page RESULTS PER PAGE:
+          a(href="javascript:") 10
+          a(href="javascript:") 50
+          a.active(href="javascript:") ALL
+        .result-sort
+          //- .dropdown-face
+          //-   | SORT
+          .dropdown.pull-right
+            button#dropdownMenu1.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+              | SORT
+              span.caret
+            ul.dropdown-menu(aria-labelledby='dropdownMenu1')
+              li
+                a(href='#') Relevance
+              li
+                a(href='#') Lowest Price
+              li
+                a(href='#') Highest Price
+              li
+                a(href='#') Lowest Floor Area
+              li
+                a(href='#') Highest Floor Area
+              li
+                a(href='#') Lowest Land Area
+              li
+                a(href='#') Highest Land Area
+              li
+                a(href='#') Lowest PSF (price-per-sqft)
+              li
+                a(href='#') Highest PSF (price-per-sqft)                
+      .search-listing
+        +searchItem("block-image-13.jpg")
+        +searchItem("block-image-14.jpg")
+        +searchItem("block-image-15.jpg")
+        +searchItem("block-image-13.jpg")
+        +searchItem("block-image-14.jpg")
+        +searchItem("block-image-15.jpg")
+      .search-listing-pagination
+        a(href="#").prev << PREVIOUS
+        a(href="#").page 1
+        a(href="#").page 2
+        a(href="#").page 3
+        a(href="#").page 4
+        a(href="#").page 5
+        a(href="#").page 6
+        a(href="#").page 7
+        a(href="#").page 8
+        a(href="#").next >> Next

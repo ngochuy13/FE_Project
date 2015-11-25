@@ -1,0 +1,898 @@
+//******************** Desktop ********************//
+@media screen and (min-width: 1699px)
+  .section-room-gallery
+    height: auto!important
+
+@media screen and (max-width: 1600px)
+  // .section-masonry-garelly
+  //   .grid-sizer, .item
+  //     width: 14.2857%
+
+@media screen and (max-width: 1530px)
+  .section-video .fp-tableCell .parallax.with-video .parallax-layer video,
+  .section-video .parallax.with-video .parallax-layer video
+    position: relative
+    width: auto
+    max-width: inherit
+    left: 50%
+    height: 100%
+    +transform(translateX(-50%))
+
+@media screen and (max-width: 1440px)
+  .section-masonry-garelly
+    .grid-sizer, .item
+      width: 16.666%
+  .room-gallery .room-details .room-list
+    height: 415px
+  .room-gallery .gallery-list .gallery-item .slider img
+    position: relative
+    left: 50%
+    +transform(translateX(-50%))
+
+@media screen and (max-width: 1280px)
+  .section-masonry-garelly
+    .grid-sizer, .item
+      width: 20%
+  .room-gallery .gallery-list .gallery-item .slider img
+      left: 0
+      +transform(translateX(0))
+
+@media screen and (min-width: 1280px) and (max-width: 1440px)
+  // The house
+  .the-house
+    .introduction-text
+      height: 280px !important
+  // Unit list
+  .unit-list
+    h2
+      margin: 20px 0 60px
+    .unit-section
+      .units
+        li
+          a
+            padding: 0
+  // Floor list
+  .floor-list
+    .container
+      height: 100%
+    .floor-section
+      height: 100%
+    .selected-section
+      height: 100%
+      .selected-drawing
+        // height: 100%
+        // overflow: auto
+      .selected-info
+        .info-list
+          margin-top: 20%
+    .drawing-section
+      top: 10%
+  // Gallery list
+  .room-gallery
+    .gallery-list
+      .slick-slide
+        // max-height: 330px
+        overflow: hidden
+
+@media screen and (max-width: 1230px)
+  .section-then-now .map-section-container img.desktop
+    height: 100%
+
+@media screen and (min-width: 1200px) and (max-width: 1280px)
+  // General
+  .container
+    width: 1200px
+
+  // Header
+  #header
+    .container
+      .navigation
+        ul
+          > li
+            margin-right: 30px
+
+  // City list
+  .city-list
+    .city-block
+      .caption
+        padding: 12px 70px
+
+  // Room gallery
+  .room-gallery
+    .room-list
+      .swiper-container
+        max-width: 832px
+
+@media screen and (max-width: 1041px)
+  .landing,
+  .body-the-contact
+    .fp-tableCell
+      position: relative
+      .parallax
+        .parallax-layer
+          position: static
+          .parallax-content > img
+            position: relative
+
+//******************** Small Desktop ********************//
+@media screen and (min-width: 1025px)
+  // Full page section
+  .fp-section
+    // &.section-masonry-garelly,
+    // &.section-room-gallery
+    //   height: auto !important
+    //   .fp-tableCell
+    //     height: auto !important
+    // .parallax
+    //   .parallax-layer
+    //     .parallax-content
+    //       > img
+    //         max-width: inherit
+  .section-then-now
+    .map-section-container
+      padding-left: 0
+  .section-then-now .map-section-container img.desktop
+    width: 70%
+
+@media screen and (max-width: 1199px)
+  // Header
+  #header
+    .container
+      .logo
+        padding-top: 40px
+        a
+          padding-right: 20px
+          padding-left: 0
+        img
+          max-width: 165px
+      .menu
+        padding-left: 20px
+      .navigation
+        ul
+          > li
+            margin-right: 22px
+            &:nth-child(5)
+              ul.sub-menu
+                min-width: 1024px
+                right: -198%
+          &.sub-menu
+            li
+              padding: 0 9px
+      .lang
+        padding: 45px 20px
+
+  // City list
+  .city-list
+    .city-block
+      .caption
+        padding: 12px 30px
+
+  // Unit list
+  .unit-list
+    .unit-section
+      .units
+        li
+          margin-right: 33px
+          &:nth-child(9n)
+            margin-right: 33px
+          &:nth-child(6n)
+            margin-right: 0
+            &:last-child
+              margin-right: 0
+
+  // Room gallery
+  .room-gallery
+    .room-list
+      .swiper-container
+        max-width: 720px
+      .swiper-slide
+        img
+          height: 70px
+
+@media screen and (max-width: 1100px)
+  .video-section .video-bg .bg-block.active .parallax-content > img
+    height: 100%
+    width: 100%
+    max-width: inherit
+
+//******************** Tablet Hoz ********************//
+@media screen and (max-width: 1024px)
+  // City list
+  .city-list
+    .city-block
+      height: 564px !important
+
+  // Map section
+  .map-section-container
+    img
+      &.desktop
+        position: relative
+        left: 0
+        width: 100%
+        max-width: inherit
+
+  // Unit list
+  .unit-list
+    .house-drawing
+      img
+        display: none
+        &.main-img
+          display: block
+
+  //Masonry
+  .section-masonry-component
+    .grid-sizer, .item
+      width: 50%
+  .section-masonry-garelly
+    .grid-sizer, .item
+      width: 25%
+
+  // Landing
+  .landing
+    padding-top: 0
+
+  // Full page section
+  .fp-section
+    height: auto !important
+  .fp-tableCell,
+  .slimScrollDiv,
+  .fp-scrollable
+    height: auto !important
+
+  // Introduction text
+  .introduction-text
+    height: 600px !important
+
+  .video-section .video-bg .bg-block.active .parallax-content > img
+    height: 100%
+    width: auto
+    max-width: inherit
+
+  // Page 404
+  .page-404
+    .section-404
+      .content-404
+        +transform(translateY(0))
+        top: 0
+
+@media screen and (min-width: 992px)
+  #header
+    .container
+      .navigation
+        display: block !important
+
+//********************* Tablet Ver ********************//
+@media screen and (max-width: 991px)
+  // Header
+  #header
+    .container
+      .columns
+        z-index: 11
+      .menu
+        float: none
+        text-align: center
+        padding: 0
+        z-index: 10
+        margin: 0 67px 0 185px
+      .nav-collapsed
+        cursor: pointer
+        display: inline-block
+        vertical-align: top
+        margin: 44px auto 0
+        .icon-bar
+          display: block
+          width: 26px
+          height: 3px
+          background: #bfbfbf
+          margin-bottom: 5px
+      .navigation
+        display: none
+        width: 100%
+        min-width: 300px
+        position: absolute
+        top: 106px
+        left: 0
+        padding: 0
+        text-align: left
+        background: $overlay
+        height: auto
+        ul
+          display: block
+          width: auto
+          > li
+            width: 100%
+            margin: 0
+            padding: 0
+            &:first-child
+              padding-top: 10px
+            &:last-child
+              padding-bottom: 10px
+            > a:hover,
+            > a.active,
+            > span.CMSListMenuLinkHighlighted
+              border: none
+              padding: 10px 20px
+          a, span
+            display: block
+            color: $heading-color
+            font-family: $helveticaNeueLTProMdCn
+            padding: 10px 20px
+            text-align: center
+          &.sub-menu
+            display: none
+      .lang
+        z-index: 10
+
+  // City list
+  .city-list
+    .city-block
+      height: 436px !important
+      .caption
+        font-size: $m-h1
+        padding: 12px 20px
+        &:before
+          top: 2px
+        &:after
+          bottom: 2px
+      .city-info
+        .title
+          font-size: $m-h1 + 4px
+        .editor-content
+          width: 550px
+          font-size: $h6
+          line-height: 1.4
+          p
+            line-height: 1.4
+            margin: 0 0 20px
+
+  // Map section
+  .map-section-container
+    .block-address-content
+      .block-content
+        padding: 30px 20px
+      h3
+        font-size: $m-h1 + 4px
+      .editor-content
+        font-size: $m-h5
+        ul
+          padding-left: 0
+          li
+            line-height: 1.4
+
+  // The house
+  .award-section
+    .award-content
+      padding: 40px 30px
+      .award-block
+        width: 100%
+        padding: 0
+        margin-bottom: 30px
+        &.first
+          .award-thumb
+            float: left
+          .award-info
+            text-align: left
+            margin-left: 170px
+            margin-right: 0
+        &.second
+          margin-bottom: 0
+          .award-thumb
+            width: 140px
+            text-align: center
+          .award-info
+            margin-left: 170px
+  .unit-list
+    .unit-section
+      .units
+        li
+          margin-right: 14px
+          &:nth-child(9n)
+            margin-right: 14px
+  .floor-list
+    &:after
+      display: none
+    .selected-section
+      position: relative
+      padding-top: 360px
+      .selected-drawing,
+      .selected-info
+        width: 100%
+        height: auto
+        padding: 0
+      .selected-drawing
+        ul
+          padding: 50px 0
+          li
+            &.active
+              float: none
+              text-align: center
+              width: 100%
+      .selected-info
+        position: static
+        .info-list
+          margin-top: 0
+          +transform(none)
+        .title
+          margin-bottom: 0
+          margin-top: 30px
+          position: relative
+          left: 0!important
+          width: 100%
+        .info-block
+          .editor-content
+            position: relative
+            bottom: 0
+            left: 0
+    .drawing-section
+      top: 25px
+      bottom: auto
+      padding: 0
+  .room-gallery
+    .room-info
+      width: 100%
+    .room-description
+      width: 100%
+      padding: 0 30px
+      height: auto!important
+      background: none
+    .room-details
+      width: 100%
+      .room-list
+        height: auto
+        overflow: auto
+        margin-bottom: 20px
+        width: 100%
+        max-height: 343px
+        .swiper-container
+          padding-left: 0
+          .swiper-slide
+            width: 25%
+            padding-right: 0
+            a
+              width: 90%
+              margin: 0 auto
+              img
+                height: auto
+  //Masonry
+  .section-masonry-garelly
+    .grid-sizer, .item
+      width: 33.333%
+
+//******************** Mobile ********************//
+@media screen and (max-width: 767px)
+  // General
+  .page-wrapper
+    padding-top: 57px
+  .container
+    padding: 0 15px
+  h1
+    font-size: $m-h1
+
+  // Header
+  #header
+    background: $white
+    min-height: $m-header-height
+    .container
+      margin: 0
+      padding: 0
+      .col-sm-12
+        padding: 0
+      .logo
+        padding: 15px 20px 0 15px
+        height: $m-header-height
+        &:after
+          height: 31px
+          margin-top: -15px
+        a
+          border: none
+          width: 160px
+          height: 26px
+          background: url("#{$imgPath}m-logo.png") no-repeat center transparent
+          background-size: 160px auto
+          padding: 0
+          img
+            display: none
+      .menu
+        height: auto
+        min-height: $m-header-height
+        margin: 0 67px 0 195px
+      .nav-collapsed
+        margin: 24px auto 0
+        .icon-bar
+          width: 16px
+          height: 2px
+          margin-bottom: 3px
+      .navigation
+        top: 57px
+        min-width: 178px
+        left: auto
+        right: -67px
+        ul
+          > li
+            > a:hover,
+            > a.active,
+            > span.CMSListMenuLinkHighlighted
+              padding: 5px 20px
+          a, span
+            font-size: $m-h5
+            padding: 5px 20px
+      .lang
+        padding: 20px 15px 20px 20px
+        &:before
+          height: 31px
+          margin-top: -15px
+        .dropdown
+          > a
+            font-size: $m-h5
+            span
+              width: 4px
+              background-position: center 50%
+              background-size: 4px auto
+              margin: 5px 0 0 6px
+          ul
+            margin: 18px 0 0
+            right: -15px
+            top: 100%
+            li
+              a
+                font-size: $m-h5
+
+  // Editor content
+  .editor-content
+    font-size: $m-font-12
+    line-height: 1.4
+    text-align: left
+    p
+      line-height: 1.4
+      margin: 0 0 20px
+
+  // Footer
+  .footer-content
+    margin: 20px 0
+    .editor-content
+      color: $m-gray
+      font-size: $h6
+      padding: 0
+      p
+        line-height: 1.4
+        margin: 0 0 20px
+
+  // Introduction text
+  .introduction-text
+    height: 400px !important
+    h1
+      font-size: $m-h1
+      margin: 20px 0 15px
+      padding: 0
+      &:after
+        display: none
+
+  // Map section
+  .map-section-container
+    padding: 0
+    &:before
+      display: none
+    img
+      display: block
+      width: 100%
+      &.desktop
+        display: none
+    .open
+      display: block
+      opacity: 1
+      position: absolute
+      left: 15px
+      bottom: 145px
+      font-size: 0
+      width: 33px
+      height: 33px
+      background: url("#{$imgPath}the-address/plus-icon.jpg") no-repeat center transparent
+      background-size: 33px auto
+      z-index: 1
+      +transition(opacity 0.5s ease)
+      &.clicked
+        opacity: 0
+        z-index: -1
+    .close
+      @extend .close-style
+      float: right
+      position: relative
+      top: auto
+      right: auto
+      z-index: 1
+    .block-address-content
+      .block-content
+        position: absolute
+        top: auto
+        bottom: 15px
+        left: 15px
+        +calc(width, '100% - 30px')
+        height: auto
+        +calc(max-height, '100% - 30px')
+        padding: 15px
+        +transition(height 0.5s ease)
+      h3
+        font-size: $m-h4
+        line-height: 1.4
+      h4
+        font-size: $m-h5
+        display: none
+        margin-top: 5px
+  .map-section-mobile
+    display: block
+    font-size: 14px
+    color: #8c8c8b
+    padding: 15px
+    p
+      margin-top: 0
+      margin-bottom: 10px
+  .section-then-now
+    .map-section-container
+      .open
+        display: none
+      .block-address-content
+        .block-content
+          position: relative
+          bottom: 0
+          width: 100%
+  h2.title-address
+    font-size: 20px
+    line-height: 30px
+    border-bottom: none
+    padding-bottom: 0
+
+  // City list
+  .city-list
+    .city-block
+      height: 160px !important
+      width: 100%
+      +transition(height 0.5s ease)
+      .city-info
+        left: 0
+        bottom: 0
+        .title
+          color: $heading-color
+          font-size: $m-h1
+          margin-bottom: 5px
+        .editor-content
+          background: none
+          width: 100%
+          padding: 15px
+          p
+            margin: 0 0 15px
+      &.active,
+      &.inactive
+        width: 100%
+      &.active
+        height: 320px !important
+        &:after
+          content: ""
+          display: block
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          background: $overlay
+        .open-link,
+        .caption
+          opacity: 0
+          z-index: -1
+        .caption
+          top: 50%
+      &.inactive
+        height: 80px !important
+      img
+        width: 100%
+        height: auto
+        position: static
+        &.desktop
+          display: none
+        &.mobile
+          display: block
+      .caption
+        padding: 12px 20px
+
+  // Masonry
+  .section-masonry-component
+    .grid-sizer, .item
+      width: 100%
+      .detail
+        text-align: center
+  .section-masonry-garelly
+    .grid-sizer, .item
+      width: 50%
+
+  // The Contact
+  .section-contact
+    height: 100%
+    width: 100%
+    left: 0
+    top: 0
+    margin: 0
+    padding: 0
+    .contact-content
+      height: auto !important
+      padding: 0
+      position: relative
+      top: 0
+      +transform(translateY(0))
+      h1
+        margin: 0 0 15px
+        padding: 0
+      .editor-content
+        text-align: center
+
+  // Landing page
+  .popup-index
+    padding: 15px
+    .contact-content
+      h1
+        padding: 0 50px
+
+  // The house
+  .the-house
+    .introduction-text
+      height: 400px !important
+      margin-top: 0
+  .award-section
+    margin-bottom: 25px
+    .container
+      padding: 0
+    .award-content
+      padding: 25px 15px
+      .award-info
+        font-size: $m-h5 - 2px
+        line-height: 1.2
+      .award-block
+        margin-bottom: 25px
+        &.first
+          img
+            max-width: 85px
+          .award-info
+            margin-left: 100px
+        &.second
+          .award-thumb
+            width: 85px
+            margin: 0
+          img
+            max-width: 45px
+          .award-info
+            margin-left: 100px
+  .unit-list
+    h2
+      font-size: $m-h3
+      margin: 20px 0
+    .unit-section
+      .units
+        li
+          margin: 0 15px 10px 0
+          &:nth-child(6n),
+          &:nth-child(9n),
+          &:last-child,
+          &:nth-child(6n):last-child
+            margin-right: 15px
+          a
+            font-size: $m-h5
+            width: 48px
+            padding: 15px 0
+  .floor-list
+    .selected-section
+      padding-top: 110px
+      .selected-drawing
+        ul
+          padding: 25px 0
+          li
+            img
+              width: auto
+              max-height: 210px
+      .selected-info
+        .title
+          font-size: $h2 + 4px
+          line-height: normal
+          margin-bottom: 15px
+        .info-block
+          .editor-content
+            font-size: $m-h5
+            text-align: center
+            p
+              line-height: 1.4
+    .drawing-section
+      top: 15px
+      .drawing-list
+        height: 93px
+        ul
+          li
+            height: 93px
+            padding: 8px 0
+            &:after
+              display: none
+            img
+              max-height: 50px
+            .name
+              font-size: $m-h5 - 4px
+  .room-gallery
+    .gallery-block
+      padding: 0 0 30px
+    .gallery-list
+      padding: 15px
+      .gallery-item
+        .slick-prev,
+        .slick-next
+          width: 29px
+          height: 29px
+          margin-top: -14px
+    .room-details
+      .room-list
+        float: none
+        margin: 0
+        padding: 0 15px
+        text-align: center
+        max-height: 210px
+        .swiper-container
+          margin-top: 15px
+        .swiper-slide
+          a
+            margin-right: 15px
+          img
+            height: 54px
+    .room-description
+      padding: 20px 15px 0 15px
+      .info-block
+        p
+          font-size: $m-h5
+          line-height: 1.4
+          margin-top: 10px
+  .loading-block .loading-icon
+    background-size: 100% auto
+    width: 70px
+  .map-section-content
+    .title-location-map
+      display: none
+  .map-section-container .block-address-content h3.caption-location-map
+    font-size: 14px
+  .caption-adress
+    margin-top: 0
+  .section-video .bg-block .play-icon
+    width: 80px
+    height: 80px
+    background-size: cover
+  .video-section .video-thumb-box .video-list
+    display: none
+
+  // Page 404
+  .page-404
+    .section-404
+      .content-404
+        padding: 30px 0
+        .editor-content
+          text-align: center
+          p
+            padding: 0 15px
+        .btn-back
+          font-size: 12px
+          padding: 5px 20px
+//******************** Small Mobile ********************//
+@media screen and (max-width: 480px)
+  // Introduction text
+  .introduction-text
+    height: auto !important
+    padding: 0 0 15px
+    .container
+      top: auto
+      +transform(none)
+
+  // The house
+  .the-house
+    .introduction-text
+      height: auto !important
+      margin-top: 0
+  .room-gallery
+    .room-details
+      .room-list
+        max-height: 135px
+
+@media screen and (max-width: 320px)
+  .section-masonry-garelly
+    .grid-sizer, .item
+      width: 100%

@@ -1,0 +1,19 @@
+// Created by Huy on 4/6/2015.
+mixin parallax(alt, src)
+  .parallax&attributes(attributes)
+    .parallax-layer
+      .parallax-content
+        +img(alt, src)
+        if block
+          block
+
+mixin parallax-content(alt, src)
+  +parallax(alt, src).with-content
+    if block
+      block
+
+mixin parallax-video(alt, imgSrc, videoSrc, type)
+  +parallax(alt, imgSrc).with-video
+    +video(videoSrc, type)(loop="true", muted="true")
+    if block
+      block

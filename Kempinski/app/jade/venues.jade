@@ -1,0 +1,303 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Home'
+  -bodyClass = ''
+  -bannerIMG = 'venues/banner.jpg'
+  -page = 'venues'
+
+block var-2
+  -templateScriptArr = 'scripts/photo-gallery.js'
+  
+block pagescript
+  script.
+    document.addEventListener('DOMContentLoaded', function(){
+      var isRTL = document.querySelector("html").getAttribute('dir') === "rtl";
+      if( document.querySelector("body").getAttribute('class').indexOf('homepage')>=0 ){
+        document.querySelector('.hero-banner').style.transitionDuration = '1s';
+        var winW = window.innerWidth;
+        var winH = window.innerHeight;
+        var bannerH = document.querySelector('.hero-banner').offsetHeight;
+        winH = winH < 800 ? 800 : winH;
+        var heroImg = document.querySelector("#hero-img img");
+        var actualWidth = heroImg.naturalWidth * (winH / heroImg.naturalHeight)
+        if(isRTL){
+          heroImg.parentNode.style.right = - (actualWidth - winW)/2 + 'px';
+        }else{
+          heroImg.parentNode.style.left = - (actualWidth - winW)/2 + 'px';
+        }
+        heroImg.style.height = winH + 'px';
+        heroImg.style.opacity = 1;
+        
+        setTimeout(function() {
+          if (winW > 991) {
+            document.querySelector(".hero-banner").style.height = document.querySelector(".navigation").offsetHeight + 40 + document.querySelector(".top-header").offsetHeight + "px";
+            heroImg.style.top = "-100px";
+          } else {
+            document.querySelector(".hero-banner").setAttribute('style', '');
+          }
+        }, 1900);
+
+        setTimeout(function() {
+          document.querySelector("body").setAttribute('class','homepage');  
+          window.scrollTo(0, window.pageYOffset + 2);
+          document.querySelector(".navigation").setAttribute("class", 'navigation');
+          wow.sync();
+          window.scrollTo(0, window.pageYOffset - 2);
+        }, 2800);
+      }  
+    });
+block breadcrumb  
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#" 
+      },{
+        "text": "MIDDLE EAST",
+        "href":"#"
+      },{
+        "text": "EMIRATES PALACE",
+        "href":"#"
+      }])
+
+block container    
+  .inner
+    main#main 
+      +page-title("VENUES","The Premier Meeting and Conference Destination", "WHERE THE DECISIONS ARE MADE").gray
+      .section-venues-about.wow.fadeIn(data-wow-duraiton="0.5")
+        .container
+          .row
+            .col-md-8
+              .title COME TO WHERE THE DECISIONS ARE MADE
+              .editor-content
+                p Emirates Palace is the premier meeting and conference destination in Abu Dhabi, boasts a total meeting and conference space exceeding 7,000 sqm including an Auditorium and Ballroom accommodating 1,100 and 2,400 guests, respectively. 
+                br
+                p In addition, over 40 meeting rooms, six large terraces and a variety of pre-function areas provide many options for private meetings, cocktail receptions, banquets, concerts and congresses. Set in 85 hectares of beautifully landscaped gardens with vast picturesque lawns, Emirates Palace offers spectacular outdoor venues for gala dinners and events.
+                br
+                p For all enquiries, please contact us at mice@emiratespalace.ae or call us at +971 2 690 7951.
+                br
+                p Kindly click on the individual venues to view more details on rooms and capacities.
+            .col-md-4
+              .venue-contact-block
+                .title CONTACT US
+                  img(src="images/icon/phone-email.png" alt="Contact Us")
+                dl.dl-horizontal
+                  dt Telephone:
+                  dd 
+                    a(href="tel:://971-2-690-9000" title="+971 2 690 9000") +971 2 690 9000
+                  dt Fax:
+                  dd 
+                    a(href="tel:://971-2-690-9999" title="+971 2 690 9999") +971 2 690 9999
+                  dt Email:
+                  dd 
+                    a(href="mailto:reservations@emiratespalace.ae" title="reservations@emiratespalace.ae") reservations@emiratespalace.ae
+                  dt Address:
+                  dd Emirates Palace, West Corniche Road, P.O.Box - 39999, Abu Dhabi
+      .section-venues-type
+        +section-title("VENUE TYPES","Overview of Our Conference & Meeting Rooms", "WHERE THE DECISIONS ARE MADE").gray
+
+        .container.wow.fadeIn(data-wow-duraiton="0.5")
+          .table-wrap
+            table
+              tr
+                th
+                th 
+                  img(src="images/icon/banquet.png" alt="Banquet")
+                th 
+                  img(src="images/icon/cocktail.png" alt="Cocktail")
+                th 
+                  img(src="images/icon/board-room.png" alt="Board Room")
+                th 
+                  img(src="images/icon/u-style.png" alt="U-Style")
+                th 
+                  img(src="images/icon/classroom.png" alt="Classroom")
+                th 
+                  img(src="images/icon/theatre.png" alt="Theatre")
+              tr.head
+                td Room Setup
+                td Banquet
+                td Cocktail
+                td Board Room
+                td U-Style
+                td Classroom
+                td Theatre
+              tr
+                td Etihad Ballroom >>
+                td 1200
+                td 2500
+                td -
+                td -
+                td 1200
+                td 2400
+              tr
+                td Auditorium >>
+                td -
+                td -
+                td -
+                td -
+                td -
+                td 1100
+              tr
+                td Conference Centre >>
+                td -
+                td 100
+                td 280
+                td -
+                td -
+                td -
+              tr
+                td Island Centre >>
+                td 120
+                td 180
+                td -
+                td 50
+                td 120
+                td 160
+              tr
+                td Emirates Centre >>
+                td -
+                td -
+                td 16
+                td -
+                td -
+                td -
+              tr
+                td Business Centre >>
+                td -
+                td -
+                td 20
+                td -
+                td -
+                td -
+              tr
+                td Terraces & Exhibitions >>
+                td 250
+                td 500
+                td -
+                td -
+                td -
+                td -
+              tr
+                td Polycom Room >>
+                td -
+                td -
+                td 10
+                td -
+                td -
+                td -
+          .note *Figures in the table denotes the no. of guests
+
+      .section-equiry-form
+        +section-title("enquiry form","Share Your Event Details With Us", "WHERE THE DECISIONS ARE MADE").gray
+        .enquiry-form.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+          form.form-horizontal.form-horizontal-style
+            .container
+              .form-wrap
+                .form-group
+                  .col-sm-3.control-label-wrap
+                    label.control-label(for="#first-name") First Name:
+                  .col-sm-9
+                      input.form-control(id="#first-name" type="text")
+                .form-group
+                  .col-sm-3.control-label-wrap
+                    label.control-label(for="#last-name") Last Name:
+                  .col-sm-9
+                      input.form-control(id="#first-name" type="text")
+                .form-group
+                  .col-sm-3.control-label-wrap
+                    label.control-label(for="#company") Company:
+                  .col-sm-9
+                      input.form-control(id="#company" type="text")
+                .form-group
+                  .col-sm-3.control-label-wrap
+                    label.control-label(for="#email") Email:
+                  .col-sm-9
+                      input.form-control(id="#email" type="text")
+                .form-group
+                  .col-sm-3.control-label-wrap
+                    label.control-label(for="#telephone") Telephone:
+                  .col-sm-9
+                      input.form-control(id="#telephone" type="text")
+                .form-group
+                  .col-sm-3.control-label-wrap
+                    label.control-label Country:
+                  .col-sm-9
+                    .select-wrap
+                      select.bootstrap-select
+                        option PLEASE SELECT
+                        option Hotel 1
+                        option Hotel 2
+                        option Hotel 3
+                        option Hotel 4
+                        option Hotel 5
+                        option Hotel 6
+                        option Hotel 7
+                        option Hotel 8
+                        option Hotel 9
+                .form-group
+                  .col-sm-3.control-label-wrap
+                    label.control-label(for="#event-date") Event Date:   
+                  .col-sm-9
+                    input#event-date.datetimepicker.form-control(type="text")
+                    span.icon-calendar
+                .form-group
+                  .col-sm-3.control-label-wrap
+                    label.control-label Room Setup:
+                  .col-sm-9
+                    .select-wrap
+                      select.bootstrap-select
+                        option PLEASE SELECT
+                        option Hotel 1
+                        option Hotel 2
+                        option Hotel 3
+                        option Hotel 4
+                        option Hotel 5
+                        option Hotel 6
+                        option Hotel 7
+                        option Hotel 8
+                        option Hotel 9
+                .row
+                  .col-md-6
+                    .form-group
+                      .col-sm-3.col-md-6.control-label-wrap
+                        label.control-label(for="#attendees") No, of Attendees:
+                      .col-sm-9.col-md-6
+                          input.form-control(id="#attendees" type="text")
+                  .col-md-6
+                    .form-group
+                      .col-sm-3.col-md-6.control-label-wrap
+                        label.control-label(for="#duration") Duration of Events:
+                      .col-sm-9.col-md-6
+                          input.form-control(id="#duration" type="text")
+                .row
+                  .col-sm-6
+                    .form-group
+                      .col-sm-6.col-md-6.control-label-wrap
+                        label.control-label(for="#attendees") Cathering Required:
+                      .col-sm-5
+                        .checkbox-group
+                          label
+                            input(type="radio" name="cathering", id="cathering" checked)
+                            span.checkbox-face.fa.fa-circle
+                            | Yes
+
+                  .col-sm-6
+                    .form-group
+                      .col-sm-4.col-md-6.col-sm-offset-3
+                        .checkbox-group
+                          label
+                            input(type="radio" name="cathering", id="cathering")
+                            span.checkbox-face.fa.fa-circle
+                            | No
+
+
+                .form-group
+                  .col-sm-3.control-label-wrap
+                    label.control-label(for="comment") Please enter additional comments below (optional):
+                  .col-sm-9
+                    textarea#comment
+                .form-group
+                  .col-sm-9.col-sm-offset-3
+                    .submit-button.text-center
+                      input(type="submit", value="SUBMIT").btn.btn-default

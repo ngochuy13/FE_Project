@@ -1,0 +1,52 @@
+.contact-page {
+    .division {
+        margin-bottom: 100px;
+        @include device {
+            margin-bottom: 50px;
+        }
+        @include mobile {
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.contact-form-section {
+    @include clearfix();
+    padding-top: 20px;
+    padding-bottom: 95px;
+    @include device {
+        padding-bottom: 50px;
+    }
+    @include mobile {
+        padding-bottom: 20px;
+        padding-top: 30px;
+    }
+    textarea {
+        resize: none;
+        height: 250px;
+        padding: 10px;
+        @include mobile {
+            height: 210px;
+        }
+    }
+    .label-agree {
+        p {
+            width: calc(100% - 30px);
+            line-height: 1.2;
+            margin-left: 10px;
+        }
+    }
+    .contact-sidebar {
+        .contact-sidebar-box {
+            border-bottom: 1px solid #cacaca;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            p {
+                margin-bottom: 0;
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}

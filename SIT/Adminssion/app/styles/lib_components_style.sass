@@ -1,0 +1,1002 @@
+.pp_nav p
+  line-height: 1.4
+//club category cards
+.clubs-card
+  position: relative
+  overflow: hidden
+  margin: 10px 0
+  display: block
+  .clubs-image
+    img
+      width: 100%
+  .clubs-name
+    position: absolute
+    bottom: -20px
+    padding: 20px 21px 35px
+    width: 100%
+    text-align: right
+    font-size: 22px
+    font-weight: bolder
+    color: #fff
+    background: rgba(250,0,0,0.5)
+    transform: skewY(-5deg)
+    p
+      text-transform: uppercase
+      transform: skewY(5deg)
+      letter-spacing: 0.5px
+      margin-bottom: 0
+      line-height: 1
+@media (max-width: 993px)
+  .clubs-card
+    .clubs-name
+      bottom: -38px
+      padding: 20px 21px 58px
+//club gallery cards
+
+.gallery-card
+  margin-bottom: 43px
+  .gallery-slider-wrapper
+    position: relative
+    overflow: hidden
+    .gallery-slider
+      position: relative    
+      .owl-nav
+        font-size: 0
+        .owl-prev,.owl-next
+          height: 100%
+          width: 100px
+          background: url(../images/sprites/sport-slider-angle.png) 10px center no-repeat
+          position: absolute
+          top: 0
+          display: inline-block
+          transition: background-color 0.4s ease, box-shadow 0.4s ease
+          &:hover
+            @media (min-width: 993px)
+              background-color: rgba(0,0,0,0.5)
+        .owl-prev
+          left: 0
+          &:hover
+            @media (min-width: 993px)
+              box-shadow: 28px 0px 45px 10px rgba(0,0,0,0.5)
+        .owl-next
+          right: 0
+          background-position: -127px center
+          @media (max-width: 993px)
+            background-position: -115px center
+          @media (max-width: 720px)
+            background-position: -110px center 
+          @media (max-width: 568px)
+            background-position: -120px center
+          @media (max-width: 480px)
+            background-position: -115px center
+
+          &:hover
+            @media (min-width: 993px)
+              box-shadow: -28px 0px 45px 10px rgba(0,0,0,0.5)
+      .gallery-item
+        display: block
+        width: 100%
+        overflow: hidden
+        height: 300px
+        img
+          width: 100%
+          height: 100%
+        @media (max-width: 993px)
+          height: auto  
+  
+    .gallery-counter
+      background: rgba(158,16,25,0.5)
+      color: white
+      position: absolute
+      bottom: -33px
+      color: $white
+      z-index: 3
+      width: 178%
+      padding: 20px 0 30px
+      text-align: center
+      transform: rotate(-25deg)
+      .counter-inner-wrapper
+        transform: rotate(25deg)
+        margin-bottom: 10px
+        span,a
+          margin: 0 3px
+          color: $white
+          &:hover,&:active,&:focus
+            text-decoration: none
+  .gallery-info-wrapper
+    margin-top: 15px
+    .gallery-club-name
+      font-weight: 800
+      color: #222222
+      font-size: 18px
+    .gallery-desc
+      font-size: 14px
+      height: 130px
+      text-overflow: ellipsis
+      overflow: hidden
+    .gallery-foot-link
+      margin-top: 25px
+      font-size: 14px
+      a
+        color: $main_red
+        &:hover,&:active,&:focus
+          text-decoration: none
+        span.fa
+          margin-right: 10px
+          font-size: 14px
+@media (max-width: 768px)
+  .gallery-card
+    .gallery-info-wrapper
+      .gallery-desc
+        height: auto
+//accordion
+.accordion-container
+  width: auto
+  max-width: 800px
+.accordion-wrapper
+  font-family: $font-family-base
+  margin-top: 20px
+  margin-bottom: 80px
+  a
+    color: #ee3f36
+    &:hover,&:active,&:focus
+      text-decoration: none
+  .panel-group
+    .panel + .panel
+      margin:0
+    .panel
+      border-radius: 0
+      border: none
+      box-shadow: none
+      .panel-body
+        padding: 12px
+        .text-block
+          h3
+            font-size: 15px
+            font-weight: 800
+            margin-bottom: 11px
+            color: #555
+          .text-block-desc
+            p
+              font-size: 15px
+              font-weight: 600
+              margin: 15px 0
+            ul
+              padding: 0 0 0 60px
+              li
+                line-height: 23px  
+      &:last-child
+        border-bottom: 1px solid #dddddd  
+      .panel-heading
+        border-top: 1px solid #d4d4d4
+        border-radius: 0
+        transition: background 0.5s ease
+        padding: 26px 35px 26px 19px
+        background: $white
+        .panel-title
+          text-transform: none
+          font-size: 18px
+          color: #666666
+          line-height: 21px
+          a
+            color: #666666
+            position: relative
+            display: inline-block
+            width: 100%
+            font-family: $font-family-base
+            font-weight: 600
+            &:hover,&:active,&:focus
+              text-decoration: none
+            &:before
+              content: '\f107'
+              font-family: FontAwesome
+              font-size: 23px
+              font-weight: bold
+              position: absolute
+              right: -10px
+              top: 50%
+              transform: translateY(-50%)
+              color: $black
+        &.active
+          border-top: 4px solid $main_red
+          background: $black
+          padding: 24px 35px 24px 19px
+          .panel-title
+            a
+              color: $white
+            a:before
+              content: '\f106'
+              color: $white   
+@media (max-width: 640px)
+  .accordion-wrapper
+    .panel-group
+      .panel 
+        .panel-heading
+          padding: 11px 40px 11px 20px
+          .panel-title
+            font-size: 12px
+            a:before
+              font-size: 20px
+              right: -20px
+          &.active
+            padding: 10px 35px 10px 20px    
+        .panel-body
+          .text-block
+            h3
+              font-size: 11px    
+            .text-block-desc
+              p
+                font-size: 11px
+              ul
+                padding: 0 0 0 30px
+                li
+                  font-size: 11px  
+
+//- section banner
+.section-banner-list
+  position: relative
+  background-repeat: no-repeat
+  background-position: center 0px
+  // background: no-repeat center center
+  background-size: cover
+  background-color: $white
+  img.bg-img
+    width: 100%
+    visibility: hidden
+  img.bg-img-sm
+    display: none  
+  .container
+    padding: 0
+    width: 900px
+    max-width: 100%
+  .section-banner-list__content
+    position: absolute
+    top: 35%
+    transform: translateY(-50%)
+    width: 100%
+    margin-top: 20px
+  .breadcrumb
+    padding: 0
+    background: none
+    border-radius: 0
+    margin: 0 0 3px 0
+    > li + li:before
+      color: #fff
+    li 
+      a 
+        text-transform: uppercase
+        
+        font-size: 12px
+        font-family: $openSans
+        color: #fff
+        font-weight: bold
+        text-align: left
+        letter-spacing: 2px
+        &:hover, &:focus, &:active
+          text-decoration: none
+  h1
+    margin-top: 0        
+  .section-banner-list__after
+    position: absolute
+    width: 100%
+    height: 70px
+    bottom: 0
+    left: 0
+    overflow: hidden
+    span 
+      position: absolute
+      top: 40px
+      left: 0px
+      width: 100%
+      height: 140px
+      // background: #F0F3F6
+      background: $white
+      transform: skewY(-2deg)
+
+@media (max-width: 993px)
+  .section-banner-list
+    padding: 0
+    background-size: 100%
+    img.bg-img
+      display: none
+    img.bg-img-sm
+      width: 100%
+      display: inline
+      visibility: hidden 
+    .section-banner-list__content
+      padding-left: 30px
+      margin-top: 0
+      .breadcrumb
+        margin: 0
+        li
+          font-size: 7px
+          a
+            font-size: 7px
+          &:before
+            margin: 0
+            padding: 0   
+      h1
+        font-size: 30px
+        margin: 0
+    .section-banner-list__after
+      span
+        // background-color: #F0F3F6 
+        // background-color: #FFF
+        background-color: transparent
+@media (max-width: 640px)
+  section.page-main-body
+    .container
+      padding-left: 45px
+      padding-right: 45px
+  // .node-type-t9-template,.node-type-page
+  //   .section-banner-list
+  //     padding: 12px 0 0 0
+  //     height: 180px
+  // .node-type-page,.node-type-t9-template
+  .page-main-body
+    .full-campus-card
+      margin-top: 25px
+      padding-bottom: 0
+      margin-bottom: 40px
+      .campus-info
+        margin-bottom: 0px
+        .campus-name
+          font-size: 13px
+        p
+          font-size: 11px
+          line-height: 18px
+        a.viewmap-link
+          font-size: 11px  
+  .page-intro
+    .container
+      padding-left: 40px
+      padding-right: 40px
+    .page-intro-block
+      margin-bottom: 0
+      .intro-header
+        margin-bottom: 25px
+        h2
+          margin-top: -15px
+      .intro-subtitle
+        margin-bottom: 20px
+      .intro-desc
+        margin-bottom: 5px
+        p
+          font-size: 11px
+          line-height: 20px
+    .page-intro_after
+      bottom: -10px
+      span
+        height: 25px
+  .clubs-card
+    margin: 15px 0
+    .clubs-name
+      font-size: 15px
+      padding: 14px 21px 55px
+  .gallery-card
+    margin-top: 0px
+    margin-bottom: 35px
+    .gallery-info-wrapper
+      .gallery-club-name
+        font-size: 13px
+      .gallery-desc
+        font-size: 11px
+        line-height: 20px
+      .gallery-foot-link
+        margin-top: 15px
+        a
+          font-size: 11px
+          span.fa
+            font-size: 11px
+            margin-right: 5px
+    .gallery-counter
+      padding: 13px 0 30px
+      .counter-inner-wrapper
+        font-size: 10px    
+  .course-container
+    .row-course__item
+      padding-bottom: 0
+      padding-top: 25px
+      margin-left: 0!important
+      margin-right: 0!important
+    .row-course__title,.row-course__description 
+      padding: 0 !important
+    .row  
+      .row-course__description 
+        margin-bottom: 0
+        p
+          line-height: 18px
+          margin-bottom: 20px 
+  .node-type-page
+    .page-main-body
+      margin-bottom: 30px                               
+
+.T4-template
+  section.page-intro
+    padding-bottom: 0
+    background-color: #fff
+    .page-intro_before
+      span 
+        background-color: #fff
+  section.course-detail-campus-location, section.course-detail-modules-synosis .modules-sypnosis-after
+    background-color: #f4f4f4
+
+section.page-intro
+  position: relative
+  padding-bottom: 5px
+  background-color: #F0F3F6
+  z-index: 3
+  a
+    color: #f40c1a
+  .page-intro-block
+    margin-bottom: 50px
+    min-height: 150px
+    .intro-header
+      margin-bottom: 32px
+      h2
+        color: #f40c1a
+        text-align: center
+        letter-spacing: 1px
+  .intro-subtitle
+    margin-bottom: 30px
+    h3
+      color: #444444
+      text-align: center
+  .intro-desc
+    margin: 0 0 65px
+    p
+      margin: 0 auto
+      max-width: 720px
+      font-size: 14px
+      text-align: center
+      line-height: 30px
+  .page-intro_before
+    position: absolute
+    width: 100%
+    top: -58px
+    span
+      display: block
+      width: 100%
+      height: 170px
+      background-color: #F0F3F6
+      transform: skewY(-3deg)
+      margin-top: -0.3vh
+  .page-intro_after
+    position: absolute
+    width: 100%
+    bottom: -48px
+    span
+      display: block
+      width: 100%
+      height: 100px
+      background-color: #F0F3F6
+      transform: skewY(3deg)
+@media (max-width: 993px)
+  section.page-intro
+    padding-bottom: 20px
+    .page-intro-block
+      .intro-header
+        h2
+          font-size: 22px
+    .intro-subtitle 
+      h3
+        font-size: 12px      
+    .page-intro_before
+      top: -50px
+      span
+        height: 100px
+    .page-intro_after
+      bottom: -30px
+      span
+        height: 70px      
+@media (max-width: 640px)
+  section.page-intro
+    margin-top: 32px   
+
+section.page-main-body
+  background: $white
+  padding: 120px 0 50px
+  position: relative
+  h3
+    font-weight: 600
+    font-size: 20px
+  &.no-intro
+    padding-top: 75px
+  &.has-bg
+    background-size: cover
+    background-position: center bottom
+  &.grey-theme 
+    background-color: #f4f4f4 
+  &.red-theme
+    background-color: #F40C1A
+    color: $white
+    h3
+      font-weight: 800
+    .page-main_after
+      height: 95px
+      position: absolute
+      width: 100%
+      bottom: -58px
+      span
+        display: block
+        width: 100%
+        height: 100%
+        background: #F40C1A
+        transform: skewY(-3.5deg)
+  .body-title
+    text-align: center
+    margin-bottom: 30px
+    .body-name
+      h2
+        text-align: center
+        font-size: 38px
+        color: #464646
+        font-weight: bold
+        font-family: $oswald
+        margin-bottom: 24px
+    .body-subtitle
+      max-width: 720px
+      margin: 0 auto
+      h3
+        line-height: 2
+        font-size: 16px
+  & + section.page-main-body
+    padding: 35px 0 80px
+    &.red-theme
+      padding: 58px 0 80px
+
+section.course-detail-testimonial + section.page-main-body
+  padding: 80px 0 80px 
+section.page-main-body + section.course-detail-testimonial
+  background-color: #F40C1A
+.why-sit-container
+  .whysit-column
+    height: 250px
+    padding: 0
+    overflow: hidden
+  .whySIT-text-block
+    position: relative
+    .icon-img
+      position: absolute
+      top: 38px
+      left: 20px
+      width: 70px
+      img
+        width: 100%
+    .main-text
+      padding-top: 30px
+      padding-left: 120px
+      padding-right: 30px
+      h4
+        color: #231f20
+      .text-desc
+        font-size: 14px
+    &.no-logo
+      .main-text
+        padding-left: 40px    
+  .row.even
+    .whysit-column
+      float: right
+    .icon-img
+      left: 0
+    .main-text
+      padding-left: 100px
+    .whySIT-text-block.no-logo
+      .main-text
+        padding-left: 40px
+      
+@media (max-width: 993px)
+  section.page-main-body
+    padding-top: 150px
+    padding-bottom: 0
+    .container
+      padding-left: 25px
+      padding-right: 25px
+    .body-title
+      .body-name
+        h2
+          font-size: 20px
+      .body-subtitle
+        h3
+          font-size: 12px   
+  .why-sit-container
+    .row
+      margin-bottom: 30px
+      .whysit-column
+        height: auto
+        padding: 0 15px
+      .whySIT-text-block
+        .icon-img
+          left: 0
+          top: 30px
+          width: 40px
+        .main-text
+          padding-top: 15px
+          padding-left: 60px
+          padding-right: 15px
+          h4
+            font-size: 14px
+          .text-desc
+            font-weight: 400
+            font-size: 12px  
+        &.no-logo
+          .main-text
+            padding-left: 15px
+    .row.even
+      .whysit-column
+        float: left
+        height: auto   
+      .whySIT-text-block
+        &.no-logo  
+          .main-text
+            padding-left: 15px
+
+  section.page-main-body + section.page-main-body
+    padding: 20px 0 0px             
+  section.course-detail-testimonial + section.page-main-body
+    padding: 20px 0 0px                 
+@media (max-width: 640px)
+  section.page-main-body
+    padding-top: 75px
+    &.no-intro
+      padding-top: 35px
+    .symbol-img
+      img
+        width: 82px
+    .body-title
+      margin-bottom: 12px
+      .body-name
+        h2
+          margin-top: 10px
+          margin-bottom: 15px
+      .body-subtitle
+        h3
+          margin-top: 10px
+          line-height: 20px
+  .why-sit-container
+    .row
+      .whySIT-text-block
+        .icon-img
+          left: 0
+          top: 28px
+          width: 35px
+        .main-text
+          padding-left: 50px
+          h4
+            line-height: 18px
+          .text-desc
+            line-height: 20px 
+      .whysit-column.img-col
+        img
+          border-bottom: 1px solid #bbbbbb                
+.full-campus-card
+  padding-bottom: 50px
+  .campus-img
+    img
+      width: 100%
+  .campus-info
+    margin-top: 10px
+    .campus-name
+      font-size: 18px
+      font-weight: 900
+      color: #222222
+    p
+      margin-bottom: 5px
+      font-size: 14px
+    .viewmap-link
+      display: block
+      color: #f03f36
+      font-weight: bold
+      font-size: 14px
+      &:hover,&:active,&:focus
+        text-decoration: none
+
+.period-block
+  margin-bottom: 50px
+  p
+    margin: 0
+    &.red-date
+      color: #ff0014
+      font-weight: 800
+ul.tuition-list
+  list-style: none
+  li
+    margin-bottom: 10px
+    &:before
+      content: '\f00c'
+      font-family: FontAwesome
+      color: #13ca22
+      margin-right: 10px
+
+.loans-table
+  margin-top: 18px
+  table
+    width: 100%
+    font-size: 15px
+    th  
+    thead
+      tr
+        th
+          color: $black
+          font-weight: 800
+          div,a
+            min-height: inherit
+            padding: 0
+            line-height: 20px
+    tbody
+      tr
+        border-bottom: 1px solid #bdbdbd
+        cursor: pointer
+        th:first-child
+          padding-left: 20px
+          padding-right: 20px
+          line-height: 23px
+          font-weight: 600
+          a
+            display: block
+            color: #f40d1b
+        th
+          font-weight: normal
+          vertical-align: top
+          line-height: 20px
+          div,a
+            padding: 26px 0 20px
+            min-height: 95px
+        &:hover
+          background-color: #f4f4f4  
+@media (max-width: 993px)
+  .loans-table
+    table
+      font-size: 11px
+      th
+        padding: 0 10px
+        vertical-align: top
+        
+      tbody
+        tr
+          th:first-child
+            padding-left: 7px
+          th
+            padding: 0 5px      
+.note
+  margin: 30px 0
+  .bold
+    font-weight: bold 
+@media (max-width: 640px)
+  .note
+    font-size: 9px
+.sit-glance-slider
+  .slider-item
+    width: 100%
+    height: 0
+    padding-bottom: 42.5%
+
+  .owl-dots
+    position: absolute
+    bottom: -40px
+    right: 0
+    left: 0
+    width: 100%
+    text-align: center
+    line-height: 1
+    padding: 5px   
+    .owl-dot
+      display: inline-block
+      margin: 0 5px
+      height: 20px
+      width: 20px
+      background: #333
+      border-radius: 100%
+      transition: background 0.4s ease   
+      &.active
+        background: #c33
+.asterisk
+  font-weight: 800
+  color: #F40C1A
+  margin-left: 5px
+  margin-right: 5px
+.diamond-block
+  text-align: center
+  margin-top: 23px
+  margin-bottom: 65px
+  .diamond-desc
+    margin-top: 23px
+  .title
+    font-size: 16px
+    font-weight: 800
+    color: $black
+    margin-bottom: 12px
+  .text
+    font-size: 14px
+    font-weight: normal
+    line-height: 25px
+@media (max-width: 993px)
+  .asterisk
+    margin-left: 2px 
+    margin-right: 2px
+.criteria-box
+  background: #f4f4f4
+  padding: 50px
+  margin-top: 15px
+  margin-bottom: 5px
+  .criteria
+    display: block
+    padding-left: 45px
+    line-height: 23px
+    background: url('../images/checkbox-grey.png') 1px 6px no-repeat
+    margin-bottom: 23px
+    color: #666666
+    &:active,&:focus,&:hover
+      text-decoration: none
+
+
+.app-process-row
+  margin-top: 25px
+  position: relative
+  &:before
+    content: " "
+    position: absolute
+    left: 15px
+    height: 100%
+    display: none
+    border-right: 5px solid #ee3f36
+  .app-proccess-text  
+    .period
+      font-weight: 800
+      margin-bottom: 13px
+      color: #222222
+    p
+      color: #666666  
+  .proccess-timeline
+    position: relative
+    &:before
+      content: ""
+      position: absolute
+      top: 10px
+      left: 0
+      width: 100%
+      border-top: 4px solid #ee3f36
+      display: block 
+    .app-proccess-text
+      text-align: center
+      padding: 130px 10px 0
+      background: url('../images/app-proc-indicator - vertical.png') center 0px no-repeat
+      &:before
+        content: " "
+        position: absolute
+        display: none
+    .owl-nav
+      margin-top: 20px
+      text-align: center   
+      .owl-prev,.owl-next
+        position: absolute
+        display: inline
+        font-size: 0
+        color: #ee3f36
+        top: 0
+        transform: translateY(50%)
+        transition: opacity 0.4s ease
+        &:before
+          font-size: 60px
+          font-family: FontAwesome
+          line-height: 0
+        &.disabled
+          opacity: 0
+              
+      .owl-prev
+        left: -40px
+        &:before
+          content: "\f104"
+        
+      .owl-next
+        right: -40px
+        &:before
+          content: "\f105"
+
+
+
+@media (max-width: 993px)
+  .app-process-row
+    &:before
+      display: block
+    .period
+      margin-bottom: 10px
+    .proccess-timeline
+      padding-top: 20px
+      &:before
+        display: none
+        content: none  
+      .app-proccess-text:first-child
+        margin-top: 30px    
+      .app-proccess-text
+        margin-top: 80px
+        text-align: left
+        padding: 0 20px 0 80px
+        background: none
+        &:before
+          left: -5px
+          height: 25px
+          width: 70px
+          display: block
+          background: url('../images/app-proc-indicator.png') 1px 1px no-repeat
+    
+
+.row-centered
+  text-align: center
+  .col-centered
+    display: inline-block
+    float: none
+    text-align: left
+    margin-right: -4px
+
+.partner-logo-wrapper
+  display: block
+  width: 100%
+  padding: 7%
+  background: $white
+  margin: 7px 0
+  border: 1px solid #cccccc
+  .partner-logo
+    background-size: contain
+    background-position: center center
+    background-repeat: no-repeat
+    width: 100%
+    padding-top: 62%
+    height: 0
+    background-color: $white
+
+.finder-container
+  max-width: 780px
+  width: auto
+
+.school-finder-form
+  .btn-group.bootstrap-select
+    width: 100%!important
+    @media (max-width: 767px)
+      margin-bottom: 10px
+  .school-finder-submit
+    font-size: 14px
+    font-family: "Open Sans"
+    color: rgb( 255, 255, 255 )
+    font-weight: bold
+    line-height: 32px
+    padding: 0px 35px
+    text-align: center
+    background: #75c243
+
+.result-container
+  margin-top: 60px
+.result-block
+  width: 100%
+  height: 195px
+  margin: 10px 0
+  background: $white
+  display: block
+  border: 1px solid white
+  transition: background-color 0.3s ease-in-out
+  position: relative
+  padding: 30px
+  .result-info
+    .result-title,.awarded-by,.award-giver-campus
+      transition: color 0.3s ease-in-out
+    .result-title
+      font-size: 16px
+      color: #222222
+      font-weight: 800
+      line-height: 23px
+      margin-bottom: 13px
+    .awarded-by
+      margin-bottom: 6px  
+    .awarded-by,.award-giver-campus
+      font-size: 14px
+      color: #666666
+      line-height: 1
+  &:hover,&:active,&:focus
+    text-decoration: none
+    background: #fc0c1b
+    border-color: #cccccc
+    .result-info
+      .result-title
+        color: $white
+      .awarded-by,.award-giver-campus  
+        color: #ffe4e4

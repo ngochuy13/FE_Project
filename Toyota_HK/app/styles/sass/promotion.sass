@@ -1,0 +1,89 @@
+.promotion-list
+  padding-bottom: 0
+  &, h3 , p
+    text-align: left
+  .posts-list-wrapper
+    padding-bottom: 0
+  .cars-family-filter-list
+    width: 250px
+  .block-filter
+    float: left
+    width: 100%
+    height: 90px
+  .block-filter , .info-form
+    margin: 0 auto
+  .pagination
+    width: 100%
+    li 
+      margin: 0 12px
+      > a, > span
+        font-size: 16px
+        border: none
+        border-radius: 50%
+        height: 25px
+        width: 25px
+        text-align: center
+        padding: 0
+        line-height: 25px
+        color: #d2232a
+      > a:hover, > a:focus
+        background: none
+      > span, .active , .active:hover, .active:focus
+        background: #d2232a
+        color: #fff
+      .back, .next ,.back:hover, .back:focus ,.next:hover, .next:focus
+        text-indent: -9999em
+        background: url('../images/icons/icon-pagination-prev.png') no-repeat
+        width: 12px
+        height: 25px
+      .next , .next:hover, .next:focus
+        background-image: url('../images/icons/icon-pagination-next.png')
+      .back.disabled
+        background-image: url('../images/icons/icon-pagination-prev-disabled.png')
+      .next.disabled
+        background-image: url('../images/icons/icon-pagination-next-disabled.png')
+
+.promotion-detail
+  .container
+    max-width: 863px
+    position: relative
+  h3 
+    text-transform: uppercase
+    margin-top: 60px
+  .description
+    margin-bottom: 30px
+  .block-media
+    img
+      max-width: 100%
+  .block-back-link
+    position: absolute
+    top: 20px
+    left: -55px
+    border: 1px solid #eb1924
+    padding: 3px 6px
+    a 
+      font-size: 14px
+      color: #EB1924
+      padding-left: 15px
+      background: url('../images/icons/icon-back.png') no-repeat center left
+      &:hover, &:focus
+        text-decoration: none
+  .block-link
+    text-align: center
+    margin-top: 30px
+  .btn-link
+    font-size: 14px
+    color: #fff
+    background: #ed1b24
+    text-align: center
+    display: inline-block
+    min-width: 146px
+    width: auto
+    line-height: 52px
+    margin: 0 auto
+    &:hover, &:focus
+      text-decoration: none
+@media (max-width: 900px)
+  .promotion-detail .block-back-link
+    left: 0
+    top: 5px

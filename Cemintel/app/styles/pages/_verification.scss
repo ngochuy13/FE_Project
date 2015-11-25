@@ -1,0 +1,25 @@
+.verification-block {
+    .title-page {
+        padding: 44px 0;
+        background-color: #e8e8e8;
+        .icon {
+            width: 70px;
+            background-size: cover;
+            float: left;
+            margin-right: 30px;
+        }
+    }
+    .verification-content {
+    	padding: 45px 0 100px 0;
+        .verification-success {
+            .verification-message {
+                color: green;
+            }
+        }
+        .verification-fail {
+            .verification-message {
+                color: red;
+            }
+        }
+    }
+}

@@ -1,0 +1,347 @@
+extends layouts/template
+
+block vars
+  -title = 'Libraries'
+  -bodyClass = 'homepage'
+
+block container 
+
+  //- h1 Home Grid
+  .section.grid-mode.home-grid.clearfix
+    .grid-sizer
+    
+    .grid-item.col-xs-12.col-sm-6.col-md-4(data-grid-order='1')
+      .media
+        a(href="#", target="_blank")
+          +img('media 1', 'home/img-1.jpg').grayscale
+      .overlap-info
+        .overlap-info__after
+          span
+        p ACADEMICS      
+    
+    .grid-item.col-xs-12.col-sm-6.col-md-4(data-grid-order='3')
+      .media
+        a(href="#", target="_blank")
+          +img('media 1', 'home/img-2.jpg').grayscale
+      .overlap-info
+        .overlap-info__after
+          span
+        p WHY SIT
+      
+    .grid-item.col-xs-12.col-sm-6.col-md-4(data-grid-order='5')
+      .media
+        a(href="#", target="_blank")
+          +img('media 1', 'home/img-3.jpg').grayscale
+      .overlap-info
+        .overlap-info__after
+          span
+        p CONTACT US
+      
+    .grid-item.col-xs-12.col-sm-6.col-md-4(data-grid-order='4')
+      .media
+        a(href="#", target="_blank")
+          +img('media 1', 'home/img-6.jpg').grayscale
+      .overlap-info.mw35p
+        .overlap-info__after
+          span
+        p FIND YOUR FIT
+      
+    .grid-item.col-xs-12.col-sm-6.col-md-4(data-grid-order='2')
+      .media
+        a(href="#", target="_blank")
+          +img('media 1', 'home/img-4.jpg').grayscale
+      .overlap-info
+        .overlap-info__after
+          span
+        p LIFE@SIT
+      
+    .grid-item.col-xs-12.col-sm-6.col-md-4(data-grid-order='6')
+      .media
+        a(href="#", target="_blank")
+          +img('media 1', 'home/img-5.jpg').grayscale
+      .overlap-info
+        .overlap-info__after
+          span
+        p FINANCIAL MATTERS
+      
+
+  h1 Articles List
+  .container 
+    article.articles-list.article-left
+      .article-body
+        .article-body__title
+          .icon
+            +img('media 1', 'article/icon-1.png')
+          span Overseas immersion Programme
+        .article-body__description
+          .editor
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec auctor mauris. Fusce eget augue sem. Curabitur sagittis enim sed ipsum imperdiet gravida. Nulla commodo molestie finibus. Cras placerat orci eu iaculis pellentesque. Nam felis augue, consectetur sed magna eget, pellentesque finibus dui. 
+      .article-media
+        a(href="#", title="Rich in history")
+          +img('media 1', 'article/img-1.jpg')
+    article.articles-list
+      .article-body
+        .article-body__title
+          .icon
+            +img('media 1', 'article/icon-2.png')
+          span Value added programme
+        .article-body__description
+          .editor
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec auctor mauris. Fusce eget augue sem. Curabitur sagittis enim sed ipsum imperdiet gravida. Nulla commodo molestie finibus. Cras placerat orci eu iaculis pellentesque. Nam felis augue, consectetur sed magna eget, pellentesque finibus dui. 
+      .article-media
+        a(href="#", title="Rich in history")
+          +img('media 1', 'article/img-2.jpg')
+    article.articles-list.article-left
+      .article-body
+        .article-body__title
+          .icon
+            +img('media 1', 'article/icon-3.png')
+          span lorum  ipsem
+        .article-body__description
+          .editor
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec auctor mauris. Fusce eget augue sem. Curabitur sagittis enim sed ipsum imperdiet gravida. Nulla commodo molestie finibus. Cras placerat orci eu iaculis pellentesque. Nam felis augue, consectetur sed magna eget, pellentesque finibus dui. 
+      .article-media
+        a(href="#", title="Rich in history")
+          +img('media 1', 'article/img-3.jpg')
+
+  h1 Articles List Vertical
+  .container.container-articles-list-vertical
+    article.articles-list.article-left.articles-list-vertical
+      .article-media
+        a(href="#", title="Rich in history")
+          +img('media 1', 'article/img-4.jpg')
+      .article-body
+        .article-body__title
+          .icon
+            +img('media 1', 'article/icon-4.png')
+          span tertiary-compatible
+        .article-body__description
+          .editor
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec auctor mauris. Fusce eget augue sem. Curabitur sagittis enim sed ipsum imperdiet gravida. Nulla commodo molestie finibus. Cras placerat orci eu iaculis pellentesque. Nam felis augue, consectetur sed magna eget, pellentesque finibus dui. 
+    article.articles-list.articles-list-vertical
+      .article-media
+        a(href="#", title="Rich in history")
+          +img('media 1', 'article/img-5.jpg')
+      .article-body
+        .article-body__title
+          .icon
+            +img('media 1', 'article/icon-5.png')
+          span community <br/> building
+        .article-body__description
+          .editor
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec auctor mauris. Fusce eget augue sem. Curabitur sagittis enim sed ipsum imperdiet gravida. Nulla commodo molestie finibus. Cras placerat orci eu iaculis pellentesque. Nam felis augue, consectetur sed magna eget, pellentesque finibus dui. 
+
+  h1 Parallax
+  .section.parallax
+    .parallax-stage(style="background-image: url('images/parallax/img-1.jpg'); height: 550px;")
+      .parallax-overlap
+      .container
+        .parallax-content 
+          .parallax-content__title We  do  more  than  educate. <br/>We  think  big  picture. 
+          .parallax-content_description
+              .editor
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec auctor mauris. Fusce eget augue sem. Curabitur sagittis enim sed ipsum imperdiet gravida. Nulla commodo molestie finibus. Cras placerat orci eu iaculis pellentesque. Nam felis augue, consectetur sed magna eget, pellentesque finibus dui. 
+
+  h1 Parallax with button
+  .section.parallax
+    .parallax-stage(style="background-image: url('images/parallax/img-2.jpg'); height: 400px;")
+      .parallax-overlap
+      .container
+        .parallax-content 
+          .parallax-content__title EXPLORE  UNLIMITED  EDUCATIONAL  POSSIBILITIES
+          .parallax-content_description              
+              a.btn(href="#", title="Link") APPLY NOW
+
+  h1 Banner
+  .section.banner
+    .banner-stage
+      .media
+        +img('media 1', 'banner/banner-1.jpg')
+      .detail
+  .section.banner
+    .banner-stage
+      .media
+        +img('media 2', 'banner/banner-2.jpg')
+      .detail
+
+  h1 Block Footer
+  .section.footer    
+    .social-block
+      a(href="#", target="_blank")
+        span.fa.fa-facebook-square
+      a(href="#", target="_blank")
+        span.fa.fa-instagram
+      a(href="#", target="_blank")
+        span.fa.fa-twitter
+      a(href="#", target="_blank")
+        span.fa.fa-youtube-play
+    .coppy-right
+      p Copyright © 2015. Singapore Institute Of Technology. <br/>All Rights Reserved.
+
+  h1 Menu detail post 
+  .section.menu-detail-post
+    .menu-stage
+      .media
+        +img('media 1', 'banner/banner-3.jpg')
+    .menu-container
+      .overlay-submenu
+      .container
+        ul
+          li.active
+            a(href="#") UNDERGRADUATES PROGRAMME
+            ul.sub-menu
+              li.active
+                a(href="#") Physical Science <br/>& Engineering
+              li 
+                a(href="#") Food Science &<br/> Chemical Engineering
+              li 
+                a(href="#") Information Communications <br/>& Computing
+              li 
+                a(href="#") Health <br/>Sciences
+              li 
+                a(href="#") Design, Education &<br/> Social Sciences
+          li 
+            a(href="#") SCHOLARSHIP
+            ul.sub-menu
+              li 
+                a(href="#") Physical Science <br/>& Engineering 1
+              li 
+                a(href="#") Food Science &<br/> Chemical Engineering 1
+              li 
+                a(href="#") Information Communications <br/>& Computing 1
+              li 
+                a(href="#") Health <br/>Sciences 1
+              li 
+                a(href="#") Design, Education &<br/> Social Sciences 1
+
+  h1 Detail Post 
+  .section.section-post
+    #post-1
+      .parallax
+        .parallax-stage(style="background-image: url('images/parallax/img-3.jpg'); height: 172px;")
+      .detail-post
+        .container
+          .detail-post__title Physical Science & Engineering
+          .editor
+            h4 Singapore Institute of Technology
+            ul
+              li Sustainable Infrastructure Engineering (Building Services), MEngTech and BEng (Hons)
+              li Sustainable Infrastructure Engineering (Land), MEngTech and BEng (Hons)
+            h4 Singapore Institute of Technology
+            ul
+              li Sustainable Infrastructure Engineering (Building Services), MEngTech and BEng (Hons)
+              li Sustainable Infrastructure Engineering (Land), MEngTech and BEng (Hons)
+            h4 Singapore Institute of Technology
+            ul
+              li Sustainable Infrastructure Engineering (Building Services), MEngTech and BEng (Hons)
+              li Sustainable Infrastructure Engineering (Land), MEngTech and BEng (Hons)
+ 
+  h1 LIST COURSE
+  .section.section-list-course
+    .container
+      .title-small ADMISSIONS / UNDERGRADUATE PROGRAMMES
+      h1.title PHYSICAL SCIENCE <br/>& ENGINEERING
+      .content-list-course
+        .row.row-course__item
+          a(href="#")
+            .col-md-4.row-course__title
+              | SINGAPORE INSTITUTE OF TECHNOLOGY
+            .col-md-8.row-course__description
+              p Sustainable Infrastructure Engineering (Building Services), MEngTech and BEng (Hons)
+              p Sustainable Infrastructure Engineering (Land), MEngTech and BEng (Hons)
+
+        .row.row-course__item
+          a(href="#")
+            .col-md-4.row-course__title
+              | SINGAPORE INSTITUTE OF TECHNOLOGY DIGIPEN INSTITUTE OF TECHNOLOGY
+            .col-md-8.row-course__description
+              p Systems Engineering (ElectroMechanical Systems), BEng (Hons)
+
+        .row.row-course__item
+          a(href="#")
+            .col-md-4.row-course__title
+              | NEWCASTLE UNIVERSITY
+            .col-md-8.row-course__description
+              p Electrical Power Engineering, BEng (Hons)
+              p Marine Engineering, BEng (Hons)
+              p Naval Architecture, BEng (Hons)
+              p Offshore Engineering, BEng (Hons)
+              p Mechanical Design and Manufacturing Engineering, BEng (Hons)
+
+        .row.row-course__item
+          a(href="#")
+            .col-md-4.row-course__title
+              | TECHNISCHE UNIVERSITÄT MÜNCHEN
+            .col-md-8.row-course__description
+              p Electrical Engineering & Information Technology, BSc
+
+        .row.row-course__item
+          a(href="#")
+            .col-md-4.row-course__title
+              | UNIVERSITY OF GLASGOW
+            .col-md-8.row-course__description
+              p Aeronautical Engineering, BEng (Hons)
+              p Aerospace Systems, BEng (Hons)
+              p Mechanical Design Engineering, BEng (Hons)
+              p Mechatronics, BEng (Hons) 
+
+  section.clubs-in-sit-card-demo
+    .container
+      h1.text-center CLUBS IN SIT
+      .row
+        .col-md-4
+          +clubs-category-card("images/demo-img/club-demo-img.jpg","MARTIAL ARTS")
+        .col-md-4
+          +clubs-category-card("images/demo-img/club-demo-img.jpg","MARTIAL ARTS")
+        .col-md-4
+          +clubs-category-card("images/demo-img/club-demo-img.jpg","MARTIAL ARTS")
+      .row
+        .col-md-6
+          +clubs-category-card("images/demo-img/club-demo-long-img.jpg","SPECIAL INTERESTS")
+        .col-md-6
+          +clubs-category-card("images/demo-img/club-demo-long-img.jpg","SPECIAL INTERESTS")
+
+
+  section.sport-carousels-demo
+    .container
+      h1.text-center SPORT GALLERIES CAROUSEL DEMO
+      .row
+        .col-md-6
+          +gallery-card('ARCHERY','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae optio officiis, cum similique soluta pariatur ipsam sapiente quia eaque delectus.','SIT Archery Facebook',
+          "images/demo-img/club-demo-img.jpg",
+          "images/demo-img/club-gallery-demo.jpg",
+          "images/demo-img/club-gallery-demo.jpg",
+          "images/demo-img/club-demo-long-img.jpg",
+          "images/logo.jpg")
+        .col-md-6
+          +gallery-card('ARCHERY','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae optio officiis, cum similique soluta pariatur ipsam sapiente quia eaque delectus.','SIT Archery Facebook',
+          "images/demo-img/club-gallery-demo.jpg",
+          "images/demo-img/club-gallery-demo.jpg",
+          "images/demo-img/club-gallery-demo.jpg")
+
+  section.accordion-demo
+    .container
+      h1.text-center ACCORDION DEMO
+      .row
+        .col-md-12
+          +scholarship-accordion('demo_acc')
+            +accordion_inner_panel('ITEM1','demo_acc','head1','body1','in','active')
+              .row
+                .col-md-6
+                  p lorem202
+            +accordion_inner_panel('ITEM2','demo_acc','head2','body2','','')
+              .row
+                .col-md-6
+                  p lorem20
+
+  section.title-demo
+    +skewed-header("images/banner/banner-7.png",'engineering','admissions','undergraduates programmes')
+
+  a(href="images/clubs-image/sportclub1.jpg" data-lightbox = "1gr")
+    img(src="images/clubs-image/sportclub1.jpg", alt="sss")
+  a(href="images/clubs-image/sportclub1.jpg" data-lightbox = "1gr")
+    img(src="images/clubs-image/sportclub1.jpg", alt="sss")
+  a(href="images/clubs-image/sportclub1.jpg" data-lightbox = "1gr")
+    img(src="images/clubs-image/sportclub1.jpg", alt="sss")
+  a(href="images/clubs-image/sportclub1.jpg" data-lightbox = "1gr")
+    img(src="images/clubs-image/sportclub1.jpg", alt="sss")        

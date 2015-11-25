@@ -1,0 +1,43 @@
+#modal-message-preview.modal.fade
+  .modal-dialog
+    .modal-content
+      button.close(type='button', data-dismiss='modal')
+        img(src="images/icon-close-popup.png", alt="")
+      .modal-body
+        .row
+          .col-sm-12.col-md-6
+            h2 Send a SMS
+            p By using our standard SMS message, we will be notified of the detail and location you’re interested in.
+            form(method="", action="")
+              .form-group
+                input.form-control(type='text', placeholder='Name', name="recieverName", data-rule-required="true", data-msg-required="Please fill in the reciever name", minlength="3", maxlength="50")
+              .form-group
+                input.form-control(type='text', placeholder='Phone', name="recieverPhone", data-rule-required="true", data-msg-required="Please fill in the reciever phone number", minlength="7")
+              button.submit(type='submit') Send SMS
+          .col-sm-12.col-md-6
+            img(src="images/sms-phone.png", "message preview")
+
+
+#modal-create-alert.modal.fade
+  .modal-dialog
+    .modal-content
+      button.close(type='button', data-dismiss='modal')
+        img(src="images/icon-close-popup.png", alt="")
+      .modal-body
+        h2 Be the first to know!
+        p Get notified when homes that match your search filters hit the market. 
+        .well
+          ul
+            li 
+              .fa.fa-check 
+              | condominiums
+            li 
+              .fa.fa-check 
+              | with 3 room
+        p We’ll send you a daily email with any new properties!
+        form(method="", action="")
+          .form-group
+            input.form-control(type='text', placeholder='Email', name="recieverPhone", data-rule-required="true", data-msg-required="Please fill in email address", data-rule-email="true", data-msg-email="Your email is invalid")
+          button.submit(type='submit') 
+            .fa.fa-bell
+            | Create an alert              

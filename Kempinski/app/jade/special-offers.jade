@@ -1,0 +1,44 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Special Offers'
+  -bodyClass = ''
+  -bannerIMG = 'press-room/banner-1.jpg'
+  -page = 'special-offers'
+block pagescript
+
+block breadcrumb  
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#"
+      },{
+        "text": "EXPERIENCES",
+        "href":"#"
+      }])
+
+block container  
+  .inner
+    main#main
+      .section-special-offers.section-block.gray
+        +page-title("KEMPINSKI SPECIAL OFFERS", "Information on our Brand's Luxurious Collection", "KEMPINSKI'S EXPANSION AND PORTFOLIO GROWTH.").gray
+
+      .section-special-offers.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+        .section-spa-offers
+          .container
+            +special-offers-item('special-offers/img-1.jpg', 'EARLY BOOKER', '<p>Guests of the Hotel Adlon Kempinski Berlin can look forward to a magical fairy tale world at this year\'s New Year\'s Eve celebrations. The hotel has selected the theme "Once upon a time" and will be transforming the lobby, ballroom and restaurants Quarré and Hendrik Otto’s Lorenz Adlon Esszimmer into a breathtaking fairy-tale setting.</p>', 'true').type-2
+
+            +special-offers-item('special-offers/img-2.jpg', 'FAMILY & KIDS PACKAGES', '<p>28th May 2015 - Kempinski Hotel Harbin opens its doors. As the first Kempinski Hotel in Heilongjiang Province, out of the 22 currently situated in China, Kempinski Hotel Harbin is set to become the leading luxury hotel in the Icy City, combining exclusive European flair with luxury facilities and service concepts.</p>', 'true').type-2
+
+            +special-offers-item('special-offers/img-3.jpg', 'BUSINESS PACKAGES', '<p>The best time of the year is fast approaching again. The lighting of the first candle on the Advent wreath ushers in the Christmas period at Hotel Adlon Kempinski.Austria is also home to the charming Kitzbühel, a sleepy and handsome medieval walled town. Here the slopes are open to both beginners and the more advanced skiing commu</p>', 'true').type-2
+
+            +special-offers-item('special-offers/img-4.jpg', 'ROMANCE PACKAGES', '<p>One of the most treasured gifts amongst couples, is time well spent together. At Kempinski, we will do everything in our power to make your dreams come true!</p>', 'true').type-2
+
+            +special-offers-item('special-offers/img-5.jpg', 'GOLF PACKAGES', '<p>Kempinski doesn\'t just offer world-class courses for our guests to play on – we also provide some of the most luxurious golf packages to be found anywhere across the globe, meaning you can transform your passion into a truly unforgettable experience.</p>').type-2
+
+            +special-offers-item('special-offers/img-6.jpg', 'WELLNESS & SPA PACKAGES', '<p>No matter where you are in the world, and whatever the reason for your trip, it\'s always important to dedicate some time to yourself to relax and unwind.</p>', 'true').type-2
+
+            +special-offers-item('special-offers/img-7.jpg', 'ART & CULTURE PACKAGES', '<p>Kempinski Hotels are located in destinations with a fascinating history and culture. Discover the story behind the city!</p>' , 'true').type-2
+
+            +special-offers-item('special-offers/img-8.jpg', 'SPORT & ACTIVITY PACKAGES', '<p>If sport and fitness is a part of your daily life, don\'t miss out on it during your vacation. Stay active with Kempinski!</p>', 'true' , 'true').type-2

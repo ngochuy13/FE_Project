@@ -1,0 +1,15 @@
+node_modules
+dist
+.tmp
+.sass-cache
+bower_components
+test/bower_components
+.idea/workspace.xml
+.idea/.name
+.idea/encodings.xml
+.idea/jsLibraryMappings.xml
+.idea/libraries/uobcard_node_modules.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/uobcard.iml
+.idea/vcs.xml

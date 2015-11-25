@@ -1,0 +1,143 @@
+.store-locator
+  .col-custom-right
+    float: right
+  .col-custom-left
+    float: left
+  #gmap
+    min-height: 560px
+    .canvas_map
+      min-height: 560px
+  #controls-custom
+    font-size: 14px
+    color: #666
+.store-locator-list
+  margin-bottom: 50px
+  h2.page-title
+    color: #666666
+    margin-bottom: 60px
+    font-weight: bold
+  .nav-tabs
+    border: none
+    li 
+      width: 25%
+      &:last-child a
+        border-right: none
+      &.active a 
+        border: none 
+        border-right: 1px solid #f2f2f2
+        border-bottom: 2px solid #d62027
+        span
+          color: #d62027
+    a
+      border: none 
+      border-right: 1px solid #f2f2f2
+      border-bottom: 2px solid #ebebeb
+      text-align: center
+      min-height: 66px
+      &:hover , &:focus
+        background: none
+        border: none 
+        border-right: 1px solid #f2f2f2
+        border-bottom: 2px solid #ebebeb
+      span
+        position: absolute
+        margin-top: 20px
+        width: 100%
+        left: 0
+        bottom: 4px
+        color: #333
+        line-height: 0.9
+        font-weight: bold
+  
+  .tab-content
+    .title 
+      font-size: 18px
+      color: #333
+      margin-top: 25px
+      margin-bottom: 10px
+      padding-bottom: 10px
+      border-bottom: 1px solid #ebebeb
+      font-weight: bold
+    .panel-default
+      border: none
+      border-radius: 0 
+      box-shadow: none
+      .panel-heading
+        border: none
+        background: none
+        padding-left: 0
+        a
+          font-size: 14px
+          width: 100%
+          display: block
+          background: url('../images/store-locator/icon-4.png') no-repeat right center
+          color: #d62027
+          font-weight: bold
+          &.collapsed
+            background-image: url('../images/store-locator/icon-3.png')
+            color: #666
+          &:hover , &:focus
+            text-decoration: none
+    .panel-collapse 
+      .panel-body
+        border: none
+        font-size: 12px
+        position: relative
+        padding-top: 0
+        padding-left: 0
+        color: #333
+        .block-info
+          min-height: 165px
+          max-width: 70%
+          h5 
+            line-height: 1.44
+            color: #000      
+            font-size: 14px
+            font-weight: bold      
+          p
+            font-size: 14px
+            font-weight: bold
+            padding-left: 27px
+            color: #000
+            background: url('../images/store-locator/img-2.png') no-repeat left top
+          .p
+            background-position: 0 -91px
+          .call
+            background-position: 0 -191px
+          .fax
+            background-position: 0 -394px
+          .user
+            background-position: 0 -285px
+          .email
+            background-position: 0 -488px
+          .desc
+            padding-left: 0
+            background: none
+            color: #666
+        .block-img
+          position: absolute
+          top: 12px
+          right: 0
+          max-width: 30%
+          img 
+            max-width: 100%
+@media screen and (max-width: 991px)
+  .store-locator
+    padding-bottom: 20px
+    .store-locator-list h2.page-title
+      margin-bottom: 0px;
+    // #controls-custom .tab-content
+    //   position: absolute
+    .store-locator-list .nav-tabs
+      margin-bottom: 30px
+@media screen and (max-width: 920px)
+  #controls-custom
+    margin-top: 30px
+@media screen and (max-width: 480px)
+  .store-locator #gmap
+    height: 320px
+    min-height: initial
+  .store-locator-list .nav-tabs a
+    padding: 10px 5px
+  // .store-locator-list .nav-tabs li
+  //   width: 100%

@@ -1,0 +1,223 @@
+.hide{
+  display: none;
+}
+.control__grid ul a.active:before {
+  width: 100%;
+  left: 0;
+}
+/* style of HuyPham 18-08-2015 */
+.filter__container {
+  background: #20225d;
+  height: 281.5px;
+}
+.filter__container .filter__container-text {
+  font-size: 20px;
+  font-family: "Roboto Condensed";
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 0.895;
+  text-align: center;
+  margin-top: 47px;
+  margin-bottom: 37.5px;
+}
+.filter__container .filter__container-select {
+  max-width: 714px;
+  margin: 0 auto;
+}
+.filter__container .filter__container-select .selectric-wrapper {
+  padding: 21.5px 24.5px;
+  background: #3c40bb;
+  border-radius: 7px;
+  box-shadow: 1px 3px 5px #121333;
+}
+.filter__container .filter__container-select .selectric-items {
+  left: 25px;
+  top: 21px;
+  z-index: 99;
+  max-width: calc(100% - 106px);
+  min-height: 557px;
+  background: #fff;
+  border: none;
+}
+.filter__container .filter__container-select .selectric-items li {
+  font-family: "Roboto";
+  color: rgb( 60, 61, 123 );
+  text-align: center;
+  text-transform: uppercase;
+  background: #fff;
+  border-top: none;
+  border-bottom: 1px solid #cccccc;
+  margin: 0 20px;
+  line-height: 61px;
+  padding: 0;
+  font-size: 17px;
+}
+.filter__container .filter__container-select .selectric-items li:last-child {
+  border-bottom: none;
+}
+.filter__container .filter__container-select .selectric-items li:hover {
+  background-color: #eee;
+}
+.filter__container .filter__container-select .selectric .label {
+  height: 55px;
+  line-height: 55px; 
+  font-family: "Roboto";
+  color: rgb( 60, 61, 123 );
+  text-transform: uppercase;
+  text-align: center;
+  margin-right: 55px;
+  font-size: 17px;
+}
+.filter__container .filter__container-select .selectric .button {
+  height: 55px;
+  width: 55px;
+  background: #fcc920;
+  color: #fff;
+}
+.filter__container .filter__container-select .selectric .button:after {
+  border: 0;
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f078";
+  font-size: 20px;
+  bottom: auto;
+  right: auto;
+  width: 58px;
+  height: 58px;
+  line-height: 58px;
+}
+/*.role__grid .content__block a {
+  border: 4px solid #3c40bb;
+  padding: 17px 14px;
+  text-transform: uppercase;
+}
+.role__grid .content__block a:before {
+  content: none;
+}*/
+.role__content {
+  /*min-height: 600px;*/
+}
+.role__content .container {
+  margin-top: 41px; 
+}
+.control__grid ul a.active:before {
+  width: 100%;
+  left: 0;
+}
+@media screen and (max-width: 767px) {
+  .filter__container {
+    height: auto;
+  }
+  .filter__container .filter__container-select {
+    margin-bottom: 90px;
+  }
+  .filter__container .filter__container-text {
+    line-height: 1.3;
+  }
+  .filter__container .filter__container-select .selectric .label {
+    font-size: 22px;
+    font-family: "Roboto";
+    color: rgb( 60, 61, 123 );
+    text-transform: uppercase;
+  }
+  .filter__container .filter__container-select .selectric-items li {
+    font-size: 22px;
+    font-family: "Roboto";
+    color: rgb( 60, 61, 123 );
+    text-transform: uppercase;
+    line-height: 1.26;
+    padding: 15px 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .filter__container .filter__container-select .selectric-items li,
+  .filter__container .filter__container-select .selectric .label {
+    font-size: 14px;
+  }
+}
+
+/* popup */
+.lightpopup__container--popup .modal-dialog {
+  top: 80px;
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+}
+.lightpopup__container--popup .close {
+  position: absolute;
+  font-size: 17px;
+  font-family: "Oswald";
+  color: #fff;
+  top: -50px;
+  right: 0;
+  cursor: pointer;
+}
+.lightpopup__container--popup .close img {
+  max-width: 30px;
+  position: relative;
+  top: 8px;
+  margin-left: 10px;
+}
+.lightpopup__container--popup .modal-content{
+  border-radius: 0;  
+}
+.lightpopup__container--popup .modal-body {
+  padding: 0;
+}
+.lightpopup__container--popup .detail{
+  padding: 47.5px 40px 40px;
+}
+.lightpopup__container--popup p {
+  font-size: 18px;
+  font-family: "Source Sans Pro";
+  color: rgb( 92, 92, 92 );
+  line-height: 1.2;
+  text-align: left;
+  margin: 15px 0;
+} 
+.lightpopup__container--popup blockquote  {
+  font-size: 24px;
+  color: #5A5A5A;  
+  margin: 0 0 21px 0;
+  line-height: 1.4;  
+}
+.lightpopup__container--popup .meta {
+  color: #5A5A5A;
+  line-height: 1.5;
+  font-weight: bold;
+  font-size: 20px;  
+  font-family: "Source Sans Pro";
+}
+.lightpopup__container--popup .meta .link {
+  margin-top: 30px;
+}
+.lightpopup__container--popup .meta .link span {
+  margin: 0 0 25px 0;
+  font-size: 17px;
+  font-family: "Source Sans Pro";
+  color: #000;
+  line-height: 1.333;
+  text-align: left;
+  display: block;
+}
+.lightpopup__container--popup .meta .link a {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  color: #2E2C75;
+  margin-bottom: 15px;
+  font-size: 16px;
+  width: 45%;
+  display: inline-block;
+}
+.lightpopup__container--popup .meta .link a:before {
+    font-family: "FontAwesome";
+    font-size: 18px;
+    content: '\f105';
+    color: #2E2C75;
+    margin-right: 10px;
+}
+@media screen and (max-width: 680px) {
+  .lightpopup__container--popup .meta .link a {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}

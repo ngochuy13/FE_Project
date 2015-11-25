@@ -1,0 +1,77 @@
+extends layouts/template-1
+
+block header
+  include includes/header-residence
+  block breadcrumb
+
+block vars
+  -title = 'RESIDENCES'
+  -bodyClass = 'residencespage'
+  -bannerIMG = 'residence/banner-2.jpg' 
+  -page = 'residences' 
+block breadcrumb  
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#"
+      },{
+        "text": "MIDDLE EAST",
+        "href":"#"
+      },{
+        "text": "EMIRATES PALACE",
+        "href":"#"
+      }])
+      
+block pagescript
+  // build:js scripts/photo-gallery.js
+  script(src='/scripts/photo-gallery.js')
+  // endbuild 
+
+block container    
+  .inner
+    main#main
+      section.section-block.map-section
+        +page-title-star("KEMPINSKI RESIDENCE","in Abu Dhabi")
+        include includes/block-map-residences 
+
+      section.section-article-blog
+        +section-title("ROOMS & SUITES", "World Class Luxury", "EXCLUSIVE OFFERS").gray
+        .room-suite-gallery.wow.fadeIn(data-wow-duration="0.5s")
+          +filter-select-sync([
+            {
+              "text": "Luxury Rooms",
+              "link": "#room-suites-luxyry-room"
+            },{
+              "text": "Luxury Suites",
+              "link": "#room-suites-luxury-suite"
+            },{
+              "text": "Exclusive Room",
+              "link": "#room-suites-exclusive"
+            }
+          ]).gray(data-sync=".owl-sync-content .owl-carousel")
+          .owl-sync-content
+            .owl-carousel.wow.fadeIn(data-loop="true" data-items="1" data-auto-simpleinit="true" data-nav="true" data-wow-duraiton="0.5")
+              +residences-item('residence/room-1.jpg', 'RESIDENCE DETAILS', '<p>Your stay in the Emirates Palace Suite will transport you to your own private world of opulence and grandeur when you choose a Khaleej Suite. This experience will be the benchmark by which you measure your every hotel experience.</p>', ['Laptop-size safe', 'Balcony', 'Flat-screen TV', 'Working Desk', 'Lounge Area', 'Separate Living Room & Bedroom', 'Powder Room', 'Entertainment Center'])
+              +residences-item('rooms-suites/room-suite-2.jpg', 'Luxury Suite', '<p>Our most flexible Rate including free Internet access. The rate is based on accommodation only. Subject to 24.32% tax and service charge.</p>', ['Laptop-size safe', 'Balcony', 'Flat-screen TV', 'Working Desk', 'Lounge Area', 'Separate Living Room & Bedroom', 'Powder Room', 'Entertainment Center'])
+              +residences-item('rooms-suites/room-suite-1.jpg', 'Exclusive Coral Room', '<p>Our most flexible price including buffet breakfast and free Internet access. Subject to 24.32% tax and service charge.</p>', ['Laptop-size safe', 'Balcony', 'Flat-screen TV', 'Working Desk', 'Lounge Area', 'Separate Living Room & Bedroom', 'Powder Room', 'Entertainment Center'])
+              
+            //- .photo-gallery-control
+            //-   span#photo-gallery-next.next
+            //-   span#photo-gallery-prev.prev
+
+      section.section-block.section-photo-gallery
+        +section-title("PHOTO GALLERY", "Explore Emirates Palace", "GENEROUS HOSPITALITY").gray
+        include includes/photo-gallery
+
+      section.section-article-blog
+        +section-title("EXPERIENCE THE ICONIC PALM", "Paradise on Earth", "PERFECT ESCAPE BY THE BEACH").gray.article-blog__title 
+        .section-article-blog__content.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+          .container
+            .row
+              +article-blog-item('residence/img-4.jpg', 'THE CITY - EMIRATE OF DUBAI', '', '<p>Dubai is a uniquely exciting and attractive place to work, live and holiday. It boasts an idyllic location alongside the clear blue waters of the Arabian Gulf, uninterrupted sunshine, a truly cosmopolitan atmosphere, plus excellent education and healthcare facilities.</p>').col-xs-12.col-sm-4  
+
+              +article-blog-item('residence/img-5.jpg', 'THE PROPERTY', '', '<p>Kempinski Palm Jumeirah, located on the crescent of the man-made Island Palm Jumeirah, in Dubai, offers 244 luxury residences, which range in size from 165 sqm to 1300 sqm and include spacious terraces or balconies with beautiful views of the lagoon and the striking Dubai skyline.</p>').col-xs-12.col-sm-4
+                +cta-btngroup-1('further information', '#')
+
+              +article-blog-item('residence/img-6.jpg', 'THE DEVELOPER', '', '<p>EPG Hotels & Resorts - Emerald Palace Group is the owner and the developer of the Kempinski projects on Palm Jumeirah. Development conceptualized and planned by Poznyakizhilstroy Corporation (Kiev, Ukraine) in partnership with W.S. Atkins. Interior Design by GAJ (Godwin Austen Johnson Architects).</p>').col-xs-12.col-sm-4

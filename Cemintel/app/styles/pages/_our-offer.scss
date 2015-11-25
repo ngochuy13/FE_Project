@@ -1,0 +1,259 @@
+.ouroffer-page {
+    .title-block {
+        .description {
+            @include mobile {
+                font-size: 12px;
+                letter-spacing: 2px;
+            }
+        }
+    }
+    .img.img-circle:before {
+        border-radius: 50%;
+        top: 10px;
+        left: 10px;
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+    }
+    .ouroffer-banner {
+        position: relative;
+        .block-info {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 50%;
+            text-align: center;
+            color: #fff;
+            transform: translateY(-50%);
+            .description {
+                letter-spacing: 4px;
+            }
+        }
+    }
+    .ouroffer-service {
+        margin-top: -80px;
+        position: relative;
+        z-index: 99;
+        .title {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            color: #fff;
+            font-size: 30px;
+            font-family: "Arial";
+            font-weight: bold;
+            @include mobile {
+                font-size: 24px;
+            }
+        }
+        .ouroffer-service__item {
+            opacity: 0;
+        }
+        .description {
+            margin-top: 20px;
+            padding: 0 22px;
+            p {
+                font-size: 16px;
+                font-family: "Arial";
+                color: rgb( 0, 0, 0);
+                line-height: 1.875;
+                text-align: center;
+            }
+        }
+        .ouroffer-service_detail {
+            margin-top: 45px;
+            margin-bottom: 81px;
+            .container.custom {
+                width: 100%;
+                max-width: 750px;
+                text-align: center;
+                .ouroffer-service-detail__item {
+                    border-left: 1px solid #cacaca;
+                    &:first-child {
+                        border-left: none;
+                    }
+                }
+                p {
+                    font-size: 16px;
+                    font-family: "Arial";
+                    color: rgb( 0, 0, 0);
+                    line-height: 1.875;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    .ouroffer-step {
+        margin-top: 40px;
+        margin-bottom: 59px;
+        text-align: center;
+        .second-items {
+            opacity: 0;
+        }
+        .img {
+            margin-bottom: 40px;
+        }
+        .title {
+            font-size: 24px;
+            font-family: "Arial";
+            color: rgb( 0, 0, 0);
+            line-height: 1.25;
+            margin-bottom: 40px;
+        }
+        p {
+            font-size: 16px;
+            font-family: "Arial";
+            color: rgb( 0, 0, 0);
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+        .block-step {
+            vertical-align: top;
+            margin-bottom: 40px;
+            padding-top: 8px;
+            a {
+                margin: 0 27.5px;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                cursor: default;
+                .step {
+                    width: 146px;
+                    height: 146px;
+                    border-radius: 50%;
+                    margin: 1px 0 0 1px;
+                    padding: 37px 0 0 0;
+                    &:active{
+                        box-shadow: none;
+                    }
+                    span {
+                        font-size: 12px;
+                        font-family: "Arial";
+                        color: rgb( 148, 148, 148);
+                        font-weight: bold;
+                        line-height: 2.5;
+                    }
+                    .title {
+                        font-size: 26px;
+                        font-family: "Arial";
+                        color: rgb( 0, 0, 0);
+                        line-height: 1.154;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
+    .ouroffer-explore {
+        margin-top: 40px;
+        margin-bottom: 94px;
+        text-align: center;
+        p {
+            font-size: 16px;
+            font-family: "Arial";
+            color: rgb( 0, 0, 0);
+            line-height: 1.875;
+            margin-bottom: 40px;
+        }
+        ul {
+            max-width: 373px;
+            margin: 0 auto;
+            display: block;
+            margin-bottom: 46px;
+            li {
+                border-top: 1px solid #cacaca;
+                font-size: 16px;
+                font-family: "Arial";
+                color: rgb( 0, 0, 0);
+                line-height: 1.875;
+                padding: 3px 0 1px;
+                &:first-child {
+                    border-top: none;
+                }
+            }
+        }
+        h3 {
+            font-size: 24px;
+            font-family: "Arial";
+            color: rgb( 0, 0, 0);
+            line-height: 1.875;
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width: 1070px) {
+    .ouroffer-page {
+        .ouroffer-service {
+            margin-top: -50px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .ouroffer-page {
+        .ouroffer-service {
+            margin-top: -30px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .ouroffer-page {
+        .img img {
+            min-height: 200px;
+        }
+        .ouroffer-banner {
+            h3 {
+                font-size: 24px;
+            }
+        }
+        .ouroffer-service {
+            .ouroffer-service__item {
+                margin-bottom: 25px;
+            }
+            .ouroffer-service_detail {
+                padding: 0 10px;
+                margin-top: 0px;
+                margin-bottom: 30px;
+                .container.custom {
+                    .ouroffer-service-detail__item {
+                        border: none;
+                        border-top: 1px solid #cacaca;
+                        padding-top: 12px;
+                        margin-bottom: 12px;
+                        &:first-child {
+                            border-top: none;
+                        }
+                    }
+                }
+            }
+        }
+        .ouroffer-step {
+            margin-bottom: 15px;
+            .title {
+                font-size: 20px;
+            }
+            .block-step a {
+                margin: 0 5px;
+                width: 135px;
+                height: 135px;
+                .step {
+                    width: 130px;
+                    height: 130px;
+                    padding-top: 25px;
+                }
+            }
+        }
+        .ouroffer-explore {
+            margin-bottom: 75px;
+            h3 {
+                font-size: 20px;
+                line-height: 1.6;
+                text-transform: none;
+            }
+        }
+    }
+}

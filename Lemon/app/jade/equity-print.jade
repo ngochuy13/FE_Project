@@ -1,0 +1,67 @@
+extends layouts/print
+
+block vars
+  -title = 'One page app'
+  -bodyClass = 'app'
+block container
+  main#main
+    .container
+      .logo
+        img(src="images/sprites/logo-print.png")
+      h1 Monetise Contributions
+      .user
+        label.user1 J
+        span.name John Ackers
+      .table
+        .th
+          .td
+            label Type
+          .td
+            label Description
+          .td
+      .table
+        .tr
+          .td.type
+            label.ip INTELLECTUAL PROPERTY
+          .td.description
+            p Phasellus scelerisque neque ante, et eleifend libero vehicula id. Vivamus neque neque, interdum vitae arcu vitae, aliquet lacinia urna. Quisque ut eros tristique.tempor lacus.
+          .td.price
+            span $3,400
+      .table
+        .tr
+          .td.type
+            label.time TIME
+          .td.description
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac dolor nec velit facilisis facilisis sed vitae mi. Phasellus scelerisque neque ante, et eleifend libero vehicula id. Vivamus neque neque, interdum vitae arcu vitae, aliquet lacinia urna. Quisque ut eros tristique, feugiat ante ut, tempor lacus.
+          .td.price
+            span $3,400
+      .table
+        .tr
+          .td.type
+            label.money MONETARY CONTRUTION
+          .td.description
+            p
+          .td.price
+            span $3,400
+      .table
+        .tr
+          .td.type
+            label.could INTANGIBLE
+          .td.description
+            p Mauris ac dolor nec velit facilisis facilisis sed vitae mi. Phasellus scelerisque neque ante, et eleifend libero vehicula id. Vivamus neque neque, interdum vitae arcu vitae.a urna. Quisque ut eros tristique, feugiat ante ut, tempor lacus.
+          .td.price
+            span $3,400
+      .table
+        .tr
+          .td.type
+            label.other OTHER
+          .td.description
+            p Mauris ac dolor nec velit facilisis facilisis sed vitae mi. Phasellus scelerisque neque ante, et eleifend libero vehicula id. Vivamus neque neque, interdum vitae arcu vitae. a urna. Quisque ut eros tristique, feugiat ante ut, tempor lacus.
+          .td.price
+            span $3,400
+      .table
+        .tr.total
+          .td
+            label Total
+            span $37,600
+

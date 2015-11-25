@@ -1,0 +1,24 @@
+extends layouts/layout
+
+block vars
+  -title = 'Promotion Detail'
+  -bodyClass = 'promotion-detail' 
+
+block container
+  
+  .about-page.promotion-detail
+    .sub-page-banner
+      p Promotion Detail
+      img(src='images/form/banner.jpg', title='', alt='')
+    .container
+      h3.has-arrow.has-arrow--block Promotion List
+      .block-back-link
+        a(href="#",title="back") Back
+      .description
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit eveniet quisquam explicabo nesciunt laboriosam quo nam necessitatibus nostrum non iste odio, assumenda voluptatum, animi similique labore. Eum similique, atque est.
+      .block-media
+        img(src='images/uploads/img-promotion-detail.jpg', alt='img-promotion-detail')
+
+      .block-link
+        a.btn-link(href='#', title="Product Detail") Product Detail

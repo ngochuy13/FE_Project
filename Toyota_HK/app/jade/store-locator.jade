@@ -1,0 +1,194 @@
+extends layouts/layout
+
+block vars
+  -title = 'Store Locator'
+  -bodyClass = 'store-locator' 
+
+block pagescript
+  script(src='http://maps.google.com/maps/api/js?sensor=false&libraries=geometry&v=3.7')
+  script(src='/scripts/lib-js/maplace-locator.js')
+  // build:js scripts/maplace-dep.js
+  script(src='/scripts/lib-js/maplace-0.1.3.min.js')
+  script(src='/scripts/lib-js/maplace-main.js')
+  // endbuild
+  
+
+block container
+  .about-page.store-locator
+    .sub-page-banner
+      p 聯絡我們
+      img(src='images/contact-us/banner-store-locator.jpg', title='', alt='')
+  
+  .store-locator-list
+    h2.page-title 分行網絡
+    .container
+      .row 
+        .col-lg-5.col-md-5.col-sm-12.col-xs-12.col-custom-right
+          #controls-custom
+            //- Nav tab
+            ul.nav.nav-tabs(role='tablist')
+              li(role='presentation').active
+                a(href='#showroom', aria-controls='showroom', role='tab', data-toggle='tab') 
+                  img(src="images/store-locator/icon-showroom.png", alt="icon")
+                  span 陳列室
+              li(role='presentation')
+                a(href='#commercial', aria-controls='commercial', role='tab', data-toggle='tab') 
+                  img(src="images/store-locator/icon-service.png", alt="icon")
+                  span 維修中心
+              li(role='presentation')
+                a(href='#service', aria-controls='service', role='tab', data-toggle='tab') 
+                  img(src="images/store-locator/icon-1.png", alt="icon")
+                  span 零件中心
+              li(role='presentation')
+                a(href='#support', aria-controls='support', role='tab', data-toggle='tab') 
+                  img(src="images/store-locator/icon-2.png", alt="icon")
+                  span 租車中心
+        .col-lg-7.col-md-7.col-sm-12.col-xs-12.col-custom-left
+          #gmap
+        .col-lg-5.col-md-5.col-sm-12.col-xs-12.col-custom-right
+          #controls-custom
+            //- Tab panes
+            .tab-content
+              #showroom.tab-pane.active(role='tabpanel')  
+                .title 豐田陳列室
+                .wrap_controls
+                  #accordion-showroom.panel-group(role='tablist', aria-multiselectable='true')
+                    .panel.panel-default
+                      .panel-heading(role='tab')
+                        h4.panel-title
+                          a.location.collapsed(data-load='1', href='#office-1', role='button', data-toggle='collapse', data-parent='#accordion-showroom',  aria-expanded='false', aria-controls='office-1')
+                            | 元朗壽富街60號好順福大廈地下98-99舖
+                      #office-1.panel-collapse.collapse(role='tabpanel')
+                        .panel-body
+                          .block-info
+                            h5 營業時間
+                            p.desc 營業時間
+                            p.time 上午9:00至晚上8:00
+                            p.p 豐田私家車、輕型商用車
+                            p.call 電話 : 2823 5400
+                            p.fax 電話 : 2823 5400
+                            p.user 分行經理 : 梁國輝
+                            p.email mail@local.com
+                          .block-img
+                            img(src="images/store-locator/img-1.png", alt="image")
+                    .panel.panel-default
+                      .panel-heading(role='tab')
+                        h4.panel-title
+                          a.location.collapsed(data-load='2', href='#office-2', role='button', data-toggle='collapse', data-parent='#accordion-showroom',  aria-expanded='false', aria-controls='office-2')
+                            | 新界沙田小瀝源安心街11號華順廣場2樓
+                      #office-2.panel-collapse.collapse(role='tabpanel')
+                        .panel-body
+                          .block-info
+                            h5 營業時間
+                            p.desc 營業時間
+                            p.time 上午9:00至晚上8:00
+                            p.p 豐田私家車、輕型商用車
+                            p.call 電話 : 2823 5400
+                            p.fax 電話 : 2823 5400
+                            p.user 分行經理 : 梁國輝
+                            p.email mail@local.com
+                          .block-img
+                            img(src="images/store-locator/img-1.png", alt="image")
+              #commercial.tab-pane(role='tabpanel') 
+                .title 商用車陳列室
+                .wrap_controls
+                  #accordion-commercial.panel-group(role='tablist', aria-multiselectable='true')
+                    .panel.panel-default
+                      .panel-heading(role='tab')
+                        h4.panel-title
+                          a.location.collapsed(data-load='1', href='#office-3', role='button', data-toggle='collapse', data-parent='#accordion-commercial',  aria-expanded='false', aria-controls='office-3')
+                            | 元朗屏山橋頭圍410地段橋發街25號
+                      #office-3.panel-collapse.collapse(role='tabpanel')
+                        .panel-body
+                          .block-info
+                            h5 營業時間
+                            p.desc 營業時間
+                            p.time 上午9:00至晚上8:00
+                            p.p 豐田私家車、輕型商用車
+                            p.call 電話 : 2823 5400
+                            p.fax 電話 : 2823 5400
+                            p.user 分行經理 : 梁國輝
+                            p.email mail@local.com
+                          .block-img
+                            img(src="images/store-locator/img-1.png", alt="image")
+                    .panel.panel-default
+                      .panel-heading(role='tab')
+                        h4.panel-title
+                          a.location.collapsed(data-load='2', href='#office-4', role='button', data-toggle='collapse', data-parent='#accordion-commercial',  aria-expanded='false', aria-controls='office-4')
+                            | 新界沙田小瀝源安心街11號華順廣場2樓
+                      #office-4.panel-collapse.collapse(role='tabpanel')
+                        .panel-body
+                          .block-info
+                            h5 營業時間
+                            p.desc 營業時間
+                            p.time 上午9:00至晚上8:00
+                            p.p 豐田私家車、輕型商用車
+                            p.call 電話 : 2823 5400
+                            p.fax 電話 : 2823 5400
+                            p.user 分行經理 : 梁國輝
+                            p.email mail@local.com
+                          .block-img
+                            img(src="images/store-locator/img-1.png", alt="image")
+              #service.tab-pane(role='tabpanel') 
+                .title 豐田維修中心
+                .wrap_controls
+                  #accordion-service.panel-group(role='tablist', aria-multiselectable='true')
+                    .panel.panel-default
+                      .panel-heading(role='tab')
+                        h4.panel-title
+                          a.location.collapsed(data-load='1', href='#office-5', role='button', data-toggle='collapse', data-parent='#accordion-service',  aria-expanded='false', aria-controls='office-5')
+                            | 新界沙田沙田鄉事會路138號HomeSquare 1樓113 & 115號舖
+                      #office-5.panel-collapse.collapse(role='tabpanel')
+                        .panel-body
+                          .block-info
+                            h5 營業時間
+                            p.desc 營業時間
+                            p.time 上午9:00至晚上8:00
+                            p.p 豐田私家車、輕型商用車
+                            p.call 電話 : 2823 5400
+                            p.fax 電話 : 2823 5400
+                            p.user 分行經理 : 梁國輝
+                            p.email mail@local.com
+                          .block-img
+                            img(src="images/store-locator/img-1.png", alt="image")
+                    .panel.panel-default
+                      .panel-heading(role='tab')
+                        h4.panel-title
+                          a.location.collapsed(data-load='2', href='#office-6', role='button', data-toggle='collapse', data-parent='#accordion-service',  aria-expanded='false', aria-controls='office-6')
+                            | 新界沙田小瀝源安心街11號華順廣場2樓
+                      #office-6.panel-collapse.collapse(role='tabpanel')
+                        .panel-body
+                          .block-info
+                            h5 營業時間
+                            p.desc 營業時間
+                            p.time 上午9:00至晚上8:00
+                            p.p 豐田私家車、輕型商用車
+                            p.call 電話 : 2823 5400
+                            p.fax 電話 : 2823 5400
+                            p.user 分行經理 : 梁國輝
+                            p.email mail@local.com
+                          .block-img
+                            img(src="images/store-locator/img-1.png", alt="image")
+              #support.tab-pane(role='tabpanel') 
+                .title 顧客支援中心
+                .wrap_controls
+                  #accordion-support.panel-group(role='tablist', aria-multiselectable='true')
+                    .panel.panel-default
+                      .panel-heading(role='tab')
+                        h4.panel-title
+                          a.location.collapsed(data-load='1', href='#office-7', role='button', data-toggle='collapse', data-parent='#accordion-support',  aria-expanded='false', aria-controls='office-7')
+                            | 新界沙田小瀝源安心街11號華順廣場2樓
+                      #office-7.panel-collapse.collapse(role='tabpanel')
+                        .panel-body
+                          .block-info
+                            h5 營業時間
+                            p.desc 營業時間
+                            p.time 上午9:00至晚上8:00
+                            p.p 豐田私家車、輕型商用車
+                            p.call 電話 : 2823 5400
+                            p.fax 電話 : 2823 5400
+                            p.user 分行經理 : 梁國輝
+                            p.email mail@local.com
+                          .block-img
+                            img(src="images/store-locator/img-1.png", alt="image")
+

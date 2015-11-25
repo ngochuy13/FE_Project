@@ -1,0 +1,28 @@
+extends layouts/default
+
+block content
+	.verification-block
+		.verification-header.title-page
+			.container
+				.row
+					.col-md-1.col-sm-2.hidden-xs
+							img(src="images/signup-icon.png", alt="Log in")
+					.col-sm-6
+						h3.bold Verification Account
+		.verification-content
+			.verification-success
+				.container
+					.col-xs-12
+						.verification-message
+							p.p.bold Verification Account Successfully !
+							p.p Your account has been verified.
+			.verification-fail
+				.container
+					.col-xs-12
+						.verification-message
+							p.p.bold Unable to verify your account !
+							p.p Sorry, We are not able to verify your account
+							p.p Please try to register again and verify your registration within 24 hours
+
+			
+

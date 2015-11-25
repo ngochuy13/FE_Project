@@ -1,0 +1,31 @@
+extends layouts/template-1
+
+block vars
+  -title = '404'
+  -bodyClass = 'homepage-loading homepage'
+  -bannerIMG = 'home/banner.jpg'
+  -page = ''
+block pagescript
+  // build:js scripts/photo-gallery.js
+  script(src='/scripts/photo-gallery.js')
+  // endbuild
+  
+block container    
+  .inner
+    main#main
+      .section-error
+        .item.slider-item.type2.error-item
+          .row
+            .col-xs-12.col-md-6.match-height      
+              .suite-media
+                img(src="images/error/img-1.jpg" alt="Kempinski.com")
+            .col-xs-12.col-md-6.match-height
+              .suite-info
+                .name 
+                  |Kempinski
+                  br
+                  |how may we assist you?
+                .description.editor-content 
+                  p We cannot find the page you are looking for.<br/>Please continue to experience Kempinski hospitality by contacting our customer support or return to the Kempinski hotel.
+                +cta-btngroup('VISIT KEMPISNKI.COM','#','FIND YOUR DESTINATION','#').wide
+        

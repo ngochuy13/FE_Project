@@ -1,0 +1,186 @@
+.news
+	img
+	max-width: 100%
+	height: auto
+	.sub-page-banner
+	img
+	  height: auto
+	  margin: 0 auto
+	  left: 0
+	.news-content
+		width: 100%
+		max-width: 860px
+		margin: 0 auto
+	.news-select
+		text-align: center
+		width: 100%
+		height: 42px
+		position: relative
+		.cars-family-filter-list
+			width: 165px
+			margin: 0 0 0 -175.5px
+			left: 50%;
+			li
+				a
+					text-align: left
+			&.list-filter-2
+				left: 52%
+				margin: 0
+		.dropdown
+			width: 165px
+			display: inline-block
+			&.dropdown2
+				margin-left: 30px
+			.btn-default
+				border: 2px solid #ed2c35
+				color: #ed2c35
+				width: 100%
+				font-weight: bold
+				text-align: left
+				height: 36px
+				padding: 0 13px
+				line-height: 34px
+				position: relative
+				@include border-radius(6px)
+				&:hover,
+				&:active,
+				&:focus
+					background: none
+					outline: 0;
+					@include box-shadow(none)
+				.caret
+					width: 11px
+					height: 7px
+					background: url('../images/news/caret-dropdown.png') no-repeat
+					border: none
+					position: absolute
+					right: 13px
+					top: 14px
+			.dropdown-menu
+				margin: 0
+				padding: 6px 0
+				@include box-shadow(none)
+				@include border-radius(6px)
+				border: 2px solid #ed2c35
+				width: 100%
+				a
+					color: #ed2c35
+					font-weight: bold
+					font-size: 12px
+					padding: 5px 13px
+					&:hover
+						background: none
+	.news-list
+		overflow: hidden
+		margin: 50px 0
+		li
+			overflow: hidden
+			background: url('../images/about/about-page-hr.jpg') no-repeat center top
+			padding-top: 35px;
+			margin-top: 25px;
+			&:first-child
+				background: none
+				padding-top: 0
+				margin-top: 0
+			.col
+				float: left 
+			.news-img
+				width: 30%
+				min-height: 1px
+				overflow: hidden
+			.news-details
+				width: 70%
+				font-size: 14px
+				font-weight: bold
+				color: #666666
+				padding-left: 40px
+				padding-top: 10px
+				.news-date
+					color: #C5C5C5
+				a
+					font-weight: bold
+					color: #EC1A24
+					&.title
+						font-size: 16px
+						display: block
+						margin-bottom: 10px
+					&.tools
+						padding-left: 22px
+					&.exel
+						background: url('../images/about/icon-explore-01.png') no-repeat left center
+						&:hover
+							background-image: url('../images/about/icon-explore-01-hover.png')
+							color: #333
+					&.pdf
+						background: url('../images/news/icon-pdf.png') no-repeat left center
+					&:hover,
+					&:active,
+					&:focus
+						text-decoration: none
+	.news-pagination
+		text-align: center
+		margin-bottom: 60px
+		li
+			display: inline-block
+			a
+				font-size: 14px
+				color: #D43037
+				font-weight: bold
+				display: inline-block
+				width: 42px
+				height: 25px
+				line-height: 25px
+				margin: 0
+				&.prev
+					text-indent: -9999px
+					background: url('../images/news/arrow-prev.png') no-repeat center center
+					border: none
+					width: 15px;
+				&.next
+					text-indent: -9999px
+					background: url('../images/news/arrow-next.png') no-repeat center center
+					border: none
+					width: 15px;
+				&.active
+					color: #fff
+					background: url('../images/news/bg-pagi-active.png') no-repeat center center
+					width: 41px
+				&.first
+					border: none
+				&.no-direct
+					opacity: 0.5
+@media screen and(max-width: 1160px)
+	.news-content
+		> .inner
+			padding: 0 15px
+@media screen and(max-width: 767px)
+	.news .news-list li .news-img,
+	.news .news-list li .news-details
+		width: 100%
+		padding: 0
+		text-align: center
+	.news .news-list li .news-img
+		margin-bottom: 20px
+@media screen and(max-width: 480px)
+	.news .news-select .dropdown
+		display: block;
+		margin: 0 auto
+	.news .news-select .dropdown.dropdown2
+		margin: 20px auto 0
+	.news .news-select
+		height: auto
+	.news .news-select .cars-family-filter-list
+		position: relative
+		left: 0
+		margin: 0 auto 20px
+	.news .news-select .cars-family-filter-list.list-filter-2
+		left: 0
+		margin: 0 auto
+	.news .news-pagination li a
+		width: 30px
+
+
+
+
+
+

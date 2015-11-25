@@ -1,0 +1,29 @@
+.livechat-block.hidden-xs
+	.livechat-icon
+		img(src="images/chat-icon.png")
+	.livechat-body
+		.livechat-body-inner
+			.livechat-body-title.bold
+				span Chat with us
+				.livechat-body-icon.pull-right
+					<i class="fa fa-minus livechat-collapse" title="Minimize Live Chat"></i>
+					<i class="fa fa-times livechat-close" title="Close Live Chat"></i>
+			form.livechat-form
+				.form-inner.form-name
+					label What is your name? *
+					input.form-input(type="text" name="name" required)
+				.form-inner.form-mail
+					label Email Address *
+					input.form-input(type="email" name="email" required)
+				.form-inner.form-existing
+					label Existing Customers:
+					label LivePerson Account ID
+					input.form-input(type="text" name="existing")
+				.form-inner.submit.pull-right
+					//- input#livechat-form-submit.bold.homepage-button(type="submit" value="Submit")
+					//- a(href="#").button.rainbow
+					//- 		div.bgw Submit
+					button(type="submit").button.rainbow.ft-signup-submit
+						div.bgw Submit
+
+

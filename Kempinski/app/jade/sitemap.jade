@@ -1,0 +1,50 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Site map'
+  -bodyClass = ''
+  -bannerIMG = 'sitemap/banner.jpg'
+  -page = 'site-map'
+block breadcrumb  
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#"
+      },{
+        "text": "MIDDLE EAST",
+        "href":"#"
+      },{
+        "text": "EMIRATES PALACE",
+        "href":"#"
+      },{
+        "text": "SITE MAP",
+        "href":"#"
+      }])
+
+block container    
+  .inner
+    main#main  
+      section.sitemap-title-section
+        +page-title("sitemaps", "World Class Luxury", "EMIRATES PALACE").gray
+      section.sitemap-content-section.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+        .container.sitemap-container
+          .row
+              +sitemap-link('#', 'Home').col-md-3.col-sm-4.col-xs-6
+              +sitemap-link('#', 'Hotel Location').col-md-3.col-sm-4.col-xs-6
+              +sitemap-link('#', 'Local Information', '#', 'Local information 1', '#', 'Local information 2', '#', 'Local information 3', '#').col-md-3.col-sm-4.col-xs-6
+              +sitemap-link('#', 'Facilities', '#').col-md-3.col-sm-4.col-xs-6
+              +sitemap-link('#', 'photo gallery').col-md-3.col-sm-4.col-xs-6
+              +sitemap-link('#', 'FAQ', '#').col-md-3.col-sm-4.col-xs-6
+              +sitemap-link('#', 'Rooms & Suites', '#', 'Choose Room', '#', 'suites', '#').col-md-3.col-sm-4.col-xs-6
+              +sitemap-link('#', 'Dining', '#', 'bars', '#', 'Restaurants', '#').col-md-3.col-sm-4.col-xs-6
+              +sitemap-link('#', 'luxury spa', '#', 'Treatments', '#', 'Special Offers').col-md-3.col-sm-4.col-xs-6
+              +sitemap-link('#', 'Meetings & Events', '#', 'Meeting & Event Planner', '#', 'Venues', '#', 'Weddings').col-md-3.col-sm-4.col-xs-6
+              +sitemap-link('#', 'Special Offers & Packages', '#', 'Offer 1', '#', 'Offer 2', '#', 'package 1', '#', 'package 2').col-md-3.col-sm-4.col-xs-6
+              +sitemap-link('#', 'Blog/News', '#', 'Post 1', '#', 'Post 2', '#', 'Post 3', '#', 'Post 4').col-md-3.col-sm-4.col-xs-6
+              +sitemap-link('#', 'Hotel Experience', '#', 'Event 1', '#', 'Event 2', '#', 'Event 3', '#', 'Event 4').col-md-3.col-sm-4.col-xs-6
+              +sitemap-link('#', 'Contact Us', '#').col-md-3.col-sm-4.col-xs-6
+              +sitemap-link('#', 'Site Map', '#').col-md-3.col-sm-4.col-xs-6
+              +sitemap-link('#', 'My Account', '#').col-md-3.col-sm-4.col-xs-6
+              +sitemap-link('#', 'Residence', '#').col-md-3.col-sm-4.col-xs-6
+              +sitemap-link('#', 'About Hotel', '#', 'Local information 1', '#', 'Local information 2', '#', 'Local information 3', '#').col-md-3.col-sm-4.col-xs-6

@@ -1,0 +1,23 @@
+mixin input(type, name, value)
+  - if(typeof(value) ==='undefined'){
+      input(type="#{type}", name="#{name}")&attributes(attributes)
+  - }else{
+      input(type="#{type}", name="#{name}", value ="#{value}")&attributes(attributes)
+  -}
+
+mixin input-with-icon(type, name, value, placeholder, iconClass)
+  - if(typeof(placeholder) ==='undefined'){
+  - placeholder = ""
+  - }
+  - if(typeof(iconClass) ==='undefined'){
+  - iconClass = ""
+  - }
+  .input-with-icon&attributes(attributes)
+    +input(type, name, value)(placeholder="#{placeholder}").form-control
+    span.fa(class="#{iconClass}")
+
+mixin datepicker(placeholder, name, value)
+  - if(typeof(placeholder) ==='undefined'){
+  - placeholder = "Arrival Date"
+  - }
+  +input-with-icon('text', name, value, placeholder, "fa-calendar").date-picker&attributes(attributes)

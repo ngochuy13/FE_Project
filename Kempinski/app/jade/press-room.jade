@@ -1,0 +1,38 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Press-Room'
+  -bodyClass = ''
+  -bannerIMG = 'press-room/banner-1.jpg'
+  -page = 'pressroom'
+block pagescript
+
+block breadcrumb  
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#"
+      },{
+        "text": "EXPERIENCES",
+        "href":"#"
+      }])
+
+block container  
+  .inner
+    main#main
+      .section-press-room.section-block.gray
+        +page-title("WELCOME TO THE KEMPINSKI PRESS ROOM", "Information on our Brand's Luxurious Collection", "KEMPINSKI'S EXPANSION AND PORTFOLIO GROWTH.").gray
+
+      .section-press-room.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+        +section-press-room-control()
+        .section-press-room-list
+          .container
+            +press-room-item-type-3('29/10/2015', 'Hotel Adlon Kempinski' , 'Once upon a time …', '<p>Guests of the Hotel Adlon Kempinski Berlin can look forward to a magical fairy tale world at this year\'s New Year\'s Eve celebrations. The hotel has selected the theme "Once upon a time" and will be transforming the lobby, ballroom and restaurants Quarré and Hendrik Otto’s Lorenz Adlon Esszimmer into a breathtaking fairy-tale setting.</p>').type-3
+            
+            +press-room-item-type-3('29/10/2015', 'Kempinski Hotel Harbin' , 'Kempinski Hotel Harbin opens in the “Icy City” of China', '<p>28th May 2015 - Kempinski Hotel Harbin opens its doors. As the first Kempinski Hotel in Heilongjiang Province, out of the 22 currently situated in China, Kempinski Hotel Harbin is set to become the leading luxury hotel in the Icy City, combining exclusive European flair with luxury facilities and service concepts.</p>').type-3
+            
+            +press-room-item-type-3('29/10/2015', 'Hotel Adlon Kempinski' , 'Fairy-tale Christmas at Hotel Adlon Kempinski Berlin', '<p>The best time of the year is fast approaching again. The lighting of the first candle on the Advent wreath ushers in the Christmas period at Hotel Adlon Kempinski.Austria is also home to the charming Kitzbühel, a sleepy and handsome medieval walled town. Here the slopes are open to both beginners and the more advanced skiing community, and both can enjoy the opulence and class of the Kempinski Hotel Das Tirol, home to the largest – and arguably the most comfortable – penthouse suite in the country.</p>').type-3
+            
+            +press-room-item-type-3('29/10/2015', 'Hotel Adlon Kempinski' , 'AMG Driving Performance Cooperation', '<p>AMG Driving Performance meets luxury à la Kempinski</p>').type-3
+        +section-press-room-control('bottom').control-bottom

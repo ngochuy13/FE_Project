@@ -1,0 +1,525 @@
+extends layouts/layout
+
+block vars
+  -title = 'Car Spade'
+  -bodyClass = 'car-detail zh-HK'
+
+  -spadeTcText = {}
+  -spadeTcText.banner= {}
+  -spadeTcText.banner.bannerContent= []
+  -spadeTcText.banner.bannerContent[0] = {}
+  -spadeTcText.banner.bannerContent[0].titleSmall= '玩樂無窮 BOXY STYLE'
+  -spadeTcText.banner.bannerContent[0].title= 'Spade'
+  -spadeTcText.banner.bannerContent[0].price= '即將公佈'
+  -spadeTcText.banner.bannerContent[0].description= '<p>四四方方，但是玩味無窮。<br/>外表的骰，內櫳多變，<br/>將BOXY Car嘅型格可愛，表現無遺。</p>'
+  -spadeTcText.banner.bannerContent[1] = {}
+  -spadeTcText.banner.bannerContent[1].titleSmall= '玩樂無窮 BOXY STYLE'
+  -spadeTcText.banner.bannerContent[1].title= 'Spade'
+  -spadeTcText.banner.bannerContent[1].price= '即將公佈'
+  -spadeTcText.banner.bannerContent[1].description= '<p>四四方方，但是玩味無窮。<br/>外表的骰，內櫳多變，<br/>將BOXY Car嘅型格可愛，表現無遺。</p>'
+  -spadeTcText.banner.bannerControl= []
+  -spadeTcText.banner.bannerControl[0]= '遊歷'
+  -spadeTcText.banner.bannerControl[1]= '遊玩'
+
+  -spadeTcText.runs= {}
+  -spadeTcText.runs.smallTitle= ''
+  -spadeTcText.runs.title= '180°全景巨幕電趟門'
+  -spadeTcText.runs.description= '<p>胸襟夠闊，皆因夠Open!　Open 180度全景巨幕電趟門，就算大件物件，都進出方便。</p>'
+  -spadeTcText.runs.noteText= ''
+  -spadeTcText.runs.arrowText= []
+  -spadeTcText.runs.arrowText[0]= '1020mm'
+  -spadeTcText.runs.arrowText[1]= '1380mm'
+  -spadeTcText.runs.arrowText[2]= '300mm'
+
+  -spadeTcText.threeDoors= {}
+  -spadeTcText.threeDoors.title= '三門鼎立獨特設計'
+  -spadeTcText.threeDoors.description= '<p>人無我有，咁先夠威！兩掩一趟，同級之冠。鍾意掩門，得！車位窄啲，用趟門上落都得，得咗！</p>'
+
+  -spadeTcText.boxyStyle= {}
+  -spadeTcText.boxyStyle.smallTitle= '玩樂無窮'
+  -spadeTcText.boxyStyle.title= 'Boxy Style'
+  -spadeTcText.boxyStyle.description= '<p>四四方方，但是玩味無窮。外表的骰，內櫳多變，將BOXY Car嘅型格可愛，表現無遺。</p>'
+
+  -spadeTcText.inCar= {}
+  -spadeTcText.inCar.title= '進擊の<br/>鬼馬前摺凳'
+  -spadeTcText.inCar.description= '<p>變身餐檯，變出空間，摺凳可以向前向後，<br/>靈活改變。空間多變，容納多變興趣。</p>'
+
+  -spadeTcText.carDetail=  {}
+  -spadeTcText.carDetail.tabTitle= []
+  -spadeTcText.carDetail.tabTitle[0]= '矚目外型'
+  -spadeTcText.carDetail.tabTitle[1]= '型格設計'
+  -spadeTcText.carDetail.tabTitle[2]= '性能表現'
+  -spadeTcText.carDetail.tabTitle[3]= '安全系統'
+
+  -spadeTcText.carDetail.tooltipLandingExterior= {}
+  -spadeTcText.carDetail.tooltipLandingExterior.description= '可愛同型格，同時carry到，前後車頭燈仲暗藏葵扇標記，低調得嚟，又有個人風格！'
+  -spadeTcText.carDetail.tooltipLandingExterior.tooltips= []
+  -spadeTcText.carDetail.tooltipLandingExterior.tooltips[0]= '遙控電動門附設電動側門開關, 電索功能及阻力探測器'
+  -spadeTcText.carDetail.tooltipLandingExterior.tooltips[1]= '投射式頭燈連手動光線高低調校'
+  -spadeTcText.carDetail.tooltipLandingExterior.tooltips[2]= 'LED 剎車燈及高置剎車燈'
+  -spadeTcText.carDetail.tooltipLandingExterior.tooltips[3]= '電動調校門邊鏡及指揮燈'
+  -spadeTcText.carDetail.tooltipLandingExterior.tooltips[4]= '15吋 全輪圈蓋'
+
+  -spadeTcText.carDetail.tooltipLandingInterior= {}
+  -spadeTcText.carDetail.tooltipLandingInterior.description= '空間有限，不過主意多多，容納到唔同興趣，又畀到你闊落嘅空間感，Spade果然夠Space。'
+  -spadeTcText.carDetail.tooltipLandingInterior.tooltips= []
+  -spadeTcText.carDetail.tooltipLandingInterior.tooltips[0]= '中置式儀錶板'
+  -spadeTcText.carDetail.tooltipLandingInterior.tooltips[1]= '進擊の鬼馬前摺凳'
+  -spadeTcText.carDetail.tooltipLandingInterior.tooltips[2]= '前後滑動式前排左座椅'
+  -spadeTcText.carDetail.tooltipLandingInterior.tooltips[3]= '寬敞行李空間'
+
+  -spadeTcText.carDetail.tooltipLandingPerformance= {}
+  -spadeTcText.carDetail.tooltipLandingPerformance.description= 'Enjoy effortless precision driving with revved-up power and unrestrained performance'
+  -spadeTcText.carDetail.tooltipLandingPerformance.tooltips= []
+  -spadeTcText.carDetail.tooltipLandingPerformance.tooltips[0]= '直列式四汽缸雙頂凸輪軸16氣閥VVT-iE 引擎連智能停車熄匙系統'
+  -spadeTcText.carDetail.tooltipLandingPerformance.tooltips[1]= 'Performance 2'
+  -spadeTcText.carDetail.tooltipLandingPerformance.tooltips[2]= 'Performance 3'
+
+  -spadeTcText.carDetail.tooltipLandingSafety= {}
+  -spadeTcText.carDetail.tooltipLandingSafety.tooltips= []
+  -spadeTcText.carDetail.tooltipLandingSafety.tooltips[0]= '雙安全氣囊'
+  -spadeTcText.carDetail.tooltipLandingSafety.tooltips[1]= 'Safety 2'
+  -spadeTcText.carDetail.tooltipLandingSafety.tooltips[2]= 'Safety 3'
+  -spadeTcText.carDetail.tooltipLandingSafety.noteText= '圖片為海外型號'
+  
+  -spadeTcText.colors= {}
+  -spadeTcText.colors.description= ''
+  -spadeTcText.colors.colorNames= []
+  -spadeTcText.colors.colorNames[0]= '幻紫紅'
+  -spadeTcText.colors.colorNames[1]= '珍珠白'
+  -spadeTcText.colors.colorNames[2]= '酷深褐'
+  -spadeTcText.colors.colorNames[3]= '閃銀灰'
+  -spadeTcText.colors.colorNames[4]= '卡其啡'
+  -spadeTcText.colors.colorNames[5]= '型格黑'
+  -spadeTcText.colors.colorNames[6]= '青檸黃'
+  -spadeTcText.colors.colorNames[7]= '熱浪紅'
+  -spadeTcText.colors.colorNames[8]= '輕粉藍'
+
+
+
+block pagescript
+  //- Dep only for car detail page
+  // build:js scripts/car-detail-dep.js
+  script(src='/scripts/lib-js/rangeslider.js')
+  script(src='/scripts/lib-js/interact-1.2.4.js')
+  script(src='/scripts/lib-js/jquery.panelSnap.js')
+  // endbuild
+  
+  // build:js scripts/car-detail.js
+  script(src='/scripts/lib-js/general-ui.js')
+  script(src='/scripts/lib-js/car-change-color-slide.js')
+  script(src='/scripts/lib-js/car-unique-characters.js')
+  script(src='/scripts/lib-js/car-detail-interaction.js')
+  // endbuild
+
+block container
+  script.
+    //- var priceCar = '189,800';
+  .car-spade-detail
+    .car-sienta-detail
+      //- section-slider-view
+      .section.section-slider-view
+        .owl-carousel-car-view
+          .item.banner-intel-scaling-item
+            picture
+              source(srcset='images/Cars/Spade/banner-1-small.jpg', media='(max-width: 768px)')
+              img(src='images/Cars/Spade/banner-1.jpg', alt='Home banner.', data-width='1920', data-height='799')
+            .content
+              .block-ow-caption
+                .block-left-middle
+                  .title-small !{spadeTcText.banner.bannerContent[0].titleSmall}
+                  h1.title
+                    | !{spadeTcText.banner.bannerContent[0].title}
+                    .price !{spadeTcText.banner.bannerContent[0].price}
+                  .description
+                    .editor-content !{spadeTcText.banner.bannerContent[0].description}
+        //-   .item.banner-intel-scaling-item.item-absolute
+        //-     picture
+        //-       source(srcset='images/Cars/Spade/banner-2-small.jpg', media='(max-width: 767px)')
+        //-       img(src='images/Cars/Spade/banner-2.jpg', alt='Home banner.', data-width='1920', data-height='799')
+        //-     .content
+        //-       .block-ow-caption.color-blue
+        //-         .block-left-middle
+        //-           .title-small !{spadeTcText.banner.bannerContent[0].titleSmall}
+        //-           .title
+        //-             | !{spadeTcText.banner.bannerContent[0].title}
+        //-             .price !{spadeTcText.banner.bannerContent[0].price}
+        //-           .description
+        //-             .editor-content !{spadeTcText.banner.bannerContent[0].description}
+        //- .owl-carousel-car-view-nav
+        //-   .block-content
+        //-     span !{spadeTcText.banner.bannerControl[0]}
+        //-     .nav
+        //-       a.picnic.active(data-index='0') &nbsp;
+        //-       a.beach(data-index='1') &nbsp;
+        //-     span !{spadeTcText.banner.bannerControl[1]}
+    
+      .section.section-car-run-sienta
+        .banner-intel-scaling-item
+          .block-content
+            .block-car
+              picture
+                source(srcset='images/Cars/Spade/car-with-door.png', media='(max-width: 1024px)')
+                img(src='images/Cars/Spade/car-without-door.png', alt='Home banner.')
+              .block-wheel
+                img(src='images/Cars/Spade/wheel.png', alt='Wheel').wheel-1
+                img(src='images/Cars/Spade/wheel.png', alt='Wheel').wheel-2
+              .block-door
+                img(src='images/Cars/Spade/car-door.png', alt='Home banner.').close
+                img(src='images/Cars/Spade/car-door-open.png', alt='Home banner.').open
+                .icon-click
+                  img(src='images/Cars/Spade/icon-click.png', alt='icon-click.')
+              .block-arrow
+                .arrow.arrow-1.horizontal
+                  span !{spadeTcText.runs.arrowText[0]}
+                .arrow.arrow-2
+                  span !{spadeTcText.runs.arrowText[1]}
+                .arrow.arrow-3
+                  span !{spadeTcText.runs.arrowText[2]}
+        .block-description
+          .block-ow-caption
+            .block-top-middle
+              .title-small.no-bg !{spadeTcText.runs.smallTitle}
+              .title  !{spadeTcText.runs.title}
+              .description
+                .editor-content
+                  | !{spadeTcText.runs.description}
+        .block-text
+          | !{spadeTcText.runs.noteText}
+    
+    .section-three-doors.section-static
+      .banner-intel-scaling-item
+        +img('three doors','Cars/Spade/three-doors.jpg')
+      .block-description
+        .block-ow-caption
+          .block-top-middle
+            .title  !{spadeTcText.threeDoors.title}
+            .description
+              .editor-content 
+                p !{spadeTcText.threeDoors.description}
+
+    //- .section-boxy-design.section-static
+    //-   .banner-intel-scaling-item
+    //-     +img('boxy design','Cars/Spade/boxy-design.jpg')
+    //-   .block-description
+    //-     .block-ow-caption
+    //-       .block-top-middle
+    //-         .title-small !{spadeTcText.boxyStyle.smallTitle}
+    //-         .title  !{spadeTcText.boxyStyle.title}
+    //-         .description
+    //-           .editor-content 
+    //-             p !{spadeTcText.boxyStyle.description}
+
+    .section-in-car.section-static
+      .banner-intel-scaling-item
+        +img('boxy design','Cars/Spade/bg-section-in-car.jpg')
+      .block-description
+        .block-ow-caption
+          .block-top-middle
+            .title  !{spadeTcText.inCar.title}
+            .description
+              .editor-content 
+                p !{spadeTcText.inCar.description}
+
+    //- car-detail
+    .section.section-car-detail
+      .section-car-detail-navigation
+        .container
+          .tab.tab-1.active(data-id='1')
+            span !{spadeTcText.carDetail.tabTitle[0]}
+            .icon.icon-1 &nbsp;
+          .tab.tab-2(data-id='2')
+            span !{spadeTcText.carDetail.tabTitle[1]}
+            .icon.icon-2 &nbsp;
+          .tab.tab-3(data-id='3')
+            span !{spadeTcText.carDetail.tabTitle[2]}
+            .icon.icon-3 &nbsp;
+          //- .tab.tab-4(data-id='4')
+          //-   span !{spadeTcText.carDetail.tabTitle[3]}
+          //-   .icon.icon-4 &nbsp;
+      .section-car-detail-content
+        #tab-1.active
+          .section-car-detail-content-exterior.car-section-content
+            .block-img.image-center
+              picture
+                source(srcset='images/Cars/Spade/img-exterior-small.jpg', media='(max-width: 800px)')
+                img(src='images/Cars/Spade/img-exterior.jpg', alt='Car detail', data-x='0', data-y='0')
+              .block-tooltip
+                +tooltip('tooltip-exterior-1','55.0','46.1')
+                +tooltip('tooltip-exterior-2','31.5','48.1')
+                +tooltip('tooltip-exterior-3','68.1','42.3')
+                +tooltip('tooltip-exterior-4','53.5','40')
+                +tooltip('tooltip-exterior-5','67','60.5')
+            .block-description
+              .editor-content
+                p !{spadeTcText.carDetail.tooltipLandingExterior.description}
+            .block-popup
+              .tooltip-navigation
+                .container
+                  span.prev &nbsp;
+                  .editor-content.tooltip-title-container &nbsp;
+                  span.next &nbsp;
+                .close-btn
+                  a(href='#', title='close') &nbsp;
+              // Tooltip detail item
+              #tooltip-exterior-1.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{spadeTcText.carDetail.tooltipLandingExterior.tooltips[0]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Spade/01_exterior_01.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-exterior-2.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{spadeTcText.carDetail.tooltipLandingExterior.tooltips[1]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Spade/01_exterior_02.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-exterior-3.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{spadeTcText.carDetail.tooltipLandingExterior.tooltips[2]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Spade/01_exterior_03.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-exterior-4.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{spadeTcText.carDetail.tooltipLandingExterior.tooltips[3]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Spade/01_exterior_04.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-exterior-5.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{spadeTcText.carDetail.tooltipLandingExterior.tooltips[4]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Spade/01_exterior_05.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+        #tab-2
+          .section-car-detail-content-interior.car-section-content
+            // Image with tooltip
+            .block-img.image-drag
+              picture
+                source(srcset='images/Cars/Spade/img-interior.jpg', media='(max-width: 767px)')
+                img(src='images/Cars/Spade/img-interior.jpg', alt='Car detail', data-x='0', data-y='0')
+              .block-tooltip.light
+                +tooltip('tooltip-interior-1','0','20.5')
+                +tooltip('tooltip-interior-2','37','86.2')
+                +tooltip('tooltip-interior-3','49','66.2')
+                +tooltip('tooltip-interior-4','92.5','71.7')
+            .block-description
+              .editor-content
+                p !{spadeTcText.carDetail.tooltipLandingInterior.description}
+            .block-popup
+              .tooltip-navigation
+                .container
+                  span.prev &nbsp;
+                  .editor-content.tooltip-title-container &nbsp;
+                  span.next &nbsp;
+                .close-btn
+                  a(href='#', title='close') &nbsp;
+              // Tooltip detail item
+              #tooltip-interior-1.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{spadeTcText.carDetail.tooltipLandingInterior.tooltips[0]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Spade/02_Interior_01.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+                  a(href='#', data-index='2') &nbsp;
+                  a(href='#', data-index='3') &nbsp;
+              #tooltip-interior-2.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{spadeTcText.carDetail.tooltipLandingInterior.tooltips[1]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Spade/02_Interior_02.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-interior-3.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{spadeTcText.carDetail.tooltipLandingInterior.tooltips[2]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Spade/02_Interior_03.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+              #tooltip-interior-4.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+                .icon-tooltip-phone &nbsp;
+                p.tooltip-title !{spadeTcText.carDetail.tooltipLandingInterior.tooltips[3]}
+                .images-container
+                  .item.image-center
+                    img(src='images/Cars/Spade/02_Interior_04a.jpg', alt='fold-flat 1')
+                  .item.image-center
+                    img(src='images/Cars/Spade/02_Interior_04b.jpg', alt='fold-flat 1')
+                  .item.image-center
+                    img(src='images/Cars/Spade/02_Interior_04c.jpg', alt='fold-flat 1')
+                  .item.image-center
+                    img(src='images/Cars/Spade/02_Interior_04d.jpg', alt='fold-flat 1')
+                .dots-nav
+                  a(href='#', data-index='1') &nbsp;
+                  a(href='#', data-index='2') &nbsp;
+                  a(href='#', data-index='3') &nbsp;
+                  a(href='#', data-index='4') &nbsp;
+        #tab-3
+          .section-car-detail-content-performance.car-section-content.tab-content-car-carousel
+            // Image with carousel
+            .block-img.image-center
+              img(src='images/Cars/Spade/03_Performance_01.jpg', alt='Car detail')
+            .block-description
+              .editor-content
+                p !{spadeTcText.carDetail.tooltipLandingPerformance.tooltips[0]}
+            .block-popup &nbsp;
+        //- #tab-4
+        //-   .section-car-detail-content-performance.car-section-content.tab-content-car-carousel
+        //-     // Image with carousel
+        //-     .block-img.image-center
+        //-       img(src='images/Cars/Spade/04_Safety_01.jpg', alt='Car detail')
+        //-     .block-description
+        //-       .editor-content
+        //-         p !{spadeTcText.carDetail.tooltipLandingSafety.tooltips[0]}
+        //-     .block-popup &nbsp;
+        //-     .block-text
+        //-       .editor-content 
+        //-         p !{spadeTcText.carDetail.tooltipLandingSafety.noteText}
+
+    //- change-color-car
+    .section.section-change-color-car
+      .section-change-color-car-content
+        .container
+          .block-lists-car(style="background-image: url(images/Cars/Spade/00_shadow.png)")
+            img.img-create-height.hide(src='images/Cars/Spade/06_black.png', alt='')
+
+            .car.color-1
+              img(src='images/Cars/Spade/01_purple.png', alt='Car 1')
+            .car.color-2
+              img(src='images/Cars/Spade/02_white.png', alt='Car 1')
+            .car.color-3
+              img(src='images/Cars/Spade/03_brown.png', alt='Car 1')
+            .car.color-4
+              img(src='images/Cars/Spade/04_sliver.png', alt='Car 1')
+            .car.color-5
+              img(src='images/Cars/Spade/05_darkGreen.png', alt='Car 1')
+            .car.color-6.active
+              img(src='images/Cars/Spade/06_black.png', alt='Car 1')
+            .car.color-7
+              img(src='images/Cars/Spade/07_yellowGreen.png', alt='Car 1')
+            .car.color-8
+              img(src='images/Cars/Spade/08_red.png', alt='Car 1')
+            .car.color-9
+              img(src='images/Cars/Spade/09_lightblue.png', alt='Car 1')
+
+            svg#mask-view(xmlns='http://www.w3.org/2000/svg', width='867px', height='380px', viewbox='0 0 867 380', xmlns:xlink='http://www.w3.org/1999/xlink')
+              defs
+                pattern#disney-embed(patternunits='userSpaceOnUse', width='867', height='380')
+                  image#masked-image(xlink:href='images/Cars/Spade/06_black.png', x='0', y='0', width='867', height='380')
+              circle#walt-embed(cx='50', cy='50', r='40', stroke='none', fill='url(#disney-embed)') &nbsp;
+          
+          .block-desctiption
+            .editor-content
+              p !{spadeTcText.colors.description}
+          
+          .block-lists-color
+            .color-item(data-color='color-1')
+              .icon.color-1
+                img(src='images/Cars/Spade/bg-color-car-1.png', alt='')
+              span !{spadeTcText.colors.colorNames[0]}
+            .color-item(data-color='color-2')
+              .icon.color-2
+                img(src='images/Cars/Spade/bg-color-car-2.png', alt='')
+              span !{spadeTcText.colors.colorNames[1]}
+            .color-item(data-color='color-3')
+              .icon.color-3
+                img(src='images/Cars/Spade/bg-color-car-3.png', alt='')
+              span !{spadeTcText.colors.colorNames[2]}
+            .color-item(data-color='color-4')
+              .icon.color-4
+                img(src='images/Cars/Spade/bg-color-car-4.png', alt='')
+              span !{spadeTcText.colors.colorNames[3]}
+            .color-item(data-color='color-5')
+              .icon.color-5
+                img(src='images/Cars/Spade/bg-color-car-5.png', alt='')
+              span !{spadeTcText.colors.colorNames[4]}
+            .color-item(data-color='color-6').active
+              .icon.color-6
+                img(src='images/Cars/Spade/bg-color-car-6.png', alt='')
+              span !{spadeTcText.colors.colorNames[5]}
+            .color-item(data-color='color-7')
+              .icon.color-7
+                img(src='images/Cars/Spade/bg-color-car-7.png', alt='')
+              span !{spadeTcText.colors.colorNames[6]}
+            .color-item(data-color='color-8')
+              .icon.color-8
+                img(src='images/Cars/Spade/bg-color-car-8.png', alt='')
+              span !{spadeTcText.colors.colorNames[7]}
+            .color-item(data-color='color-9')
+              .icon.color-9
+                img(src='images/Cars/Spade/bg-color-car-9.png', alt='')
+              span !{spadeTcText.colors.colorNames[8]}
+
+    //- specification-car
+    .section.section-specification-car
+      .container
+        h2.title HIGHLIGHTED SPECIFICATION
+        .table-content
+          table
+            tbody
+              tr 
+                td(rowspan="2").title Dimensions & Weights
+                td Overall Length x Overall Width x <br/>Overall Height (mm) 
+                td 4,400 x 1,695 x 1,460
+              tr 
+                td Seating Capacity (including driver)
+                td 5
+
+              tr 
+                td(rowspan="4").title Engine
+                td Type
+                td Valve VVT-iE Engine with Start Stop <br/>System
+              tr 
+                td Displacement (cc)
+                td 1496
+              tr 
+                td *Max. Output   kW (PS) / rpm
+                td 80 (109) / 6,000
+              tr 
+                td *Max. Torque   Nm (kg-m) / rpms
+                td 136 (13.9) / 4,400
+                
+              tr 
+                td(rowspan="3").title Chassis
+                td Transmission Type
+                td CVT
+              tr 
+                td Fuel Consumption
+                td 23.4 km/L (JC08 mode)
+              tr 
+                td Tyre & Wheel 
+                td 175/65 R15 Alloy Wheel <br/>(Corolla Super Luxury)<br/>175/65 R15 Full Wheel Cap<br/>(Corolla Luxury)
+
+    //- components-car
+    .section.section-components-car
+      .section-components-car-content
+        .container
+          .row
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12
+              .block-downlink
+                a(href='#', title='Download e-Catalogue')
+                  i.fa.fa-download  
+                  span Download e-Catalogue
+                img(src='images/Cars/Spade/car-small.png', alt='Download')
+                a(href='#', title='Download Specification Sheet')
+                  i.fa.fa-download  
+                  span Download Specification Sheet
+    
+    //- interest
+    .section.section-interest
+      +interest('YOU MAY ALSO HAVE INTEREST')

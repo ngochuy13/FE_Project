@@ -1,0 +1,50 @@
+mixin tooltip(target, dx, dy)
+  .tooltip(data-target='#{target}', data-x='#{dx}', data-y='#{dy}', data-dx='0', data-dy='0', data-dir='top')
+    img(src='images/Cars/Ractis/icon-tooltip-new.png', alt='tooltip-icon')
+    .icon-tooltip &nbsp;
+    
+mixin interest(title)
+  .section-interest-content
+    .container
+      .title= title
+      .block-lists-interest
+        .item-interest
+          a(href='#', title='Prius C')
+            .block-img
+              img(src='images/Cars/Ractis/car-interest-1.jpg', alt='car interest 1')
+            span Prius C
+        .item-interest
+          a(href='#', title='Prius')
+            .block-img
+              img(src='images/Cars/Ractis/car-interest-2.jpg', alt='car interest 2')
+            span Prius
+        .item-interest
+          a(href='#', title='RAV4')
+            .block-img
+              img(src='images/Cars/Ractis/car-interest-3.jpg', alt='car interest 3')
+            span RAV4
+
+mixin car-carousel-gallery(imgArr)
+  .carousel-with-thumbnail
+    .main-image
+      .main-image-wrapper
+        img#main-image(src='#{imgArr[0].mainImg}', alt='', title='')
+        span.remask Overseas only 
+    .car-gallery-carousel-wrapper
+      #car-gallery-carousel.car-gallery-carousel
+        for val, index in imgArr
+          if index == 0
+            .car-gallery-carousel__item.car-gallery-carousel__item--active(data-src='#{val.mainImg}', data-download='#{val.mainImg}', data-remask='0')
+              img(src='#{val.thumb}', alt='', title='')
+          else
+            .car-gallery-carousel__item(data-src='#{val.mainImg}', data-download='#{val.mainImg}', data-remask='1')
+              img(src='#{val.thumb}', alt='', title='')
+      .car-gallery-paging
+        p
+          strong GALLERY
+        p.car-gallery-sum
+          span#car-gallery-current  
+          | /
+          span#car-gallery-sum  
+      .download-wrapper
+        a#car-gallery-download-btn.car-gallery-download-btn(href='#{imgArr[0].mainImg}', title='') Download

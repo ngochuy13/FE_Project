@@ -1,0 +1,26 @@
+mixin masonry-info-item(title, description, galleryId)
+  .masonry-item.masonry-info-item.grid-item.item&attributes(attributes)
+    .vertical-wrapper
+      .title!=title
+      .description.editor-content
+        p!=description
+      +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide
+      
+mixin masonry-media-item(imgs, title, description, smDescription)
+  .masonry-item.masonry-media-item.grid-item.item&attributes(attributes)
+    .image-wrapper
+      - var imgArr = imgs.split(",");
+      +img(title, imgArr[0], undefined , imgArr[2])
+    .overlay-layer
+      .vertical-wrapper
+        .title!=title
+        .description!=description
+        .sm-description!=smDescription
+        .btn.btn-white-outlined.btn-more MORE INFO
+
+mixin masonry-media()
+  .masonry-media&attributes(attributes)
+    .grid-sizer
+    if block
+      block
+

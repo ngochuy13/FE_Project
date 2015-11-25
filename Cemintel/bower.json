@@ -1,0 +1,32 @@
+{
+  "name": "cemintel-fe",
+  "private": true,
+  "dependencies": {
+    "animate": "https://raw.github.com/daneden/animate.css/master/animate.css",
+    "bootstrap-sass": "~3.3.5",
+    "isotope": "~2.2.2",
+    "jquery-file-download": "https://github.com/johnculviner/jquery.fileDownload.git#~1.4.4",
+    "jquery-validation": "~1.14.0",
+    "jQuery.dotdotdot": "dotdotdot#~1.7.4",
+    "jquery.nicescroll": "~3.6.0",
+    "modernizr": "~2.8.1",
+    "PaW-Carousel": "https://github.com/shaunmorrison/PaW-Carousel.git",
+    "skrollr": "~0.6.30",
+    "slick-carousel": "~1.5.8",
+    "swiper": "2.7.6",
+    "js-rich-marker": "*"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/*",
+        "assets/javascripts/bootstrap.js"
+      ]
+    }
+  },
+  "devDependencies": {
+    "chai": "~3.3.0",
+    "mocha": "~2.3.2"
+  }
+}

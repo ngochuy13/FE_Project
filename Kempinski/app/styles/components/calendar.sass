@@ -1,0 +1,42 @@
+.bootstrap-datetimepicker-widget 
+  background: #fafafa
+  border: none
+  box-shadow: none
+  border-radius: 0
+  &.dropdown-menu
+    width: 19.3em
+    &:before, &:after
+      display: none
+  .datepicker-days
+    padding-top: 12px
+    text-transform: uppercase
+    letter-spacing: 1px
+  table
+    width: 236px
+    margin: 0 auto
+    td.day
+      padding: 9px 5px 8px 5px
+    td.today
+      color: #eb4a4a
+      &:before
+        display: none
+    td.active
+      background: transparent
+      position: relative
+      border-radius: 3px
+      background-size: 30px 75px
+      background-color: #9d938a
+      color: white
+    th.dow
+      font-size: 0
+      padding-top: 17px
+      font-weight: normal
+      &:first-letter
+        font-size: 10px
+  thead 
+    th.next, th.prev
+      font-size: $fz-4
+    th.next
+      text-align: right
+    th.prev
+      text-align: left

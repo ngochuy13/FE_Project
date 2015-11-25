@@ -1,0 +1,20 @@
+include ../mixins/all
+block vars
+  -title = 'Site'
+  -bodyClass = ''
+doctype html
+//[if IE 8]><html lang="en" class="no-js ie ie8"><![endif]
+//[if IE 9]><html lang="en" class="no-js ie ie9"><![endif]
+//[if gt IE 9]><!
+html(class="no-js", lang="en")
+  //<![endif]
+  head
+    meta(charset="utf-8")
+    //[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]
+    title=title
+    link(rel="stylesheet", href="styles/print.css")
+
+  body(class=bodyClass)
+    #container
+      .page-wrapper
+        block container

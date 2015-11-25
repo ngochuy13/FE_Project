@@ -1,0 +1,68 @@
+extends layouts/layout
+
+block vars
+	-title = 'Finance intro'
+	-bodyClass = 'finance-intro' 
+
+block container
+	.sub-page-banner.feature-img
+		p 資訊中心
+		picture
+			source(srcset='images/news/feature-news-mobile.jpg', media='(max-width: 767px)')
+			source(srcset='images/news/feature-news.jpg', media='(max-width: 1280px)')
+			img.master-banner-img.intel-scaling(src='images/news/feature-news.jpg', alt='', data-width='1920', data-height='411')
+	.finance-intro-content
+		.inner
+			h2.page-title.custom-page-title 豐田汽車財務計劃
+			p.caption-page-title 我們為閣下提供專業的財務服務，令您擁有豐田汽車的美夢早日實現。快捷穩妥的精心安排，務求令您在最短時間內接收您的新車車匙。我們有各式的分期付款或租賃計劃，適合不同客戶的獨有需要。皇冠車行的員工更會為您提供專業意見，方便閣下揀選最合適的計劃。
+			.easy-own
+				.inner
+					p.easy-own-img
+						img(src='images/finance/easy-own.png', title='', alt='')
+					p.caption-easy-own 透過全港獨家「上車易」計劃，心愛豐田座駕輕易上手。
+						br
+						| 為助準車主實現「上車夢」，皇冠汽車特別推出全港獨家的「上車易」財務計劃，為豐田私家車主提供靈活的分期付款方式，讓一眾準車主
+						br
+						| 以更優惠的價格，選購更合心意的座駕。
+					h3 「上車易」計劃
+					h4 <i>5</i> 大過人優惠
+					ul.list-five-caption
+						li 每月俾少啲、查好啲！
+						li 更低負擔，更優越座駕選擇
+						li 首期低至5%
+						li 月供款項減少高達30%*
+						li 月供比租車更化算
+						li 豐田二手價高企，造就獨家財務計劃優勢
+					.circle-box
+						.inner
+							.col.circle-items
+								.circle-img.circle-orange
+									p 較市場一般租購計劃
+									h4 每月少付
+									h3 20%
+								.circle-text
+									p 例1：私家車
+									p 假設貸款金額為港幣$300,000*
+									p 供款年期：5年
+									p 每月供款只須港幣$4,495
+							.col.circle-items
+								.circle-img.circle-blue
+									p 較市場一般租購計劃
+									h4 每月少付
+									h3 30%
+								.circle-text
+									p 例2：商用車
+									p 假設貨款金額為港幣$300,000*
+									p 供款年期：5年
+									p 每月供款只須港幣$3,995
+					p.finance-click 詳情請
+						a(href='#', title='') 按此
+						| 與我們的營業代表聯絡。
+					.finance-note
+						p * 以上例子以固定年利率3.98% (平息)計算‧例1 貸款金額的30%需連同最後一期供款一同繳付‧例2 貸款金額的40%需連同最後一期供款一
+						p 同繳付上述貸款計劃以貸款合約內的還款細則作準。
+
+
+
+
+

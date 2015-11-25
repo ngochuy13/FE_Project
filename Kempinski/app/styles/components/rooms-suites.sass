@@ -1,0 +1,84 @@
+.room-suite-section
+  background: #f3f3f3
+  .offers
+    margin-bottom: 73px
+.room-suite-gallery
+  .tab-content
+    background: $white
+  .tab-pane
+    overflow: hidden
+  &:hover
+    .owl-nav
+      opacity: 1
+      transition: opacity 0.5s
+  .owl-nav
+    opacity: 0
+    transition: opacity 0.5s
+  .owl-prev, .owl-next
+    width: 71px
+    height: 71px
+    background: url($imgPath + 'master-sprites.png') no-repeat 20px -86px rgba(255,255,255, 0.2)
+    font-size: 0
+    position: absolute
+    top: 50%
+    margin-top: -26px
+    border-radius: 50%
+    overflow: hidden
+    transition: background-color 0.3s
+    &:hover
+      background-color: rgba(255,255,255, 0.6)
+  .owl-prev
+    left: 200px
+  .owl-next
+    right: 200px
+    background-position: -74px -86px
+.tab-content
+  position: relative
+  .tab-pane
+    display: block
+    height: 0
+    overflow: hidden
+    // opacity: 0
+    // transition: opacity 0.3s
+    &.active
+      height: auto
+      opacity: 1
+      transition: opacity 1.5s
+
+@media (max-width: 1700px)
+  .room-suite-gallery
+    .owl-prev 
+      left: 20px
+    .owl-next
+      right: 20px
+
+@media (max-width: 768px)
+  .room-suite-gallery
+    .owl-prev, .owl-next
+      top: 200px
+
+@media (max-width: 767px)
+  .room-suite-gallery
+    .owl-prev, .owl-next
+      top: 25%
+.section-service
+  background: #F3F3F3
+  .service-slide-wrap
+    background: #fff
+    .container
+      margin-top: 0px!important
+      padding-top: 60px
+    .service-slide.owl-carousel
+      background: #fff
+      .owl-item
+        opacity: 0.5
+        &.center
+          opacity: 1
+          .slide-image
+            border: 10px solid #6a625b
+      .cta-btns.wide
+        position: absolute
+        bottom: 60px
+        left: 30px
+        .btn
+          max-width: 160px

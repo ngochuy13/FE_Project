@@ -1,0 +1,174 @@
+.container.text-center.hide-sm
+  a.navigation-trigger(href='#').hide-phone
+    span
+    span
+    span
+  .form-inline(style="position: relative;")
+    .form-group
+      .booking-date-range-picker-container
+      +fake-datepicker("Check-in", "CheckIn", "", "checkin-date" , "readonly")
+    .form-group
+      +fake-datepicker("Check-out", "CheckOut", "", "checkout-date", "readonly")
+    .form-group.guest-select
+      select.select-style-2.bootstrap-select.hidden
+        option(value='', tabindex='-1') N&deg; Guests 
+        option(value='1', tabindex='-1') 1 Guest
+        option(value='2', tabindex='-1') 2 Guest
+        option(value='3', tabindex='-1') 3 Guest
+        option(value='4', tabindex='-1') 4 Guest
+        option(value='5', tabindex='-1') 5 Guest
+      .btn-group.bootstrap-select.select-style-2
+        button(type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="1 Guest")
+          span(class="filter-option pull-left") 
+          | N&deg; Guests &nbsp;
+          .bs-caret
+            .caret
+    .form-group
+      button(type="submit") Show Prices
+    .form-group.block-expand.col-md-12  
+      
+      #collapsemorebooking.collapse.collapse-advanced
+        .form-inline 
+          .form-group  
+            label Number of rooms 
+            select.select-style-2.bootstrap-select
+              option(value='') N&deg; rooms 
+              option(value='1') 1 room 
+              option(value='2') 2 rooms
+              option(value='3') 3 rooms
+          .form-group 
+            label Adults per room
+            select.select-style-2.bootstrap-select
+              option(value='') N&deg; adults 
+              option(value='1') 1 adult
+              option(value='2') 2 adults
+              option(value='3') 3 adults
+          .form-group
+            label Children 0-5
+            select.select-style-2.bootstrap-select
+              option(value='') N&deg; Children  
+              option(value='1') 1 Children 
+              option(value='2') 2 Children  
+              option(value='3') 3 Children  
+          .form-group
+            label Children 6-12
+            select.select-style-2.bootstrap-select
+              option(value='') N&deg; Children   
+              option(value='1') 1 Children 
+              option(value='2') 2 Children 
+              option(value='3') 3 Children 
+
+
+.show-sm.sm-search
+  #sm-search-field.input-addon(data-toggle="modal",data-target="#search-modal--sm")
+    span.input-stem.input-large.fake-search-field
+      | Where do you want to go?
+    span.fa.fa-search  
+
+
+.search-modal-container 
+  #search-modal--sm.modal(role='dialog', tabindex='-1')
+    .modal-table
+      .modal-cell
+        .modal-content
+          .panel-header.modal-header
+            a.modal-close(href='#', data-behavior='modal-close', data-dismiss='modal', aria-label='Close')
+              span.aria-hidden ×
+            |           Search
+          .panel-body
+            .modal-search-wrapper--sm
+              form#search-form--sm.container.search-form(action='/s')
+                .row
+                  .col-sm-12 
+                    label(for='header-location--sm')
+                      span.screen-reader-only Where are you going?  
+                      input#header-location--sm.input-large(type='text', placeholder='Where are you going?', autocomplete='off', name='location')
+                .row.row-condensed
+                  .col-xs-6.col-sm-6
+                    label.checkin
+                      span.screen-reader-only Check in
+                      .input-with-icon
+                        input(type="date" placeholder="Check in").form-control.type-input
+                        span.icon-calendar
+                  .col-xs-6.col-sm-6
+                    label.checkout
+                      span.screen-reader-only Check out
+                      .input-with-icon
+                        input(type="date" placeholder="Check out").form-control.type-input
+                        span.icon-calendar
+
+                .row.space-2.space-top-1
+                  .col-xs-12.col-sm-12
+                    label.screen-reader-only(for='header-search-guests')
+                      | Number of guests
+                    .select.select-block.select-large
+                      select#header-search-guests(name='guests')
+                        option(value='1') 1 guest
+                        option(value='2') 2 guests
+                        option(value='3') 3 guests
+                        option(value='4') 4 guests
+                        option(value='5') 5 guests
+                        option(value='6') 6 guests
+                        option(value='7') 7 guests
+                        option(value='8') 8 guests
+                        option(value='9') 9 guests
+                        option(value='10') 10 guests
+                        option(value='11') 11 guests
+                        option(value='12') 12 guests
+                        option(value='13') 13 guests
+                        option(value='14') 14 guests
+                        option(value='15') 15 guests
+                        option(value='16') 16 guests
+                  .col-xs-12.col-sm-12
+                    label.screen-reader-only(for='header-search-guests')
+                      | Number of rooms
+                    .select.select-block.select-large
+                      select#header-search-guests(name='guests')
+                        option(value='') N&deg; rooms 
+                        option(value='1') 1 room 
+                        option(value='2') 2 rooms
+                        option(value='3') 3 rooms
+                  .col-xs-12.col-sm-12
+                    label.screen-reader-only(for='header-search-guests')
+                      | Adults per room
+                    .select.select-block.select-large
+                      select#header-search-guests(name='guests')
+                        option(value='') N&deg; adults 
+                        option(value='1') 1 adult
+                        option(value='2') 2 adults
+                        option(value='3') 3 adults
+                  .col-xs-12.col-sm-12
+                    label.screen-reader-only(for='header-search-guests')
+                      | Children 0-5
+                    .select.select-block.select-large
+                      select#header-search-guests(name='guests')
+                        option(value='') N&deg; Children(0-5) 
+                        option(value='1') 1 Children 
+                        option(value='2') 2 Children  
+                        option(value='3') 3 Children  
+                  .col-xs-12.col-sm-12
+                    label.screen-reader-only(for='header-search-guests')
+                      | Children 6-12
+                    .select.select-block.select-large
+                      select#header-search-guests(name='guests')
+                        option(value='') N&deg; Children(6-12)  
+                        option(value='1') 1 Children 
+                        option(value='2') 2 Children 
+                        option(value='3') 3 Children 
+                .panel.room-type-filter--sm.row-space-top-1
+                  .panel-body
+                    .row.text-center
+                      input#room-type-0--sm(type='checkbox', name='room_types[]', value='Entire home/apt')
+                      label.col-xs-4.modal-filter.needsclick(for='room-type-0--sm')
+                        | Entire home/apt
+                      input#room-type-1--sm(type='checkbox', name='room_types[]', value='Private room')
+                      label.col-xs-4.modal-filter.needsclick(for='room-type-1--sm')
+                        | Private room
+                      input#room-type-2--sm(type='checkbox', name='room_types[]', value='Shared room')
+                      label.col-xs-4.modal-filter.needsclick(for='room-type-2--sm')
+                        | Shared room
+                .row.row-space-top-2
+                  .col-sm-12
+                    button.btn.btn-primary.btn-large.btn-block(type='submit')
+                      i.icon.icon-search
+                      |                     Find a place

@@ -1,0 +1,9 @@
+extends layouts/layout
+
+block vars
+  -title = 'The contact'
+  -bodyClass = 'body-the-contact'
+block container
+  .section.section-contact-text
+    +parallax-content("Contact", "images/contact-bg-update.jpg")
+      include includes/contact

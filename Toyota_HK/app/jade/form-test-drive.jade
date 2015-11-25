@@ -1,0 +1,229 @@
+extends layouts/layout
+
+block vars
+  -title = 'Form Test Drive'
+  -bodyClass = 'home' 
+    
+block container
+  script(type='text/javascript').
+    //<![CDATA[
+    var carModelIMG= { "RACTIS":"/Toyota/media/Cars/Ractis/Rastic_01.png?ext=.png","PRIUS C":"/Toyota/media/Cars/Prius-C/Pirus_C_01.png?ext=.png","SPADE":"/Toyota/media/Cars/Spade/spade_001.jpg?ext=.jpg","SIENTA":"/Toyota/media/Cars/Sienta/sienta_001.jpg?ext=.jpg","WISH":"/Toyota/media/Cars/Wish/Wish_01.png?ext=.png","NOAH":"/Toyota/media/Cars/Noah/noah-001.jpg?ext=.jpg","PRIUS V":"/Toyota/media/Cars/Prius-V/Prius_V_01.png?ext=.png","PREVIA":"/Toyota/media/Cars/Previa/Previa_01.png?ext=.png","ALPHARD":"/Toyota/media/Cars/Alphard-and-Vellfire/Alphard_01.png?ext=.png","VELLFIRE":"/Toyota/media/Cars/Alphard-and-Vellfire/Vellfire_01.png?ext=.png","COROLLA":"/Toyota/media/Cars/Corolla/Corolla_01.png?ext=.png","CAMRY":"/Toyota/media/Cars/Camry/camry01_1.png?ext=.png","MARK X":"/Toyota/media/Cars/Mark-X/MarkX_01.png?ext=.png","PRIUS":"/Toyota/media/Cars/Prius/Prius_01.png?ext=.png","RAV4":"/Toyota/media/Cars/RAV4/Rav4_01.png?ext=.png","PRADO":"/Toyota/media/Cars/Prado/Prado_001.jpg?ext=.jpg","86":"/Toyota/media/Cars/86/86_001.jpg?ext=.jpg"};
+    //]]>
+
+  .about-page
+    .sub-page-banner
+      p 關於豐田
+      picture
+        source(srcset='images/about/about-banner-mobile.jpg', media='(max-width: 767px)')
+        source(srcset='images/about/about-banner.jpg', media='(max-width: 1280px)')
+        img.master-banner-img.intel-scaling(src='images/about/about-banner.jpg', alt='', data-width='1920', data-height='411')
+    .container
+      .container
+        form.perosnal-info-form.info-form.validate-form.test-drive(action='/', method='')
+          .form-content
+            .form-title 豐田旗下各陳列室均提供專
+            .introduction
+              p.description 豐田旗下各陳列室均提供專人設計的試車路線任君選擇，請立即蒞臨親身體驗！ 要預約試車，請輸入閣下的個人資料。
+            .form-head
+              h2.title Personal Info
+              p.description
+                | Required Fields 
+                span.req-desc *
+            .perosnal-info-form.info-form
+              .type-1
+                .form-group.gender
+                  .field-title
+                    | Gender
+                    span.req-desc *
+                  .radio-group
+                    #p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_ncpgender.EditingFormControlNestedControl.editing-form-control-nested-control
+                      span#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_Gender_list.radio.radio-list-vertical
+                          input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_Gender_list_0(type='radio', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$Gender$list', value='Mr')
+                          label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_Gender_list_0') Mr
+                          input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_Gender_list_1(type='radio', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$Gender$list', value='Ms')
+                          label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_Gender_list_1') Ms
+                  // Each error message will be placed withint form-group: Here
+              // Begin GivenName  FamilyName
+              .type-2.clearfix
+                .form-group.col.col-1-2
+                  .input-wrapper
+                    label.field-title
+                      | Given Name
+                      span.req-desc *
+                    #p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_ncpgivenname.EditingFormControlNestedControl.editing-form-control-nested-control
+                      input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_GivenName_txtText.form-control(name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$GivenName$txtText', type='text', maxlength='200')
+                .form-group.col.col-1-2
+                  .input-wrapper
+                    label.field-title
+                      | Family Name
+                      span.req-desc *
+                    #p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_ncpfamilyname.EditingFormControlNestedControl.editing-form-control-nested-control
+                      input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_FamilyName_txtText.form-control(name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$FamilyName$txtText', type='text', maxlength='200')
+              // End GivenName  FamilyName
+              // Begin Email
+              .type-1
+                .form-group
+                  .input-wrapper
+                    label.field-title
+                      | Email Address
+                      span.req-desc *
+                    #p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_ncpemailaddress.EditingFormControlNestedControl.editing-form-control-nested-control
+                      input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_EmailAddress_txtEmailInput.form-control(name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$EmailAddress$txtEmailInput', type='text', maxlength='100')
+              // End Email
+              // Begin Mobile
+              .type-1
+                .form-group
+                  .input-wrapper
+                    label.field-title
+                      | Mobile
+                      span.req-desc *
+                    #p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_ncpmobile.EditingFormControlNestedControl.editing-form-control-nested-control
+                      input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_Mobile_txtText.form-control(name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$Mobile$txtText', type='text', maxlength='200')
+              // End Mobile
+              // Begin Home
+              .type-1
+                .form-group
+                  .input-wrapper
+                    label.field-title Home
+                    #p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_ncphome.EditingFormControlNestedControl.editing-form-control-nested-control
+                      input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_Home_txtText.form-control(name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$Home$txtText', type='text', maxlength='200')
+              // End Home
+              // Begin Car model
+              .type-3
+                .form-group.car-model
+                  label.field-title
+                    | Car Model(s) interested in
+                    span.req-desc *
+                  .checkbox-group
+                    #p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_ncpinterestedin.EditingFormControlNestedControl.editing-form-control-nested-control
+                      span#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list.checkbox.checkbox-list-vertical
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_0(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$0', data-img="images/menu/car-1.png" value='86')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_0') 86
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_1(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$1', data-img="images/menu/car-1.png" value='Camry')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_1') Camry
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_2(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$2', data-img="images/menu/car-1.png" value='Corolla')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_2') Corolla
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_3(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$3', data-img="images/menu/car-1.png" value='Hiace')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_3') Hiace
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_4(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$4', data-img="images/menu/car-1.png" value='Prado')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_4') Prado
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_5(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$5', data-img="images/menu/car-1.png" value='Picnic')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_5') Picnic
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_6(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$6', data-img="images/menu/car-1.png" value='Previa')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_6') Previa
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_7(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$7', data-img="images/menu/car-1.png" value='Prius')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_7') Prius
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_8(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$8', data-img="images/menu/car-1.png" value='Noah')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_8') Noah
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_9(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$9', data-img="images/menu/car-1.png" value='RAV4')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_9') RAV4
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_10(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$10', data-img="images/menu/car-1.png" value='Taxi')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_10') Taxi
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_11(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$11', data-img="images/menu/car-1.png" value='Yaris')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_11') Yaris
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_12(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$12', data-img="images/menu/car-1.png" value='IS250')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_12') IS250
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_13(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$13', data-img="images/menu/car-1.png" value='IS F')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_13') IS F
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_14(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$14', data-img="images/menu/car-1.png" value='GS300')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_14') GS300
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_15(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$15', data-img="images/menu/car-1.png" value='GS450h')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_15') GS450h
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_16(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$16', data-img="images/menu/car-1.png" value='LS460')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_16') LS460
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_17(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$17', data-img="images/menu/car-1.png" value='LS460h')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_17') LS460h
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_18(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$18', data-img="images/menu/car-1.png" value='LRX350')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_18') LRX350
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_19(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$19', data-img="images/menu/car-1.png" value='RX450h')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_19') RX450h
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_20(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$20', data-img="images/menu/car-1.png" value='SC')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_20') SC
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_21(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$21', data-img="images/menu/car-1.png" value='Materia')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_21') Materia
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_22(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$22', data-img="images/menu/car-1.png" value='Sirion Racy')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_22') Sirion Racy
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_23(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$23', data-img="images/menu/car-1.png" value='Terios')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_23') Terios
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_24(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$24', data-img="images/menu/car-1.png" value='300 Series')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_24') 300 Series
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_25(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$25', data-img="images/menu/car-1.png" value='500 Series')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_25') 500 Series
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_26(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$26', data-img="images/menu/car-1.png" value='700 Series')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_26') 700 Series
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_27(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$InterestedIn$list$27', data-img="images/menu/car-1.png" value='Others')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_InterestedIn_list_27') Others
+                    label.hide.error-carmodel Please select at least 1 car
+              // End Car model
+              // Begin Inquiry
+              .type-1
+                .form-group
+                  .input-wrapper
+                    label.field-title
+                      | 分行地區
+                      span.req-desc *
+                    #p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_ncpbranch.EditingFormControlNestedControl.editing-form-control-nested-control
+                      select#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_Branch_dropDownList.DropDownField.form-control(name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$Branch$dropDownList')
+                        option(selected='selected', value='九龍灣陳列室') 九龍灣陳列室
+                        option(value='灣仔陳列室') 灣仔陳列室
+                        option(value='沙田陳列室') 沙田陳列室
+                        option(value='元朗陳列室') 元朗陳列室
+                      #p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_Branch_autoComplete.autocomplete
+              // End Inquiry
+            // Begin GivenName  FamilyName
+            .type-2.clearfix
+              .form-group.datepicker-group.col.col-1-2
+                .input-wrapper
+                  label.field-title
+                    | Date
+                    span.req-desc *
+                  #p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_ncpdate.EditingFormControlNestedControl.editing-form-control-nested-control
+                    input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_Date_txtText.form-control(name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$Date$txtText', type='text', maxlength='200')
+                  span.add-on
+                    i.icon
+                  span.attributes.hide(data-rule-required='true', data-msg-required='please fill the test date', data-rule-dateITA="true", data-msg-dateITA='please fill the valid date')
+              .form-group.col.col-1-2
+                .input-wrapper
+                  label.field-title
+                    | Time
+                    span.req-desc *
+                  #p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_ncptime.EditingFormControlNestedControl.editing-form-control-nested-control
+                    select#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_Time_dropDownList.DropDownField.form-control(name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$Time$dropDownList')
+                      option(selected='selected', value='上午 9:00 – 11:00') 上午 9:00 – 11:00
+                      option(value='上午11:00 – 下午1:00') 上午11:00 – 下午1:00
+                      option(value='下午1:00 – 3:00') 下午1:00 – 3:00
+                      option(value='下午3:00 – 5:00') 下午3:00 – 5:00
+                      option(value='下午5:00 – 7:00') 下午5:00 – 7:00
+                      option(value='下午7:00 – 9:00') 下午7:00 – 9:00
+                    #p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_Time_autoComplete.autocomplete
+                  span.attributes.hide(data-rule-required='true', data-msg-required='Please fill the test time')
+            // End GivenName  FamilyName
+            // Begin recaptcha
+            .type-1
+              +captcha().form-group
+            // End recaptcha
+            .type-4
+              .form-group.agreement-radio
+                .radio-group
+                  span.inline-text I
+                  #p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_ncppersonaldataprivacy.EditingFormControlNestedControl.editing-form-control-nested-control
+                    span#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_PersonalDataPrivacy_list.radio.radio-list-vertical
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_PersonalDataPrivacy_list_0(type='radio', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$PersonalDataPrivacy$list', value='agree')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_PersonalDataPrivacy_list_0') agree
+                        input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_PersonalDataPrivacy_list_1(type='radio', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$PersonalDataPrivacy$list', value='do not agree')
+                        label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_PersonalDataPrivacy_list_1') do not agree
+                  span.inline-text
+                    | to the use of my personal data by your company and/or provision of my personal data to your affiliates, subsidiaries and/or associated companies in direct marketing.
+            .type-4
+              .form-group.agreement-checkbox
+                .radio-group
+                  #p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_ncpiagreedregister.EditingFormControlNestedControl.editing-form-control-nested-control
+                    span#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_IAgreedRegister_list.checkbox.checkbox-list-vertical
+                      input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_IAgreedRegister_list_0(type='checkbox', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$IAgreedRegister$list$0', value='yes')
+                      label(for='p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_IAgreedRegister_list_0')
+                          | By checking this box, I agreed that I have read all the details on this form and certify that the reported changes in vehicle and registered particulars are correct.
+            // Begin submit
+            .submission
+              a.common-btn.btn-gray(href='http://toyotadev.projectuat.com/') Cancel
+              input#p_lt_ctl07_maincontent_p_lt_ctl01_editabletext_ucEditableText_widget1_ctl00_viewBiz_btnOK.FormButton.btn.btn-primary(type='submit', name='p$lt$ctl07$maincontent$p$lt$ctl01$editabletext$ucEditableText$widget1$ctl00$viewBiz$btnOK', value='Submit')
+            // End submit

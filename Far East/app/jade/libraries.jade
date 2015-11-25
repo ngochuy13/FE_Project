@@ -1,0 +1,108 @@
+extends layouts/layout
+
+block vars
+  -title = 'Libraries'
+  -bodyClass = ''
+  style(type="text/css")
+    | .container {max-width: 880px; margin: 0 auto;}
+    | .container h2 {font-size: 24px !important; margin: 20px 0; color: violet;}
+    | #button > div {margin-top: 10px;}
+    | .thumbs {width: 360px;}
+    | .paging {overflow: hidden;}
+    | .group {margin-top: 20px;}
+    | p {margin-top: 20px;}
+block container
+  .inner
+    main#main(style="min-height: 800px")
+      .container
+        .group
+          h2 Button link
+          p: +btn('know who we are', 0, 0)
+          p: +btn('view latest report', 0, 'btn-1')
+          p: +btn('Clear', 0, 'btn-2')
+
+          h2 Button
+          p
+            input(type='submit' value='Subscribe' class="btn-sm")
+          p
+            input(type='submit' value='Subscribe' class="btn-sm btn-1")
+          p
+            input(type='submit' value='Clear' class="btn-sm btn-2")
+          h2 Input fill
+          .group(style="background: #000; padding: 20px 0 120px;")
+            form(id="form-1", class="form-1" method="POST", action="#")
+              .row
+                lable.label(for="name")
+                  sup *&nbsp;
+                  | Your Name:
+                input(class="input-text", placeholder="Maple Leung", id="name")
+              .row.row-1
+                label.label Location
+                .select-custom
+                    span.text-result Afghanistan
+                    span.icon.icon-dropdown
+                    ul
+                      li(class="selected") Afghanistan
+                      li Lorem ipsum
+                      li dolor sit amet
+                      li consectetuer
+                      li adipiscing
+                      li iscing
+                    select(class='select')
+                      option(value="0" selected="selected") Afghanistan
+                      option(value="1" selected="selected") Lorem ipsum
+                      option(value="2" selected="selected") dolor sit amet
+                      option(value="3" selected="selected") consectetuer
+                      option(value="4" selected="selected") adipiscing
+                      option(value="5" selected="selected") iscing
+
+        .group(style="background: #000; overflow: hidden; padding-bottom: 20px")
+          h2 Filter
+          .row
+            p
+              a(title="All" class="link-style" href="#") All
+            p
+              a(title="All" class="link-style active" href="#") All
+
+        .group(style="background: #000; overflow: hidden; padding: 20px")
+          h2 Thumbs 1
+          .thumbs
+            a(href="#", title="")
+              +figure("", "images/upload/thumbs-1.jpg")
+              .info
+                p The rising middle class becomes future growth driver in china
+                p
+                  span.time 14 - 1 - 2014
+          h2 Thumbs 2
+          .thumbs.style-1
+            a(href="#", title="")
+              +figure("", "images/upload/thumbs-1.jpg")
+              .info
+                p "Best practice Awards 2011" in CSR by Dest practice Management Group (2011)
+          h2 Thumbnail
+          .inner(style="width: 160px")
+            +thumbnail('', "images/upload/thumbs-1.jpg")
+        .group(style="max-width: 960px; margin: 0 auto; overflow: hidden")
+          h2 Thumbs 1
+          .thumbs-1
+            +figure("", "images/upload/corporate/corporate-7.jpg")
+            .info
+              h1.title Corporate Social Responsibilities
+              p With clear vision and commitment to corporate social responsibility (CSR), Jebsen is determined to integrate economic, social and environmental considerations into organisational strategies and operations. After all, the Group's main goals are to distribute quality products and services to customers, sustain business growth, and improve the environment and well-being of the local communities.
+        .group
+          h2 Thumbs 1 - style 1
+          .thumbs-1.style-1(style="max-width: 315px;")
+            +img('', 'upload/corporate/crs-logo-1.png').img-circle
+            +figure("", "images/upload/corporate/corporate-1.jpg")
+            .info
+              h2 Environmental Conservation
+              p Regular CSR reports are produced in a systematic way to diagnose what is needed as a sustainable and socially responsible company and to identify the further steps to be taken to improve and maintain this position. Jebsen is committed to giving back to society, working closely with key CSR partners for the region.
+        .group
+          h2 Link icon
+          p: +link('Jebsen Automation Service').link.link-1
+          p: +link('Jebsen & Co Ltd, Hong Kong').link.link-2
+          p: link('Jebsen & Co Ltd, Hong Kong').link.link-3
+          p(style="background: #000;")
+            +link('CSR Report 2013').link.link-4
+
+

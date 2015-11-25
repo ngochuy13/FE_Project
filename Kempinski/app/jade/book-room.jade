@@ -1,0 +1,75 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Home'
+  -bodyClass = ''
+  -bannerIMG = 'home/banner.jpg'
+block breadcrumb  
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#"
+      },{
+        "text": "MIDDLE EAST",
+        "href":"#"
+      },{
+        "text": "EMIRATES PALACE",
+        "href":"#"
+      },{
+        "text": "CONTACT US",
+        "href":"#"
+      }])
+
+block container    
+  .inner
+    main#main
+      section.section-block.gray.booking-room
+        +page-title("YOUR RESERVATION","Available for the Dates", "Please select your room type and rate.")
+        .booking-wrap
+          .container
+            .row
+              .col-xs-12.col-md-3
+                include includes/booking-sidebar
+              .col-xs-12.col-md-9
+                .booking-results
+                  .row
+                    include includes/login-option
+                  +booking-result-item('Khaleej Deluxe Suite','choose-room/room-1.jpg', 'true' , 'room_1')
+                .row
+                  .col-xs-12.col-lg-9
+                    form.form-horizontal.form-horizontal-style
+                      .title Guest Details
+                      +select-control-button("TITLE")
+                      +input-control-horizontal("First Name*:", "first-name", true)
+                      +input-control-horizontal("Last Name*:", "last-name", true)
+                      +input-control-horizontal("Street 1:", "street-1", false)
+                      +input-control-horizontal("Street 2:", "street-2", false)
+                      +input-control-horizontal("Zip Code / City*:", "z-code", true)
+                      +select-control-horizontal("Country:")
+                      +input-control-horizontal("Telephone:", "telephone", false)
+                      +input-control-horizontal("Email:*:", "email", true)
+                      .title Card Details
+                      +select-control-button("CREDIT CARD TYPE:*")
+                      +input-control-horizontal("Credit card number *:", "credit-card-num", true)
+                      .form-group
+                        label.col-sm-4.control-label Expiry date*:
+                        .col-sm-8
+                          .row
+                            .col-xs-4
+                              .select-wrap
+                                select.bootstrap-select
+                                  option 1
+                                  option 2
+                                  option 3
+                            .col-xs-6
+                              .select-wrap
+                                select.bootstrap-select
+                                  option 1
+                                  option 2
+                                  option 3
+                          
+                      +input-control-horizontal("Name of cardholder*:", "card-holder-name", true)
+                      
+                      .btn-group.cta-btns.wide
+                        input(type="submit", value="SUBMIT").btn.btn-default

@@ -1,0 +1,274 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Meetings Events Details'
+  -bodyClass = ''
+  -bannerIMG = 'home/banner.jpg'
+  -page = 'meetings-events'
+block pagescript
+  
+block breadcrumb
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#"
+      },{
+        "text": "MIDDLE EAST",
+        "href":"#"
+      },{
+        "text": "EMIRATES PALACE",
+        "href":"#"
+      },{
+        "text": "MEETINGS & EVENTS",
+        "href":"#"
+      },{
+        "text": "WEDDINGS",
+        "href":"#"
+      }])
+
+block container    
+  .inner
+    main#main
+      section.section-block.gray
+        +page-title("WEDDINGS IN ABU DHABI", "In Abu Dhabi", "WHERE MEMORIES ARE MADE").gray
+      
+      section.section-weddings-details.type-2
+        .container
+          .row
+            .col-xs-12.col-md-7
+              .weddings-details__title Every wedding is uniquely special...
+              .weddings-details__description.editor-content
+                p But an Emirates Palace wedding is exceptional. Picture a breathtaking ballroom ornate with marble and gold, blending timeless architectural features with modern design, or 85 hectares of manicured gardens and elegant terraces offering the most glamorous venues for weddings in the UAE. We provide the best options for rooms and reception areas along with a flower shop on site to coordinate all of your floral needs and a talented culinary team ready to tantalize your guests’ taste buds. The possibilities for your special day are magically endless when you plan your wedding in Abu Dhabi. 
+                br 
+                p Royal weddings are our signature; let us turn your dream wedding into a reality. Check out our wedding packages today and begin your journey!
+                br 
+                p For all enquiries, please contact us at 
+                  a(href="mailto:mice@emiratespalace.ae") mice@emiratespalace.ae 
+                  | or call us at 
+                  a(href="tel://+971 (0)2 690 9000" title="+971 (0)2 690 9000") +971 2 690 7951.
+                
+                .data-table.type-3
+                  table
+                    tr
+                      td 
+                        b Banquet
+                      td 1200
+                    tr
+                      td 
+                        b Cocktail
+                      td 2500
+                    tr
+                      td 
+                        b Classroom
+                      td 1200
+                    tr
+                      td 
+                        b Theatre
+                      td 2400
+                    tr
+                      td 
+                        b Size (w/l/h)
+                      td 37.00m/58.00m/6.00m
+
+                .data-table.wider.type-2
+                  table.table.table-striped
+                    thead
+                      tr
+                        th Room Setup
+                        th Size (sqm)
+                        th Banquet
+                        th Cocktail
+                        th Board Room
+                        th U-Style
+                        th Classroom
+                        th Theatre
+                    tbody
+                      tr
+                        td Ballroom
+                        td 2146
+                        td 1200
+                        td -
+                        td -
+                        td -
+                        td 1200
+                        td 2400      
+                      tr 
+                        td Ballroom Section 1
+                        td 703
+                        td 400
+                        td -
+                        td -
+                        td 96
+                        td 400
+                        td 700
+                      tr 
+                        td Ballroom Section 2
+                        td 740
+                        td 400
+                        td -
+                        td -
+                        td 96
+                        td 400
+                        td 700
+                      tr 
+                        td Ballroom Section 3
+                        td 703
+                        td 400
+                        td -
+                        td -
+                        td 96
+                        td 400
+                        td 1400
+                      tr 
+                        td Ballroom Section 1&2
+                        td 1443
+                        td 800
+                        td -
+                        td -
+                        td -
+                        td 800
+                        td 1400   
+                      tr
+                        td Ballroom Section 2&3
+                        td 560
+                        td 800
+                        td -
+                        td -
+                        td -
+                        td 800
+                        td -
+                      tr
+                        td Ballroom Foyer
+                        td 875
+                        td -
+                        td -
+                        td -
+                        td -
+                        td -
+                        td -
+                      tr
+                        td Ballroom Pre-function Side
+                        td 700
+                        td -
+                        td -
+                        td -
+                        td -
+                        td -
+                        td -
+                      tr
+                        td Ballroom Terrace A
+                        td 225
+                        td -
+                        td -
+                        td -
+                        td -
+                        td -
+                        td -
+                      tr
+                        td Ballroom Terrace B
+                        td 225
+                        td -
+                        td -
+                        td -
+                        td -
+                        td -
+                        td -                        
+
+
+
+            .col-xs-12.col-md-5
+              .contact-block
+                //- .weddings-details__title Contact
+                //- .contact-detail
+                //-   dl.dl-horizontal
+                //-     dt Email Contact:
+                //-     dd 
+                //-       a(href="mailto:reservations@emiratespalace.ae", title="reservations@emiratespalace.ae") reservations@emiratespalace.ae
+                //-     dt Telephone:
+                //-     dd 
+                //-       a(href="tel://971-2-690-9000", title="tel:+971 2 690 9000") +971 2 690 9000
+                //-     dt Fax:
+                //-     dd 
+                //-       a(href="tel://971-2-690-9000", title="tel:+971 2 690 9000") +971 2 690 9000
+                //-     dt Address:
+                //-     dd Emirates Palace West Corniche Road <br/>P.O.Box - 39999Abu Dhabi
+                //-   .cta-btns
+                //-     a(href='#', title='title2').btn.btn-default.btn-book-now enquiries
+                +img("Every wedding is uniquely special", "venues-detail/img-1.jpg")
+                form.form-horizontal.form-horizontal-style
+                  .title Request for Proposal
+                  .form-wrap
+                    +input-control-horizontal-short("First Name:", 'first-name', false)
+                    +input-control-horizontal-short("Last Name:", 'last-name', false)
+                    +input-control-horizontal-short("Company:", 'company', false)
+                    +input-control-horizontal-short("Email:", 'email', false)
+                    +input-control-horizontal-short("Telephone:",'telephone', false)
+                    +select-control-horizontal-short("Country:")
+                    .form-group
+                      .col-sm-4.control-label-wrap
+                        label.control-label(for="event-date") Event Date:
+                      .col-sm-8
+                        .date-wrap
+                          input.form-control(id="event-date" type="text").datetimepicker
+                          .icon-calendar
+                    +select-control-horizontal-short("Room Setup:")
+                    .row
+                      .col-xs-12.col-sm-4.col-sm-offset-4
+                        .form-group
+                          .col-xs-12.control-label-wrap
+                            label.text-center(for="attendees") No. of Attendees:
+                          .col-xs-12
+                            input.form-control(id="attendees" type="text")
+                      .col-xs-12.col-sm-4
+                        .form-group
+                          .col-xs-12.control-label-wrap
+                            label.text-center(for="events") Duration of Events:
+                          .col-xs-12
+                            input.form-control(id="events" type="text")
+                      .col-xs-12.col-sm-4.col-sm-offset-4
+                        .form-group
+                          .col-xs-12.control-label-wrap
+                            label.text-center(for="guestRooms") No. of GuestRooms Required:
+                          .col-xs-12
+                            input.form-control(id="guestRooms" type="text")
+                      .col-xs-12.col-sm-4
+                        .form-group
+                          .col-xs-12.control-label-wrap
+                            label.text-center(for="stayof") Duration of Stayof Guest:
+                          .col-xs-12
+                            input.form-control(id="stayof" type="text")
+                    
+                    .form-group
+                      .col-sm-4.control-label-wrap
+                        label.control-label(for="") Cathering Required:
+                      .col-sm-8
+                        .row
+                          .col-xs-6.text-center
+                            .checkbox-group
+                              label.control-label(for="yes")
+                                input(checked, id="yes" type="radio", name="cathering")
+                                span.checkbox-face.fa.fa-circle
+                                | Yes
+                          .col-xs-6.text-center
+                            .checkbox-group
+                              label.control-label(for="no")
+                                input(id="no" type="radio", name="cathering")
+                                span.checkbox-face.fa.fa-circle
+                                | No
+                    .form-group
+                      .col-sm-2.control-label-wrap
+                      .col-sm-10.pull-right
+                        p Please enter additional comments below (optional).
+                        textarea
+
+                      .cta-btns.wide.text-center
+                        input(type="submit", value="SUBMIT").btn.btn-default
+      //- section.section-article-blog
+      //-   +section-title("WHY ABU DHABI", "Word Class Luxury", "DISTINGUISH YOUR EVENT").gray.article-blog__title 
+      //-   .section-article-blog__content
+      //-     .container
+      //-       .row
+      //-         +article-blog-item('meetings-events/img-2.jpg', 'AT A GLANCE', 'Emirates Palace is located in the cosmopolitan ', '<p>City of Abu Dhabi, the capital and largest emirate in the United Arab Emirates. Strategically located along the landmark, eight-kilometre Corniche, guests have access to the main business areas, cultural and leisure attractions that Abu Dhabi has to offer.</p><br><p>The Emirate of Abu Dhabi has gained notoriety for its captivating cultural appeal and for being an architectural wonderland with some of the world’s most visually stunning buildings. With signature experiences like pearl diving, souk shopping and desert traditions that are a testament to its history, Abu Dhabi is a special place to behold.</p><br><p><strong>Highlights</strong><p><ul><li>Abu Dhabi Golf Club</li><li>Ferrari World</li><li>Heritage Village</li><li>Qasr Al Hosn</li><li>Sheikh Zayed Grand Mosque</li><li>Yas Marina Circuit</li><li>Zayed Centre</li></ul><br><p>For all enquiries, please contact us at <a href="mailto:mice@emiratespalace.ae">mice@emiratespalace.ae</a> or call us at +971 2 690 7951.</p>').col-xs-12.col-sm-4  
+      //-         +article-blog-item('meetings-events/img-3.jpg', 'ABOUT THE PALACE', 'Few key facts about Emirates Palace:', '<ul><li>1 kilometre from wing to wing; 100 hectares total area</li><li>1.3 kilometre stretch of private beach with an underwater museum that guests can discover as they snorkel</li><li>394 rooms and suites, ranging from 55 sqm to 680 sqm</li><li>42 meeting and conference rooms</li><li>Ballroom with a guest capacity of 2,400 theatre style</li><li>Auditorium with seated guest capacity of 1,100</li><li>The outdoor terraces and grounds collectively provide function space for up to 20,000 guests</li><li>Emirates Palace is home to 13 restaurants, cafés and bars featuring cuisines from around the world</li><li>For a taste of true Emirati culture, guests can visit Emirates Palace Bedouin tent.</li></ul><p>For all enquiries, please contact us at <a href="mailto:mice@emiratespalace.ae">mice@emiratespalace.ae</a> or call us at +971 2 690 7951.</p>').col-xs-12.col-sm-4
+      //-         +article-blog-item('meetings-events/img-4.jpg', 'YOUR INCENTIVES', 'Distinguish your event with local experience.', '<p>Use an incentive to build relationships between business associates, clients or staff members. In Abu Dhabi, you have various opportunities to create unforgettable memories:</p><br><p><ul><li>Sport Challenges at the Palace</li><li>Pamper, Relax & Taste at the Palace</li><li>The “Musts” besides the Palace</li><li>Nuggets: Turnkey Incentive Programs</li></ul></p><br><p>Download our <a>incentive brochure</a>.<br/>For all enquiries, please contact us at <a href="mailto:mice@emiratespalace.ae">mice@emiratespalace.ae</a> or call us at +971 2 690 7951.</p>').col-xs-12.col-sm-4

@@ -1,0 +1,93 @@
+.huge-list
+  padding: 25px 0 44px 0
+  list-style: none
+  ul
+    padding: 0
+    list-style: none
+    color: #010101
+  .level-2-list
+    padding-top: 2px
+    >li
+      padding-top: 24px
+      line-height: 1.9
+      letter-spacing: 0.1px
+      &:first-child
+        padding-top: 0
+  .hotels-group
+    h3, a
+      color: #50504d
+      font-size: 14px
+      font-family: $hvl-ff
+      margin: 0
+      line-height: 1.9
+    h3
+      font-weight: bold
+      text-transform: uppercase
+    a
+      font-weight: 300
+      text-decoration: underline
+    .corp, .title
+      letter-spacing: 6px
+    .corp
+      font-size: 12px
+    .title
+      font-size: 22px
+      line-height: 1.2
+      min-height: 59px
+  
+  .hotels-group-big-top-distance
+    margin-top: 170px
+  a.residence-link
+    text-decoration: none
+    background: #888
+    font-weight: normal
+    color: white
+    display: inline-block
+    width: 19px
+    height: 19px
+    border-radius: 3px
+    line-height: 17px
+    text-align: center
+    font-size: 13px
+    margin-left: 6px
+    transition: all 0.3s
+    border: 1px solid #888
+    &:hover
+      background: white
+      color: #888
+      border: 1px solid #888
+
+.huge-list-legend
+  padding: 28px 0 24px 0
+  border-bottom: 1px dotted #010101
+  h4, p
+    font-size: 12px
+    font-weight: normal
+    margin: 0
+  h4
+    letter-spacing: 6px
+  p
+    line-height: 1.2
+
+@media (max-width: 991px)
+  .huge-list
+    .level-2-list ul
+      font-size: 0
+      li
+        width: 50%
+        display: inline-block
+    .hotels-group
+      padding-bottom: 30px
+      margin-bottom: 30px
+      border-bottom: 1px solid #ddd
+      .title br
+        display: none
+
+    .hotels-group-big-top-distance
+      margin-top: 0
+
+@media (max-width: 639px)
+  .huge-list
+    .level-2-list ul
+      li
+        width: 100%

@@ -1,0 +1,487 @@
+.section-weddings-details
+  padding: 15px 0 80px 0
+  @media (max-width: 767px)
+    padding: 20px 0 40px 0
+  &.mw980 .container
+    max-width: 980px
+  .weddings-details__title
+    font-family: 'KingsCaslon',Arial,sans-serif
+    color: #010101
+    font-size: 24px
+    font-weight: normal
+    margin-bottom: 15px
+  .weddings-details__description
+    max-width: 550px
+    width: 100%
+    @media (max-width: 992px)
+      max-width: inherit
+  .media-block
+    margin-top: 40px
+    img 
+      max-width: 100%
+  .contact-block
+    padding-left: 110px
+    @media (max-width: 992px)
+      padding-left: 0
+      margin-top: 40px
+    .dl-horizontal 
+      dt
+        width: 110px
+        text-align: left
+        font-weight: 300
+      dd 
+        font-weight: 300
+        margin-left: 110px
+        margin-bottom: 7px
+        @media (max-width: 767px)
+          margin-left: 0
+          margin-bottom: 10px
+    .cta-btns
+      a 
+        min-width: 210px
+  &.type-2
+    .weddings-details__description
+      max-width: inherit
+    .contact-block
+      padding-left: 0px
+
+.section-article-blog.mt-40
+  margin-top: 40px
+.image-col
+  .meeting-events-image
+    margin-bottom: 26px
+    padding: 0 7px
+    img
+      width: 100%  
+.info-col
+  padding: 0 7px
+  .slide-caption
+    width: 100%
+    font-size: 16px
+    display: inline-block
+    padding: 20px 12px
+    vertical-align: top
+    .title
+      font-family: $hvl-ff
+      font-size: 22px
+      color: #010101
+      text-transform: uppercase
+      margin-bottom: 11px
+      letter-spacing: 6px
+      width: 50%
+    .description
+      color: #50504d
+      margin-bottom: 35px
+      margin-top: 31px
+      p 
+        margin-bottom: 0
+    hr
+      margin: -8px 0 12px
+    .contact-info
+      margin-bottom: 8px
+      span.label
+        display: inline-block
+        width: 25%
+        font-weight: bold
+      span.info, span.info a
+        color: #101010
+      span.info a
+        text-decoration: underline
+  .block-gallery
+    margin-top: 40px
+    .title
+      width: 70%
+      margin-bottom: 15px
+    .row 
+      margin-left: -12px
+      margin-right: -12px
+    .block-img
+      > div 
+        margin-bottom: 24px
+        padding-left: 12px
+        padding-right: 12px
+        max-height: 165px
+        overflow: hidden
+        img 
+          width: 100%
+        .content
+          position: relative
+        .info-overplay
+          display: none
+          background: rgba(0,0,0,0.5)
+          color: #FFF
+          position: absolute
+          left: 0
+          top: 0
+          width: 100%
+          height: 100%
+  &.type-2
+    .slide-caption 
+      .description          
+        margin-bottom: 20px
+      .contact-info
+        font-size: 14px
+        font-family: "Helvetica"
+        color: #50504d
+        line-height: 1.929
+        margin-bottom: 0
+        span.label
+          text-align: right
+          font-weight: normal
+          padding-right: 15px
+
+
+.slider-item
+  &.type1
+    font-size: 0
+    background: #f3f3f3
+    padding: 25px
+    height: 100%
+    .slide-image
+      display: inline-block
+      height: 100%
+      padding-bottom: 50px
+      position: relative
+      width: 50%
+      @media (max-width: 1023px)
+        height: auto
+      img
+        width: 100%
+      a.photo-link
+        position: absolute
+        left: 0
+        bottom: 50px
+        max-width: 210px
+        width: 100% 
+        border: 2px solid #9d938a
+        background: #9d938a
+        color: #fff
+        font-size: 11px
+    .slide-caption
+      width: 50%
+      font-size: 16px
+      display: inline-block
+      padding: 10px 0px 10px 20px
+      vertical-align: top
+      z-index: 1 
+      background: #F3F3F3
+      min-height: 400px
+      position: relative
+      padding-bottom: 82px
+      @media (max-width: 1023px)
+        min-height: inherit
+      .cta-btns
+        bottom: 0
+    .title
+      font-family: $hvl-ff
+      font-size: 22px
+      color: #010101
+      text-transform: uppercase
+      margin-bottom: 16px
+      letter-spacing: 6px
+    .description
+      color: #50504d
+      margin-bottom: 50px
+    .cta-btns
+      position: absolute
+      bottom: 25px
+      width: 100% 
+    @media (min-width: 1024px)
+      .slide-image
+        position: absolute
+        padding-right: 25px
+        left: 25px
+        picture
+          width: 100%
+          height: 100%
+          display: inline-block
+          img
+            display: none
+      .slide-caption
+        margin-left: 50%
+    @media (max-width: 1023px)
+      .experiences-to-treasure-item
+        padding: 0 
+      .slide-image
+        width: 100%
+      .slide-caption
+        width: 100%
+        font-size: 16px
+        display: inline-block
+        padding: 15px 0 82px 0 
+        vertical-align: top
+        .description
+          margin-bottom: 0px
+      .cta-btns
+        left: 0
+  &.type2
+    background: #fff
+    overflow: hidden
+    .suite-media
+      font-size: 0
+      position: absolute
+      width: 100%
+      height: 100%
+      background-size: cover
+      @media (max-width: 992px)
+        max-height: 400px
+        overflow: hidden
+        position: relative
+        background: none !important
+      img
+        display: inline-block
+        vertical-align: top
+        width: 100%
+        opacity: 0
+        @media (max-width: 992px)
+          opacity: 1
+    .suite-info
+      padding: 60px 0 45px 0
+      max-width: 100%
+      @media (max-width: 1200px)
+        padding: 60px 0 45px 20px
+      .name
+        font-size: 22px
+        color: #010101
+        text-transform: uppercase
+        letter-spacing: 6px
+        margin-bottom: 24px
+      .description, .description p, .description a
+        color: #50504d
+      .room-features
+        margin-top: 46px
+        .title
+          color: #50504d
+          font-size: 18px
+          letter-spacing: 4px
+          text-transform: uppercase
+          margin-bottom: 20px
+        ul.feature-list
+          padding: 0
+          width: auto
+          display: inline-block
+          font-size: 14px
+          color: #50504d
+          margin-right: 10px
+          letter-spacing: 0.1px
+          vertical-align: top
+          @media (max-width: 1024px)
+            width: 49%
+            margin: 0
+          @media (max-width: 440px)
+            width: 100%
+          li
+            padding: 2px 10px 2px 0
+            list-style: disc inside
+            display: list-item
+      .cta-btns
+        margin-top: 65px
+        display: inline-block
+        width: 100%
+        @media (max-width: 1023px)
+          margin-top: 25px
+    .not-middle
+      .suite-media, .suite-info
+        transform: none
+        top: 0
+      .suite-info
+        padding-top: 40px
+    @media (min-width: 1170px)
+      .suite-info
+        margin-left: calc((200% - 1110px) / 2)
+    @media (max-width: 1024px)
+      .slide-image img, .suite-media img
+        max-width: 100%          
+    &.error-item
+      padding: 190px 0
+      @media (min-width: 1170px)
+        .suite-info
+          margin-left: 50px
+          max-width: 450px
+          .name
+            margin-bottom: 60px
+          .cta-btns
+            margin-top: 100px
+  &.type3
+    background: #fff
+    overflow: hidden
+    .suite-media
+      font-size: 0
+      @media (max-width: 992px)
+        max-height: 400px
+        overflow: hidden
+      &:before
+        content: " "
+        width: 1px
+        display: inline-block
+        vertical-align: middle
+        height: 100%
+      img
+        display: inline-block
+        vertical-align: top
+        width: 100%
+    .suite-info
+      padding: 20px
+      max-width: 100%
+      .name
+        font-size: 22px
+        color: #010101
+        text-transform: uppercase
+        letter-spacing: 6px
+        margin-bottom: 24px
+      .description, .description p, .description a
+        color: #50504d
+      
+      .cta-btns
+        margin-top: 65px
+        display: inline-block
+        width: 100%
+        @media (max-width: 1023px)
+          margin-top: 25px
+    
+    @media (min-width: 1170px)
+      .suite-info
+        margin-left: calc((200% - 1110px) / 2)
+        padding: 20px 0
+      .suite-media, .suite-info
+        position: relative
+        .ie8 &
+          position: static
+    @media (max-width: 1024px)
+      .slide-image img, .suite-media img
+        max-width: 100% 
+
+    .room-features
+      margin-top: 45px
+      opacity: 0
+      transition: opacity 0.3s
+      font-size: 0
+      @media (max-width: 992px)
+        padding: 0 20px
+      .owl-item.active &
+        opacity: 1
+        transition: opacity 0.3s
+      .title
+        color: #000000
+        font-size: 24px
+        font-family: $kc-ff
+        font-style: italic
+        line-height: 0.958
+        text-align: center
+        margin-bottom: 30px
+      ul.feature-list, ul.amenities-list
+        padding: 0 0 0 0
+        display: inline-block
+        width: 50%
+        font-size: 0px
+        color: #50504d
+        letter-spacing: 0.1px
+        vertical-align: top
+        list-style: none
+        @media (max-width: 1024px)
+          width: 49%
+          margin: 0
+        @media (max-width: 440px)
+          width: 100%
+        li
+          font-size: 14px
+          padding: 2px 10px 2px 0
+          float: left
+          width: 50%
+          vertical-align: top
+          &:before
+            content: ''
+            display: inline-block
+            width: 4px
+            height: 4px
+            border-radius: 4px
+            background: #50504d
+            margin-right: 5px
+            margin-bottom: 2px
+          @media (max-width: 1024px)
+            width: 100%
+
+
+.data-table
+  margin-bottom: 30px
+  font-size: 14px
+  font-weight: normal
+  overflow: auto
+  table 
+    width: 335px
+    text-align: left
+    thead
+      td 
+        font-weight: bold
+        padding-bottom: 7px
+    @media (max-width: 480px)
+      margin-bottom: 10px
+
+  &.wider
+    color: #50504d
+    table
+      thead
+        border-bottom: 1px solid #9D938A
+      tbody
+        td
+          padding-top: 7px
+  &.type-2
+    margin-top: 60px
+    table 
+      width: 100%
+      td, th
+        padding: 7px
+        text-align: center
+        &:first-child
+          text-align: left
+        &:nth-child(2n+1)
+          background: #f7f8f6
+  &.type-3
+    margin-top: 55px
+    table
+      width: 100%
+      max-width: 450px
+      td:first-child
+        width: 250px
+
+
+@media (max-width: 1023px)
+  .slider-item.type2 .suite-info
+    padding: 25px 0 45px 20px
+  .slider-item.type1 .slide-image
+    padding-bottom: 25px
+  .slider-item.type1 .slide-image a.photo-link
+    bottom: 25px
+@media (max-width: 639px)
+  .slider-item.type1 .slide-image a.photo-link
+    bottom: 0
+  .slider-item.type1 .slide-image
+    padding-bottom: 0px
+  .slider-item.type2 .suite-info
+    padding: 15px 0 22px 20px
+  .slider-item.type2 .suite-info .cta-btns
+    margin-top: 0
+  .slider-item.type1 .title
+    font-size: 18px
+    margin-bottom: 5px
+  .slider-item.type2 .suite-info .name
+    margin-bottom: 5px
+    font-size: 18px
+  .slider-item.type2 .suite-info .room-features
+    margin-top: 22px
+    .title
+      margin-bottom: 5px;
+      font-size: 16px
+@media (max-width: 1023px)
+  .section-article-blog .container .row
+    margin-left: -15px
+    margin-right: -15px
+  .image-col .meeting-events-image
+    padding: 0
+  .info-col
+    padding-left: -15px
+    padding-right: -15px
+  .info-col .slide-caption
+    padding-top: 0
+  .info-col .slide-caption .title
+    width: 100%

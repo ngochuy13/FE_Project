@@ -1,0 +1,599 @@
+extends layouts/layout
+
+block vars
+  -title = 'Car Noah'
+  -bodyClass = 'car-detail'
+
+  -noahEngText = {}
+  -noahEngText.banner= {}
+  -noahEngText.banner.bannerContent= []
+  -noahEngText.banner.bannerContent[0] = {}
+  -noahEngText.banner.bannerContent[0].titleSmall= 'Cheerful'
+  -noahEngText.banner.bannerContent[0].title= 'NOAH'
+  -noahEngText.banner.bannerContent[0].price= '$299,075 up'
+  -noahEngText.banner.bannerContent[0].blockBanner= 'FAMILY WONDERLAND'
+  -noahEngText.banner.bannerContent[0].description= '<p>Get ready for fun with your loved ones.<br>Make every day a joyous family day!</p>'
+  -noahEngText.banner.bannerContent[0].titleNav= 'Go'
+
+  -noahEngText.father= {}
+  -noahEngText.father.dataTitle= 'Dad\'s'
+  -noahEngText.father.dataSubTitle= 'Choice'
+  -noahEngText.father.title= 'An inviting, versatile cabin lets you bring <br/>your happy home on the road.'
+  -noahEngText.father.description= '<p>Designed with thoughtful features to take care of your family\'s every need.</p>'
+  -noahEngText.father.note= 'Oversea model shown'
+  -noahEngText.father.tooltips= []
+  -noahEngText.father.tooltips[0]= 'Dual zone automatic climate control with pollen filter'
+  -noahEngText.father.tooltips[1]= 'Rear Parking Camera (Exclusive for Noah Luxury)'
+  -noahEngText.father.tooltips[2]= 'Steering wheel with tilt and telescope adjustment and audio switch'
+  -noahEngText.father.tooltips[3]= 'Optitron Meter with Illumination Control (Exclusive for Noah Luxury)'
+  -noahEngText.father.tooltips[4]= '4.2-inch colour TFT multi-information display (Exclusive for Noah Luxury)'
+
+  -noahEngText.mother= {}
+  -noahEngText.mother.dataTitle= 'Mum\'s'
+  -noahEngText.mother.dataSubTitle= 'Choice'
+  -noahEngText.mother.title= 'Plenty of space and freedom means extra room for loading your car with happiness.'
+  -noahEngText.mother.description= '<p>Noah has the length, width and height to offer a more spacious seating area.</p>'
+  -noahEngText.mother.arrowSize= []
+  -noahEngText.mother.arrowSize[0]= '1400mm'
+  -noahEngText.mother.arrowSize[1]= '360mm'
+  -noahEngText.mother.arrowSize[2]= '805mm'
+  -noahEngText.mother.tooltips= []
+  -noahEngText.mother.tooltips[0]= 'Rear Air-conditioning System Control Switch and Register'
+  -noahEngText.mother.tooltips[1]= 'Twin moon roofs (Exclusive for Noah Luxury)'
+  -noahEngText.mother.tooltips[2]= 'Sun shade attached to sliding door'
+  -noahEngText.mother.tooltips[3]= '2nd Row 810mm Captain Seats with Super 4-way Sliding Mode (Exclusive for Noah Luxury)'
+  -noahEngText.mother.tooltips[4]= 'Third row seats come with an easy stow function, expanding the rear storage to 1,100mm'
+
+  -noahEngText.child= {}
+  -noahEngText.child.dataTitle= 'Kid\'s'
+  -noahEngText.child.dataSubTitle= 'Choice'
+  -noahEngText.child.title= 'Amazing seat configurations so you can sit, lie or play as you please! '
+  -noahEngText.child.description= '<p>This seating arrangement provides an unprecedented range of combinations.</p>'
+  -noahEngText.child.note= '' 
+  -noahEngText.child.chair= []
+  -noahEngText.child.chair[0]= '後排玩樂 <br/>模式'
+  -noahEngText.child.chair[1]= '一家四口郊遊 <br/>模式'
+  -noahEngText.child.chair[2]= '親親寶寶 <br/>模式'
+  -noahEngText.child.chair[3]= '天倫樂 <br/>模式'
+  -noahEngText.child.chair[4]= '二人世界觀星 <br/>模式'
+  -noahEngText.child.chair[5]= '二人同遊 <br/>模式'
+  -noahEngText.child.chair[6]= '日常行車 <br/>模式'
+  -noahEngText.child.chair[7]= '鬆上落 <br/>模式'
+  -noahEngText.child.chair[8]= '四人戶外活動 <br/>模式'
+  -noahEngText.child.chair[9]= '超級滑動 <br/>模式'
+
+  -noahEngText.carDetail=  {}
+  -noahEngText.carDetail.tabTitle= []
+  -noahEngText.carDetail.tabTitle[0]= 'EXTERIOR'
+  -noahEngText.carDetail.tabTitle[1]= 'INTERIOR'
+  -noahEngText.carDetail.tabTitle[2]= 'PERFORMANCE'
+  -noahEngText.carDetail.tabTitle[3]= 'SAFETY'
+
+  -noahEngText.carDetail.tooltipLandingPerformance= {}
+  -noahEngText.carDetail.tooltipLandingPerformance.tooltips= []
+  -noahEngText.carDetail.tooltipLandingPerformance.tooltips[0]= 'Cutting-edge technology delivers first-class fuel consumption efficiency and performance.'
+  -noahEngText.carDetail.tooltipLandingPerformance.tooltips[1]= '7-speed super CVT-i transmission with +/- mode'
+  -noahEngText.carDetail.tooltipLandingPerformance.tooltips[2]= 'Smart Stop System'
+  -noahEngText.carDetail.tooltipLandingPerformance.tooltips[3]= '16.1km/L fuel consumption (JC08 mode)'
+  -noahEngText.carDetail.tooltipLandingPerformance.tooltips[4]= 'ECO driving indicator'
+
+  -noahEngText.carDetail.tooltipLandingSafety= {}
+  -noahEngText.carDetail.tooltipLandingSafety.tooltips= []
+  -noahEngText.carDetail.tooltipLandingSafety.tooltips[0]= ''
+  -noahEngText.carDetail.tooltipLandingSafety.tooltips[1]= ''  
+
+  -noahEngText.colors= {}
+  -noahEngText.colors.description= '<p>7 fun colours offer a perfect match for any fun-filled family outing.</p>'
+  -noahEngText.colors.note= '<p>^ Exclusive for Noah Luxury</p><p>* Exclusive for Noah Advantage</p><p>Oversea model shown</p>'
+  -noahEngText.colors.colorNames= []
+  -noahEngText.colors.colorNames[0]= 'White Pearl Crystal Shine'
+  -noahEngText.colors.colorNames[1]= 'Silver Metallic'
+  -noahEngText.colors.colorNames[2]= 'Black'
+  -noahEngText.colors.colorNames[3]= 'Deep Red Mica Metallic'
+  -noahEngText.colors.colorNames[4]= 'Dark Sherry Mica Metallic*'
+  -noahEngText.colors.colorNames[5]= 'Ocean Mint Metallic*'
+  -noahEngText.colors.colorNames[6]= 'Dark Violet Metallic^'
+
+
+
+block pagescript
+  //- Dep only for car detail page
+  // build:js scripts/car-detail-dep.js
+  script(src='/scripts/lib-js/rangeslider.js')
+  script(src='/scripts/lib-js/interact-1.2.4.js')
+  script(src='/scripts/lib-js/jquery.panelSnap.js')
+  // endbuild
+  
+  // build:js scripts/car-detail.js
+  script(src='/scripts/lib-js/general-ui.js')
+  script(src='/scripts/lib-js/car-change-color-slide.js')
+  script(src='/scripts/lib-js/car-unique-characters.js')
+  script(src='/scripts/lib-js/car-detail-interaction.js')
+  // endbuild
+  
+block container
+  .car-noah-detail
+    //- ..section-slide-noah
+    .section.section-slide-noah
+      .banner-intel-scaling-item
+        picture
+          source(srcset='images/Cars/Noah/banner-small-1.jpg', media='(max-width: 1024px)')
+          //- source(srcset='images/Cars/Noah/banner-ipad-1.jpg', media='(max-width: 1024px)')
+          //- img(src='images/Cars/Noah/bg-section-slide-noah.jpg', alt='banner.', data-width='1920', data-height='799')
+          img(src='images/Cars/Noah/banner-1.jpg', alt='banner.', data-width='1920', data-height='799')
+        //- .block-car-slide
+        //-   .car-move
+        //-     picture
+        //-       img(src='images/Cars/Noah/section-slide-noah-car-3.png', alt='banner.')    
+        .block-ow-caption.with-banner
+          .block-left-middle
+            .title-small !{noahEngText.banner.bannerContent[0].titleSmall}
+            h1.title
+              | !{noahEngText.banner.bannerContent[0].title}
+              .price !{noahEngText.banner.bannerContent[0].price}
+            .block-banner
+              | !{noahEngText.banner.bannerContent[0].blockBanner}
+            .description
+              .editor-content
+                | !{noahEngText.banner.bannerContent[0].description}                
+      //- .block-control
+      //-   .block-content
+      //-     .nav
+      //-       a.icon.icon-1(href='#', title='') &nbsp;
+      //-       span.title !{noahEngText.banner.bannerContent[0].titleNav}
+      //-       a.icon.icon-2(href='#', title='') &nbsp;
+      //-       span.selected &nbsp;
+
+    //- section-furniture-car
+    .section.section-furniture-car
+      .owl-carousel-furniture-car
+        .item-furniture-car.banner-intel-scaling-item.car-section-content(data-title=noahEngText.father.dataTitle,data-class='slide-1', data-tooltip="tooltip-in-car").slide-1
+          .block-img.image-center
+            picture
+              source(srcset='images/Cars/Noah/banner-small-2.jpg', media='(max-width: 1024px)')
+              //- source(srcset='images/Cars/Noah/banner-ipad-2.jpg', media='(max-width: 1024px)')
+              img(src='images/Cars/Noah/banner-2.jpg', alt='Home banner.', data-width='1920', data-height='799')
+            .block-tooltip
+              +tooltip('tooltip-in-car-1','21','42.8')
+              +tooltip('tooltip-in-car-2','43','36.8')
+              +tooltip('tooltip-in-car-3','70','50.8')
+              +tooltip('tooltip-in-car-4','64.4','38.8')
+              +tooltip('tooltip-in-car-5','52','30.8')
+          .block-text
+            | !{noahEngText.father.note}
+          .block-ow-caption
+            .block-top-middle
+              .title
+                | !{noahEngText.father.title}
+              .description
+                .editor-content
+                  | !{noahEngText.father.description}
+        .item-furniture-car.banner-intel-scaling-item.car-section-content(data-title=noahEngText.mother.dataTitle,data-class='slide-2', data-tooltip="tooltip-windows").slide-2
+          .block-img.image-center
+            picture
+              source(srcset='images/Cars/Noah/banner-small-5.jpg', media='(max-width: 1024px)')
+              //- source(srcset='images/Cars/Noah/banner-ipad-5.jpg', media='(max-width: 1024px)')
+              img(src='images/Cars/Noah/banner-5.jpg', alt='Home banner.', data-width='1920', data-height='799')
+            .block-balloon
+              img(src='images/Cars/Noah/balloon-1.png', alt='balloon').balloon-1
+              img(src='images/Cars/Noah/balloon-2.png', alt='balloon').balloon-2
+            .block-tooltip.hidden 
+              +tooltip('tooltip-windows-1','47','32.8')
+              +tooltip('tooltip-windows-2','55','29.8')
+              +tooltip('tooltip-windows-3','59','37.8')
+              +tooltip('tooltip-windows-4','48','55.8')
+              +tooltip('tooltip-windows-5','70','60.8')
+            .block-car-open-door
+              img(src='images/Cars/Noah/car-open-door.png', alt='Home banner.').car
+              .door
+                img(src='images/Cars/Noah/door-close.png', alt='Home banner.').close
+                img(src='images/Cars/Noah/door.png', alt='Home banner.').open
+            .block-arrow
+              .arrow.arrow-1
+                span
+                  | !{noahEngText.mother.arrowSize[0]}
+              .arrow.arrow-2
+                span
+                  | !{noahEngText.mother.arrowSize[1]}
+              .arrow.arrow-3.horizontal
+                span
+                  | !{noahEngText.mother.arrowSize[2]}
+
+          .block-ow-caption
+            .block-top-middle
+              .title
+                | !{noahEngText.mother.title}
+              .description
+                .editor-content
+                  | !{noahEngText.mother.description}
+        .item-furniture-car.banner-intel-scaling-item.car-section-content(data-title=noahEngText.child.dataTitle,data-class='slide-3').slide-3
+          .block-tab-car-content
+            .block-img.only-mobile
+              picture
+                source(srcset='images/Cars/Noah/img-small-1.jpg', media='(max-width: 1024px)')
+                img(src='images/Cars/Noah/img-1.jpg', alt='Home banner.', data-width='1920', data-height='799')
+            .block-img.image-center(data-id="1").active
+              picture
+                source(srcset='images/Cars/Noah/img-small-1.jpg', media='(max-width: 1024px)')
+                img(src='images/Cars/Noah/img-1.jpg', alt='Home banner.', data-width='1920', data-height='799')
+            .block-img.image-center(data-id="2")
+              picture
+                source(srcset='images/Cars/Noah/img-small-2.jpg', media='(max-width: 1024px)')
+                img(src='images/Cars/Noah/img-2.jpg', alt='Home banner.', data-width='1920', data-height='799')
+            .block-img.image-center(data-id="3")
+              picture
+                source(srcset='images/Cars/Noah/img-small-3.jpg', media='(max-width: 1024px)')
+                img(src='images/Cars/Noah/img-3.jpg', alt='Home banner.', data-width='1920', data-height='799')
+            .block-img.image-center(data-id="4")
+              picture
+                source(srcset='images/Cars/Noah/img-small-4.jpg', media='(max-width: 1024px)')
+                img(src='images/Cars/Noah/img-4.jpg', alt='Home banner.', data-width='1920', data-height='799')
+            .block-img.image-center(data-id="5")
+              picture
+                source(srcset='images/Cars/Noah/img-small-5.jpg', media='(max-width: 1024px)')
+                img(src='images/Cars/Noah/img-5.jpg', alt='Home banner.', data-width='1920', data-height='799')
+            .block-img.image-center(data-id="6")
+              picture
+                source(srcset='images/Cars/Noah/img-small-6.jpg', media='(max-width: 1024px)')
+                img(src='images/Cars/Noah/img-6.jpg', alt='Home banner.', data-width='1920', data-height='799')
+            .block-img.image-center(data-id="7")
+              picture
+                source(srcset='images/Cars/Noah/img-small-7.jpg', media='(max-width: 1024px)')
+                img(src='images/Cars/Noah/img-7.jpg', alt='Home banner.', data-width='1920', data-height='799')
+            .block-img.image-center(data-id="8")
+              picture
+                source(srcset='images/Cars/Noah/img-small-8.jpg', media='(max-width: 1024px)')
+                img(src='images/Cars/Noah/img-8.jpg', alt='Home banner.', data-width='1920', data-height='799')
+            .block-img.image-center(data-id="9")
+              picture
+                source(srcset='images/Cars/Noah/img-small-9.jpg', media='(max-width: 1024px)')
+                img(src='images/Cars/Noah/img-9.jpg', alt='Home banner.', data-width='1920', data-height='799')
+            .block-img.image-center(data-id="10")
+              picture
+                source(srcset='images/Cars/Noah/img-small-10.jpg', media='(max-width: 1024px)')
+                img(src='images/Cars/Noah/img-10.jpg', alt='Home banner.', data-width='1920', data-height='799')
+          
+          .block-tab-car-control
+            .block-control-nav-mobile
+              span.next &nbsp;
+              span.prev &nbsp;
+            .block-control
+              a(href="#", data-id="1").active
+                | !{noahEngText.child.chair[0]}
+              a(href="#", data-id="2")
+                | !{noahEngText.child.chair[1]}
+              a(href="#", data-id="3")
+                | !{noahEngText.child.chair[2]}
+              a(href="#", data-id="4")
+                | !{noahEngText.child.chair[3]}
+              a(href="#", data-id="5")
+                | !{noahEngText.child.chair[4]}
+              a(href="#", data-id="6")
+                | !{noahEngText.child.chair[5]}
+              a(href="#", data-id="7")
+                | !{noahEngText.child.chair[6]}
+              a(href="#", data-id="8")
+                | !{noahEngText.child.chair[7]}
+              a(href="#", data-id="9")
+                | !{noahEngText.child.chair[8]}
+              a(href="#", data-id="10")
+                | !{noahEngText.child.chair[9]}
+          
+          .block-ow-caption
+            .block-top-middle
+              .title
+                | !{noahEngText.child.title}
+              .description
+                .editor-content
+                  | !{noahEngText.child.description}
+          .block-text
+            | !{noahEngText.child.note}
+
+      .carousel-furniture-car-navigation.active
+        .container
+          span.prev &nbsp;
+          .editor-content.slide-title 
+            p.change 
+              | !{noahEngText.father.dataTitle}
+            p !{noahEngText.father.dataSubTitle}
+          span.next &nbsp;
+
+      .car-section-content.section-car-detail.block-tooltip-outslide
+        .block-popup
+          .tooltip-navigation
+            .container
+              span.prev &nbsp;
+              .editor-content.tooltip-title-container &nbsp;
+              span.next &nbsp;
+            .close-btn
+              a(href='#', title='close') &nbsp;
+          // Tooltip detail item
+          .tooltip-in-car.active
+            #tooltip-in-car-1.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+              .icon-tooltip-phone &nbsp;
+              p.tooltip-title !{noahEngText.father.tooltips[0]}
+              .images-container
+                .item.image-center
+                  img(src='images/Cars/Noah/01_interior_07.jpg', alt='img 1')
+              .dots-nav
+                a(href='#', data-index='1') &nbsp;
+            #tooltip-in-car-2.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+              .icon-tooltip-phone &nbsp;
+              p.tooltip-title !{noahEngText.father.tooltips[1]}
+              .images-container
+                .item.image-center
+                  img(src='images/Cars/Noah/01_interior_05.jpg', alt='img 1')
+              .dots-nav
+                a(href='#', data-index='1') &nbsp;
+            #tooltip-in-car-3.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+              .icon-tooltip-phone &nbsp;
+              p.tooltip-title !{noahEngText.father.tooltips[2]}
+              .images-container
+                .item.image-center
+                  img(src='images/Cars/Noah/01_interior_04.jpg', alt='img 1')
+              .dots-nav
+                a(href='#', data-index='1') &nbsp;
+            #tooltip-in-car-4.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+              .icon-tooltip-phone &nbsp;
+              p.tooltip-title !{noahEngText.father.tooltips[3]}
+              .images-container
+                .item.image-center
+                  img(src='images/Cars/Noah/01_interior_01.jpg', alt='img 1')
+              .dots-nav
+                a(href='#', data-index='1') &nbsp;
+            #tooltip-in-car-5.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+              .icon-tooltip-phone &nbsp;
+              p.tooltip-title !{noahEngText.father.tooltips[4]}
+              .images-container
+                .item.image-center
+                  img(src='images/Cars/Noah/01_interior_02a.jpg', alt='img 1')
+                .item.image-center
+                  img(src='images/Cars/Noah/01_interior_02b.jpg', alt='img 2')
+                .item.image-center
+                  img(src='images/Cars/Noah/01_interior_02c.jpg', alt='img 3')
+                .item.image-center
+                  img(src='images/Cars/Noah/01_interior_02d.jpg', alt='img 4')
+                .item.image-center
+                  img(src='images/Cars/Noah/01_interior_02e.jpg', alt='img 5')
+              .dots-nav
+                a(href='#', data-index='1') &nbsp;
+                a(href='#', data-index='2') &nbsp;
+                a(href='#', data-index='3') &nbsp;
+                a(href='#', data-index='4') &nbsp;
+                a(href='#', data-index='5') &nbsp;
+        .block-popup
+          .tooltip-navigation
+            .container
+              span.prev &nbsp;
+              .editor-content.tooltip-title-container &nbsp;
+              span.next &nbsp;
+            .close-btn
+              a(href='#', title='close') &nbsp;
+          // Tooltip detail item
+          .tooltip-windows
+            #tooltip-windows-1.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+              .icon-tooltip-phone &nbsp;
+              p.tooltip-title !{noahEngText.mother.tooltips[0]}
+              .images-container
+                .item.image-center
+                  img(src='images/Cars/Noah/01_interior_09.jpg', alt='img 1')
+              .dots-nav
+                a(href='#', data-index='1') &nbsp;
+            #tooltip-windows-2.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+              .icon-tooltip-phone &nbsp;
+              p.tooltip-title !{noahEngText.mother.tooltips[1]}
+              .images-container
+                .item.image-center
+                  img(src='images/Cars/Noah/01_interiorr_12.jpg', alt='img 1')
+              .dots-nav
+                a(href='#', data-index='1') &nbsp;
+            #tooltip-windows-3.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+              .icon-tooltip-phone &nbsp;
+              p.tooltip-title !{noahEngText.mother.tooltips[2]}
+              .images-container
+                .item.image-center
+                  img(src='images/Cars/Noah/01_interior_10.jpg', alt='img 1')
+              .dots-nav
+                a(href='#', data-index='1') &nbsp;
+            #tooltip-windows-4.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+              .icon-tooltip-phone &nbsp;
+              p.tooltip-title !{noahEngText.mother.tooltips[3]}
+              .images-container
+                .item.image-center
+                  img(src='images/Cars/Noah/01_interiorr_13.jpg', alt='img 1')
+              .dots-nav
+                a(href='#', data-index='1') &nbsp;
+            #tooltip-windows-5.tooltip-detail-content.tooltip-carousel-content(data-type='carousel')
+              .icon-tooltip-phone &nbsp;
+              p.tooltip-title !{noahEngText.mother.tooltips[4]}
+              .images-container
+                .item.image-center
+                  img(src='images/Cars/Noah/01_interior_11.jpg', alt='img 1')
+              .dots-nav
+                a(href='#', data-index='1') &nbsp;
+
+    //- car-detail
+    .section.section-car-detail.car-noah
+      .section-car-detail-navigation
+        .container
+          .tab.tab-3(data-id='3').active
+            span !{noahEngText.carDetail.tabTitle[2]}
+            .icon.icon-3 &nbsp;
+          //- .tab.tab-4(data-id='4')
+          //-   span !{noahEngText.carDetail.tabTitle[3]}
+          //-   .icon.icon-4 &nbsp;
+      .section-car-detail-content
+        #tab-3.active
+          .section-car-detail-content-performance.car-section-content.tab-content-car-carousel
+            // Image with carousel
+            .owl-carousel-car-view
+              .item.banner-intel-scaling-item
+                img(src='images/Cars/Noah/03_perfomance_04.jpg', alt='PERFORMANCE 1')
+              .item.banner-intel-scaling-item
+                img(src='images/Cars/Noah/03_perfomance_01.jpg', alt='PERFORMANCE 2')
+              .item.banner-intel-scaling-item
+                img(src='images/Cars/Noah/03_perfomance_02.jpg', alt='PERFORMANCE 3')
+              .item.banner-intel-scaling-item
+                img(src='images/Cars/Noah/03_perfomance_03.jpg', alt='PERFORMANCE 4')
+              .item.banner-intel-scaling-item
+                img(src='images/Cars/Noah/03_perfomance_05.jpg', alt='PERFORMANCE 5')
+                  
+            .owl-carousel-car-view-nav
+              .container
+                .nav-5
+                  a.prev(href="#") &nbsp;
+                  .editor-content.tooltip-title-container
+                      p !{noahEngText.carDetail.tooltipLandingPerformance.tooltips[0]}
+                      p.hide !{noahEngText.carDetail.tooltipLandingPerformance.tooltips[1]}
+                      p.hide !{noahEngText.carDetail.tooltipLandingPerformance.tooltips[2]}
+                      p.hide !{noahEngText.carDetail.tooltipLandingPerformance.tooltips[3]}
+                      p.hide !{noahEngText.carDetail.tooltipLandingPerformance.tooltips[4]}
+                  a.next(href="#") &nbsp;
+            //- .block-logo 
+            //-   img(src='images/Cars/Noah/logo-1.png', alt='Logo')
+        //- #tab-4
+        //-   .section-car-detail-content-safety.car-section-content.tab-content-car-carousel 
+        //-     // Image with carousel
+        //-     .owl-carousel-car-view
+        //-       //- .item.banner-intel-scaling-item
+        //-       //-   img(src='images/Cars/Noah/01_safety_01_cn.jpg', alt='SAFETY 2')
+        //-       .item.banner-intel-scaling-item
+        //-         img(src='images/Cars/Noah/01_safety_01_en.jpg', alt='SAFETY 1')
+        //-     .owl-carousel-car-view-nav
+        //-       .container
+        //-         .nav-5
+        //-           a.prev(href="#") &nbsp;
+        //-           .editor-content.tooltip-title-container
+        //-             p !{noahEngText.carDetail.tooltipLandingSafety.tooltips[0]}
+        //-             //- p.hide !{noahEngText.carDetail.tooltipLandingSafety.tooltips[1]}
+        //-           a.next(href="#") &nbsp;
+            
+    
+    //- change-color-car
+    .section.section-change-color-car.car-noah
+      .section-change-color-car-content
+        .container
+          .block-lists-car(style="background-image: url(images/Cars/Noah/00_shadow.png)")
+            img.img-create-height.hide(src='images/Cars/Noah/01_White_Pearl_Crystal_Shine.png', alt='')
+
+            .car.white-pearl-crystal-shine.active
+              img(src='images/Cars/Noah/01_White_Pearl_Crystal_Shine.png', alt='Car 1')
+            .car.silver-metalic
+              img(src='images/Cars/Noah/02_Silver_Metalic.png', alt='Car 1')
+            .car.Black
+              img(src='images/Cars/Noah/03_Black.png', alt='Car 1')
+            .car.deep-red-mica-metallic
+              img(src='images/Cars/Noah/04_Deep_Red_Mica_Metallic.png', alt='Car 1')
+            .car.dark-sherry-mica-metallic
+              img(src='images/Cars/Noah/05_Dark_Sherry_Mica_Metallic.png', alt='Car 1')
+            .car.ocean-mint-metallic
+              img(src='images/Cars/Noah/06_Ocean_Mint_Metallic.png', alt='Car 1')
+            .car.dark-violet
+              img(src='images/Cars/Noah/07_DarkViolet.png', alt='Car 1')
+
+            svg#mask-view(xmlns='http://www.w3.org/2000/svg', width='855px', height='469px', viewbox='0 0 855 469', xmlns:xlink='http://www.w3.org/1999/xlink')
+              defs
+                pattern#car-embed(patternunits='userSpaceOnUse', width='855', height='469')
+                  image#masked-image(xlink:href='images/Cars/Noah/01_White_Pearl_Crystal_Shine.png', x='0', y='0', width='855', height='469')
+              circle#walt-embed(cx='50', cy='50', r='40', stroke='none', fill='url(#car-embed)') &nbsp;
+          
+          .block-desctiption
+            .editor-content
+              | !{noahEngText.colors.description}
+          
+          .block-lists-color
+            .color-item(data-color='white-pearl-crystal-shine').active
+              .icon.white-pearl-crystal-shine
+                img(src='images/Cars/Noah/bg-color-car-1.png', alt='')
+              span !{noahEngText.colors.colorNames[0]}
+            .color-item(data-color='silver-metalic')
+              .icon.silver-metalic
+                img(src='images/Cars/Noah/bg-color-car-2.png', alt='')
+              span !{noahEngText.colors.colorNames[1]}
+            .color-item(data-color='Black')
+              .icon.Black
+                img(src='images/Cars/Noah/bg-color-car-3.png', alt='')
+              span !{noahEngText.colors.colorNames[2]}
+            .color-item(data-color='deep-red-mica-metallic')
+              .icon.deep-red-mica-metallic
+                img(src='images/Cars/Noah/bg-color-car-4.png', alt='')
+              span !{noahEngText.colors.colorNames[3]}
+            .color-item(data-color='dark-sherry-mica-metallic')
+              .icon.dark-sherry-mica-metallic
+                img(src='images/Cars/Noah/bg-color-car-5.png', alt='')
+              span !{noahEngText.colors.colorNames[4]}
+            .color-item(data-color='ocean-mint-metallic')
+              .icon.ocean-mint-metallic
+                img(src='images/Cars/Noah/bg-color-car-6.png', alt='')
+              span !{noahEngText.colors.colorNames[5]}
+            .color-item(data-color='dark-violet')
+              .icon.dark-violet
+                img(src='images/Cars/Noah/bg-color-car-7.png', alt='')
+              span !{noahEngText.colors.colorNames[6]}
+
+          .block-text
+            .container
+              .editor-content
+                | !{noahEngText.colors.note}
+
+    //- specification-car
+    .section.section-specification-car
+      .container
+        h2.title HIGHLIGHTED SPECIFICATION
+        .table-content
+          table
+            tbody
+              tr 
+                td(rowspan="2").title Dimensions & Weights
+                td Overall Length x Overall Width x <br/>Overall Height (mm) 
+                td 4,400 x 1,695 x 1,460
+              tr 
+                td Seating Capacity (including driver)
+                td 5
+
+              tr 
+                td(rowspan="4").title Engine
+                td Type
+                td Valve VVT-iE Engine with Start Stop <br/>System
+              tr 
+                td Displacement (cc)
+                td 1496
+              tr 
+                td *Max. Output   kW (PS) / rpm
+                td 80 (109) / 6,000
+              tr 
+                td *Max. Torque   Nm (kg-m) / rpms
+                td 136 (13.9) / 4,400
+                
+              tr 
+                td(rowspan="3").title Chassis
+                td Transmission Type
+                td CVT
+              tr 
+                td Fuel Consumption
+                td 23.4 km/L (JC08 mode)
+              tr 
+                td Tyre & Wheel 
+                td 175/65 R15 Alloy Wheel <br/>(Corolla Super Luxury)<br/>175/65 R15 Full Wheel Cap<br/>(Corolla Luxury)
+
+
+    //- components-car
+    .section.section-components-car
+      .section-components-car-content
+        .container
+          .row
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12
+              .block-downlink
+                a(href='#', title='Download e-Catalogue')
+                  i.fa.fa-download  
+                  span Download e-Catalogue
+                img(src='images/Cars/Noah/car-small.png', alt='Download')
+                a(href='#', title='Download Specification Sheet')
+                  i.fa.fa-download  
+                  span Download Specification Sheet
+
+    //- interest
+    .section.section-interest
+      +interest('YOU MAY ALSO HAVE INTEREST')
+
+      

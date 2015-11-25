@@ -1,0 +1,272 @@
+extends layouts/layout
+
+block vars
+  -title = 'One page app'
+  -bodyClass = 'app'
+block container
+  main#main
+    //- include includes/landing-page-section
+    include includes/activity-section
+    .board-section(style="display: block")
+      +board-navigator()
+      .board-container.col-1-3
+        div(data-type="consider").board.consider.show
+          .board-wrap
+            .board-title
+              .text CONSIDER
+              a(href="javascript:").btn.btn-avtivity-show
+              a(href="javascript:").btn.btn-avtivity-hide
+            .board-content
+              .board-content-scroll
+                .card-wrapper
+                  .overreview
+                    .title Roles & Ongoing Contributions: 
+                    .content 
+                      p A brief description of the role you will be performing in the business. 
+                      p These are the roles you will be doing as you are setting up your business, you may have different roles when the business is up and running. 
+                  .action
+                    a(href="javascript:").btn.btn-description
+                      .img
+                      span DESCRIPTION
+                    a(href="javascript:").btn.btn-suggestion
+                      .img
+                      span EXAMPLES
+                    a(href="javascript:").btn.btn-case-study
+                      .img
+                      span CASE STUDY
+                  .description
+                    .title Description 
+                    .content                
+                      p Keep in mind that as the business becomes operational it will be able to pay wages for the roles it requires. If Lemonaders want to stay in the business as employees this is a mechanism that ensures fair reward for effort. 
+                      p Some businesses choose to rely on dividends as their only financial reward for effort. This can work if the effort between the Lemonaders is still split along the same lines as the equity. If this changes Lemonaders may feel that they are not getting a fair reward for their work. 
+            .board-popup.case-study(style="display: none")
+              .board-wrap
+                .board-title
+                  .text CASE STUDY
+                  a(href="javascript:").btn.btn-case-study
+                  a(href="javascript:").btn.btn-close
+                .board-content
+                  .board-content-scroll
+                    .card-wrapper.board-popup-content
+                        .title The Dangers of Assumptions
+                        .content 
+                          p Jane and Bob decide to go into business together; they have worked together before in corporate life and don’t feel the need to go work through a Co-Founders Agreement (whatever that is). 
+                          P They set up their company and draft a basic shareholders agreement on a 50:50 share split and get going. They’ve decided for tax purposes that the best way to distribute their profits is through dividends and because they’ve worked together before they don’t really explore what decisions should be unanimous. 
+                          p Even in the early days their established links in the industry turn into solid revenue streams. At this point Bob who heads up the operational area starts to employ staff, as they come on stream Bob’s day to day work decreases. Meanwhile Jane heads sales in a very relationship focused industry, relationships which cannot be cultivated overnight. It turns out that Bob saw the business as a way to stop doing the kinds of day-to-day work he’d been doing whereas Jane loves the work. In a short space of time Jane is working 60+ hrs and Bob is only coming in to oversee his new staff for less than 20 hours a week. 
+                          p Jane feels that distributing profits through dividends doesn’t really reflect the difference in work. Bob points out that is the agreement and it’s hardly his fault that Jane has chosen to stay activity in the day to day business. Jane feels that there should have been more discussion before the staff were hired. Eventually one party buys out the other. The business continues but the relationship has broken down. 
+                          p Looking back Jane feels that if they had, had a deeper conversation about their roles and the decision making process they would have understood each other expectations and motivations a little better. Perhaps then they could still be in business together and have a stronger relationship. Jane feels the problems they ran into could have been worked through if they had spent a little more time on their agreements. 
+            .board-popup.note(style="display: none")
+              .board-wrap
+                .board-title
+                  .text NOTE
+                  a(href="javascript:").btn.btn-case-study
+                  a(href="javascript:").btn.btn-close
+                .board-content
+                  .board-content-scroll
+                    .card-wrapper.board-popup-content
+                        .title Roles & Ongoing Contributions:
+                        .content 
+                          p A brief description of the role you will be performing in the business. 
+                          p These are the roles you will be doing as you are setting up your business, you may have different roles when the business is up and running. 
+            .board-bottom-button
+              .btn-group.archive
+                a(href="javascript:", data-action="show-note").btn.btn-archive
+                span.btn-status.done
+        div(data-type="discuss").board.discuss.show
+          .board-wrap
+            .board-title
+              .text DISCUSS
+              a(href="javascript:").btn.btn-avtivity-show
+              a(href="javascript:").btn.btn-avtivity-hide
+            .board-content
+              .board-content-head
+               .select-filter.select-group
+                    .select-type
+                    .select-control
+                      .head.open
+                        span Events of Default
+                      ul
+                        li(title="Co-Founder Details")
+                          label Co-Founder Details
+                        li(title="Business Description")
+                          label Business Description 
+                        li(title="Business Name")
+                          label Business Name      
+                        li(title="Objectives")
+                          label Objectives
+
+                        li(title="Directors    ")
+                          label Directors    
+
+                        li(title="Contributions to Date")
+                          label Contributions to Date
+                        li(title="Roles & Ongoing Contributions")
+                          label Roles & Ongoing Contributions
+                        li(title="Equity Split")
+                          label Equity Split
+                        li(title="Unanimous Decisions")
+                          label Unanimous Decisions
+                        li(title="Termination of Agreement")
+                          label Termination of Agreement
+                        li(title="Termination Effects")
+                          label Termination Effects
+                        li(title="Events of Default")
+                          label Events of Default
+                a(href="javascript:").btn.btn-add-discuss
+              .board-content-scroll
+                #card-list.card-wrapper
+                  +card-discuss()
+                  +card-discuss()
+                  +card-discuss()
+                  +card-discuss()
+                  +card-discuss()
+                  +card-discuss()
+                  +card-discuss()
+                div(style="display: none")#card-type.card-wrapper
+                  +card-discuss-message()
+                  +card-discuss-single-select()
+                  +card-discuss-single-select()
+                  +card-discuss-single-select()
+                  +card-discuss-single-select()
+                  +card-discuss-single-select()
+                div(style="display: none")#discuss-tool.equity-wrapper
+                  .equity-group
+                    #mary.cup-container
+                      .animation
+                        img(src="images/sprites/cup-50.png")
+                        .layer.glass
+                        .percen-rule
+                          .layer.back
+                            .top
+                              img(src="images/sprites/water-layer-back-top.png")
+                            .bottom
+                              img(src="images/sprites/water-layer-back-bottom.png")
+                            .ice
+                              img(src="images/sprites/ice-block.png")
+                        .layer.content
+                          .pipe
+                        .percen-rule
+                          .layer.front
+                            .top
+                              img(src="images/sprites/water-layer-front-top.png")
+                            .bottom
+                              img(src="images/sprites/water-layer-front-bottom.png")
+                      .content
+                        .name Mary
+                        .percen 
+                          span 50%
+                    #john.cup-container
+                      .animation
+                        img(src="images/sprites/cup-50.png")
+                        .layer.glass
+                        .percen-rule
+                          .layer.back
+                            .top
+                              img(src="images/sprites/water-layer-back-top.png")
+                            .bottom
+                              img(src="images/sprites/water-layer-back-bottom.png")
+                            .ice
+                              img(src="images/sprites/ice-block.png")
+                        .layer.content
+                          .pipe
+                        .percen-rule
+                          .layer.front
+                            .top
+                              img(src="images/sprites/water-layer-front-top.png")
+                            .bottom
+                              img(src="images/sprites/water-layer-front-bottom.png")
+                      .content
+                        .name John
+                        .percen 
+                          span 50%
+                    #frankky.cup-container
+                      .animation
+                        img(src="images/sprites/cup-50.png")
+                        .layer.glass
+                        .percen-rule
+                          .layer.back
+                            .top
+                              img(src="images/sprites/water-layer-back-top.png")
+                            .bottom
+                              img(src="images/sprites/water-layer-back-bottom.png")
+                            .ice
+                              img(src="images/sprites/ice-block.png")
+                        .layer.content
+                          .pipe
+                        .percen-rule
+                          .layer.front
+                            .top
+                              img(src="images/sprites/water-layer-front-top.png")
+                            .bottom
+                              img(src="images/sprites/water-layer-front-bottom.png")
+                      .content
+                        .name Frankky
+                        .percen 
+                          span 50%
+                  .status-group
+                    a(href="javascript:").btn.btn-check-discuss
+                    a(href="javascript:").btn.btn-check-agree
+                    a(href="javascript:").btn.btn-check-consider
+                  .card-wrapper
+                    +card-discuss-message()
+            .board-popup.archive(style="display: none")
+              .board-wrap
+                .board-title
+                  .text ARCHIVE
+                  a(href="javascript:").btn.btn-case-study
+                  a(href="javascript:").btn.btn-close
+                .board-content
+                  .board-content-scroll
+                    .card-wrapper.board-popup-content
+                      +card-discuss-single()
+                      +card-discuss-overlay-popup()
+                      +card-discuss-single()
+                      +card-discuss-popup().active
+                      +card-discuss-single()
+                      +card-discuss-single()
+            .board-popup.history(style="display: none")
+              .board-wrap
+                .board-title
+                  .text HISTORY
+                  a(href="javascript:").btn.btn-case-study
+                  a(href="javascript:").btn.btn-close
+                .board-content
+                  .board-content-scroll
+                    .card-wrapper.board-popup-content
+                      +card-discuss-single()
+                      +card-discuss-single()
+                      +card-discuss-single()
+                      +card-discuss-popup().active
+                      +card-discuss-single()
+                      +card-discuss-single()
+            .board-bottom-button
+              .btn-group.archive
+                a(href="javascript:").btn.btn-folder
+                span.btn-status.number 10
+        div(data-type="agree").board.agree.show
+          .board-wrap
+            .board-title
+              .text AGREE
+              a(href="javascript:").btn.btn-avtivity-show
+              a(href="javascript:").btn.btn-avtivity-hide
+            .board-content
+              .board-content-head
+                .filter-status
+                  a(href="javascript:").btn.btn-status-consider
+                  a(href="javascript:").btn.btn-status-discuss
+                  a(href="javascript:").btn.btn-status-agree
+              .board-content-scroll
+                .card-wrapper
+                  +card()
+                  +card()
+                  +card()
+                  +card()
+                  +card()
+                
+      .board-min-container
+        a(href="javascript:", data-type="discuss").btn.discuss
+        a(href="javascript:", data-type="consider").btn.consider
+        a(href="javascript:", data-type="agree").btn.agree
+
+
+    //- include includes/edit-modal

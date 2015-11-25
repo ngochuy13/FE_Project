@@ -1,0 +1,2230 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"image",
+				"imageUrl"
+			],
+			[
+				"c_pr",
+				"c_purple_hover"
+			],
+			[
+				"hover",
+				"hover-color"
+			],
+			[
+				"text",
+				"text-center"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"mas",
+				"masonryInit"
+			],
+			[
+				"in",
+				"inherit"
+			],
+			[
+				"bottom",
+				"bottom-bar"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"block",
+				"inline-block"
+			],
+			[
+				"re",
+				"removeAttr"
+			],
+			[
+				"scroll",
+				"scrollY"
+			],
+			[
+				"visib",
+				"visible-sm-inline-block"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"bur",
+				"btnBurger"
+			],
+			[
+				"menu",
+				"menu-moving"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"tran",
+				"transition"
+			],
+			[
+				"m",
+				"menu-on"
+			],
+			[
+				"Has",
+				"hasClass"
+			],
+			[
+				"img",
+				"imgPath"
+			],
+			[
+				"visible-md-inline",
+				"visible-md-inline-block"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"tog",
+				"toggleBtn"
+			],
+			[
+				"page",
+				"page-templates"
+			],
+			[
+				"file",
+				"fileStream"
+			],
+			[
+				"css",
+				"csso"
+			],
+			[
+				"pre",
+				"preload-layer"
+			],
+			[
+				"nex",
+				"nextInd"
+			],
+			[
+				"ne",
+				"nextInd"
+			],
+			[
+				"cur",
+				"current-idx"
+			],
+			[
+				"cu",
+				"current-idx"
+			],
+			[
+				"car",
+				"carViewCarouselNav"
+			],
+			[
+				"set",
+				"setTimeout"
+			],
+			[
+				"res",
+				"resizeTimeout"
+			],
+			[
+				"blo",
+				"block-ow-caption"
+			],
+			[
+				"title",
+				"title-small"
+			],
+			[
+				"tra",
+				"transition"
+			],
+			[
+				"e",
+				"element"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"is",
+				"isNext"
+			],
+			[
+				"trans",
+				"translateZ"
+			],
+			[
+				"tool",
+				"tooltip-landing-exterior"
+			],
+			[
+				"drop",
+				"dropzone"
+			],
+			[
+				"Pr",
+				"PriusC"
+			],
+			[
+				"titl",
+				"title-small"
+			],
+			[
+				"tr",
+				"transform"
+			],
+			[
+				"mask",
+				"maskWidth"
+			],
+			[
+				"handle",
+				"handles"
+			],
+			[
+				"win",
+				"winW"
+			],
+			[
+				"hande",
+				"handles"
+			],
+			[
+				"toolt",
+				"tooltip-title"
+			],
+			[
+				"owl",
+				"owlCarousel"
+			],
+			[
+				"dir",
+				"dirNext"
+			],
+			[
+				"tooltip-title",
+				"tooltip-title-container"
+			],
+			[
+				"tab",
+				"tabDetailContent"
+			],
+			[
+				"range",
+				"rangeslider__handle"
+			],
+			[
+				"sec",
+				"section-light-in-car"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"step",
+				"step-2"
+			],
+			[
+				"ele",
+				"element"
+			],
+			[
+				"subsc",
+				"Subscribe"
+			],
+			[
+				"white",
+				"white-space"
+			],
+			[
+				"sur",
+				"surveyData"
+			],
+			[
+				"dtb",
+				"d:tbc	display:table-cell"
+			],
+			[
+				"star",
+				"star-rating"
+			],
+			[
+				"init",
+				"initPopupSurvey"
+			],
+			[
+				"surve",
+				"survey-rating"
+			],
+			[
+				"valida",
+				"validateCarModel"
+			],
+			[
+				"form",
+				"formObj"
+			],
+			[
+				"tex",
+				"textarea"
+			],
+			[
+				"ch",
+				"checked"
+			],
+			[
+				"par",
+				"parseRaioCheckbox"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"attr",
+				"attrsObj"
+			],
+			[
+				"Chassi",
+				"Chassis"
+			],
+			[
+				"whe",
+				"WheelControl"
+			],
+			[
+				"wheel-item",
+				"wheel-banner-item--active"
+			],
+			[
+				"show",
+				"show-img"
+			],
+			[
+				"center",
+				"center-detail"
+			],
+			[
+				"colo",
+				"color-item"
+			],
+			[
+				"data",
+				"dataTaget"
+			],
+			[
+				"view",
+				"viewCarDetail"
+			],
+			[
+				"carousel",
+				"carouselCarview"
+			],
+			[
+				"sha",
+				"shareStatus"
+			],
+			[
+				"gr",
+				"gridLineUnit"
+			],
+			[
+				"draw",
+				"drawChart"
+			],
+			[
+				"item",
+				"itemFrag"
+			],
+			[
+				"att",
+				"attendees"
+			],
+			[
+				"chart",
+				"chart-column"
+			],
+			[
+				"futa",
+				"futura-book"
+			],
+			[
+				"gri",
+				"gridHTML"
+			],
+			[
+				"checkbo",
+				"checkbox-primary"
+			],
+			[
+				"poi",
+				"pointer-events"
+			],
+			[
+				"Atac",
+				"Attachment"
+			],
+			[
+				"mod",
+				"modal-item-body"
+			],
+			[
+				"futura",
+				"futura-bold"
+			],
+			[
+				"evn",
+				"events"
+			],
+			[
+				"redner",
+				"renderView"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"plug",
+				"pluginName"
+			],
+			[
+				"attac",
+				"attachment-content"
+			],
+			[
+				"loading",
+				"loading-sign"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"elem",
+				"elementClass"
+			],
+			[
+				"mw",
+				"min-width"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"whi",
+				"white-space"
+			],
+			[
+				"futu",
+				"futura-bold"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"collec",
+				"collectSelectedDataInModal"
+			],
+			[
+				"resul",
+				"resultFragment"
+			],
+			[
+				"filter",
+				"filter-block"
+			],
+			[
+				"selec",
+				"selectedIds"
+			],
+			[
+				"labe",
+				"labelGroup"
+			],
+			[
+				"se",
+				"settings"
+			],
+			[
+				"sel",
+				"select"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"recipe",
+				"recipients-2"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"lsn",
+				"lis:n	list-style:none"
+			],
+			[
+				"label",
+				"labelContainer"
+			],
+			[
+				"get",
+				"getSelected"
+			],
+			[
+				"jq",
+				"jqXhr"
+			],
+			[
+				"select",
+				"selectedUserArr"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/styles/block.sass",
+			"settings":
+			{
+				"buffer_size": 18360,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/article.sass",
+			"settings":
+			{
+				"buffer_size": 6714,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gulpfile.js",
+			"settings":
+			{
+				"buffer_size": 7295,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/jade/map.jade",
+			"settings":
+			{
+				"buffer_size": 3380,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/map.sass",
+			"settings":
+			{
+				"buffer_size": 2344,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/jade/layouts/layout.jade",
+			"settings":
+			{
+				"buffer_size": 4073,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/main.js",
+			"settings":
+			{
+				"buffer_size": 8386,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Sample Rules\n\nTo redirect an old domain to a new domain:\n\nRewriteCond %{HTTP_HOST} old_domain\\.com [NC] \nRewriteRule ^(.*)$ http://www.new_domain.com/$1 [L,R=301]\nTo redirect all requests missing \"www\" (yes www):\n\nRewriteCond %{HTTP_HOST} ^domain\\.com [NC] \nRewriteRule ^(.*)$ http://www.domain.com/$1 [L,R=301]\nTo redirect all requests with \"www\" (no www):\n\nRewriteCond %{HTTP_HOST} ^www\\.domain\\.com [NC] \nRewriteRule ^(.*)$ http://domain.com/$1 [L,R=301]\nRedirect old page to new page:\n\nRewriteRule ^old-url\\.htm$ http://www.domain.com/new-url.htm [NC,R=301,L]\n",
+			"settings":
+			{
+				"buffer_size": 564,
+				"line_ending": "Unix",
+				"name": "Sample Rules"
+			}
+		},
+		{
+			"file": "app/jade/index.jade",
+			"settings":
+			{
+				"buffer_size": 1278,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/main.sass",
+			"settings":
+			{
+				"buffer_size": 706,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "close",
+		"selected_items":
+		[
+			[
+				"close",
+				"File: Close All"
+			],
+			[
+				"cop",
+				"File: Copy Name"
+			],
+			[
+				"de",
+				"File: Delete"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"form",
+				"Format: Javascript"
+			],
+			[
+				"copy",
+				"File: Copy Path"
+			],
+			[
+				"lorem",
+				"LoremIpsum: (5) a bit"
+			],
+			[
+				"dup",
+				"File: Duplicate"
+			],
+			[
+				"setjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"save",
+				"Project: Save As"
+			],
+			[
+				"html",
+				"HTMLPrettify"
+			],
+			[
+				"pretify",
+				"HTMLPrettify"
+			],
+			[
+				"pret",
+				"HTMLPrettify: Set Prettify Preferences"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"duplica",
+				"File: Duplicate"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insal",
+				"Package Control: Install Package"
+			],
+			[
+				"setsass",
+				"Set Syntax: Sass"
+			],
+			[
+				"rename",
+				"File: Rename"
+			],
+			[
+				"sethtml",
+				"Set Syntax: HTML"
+			],
+			[
+				"dupl",
+				"File: Duplicate"
+			],
+			[
+				"setsas",
+				"Set Syntax: Sass"
+			],
+			[
+				"move",
+				"File: Move"
+			],
+			[
+				"delete",
+				"File: Delete"
+			],
+			[
+				"wr",
+				"Emmet: Wrap With Abbreviation"
+			],
+			[
+				"wra",
+				"Word Wrap: Toggle"
+			],
+			[
+				"pro",
+				"Project: Close"
+			],
+			[
+				"proj cl",
+				"Project: Close"
+			],
+			[
+				"jscs",
+				"JSCS Formatter: Format this file"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"add",
+				"Project: Add Folder"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"wrpa",
+				"Word Wrap: Toggle"
+			],
+			[
+				"renam",
+				"File: Rename"
+			],
+			[
+				"setscss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"setht",
+				"Set Syntax: HTML"
+			],
+			[
+				"settwig",
+				"Set Syntax: HTML (Twig)"
+			],
+			[
+				"setjson",
+				"Set Syntax: JSON"
+			],
+			[
+				"update",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"format",
+				"Format: Javascript"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"delet",
+				"File: Delete"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"clo",
+				"Project: Close"
+			],
+			[
+				"brows",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/apple/Documents/ipswich",
+		"/Users/apple/Documents/ipswich/app",
+		"/Users/apple/Documents/ipswich/dist",
+		"/Users/apple/Documents/ipswich/dist/scripts"
+	],
+	"file_history":
+	[
+		"/Users/apple/Documents/vagrant/projects/learningphp/.htaccess",
+		"/Users/apple/Documents/ipswich/app/scripts/lib-demo.js",
+		"/Users/apple/Documents/ipswich/app/jade/libraries.jade",
+		"/Users/apple/Documents/ipswich/bower.json",
+		"/Users/apple/Documents/ipswich/app/jade/mixins/form.jade",
+		"/Users/apple/Documents/ipswich/app/jade/events.jade",
+		"/Users/apple/Documents/ipswich/app/jade/index.jade",
+		"/Users/apple/Documents/ipswich/app/jade/home.jade",
+		"/Users/apple/Documents/ipswich/app/jade/layouts/layout.jade",
+		"/Users/apple/Documents/ipswich/app/styles/block.sass",
+		"/Users/apple/Documents/ipswich/app/styles/story-telling.sass",
+		"/Users/apple/Documents/ipswich/gulpfile.js",
+		"/Users/apple/Documents/ipswich/.tmp/story-telling.html",
+		"/Users/apple/Documents/ipswich/app/jade/story-telling.jade",
+		"/Users/apple/Documents/ipswich/app/styles/header.sass",
+		"/Users/apple/Documents/ipswich/app/scripts/navigation.js",
+		"/Users/apple/Documents/ipswich/app/jade/includes/header.jade",
+		"/Users/apple/Documents/ipswich/app/styles/main.sass",
+		"/Users/apple/Documents/ipswich/app/jade/blog-article.jade",
+		"/Users/apple/Documents/ipswich/app/jade/event-detail.jade",
+		"/Users/apple/Documents/ipswich/app/scripts/main.js",
+		"/Users/apple/Documents/ipswich/app/jade/map.jade",
+		"/Users/apple/Documents/ipswich/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_media.scss",
+		"/Users/apple/Documents/ipswich/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_wells.scss",
+		"/Users/apple/Documents/ipswich/app/scripts/marker.clusterer.js",
+		"/Users/apple/Documents/ipswich/app/styles/variable.sass",
+		"/Users/apple/Documents/ipswich/app/data/data.json",
+		"/Users/apple/Documents/ipswich/.tmp/libraries.html",
+		"/Users/apple/Documents/ipswich/app/jade/z.jade",
+		"/Users/apple/Documents/ipswich/app/styles/mixins.sass",
+		"/Users/apple/Documents/ipswich/app/styles/article.sass",
+		"/Users/apple/Documents/ipswich/changes-log/Readme.md",
+		"/Users/apple/Documents/ipswich/node_modules/autoprefixer-core/node_modules/caniuse-db/features-json/link-icon-png.json",
+		"/Users/apple/Documents/ipswich/bower_components/jquery-rateyo/src/jquery.rateyo.css",
+		"/Users/apple/Documents/ipswich/bower_components/jquery-rateyo/min/jquery.rateyo.min.css",
+		"/Users/apple/Documents/ipswich/bower_components/jquery-rateyo/min/jquery.rateyo.min.js",
+		"/etc/hosts",
+		"/Users/apple/Documents/ipswich/app/styles/footer.sass",
+		"/Users/apple/Documents/ipswich/app/jade/includes/footer.jade",
+		"/Users/apple/Documents/ipswich/app/scripts/footer.js",
+		"/Users/apple/Documents/ipswich/package.json",
+		"/Users/apple/Documents/ipswich/app/scripts/utils.js",
+		"/Users/apple/Documents/ipswich/node_modules/autoprefixer-core/lib/utils.js",
+		"/Users/apple/Documents/ipswich/app/styles/pages.sass",
+		"/Users/apple/Documents/ipswich/app/styles/bootstrap.scss",
+		"/Users/apple/Documents/ipswich/app/styles/common.sass",
+		"/Users/apple/Documents/ipswich/bower_components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js",
+		"/Users/apple/Documents/ipswich/app/styles/reset.sass",
+		"/Users/apple/Documents/ipswich/bower_components/fontawesome/scss/_icons.scss",
+		"/Users/apple/Documents/ipswich/bower_components/fontawesome/scss/_variables.scss",
+		"/Users/apple/Documents/ipswich/bower_components/fontawesome/css/font-awesome.css",
+		"/Users/apple/Documents/ipswich/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss",
+		"/Users/apple/Documents/ipswich/bower_components/bootstrap-sass/assets/stylesheets/bootstrap.scss",
+		"/Users/apple/Documents/ipswich/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_scaffolding.scss",
+		"/Users/apple/Documents/header.jade",
+		"/Users/apple/Documents/navigation.js",
+		"/Users/apple/Documents/header.sass",
+		"/Users/apple/Documents/ipswich/app/styles/plugins-css.scss",
+		"/Users/apple/Documents/ipswich/app/scripts/jquery.megamenu.js",
+		"/Users/apple/Documents/ipswich/app/jade/404.jade",
+		"/Users/apple/Documents/ipswich/app/styles/libs.sass",
+		"/Users/apple/Documents/ipswich/app/jade/mixins/img.jade",
+		"/Users/apple/Documents/carbrandkentico8/_html/gulpfile.js",
+		"/Users/apple/Documents/carbrandkentico8/_html/package.json",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/plugins.sass",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/sass/car-ractis.sass",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/header.sass",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/scripts/lib-js/maplace-main.js",
+		"/Users/apple/Documents/carbrandkentico8/_html/static/app/scripts/form.js",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/sass/car-spade.sass",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/jade/store-locator.jade",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/jade/car-ractis.jade",
+		"/Users/apple/Documents/carbrandkentico8/_html/dist/styles/main.css",
+		"/Users/apple/Documents/carbrandkentico8/_html/node_modules/node-sass/node_modules/glob/glob.js",
+		"/Users/apple/Documents/carbrandkentico8/.git/MERGE_MSG",
+		"/Users/apple/Documents/carbrandkentico8/_html/.tmp/styles/main.css",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/jade/car-prius-c.jade",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/sass/car-sienta.sass",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/jade/car-spade.jade",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/jade/car-spade-tc.jade",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/sass/car-carousel-gallery.sass",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/jade/car-corolla.jade",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/scripts/main.js",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/jade/car-sienta-v2.jade",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/jade/car-camry.jade",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/jade/car-camry-tc.jade",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/jade/car-ractis-tc.jade",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/jade/car-noah.jade",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/jade/car-noah-tc.jade",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/jade/car-sienta.jade",
+		"/Users/apple/Documents/carbrandkentico8/CMS/html/scripts/owl.carousel.js",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/scripts/lib-js/form.js",
+		"/Users/apple/Documents/carbrandkentico8/_html/.tmp/car-spade-tc.html",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/jade/car-sienta-tc.jade",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/jade/mixins/car-detail.jade",
+		"/Users/apple/Documents/carbrandkentico8/_html/.tmp/car-ractis-tc.html",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/sass/car-camry.sass",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/jade/layouts/layout.jade",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/scripts/lib-js/general-ui.js",
+		"/Users/apple/Documents/carbrandkentico8/CMS/html/styles/after-sales.sass",
+		"/Users/apple/Documents/carbrandkentico8/_html/.tmp/contact-us-landing.html",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/jade/contact-us-landing.jade",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/icon-to-server.sass",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/sass/contact-us-landing.sass",
+		"/Users/apple/Documents/carbrandkentico8/CMS/CMSModules/ContactManagement/FormControls/ContactStatusSelector.ascx",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/car-detail.sass",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/jade/includes/text-translation.jade",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/sass/car-noah.sass",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/sass/car-prius-c.sass",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/scripts/lib-js/car-unique-characters.js",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/scripts/lib-js/owl.carousel.js",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/scripts/lib-js/car-change-color-slide.js",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/scripts/lib-js/car-detail-interaction.js",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/jade/price-list.jade",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/sass/form.sass",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/sass/master-banner.scss",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/sass/car-corolla.sass",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/sass/responsive.sass",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/sass/finance.sass",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/sass/car-drag.sass",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/lib-scss/bootstrap.scss",
+		"/Users/apple/Documents/carbrandkentico8/_html/.tmp/car-ractis.html",
+		"/Users/apple/Documents/carbrandkentico8/_html/dist/scripts/car-detail.js",
+		"/Users/apple/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/Users/apple/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/Users/apple/Documents/carbrandkentico8/_html/dist/scripts/car-mask-slider.js",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/common.sass",
+		"/Users/apple/Documents/carbrandkentico8/_html/app/styles/main.sass"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 119.0,
+		"where_history":
+		[
+			"/Users/apple/Documents/ipswich/app/scripts",
+			"/Users/apple/Documents/ipswich/app/styles",
+			"/Users/apple/Documents/ipswich/styles",
+			"/Users/apple/Documents/ipswich/bower_components/bootstrap-sass",
+			"/Users/apple/Documents/metlife/app",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/styles",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/scripts",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/styles",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/jade",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/styles",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/jade",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/styles",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/scripts",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/jade",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/styles",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/jade",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/styles",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/sass",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/jade",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/styles",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/scripts",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/styles",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/jade",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/styles",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/style",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/sass",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/scripts",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/js",
+			"/Users/apple/Documents/carbrandkentico8/_html/app/styles",
+			"/Users/apple/Documents/carbrandkentico8/_html/static/app/styles",
+			"/Users/apple/Documents/carbrandkentico8/_html/static/app/jade",
+			"/Users/apple/Documents/carbrandkentico8/_html/static/app/styles",
+			"/Users/apple/Documents/carbrandkentico8/_html/static/app/scripts",
+			"/Users/apple/Documents/carbrandkentico8/_html/static/app/styles",
+			"/Users/apple/Documents/world-policy-forum/world-policy-forum/app/scripts",
+			"/Users/apple/Documents/world-policy-forum/world-policy-forum/app/styles",
+			"/Users/apple/Documents/world-policy-forum/world-policy-forum/app/views",
+			"/Users/apple/Documents/world-policy-forum/world-policy-forum/app/styles",
+			"/Users/apple/Documents/world-policy-forum/world-policy-forum/app/scripts",
+			"/Users/apple/Documents/world-policy-forum/world-policy-forum/app",
+			"/Users/apple/Documents/ed000321/",
+			"/Users/apple/Documents/ed000321/src/Samsung/AlertBundle/Resources/public/js",
+			"/Users/apple/Documents/ed000321/_html/app/styles",
+			"/Users/apple/Documents/ed000321/src",
+			"/Users/apple/Documents/ed000321/_html/app/styles",
+			"/Users/apple/Documents/ed000321/_html/app/bower_components/bootstrap-sass",
+			"/Users/apple/Documents/ed000321/_html/app/styles",
+			"/Users/apple/Documents/ed000321/_html/app/scripts",
+			"/Users/apple/Documents/ed000321/_html/app/styles",
+			"/Users/apple/Documents/ed000321/_html/app",
+			"/Users/apple/Documents/ed000321/src/Samsung",
+			"/Users/apple/Documents/ed000321/_html/app/styles",
+			"/Users/apple/Documents/ed000321/app/styles",
+			"/Users/apple/Documents/ed000321/src/Samsung",
+			"/Users/apple/Documents/ed000321/_html/app/styles",
+			"/Users/apple/Documents/ed000321/_html/styles",
+			"/Users/apple/Documents/ed000321/_html/dist/scripts",
+			"/Users/apple/Documents/ed000321/_html/app/scripts",
+			"/Users/apple/Documents/ed000321/_html/app/styles",
+			"/Users/apple/Documents/ed000321/_html/app/jade",
+			"/Users/apple/Documents/ed000321/src/Samsung",
+			"/Users/apple/Documents/ed000321/_html/app/styles",
+			"/Users/apple/Documents/ed000321/src/Samsung",
+			"/Users/apple/Documents/ed000321/_html/app/styles",
+			"/Users/apple/Documents/ed000321/src/Samsung",
+			"/Users/apple/Documents/ed000321/src/Samsung/NoteBundle/Resources/views",
+			"/Users/apple/Documents/ed000321/src/Samsung/ProfileBundle/Resources/views",
+			"/Users/apple/Documents/ed000321/src/Samsung/AlertBundle/Resources/views",
+			"/Users/apple/Documents/ed000321/src/Samsung",
+			"/Users/apple/Documents/ed000321/_html/app/styles",
+			"/Users/apple/Documents/ed000321/_html/app/jade",
+			"/Users/apple/Documents/ed000321/_html/app/styles",
+			"/Users/apple/Documents/ed000321/_html/app/jade",
+			"/Users/apple/Documents/ed000321/_html/app/styles",
+			"/Users/apple/Documents/ed000321/_html/app/jade",
+			"/Users/apple/Documents/ed000321/_html/app/styles",
+			"/Users/apple/Documents/fs000304/_html/app/styles/"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			";",
+			"{",
+			"}",
+			" {",
+			"<<<<<",
+			"height",
+			"textSize_",
+			"textColor_",
+			"font",
+			"imageURL",
+			"marker",
+			"m1.png",
+			"http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/images/m1.png",
+			"buildAssetArray",
+			"image",
+			"15px",
+			"40",
+			".description",
+			"\n                  .fa.fa-angle-right",
+			"separat",
+			"separate",
+			"purple",
+			"#feb61a",
+			"feb61a",
+			"9c5134",
+			"7888a1",
+			"orange",
+			"c_orange",
+			"#d3da95",
+			"d1db96",
+			"read more",
+			"991",
+			"ODFC.EVENT",
+			"isOpen",
+			"make-booking",
+			"Make a b",
+			"active",
+			"hover",
+			"+link('documentation",
+			">",
+			"<",
+			"'",
+			"background",
+			"$c_sandy_brown",
+			"glyphicon",
+			"rate",
+			">",
+			"<",
+			">",
+			"<",
+			"<option",
+			">",
+			"<",
+			"search",
+			"255",
+			"popup",
+			"0123 2343 2344",
+			"0 15px",
+			"meta-data",
+			"watch",
+			"*.jade",
+			"page-templates",
+			"all-templates",
+			"watch",
+			"page-tem",
+			"changed",
+			"page-te",
+			"search-field",
+			"search-text",
+			"search-field",
+			"img",
+			"list-mode",
+			"order",
+			"sizer",
+			"ODFC",
+			".row",
+			"758",
+			".visible-xs.visibile-sm.bottom-bar",
+			".overlay-info",
+			"hover",
+			"996ca0",
+			".overlay-info",
+			"detail",
+			".interact\n            button \n              .fa.fa-heart\n              | 12",
+			"close",
+			"20",
+			".visible-sm-inline-block",
+			";",
+			"ELSE",
+			"bottom",
+			".collapsing",
+			"false",
+			".collapse",
+			"bootstrap",
+			".toggle",
+			"data-parent='#accordion'",
+			"collapseO",
+			"a.toggle",
+			".col-lg-3",
+			".col-md-6",
+			"18px",
+			"menu-on",
+			".close",
+			".close ",
+			"cb",
+			"close",
+			"top",
+			"btnBurger",
+			"hasClass",
+			"btn-b",
+			"btn-",
+			"menu-open",
+			"icog",
+			"iCog",
+			"resizeWindow",
+			"btnbu",
+			"height",
+			"active",
+			".close",
+			"nav-collapsed",
+			"navCollapsed",
+			"nav-col",
+			"module.close",
+			"$(\".navigation\")",
+			".height",
+			"xscroll",
+			"btnBurger",
+			"top"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"challenge__rules",
+			"car-embed",
+			"+itemSelectionModal("
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/styles/block.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18360,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								28,
+								29
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/styles/article.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6714,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5030,
+								5030
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3390.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "gulpfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7295,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								511,
+								511
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/Seti_UI/Langs/Gulpfile JS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/jade/map.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3380,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								173,
+								173
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/styles/map.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2344,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								970,
+								970
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/jade/layouts/layout.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4073,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3425,
+								3414
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 687.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/scripts/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8386,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 539.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 564,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								564
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"auto_name": "Sample Rules",
+							"default_dir": "/Users/apple/Documents/ipswich",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/jade/index.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1278,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/styles/main.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 706,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": -0.0,
+						"translation.y": 362.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Ipswich.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"mapsas",
+				"app/styles/map.sass"
+			],
+			[
+				"layout",
+				"app/jade/layouts/layout.jade"
+			],
+			[
+				"map",
+				"app/jade/map.jade"
+			],
+			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"articlesas",
+				"app/styles/article.sass"
+			],
+			[
+				"articlsas",
+				"app/styles/article.sass"
+			],
+			[
+				"mainjs",
+				"app/scripts/main.js"
+			],
+			[
+				"indejade",
+				"app/jade/index.jade"
+			],
+			[
+				"article",
+				"app/styles/article.sass"
+			],
+			[
+				"mainsas",
+				"app/styles/main.sass"
+			],
+			[
+				"blocsas",
+				"app/styles/block.sass"
+			],
+			[
+				"well",
+				"bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_wells.scss"
+			],
+			[
+				"mediascss",
+				"bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_media.scss"
+			],
+			[
+				"mapjade",
+				"app/jade/map.jade"
+			],
+			[
+				"var",
+				"app/styles/variable.sass"
+			],
+			[
+				"layoutjade",
+				"app/jade/layouts/layout.jade"
+			],
+			[
+				"index",
+				"app/jade/index.jade"
+			],
+			[
+				"librarjade",
+				"app/jade/libraries.jade"
+			],
+			[
+				"librari",
+				".tmp/libraries.html"
+			],
+			[
+				"zjade",
+				"~/Documents/ipswich/app/jade/z.jade"
+			],
+			[
+				"gulpfile",
+				"gulpfile.js"
+			],
+			[
+				"storyjade",
+				"app/jade/story-telling.jade"
+			],
+			[
+				"storysas",
+				"app/styles/story-telling.sass"
+			],
+			[
+				"mixinsas",
+				"app/styles/mixins.sass"
+			],
+			[
+				"block",
+				"app/styles/block.sass"
+			],
+			[
+				"va",
+				"app/styles/variable.sass"
+			],
+			[
+				"varia",
+				"app/styles/variable.sass"
+			],
+			[
+				"storytelljade",
+				"app/jade/story-telling.jade"
+			],
+			[
+				"storytell",
+				".tmp/story-telling.html"
+			],
+			[
+				"navigat",
+				"app/scripts/navigation.js"
+			],
+			[
+				"eventdetaijade",
+				"app/jade/event-detail.jade"
+			],
+			[
+				"articlejade",
+				"app/jade/blog-article.jade"
+			],
+			[
+				"header",
+				"app/styles/header.sass"
+			],
+			[
+				"libra",
+				"app/jade/libraries.jade"
+			],
+			[
+				"",
+				"bower.json"
+			],
+			[
+				"librar",
+				"app/jade/libraries.jade"
+			],
+			[
+				"bower",
+				"bower.json"
+			],
+			[
+				"blocksas",
+				"app/styles/block.sass"
+			],
+			[
+				"lidemo",
+				"app/scripts/lib-demo.js"
+			],
+			[
+				"libde",
+				"app/scripts/lib-demo.js"
+			],
+			[
+				"formjade",
+				"app/jade/mixins/form.jade"
+			],
+			[
+				"navigation",
+				"app/scripts/navigation.js"
+			],
+			[
+				"headersas",
+				"app/styles/header.sass"
+			],
+			[
+				"variab",
+				"app/styles/variable.sass"
+			],
+			[
+				"headerjade",
+				"app/jade/includes/header.jade"
+			],
+			[
+				"articesas",
+				"app/styles/article.sass"
+			],
+			[
+				"main",
+				"app/scripts/main.js"
+			],
+			[
+				"eventjade",
+				"app/jade/events.jade"
+			],
+			[
+				"li",
+				"node_modules/autoprefixer-core/node_modules/caniuse-db/features-json/link-icon-png.json"
+			],
+			[
+				"gu",
+				"gulpfile.js"
+			],
+			[
+				"rateyo.css",
+				"bower_components/jquery-rateyo/src/jquery.rateyo.css"
+			],
+			[
+				"rateyomincs",
+				"bower_components/jquery-rateyo/min/jquery.rateyo.min.css"
+			],
+			[
+				"rateyomin",
+				"bower_components/jquery-rateyo/min/jquery.rateyo.min.js"
+			],
+			[
+				"libdemo",
+				"app/scripts/lib-demo.js"
+			],
+			[
+				"heae",
+				"app/styles/header.sass"
+			],
+			[
+				"home",
+				"app/jade/home.jade"
+			],
+			[
+				"indexjade",
+				"app/jade/index.jade"
+			],
+			[
+				"event",
+				"app/jade/events.jade"
+			],
+			[
+				"libjade",
+				"app/jade/libraries.jade"
+			],
+			[
+				"mainsj",
+				"app/scripts/main.js"
+			],
+			[
+				"naviga",
+				"app/scripts/navigation.js"
+			],
+			[
+				"homejade",
+				"app/jade/home.jade"
+			],
+			[
+				"footerjs",
+				"app/scripts/footer.js"
+			],
+			[
+				"navijs",
+				"app/scripts/navigation.js"
+			],
+			[
+				"footerjade",
+				"app/jade/includes/footer.jade"
+			],
+			[
+				"footersa",
+				"app/styles/footer.sass"
+			],
+			[
+				"layou",
+				"app/jade/layouts/layout.jade"
+			],
+			[
+				"utils",
+				"node_modules/autoprefixer-core/lib/utils.js"
+			],
+			[
+				"vari",
+				"app/styles/variable.sass"
+			],
+			[
+				"footer",
+				"app/styles/footer.sass"
+			],
+			[
+				"boot",
+				"app/styles/bootstrap.scss"
+			],
+			[
+				"pagesas",
+				"app/styles/pages.sass"
+			],
+			[
+				"layo",
+				"app/jade/layouts/layout.jade"
+			],
+			[
+				"bootstr",
+				"app/styles/bootstrap.scss"
+			],
+			[
+				"headersa",
+				"app/styles/header.sass"
+			],
+			[
+				"package",
+				"package.json"
+			],
+			[
+				"common",
+				"app/styles/common.sass"
+			],
+			[
+				"fontawsomva",
+				"bower_components/fontawesome/scss/_variables.scss"
+			],
+			[
+				"fontawsomscssicn",
+				"bower_components/fontawesome/scss/_icons.scss"
+			],
+			[
+				"fonaw",
+				"bower_components/fontawesome/css/font-awesome.css"
+			],
+			[
+				"fonta",
+				"bower_components/fontawesome/css/font-awesome.css"
+			],
+			[
+				"librarj",
+				"app/jade/libraries.jade"
+			],
+			[
+				"headerja",
+				"app/jade/includes/header.jade"
+			],
+			[
+				"bootstrapvaria",
+				"bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss"
+			],
+			[
+				"bootstrapdate",
+				"bower_components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js"
+			],
+			[
+				"commonsas",
+				"app/styles/common.sass"
+			],
+			[
+				"bootstra",
+				"bower_components/bootstrap-sass/assets/stylesheets/bootstrap.scss"
+			],
+			[
+				"gulpfi",
+				"gulpfile.js"
+			],
+			[
+				"mainsass",
+				"app/styles/main.sass"
+			],
+			[
+				"reset",
+				"app/styles/reset.sass"
+			],
+			[
+				"bootst",
+				"app/styles/bootstrap.scss"
+			],
+			[
+				"footersas",
+				"app/styles/footer.sass"
+			],
+			[
+				"boots",
+				"app/styles/bootstrap.scss"
+			],
+			[
+				"heads",
+				"app/styles/header.sass"
+			],
+			[
+				"navigatio",
+				"app/scripts/navigation.js"
+			],
+			[
+				"variable",
+				"app/styles/variable.sass"
+			],
+			[
+				"libss",
+				"app/styles/libs.sass"
+			],
+			[
+				"resetsass",
+				"app/styles/reset.sass"
+			],
+			[
+				"variabl",
+				"app/styles/variable.sass"
+			],
+			[
+				"imgjade",
+				"app/jade/mixins/img.jade"
+			],
+			[
+				"teamh",
+				"app/team.html"
+			],
+			[
+				"resourcehtml",
+				"app/resources.html"
+			],
+			[
+				"about",
+				"app/about-challenge.html"
+			],
+			[
+				"indexhtml",
+				"app/index.html"
+			],
+			[
+				"bootstracss",
+				"_html/.tmp/styles/bootstrap.css"
+			],
+			[
+				"variabe",
+				"_html/app/styles/variable.sass"
+			],
+			[
+				"fontsas",
+				"CMS/html/styles/font-family.sass"
+			],
+			[
+				"plugin",
+				"_html/app/styles/plugins.sass"
+			],
+			[
+				"glob",
+				"_html/node_modules/node-sass/node_modules/glob/glob.js"
+			],
+			[
+				"distmaincss",
+				"_html/dist/styles/main.css"
+			],
+			[
+				"gulpfiel",
+				"_html/gulpfile.js"
+			],
+			[
+				"spadesass",
+				"_html/app/styles/sass/car-spade.sass"
+			],
+			[
+				"appformjs",
+				"_html/static/app/scripts/form.js"
+			],
+			[
+				"storeloca",
+				"_html/app/jade/store-locator.jade"
+			],
+			[
+				"maplace",
+				"_html/app/scripts/lib-js/maplace-main.js"
+			],
+			[
+				"ractisjade",
+				"_html/app/jade/car-ractis.jade"
+			],
+			[
+				"carractis",
+				"_html/app/styles/sass/car-ractis.sass"
+			],
+			[
+				".tmpmaincss",
+				"_html/.tmp/styles/main.css"
+			],
+			[
+				"gulpjs",
+				"_html/gulpfile.js"
+			],
+			[
+				"owlca",
+				"CMS/html/scripts/owl.carousel.js"
+			],
+			[
+				"carcorolajade",
+				"_html/app/jade/car-corolla.jade"
+			],
+			[
+				"spadetcjade",
+				"_html/app/jade/car-spade-tc.jade"
+			],
+			[
+				"carspadetc",
+				"_html/.tmp/car-spade-tc.html"
+			],
+			[
+				"spade",
+				"_html/app/jade/car-spade.jade"
+			],
+			[
+				"spadejade",
+				"_html/app/jade/car-spade.jade"
+			],
+			[
+				"sientav2jade",
+				"_html/app/jade/car-sienta-v2.jade"
+			],
+			[
+				"carspadesass",
+				"_html/app/styles/sass/car-spade.sass"
+			],
+			[
+				"sientasas",
+				"_html/app/styles/sass/car-sienta.sass"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "toyo",
+		"selected_items":
+		[
+			[
+				"toyo",
+				"~/Documents/carbrandkentico8/_html/toyota.sublime-project"
+			],
+			[
+				"lear",
+				"~/Documents/vagrant/projects/learningphp/learningphp.sublime-project"
+			],
+			[
+				"metlife",
+				"~/Documents/metlife/metlife.sublime-project"
+			],
+			[
+				"learn",
+				"~/Documents/vagrant/projects/learningphp/learningphp.sublime-project"
+			],
+			[
+				"meti",
+				"~/Documents/metlife/metlife.sublime-project"
+			],
+			[
+				"uob",
+				"~/Documents/uobcard/uobcards.sublime-project"
+			],
+			[
+				"met",
+				"~/Documents/metlife/metlife.sublime-project"
+			],
+			[
+				"to",
+				"~/Documents/carbrandkentico8/_html/toyota.sublime-project"
+			],
+			[
+				"toyot",
+				"~/Documents/carbrandkentico8/_html/toyota.sublime-project"
+			],
+			[
+				"metki",
+				"~/Documents/metlife/Met Life.sublime-workspace"
+			],
+			[
+				"saf",
+				"~/Documents/safvc/safvc.sublime-project"
+			],
+			[
+				"",
+				"~/Documents/safvc/safvc.sublime-project"
+			],
+			[
+				"uobc",
+				"~/Documents/uobcard/uobcards.sublime-project"
+			],
+			[
+				"lisi",
+				"~/Documents/vagrant/projects/lisi/lisi.sublime-project"
+			],
+			[
+				"epson",
+				"~/Documents/fs000365/epson.sublime-project"
+			],
+			[
+				"uoc",
+				"~/Documents/uobcard/uobcards.sublime-project"
+			],
+			[
+				"uobca",
+				"~/Documents/uobcard/uobcards.sublime-project"
+			],
+			[
+				"uo",
+				"~/Documents/uobcard/uobcards.sublime-project"
+			],
+			[
+				"jebse",
+				"~/Documents/jebsen-kentico8/_html/Jebsen - Kentico.sublime-project"
+			],
+			[
+				"epsn",
+				"~/Documents/fs000365/epson.sublime-project"
+			],
+			[
+				"wpf",
+				"~/Documents/wpf-microsite-card-pages/wpf-greeting-card-html.sublime-project"
+			],
+			[
+				"future",
+				"~/Documents/fs000304/future-step.sublime-workspace"
+			],
+			[
+				"jeb",
+				"~/Documents/jebsen-kentico8/_html/Jebsen - Kentico.sublime-project"
+			],
+			[
+				"mirum",
+				"~/Documents/mahk000395/Mirum-Properties.sublime-project"
+			],
+			[
+				"jebsen",
+				"~/Documents/jebsen-kentico8/_html/Jebsen - Kentico.sublime-project"
+			],
+			[
+				"icog",
+				"~/Documents/5ime000387/_html/iCognitive.sublime-project"
+			],
+			[
+				"epsp",
+				"~/Documents/fs000365/epson.sublime-project"
+			],
+			[
+				"ico",
+				"~/Documents/5ime000387/_html/iCognitive.sublime-project"
+			],
+			[
+				"sym",
+				"~/Documents/5ime000387/SYM.sublime-project"
+			],
+			[
+				"s",
+				"~/Documents/5ime000387/SYM.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 362.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

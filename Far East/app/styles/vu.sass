@@ -1,0 +1,938 @@
+.retail
+  #lates-section
+    &:before
+      content: ""
+      width: 100%
+      height: 108px
+      background: url(../images/shadow-bg.png) no-repeat
+      background-position: center -48px
+      background-size: contain
+      position: absolute
+      top: 0
+#main-slide-section
+  position: relative
+  &:before
+    content: ""
+    width: 100%
+    height: 108px
+    background: url(../images/shadow-bg.png) no-repeat
+    background-position: center -48px
+    background-size: contain
+    position: absolute
+    top: 100%
+  .video-wrap
+    width: 100%!important
+    [class^="vjs"]
+      [class^="vjs"]
+        display: none
+      .vjs-tech
+        display: block
+    video
+      width: 100%
+      height: 100%
+    position: relative
+  .owl-carousel
+    .owl-prev, .owl-next
+      position: absolute
+      top: 0
+      bottom: 0
+      margin: auto
+      width: 36px
+      height: 100px
+      font-size: 0
+      cursor: pointer
+    .owl-prev
+      left: 0
+      background: url(../images/sprites/main-slide-nav-left.png) no-repeat
+      background-size: contain
+    .owl-next
+      right: 0
+      background: url(../images/sprites/main-slide-nav-right.png) no-repeat
+      background-size: contain
+    @media screen and (max-width: 375px)
+      .owl-prev, .owl-next
+        width: 18px
+        height: 50px
+#lates-section
+  background: #f1f1f3
+  padding: 40px 0px 95px 0px
+  .owl-carousel
+    position: relative
+    .owl-nav
+      display: block
+    .owl-prev, .owl-next
+      position: absolute
+      top: calc(50% - 11px)
+      margin: auto
+      width: 16px
+      height: 33px
+      font-size: 0
+      cursor: pointer
+    .owl-prev
+      left: -48px
+      background: url(../images/sprites/lates-slide-nav-left.png) no-repeat
+      background-size: contain
+    .owl-next
+      right: -46px
+      background: url(../images/sprites/lates-slide-nav-right.png) no-repeat
+      background-size: contain
+    @media screen and (max-width: 1024px)
+      .owl-nav:before
+        content: ""
+        height: 23px
+        width: 1px
+        position: absolute
+        top: calc(100% + 28px)
+        background: #d9d9db
+        left: 0
+        right: 0
+        margin: auto
+        display: inline-block
+      .owl-prev, .owl-next
+          width: 11px
+          height: 20px
+          top: calc(100% + 30px)
+          bottom: auto
+      .owl-prev
+          right: calc(50% + 30px)
+          left: auto
+      .owl-next
+          left: calc(50% + 30px)
+          right: auto
+  .slide-item
+    background: #fff
+    float: left
+    .cover
+      // height: 224px
+      img
+        width: 100%
+    .content
+      padding: 36px 26px
+      float: left
+      .date
+        float: left
+        color: #999
+        font-size: 11px
+        margin-bottom: 16px
+        line-height: 11px
+      .description
+        float: left
+        font-size: 12px
+        color: #231f20
+        line-height: 20px
+        font-family: 'HelveticaNeue' , $font-family-base
+      .read-more
+        float: left
+        margin: 50px 0 14px 0
+        color: #cb1746
+        font-size: 13px
+  .what-the-lates
+    font-size: 24px
+    color: #231f20
+    font-family: $futura
+  .filter-control
+    margin: 30px 0 50px 0
+    width: 100%
+    .btn-group
+      display: table
+      margin: auto
+      .btn
+        font-family: $font-family-sans-serif
+        font-size: 14px
+        color: #999
+        line-height: 14px
+        padding: 18px 21px 15px 21px
+        box-shadow: none
+        text-decoration: none
+        background-color: $white
+        &.active
+          color: #fff
+          background: #ed0d41
+          font-weight: bold
+section.enquiries-box-section
+  padding: 19px 0px
+  color: #fff
+  margin-top: -100px
+  z-index: 1
+  position: relative
+  line-height: 1 
+  background: rgba(0, 0, 0, 0.65)
+  position: relative
+  .enquiries-text
+    float: left
+    font-size: 32px
+    font-family: "HelveticaNeue-CondensedBold", "HelveticaNeue-BlackCond" , $font-family-base
+    padding: 10px 53px 10px 0px
+    margin-right: 41px
+    border-right: 1px solid #71716e
+    margin-top: 7px
+  .phone-number-block
+    float: left
+    padding: 6px 0 
+    padding-right: 41px
+    &.phone-icon
+      padding-left: 60px
+      background: url("../images/phone-icon.png") no-repeat
+      background-position: 0px 15px
+      // background-size: contain
+    .phone 
+      font-size: 26px
+      font-family: 'Helvetica Neue'
+      margin-top: 6px
+      font-weight: 100
+    .country
+      font-size: 12px
+      font-family: 'Verdana'
+      color: #ccc
+      padding-top: 5px
+    &:nth-child(4)
+      border-right: 1px solid #71716e
+  .contact-action
+    float: right
+    margin-top: 6px
+    .btn-group
+      display: table
+      margin: auto
+      .btn
+        font-family: "HelveticaNeue-CondensedBold", "HelveticaNeue-BlackCond" , $font-family-base
+        font-size: 14px
+        color: #fff
+        line-height: 14px
+        padding: 17px 14px 17px 14px
+        box-shadow: none
+        text-decoration: none
+        background: #f21051
+        margin-left: 1px
+@media screen and (max-width: 640px)   
+  section.enquiries-box-section
+    margin-top: 0px
+    background: #fff
+    .enquiries-wrap
+      border: 1px solid #ccc
+      float: left
+      width: 100%
+    .enquiries-text
+      width: 100%
+      margin: 26px 0 0 0
+      padding: 0 0 0 0
+      color: #000
+      text-align: center
+      border-right: 0px
+    .phone-number-block
+      width: calc(100% / 3)
+      float: left
+      border-right: 0px solid!important
+      padding: 0 0 4px 0
+      &.phone-icon
+        padding-left: 60px
+        background: url("../images/phone-icon-pink.png") no-repeat
+        background-position: 23px 23px
+      .phone 
+        color: #000
+        margin-top: 20px
+      .country
+        color: #000
+    .contact-action
+      width: 100%
+      float: left
+      margin-top: 24px
+      margin-bottom: 20px
+      .btn-group
+        .btn
+          padding: 22px 32px
+
+.residential
+  #lates-section
+    padding: 53px 0px 77px 0px
+  #lates-section .filter-control
+    margin: 23px 0 50px 0
+  #lates-section .filter-control .btn-group .btn
+    font-weight: 100
+    padding: 17px 18px
+    margin-left: 1px
+  #lates-section .filter-control .btn-group .btn.active
+    font-weight: bold
+  #lates-section .what-the-lates
+    // letter-spacing: 6px
+  #lates-section .slide-item .content .date
+    font-size: 14px
+    margin-bottom: 11px
+  #lates-section .slide-item .content .description
+    font-size: 16px
+    line-height: 18px
+  #lates-section .slide-item .content .read-more
+    font-size: 16px
+    margin: 46px 0 9px 0
+    font-family: 'Futura'
+        
+.retail
+  #lates-section
+    position: relative
+    // bottom: 125px
+    z-index: 9
+    padding-bottom: 60px
+    .container
+      margin-top: -125px  
+    .block-filter
+      display: inline-block
+      width: 100%
+      margin-bottom: 10px
+    .what-the-lates
+      float: left
+      width: auto
+      color: $white
+    .filter-control
+      float: right
+      width: auto
+      margin: 0
+      position: relative
+      bottom: 5px
+      .btn-group .btn
+        padding: 0 15px
+        line-height: 40px
+        margin-left: 1px
+        font-size: 11px
+        font-weight: normal
+        color: rgb( 153, 153, 153 )
+        text-transform: uppercase
+        border: 0
+        &.active
+          color: $white
+    .slide-item .content
+      padding: 29px 26px 15px
+      height: 223px
+      position: relative
+      .title
+        margin-bottom: 10px
+        text-align: center
+      .description
+        font-size: 16px
+        color: #666666
+        margin-bottom: 12px
+        line-height: 18px
+        text-align: center
+      .label-lates
+        position: absolute
+        text-align: center
+        top: -9px
+        width: 100%
+        left: 0
+        span
+          font-family: 'Futura'
+          font-size: 9px
+          font-weight: bold
+          padding: 9px 12px 
+          color: #fff
+          letter-spacing: 2px
+      .note 
+        font-size: 13px
+        color: #666666
+      .read-more
+        margin: 0
+        position: absolute
+        bottom: 30px
+        &:hover
+          text-decoration: none
+  section.residental-property-section
+    padding: 52px 0 80px
+    &.bg-gray
+      background-color: #f1f1f2
+      .residental-property-block .information-strip .view-all-div
+        background-color: $white
+    .title
+      font-size: 24px
+      font-family: "Futura"
+      color: rgb( 35, 31, 32 )
+      text-transform: uppercase
+      text-align: center
+      margin-bottom: 52px
+
+#gallery
+  padding: 60px 0
+  .thumb-block
+    width: 25%
+    float: left
+    position: relative
+    .hover
+      display: none
+      position: absolute
+      top: 0
+      left: 0
+    &:hover .hover
+      display: block
+    @media screen and (max-width: 768px)
+      width: 50%
+    img
+      width: 100%
+      float: left
+#retail-wide-image
+  background: #f1f1f2
+  padding: 60px 0
+#search-result
+  .container
+    .bread-crumd
+      margin-bottom: 26px
+      ol.breadcrumb
+        margin: 7px  0
+        background: #fff
+        li
+          a
+            font-size: 11px
+            font-family: 'Futura'
+            color: #8d918d
+            white-space: nowrap
+            img
+              float: left
+          &.active
+            a
+              color: #000
+    .side-filter
+      width: 180px
+      float: left
+      min-height: 100px
+      .large-title
+        font-family: 'Futura-Heavy'
+        font-size: 13px
+        margin-bottom: 15px
+        font-weight: normal
+      .filter-control
+        width: 100%
+        float: left
+        .filter-type
+          cursor: pointer
+          width: 100%
+          float: left
+          font-size: 12px
+          font-family: 'Futura-Heavy'
+          padding: 6px 0px
+          border-top: 1px solid #e5e5e5
+          position: relative
+          font-weight: normal
+          &:before 
+            border-left: 0px solid transparent
+            border-right: 0px solid transparent
+            border-top: 2px solid #f21051
+            border-bottom: 5px solid transparent
+            width: 8px
+            position: absolute
+            right: 0
+            top: 12px
+            content: ""
+            height: 0
+            float: left
+        &.show        
+          .filter-type
+            &:before
+              border-left: 4px solid transparent
+              border-right: 4px solid transparent
+              border-top: 5px solid #f21051
+              border-bottom: 5px solid transparent
+              width: 0
+        .filter-body
+          width: 100%
+          float: left
+          border-top: 1px solid #e5e5e5
+          padding: 12px 0px 10px 0px
+          .rating-control
+          .ranger-slider
+            margin-top: 6px
+            // .irs-to, .irs-from, .irs-min, .irs-max, .irs-single
+            //   display: none
+            .ranger-view
+              margin-top: 12px
+              color: #8d918d
+              font-size: 11px
+              .from
+                float: left
+              .to
+                float: right
+
+          .link-list
+            padding: 0
+            width: 100%
+            margin: 0
+            float: left
+            li
+              list-style: none
+              width: 100%
+              float: left
+              margin-bottom: 9px
+              a
+                padding: 0
+                margin: 0
+                text-decoration: none
+                float: left
+                width: 100%
+                font-size: 11px
+                color: #8d918d
+                &.active, &:hover, &:focus
+                  color: #f21051
+          .btn-group
+            width: 100%
+            margin: 0px 0px 8px 0px
+            .btn
+              font-size: 13px
+              font-family: 'Helvetica Neue'
+              background: #f1f1f2
+              color: #666
+              width: 50%
+              padding: 10px 0px
+              &.active
+                background: #f21051
+                color: #fff
+                box-shadow: none!important
+      button.create-alert
+        color: #fff
+        background: #f21051
+        border: 0px
+        font-family: 'Futura'
+        font-size: 12px
+        text-align: center
+        width: 100%
+        padding: 9px 0px 11px 0px
+        position: relative
+        vertical-align: bottom
+        margin: 10px 0px
+        border-radius: 3px
+        &:before
+          content: ""
+          background: url(../images/bell-icon.png) no-repeat
+          width: 20px
+          height: 20px
+          display: inline-block
+          vertical-align: middle
+          margin-right: 10px
+    .result-content
+      width: calc(100% - 180px - 20px)
+      float: right
+      min-height: 100px
+      margin-bottom: 80px
+      .banner-slide
+        a
+          img
+      .search-action
+        float: left
+        width: 100%
+        margin-top: 40px
+        .search-terms
+          float: left
+          padding-top: 17px
+          .text
+            font-size: 21px
+            color: #666
+          .terms
+            font-size: 24px
+            color: #000
+        button
+          color: #fff
+          background: #3893d9
+          border: 0px
+          font-family: 'Futura'
+          font-size: 12px
+          text-align: center
+          padding: 9px 20px 11px 20px
+          position: relative
+          vertical-align: bottom
+          margin: 10px 0px
+          border-radius: 3px
+          margin-left: 10px
+        button.sms-btn:before
+          content: ""
+          background: url(../images/sms-icon.png) no-repeat
+          width: 20px
+          height: 20px
+          display: inline-block
+          vertical-align: middle
+          margin-right: 10px
+        button.select-all-btn:before
+          content: ""
+          background: url(../images/check-icon.png) no-repeat
+          width: 20px
+          height: 20px
+          display: inline-block
+          vertical-align: middle
+          margin-right: 10px
+      .search-status
+        float: left
+        width: 100%
+        border-top: 1px solid #e5e5e5
+        border-bottom: 1px solid #e5e5e5
+        padding: 8px 0px
+        margin-top: 13px      
+        .result-count
+          border-right: 1px solid #e5e5e5
+          padding: 0 47px
+          font-family: 'FuturaStd-Medium'
+          font-size: 11px
+          color: #000
+          float: left
+          line-height: 22px
+          font-weight: normal
+        .result-filter
+          border-right: 1px solid #e5e5e5
+          float: left
+          padding: 0 70px
+          ul
+            float: left
+            margin: 0
+            padding: 0
+            li
+              list-style: none
+              float: left
+              a
+                font-family: 'FuturaStd-Medium'
+                font-size: 11px
+                color: #8d918d
+                margin: 0 7px
+                &:focus, &:hover, &.active
+                  color: #0d111e
+                  font-weight: bold
+                  margin: 0 2px
+        .result-paging
+          border-right: 1px solid #e5e5e5
+          padding: 0 30px
+          float: left
+          line-height: 22px
+          .num-per-page
+            font-family: 'Futura'
+            font-size: 12px
+            color: #000
+            float: left
+          a
+            color: #8d918d
+            font-size: 11px
+            margin-left: 15px
+            float: left
+            &.active
+              color: #000
+              font-weight: bold
+        // .result-sort
+        //   float: left
+        //   .dropdown-face
+        //     margin-left: 30px
+        //     background: url(../images/sort-icon.png) no-repeat left
+        //     padding-left: 15px
+        //     font-family: 'Futura'
+        //     font-size: 11px
+        //     padding: 3px 0 3px 15px
+        //     position: relative
+        //     &:before
+        //       content: ""
+        //       position: absolute
+        //       border-left: 4px solid transparent
+        //       border-right: 4px solid transparent
+        //       border-top: 5px solid #ccc
+        //       border-bottom: 5px solid transparent
+        //       width: 8px
+        //       position: absolute
+        //       right: -12px
+        //       top: 8px
+        //       content: ""
+        //       height: 0
+        //       float: left
+        .result-sort
+          button
+            border: none
+            border-radius: none
+            background: url(../images/sort-icon.png) no-repeat left
+            padding: 3px 0 3px 15px
+            margin-right: 15px
+            font-family: 'Futura'
+            font-size: 11px
+            span
+              margin-left: 10px
+          ul 
+            margin-top: 15px
+            border: none
+            border-radius: 0
+            box-shadow: 0 0 3px rgba(0,0,0,0.15)
+            padding: 0
+            min-width: 107px
+            &:before, &:after
+              content: ""
+              display: block
+              position: absolute
+              width: 0
+              height: 0
+              border-left: 10px solid transparent
+              border-right: 10px solid transparent
+              border-bottom: 10px solid white
+              top: -10px
+              z-index: 2
+              right: 10px
+            &:after
+              opacity: 0.3
+              border-left: 11px solid transparent
+              border-right: 11px solid transparent
+              border-bottom: 10px solid black
+              right: 9px
+              z-index: 1
+            li
+              text-align: center
+              font-size: 10px
+              font-family: "Futura Std"
+              color: rgb(0, 0, 0)
+              text-transform: uppercase
+              border-bottom: 1px solid #e5e5e5
+            a
+              display: block
+              padding: 10px
+
+      .search-listing
+        .search-item
+          border-bottom: 1px solid #e5e5e5
+          float: left
+          width: 100%
+          padding: 30px 18px 30px 30px
+          &:nth-child(2n+1)
+            background: #f8f8f8
+          .image
+            width: 220px
+            float: left
+            margin-right: 30px
+            img
+              width: 100%
+          .info
+            width: 400px
+            float: left
+            .title
+              font-family: 'Futura-Heavy'
+              font-size: 21px
+              color: #333 
+              font-weight: normal
+            .attribute
+              float: left
+              width: 100%
+              font-size: 16px
+              color: #666
+              line-height: 20px
+              margin-top: 21px
+              .time
+                margin-right: 20px
+                float: left
+                padding-left: 28px
+                background: url(../images/time-icon.png) no-repeat left center
+              .number
+                margin-right: 20px
+                width: 50%
+                float: left
+                padding: 2px 0px  0px  0px
+                padding-left: 28px
+                background: url(../images/home-icon.png) no-repeat left center
+            .rating
+              margin-top: 46px
+              width: 100%
+              float: left
+          .right-block
+            width: calc(100% - 650px)
+            float: right
+            text-align: right
+            box-sizing: border-box
+            .user-tool
+              float: right
+              width: 100%
+              margin-top: -7px
+              .heart
+                cursor: pointer
+                float: right
+                width: 23px
+                height: 20px
+                background: url(../images/heart-empty-icon.png) no-repeat
+                &.active
+                  float: right
+                  background: url(../images/heart-icon.png) no-repeat
+              .check
+                float: right
+                margin-left: 14px
+                .icheckbox_minimal-red, .iradio_minimal-red
+                  background: url(../images/icheck/blue.png) no-repeat
+                .icheckbox_minimal-red
+                  background-position: 0 0
+                .icheckbox_minimal-red.checked
+                  background-position: -40px 0
+            .price
+              float: right
+              margin-top: 24px
+              padding-right: 2px
+              font-family: 'Futura' 
+              color: #f21353
+              font-size: 18px
+              width: 100%
+              span
+                font-size: 28px
+                font-family: 'Futura-Heavy'
+            .note
+              padding-right: 12px
+              font-family: 'FuturaStd-Medium'
+              font-size: 16px
+              color: #0d111e
+              margin-bottom: 8px
+              font-weight: normal
+            .small-text
+              padding-right: 12px
+              font-family: 'Futura'
+              font-size: 16px
+              color: #666
+@media screen and (max-width: 640px)
+  .side-filter, .result-content
+    width: 100%!important
+@media screen and (max-width: 1200px)
+  .result-content
+    .search-item
+      position: relative
+      .right-block
+        width: 100%!important
+        float: left!important
+        text-align: left!important
+        .user-tool
+          float: left
+          margin-top: -7px
+          .heart
+            cursor: pointer
+            float: left
+            width: 23px
+            height: 20px
+            background: url(../images/heart-empty-icon.png)
+            &.active
+              float: left!important
+              background: url(../images/heart-icon.png)
+          .check
+            float: left!important
+        .price
+          float: left!important
+          margin-top: 24px
+          padding-right: 12px
+          font-family: 'Futura'
+          color: #f21353
+          font-size: 18px
+          strong
+            font-size: 28px
+        .note
+          float: left
+          width: 100%
+        .small-text
+          padding-right: 12px
+          float: left
+          width: 100%
+          font-family: 'Futura'
+          font-size: 16px
+          color: #666
+@media screen and (max-width: 991px)
+  .result-content
+    .search-item
+      .image
+        width: 100%!important
+        float: left!important
+        margin-right: 0!important
+  #search-result .container .result-content .search-action button.select-all-btn, #search-result .container .result-content .search-status .result-paging
+    clear: both
+  #search-result .container .result-content .search-status .result-filter, #search-result .container .result-content .search-status .result-paging, #search-result .container .result-content .search-status .result-count
+    border-right: 0px
+    padding: 0
+    margin-right: 10px
+
+  #search-result .container .result-content .search-action
+    text-align: center
+  #search-result .container .result-content .search-action button
+    margin: 0
+    float: none !important
+    &.sms-btn
+      margin-left: 5px
+  #search-result .container .result-content .search-status .result-sort
+    display: inline-block
+    width: 100%
+    margin-top: 3px
+    // .dropdown
+    //   float: none !important
+  #search-result .container .result-content .search-status .result-filter
+    border-top: 1px solid #E5E5E5
+    padding: 8px 0px
+    width: 100%
+  #search-result .container .result-content .search-status .result-paging
+    border-top: 1px solid #E5E5E5
+    border-bottom: 1px solid #E5E5E5
+    padding: 8px 0px
+    width: 100%
+  #search-result .container .result-content .search-listing .search-item
+    padding: 30px 0 20px
+  #search-result .container .result-content .search-listing .search-item .right-block .user-tool
+    margin-top: 20px
+    .check
+      margin-left: 0 
+  #search-result .container .result-content .search-action .search-terms
+    width: 100%
+    text-align: center
+    padding: 0
+  #search-result .container .result-content .search-status .result-filter ul li a
+    margin: 0 14px 0 0 !important
+
+ul.rating-control
+  margin: 0
+  padding: 0
+  font-size: 0
+  li
+    list-style: none
+    float: left
+    margin-right: 6px
+    label
+      span
+        width: 30px
+        height: 30px
+        float: left
+        cursor: pointer
+        &.rate-1
+          background: url(../images/rating-faces.png) 0 -30px no-repeat
+        &.rate-2
+          background: url(../images/rating-faces.png) -38px -30px no-repeat
+        &.rate-3
+          background: url(../images/rating-faces.png) -75px -30px no-repeat
+        &.rate-4
+          background: url(../images/rating-faces.png) -112px -30px no-repeat
+        &.rate-5
+          background: url(../images/rating-faces.png) -149px -30px no-repeat
+      input
+        display: none
+        &:checked + .rate-1
+          background: url(../images/rating-faces.png) 0 -0px no-repeat
+        &:checked + .rate-2
+          background: url(../images/rating-faces.png) -38px -0px no-repeat
+        &:checked + .rate-3
+          background: url(../images/rating-faces.png) -75px -0px no-repeat
+        &:checked + .rate-4
+          background: url(../images/rating-faces.png) -112px -0px no-repeat
+        &:checked + .rate-5
+          background: url(../images/rating-faces.png) -149px -0px no-repeat
+.irs 
+  height: 18px
+.irs-bar
+  top: 7px
+  height: 4px
+  background: #f21051
+  border-top: 1px solid #f21051
+  border-bottom: 1px solid #f21051
+.irs-line
+  top: 8px
+  height: 2px
+.irs-slider
+  top: 0px
+  width: 18px
+  height: 18px
+  border: 1px solid #ccc
+  border-radius: 50%
+  box-shadow: none
+  background: #fff
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot
+  width: 10px                   
+  height: 10px
+  border-radius: 50%
+  background: #dedddd
+  display: inline-block
+  margin: 0px 3px
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot.active
+  background: #f21051
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dots
+  float: left
+  width: 100%
+  text-align: center
+  position: absolute
+  bottom: 10px

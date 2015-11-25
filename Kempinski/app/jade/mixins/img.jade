@@ -1,0 +1,32 @@
+mixin img(alt, src, src_ipad , src_mobile)
+  - if (typeof(src) === 'undefined') src = 'images/transparent.png'
+  - if (typeof(src_ipad) === 'undefined') src_ipad = 'ipad/'+src
+  - if (typeof(src_mobile) === 'undefined') src_mobile = 'mobile/'+src
+  - if (typeof(alt) === 'undefined') alt = ''
+  //- img(src="images/#{src}", alt="#{alt}")&attributes(attributes)
+  picture
+    source(srcset='images/#{src_mobile}', media='(max-width: 767px)')
+    source(srcset='images/#{src_ipad}', media='(max-width: 1023px)')
+    img(src="images/#{src}", alt="#{alt}")&attributes(attributes)
+
+mixin lazy-img(alt, src, src_ipad , src_mobile)
+  - if (typeof(src) === 'undefined') src = 'images/transparent.png'
+  - if (typeof(src_ipad) === 'undefined') src_ipad = 'ipad/'+src
+  - if (typeof(src_mobile) === 'undefined') src_mobile = 'mobile/'+src
+  - if (typeof(alt) === 'undefined') alt = ''
+  //- img(src="images/#{src}", alt="#{alt}")&attributes(attributes)
+  picture
+    source(data-srcset='images/#{src_mobile}', media='(max-width: 767px)')
+    source(data-srcset='images/#{src_ipad}', media='(max-width: 1023px)')
+    img(data-src="images/#{src}", alt="#{alt}")&attributes(attributes)
+
+mixin hero-banner-img(alt, src, src_ipad , src_mobile)
+  - if (typeof(src) === 'undefined') src = 'images/transparent.png'
+  - if (typeof(src_ipad) === 'undefined') src_ipad = 'ipad/'+src
+  - if (typeof(src_mobile) === 'undefined') src_mobile = 'mobile/'+src
+  - if (typeof(alt) === 'undefined') alt = ''
+  //- img(src="images/#{src}", alt="#{alt}")&attributes(attributes)
+  picture&attributes(attributes)
+    source(srcset='images/#{src_mobile}', media='(max-width: 767px)')
+    source(srcset='images/#{src_ipad}', media='(max-width: 1023px)')
+    img(src="images/#{src}", alt="#{alt}")

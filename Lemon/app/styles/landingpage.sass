@@ -1,0 +1,161 @@
+.landing-page-section
+  height: calc(100% - 50px)
+  .title-bar
+    background: $titlebar-bg
+    float: left
+    width: 100%
+    text-indent: 49px
+    .text
+      color: $titlebar-color
+      font-size: 22px
+      padding: 12px 0
+      font-weight: 600
+  .list-steps
+    float: left
+    width: 100%
+    height: calc(100% - 49px);  
+    padding-left: 49px
+    box-sizing: border-box
+    ul
+      padding-top: 22px 
+      list-style: none
+      float: left
+      li
+        float: left
+        clear: both
+        margin-bottom: 4px
+        position: relative
+        &:hover
+          .tooltip
+            display: block
+        .icon
+          width: 25px
+          float: left
+          height: 36px
+          text-align: center
+          color: $stepicon-color
+          font-size: 17px
+          font-weight: 700
+          line-height: 36px
+          text-align: center
+          margin-right: 13px
+          &.standard
+            background: url(../images/sprites/lemon-icon.png) $agreebar-bg 
+            background-size: contain
+            &+.tooltip
+              color: $agreebar-bg
+              background: $agreebar-bg
+            &.success
+              background: url(../images/sprites/lemon-check-icon.png) $agreebar-bg 
+              background-size: contain
+          &.equity
+            background: url(../images/sprites/lemon-icon.png) $considerbar-bg 
+            background-size: contain
+            &+.tooltip
+              color: $considerbar-bg
+              background: $considerbar-bg
+          &.types
+            background: url(../images/sprites/lemon-icon.png) #f7941e
+            background-size: contain
+            &+.tooltip
+              color: #f7941e
+              background: #f7941e
+          &.options
+            background: url(../images/sprites/lemon-icon.png) #9f9fa0
+            background-size: contain
+            &+.tooltip
+              color: #9f9fa0
+              background: #9f9fa0
+          &.details
+            background: url(../images/sprites/lemon-icon.png) $discussbar-bg 
+            background-size: contain
+            &+.tooltip
+              color: $discussbar-bg
+              background: $discussbar-bg
+          &.edit
+            cursor: pointer
+            background: url(../images/sprites/edit-icon.png) no-repeat center
+            background-size: contain
+            width: 28px
+            height: 36px
+            margin-left: 8px
+        .tooltip
+          display: none
+          position: absolute
+          left: 100%
+          top: 0
+          bottom: 0
+          height: 14px
+          margin: auto
+          padding: 7px
+          padding: 7px
+          white-space: nowrap
+          font-size: 14px
+          font-family: 'NeuzeitGro-Bol'
+          &:after
+            color: inherit;
+            border-top: 7px solid transparent
+            border-bottom: 7px solid transparent
+            border-left: 7px solid transparent
+            border-right: 7px solid
+            position: absolute
+            right: 100%
+            top: 0
+            bottom: 0
+            margin: auto
+            height: 0
+            content: ""
+          p
+            color: $tooltip-color
+            a
+              color: $tooltip-color
+        label
+          color: $steplabel-color
+          font-size: 20px
+          font-weight: 700
+          padding: 7px 0px
+          float: left
+  .process-bar 
+    position: fixed
+    bottom: 21px
+    width: 100%
+    float: left
+    padding-left: 49px
+    .process-bar-wrap
+      width: 50%
+      height: 13px
+      background: $processbar-bg
+      .bar-line
+        float: left
+        border-right: 1px solid $landingpage-bg
+        position: relative 
+        &.agree
+          background: $processbar-agree
+          height: 100%
+        &.discuss
+          background: $processbar-discuss
+          height: 100%
+      .tooltip
+        position: absolute
+        right: -56px
+        width: 97px
+        text-align: center
+        bottom: 20px
+        color: $tooltip-color
+        background-color: $tooltip-bg 
+        padding: 8px
+        font-size: 14px
+        font-weight: 700
+        &:after
+          bottom: -7px
+          left: 0
+          right: 0
+          margin: auto
+          content: ""
+          width: 15px
+          height: 8px 
+          position: absolute
+          background: url(../images/sprites/arrow-down.png) no-repeat
+          background-size: contain
+
+

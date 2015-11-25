@@ -1,0 +1,199 @@
+.car-detail
+  .carousel-with-thumbnail
+    padding: 60px 0 30px 0
+    background: #f3f3f3
+    .main-image
+      text-align: center
+      min-height: 510px
+      img
+        max-width: 100%
+.carousel-with-thumbnail
+  .car-gallery-carousel-wrapper 
+    width: 100%
+    margin: 44px auto 22px auto
+    position: relative
+    max-width: 1024px
+  .car-gallery-carousel 
+    width: 100%
+    max-width: 65.23%
+    margin: 0 auto
+    padding: 0 40px
+  .download-wrapper
+    width: 17.39%
+    right: 0
+    top: -15px
+    position: absolute
+    text-align: right
+  .car-gallery-paging
+    width: 17.39%
+    padding-right: 20px
+    position: absolute
+    top: 3px
+    left: 0
+    p 
+      font-weight: bold
+      text-align: right
+      line-height: inherit
+      margin-bottom: 0
+    p.car-gallery-sum 
+      font-size: 18px
+      margin-top: -4px
+      margin-right: 3px
+    strong 
+      color: #ed1b24
+      font-weight: bold
+      font-size: 36px
+      line-height: 37px
+  .main-image
+    width: 100%
+    max-width: 1024px
+    margin: 0 auto
+    position: relative
+    background: url(../images/preloader.gif) no-repeat center center
+    .main-image-wrapper
+      width: auto
+      display: inline-block
+      position: relative 
+    img
+      display: block
+      margin: 0 auto
+    .remask 
+      font-size: 13px
+      color: #666666
+      line-height: 1.2
+      position: absolute
+      bottom: -22px
+      left: 0px
+      width: 160px
+      text-align: right
+      // text-shadow: 1.414px 1.414px 1px #000
+
+  a.car-gallery-download-btn 
+    width: 90px
+    height: 90px
+    text-indent: -1000em
+    margin-top: -3px
+    display: inline-block
+    background: url(../images/about/download-btn.png) no-repeat 0 0
+    top: -1px
+    right: 10px
+    &:hover 
+      opacity: 0.8
+      filter: alpha(opacity=80)
+  p.main-image__caption
+    margin: 0
+    padding: 15px 0
+    color: #666666
+    font-size: 16px
+    text-align: center
+  .car-gallery-carousel__item
+    width: 92px
+    height: 52px
+    img 
+      border: 1px solid #999
+      padding: 3px
+      height: 100%
+      width: 100%
+  .car-gallery-carousel__item--active, .car-gallery-carousel__item:hover
+    img 
+      border: 4px solid #ed1b24
+      padding: 0
+      height: 100%
+    &:after 
+      content: " "
+      display: block
+      width: 0
+      height: 0
+      border-bottom: 10px solid #ed1b24
+      border-left: 10px solid transparent
+      border-right: 10px solid transparent
+      position: absolute
+      bottom: 0
+      left: 50%
+      margin-left: -19px
+  .owl-prev, .owl-next
+    position: absolute
+    text-indent: -1000em
+    overflow: hidden
+    width: 13px
+    height: 27px
+    top: 50%
+    margin-top: -14px
+    background: url(../images/about/carousel-prev-next.png) no-repeat 0 0
+  .owl-prev 
+    background-position: 0 -27px
+  .owl-next 
+    background-position: 0 0
+
+@media screen and (max-width: 1200px) 
+  .carousel-with-thumbnail .car-gallery-carousel-wrapper
+    margin: 30px auto 0 auto
+    width: auto
+
+@media screen and (max-width: 1024px) 
+  .carousel-with-thumbnail 
+    .main-image .remask
+      left: 40px
+    .car-gallery-carousel-wrapper
+      margin: 30px 20px 0 20px
+
+@media screen and (max-width: 991px) 
+  .car-detail
+    .carousel-with-thumbnail
+      padding: 0
+      background: transparent
+      .main-image
+        min-height: inherit
+  .carousel-with-thumbnail
+    .owl-carousel .owl-controls .owl-nav .owl-prev
+      left: 10px
+    .owl-carousel .owl-controls .owl-nav .owl-next
+      right: 10px
+    .car-gallery-carousel-wrapper 
+      width: 100%
+      margin: 0 auto
+    .car-gallery-carousel
+      float: none
+      background: #f3f3f3
+      max-width: 100%
+      padding: 25px 40px
+    .download-wrapper, .car-gallery-paging
+      width: 50%
+      padding: 21px 10px 5px 10px
+      display: inline-block
+      position: static
+      vertical-align: top
+    .car-gallery-paging
+      p
+        margin-bottom: 0
+        padding-top: 7px
+      strong
+        font-size: 14px
+        line-height: 1
+      p.car-gallery-sum
+        font-size: 12px
+        margin-top: -5px
+    .download-wrapper
+      text-align: left
+      a
+        width: 45px
+        height: 45px
+        background-size: 45px 45px
+    .car-gallery-paging
+      padding-top: 24px
+    a.car-gallery-download-btn 
+      left: 50%
+      bottom: 0
+      margin-left: 5px
+    .car-gallery-carousel__item 
+      width: 100%
+      height: auto
+    .car-gallery-carousel__item--active 
+      img 
+        width: 100%
+        height: auto
+    .carousel-with-thumbnail
+      .owl-carousel .owl-controls .owl-nav .owl-prev
+        left: 15px
+      .owl-carousel .owl-controls .owl-nav .owl-next 
+        right: 15px

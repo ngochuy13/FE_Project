@@ -1,0 +1,64 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Local Information'
+  -bodyClass = ''
+  -bannerIMG = 'local-information/banner.jpg'
+  -page = 'location'
+block pagescript
+
+block breadcrumb  
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#"
+      },{
+        "text": "MIDDLE EAST",
+        "href":"#"
+      },{
+        "text": "EMIRATES PALACE",
+        "href":"#"
+      },{
+        "text": "RESTAURANTS & BARS",
+        "href":"#"
+      }])
+block container    
+  .inner
+    main#main
+      section.section-block.gray
+        +page-title("THINGS TO DO", "Marhaba to Abu Dhabi", "THE GARDEN CITY AND CAPITAL OF THE UAE").gray
+        .section-room-suites-item__content.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+          +todo-item('local-information/img-1.jpg', 'EMIRATES PALACE MARINA', '<p>Emirates Palace Marina is the first of its kind in the country and region, combining luxury with comfort, and remains the destination of choice for luxurious yachts inside and outside the United Arab Emirates. </p><br/><p>Having recently been awarded Blue Flag accreditation, the clear blue waters of the Emirates Palace Marina meet the highest international standards of water quality and environmental safety.</p><br/><br/><p>About Emirates Palace Marina<br/>Facilities & Services<br/>Directions from Dubai or from Yas Marina<br/>Contact Us</p>')
+            .fact-list
+              .name Quick Fact
+              .fact
+                strong Plug Type: 
+                span 
+                  img(src="images/icon/plug-type.png")
+                  |G-Type
+              .fact
+                strong Currency: 
+                span UAE Dirham (AED)
+              .fact
+                strong Language: 
+                span Arabic, English
+              .fact
+                strong Time Zone: 
+                span UTC+04:00
+      
+      section.experience-gallery-section.venues-7000-sqm-section 
+        +section-title("EXPLORE ABU DHABI", "Explore Emirates Palace", "GENEROUS HOSPITALITY").gray
+        include includes/local-information
+
+      .section-article-blog
+        +section-title("LOCAL CUSTOMS", "in the Middle East", "YOUR INSIDE GUIDE ").gray.article-blog__title 
+        .section-article-blog__content.wow.fadeIn(data-wow-duration="1s" data-wow-delay="0.1s")
+          .container
+            .row
+              +local-item('local-information/img-4.jpg', 'CAPITAL OF THE UAE', '', '<p>Abu Dhabi is the largest of the seven emirates that comprise the United Arab Emirates and was also the largest of the former Trucial States.</p>').col-xs-12.col-sm-4 
+                +cta-btngroup-1('further information', '#') 
+              +local-item('local-information/img-5.jpg', 'PRACTICAL INFORMATION TO MAKE THE MOST OF YOUR VISIT', '', '<p>Arabic is the official language of the UAE, but English is widely spoken and understood. Local currency is UAE Dirham, which is linked to the US dollar on a fixed rate.</p>').col-xs-12.col-sm-4
+                +cta-btngroup-1('further information', '#')
+              +local-item('local-information/img-6.jpg', 'ANOTHER OPTION', '', '<p>Whether you are looking for a thrilling nightlife experience, a relaxed social setting or the perfect place to meet, Emirates Palace provides every option. Regular musician performances, Cuban lifestyle experiences, premium cognacs and rare cigars, cocktails or light dining, the Palace caters for all tastes.</p>').col-xs-12.col-sm-4
+                +cta-btngroup-1('further information', '#')

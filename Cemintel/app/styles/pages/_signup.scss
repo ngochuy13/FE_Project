@@ -1,0 +1,33 @@
+.sign-up-page {
+    .title-page {
+        padding: 44px 0;
+        background-color: #e8e8e8;
+        .icon {
+            width: 70px;
+            background-size: cover;
+            float: left;
+            margin-right: 30px;
+        }
+    }
+    .content-page {
+        padding: 45px 0 100px 0;
+        .form-sign-up {
+            padding-top: 30px;
+            @include clearfix();
+            clear: both;
+        }
+        .sign-up-success {
+            display: none;
+        }
+    }
+    .error-mess {
+        border: 1px solid red;
+        color: red;
+        padding: 10px 0;
+        display: none;
+    }
+    .button-signup {
+        position: relative;
+    }
+}
+

@@ -1,0 +1,147 @@
+.login-block {
+    .login-header {
+        padding: 44px 0px;
+        background-color: #e8e8e8;
+        @include tablet {
+            padding: 20px 0;
+        }
+        @include mobile {
+            padding: 45px 0 10px;
+        }
+    }
+    .login-content {
+        padding: 50px 0 80px;
+        .login-content-header {
+            @include mobile {
+                margin-bottom: 20px;
+            }
+            p {
+                margin-bottom: 0;
+                @include mobile {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .login-content-sub-header {
+            margin-bottom: 50px;
+            .dotdotdot {
+                @include mobile {
+                    height: 150px;
+                }
+                .full-text {
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+                .expand-subtitle {
+                    display: none !important;
+                }
+            }
+            .is-truncated {
+                .expand-subtitle {
+                    display: inline-block !important;
+                }
+            }
+            .readmore {
+                display: inline-block;
+                a {
+                    color: #000;
+                    text-decoration: underline;
+                    margin-left: 5px;
+                }
+            }
+        }
+        .login-content-form {
+            .error {
+                margin-top: 0;
+                font-size: 14px;
+            }
+            input {
+                &.gl-input {
+                    margin-bottom: 10px;
+                    border-radius: 0;
+                    @include tablet {
+                        font-size: 12px;
+                    }
+                }
+                &::-webkit-input-placeholder {
+                    /* WebKit, Blink,Edge */
+                    color: #000;
+                }
+                &:-moz-placeholder {
+                    /* Mozilla Firefox 4 to 18 */
+                    color: #000;
+                    opacity: 1;
+                }
+                &::-moz-placeholder {
+                    /* Mozilla Firefox 19+ */
+                    color: #000;
+                    opacity: 1;
+                }
+                &:-ms-input-placeholder {
+                    /* Internet Explorer 10-11 */
+                    color: #000;
+                }
+            }
+            .submit-form {
+                margin-bottom: 50px;
+            }
+            .form-link {
+                a {
+                    color: #000;
+                    text-decoration: underline;
+                    margin-right: 40px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    @include mobile {
+                        margin-right: 25px;
+                        font-size: 12px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                    @include xmobile {
+                        margin-right: 25px;
+                        margin-bottom: 10px;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    .forgot-content {
+        padding: 30px 0;
+        padding-bottom: 115px;
+        display: none;
+    }
+    .error-mess {
+        border: 1px solid red;
+        color: red;
+        padding: 10px 0;
+        display: none;
+    }
+    .button-login {
+        position: relative;
+    }
+    .overlay {
+        position: absolute;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 100;
+        display: none;
+        .relative-container {
+            position: relative;
+            height: 100%;
+            img {
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 14%;
+                left: 40%;
+                margin: 0 auto;
+                @include spin;
+            }
+        }
+    }
+}

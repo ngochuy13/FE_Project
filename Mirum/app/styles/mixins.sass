@@ -1,0 +1,59 @@
+// font size px to em
+
+// font default
+$font-size: 14
+@function em($pixels, $context: $font-size)
+  @return #{$pixels / $context}em
+
+// line-height
+=line-height($heightValue, $font-size)
+  line-height: ($heightValue / $font-size)
+
+// appearance
+=appearance($value)
+  -webkit-appearance: $value
+  -moz-appearance: $value
+  -ms-appearance: $value
+  appearance: $value
+
+// border radius
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+// box-shadow
+=box-shadow($shadow)
+  -webkit-box-shadow: $shadow
+  box-shadow: $shadow
+
+// perspective
+=perspective($value)
+	-webkit-perspective: $value
+	-moz-perspective: $value
+	-ms-perspective: $value
+	-o-perspective: $value
+	perspective: $value
+
+// transform
+=transform($value)
+	-webkit-transform: $value
+	-moz-transform: $value
+	-ms-transform: $value
+	-o-transform: $value
+	transform: $value
+
+// transition
+=transition($value)
+	-webkit-transition: $value
+	-moz-transition: $value
+	-o-transition: $value
+	transition: $value
+
+// calculate
+=calc($property, $expression)
+  #{$property}: -webkit-calc(#{$expression})
+  #{$property}: -moz-calc(#{$expression})
+  #{$property}: -ms-calc(#{$expression})
+  #{$property}: -o-calc(#{$expression})
+  #{$property}: calc(#{$expression})

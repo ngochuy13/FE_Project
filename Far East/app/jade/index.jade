@@ -1,0 +1,17 @@
+extends layouts/layout
+
+block vars
+  -title = 'Index'
+  -bodyClass = ''
+block container
+  main#main(style="min-height: 800px")
+    h2 site map
+    ul
+      li
+        a(href="home.html") Home
+      li
+        a(href="residential.html") Residential
+      li
+        a(href="retail.html") Retail
+      li
+        a(href="search.html") Search

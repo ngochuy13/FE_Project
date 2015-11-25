@@ -1,0 +1,15 @@
+extends layouts/layout
+
+block vars
+  -title = 'SYM Galaxy Sport'
+  -bodyClass = 'homepage'
+
+block container
+  .outmost-wrapper
+    .wrapper
+      .main
+        .content
+          include includes/home-page.jade
+      include includes/loading.jade
+
+block pagescript

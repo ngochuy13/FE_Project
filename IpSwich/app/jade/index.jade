@@ -1,0 +1,28 @@
+extends layouts/layout
+
+block vars
+  -title = 'Site maps'
+  -bodyClass = ''
+  style(type="text/css")
+    | .container .inner h1 {font-size: 40px !important; margin: 20px 0; color: orange;}
+    | .container .inner ul {margin-top: 20px;}
+    | .container .inner ol {padding-left: 28px;}
+    | .container .inner li {margin-bottom: 20px; font-size: 20px; color: #f37a1f;}
+    | .container .inner li > ul {list-style-type: disc;}
+    | .container .inner a {text-transform: capitalize;}
+    | .container .inner a:hover, .container a:active {color: violet;}
+block container
+  main#main(style="min-height: 800px")
+    .container
+      .inner
+        h1 Site Maps
+        ol(start="1")
+          li: +link("Homepage", homepage)(target="_blank", value="1")
+          li: +link("Events", eventPage)(target="_blank", value="1")
+          li: +link("Events Detail", eventDetailPage)(target="_blank", value="1")
+          li: +link("Stay", stayPage)(target="_blank", value="1")
+          li: +link("Blog", blogs)(target="_blank", value="1")
+          li: +link("Blog Article", blogArticle)(target="_blank", value="1")
+          li: +link("Storytelling", storyTelling)(target="_blank", value="1") 
+          li: +link("Map", map)(target="_blank", value="1") 
+          

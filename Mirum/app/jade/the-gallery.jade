@@ -1,0 +1,248 @@
+extends layouts/layout
+
+block vars
+  -title = 'The garelly'
+  -bodyClass = 'body-the-garelly'
+block container
+  .section
+    +parallax("the garelly", "images/the-garelly/parallax_garelly.jpg")
+  .section.section-garelly-text
+    +introduction-text('THE GARELLY').the-garelly-text
+      p More than a house, more than a home a dwelling at 2923-39 Blue Pool Road is a functional work of contemporary art. We celebrate this commitment to aesthetics with this gallery featuring the fine details and artistic use of space that go into making this property a design classic. Each fitting, each shape and texture has been evaluated and selected for its impact on the holistic outcome.
+  //- .section.section-garelly-list
+  //-   .container
+  //-     .garelly-list-wrap
+  //-       include includes/garelly-list
+  .section.section-masonry-garelly
+    //.container
+    .masonry-wrap.clearfix
+      include includes/masonry-garelly
+    include includes/loading
+
+block pagescript
+  script.
+    var galeryMasonryData = [{
+      "item": [{
+        "imgthumb": "images/the-garelly/ReT_2145775.png",
+        "imgsrc": "images/the-garelly/ReT_2145775-full.png",
+        "title": "title 1",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_1126.png",
+        "imgsrc": "images/the-garelly/ReT_1126-full.png",
+        "title": "title 2",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_2135722.png",
+        "imgsrc": "images/the-garelly/ReT_2135722-full.png",
+        "title": "title 3",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0801.png",
+        "imgsrc": "images/the-garelly/ReT_0801-full.png",
+        "title": "title 4",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0962.png",
+        "imgsrc": "images/the-garelly/ReT_0962-full.png",
+        "title": "title 5",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0608.png",
+        "imgsrc": "images/the-garelly/ReT_0608-full.png",
+        "title": "title 6",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_1222B.png",
+        "imgsrc": "images/the-garelly/ReT_1222B-full.png",
+        "title": "title 7",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0541.png",
+        "imgsrc": "images/the-garelly/ReT_0541-full.png",
+        "title": "title 8",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0066.png",
+        "imgsrc": "images/the-garelly/ReT_0066-full.png",
+        "title": "title 9",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0665.png",
+        "imgsrc": "images/the-garelly/ReT_0665-full.png",
+        "title": "title 10",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }]
+    }, {
+      "item": [{
+        "imgthumb": "images/the-garelly/ReT_2145775.png",
+        "imgsrc": "images/the-garelly/ReT_2145775-full.png",
+        "title": "title 1",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_1126.png",
+        "imgsrc": "images/the-garelly/ReT_1126-full.png",
+        "title": "title 2",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_2135722.png",
+        "imgsrc": "images/the-garelly/ReT_2135722-full.png",
+        "title": "title 3",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0801.png",
+        "imgsrc": "images/the-garelly/ReT_0801-full.png",
+        "title": "title 4",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0962.png",
+        "imgsrc": "images/the-garelly/ReT_0962-full.png",
+        "title": "title 5",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0608.png",
+        "imgsrc": "images/the-garelly/ReT_0608-full.png",
+        "title": "title 6",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_1222B.png",
+        "imgsrc": "images/the-garelly/ReT_1222B-full.png",
+        "title": "title 7",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0541.png",
+        "imgsrc": "images/the-garelly/ReT_0541-full.png",
+        "title": "title 8",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0066.png",
+        "imgsrc": "images/the-garelly/ReT_0066-full.png",
+        "title": "title 9",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0665.png",
+        "imgsrc": "images/the-garelly/ReT_0665-full.png",
+        "title": "title 10",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }]
+    }, {
+      "item": [{
+        "imgthumb": "images/the-garelly/ReT_2145775.png",
+        "imgsrc": "images/the-garelly/ReT_2145775-full.png",
+        "title": "title 1",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_1126.png",
+        "imgsrc": "images/the-garelly/ReT_1126-full.png",
+        "title": "title 2",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_2135722.png",
+        "imgsrc": "images/the-garelly/ReT_2135722-full.png",
+        "title": "title 3",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0801.png",
+        "imgsrc": "images/the-garelly/ReT_0801-full.png",
+        "title": "title 4",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0962.png",
+        "imgsrc": "images/the-garelly/ReT_0962-full.png",
+        "title": "title 5",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0608.png",
+        "imgsrc": "images/the-garelly/ReT_0608-full.png",
+        "title": "title 6",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_1222B.png",
+        "imgsrc": "images/the-garelly/ReT_1222B-full.png",
+        "title": "title 7",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0541.png",
+        "imgsrc": "images/the-garelly/ReT_0541-full.png",
+        "title": "title 8",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0066.png",
+        "imgsrc": "images/the-garelly/ReT_0066-full.png",
+        "title": "title 9",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0665.png",
+        "imgsrc": "images/the-garelly/ReT_0665-full.png",
+        "title": "title 10",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }]
+    }, {
+      "item": [{
+        "imgthumb": "images/the-garelly/ReT_2145775.png",
+        "imgsrc": "images/the-garelly/ReT_2145775-full.png",
+        "title": "title 1",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_1126.png",
+        "imgsrc": "images/the-garelly/ReT_1126-full.png",
+        "title": "title 2",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_2135722.png",
+        "imgsrc": "images/the-garelly/ReT_2135722-full.png",
+        "title": "title 3",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0801.png",
+        "imgsrc": "images/the-garelly/ReT_0801-full.png",
+        "title": "title 4",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0962.png",
+        "imgsrc": "images/the-garelly/ReT_0962-full.png",
+        "title": "title 5",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0608.png",
+        "imgsrc": "images/the-garelly/ReT_0608-full.png",
+        "title": "title 6",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_1222B.png",
+        "imgsrc": "images/the-garelly/ReT_1222B-full.png",
+        "title": "title 7",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0541.png",
+        "imgsrc": "images/the-garelly/ReT_0541-full.png",
+        "title": "title 8",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0066.png",
+        "imgsrc": "images/the-garelly/ReT_0066-full.png",
+        "title": "title 9",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }, {
+        "imgthumb": "images/the-garelly/ReT_0665.png",
+        "imgsrc": "images/the-garelly/ReT_0665-full.png",
+        "title": "title 10",
+        "caption": "Nam in tortor vel velit rhoncus congue vitae a lacus. "
+      }]
+    }];
+
+  // build:js scripts/masonry.js
+  script(src='/bower_components/masonry/dist/masonry.pkgd.min.js')
+  // endbuild
+
+  // build:js scripts/handlebars.js
+  script(src='/bower_components/handlebars/handlebars.min.js')
+  // endbuild
+  
+  // build:js scripts/garelly-masonry.js
+  script(src='/scripts/garelly-masonry.js')
+  // endbuild
+
+  // build:js scripts/fancybox.js
+  script(src='/bower_components/fancybox/source/jquery.fancybox.pack.js')
+  // endbuild

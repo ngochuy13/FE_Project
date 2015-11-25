@@ -1,0 +1,52 @@
+//- Created by Huy on 4/6/2015.
+.floor-list
+	.container
+		.floor-section
+			.selected-section
+				.selected-drawing
+				.selected-info
+					.info-list
+					.drawing-section
+						.drawing-list
+			.clearfix
+
+//- Handlebar template
+script(type="text/template").selected-drawing-template.template.
+	<ul>
+		{{#each drawings}}
+		<li name="{{title}}" data-item="{{id}}">
+			<img alt="{{title}}" src="{{img}}" usemap="\#{{id}}" width="{{width}}" height="{{height}}"/>
+			<map name="{{id}}">
+				{{#each roomcoords}}
+				<area shape="rect" coords="{{coord}}" data-id-room="{{id}}" href="#" title="{{name}}">
+				{{/each}}
+			</map>
+		</li>
+		{{/each}}
+	</ul>
+
+script(type="text/template").selected-info-template.template.
+	{{#each info}}
+		<div class="info-block" data-item="{{id}}">
+			<h1 class="title">
+				{{title}}
+			</h1>
+			<div class="editor-content">
+				<p>
+					{{description}}
+				</p>
+			</div>
+		</div>
+	{{/each}}
+
+script(type="text/template").drawing-list-template.template.
+	<ul>
+		{{#each drawings}}
+		<li name="{{title}}" data-item="{{id}}">
+			<a href="#" title="{{title}}">
+				<img src="{{thumb}}" />
+				<span class="name">{{title}}</span>
+			</a>
+		</li>
+		{{/each}}
+	</ul>

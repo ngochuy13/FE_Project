@@ -1,0 +1,233 @@
+extends layouts/layout
+
+block vars
+	-title = 'After sale general information'
+	-bodyClass = 'after-sales' 
+
+block container
+	.sub-page-banner.feature-img
+		p 資訊中心
+		picture
+			source(srcset='images/after-sales/banner-aftersales-mobile.jpg', media='(max-width: 767px)')
+			source(srcset='images/after-sales/banner-aftersales.jpg', media='(max-width: 1280px)')
+			img.master-banner-img.intel-scaling(src='images/after-sales/banner-aftersales.jpg', alt='', data-width='1920', data-height='411')
+	.aftersales-content
+		.inner
+			h2.page-title.custom-page-title 維修保養服務
+			.social-sharing-widgets.social-clear
+				p 分享
+				ul.social-sharing-list
+					li
+						a.facebook(href='#', title='Facebook') Facebook
+					li
+						a.twitter(href='#', title='Twitter') Twitter
+					li
+						a.google(href='#', title='Google +') Google +
+					//- li
+					//- 	a.instagram(href='#', title='Instagram') Instagram
+			.tbl-renewal
+				p.heading-renewal 溫馨提示
+				p 由於政府驗車配額非常緊張，建議顧客盡早預約進行「政府驗車前免費預檢」，確保車輛能夠在牌照到期前成功續牌。
+				p *車主最早可在車輛牌照屆滿前四個月內申請進行年檢。車輛成功通過年檢後，獲續期的牌照會在原有牌照屆滿後才生效，不會縮短已繳牌照費所涵蓋的牌照期。<br/>(資料來源 – 運輸署)
+			.aftersales-collape
+				.panel-group#accordion(role="tablist", aria-multiselectable="true")
+					//- .panel.panel-default
+					//- 	.panel-heading#heading-1(role="tab")
+					//- 		h4.panel-title
+					//- 			a.collapsed(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapse-1", aria-expanded="true", aria-controls="collapse-1") 豐田特快維修服務
+					//- 	.panel-collapse.collapse#collapse-1(role="tabpanel", aria-labelledby="heading-1")
+					//- 		.panel-body
+					//- 			.panel-box
+					//- 				.col.panel-img
+					//- 					img(src='images/after-sales/img-1.jpg', title='', alt='')
+					//- 				.col.panel-text
+					//- 					.inner
+					//- 						h3 免費維修檢查
+					//- 						p 豐田特快維修，快捷、方便、可靠。我們確保在60分鐘內，便可替你的座駕完成標準維修檢查。我們兩位專業的技師，以各樣先進的工具和儀器，互相配合以最有效率的流程，在60分鐘內完成整個檢查工序 <span>*</span>。
+					//- 						p 客人在等侯期間，可選擇在接待處，一邊享用免費飲品、上網或閱讀報紙雜誌。
+					//- 						p 要預約豐田特快維修服務，請致電:<strong>2880 4101﹝豐 田﹞</strong>或上網預約。
+					//- 						p <span>*</span> 豐田特快維修服務只適用於標準維修檢查及行車里數低於 100,000公里的車輛。
+					//- 						p <span>*</span> 若車輛有其他額外的維修項目需要跟進，所需的時間會較長。
+					.panel.panel-default
+						.panel-heading#heading-1(role="tab")
+							h4.panel-title
+								a.collapsed(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapse-1", aria-expanded="false", aria-controls="collapse-1") 免費維修檢查
+						.panel-collapse.collapse#collapse-1(role="tabpanel", aria-labelledby="heading-1")
+							.panel-body
+								.panel-box
+									.col.panel-img
+									.panel-text
+										.inner
+											h3 免費維修檢查
+											table.tbl-question
+												tbody
+													tr
+														td(style="width:100%;")
+															table
+																tr
+																	td(style="width:3.0%;") 1
+																	td(style="width:60.0%;") Use a feather duster or soft rag to wipe off dirt from the top down, then apply water and detergent to clean the vehicle's body.
+																	td(style="width:37.0%;") img
+																tr
+																	td(style="width:3.0%;") 2
+																	td(style="width:60.0%;") Use a feather duster or soft rag to wipe off dirt from the top down, then apply water and detergent to clean the vehicle's body.
+																	td(style="width:37.0%;") img
+																tr
+																	td(style="width:3.0%;") 3
+																	td(style="width:60.0%;") Use a feather duster or soft rag to wipe off dirt from the top down, then apply water and detergent to clean the vehicle's body.
+																	td(style="width:37.0%;") img
+					.panel.panel-default
+						.panel-heading#heading-2(role="tab")
+							h4.panel-title
+								a.collapsed(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapse-2", aria-expanded="false", aria-controls="collapse-2") 免費維修檢查
+						.panel-collapse.collapse#collapse-2(role="tabpanel", aria-labelledby="heading-2")
+							.panel-body
+								.panel-box
+									.col.panel-img
+										img(src='images/after-sales/img-1.jpg', title='', alt='')
+									.col.panel-text
+										.inner
+											h3 免費維修檢查
+											p 豐田特快維修，快捷、方便、可靠。我們確保在60分鐘內，便可替你的座駕完成標準維修檢查。我們兩位專業的技師，以各樣先進的工具和儀器，互相配合以最有效率的流程，在60分鐘內完成整個檢查工序 <span>*</span>。
+											p 客人在等侯期間，可選擇在接待處，一邊享用免費飲品、上網或閱讀報紙雜誌。
+											p 要預約豐田特快維修服務，請致電:<strong>2880 4101﹝豐 田﹞</strong>或上網預約。
+											p <span>*</span> 豐田特快維修服務只適用於標準維修檢查及行車里數低於 100,000公里的車輛。
+											p <span>*</span> 若車輛有其他額外的維修項目需要跟進，所需的時間會較長。
+					.panel.panel-default
+						.panel-heading#heading-3(role="tab")
+							h4.panel-title
+								a.collapsed(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapse-3", aria-expanded="false", aria-controls="collapse-3") 標準及特級維修檢查
+						.panel-collapse.collapse#collapse-3(role="tabpanel", aria-labelledby="heading-3")
+							.panel-body
+								.panel-box
+									.col.panel-img
+										img(src='images/after-sales/img-1.jpg', title='', alt='')
+									.col.panel-text
+										.inner
+											h3 免費維修檢查
+											p 豐田特快維修，快捷、方便、可靠。我們確保在60分鐘內，便可替你的座駕完成標準維修檢查。我們兩位專業的技師，以各樣先進的工具和儀器，互相配合以最有效率的流程，在60分鐘內完成整個檢查工序 <span>*</span>。
+											p 客人在等侯期間，可選擇在接待處，一邊享用免費飲品、上網或閱讀報紙雜誌。
+											p 要預約豐田特快維修服務，請致電:<strong>2880 4101﹝豐 田﹞</strong>或上網預約。
+											p <span>*</span> 豐田特快維修服務只適用於標準維修檢查及行車里數低於 100,000公里的車輛。
+											p <span>*</span> 若車輛有其他額外的維修項目需要跟進，所需的時間會較長。
+					.panel.panel-default
+						.panel-heading#heading-4(role="tab")
+							h4.panel-title
+								a.collapsed(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapse-4", aria-expanded="false", aria-controls="collapse-4")  一般機械維修
+						.panel-collapse.collapse#collapse-4(role="tabpanel", aria-labelledby="heading-4")
+							.panel-body
+								.panel-box
+									.col.panel-img
+										img(src='images/after-sales/img-1.jpg', title='', alt='')
+									.col.panel-text
+										.inner
+											h3 免費維修檢查
+											p 豐田特快維修，快捷、方便、可靠。我們確保在60分鐘內，便可替你的座駕完成標準維修檢查。我們兩位專業的技師，以各樣先進的工具和儀器，互相配合以最有效率的流程，在60分鐘內完成整個檢查工序 <span>*</span>。
+											p 客人在等侯期間，可選擇在接待處，一邊享用免費飲品、上網或閱讀報紙雜誌。
+											p 要預約豐田特快維修服務，請致電:<strong>2880 4101﹝豐 田﹞</strong>或上網預約。
+											p <span>*</span> 豐田特快維修服務只適用於標準維修檢查及行車里數低於 100,000公里的車輛。
+											p <span>*</span> 若車輛有其他額外的維修項目需要跟進，所需的時間會較長。
+					.panel.panel-default
+						.panel-heading#heading-5(role="tab")
+							h4.panel-title
+								a.collapsed(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapse-5", aria-expanded="false", aria-controls="collapse-5") 車身維修及噴油服務
+						.panel-collapse.collapse#collapse-5(role="tabpanel", aria-labelledby="heading-5")
+							.panel-body
+								.panel-box
+									.col.panel-img
+										img(src='images/after-sales/img-1.jpg', title='', alt='')
+									.col.panel-text
+										.inner
+											h3 免費維修檢查
+											p 豐田特快維修，快捷、方便、可靠。我們確保在60分鐘內，便可替你的座駕完成標準維修檢查。我們兩位專業的技師，以各樣先進的工具和儀器，互相配合以最有效率的流程，在60分鐘內完成整個檢查工序 <span>*</span>。
+											p 客人在等侯期間，可選擇在接待處，一邊享用免費飲品、上網或閱讀報紙雜誌。
+											p 要預約豐田特快維修服務，請致電:<strong>2880 4101﹝豐 田﹞</strong>或上網預約。
+											p <span>*</span> 豐田特快維修服務只適用於標準維修檢查及行車里數低於 100,000公里的車輛。
+											p <span>*</span> 若車輛有其他額外的維修項目需要跟進，所需的時間會較長。
+					.panel.panel-default
+						.panel-heading#heading-6(role="tab")
+							h4.panel-title
+								a.collapsed(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapse-6", aria-expanded="false", aria-controls="collapse-6") 汽車護理服務
+						.panel-collapse.collapse#collapse-6(role="tabpanel", aria-labelledby="heading-6")
+							.panel-body
+								.panel-box
+									.col.panel-img
+										img(src='images/after-sales/img-1.jpg', title='', alt='')
+									.col.panel-text
+										.inner
+											h3 免費維修檢查
+											p 豐田特快維修，快捷、方便、可靠。我們確保在60分鐘內，便可替你的座駕完成標準維修檢查。我們兩位專業的技師，以各樣先進的工具和儀器，互相配合以最有效率的流程，在60分鐘內完成整個檢查工序 <span>*</span>。
+											p 客人在等侯期間，可選擇在接待處，一邊享用免費飲品、上網或閱讀報紙雜誌。
+											p 要預約豐田特快維修服務，請致電:<strong>2880 4101﹝豐 田﹞</strong>或上網預約。
+											p <span>*</span> 豐田特快維修服務只適用於標準維修檢查及行車里數低於 100,000公里的車輛。
+											p <span>*</span> 若車輛有其他額外的維修項目需要跟進，所需的時間會較長。
+					.panel.panel-default
+						.panel-heading#heading-7(role="tab")
+							h4.panel-title
+								a.collapsed(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapse-7", aria-expanded="false", aria-controls="collapse-7") 政府指定車輛檢驗中心
+						.panel-collapse.collapse#collapse-7(role="tabpanel", aria-labelledby="heading-7")
+							.panel-body
+								.panel-box
+									.col.panel-img
+										img(src='images/after-sales/img-1.jpg', title='', alt='')
+									.col.panel-text
+										.inner
+											h3 免費維修檢查
+											p 豐田特快維修，快捷、方便、可靠。我們確保在60分鐘內，便可替你的座駕完成標準維修檢查。我們兩位專業的技師，以各樣先進的工具和儀器，互相配合以最有效率的流程，在60分鐘內完成整個檢查工序 <span>*</span>。
+											p 客人在等侯期間，可選擇在接待處，一邊享用免費飲品、上網或閱讀報紙雜誌。
+											p 要預約豐田特快維修服務，請致電:<strong>2880 4101﹝豐 田﹞</strong>或上網預約。
+											p <span>*</span> 豐田特快維修服務只適用於標準維修檢查及行車里數低於 100,000公里的車輛。
+											p <span>*</span> 若車輛有其他額外的維修項目需要跟進，所需的時間會較長。
+					.panel.panel-default
+						.panel-heading#heading-8(role="tab")
+							h4.panel-title
+								a.collapsed(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapse-8", aria-expanded="false", aria-controls="collapse-8") 政府指定汽車廢氣中心
+						.panel-collapse.collapse#collapse-8(role="tabpanel", aria-labelledby="heading-8")
+							.panel-body
+								.panel-box
+									.col.panel-img
+										img(src='images/after-sales/img-1.jpg', title='', alt='')
+									.col.panel-text
+										.inner
+											h3 免費維修檢查
+											p 豐田特快維修，快捷、方便、可靠。我們確保在60分鐘內，便可替你的座駕完成標準維修檢查。我們兩位專業的技師，以各樣先進的工具和儀器，互相配合以最有效率的流程，在60分鐘內完成整個檢查工序 <span>*</span>。
+											p 客人在等侯期間，可選擇在接待處，一邊享用免費飲品、上網或閱讀報紙雜誌。
+											p 要預約豐田特快維修服務，請致電:<strong>2880 4101﹝豐 田﹞</strong>或上網預約。
+											p <span>*</span> 豐田特快維修服務只適用於標準維修檢查及行車里數低於 100,000公里的車輛。
+											p <span>*</span> 若車輛有其他額外的維修項目需要跟進，所需的時間會較長。
+					.panel.panel-default
+						.panel-heading#heading-9(role="tab")
+							h4.panel-title
+								a.collapsed(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapse-9", aria-expanded="false", aria-controls="collapse-9") 24小時免費拖車服務
+						.panel-collapse.collapse#collapse-9(role="tabpanel", aria-labelledby="heading-9")
+							.panel-body
+								.panel-box
+									.col.panel-img
+										img(src='images/after-sales/img-1.jpg', title='', alt='')
+									.col.panel-text
+										.inner
+											h3 免費維修檢查
+											p 豐田特快維修，快捷、方便、可靠。我們確保在60分鐘內，便可替你的座駕完成標準維修檢查。我們兩位專業的技師，以各樣先進的工具和儀器，互相配合以最有效率的流程，在60分鐘內完成整個檢查工序 <span>*</span>。
+											p 客人在等侯期間，可選擇在接待處，一邊享用免費飲品、上網或閱讀報紙雜誌。
+											p 要預約豐田特快維修服務，請致電:<strong>2880 4101﹝豐 田﹞</strong>或上網預約。
+											p <span>*</span> 豐田特快維修服務只適用於標準維修檢查及行車里數低於 100,000公里的車輛。
+											p <span>*</span> 若車輛有其他額外的維修項目需要跟進，所需的時間會較長。
+					.panel.panel-default
+						.panel-heading#heading-10(role="tab")
+							h4.panel-title
+								a.collapsed(role="button", data-toggle="collapse", data-parent="#accordion", href="#collapse-10", aria-expanded="false", aria-controls="collapse-10") 新車檢定中心
+						.panel-collapse.collapse#collapse-10(role="tabpanel", aria-labelledby="heading-10")
+							.panel-body
+								.panel-box
+									.col.panel-img
+										img(src='images/after-sales/img-1.jpg', title='', alt='')
+									.col.panel-text
+										.inner
+											h3 免費維修檢查
+											p 豐田特快維修，快捷、方便、可靠。我們確保在60分鐘內，便可替你的座駕完成標準維修檢查。我們兩位專業的技師，以各樣先進的工具和儀器，互相配合以最有效率的流程，在60分鐘內完成整個檢查工序 <span>*</span>。
+											p 客人在等侯期間，可選擇在接待處，一邊享用免費飲品、上網或閱讀報紙雜誌。
+											p 要預約豐田特快維修服務，請致電:<strong>2880 4101﹝豐 田﹞</strong>或上網預約。
+											p <span>*</span> 豐田特快維修服務只適用於標準維修檢查及行車里數低於 100,000公里的車輛。
+											p <span>*</span> 若車輛有其他額外的維修項目需要跟進，所需的時間會較長。
+
+					

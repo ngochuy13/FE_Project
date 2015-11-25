@@ -1,0 +1,21 @@
+extends layouts/layout
+
+block vars
+  -title = 'Thong tin xe Galaxy Sport'
+  -bodyClass = 'info-page'
+
+block container
+  .outmost-wrapper
+    .wrapper
+      .main
+        .content
+          include includes/header
+          include includes/features.jade
+          include includes/parameter.jade
+          include includes/color.jade
+          include includes/photo-gallery.jade
+          include includes/price.jade
+      include includes/loading.jade
+
+block pagescript
+  

@@ -1,0 +1,84 @@
+extends layouts/template-1
+
+block vars
+  -title = 'Bar Details'
+  -bodyClass = ''
+  -bannerIMG = 'home/banner.jpg'
+  -page = 'restaurant-bar'
+block pagescript
+  
+block breadcrumb
+  .block-breadcrumb
+    .container
+      +breadcrumb([{
+        "text": "HOME",
+        "href":"#"
+      },{
+        "text": "MIDDLE EAST",
+        "href":"#"
+      },{
+        "text": "EMIRATES PALACE",
+        "href":"#"
+      },{
+        "text": "RESTAURANTS & BARS",
+        "href":"#"
+      }])
+
+block container    
+  .inner
+    main#main
+      section.section-block.gray
+        +page-title("EMIRATES PALACE RESTAURANTS", "Explore Emirates Palace", "GENEROUS HOSPITALITY").gray
+        
+        .room-suite-gallery.wow.fadeIn(data-wow-duration="0.5s")
+          +filter-select([
+            {
+              "text": "MEZZALUNA",
+              "link": "#mezzaluna"
+            },
+            {
+              "text": "SAYAD",
+              "link": "#sayad"
+            },
+            {
+              "text": "MEZLAI",
+              "link": "#mezlai"
+            },
+            {
+              "text": "BBQ AL QASR",
+              "link": "#bbq-al-qasr"
+            },
+            {
+              "text": "HAKKASAN",
+              "link": "#hakkasan"
+            },
+            {
+              "text": "CASCADES",
+              "link": "#cascades"
+            },
+            {
+              "text": "LAS BRISAS",
+              "link": "#las-brisas"
+            }
+          ])
+          .tab-content.white
+            #mezzaluna.tab-pane.active(role='tabpanel')
+              +restaurant-article-blog('MEZZALUNA' , 'restaurant/img-14.jpg' , 'restaurant/img-15.jpg').mt-40
+              
+            #sayad.tab-pane(role='tabpanel')
+              +restaurant-article-blog('SAYAD' , 'restaurant/img-15.jpg' , 'restaurant/img-15.jpg').mt-40
+              
+            #mezlai.tab-pane(role='tabpanel')
+              +restaurant-article-blog('MEZLAI' , 'restaurant/img-14.jpg' , 'restaurant/img-14.jpg').mt-40
+              
+            #bbq-al-qasr.tab-pane(role='tabpanel')
+              +restaurant-article-blog('BBQ AL QASR' , 'restaurant/img-15.jpg' , 'restaurant/img-14.jpg').mt-40
+              
+            #hakkasan.tab-pane(role='tabpanel')
+              +restaurant-article-blog('HAKKASAN' , 'restaurant/img-14.jpg' , 'restaurant/img-15.jpg').mt-40
+              
+            #cascades.tab-pane(role='tabpanel')
+              +restaurant-article-blog('CASCADES' , 'restaurant/img-15.jpg' , 'restaurant/img-15.jpg').mt-40
+              
+            #las-brisas.tab-pane(role='tabpanel')
+              +restaurant-article-blog('LAS BRISAS' , 'restaurant/img-14.jpg' , 'restaurant/img-14.jpg').mt-40

@@ -1,0 +1,25 @@
+extends layouts/template
+
+block vars
+  -title = 'Site maps'
+  -bodyClass = ''
+block container
+  main#main(style="min-height: 800px")
+    .container
+      .inner
+        h1 Site Maps
+        ol(start="1")
+          li: +link("Homepage", homepage)(target="_blank", value="1")
+          li: a(href="T2WhySIT.html") T2
+          li: +link("physical", physical)(target="_blank", value="2")
+          li: a(href="course-details-T4.html") T4
+          li: a(href="TuitionFreeLoan.html") T5
+          li: a(href="Overview.html") T6
+          li: a(href="T7-clubs.html") T7
+          li: a(href="T8 Sports.html") T8
+          li: a(href="T9Campus.html") T9
+          li: a(href="T10ScholarshipDetails.html") T10
+          li: a(href="T11.html") T11
+          li: a(href="T12.html") T12
+          li: a(href="T13.html") T13
+          li: a(href="libraries.html") Libraries

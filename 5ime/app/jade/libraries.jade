@@ -1,0 +1,19 @@
+extends layouts/layout
+
+block vars
+  -title = 'Libraries'
+  -bodyClass = ''
+  style(type="text/css")
+    | .container {max-width: 880px; margin: 0 auto;}
+    | .container h2 {font-size: 24px !important; margin: 20px 0; color: violet;}
+    | #button > div {margin-top: 10px;}
+    | .thumbs {width: 360px;}
+    | .paging {overflow: hidden;}
+    | .group {margin-top: 20px;}
+    | p {margin-top: 20px;}
+block container
+  .inner
+    .main(style="min-height: 800px")
+      .container
+        .group
+          //- contain component here

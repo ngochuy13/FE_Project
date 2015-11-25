@@ -1,0 +1,355 @@
+/*======================================= General Style ======================================*/
+* {
+  margin: 0;
+}
+html, body { 
+    min-height: 100%;
+    height: 100%;
+    font-family: 'HelveticaNeueEastA' , Helvetica , Arial , sans-serif;
+}
+img {
+    max-width: 100%;
+}
+.container {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 838px;
+}
+.section {
+  position: relative;
+  z-index: 999;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+/*======================================= Header Style ======================================*/
+.site-header {
+  background: #c41130;
+  padding: 30px 0 0 0;
+  height: 96px;
+  box-sizing: border-box;
+}
+.block-logo {
+  display: inline-block;  
+  position: relative;
+  top: 8px;
+}
+.block-search {
+  display: inline-block;
+  width: 609px;
+  color: #fff;
+  vertical-align: top;
+  padding-left: 38px;
+  padding-top: 5px;
+}
+.block-search .row:first-child {
+  margin-bottom: 11px;
+}
+.block-search .row > div {
+  display: inline-block;
+}
+.block-search .text-time span,
+.block-search .block-store label,
+.block-search .search-from label,
+.block-search .search-to label,
+.block-search .text-search label,
+.block-search .text-search span{
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.056;
+  text-transform: uppercase;  
+}
+.block-search .text-time span,
+.block-search .block-store label,
+.block-search .text-search span {
+  position: relative;
+  top: 3px;
+}
+.block-search .search-from label,
+.block-search .search-to label {
+  font-weight: 100;
+  font-size: 20px;
+  font-family: 'HelveticaNeueEastA Roman', Helvetica , Arial , sans-serif
+}
+.text-search {
+  margin-right: 91px;
+}
+.block-store {
+  margin-right: 54px;
+  font-size: 0;
+}
+.block-store .btn-submit{
+  background: #820324;
+  color: #fff;
+  width: 47px;
+  height: 15px;
+  line-height: 15px;
+  font-size: 11px;
+}
+.block-store span {
+  margin-right: 5px;
+}
+.block-search input {
+  width: 97px;
+  height: 15px;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.block-search input[type="text"]{
+  margin-left: 4px;
+}
+.block-search .icon-calendar {
+  background: url('../images/icon-calendar.png') no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  cursor: pointer;
+  bottom: 3px;
+  right: 1px;
+}
+.select-primary {
+  height: 15px; 
+  margin: 0; 
+}
+.select-primary .select-btn {
+  width: 47px;
+  height: 15px;
+  background: #fff;
+}
+.select-primary .value {
+  padding: 0;
+  font-size: 12px;
+  font-weight: 100;
+  color: #000;
+  padding-right: 14px;
+  text-align: center;
+  line-height: 1.3;
+}
+.select-primary .arrow {
+  background: url('../images/icon-down-select.png') no-repeat;
+  height: 15px;
+  width: 14px;
+  border: none;
+  top: 0;
+  right: 0;
+}
+.block-search .search-from span,
+.block-search .search-to span {
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 0.95;
+  font-weight: 100;
+}
+.block-search .search-from {
+  position: relative;
+  margin-right: 15px;
+}
+.block-search .search-from input,
+.block-search .search-to input {
+  vertical-align: top;
+  margin-top: 2px;
+  margin-left: 6px;
+  margin-right: 32px;
+  text-align: center;
+} 
+.block-search .search-to {
+  position: relative;
+  margin-right: 65px;
+}
+ .block-search .search-to input {
+  margin-left: 3px;
+ }
+ .block-search-time {
+  vertical-align: top;
+  font-size: 0;
+  padding-top: 2px;
+ } 
+.block-search-time > div {
+  display: inline-block;
+  margin-right: 8px;
+}
+.block-search-time > div:last-child {
+  margin-right: 0;
+}
+
+/*======================================= Footer Style ======================================*/
+.main-content {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -51px; 
+  display: inline-block;
+  width: 100%;
+}
+.main-content:after {
+  content: "";
+  display: block;
+}
+.site-footer, .main-content:after {
+  height: 51px; 
+}
+.site-footer {
+  background: #c41130;
+}
+.site-footer .gotop {
+  background: url(../images/icon-gotop.png) no-repeat #820324;
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  margin-top: 7px;
+  margin-right: 7px;
+}
+/*======================================= Main Style ======================================*/
+.content-wraper{
+  overflow: hidden;
+}
+.main-col {
+  float: left;
+  width: 614px;
+  margin-right: 13px;
+  padding-top: 44px;
+}
+.sidebar {
+  float: left;
+  width: 210px;
+  padding-top: 44px;
+}
+.section table {
+  border-spacing: 0px;
+  border-collapse: collapse;
+  border-color: #fff;
+  text-align: center;
+  position: relative;
+}
+.section table th {
+  font-size: 14px;
+  line-height: 1.357;
+  font-weight: 100;
+  color: #fff;
+  background: #c41130;
+  width: 100px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+.section table thead th {
+  border-right: 1px solid #fff;
+  vertical-align: middle;
+}
+.section table th {
+  height: 81px;
+  max-height: 81px;    
+}
+.section table th.heading-col {
+  width: 212px;
+  padding-left: 15px;
+  text-align: left;
+}
+.section table th.heading-col .current-time {
+  font-size: 18px;
+}
+.section table th.heading-col .big-text {
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1.6;
+}
+.section table th.heading-col:before {
+  content: '';
+  background: url('../images/bg-table-bigtext.png') no-repeat;
+  position: absolute;
+  width: 62px;
+  height: 81px;
+  top: 0px;
+  left: -20px;
+  z-index: -1;
+}
+.section table tbody tr {
+  height: 63px;
+}
+.section table tbody tr:nth-child(2n + 1) {
+  background: #e8e8e7;
+}
+.section table tbody tr td:first-child {
+  text-transform: uppercase;
+  background: #820324;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.357;
+}
+.section table tbody td {
+  font-size: 14px;
+  color: #000;
+  line-height: 1.5;
+  text-align: center;
+  border: 1px solid #fff;
+  border-top: 0;
+  vertical-align: middle;
+  width: 100px;
+  box-sizing: border-box;
+}
+.section-store {
+  display: inline-block;
+  width: 100%;
+  margin-top: 35px;
+  margin-bottom: 41px;
+}
+.section-store table {
+  float: right;
+}
+.section-store table th {
+  background: #9dc62e;
+  color: #000;
+}
+.section-store table tbody tr td:first-child {
+  background: #69841f;
+}
+.section-store table th.heading-col .big-text{
+  font-size: 24px;
+  color: #010101;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 26px;
+}
+.section-store table th.heading-col:before {
+  background-image: url('../images/bg-table-bigtext-2.png');
+  width: 233px;
+}
+.section-store table tbody tr:nth-child(2n) {
+  background: #e8e8e7;
+}
+.section-store table tbody tr:nth-child(2n + 1) {
+  background: #fff;
+}
+.section-customer-volume {
+  border: 3px solid #9dc62e;
+  border-radius: 0 0 5px 5px;
+}
+.section-customer-volume .title {
+  font-size: 14px;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+  background: #9dc62e;
+  padding: 2px 0px 4px 0;
+}
+.section-customer-volume .desc {
+  font-size: 12px;
+  line-height: 1;
+  color: #000;
+  text-align: center;
+  margin: 5px 0;
+}
+.mychart {
+  text-align: center;
+}
+.title-chart {
+  font-size: 14px;
+  color: #000;
+  text-align: center;
+  padding: 5px 0 15px 0;
+}

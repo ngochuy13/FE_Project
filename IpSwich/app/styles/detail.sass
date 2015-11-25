@@ -1,0 +1,296 @@
+body.detail
+  .story-intro.home-banner 
+    height: 189px
+    padding-top: 31px
+  .story-intro.home-banner .title
+    font-size: 48px
+    margin-bottom: 14px
+  .story-intro.orange .separator
+    margin-bottom: 13px
+    height: 4px
+  .story-intro.home-banner .description
+    font-size: 14px
+    margin-bottom: 20px
+    font-family: $gg-ff
+    font-style: italic
+    font-weight: normal
+  @media screen and (max-width: 1200px)
+    section.make-booking
+      .booking-date-picked, .input-with-icon
+        width: calc(33.3333% - 20px) !important
+      .input-with-icon.triple-width
+        width: calc(66.6666% - 20px) !important
+      .btn.book
+        width: calc(33.3333% - 20px)!important
+  @media screen and (max-width: 991px)
+    .container
+      padding-left: 42px
+      padding-right: 42px
+    section.make-booking
+      .toggler
+        position: absolute
+        right: 18px
+        top: 0
+        font-size: 22px
+        color: #F68124
+      .booking-date-picked, .input-with-icon, .input-with-icon.triple-width, .btn.book
+        width: 100%!important
+      .note
+        margin-top: 19px!important
+    .detail-content .meta-data
+      margin-top: 0px!important
+    .detail-content .meta-data .field:nth-child(3)
+      border-right: 0!important
+    .detail-content .meta-data .field
+      margin-top: 33px
+    .detail-content .meta-data .separator
+      width: 75px
+      height: 6px
+      display: inline-block
+      background: #8f8f8f
+      margin: 44px auto 0 auto
+
+  @media screen and (max-width: 1023px)
+    .story-intro.home-banner
+      padding-top: 110px
+      height: 561px
+    .story-intro.home-banner .title
+      margin-bottom: 26px
+    .story-intro.orange .separator
+      background-color: #feb61a
+      height: 4px
+      margin-bottom: 12px
+
+  section.make-booking
+    position: relative
+    &:before
+      background: url("../images/pointer-bg.png") no-repeat center top
+      background-size: 73px 60px
+      width: 73px
+      height: 30px
+      content: " "
+      display: block
+      position: absolute
+      top: -30px
+      left: 50%
+      margin-left: -36px
+    .title
+      color: #605b5c
+      font-size: 18px
+      width: 100%
+      float: left
+      text-align: center
+      font-family: $bt-ff
+      font-weight: bold
+      line-height: 1
+      margin: 22px 0 23px 0
+      position: relative
+    .input-with-icon
+      width: 162px
+      display: inline-block
+      margin-right: 20px
+      float: left
+      margin-bottom: 15px
+      &.triple-width
+        width: 385px
+        max-width: 100%
+    .note
+      width: 100%
+      float: left
+      margin-top: 4px
+      color: #5e5e5e
+      font-size: 14px
+    .btn.book
+      float: left
+      width: 185px
+      font-size: 16px
+      padding: 13px 0px
+      text-align: center
+  .detail-content
+    margin-top: 39px
+    background: #f8f8f8
+    .meta-data
+      width: 1078px
+      margin: auto
+      display: block
+      margin-top: 56px
+      margin-bottom: 20px
+      max-width: 100% 
+      .field
+        border-right: 1px solid #949494
+        float: left
+        font-family: $ss-ff
+        text-align: center
+        min-height: 61px
+        &:last-child
+          border: 0
+        .big
+          line-height: 1
+          font-size: 38px
+          color: #f68124
+        .small
+          clear: both
+          float: left
+          font-size: 16px
+          color: #635d5f
+          white-space: nowrap
+          width: 100%
+          margin-top: 1px
+    .event-content
+      .text-content
+        width: 670px
+        max-width: 100%
+        margin: auto
+        .heading
+          font-family: $bt-ff
+          color: #f68124
+        .sub-heading
+          font-family: $bt-ff
+          color: #f68124
+    .side-bar
+      .contact-block, .testimonial, .ranked, .rating
+        img
+          width: 81px
+        .title
+          font-size: 21px
+          color: #5e5e5e
+          font-family: $bt-ff
+          font-weight: bold
+          margin-bottom: 20px
+          margin-top: 18px
+        .description
+          color: #5e5e5e
+          font-family: $bt-ff
+          font-style: italic
+          font-size: 14px
+          margin-bottom: 65px
+        .ideal-location
+          color: #589442
+          font-family: $bt-ff
+          font-style: italic
+          font-size: 16px
+          margin-top: 14px
+          margin-bottom: 22px
+        .separator
+          width: 92px
+          border-top: 5px solid #589442
+          display: inline-block
+        .rate-view
+          margin-top: 12px
+          margin-bottom: 10px
+          span
+            width: 15px 
+            height: 15px
+            display: inline-block
+          .rate
+            background: url(../images/icons/icon-rate.png) no-repeat
+            background-size: contain
+          .unrate
+            background: url(../images/icons/icon-rate-empty.png) no-repeat
+            background-size: contain
+      .testimonial
+        margin-top: 81px
+      .testimonial, .ranked, .rating
+        .title
+          margin-bottom: 4px
+
+      .contact-block
+        p
+          margin: 0 0 0px
+          &.address
+            margin: 0 0 21px
+          label
+            font-size: 14px
+            font-family: $ss-ff
+            font-weight: bold
+            color: #5e5e5e
+            margin: 0
+          a
+            margin-left: 3px
+            text-decoration: underline
+            span
+              color: #f68124
+          span
+            font-size: 14px
+            font-family: $ss-ff 
+            color: #5e5e5e
+
+.text-editor
+  h1, h2, h3, h4, h5, h6
+    font-family: $bt-ff
+    font-weight: bold
+    line-height: 1
+  h1
+    font-size: 36px
+    margin-top: 22px
+
+  h2 
+    font-size: 30px
+    margin-top: 22px
+  h3
+    font-size: 24px
+    margin-top: 22px
+  h4
+    font-size: 18px
+    margin-top: 22px
+  h5
+    font-size: 14px
+    margin-top: 22px
+  h6
+    font-size: 12px
+    margin-top: 22px
+  p
+    color: #5e5e5e
+    font-size: 14px
+    margin-top: 15px
+    margin-bottom: 6px
+    display: inline-block
+    line-height: 21px  
+    font-family: $ss-ff
+    width: 100%
+  strong
+    font-weight: bold
+    color: #5e5e5e
+    font-size: 14px
+  em
+    font-style: italic
+    color: #5e5e5e
+    font-size: 14px
+  a
+    color: #f68124
+    font-family: $ss-ff
+    font-size: 14px
+    text-decoration: underline
+    &:hover, &.active, &:focus
+      text-decoration: none
+  ul, ol
+    margin: 0
+    padding: 0 0 0 15px
+    font-size: 0
+    li
+      color: #5e5e5e
+      font-size: 14px
+  .img
+    max-width: 100% 
+    &.img-full
+      width: 100%
+    &.img-overflow
+      margin: 0 -15px
+      width: calc(100% + 30px)
+      max-width: calc(100% + 30px)
+    &.img-float
+      float: left
+      margin-right: 15px
+    &.img-caption
+      width: 100%
+      float: left
+      margin-right: 15px
+      &+.caption
+        width: 100%
+        float: left
+        margin: 10px 0
+
+@media only screen and (max-width: 370px)
+  body.detail 
+    .detail-content .meta-data .field
+      padding: 0 7px

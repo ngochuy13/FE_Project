@@ -1,0 +1,47 @@
+//- Created by Huy on 4/6/2015.
+.room-gallery
+	.gallery-block
+		.room-info
+			.gallery-list
+		.room-details
+			.room-list
+			.room-description
+
+//- Handlebar template
+script(type="text/template").room-list-item-template.template.
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			{{#each roomlist}}
+			<div class="swiper-slide">
+				<a href="#" title="{{title}}" data-id="{{dataID}}">
+					<img src="{{thumb}}" />
+				</a>
+			</div>
+			{{/each}}
+		</div>
+	</div>
+
+script(type="text/template").gallery-list-template.template.
+	{{#each gallerylist}}
+	<div class="gallery-item" data-id="{{dataID}}">
+		<div class="slider-wrapper">
+			{{#each imglist}}
+			<div class="slider">
+				<img alt="" src="{{img}}" />
+			</div>
+			{{/each}}
+		</div>
+	</div>
+	{{/each}}
+
+script(type="text/template").room-description-template.template.
+	{{#each desc}}
+	<div class="info-block" data-id="{{dataID}}">
+		<h1 class="title">
+			{{title}}
+		</h1>
+		<p>
+			{{description}}
+		</p>
+	</div>
+	{{/each}}

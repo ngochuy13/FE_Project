@@ -1,0 +1,1224 @@
+mixin explore-more-carousel-item(img, title, description, targetInfoLink)
+  .item&attributes(attributes)
+    .media
+      +img("explore more",img)
+    .title 
+      +link(title, "#")
+    .description.editor-content!=description
+    .target-info-link
+      +link(targetInfoLink, "#")
+
+mixin experiences-to-treasure-item(img, title, description, index)
+  .item.slider-item.type1(data-index=index)&attributes(attributes)
+    .slide-image
+      +hero-banner-img(title, img)(data-bg-url="url(images/#{img})").dynamic-bg
+    .slide-caption
+      .title!=title
+      .editor-content.description
+        p!=description 
+      +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide
+
+mixin sitemap-link(pageLink, pageTitle, link1, childPage1, link2, childPage2, link3, childPage3, link4, childPage5)
+  .sitemap-item&attributes(attributes)
+    a(href=pageLink).title=pageTitle
+    if childPage1
+      a(href=link1)=childPage1
+    if childPage2
+      a(href=link2)=childPage2
+    if childPage3
+      a(href=link3)=childPage3
+    if childPage4
+      a(href=link4)=childPage4
+
+mixin faciliti-item(img, title, description, index)
+  .item.slider-item.type1(data-index=index)&attributes(attributes)
+    .slide-image
+      +img(title, img)
+    .slide-caption
+      .title!=title
+      .editor-content.description
+        p!=description
+      .cta-btns.wide
+        +link("FURTHER INFORMATION", "#").btn.btn-default-outline
+
+mixin meeting-room-item(img, title, description, index)
+  .item.slider-item.type1.type1-1(data-index=index)&attributes(attributes)
+    .slide-image
+      +hero-banner-img(title, img)(data-bg-url="url(images/#{img})").dynamic-bg
+      a(href="#", title="PHOTO GALLERY").btn.photo-link PHOTO GALLERY
+    .slide-caption
+      .title!=title
+      .editor-content.description!=description 
+      .data-table
+        table
+          thead
+            tr 
+              td Emirates Centre
+              td Size (sqm)
+              td Cocktails
+              td Block
+          tbody
+            tr
+              td 
+                strong C040 / C 040
+              td 40sqm
+              td 16
+              td 0
+            tr
+              td 
+                strong C 041
+              td 36sqm
+              td 20
+              td 0
+            tr
+              td 
+                strong C 042
+              td 36sqm
+              td 16
+              td 0
+            tr
+              td 
+                strong C 043
+              td 72sqm
+              td 20
+              td 0
+            tr
+              td 
+                strong C 044
+              td 81sqm
+              td 16
+              td 0
+      +cta-btngroup('FUTHER INFORMATION','#','ENQUIRIES','#').wide
+mixin meeting-room-item-one-btn(img, title, description, index)
+  .item.slider-item.type1.type1-1(data-index=index)&attributes(attributes)
+    .slide-image
+      +hero-banner-img(title, img)(data-bg-url="url(images/#{img})").dynamic-bg
+    .slide-caption
+      .title!=title
+      .editor-content.description!=description 
+      .data-table
+        table
+          thead
+            tr 
+              td Emirates Centre
+              td Size (sqm)
+              td Cocktails
+              td Block
+          tbody
+            tr
+              td 
+                strong C040 / C 040
+              td 40sqm
+              td 16
+              td 0
+            tr
+              td 
+                strong C 041
+              td 36sqm
+              td 20
+              td 0
+            tr
+              td 
+                strong C 042
+              td 36sqm
+              td 16
+              td 0
+            tr
+              td 
+                strong C 043
+              td 72sqm
+              td 20
+              td 0
+            tr
+              td 
+                strong C 044
+              td 81sqm
+              td 16
+              td 0
+      .cta-btns.wide
+        a(href="#", title="FURTHER INFORMATION").btn.btn-default-outline FURTHER INFORMATION
+mixin meeting-room-item-no-btn(img, title, description, index)
+  .item.slider-item.type1.type1-1(data-index=index)&attributes(attributes)
+    .slide-image
+      +hero-banner-img(title, img)(data-bg-url="url(images/#{img})").dynamic-bg
+      a(href="#", title="PHOTO GALLERY").btn.photo-link PHOTO GALLERY
+    .slide-caption
+      .title!=title
+      .editor-content.description!=description 
+      .data-table
+        table
+          thead
+            tr 
+              td Emirates Centre
+              td Size (sqm)
+              td Cocktails
+              td Block
+          tbody
+            tr
+              td 
+                strong C040 / C 040
+              td 40sqm
+              td 16
+              td 0
+            tr
+              td 
+                strong C 041
+              td 36sqm
+              td 20
+              td 0
+            tr
+              td 
+                strong C 042
+              td 36sqm
+              td 16
+              td 0
+            tr
+              td 
+                strong C 043
+              td 72sqm
+              td 20
+              td 0
+            tr
+              td 
+                strong C 044
+              td 81sqm
+              td 16
+              td 0
+
+mixin emirates-palace-restaurant(img, title, description, index)
+  .item.slider-item.type1.type1-1.match-height(data-index=index)&attributes(attributes)
+    .slide-image
+      +hero-banner-img(title, img)(data-bg-url="url(images/#{img})").dynamic-bg
+      a(href="#", title="PHOTO GALLERY").btn.photo-link PHOTO GALLERY
+    .slide-caption
+      .title!=title 
+      .editor-content.description!=description 
+      +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide
+
+
+mixin room-suites-item(img, suiteName, description, roomFeatures)
+  .item.slider-item.type2&attributes(attributes)
+    .row
+      .col-xs-12.col-md-6.col-md-push-6.match-height
+        .suite-media(data-bg-url='url(images/#{img})').dynamic-bg
+          +img(suiteName, img) 
+      .col-xs-12.col-md-6.col-md-pull-6.match-height
+        .suite-info
+          .name!=suiteName
+          .description.editor-content!=description
+          - if(roomFeatures.length){
+          .room-features
+            .title Room features
+            - var n = 0
+            - var l = roomFeatures.length
+            ul.feature-list
+              while n < l
+                li
+                  span=roomFeatures[n]
+                - n += 2;
+            - var n = 0
+            - var l = roomFeatures.length
+            ul.feature-list
+              while n < l
+                - if(roomFeatures[n+1]){
+                li
+                  span=roomFeatures[n+1]
+                - }
+                - n += 2;
+          - }
+          if block
+            block
+
+mixin residences-item(img, suiteName, description, roomFeatures)
+  .item.slider-item.type2&attributes(attributes)
+    .row
+      .col-xs-12.col-md-6.col-md-push-6.match-height      
+        .suite-media(data-bg-url='url(images/#{img})').dynamic-bg
+          +img(suiteName, img) 
+      .col-xs-12.col-md-6.col-md-pull-6.match-height
+        .suite-info
+          .name!=suiteName
+          .description.editor-content!=description
+          - if(roomFeatures.length){
+          .room-features
+            .title UNIT Features
+            - var n = 0
+            - var l = roomFeatures.length
+            ul.feature-list
+              while n < l
+                li
+                  span=roomFeatures[n]
+                - n += 2;
+            - var n = 0
+            - var l = roomFeatures.length
+            ul.feature-list
+              while n < l
+                - if(roomFeatures[n+1]){
+                li
+                  span=roomFeatures[n+1]
+                - }
+                - n += 2;
+          - }
+          +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide
+
+mixin todo-item(img, suiteName, description)
+  .item.slider-item.type2&attributes(attributes)
+    .row
+      .col-xs-12.col-md-6.col-md-push-6.match-height      
+        .suite-media(data-bg-url='url(images/#{img})').dynamic-bg
+          +img(suiteName, img) 
+      .col-xs-12.col-md-6.col-md-pull-6.match-height
+        .suite-info
+          .name!=suiteName
+          .description.editor-content!=description
+          if block
+            block
+          //- +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide
+
+mixin restaurant-item(img, suiteName, description, roomFeatures)
+  .item.slider-item.type2&attributes(attributes)
+    .row
+      .col-xs-12.col-md-6.col-md-push-6.match-height      
+        .suite-media(data-bg-url='url(images/#{img})').dynamic-bg
+          +img(suiteName, img) 
+      .col-xs-12.col-md-6.col-md-pull-6.match-height
+        .suite-info
+          .name!=suiteName
+          .description.editor-content!=description
+          - if(roomFeatures.length){
+          .room-features
+            .title Room features
+            - var n = 0
+            - var l = roomFeatures.length
+            ul.feature-list
+              while n < l
+                li
+                  span=roomFeatures[n]
+                - n += 2;
+            - var n = 0
+            - var l = roomFeatures.length
+            ul.feature-list
+              while n < l
+                - if(roomFeatures[n+1]){
+                li
+                  span=roomFeatures[n+1]
+                - }
+                - n += 2;
+          - }
+          +cta-btngroup('FUTHER INFORMATION','#','ENQUIRIES','#').wide
+
+mixin room-suites-landing-item(img, suiteName, description, roomFeatures , roomAmenities)
+  .item.slider-item.type3&attributes(attributes)
+    .row
+      .col-xs-12.col-md-6
+        .suite-image(data-bg-url='url(/images/#{img})').dynamic-bg
+          +img(suiteName, img) 
+      .col-xs-12.col-md-6
+        .suite-info
+          .name!=suiteName
+          .description.editor-content!=description
+          +cta-btngroup('PHOTO GALLERY','#','BOOK NOW','#').wide
+    .row          
+      - if(roomFeatures.length){
+      .col-xs-12.col-md-12
+        .room-features
+          .title Room features & amenities
+          - var n = 0
+          - var l = roomFeatures.length
+          ul.feature-list
+            while n < l
+              li
+                span=roomFeatures[n]
+              - n += 1;
+              
+          - var n = 0
+          - var l = roomAmenities.length
+          ul.amenities-list
+            while n < l
+              li
+                span=roomAmenities[n]
+              - n += 1;
+      - }
+
+
+mixin room-suites-item-spa(img, suiteName, description, roomFeatures)
+  .item.slider-item.type2&attributes(attributes)
+    .row
+      .col-xs-12.col-sm-12.col-md-6.col-md-push-6.match-height
+        .suite-media(data-bg-url='url(images/#{img})').dynamic-bg
+          +img(suiteName, img) 
+      .col-xs-12.col-sm-12.col-md-6.col-md-pull-6.match-height
+        .suite-info
+          .name!=suiteName
+          .description.editor-content!=description
+          - if(roomFeatures.length){
+          .room-features
+            .title Room features
+            - var n = 0
+            - var l = roomFeatures.length
+            ul.feature-list
+              while n < l
+                li
+                  span=roomFeatures[n]
+                - n += 2;
+            - var n = 0
+            - var l = roomFeatures.length
+            ul.feature-list
+              while n < l
+                - if(roomFeatures[n+1]){
+                li
+                  span=roomFeatures[n+1]
+                - }
+                - n += 2;
+          - }
+          +cta-btngroup-2('book an appointment','#').wide
+
+mixin room-faciliti-item(img, suiteName, description, roomFeatures)
+  .item.slider-item.type2&attributes(attributes)
+    .row
+      .col-xs-12.col-md-6.col-md-push-6.match-height  
+        .suite-media(data-bg-url='url(images/#{img})').dynamic-bg
+          +img(suiteName, img) 
+      .col-xs-12.col-md-6.col-md-pull-6.match-height
+        .suite-info
+          .name!=suiteName
+          .description.editor-content!=description
+          - if(roomFeatures.length){
+          .room-features
+            .title Room features
+            - var n = 0
+            - var l = roomFeatures.length
+            ul.feature-list
+              while n < l
+                li
+                  span=roomFeatures[n]
+                - n += 2;
+            - var n = 0
+            - var l = roomFeatures.length
+            ul.feature-list
+              while n < l
+                - if(roomFeatures[n+1]){
+                li
+                  span=roomFeatures[n+1]
+                - }
+                - n += 2;
+          - }
+          +cta-btngroup('FUTHER INFORMATION','#','BOOK AN APPOINTMENT','#').wide
+//- mixin restaurant-item(img, img2, suiteName, description, roomFeatures)
+//-   .item.restaurant-item&attributes(attributes)
+//-     .container
+//-       .row
+//-         .col-xs-12.col-md-6.match-height
+//-           .restaurant-media
+//-             +img(suiteName, img)
+//-           .restaurant-media
+//-             +img(suiteName, img2)
+//-         .col-xs-12.col-md-6.match-height
+//-           .restaurant-info
+//-             .name!=suiteName
+//-             .editor-content.description!=description
+//-             .room-features
+//-               .title Room features
+//-               table.feature-table
+//-                 - var n = 0
+//-                 - var l = roomFeatures.length
+//-                 ul
+//-                   while n < l
+//-                     tr
+//-                       td
+//-                         span=roomFeatures[n]
+//-                       - if(roomFeatures[n+1]){
+//-                       td
+//-                         span=roomFeatures[n+1]
+//-                       - }
+//-                     - n += 2;
+//-             .cta-btns
+//-               +link("FUTHER INFORMATION", "#").btn.btn-default-outline.btn-further-info
+//-               +link("BOOK NOW", "#").btn.btn-default.btn-book-now
+
+mixin spa-offer-item(img, title, description)
+  .spa-offer-item
+    +img(title, img)
+    .content-wrap
+      .title!=title
+      .row
+        .col-xs-12.col-md-8
+          .editor-content.description!=description
+        .col-xs-6.col-sm-6.col-md-4
+          .rate
+            span.offer-type-description Rates from
+            span.price $1490
+        .col-xs-6.col-md-12.text-right
+          .cta-btns.wide
+            a(href="#", title="Book Now").btn.btn-default READ MORE
+            a(href="#", title="Book Now").btn.btn-default BOOK NOW
+mixin offer-style-1(img, title, description, offerTypeDescription, price)
+  .offer.offer-style-1&attributes(attributes)
+    .offer-wrap
+      .offer-image.match-height
+        a(href="#") 
+          +img(title, img).media-object
+      .offer-content.match-height.row
+        .col-xs-12.col-md-8.middle-content.left
+          .media-heading!=title
+          .description.editor-content!=description
+          
+        .col-xs-12.col-md-4.book.middle-content.right
+          .rate
+            span.offer-type-description!=offerTypeDescription
+            span.price!=price
+          a(href="#", title="Book Now").btn.btn-book-now.btn-default Book Now
+
+mixin room-enquiry(img, title, description, offerTypeDescription)
+  .offer.offer-style-1.offer-style-1-1&attributes(attributes)
+    .offer-wrap
+      .offer-image
+        a(href="#")
+          +img(title, img).media-object
+      .offer-content.row
+        .col-xs-12.col-sm-6.col-md-10.middle-content.left
+          .media-heading!=title
+          .description.editor-content!=description
+          
+        .col-xs-12.col-sm-6.col-md-2.book.middle-content.right
+          a(href="#", title="Enquiries").btn.btn-book-now.btn-default.w100p Enquiries
+          
+
+mixin hotel-source-item(img, title, description)
+  .hotel-source-item.col-xs-12.col-sm-4.col-md-3&attributes(attributes)
+    .thumbnail
+      +img(title, img)
+      .caption
+        h4.title!=title
+        p.description!=description
+
+mixin hotel-source-item__price(img, title, description , price , link )
+  .hotel-source-item.hotel-source-item__price.col-xs-12.col-sm-4.col-md-3&attributes(attributes)
+    .thumbnail
+      +img(title, img)
+      .price.nowrap.right
+        span.offer-type-description Form
+        span.price 
+          | $#{price}
+      .caption
+        h4.title!= title
+        p.description!= description
+      .btn-group
+        a(href="#", title="Go to hotel").btn.btn-default-outline.btn-futher-info GO TO HOTEL
+        a(href="#", title="BOOK NOW").btn.btn-default.btn-book-now BOOK NOW
+
+mixin full-width-article(img)
+  .article.article-full-width&attributes(attributes)
+    .row
+      .col-xs-12.col-md-6
+        +img("article title should be here", img)
+      .col-xs-12.col-md-6
+        if block
+          block
+
+mixin short-article(preTitle, title, intro, content)
+  .article-summary&attributes(attributes)
+    h1
+      span.pre-title!=preTitle
+      span.title!=title
+    .intro!=intro
+    .content!=content
+
+
+mixin article-item(img, title, description , link )
+  .slide-item.article-item&attributes(attributes)
+    .slide-image
+      +img(title, img)
+    .slide-caption
+      .title #{title}
+      .description 
+        p #{description}
+      .btn-group
+        a(href='#', ,='', title='#{link}').link.btn.btn-default-outline.btn-futher-info
+          | #{link}
+          i.fa.fa-angle-right
+
+
+mixin article-blog-item(img, title, sub_title, content )
+  .slide-item.article-blog-item&attributes(attributes)
+    .slide-image
+      +img(title, img)
+    .slide-caption
+      .title!=title
+      .sub-title!=sub_title
+      .editor-content!=content
+    if block
+      block
+
+mixin local-item(img, title, sub_title, content )
+  .slide-item.article-blog-item&attributes(attributes)
+    .slide-image
+      +img(title, img)
+    .slide-caption
+      .title!=title
+      .sub-title!=sub_title
+      .editor-content!=content
+    //- .cta-btns.wide
+    //-   +link("FURTHER INFORMATION", "#").btn.btn-default-outline
+    if block
+      block
+      
+
+mixin service-item(img, title, content)
+  .slide-item.article-blog-item&attributes(attributes)
+    .slide-image
+      +img(title, img)
+    .slide-caption
+      .title!=title
+      .sub-title!=sub_title
+      .editor-content!=content
+    +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide
+
+
+mixin room-suite-article-item(img, title, content )
+  .slide-item.room-suite-article-item.article-blog-item&attributes(attributes)
+    .slide-image
+      +img(title, img)
+    .slide-caption
+      .title!=title
+      .editor-content!=content
+      .cta-btns.wide
+        +link("FURTHER INFORMATION", "#").btn.btn-default-outline
+      
+
+mixin meetings-article-blog(title, img, img2)
+  .section-article-blog&attributes(attributes)
+    .container
+      .row
+        .col-md-6.image-col
+          .meeting-events-image
+            +img(title, img)
+          .meeting-events-image
+            +img(title, img2)
+        .col-md-6.info-col
+          .slide-caption
+            .title!=title
+            .btn-group.cta-btns
+              +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide
+            .description  
+              p Emirates Centre offers stunning conference rooms ranging in size from 36 sqm to 80 sqm. A spacious outdoor terrace is available to host groups for lunch, dinner, receptions and coffee breaks.
+              br
+              p For all enquiries, please contact us at 
+                a(href="mailto:mice@emiratespalace.ae", title="mice@emiratespalace.ae") mice@emiratespalace.ae
+                | or call us at 
+                a(href="tel://971-2-690-7951" , title="+971 2 690 7951") +971 2 690 7951.
+            .data-table.wider
+              table
+                thead
+                  tr
+                    td Emirates Centre
+                    td Size(sqm)
+                    td Cocktails
+                    td Block
+                tbody    
+                  tr
+                    td: strong C040/ C 040
+                    td 40sqm
+                    td 16
+                    td 0
+                  tr
+                    td: strong C040/ C 040
+                    td 40sqm
+                    td 16
+                    td 0
+                  tr
+                    td: strong C040/ C 040
+                    td 40sqm
+                    td 16
+                    td 0
+                  tr
+                    td: strong C040/ C 040
+                    td 40sqm
+                    td 16
+                    td 0
+                  tr
+                    td: strong C040/ C 040
+                    td 40sqm
+                    td 16
+                    td 0
+          .slide-caption
+            .title CONTACT
+            hr
+            .contact-info
+              span.label Email Contact:
+              span.info
+                a(href="mailto:mice@emiratespalace.ae") mice@emiratespalace.ae
+            .contact-info
+              span.label Telephone
+              span.info 
+                a(href="tel://971-2-690-7951") +971 2 690 7951.
+            .contact-info
+              span.label Seating
+              span.info 16-40
+            .contact-info
+              span.label Size
+              span.info 9.00m/ 9.00m/ 3.00m     
+
+mixin restaurant-article-blog(title, img, img2)
+  .section-article-blog&attributes(attributes)
+    .container
+      .row
+        .col-md-6.image-col
+          .meeting-events-image
+            +img(title, img)
+          .meeting-events-image
+            +img(title, img2)
+        .col-md-6.info-col.type-2
+          .slide-caption
+            .title!=title
+            .btn-group.cta-btns
+              +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide
+            .description  
+              p One of the beauties of year round sunny weather in Abu Dhabi is the pleasure of barbecuing. If you love a luxurious bbq, then dining at BBQ Al Qasr is an experience you will not want to miss. This unique outdoor restaurant is an exciting feast for all your senses, with the world-class chefs preparing your bbq dishes, the tantalising food aromas in the air, and the textures of perfectly seasoned hot steaks and seafood.
+              br
+              p The discerning locals of the city know that nothing compares to the BBQ Al Qasr experience!
+              br 
+              p If you adore a barbecue dining experience, BBQ Al Qasr in Abu Dhabi’s Emirates Palace is simply the finest of beachside dining in Abu Dhabi.  Located near the sea, you will have a chance to take in the stunning views of the white sandy beachfront, while indulging in a luxurious barbecue. 
+              br 
+              p Your anticipation and appetite will build as you catch the scent of Arabian shisha, the salty balm of the sea air and the blend of grilled food aromas around you. The casual seating and relaxed atmosphere provided by BBQ Al Qasr lets the conversation flow, and creates memories of a great evening with family and friends. With a BBQ offering of seafood, char-grilled meats, freshly baked breads, salads and sweets, BBQ Al Qasr presents an exceptional menu that will more than satisfy even the healthiest of appetites.
+              br 
+              p Treat yourself to world-class service Emirates Palace is known for and is proud of, while enjoying the famous Abu Dhabi BBQ. Stay on, relax and chat over a shisha, mint tea or a drink at the comfortable lounge of the restaurant. 
+              br 
+              p As with famous dining locations in any city of the world, do book early at the weekends if you are planning your evening at the best BBQ in Abu Dhabi!
+              br
+              p Please note BBQ Al Qasr is temporarily closed until 12th October 2015, please contact restaurant reservations for further information.
+            
+          .slide-caption
+            .title CONTACT
+            .contact-info
+              span.label Email Contact:
+              span.info
+                a(href="mailto:mice@emiratespalace.ae") mice@emiratespalace.ae
+            .contact-info
+              span.label Telephone
+              span.info 
+                a(href="tel://971-2-690-7951") +971 2 690 7951.
+            .contact-info
+              span.label Restaurant
+              span.info A la carte, Casual Dining
+            .contact-info
+              span.label Dress Code
+              span.info Smart Casual
+            .contact-info
+              span.label Capacity:
+              span.info 96(Outdoor)
+          +cta-btngroup('FUTHER INFORMATION','#','BOOK NOW','#').wide
+          .block-gallery.slide-caption
+            .title Emirates Palace Dining experiences
+            .block-img.row
+              .col-xs-6.col-sm-4
+                .content
+                  +img('gallery', 'restaurant/img-16.jpg')
+                  .info-overplay
+                    | Lounges & Bars
+              .col-xs-6.col-sm-4
+                .content
+                  +img('gallery', 'restaurant/img-17.jpg')
+                  .info-overplay
+                    | Lounges & Bars
+              .col-xs-6.col-sm-4
+                .content
+                  +img('gallery', 'restaurant/img-18.jpg')
+                  .info-overplay
+                    | Lounges & Bars
+              .col-xs-6.col-sm-4
+                .content
+                  +img('gallery', 'restaurant/img-19.jpg')
+                  .info-overplay
+                    | Lounges & Bars
+              .col-xs-6.col-sm-4
+                .content
+                  +img('gallery', 'restaurant/img-20.jpg')
+                  .info-overplay
+                    | Lounges & Bars
+              .col-xs-6.col-sm-4
+                .content
+                  +img('gallery', 'restaurant/img-21.jpg')
+                  .info-overplay
+                    | Lounges & Bars
+
+mixin booking-result-item(title, img , isSpa, idTab)  
+  .booking-result-item-group&attributes(attributes)
+    .row   
+      .col-xs-12.col-sm-4
+        .cover
+          +img(title,img)
+      .col-xs-12.col-sm-8
+        .item-list
+          .title!=title
+          .num-tag Only 1 Room Left
+          
+          .item
+            .head(data-toggle="collapse" data-target="##{idTab}-1" aria-expanded="false" aria-controls="#{idTab}-1")
+              .row
+                .col-xs-5
+                  .item-title Winter at the Palace
+                .col-xs-3.col-sm-4
+                  .currency 
+                    span.symbols AED 
+                    span.price 7,088.00*
+                .col-xs-4.col-sm-3.text-right
+                  a(href="#", title="BOOK NOW").book-link BOOK NOW
+            .content.collapse(id="#{idTab}-1")
+              .row
+                .col-xs-6
+                  .title Winter at the Palace
+                  p Price per room per night, including full American breakfast buffet, taxes and free use of all hotel facilities.
+                .col-xs-6
+                  .title Guarantee Policy
+                  p A Guarantee is mandatory to reserve the room. (American Express, Diners Club, Japan Credit Bureau, MasterCard, Visa Card)
+          - if (isSpa == 'true')
+            .item
+              .head(data-toggle="collapse" data-target="##{idTab}-2" aria-expanded="false" aria-controls="#{idTab}-2")
+                .row
+                  .col-xs-5
+                    .item-title Spa Discovery Package
+                  .col-xs-3.col-sm-4
+                    .currency
+                      span.symbols AED 
+                      span.price 7,688.00*
+                  .col-xs-4.col-sm-3.text-right
+                    a(href="#", title="BOOK NOW").book-link BOOK NOW
+              .content.collapse(id="#{idTab}-2")
+                .row
+                  .col-xs-6
+                    .title Spa Discovery Package
+                    p Price per room per night, including full American breakfast buffet, taxes and free use of all hotel facilities.
+                  .col-xs-6
+                    .title Guarantee Policy
+                    p A Guarantee is mandatory to reserve the room. (American Express, Diners Club, Japan Credit Bureau, MasterCard, Visa Card)
+          .item
+            .head(data-toggle="collapse" data-target="##{idTab}-3" aria-expanded="false" aria-controls="#{idTab}-3")
+              .row
+                .col-xs-5
+                  .item-title Half Board Package
+                .col-xs-3.col-sm-4
+                  .currency
+                    span.symbols AED 
+                    span.price 8,889.00*
+                .col-xs-4.col-sm-3.text-right
+                  a(href="#", title="BOOK NOW").book-link BOOK NOW
+            .content.collapse(id="#{idTab}-3")
+              .row
+                .col-xs-6
+                  .title Half Board Package
+                  p Price per room per night, including full American breakfast buffet, taxes and free use of all hotel facilities.
+                .col-xs-6
+                  .title Guarantee Policy
+                  p A Guarantee is mandatory to reserve the room. (American Express, Diners Club, Japan Credit Bureau, MasterCard, Visa Card)
+          .item
+            .head(data-toggle="collapse" data-target="##{idTab}-4" aria-expanded="false" aria-controls="#{idTab}-4")
+              .row
+                .col-xs-5
+                  .item-title Best Flexible Rate
+                .col-xs-3.col-sm-4
+                  .currency
+                    span.symbols AED 
+                    span.price 9,450.00*
+                .col-xs-4.col-sm-3.text-right
+                  a(href="#", title="BOOK NOW").book-link BOOK NOW
+            .content.collapse(id="#{idTab}-4")
+              .row
+                .col-xs-6
+                  .title Best Flexible Rate
+                  p Price per room per night, including full American breakfast buffet, taxes and free use of all hotel facilities.
+                .col-xs-6
+                  .title Guarantee Policy
+                  p A Guarantee is mandatory to reserve the room. (American Express, Diners Club, Japan Credit Bureau, MasterCard, Visa Card)
+        .note-text.text-right
+          i Rates are per room and night 
+          
+mixin booking-result-item-2(title, img , idTab , roomFeatures , roomAmenities)  
+  .booking-result-item-group&attributes(attributes)
+    .row    
+      .col-xs-12.col-sm-12.title!=title
+      .col-xs-12.col-sm-4.block-detail
+        .cover
+          +img(title,img)
+          .hover
+            span View Detail
+          .num-room
+            span Room 1 left
+        .block-detail-content
+          .block-media.full
+            .media-wrap
+              +img('media' , 'booking-step/img-2.jpg')
+
+          - if(roomFeatures.length){
+            div
+              .room-features.col-xs-12.col-sm-12
+                .title Room features & amenities
+                .row
+                  - var n = 0
+                  - var l = roomFeatures.length
+                  ul.feature-list.col-xs-12.col-sm-9
+                    while n < l
+                      li.col-xs-12.col-sm-6
+                        span=roomFeatures[n]
+                      - n += 1;
+                      
+                  - var n = 0
+                  - var l = roomAmenities.length
+                  ul.amenities-list.col-xs-12.col-sm-3
+                    while n < l
+                      li.col-xs-12.col-sm-12
+                        span=roomAmenities[n]
+                      - n += 1;
+            - }
+
+      .col-xs-12.col-sm-8.block-info
+        .item-list  
+          .item
+            .collapsed.head(data-toggle="collapse" data-target="##{idTab}-1" aria-expanded="false" aria-controls="#{idTab}-1")
+              .row
+                .col-xs-6.col-sm-7
+                  .item-title 
+                    span.arrow
+                    | Winter at the Palace
+                .col-xs-6.col-sm-5.text-right
+                  .currency 
+                    span.symbols AED 
+                    span.price 7,088.00
+                  .book-link
+                    a(href="#", title="BOOK NOW") BOOK NOW
+            .content.collapse(id="#{idTab}-1")
+              .row
+                .col-xs-6
+                  .title Winter at the Palace
+                  p Price per room per night, including full American breakfast buffet, taxes and free use of all hotel facilities.
+                .col-xs-6
+                  .title Guarantee Policy
+                  p A Guarantee is mandatory to reserve the room. (American Express, Diners Club, Japan Credit Bureau, MasterCard, Visa Card)
+          .item
+            .collapsed.head(data-toggle="collapse" data-target="##{idTab}-2" aria-expanded="false" aria-controls="#{idTab}-2")
+              .row
+                .col-xs-6.col-sm-7
+                  .item-title 
+                    span.arrow
+                    | Winter at the Palace
+                .col-xs-6.col-sm-5.text-right
+                  .currency 
+                    span.symbols AED 
+                    span.price 7,088.00
+                  .book-link
+                    a(href="#", title="BOOK NOW") BOOK NOW
+            .content.collapse(id="#{idTab}-2")
+              .row
+                .col-xs-6
+                  .title Winter at the Palace
+                  p Price per room per night, including full American breakfast buffet, taxes and free use of all hotel facilities.
+                .col-xs-6
+                  .title Guarantee Policy
+                  p A Guarantee is mandatory to reserve the room. (American Express, Diners Club, Japan Credit Bureau, MasterCard, Visa Card)
+          .item
+            .collapsed.head(data-toggle="collapse" data-target="##{idTab}-3" aria-expanded="false" aria-controls="#{idTab}-3")
+              .row
+                .col-xs-6.col-sm-7
+                  .item-title 
+                    span.arrow
+                    | Winter at the Palace
+                .col-xs-6.col-sm-5.text-right
+                  .currency 
+                    span.symbols AED 
+                    span.price 7,088.00
+                  .book-link
+                    a(href="#", title="BOOK NOW") BOOK NOW
+            .content.collapse(id="#{idTab}-3")
+              .row
+                .col-xs-6
+                  .title Winter at the Palace
+                  p Price per room per night, including full American breakfast buffet, taxes and free use of all hotel facilities.
+                .col-xs-6
+                  .title Guarantee Policy
+                  p A Guarantee is mandatory to reserve the room. (American Express, Diners Club, Japan Credit Bureau, MasterCard, Visa Card)          
+          //- .num-tag Only 1 Room Left
+        //- .note-text.text-left
+        //-   i Rates are per room and night 
+
+mixin booking-line-item(isSpa, idTab)  
+  .booking-result-item-group&attributes(attributes)
+    .row
+      .col-xs-12
+        .item-list
+          .item
+            .room-line-collapse.head(data-toggle="collapse" data-target="##{idTab}-1" aria-expanded="false" aria-controls="#{idTab}-1")
+              .row
+                .col-xs-5
+                  .item-title Winter at the Palace
+                .col-xs-4
+                  .currency 
+                    span.symbols AED 
+                    span.price 7,088.00*
+                .col-xs-3.text-right
+                  a(href="#", title="BOOK NOW").book-link BOOK NOW
+            .content.collapse(id="#{idTab}-1")
+              .row
+                .col-xs-6
+                  .title Winter at the Palace
+                  p Price per room per night, including full American breakfast buffet, taxes and free use of all hotel facilities.
+                .col-xs-6
+                  .title Guarantee Policy
+                  p A Guarantee is mandatory to reserve the room. (American Express, Diners Club, Japan Credit Bureau, MasterCard, Visa Card)
+          - if (isSpa == 'true')
+            .item
+              .room-line-collapse.head(data-toggle="collapse" data-target="##{idTab}-2" aria-expanded="false" aria-controls="#{idTab}-2")
+                .row
+                  .col-xs-5
+                    .item-title Spa Discovery Package
+                  .col-xs-4
+                    .currency
+                      span.symbols AED 
+                      span.price 7,688.00*
+                  .col-xs-3.text-right
+                    a(href="#", title="BOOK NOW").book-link BOOK NOW
+              .content.collapse(id="#{idTab}-2")
+                .row
+                  .col-xs-6
+                    .title Spa Discovery Package
+                    p Price per room per night, including full American breakfast buffet, taxes and free use of all hotel facilities.
+                  .col-xs-6
+                    .title Guarantee Policy
+                    p A Guarantee is mandatory to reserve the room. (American Express, Diners Club, Japan Credit Bureau, MasterCard, Visa Card)
+          .item
+            .room-line-collapse.head(data-toggle="collapse" data-target="##{idTab}-3" aria-expanded="false" aria-controls="#{idTab}-3")
+              .row
+                .col-xs-5
+                  .item-title Half Board Package
+                .col-xs-4
+                  .currency
+                    span.symbols AED 
+                    span.price 8,889.00*
+                .col-xs-3.text-right
+                  a(href="#", title="BOOK NOW").book-link BOOK NOW
+            .content.collapse(id="#{idTab}-3")
+              .row
+                .col-xs-6
+                  .title Half Board Package
+                  p Price per room per night, including full American breakfast buffet, taxes and free use of all hotel facilities.
+                .col-xs-6
+                  .title Guarantee Policy
+                  p A Guarantee is mandatory to reserve the room. (American Express, Diners Club, Japan Credit Bureau, MasterCard, Visa Card)
+          .item
+            .room-line-collapse.head(data-toggle="collapse" data-target="##{idTab}-4" aria-expanded="false" aria-controls="#{idTab}-4")
+              .row
+                .col-xs-5
+                  .item-title Best Flexible Rate
+                .col-xs-4
+                  .currency
+                    span.symbols AED 
+                    span.price 9,450.00*
+                .col-xs-3.text-right
+                  a(href="#", title="BOOK NOW").book-link BOOK NOW
+            .content.collapse(id="#{idTab}-4")
+              .row
+                .col-xs-6
+                  .title Best Flexible Rate
+                  p Price per room per night, including full American breakfast buffet, taxes and free use of all hotel facilities.
+                .col-xs-6
+                  .title Guarantee Policy
+                  p A Guarantee is mandatory to reserve the room. (American Express, Diners Club, Japan Credit Bureau, MasterCard, Visa Card)
+        .note-text.text-right
+          i Rates are per room and night 
+          
+mixin press-room-item(img, date, sub_title, title, description)
+  .press-room-item&attributes(attributes)
+    //- .block-media
+    //-   .img 
+    //-     +img('media' , img)
+    .block-info
+      - if(date != '')
+        .sub-title
+          span.date!= date
+          | &nbsp;-&nbsp;
+          span!=sub_title
+      .title
+        +link(title, "#")
+      .description!=description
+      .cta-btns
+        +link("READ MORE", "#").btn.btn-default.btn-book-now
+
+mixin press-room-item-type-3(date, sub_title, title, description)
+  .press-room-item&attributes(attributes)
+    .block-info
+      .row      
+        .col-md-8.col-sm-12.col-xs-12.match-height
+          - if(date != '')
+            .sub-title
+              span.date!= date
+              | &nbsp;-&nbsp;
+              span!=sub_title
+          .title
+            +link(title, "#")
+          .description!=description
+        .col-md-4.col-sm-12.col-xs-12.match-height
+          .cta-btns
+            +link("READ MORE", "#").btn.btn-default.btn-book-now
+
+mixin special-offers-item(img, title, description , isReadMore)
+  .spa-offer-item&attributes(attributes)
+    +img(title, img)
+    .content-wrap
+      .title!=title
+      .row
+        .col-xs-12.col-md-8
+          .editor-content.description!=description
+        .col-xs-12.col-md-4
+          .rate
+            span.offer-type-description Rates from
+            span.price $1490
+        .clearfix
+        .col-xs-12.col-md-5
+          .text-valid VALID TILL 25 DECEMBER 2016
+        .col-xs-12.col-md-7.text-right
+          .cta-btns.wide
+            - if(isReadMore == 'true')
+              a(href="#", title="Book Now").btn.btn-default READ MORE
+            a(href="#", title="Book Now").btn.btn-default BOOK NOW
+
+//- Corp Site Media Block
+
+mixin corp-special-offers-item(img, title, description , isReadMore)
+  .spa-offer-item&attributes(attributes)
+    .content-wrap.row
+      .col-sm-8.col-sm-8.match-height(data-bg-url="url(images/#{img})").dynamic-bg
+        .block-media
+          .media-wrap
+            +img(title, img)
+          .media-title
+            .title LOREM IPSUM
+            .sub-title LOREM IPSUM EST
+      .col-sm-4.col-sm-4.match-height
+        .block-info
+          .title!=title
+          .editor-content.description!=description
+          .cta-btns.wide
+            a(href="#", title="Book Now").btn.btn-default-outline FURTHER INFORMATION
+      
+mixin panel-collapse-item(title, description, id)
+  .panel.panel-default.faq-item
+    .panel-heading(role='tab')
+      label.panel-title
+        a(role='button', data-toggle='collapse', data-parent='#accordion', href='##{id}', aria-expanded='true', aria-controls='#{id}').collapsed
+          span.navigate
+          span.question!=title
+    .panel-collapse.collapse(role='tabpanel', aria-labelledby='tab-item-1', id='#{id}')
+      .panel-body
+        .answer!=description
+mixin select-control-button(label)
+  .col-xs-12
+    .form-group.select-control.type-button
+      label!=label
+      .select-wrap
+        select.bootstrap-select
+          option PLEASE SELECT
+          option Hotel 1
+          option Hotel 2
+          option Hotel 3
+          option Hotel 4
+          option Hotel 5
+          option Hotel 6
+          option Hotel 7
+          option Hotel 8
+          option Hotel 9
+mixin select-control-horizontal(label)
+  .form-group
+    .col-sm-2.control-label-wrap
+      label.control-label!=label    
+    .col-sm-10
+      .select-wrap
+        select.bootstrap-select
+          option PLEASE SELECT
+          option Hotel 1
+          option Hotel 2
+          option Hotel 3
+          option Hotel 4
+          option Hotel 5
+          option Hotel 6
+          option Hotel 7
+          option Hotel 8
+          option Hotel 9
+mixin select-control-horizontal-short(label)
+  .form-group
+    .col-sm-4.control-label-wrap
+      label.control-label!=label    
+    .col-sm-8
+      .select-wrap
+        select.bootstrap-select
+          option PLEASE SELECT
+          option Hotel 1
+          option Hotel 2
+          option Hotel 3
+          option Hotel 4
+          option Hotel 5
+          option Hotel 6
+          option Hotel 7
+          option Hotel 8
+          option Hotel 9
+
+
+mixin section-press-room-control(positon, isArchive)
+  .section-press-room-control&attributes(attributes)
+    .container
+      .title.search-title Search Our Press Releases
+      .row
+        .col-md-7
+          .btn-group.btn-group-justified.date-group(role='group', aria-label='Justified button group')
+            - if(positon == 'bottom')
+              .input-with-icon
+                input#b-date-from(type="text" placeholder="FROM DATE" data-mindate="#b-date-to").datetimepicker
+                .icon-calendar
+              .input-with-icon
+                input#b-date-to(type="text" placeholder="TO DATE" data-mintoday="true").datetimepicker
+                .icon-calendar
+            - else
+              .input-with-icon
+                input#t-date-from(type="text" placeholder="FROM DATE" data-mindate="#t-date-to").datetimepicker
+                .icon-calendar
+              .input-with-icon
+                input#t-date-to(type="text" placeholder="TO DATE" data-mintoday="true").datetimepicker
+                .icon-calendar
+            button.btn.btn-default(href='#', role='button') SEARCH
+
+          
+          .block-pagination.row
+            .col-xs-12.col-sm-4
+              .pager
+                span Page: 1 of 46
+
+            nav.col-xs-12.col-sm-8.pagination-wrapper
+              ul.pagination
+                li.prev 
+                  a(href='#') prev
+                li 
+                  a(href='#') 1
+                li 
+                  a(href='#') 2
+                li 
+                  a(href='#') 3
+                li 
+                  a(href='#').current 4
+                li 
+                  a(href='#') 5
+                li 
+                  a(href='#') 6
+                li 
+                  a(href='#') 7
+                li 
+                  a(href='#') 8
+                li 
+                  a(href='#') 9
+                li.next
+                  a(href='#') next
+
+        - if (isArchive !== 'false')
+          .col-xs-12.col-sm-12.col-md-5.archive-select
+            select.select-style-2.bootstrap-select
+              option(value='') Archive
+              option(value='1') Archive 1
+              option(value='2') Archive 2
+              option(value='3') Archive 3

@@ -1,0 +1,20 @@
+extends layouts/layout
+
+block vars
+  -title = 'Thong tin giai thuong'
+  -bodyClass = 'rules-page'
+
+block container
+  .outmost-wrapper
+    .wrapper
+      .main
+        .content
+          include includes/rules-header-tabs
+          .section.active
+            include includes/reward
+            include includes/regulations
+            include includes/how-to-play
+      include includes/loading
+
+block pagescript
+  

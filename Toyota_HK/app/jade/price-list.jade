@@ -1,0 +1,169 @@
+extends layouts/layout
+
+block vars
+  -title = 'Price List'
+  -bodyClass = 'price-list' 
+
+block container
+
+  .about-page
+    .sub-page-banner
+      p Price List
+      img(src='images/about/about-banner.jpg', title='Price List', alt='Price List')
+
+    .container.price-list
+      h2.page-title Price List
+      .row
+        .cars-list
+          +car-price-item('86', 'car-86.png', 'http://toyotadev.projectuat.com/en-us/new-toyota/alphard/', false)
+            +car-price-item-detail([{
+              name: 'Sport', 
+              price: '$414,450 up'
+            },{
+              name: 'Sport 2',
+              price: '$414,450 up'
+            }])
+          +car-price-item('RACTIS', 'car-ractis.png', 'http://toyotadev.projectuat.com/en-us/new-toyota/alphard/', true)
+            +car-price-item-detail([{
+              name: 'Sport', 
+              price: '$414,450 up'
+            },{
+              name: 'Sport 2',
+              price: '$414,450 up'
+            }])
+          +car-price-item('COROLLA', 'car-corolla.png', 'http://toyotadev.projectuat.com/en-us/new-toyota/alphard/', false)
+            +car-price-item-detail([{
+              name: 'Sport', 
+              price: '$414,450 up'
+            },{
+              name: 'Sport 2',
+              price: '$414,450 up'
+            }])
+          +car-price-item('Prius C hybrid', 'car-prius-c-hybrid.png', 'http://toyotadev.projectuat.com/en-us/new-toyota/alphard/', false)
+            +car-price-item-detail([{
+              name: 'Sport', 
+              price: '$414,450 up'
+            },{
+              name: 'Sport 2',
+              price: '$414,450 up'
+            }])
+          +car-price-item('Prius hybrid', 'car-prius-hybrid.png', 'http://toyotadev.projectuat.com/en-us/new-toyota/alphard/', false)
+            +car-price-item-detail([{
+              name: 'Sport', 
+              price: '$414,450 up'
+            },{
+              name: 'Sport 2',
+              price: '$414,450 up'
+            }])
+          +car-price-item('Camry', 'car-camry.png', 'http://toyotadev.projectuat.com/en-us/new-toyota/alphard/', false)
+            +car-price-item-detail([{
+              name: 'Sport', 
+              price: '$414,450 up'
+            },{
+              name: 'Sport 2',
+              price: '$414,450 up'
+            }])
+          +car-price-item('Camry hybrid', 'car-camry-hybrid.png', 'http://toyotadev.projectuat.com/en-us/new-toyota/alphard/', false)
+            +car-price-item-detail([{
+              name: 'Sport', 
+              price: '$414,450 up'
+            },{
+              name: 'Sport 2',
+              price: '$414,450 up'
+            }])
+          +car-price-item('Mark X', 'car-mark-x.png', 'http://toyotadev.projectuat.com/en-us/new-toyota/alphard/', false)
+            +car-price-item-detail([{
+              name: 'Sport', 
+              price: '$414,450 up'
+            },{
+              name: 'Sport 2',
+              price: '$414,450 up'
+            }])
+          +car-price-item('Rav 4', 'car-rav-4.png', 'http://toyotadev.projectuat.com/en-us/new-toyota/alphard/', false)
+            +car-price-item-detail([{
+              name: 'Sport', 
+              price: '$414,450 up'
+            },{
+              name: 'Sport 2',
+              price: '$414,450 up'
+            }])
+          +car-price-item('Prius v hybrid', 'car-prius-v-hybrid.png', 'http://toyotadev.projectuat.com/en-us/new-toyota/alphard/', false)
+            +car-price-item-detail([{
+              name: 'Sport', 
+              price: '$414,450 up'
+            },{
+              name: 'Sport 2',
+              price: '$414,450 up'
+            }])
+          +car-price-item('Wish', 'car-wish.png', 'http://toyotadev.projectuat.com/en-us/new-toyota/alphard/', false)
+            +car-price-item-detail([{
+              name: 'Sport', 
+              price: '$414,450 up'
+            },{
+              name: 'Sport 2',
+              price: '$414,450 up'
+            }])
+          +car-price-item('noah', 'car-noah.png', 'http://toyotadev.projectuat.com/en-us/new-toyota/alphard/', false)
+            +car-price-item-detail([{
+              name: 'Sport', 
+              price: '$414,450 up'
+            },{
+              name: 'Sport 2',
+              price: '$414,450 up'
+            }])
+          +car-price-item('previa', 'car-previa.png', 'http://toyotadev.projectuat.com/en-us/new-toyota/alphard/', false)
+            +car-price-item-detail([{
+              name: 'Sport', 
+              price: '$414,450 up'
+            },{
+              name: 'Sport 2',
+              price: '$414,450 up'
+            }])
+          +car-price-item('alphard 250', 'car-alphard-250.png', 'http://toyotadev.projectuat.com/en-us/new-toyota/alphard/', true)
+            +car-price-item-detail([{
+              name: 'Sport', 
+              price: '$414,450 up'
+            },{
+              name: 'Sport 2',
+              price: '$414,450 up'
+            }])
+          +car-price-item('alphard hybrid', 'car-alphard-hybrid.png', 'http://toyotadev.projectuat.com/en-us/new-toyota/alphard/', false)
+            +car-price-item-detail([{
+              name: 'Sport', 
+              price: '$414,450 up'
+            },{
+              name: 'Sport 2',
+              price: '$414,450 up'
+            }])
+          +car-price-item('alphard 350', 'car-alphard-350.png', 'http://toyotadev.projectuat.com/en-us/new-toyota/alphard/', false)
+            +car-price-item-detail([{
+              name: 'Sport', 
+              price: '$414,450 up'
+            },{
+              name: 'Sport 2',
+              price: '$414,450 up'
+            }])
+          +car-price-item('alphard executive lounge', 'car-alphard-exe.png', 'http://toyotadev.projectuat.com/en-us/new-toyota/alphard/', false)
+            +car-price-item-detail([{
+              name: 'Sport', 
+              price: '$414,450 up'
+            },{
+              name: 'Sport 2',
+              price: '$414,450 up'
+            }])
+          +car-price-item('vellfire 350', 'car-vellfire-350.png', 'http://toyotadev.projectuat.com/en-us/new-toyota/alphard/', false)
+            +car-price-item-detail([{
+              name: 'Sport', 
+              price: '$414,450 up'
+            },{
+              name: 'Sport 2',
+              price: '$414,450 up'
+            }])
+          +car-price-item('prado', 'car-prado.png', 'http://toyotadev.projectuat.com/en-us/new-toyota/alphard/', false)
+            +car-price-item-detail([{
+              name: 'Sport', 
+              price: '$414,450 up'
+            },{
+              name: 'Sport 2',
+              price: '$414,450 up'
+            }])

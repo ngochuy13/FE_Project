@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html lang="en" class="no-js ie ie8"><![endif]-->
+<!--[if IE 9]><html lang="en" class="no-js ie ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <title>Car Sienta</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles/vendor.css" rel="stylesheet" />
+    <link href="styles/main.css" rel="stylesheet" />
+    <link href="styles/car-detail.css" rel="stylesheet" />
+    <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+    <script src="scripts/modernizr.js" type="text/javascript"></script>
+  </head>
+  <body class="loading car-detail en-US">
+    <div id="block-preload" class="block-preload">
+      <div class="preload-icon"></div>
+      <div class="preload-layer"></div>
+    </div>
+    <div id="container">
+      <div class="page-wrapper">
+        <header id="header">
+          <div class="navigation-top-container">
+            <div class="top-logo"><a href="#" title="toyota"><img src="images/logos/top-logo.png" alt="Logo"></a></div>
+            <div class="links-lang">
+              <div class="external-links">
+                <div class="header-buttons"><a href="#" target="_blank" title="Book a test drive"> <img src="images/icons/helpful-link-list-icon-3-small.png" alt="icon" class="icon"><span>Book A Test Drive</span></a></div>
+                <div class="header-buttons"><a href="#" target="_blank" title="Trade in Service"> <img src="images/icons/helpful-link-list-icon-15-small.png" alt="icon" class="icon"><span>Trade-in Services</span></a></div>
+                <div class="header-buttons"><a href="#" target="_blank" title="Subscribe letter"> <img src="images/icons/helpful-link-list-icon-10-small.png" alt="icon" class="icon"><span>Subscribe E-Newsletter  </span></a></div>
+              </div>
+              <div class="form-search">
+                <form action="/">
+                  <input type="text" name="search" placeholder="Search" class="search">
+                  <input type="submit" value="" class="submit">
+                </form>
+              </div>
+              <div class="langs">
+                <div class="links-group"><a href="#" target="_blank" title="Toyota Global">繁體中文</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="navigation-container overflow">
+            <div class="wsmenucontainer clearfix">
+              <div class="wsmenuexpandermain slideLeft"><a id="navToggle" href="#" class="animated-arrow slideLeft"><span></span><span></span><span></span></a></div>
+              <div class="logo"><a href="home.html" title="toyota"><img src="images/logos/top-logo.png" alt="toyota"/></a>
+              </div>
+              <div class="wsmenucontent overlapblackbg"></div>
+              <div class="header">
+                <nav class="wsmenu slideLeft clearfix">
+                  <ul class="wsmenu-list">
+                    <li class="only-mobile">
+                      <div class="form-search">
+                        <form action="/">
+                          <input type="text" name="search" placeholder="Search" class="search">
+                          <input type="submit" value="" class="submit">
+                        </form>
+                      </div>
+                      <div class="langs">
+                        <div class="links-group"><a href="#" target="_blank" title="Toyota Global">繁體中文</a></div>
+                      </div>
+                    </li>
+                    <li><a href="home.html" title="Home" class="active"><span>Home</span></a></li>
+                    <li><a id="new-car-menu-item" href="#" title="New Toyota"><span>New Toyota</span></a>
+                      <div class="megamenu clearfix new-car">
+                        <div class="cars-list__item col-xs-12 col-sm-12 col-md-2 col-lg-2"><a href="car-detail.html" title="Ractis" class="car-info"><img src="images/menu/car-1.png" alt="Ractis"/><span class="car-name">Ractis</span><span class="car-short-desc">$169,890 up</span></a></div>
+                        <div class="cars-list__item col-xs-12 col-sm-12 col-md-2 col-lg-2"><a href="car-detail.html" title="Prius C" class="car-info"><img src="images/menu/car-2.png" alt="Prius C"/><span class="car-name">Prius C</span><span class="car-short-desc">$158,890 up</span></a></div>
+                        <div class="cars-list__item col-xs-12 col-sm-12 col-md-2 col-lg-2"><a href="car-detail-02.html" title="Camry" class="car-info"><img src="images/menu/car-3.png" alt="Camry"/><span class="car-name">Camry</span><span class="car-short-desc">$228,900 up</span></a></div>
+                        <div class="cars-list__item col-xs-12 col-sm-12 col-md-2 col-lg-2"><a href="car-detail.html" title="Noah" class="car-info"><img src="images/menu/car-4.png" alt="Noah"/><span class="car-name">Noah</span><span class="car-short-desc">$278,990 up</span></a></div>
+                        <div class="cars-list__item col-xs-12 col-sm-12 col-md-2 col-lg-2"><a href="car-detail.html" title="Alphard" class="car-info"><img src="images/menu/car-5.png" alt="Alphard"/><span class="car-name">Alphard</span><span class="car-short-desc">$216,800 up</span></a></div>
+                        <div class="cars-list__item col-xs-12 col-sm-12 col-md-2 col-lg-2"><a href="car-detail.html" title="Vellfire" class="car-info"><img src="images/menu/car-6.png" alt="Vellfire"/><span class="car-name">Vellfire</span><span class="car-short-desc">$288,900 up</span></a></div>
+                        <div class="cars-list__item col-xs-12 col-sm-12 col-md-2 col-lg-2"><a href="car-detail.html" title="Spade" class="car-info"><img src="images/menu/car-7.png" alt="Spade"/><span class="car-name">Spade</span><span class="car-short-desc">$198,090 up</span></a></div>
+                        <div class="cars-list__item col-xs-12 col-sm-12 col-md-2 col-lg-2"><a href="car-detail.html" title="Sienta" class="car-info"><img src="images/menu/car-8.png" alt="Sienta"/><span class="car-name">Sienta</span><span class="car-short-desc">$169,890 up</span></a></div>
+                        <div class="cars-list__item col-xs-12 col-sm-12 col-md-2 col-lg-2"><a href="car-detail.html" title="Mark X" class="car-info"><img src="images/menu/car-9.png" alt="Mark X"/><span class="car-name">Mark X</span><span class="car-short-desc">$189,900 up</span></a></div>
+                        <div class="cars-list__item col-xs-12 col-sm-12 col-md-2 col-lg-2"><a href="car-detail-05.html" title="Corolla" class="car-info"><img src="images/menu/car-10.png" alt="Corolla"/><span class="car-name">Corolla</span><span class="car-short-desc">$188,590 up</span></a></div>
+                        <div class="cars-list__item col-xs-12 col-sm-12 col-md-2 col-lg-2"><a href="car-detail.html" title="Rav4" class="car-info"><img src="images/menu/car-11.png" alt="Rav4"/><span class="car-name">Rav4</span><span class="car-short-desc">$315,800 up</span></a></div>
+                        <div class="cars-list__item col-xs-12 col-sm-12 col-md-2 col-lg-2"><a href="car-detail.html" title="Prius" class="car-info"><img src="images/menu/car-12.png" alt="Prius"/><span class="car-name">Prius</span><span class="car-short-desc">$208,000 up</span></a></div>
+                        <div class="cars-list__item col-xs-12 col-sm-12 col-md-2 col-lg-2"><a href="car-detail.html" title="Prius V" class="car-info"><img src="images/menu/car-13.png" alt="Prius V"/><span class="car-name">Prius V</span><span class="car-short-desc">$169,580 up</span></a></div>
+                        <div class="cars-list__item col-xs-12 col-sm-12 col-md-2 col-lg-2"><a href="car-detail.html" title="Wish" class="car-info"><img src="images/menu/car-14.png" alt="Wish"/><span class="car-name">Wish</span><span class="car-short-desc">$189,000 up</span></a></div>
+                        <div class="cars-list__item col-xs-12 col-sm-12 col-md-2 col-lg-2"><a href="car-detail.html" title="Previa" class="car-info"><img src="images/menu/car-15.png" alt="Previa"/><span class="car-name">Previa</span><span class="car-short-desc">$259,900 up</span></a></div>
+                        <div class="cars-list__item col-xs-12 col-sm-12 col-md-2 col-lg-2"><a href="car-detail.html" title="Prado" class="car-info"><img src="images/menu/car-16.png" alt="Prado"/><span class="car-name">Prado</span><span class="car-short-desc">$300,800 up</span></a></div>
+                        <div class="cars-list__item col-xs-12 col-sm-12 col-md-2 col-lg-2"><a href="car-detail.html" title="Crown Royal" class="car-info"><img src="images/menu/car-17.png" alt="Crown Royal"/><span class="car-name">Crown Royal</span><span class="car-short-desc">$228,800 up</span></a></div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                          <hr>
+                          <ul class="mainnav-sub__help-links wsmenu-submenu-sub">
+                            <li><a href="#" title="Find your matches">Find your matches</a>
+                            </li>
+                            <li><a href="#" title="Test-drive form">Test-drive form</a>
+                            </li>
+                            <li><a href="#" title="Price list">Price list</a>
+                            </li>
+                            <li><a href="#" title="Promotions list">Promotions list</a>
+                            </li>
+                            <li><a href="#" title="Trade-in services">Trade-in services</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li><a href="#" title="Commercial Vehicle"><span>Commercial Vehicle</span></a></li>
+                    <li><a href="#" title="Use Toyota"><span>Use Toyota</span></a></li>
+                    <li><a href="after-sales.html" title="Aftersales"><span>Aftersales</span></a>
+                      <ul class="megamenu clearfix submenu-link">
+                        <li style="height: 58px;" class="col-xs-12 col-sm-12 col-md-4 col-lg-3 link-default vcenter"><a target="_self" href="http://toyotadev.projectuat.com/en/after-sales/service-outlet/" title="Service Outlet">Service Outlet</a></li>
+                        <li style="height: 58px;" class="col-xs-12 col-sm-12 col-md-4 col-lg-3 link-default vcenter"><a target="_blank" href="http://toyotadev.projectuat.com/en/after-sales/service-booking/" title="Service Booking">Service Booking</a></li>
+                        <li style="height: 58px;" class="col-xs-12 col-sm-12 col-md-4 col-lg-3 link-default vcenter"><a target="_self" href="http://toyotadev.projectuat.com/en/after-sales/recall-inquiry/" title="Vehicle Safety Recall Inquiry">Vehicle Safety Recall Inquiry</a></li>
+                        <li style="height: 58px;" class="col-xs-12 col-sm-12 col-md-4 col-lg-3 link-default vcenter"><a target="_self" href="http://toyotadev.projectuat.com/en/after-sales/maintenance-service/" title="Maintenance Service">Maintenance Service</a></li>
+                        <li style="height: 58px;" class="col-xs-12 col-sm-12 col-md-4 col-lg-3 link-default vcenter"><a target="_self" href="http://toyotadev.projectuat.com/en/after-sales/parts-accessories/" title="Parts Accessories">Parts Accessories</a></li>
+                        <li style="height: 58px;" class="col-xs-12 col-sm-12 col-md-4 col-lg-3 link-default vcenter"><a target="_self" href="http://toyotadev.projectuat.com/en/after-sales/service-package-promotions/" title="Service Package &amp; Promotions">Service Package & Promotions</a></li>
+                        <li style="height: 58px;" class="col-xs-12 col-sm-12 col-md-4 col-lg-3 link-default vcenter"><a target="_self" href="http://toyotadev.projectuat.com/en/after-sales/maintenance-driving-tips/" title="Maintenance and Driving Tips">Maintenance and Driving Tips</a></li>
+                        <li style="height: 58px;" class="col-xs-12 col-sm-12 col-md-4 col-lg-3 link-default vcenter"><a target="_self" href="http://toyotadev.projectuat.com/en/after-sales/warranty/" title="Warranty">Warranty</a></li>
+                        <li style="height: 58px;" class="col-xs-12 col-sm-12 col-md-4 col-lg-3 link-default vcenter"><a target="_self" href="http://toyotadev.projectuat.com/en/after-sales/express/" title="Toyota ">Toyota "Express" Maintenance Service</a></li>
+                        <li style="height: 58px;" class="col-xs-12 col-sm-12 col-md-4 col-lg-3 link-default vcenter"><a target="_self" href="http://toyotadev.projectuat.com/en/after-sales/free-pre-check-for-license-renewal/" title="Free Pre-check for License  Renewal">Free Pre-check for License  Renewal</a></li>
+                        <li style="height: 58px;" class="col-xs-12 col-sm-12 col-md-4 col-lg-3 link-default vcenter"><a target="_self" href="http://toyotadev.projectuat.com/en/after-sales/toyota-1st-time-check-up/" title="Toyota 1st time Check Up">Toyota 1st time Check Up</a></li>
+                        <li style="height: 58px;" class="col-xs-12 col-sm-12 col-md-4 col-lg-3 link-default vcenter"><a target="_self" href="http://toyotadev.projectuat.com/en/after-sales/vehicle-inspection-cert/" title="Vehicle Inspection Cert">Vehicle Inspection Cert</a></li>
+                      </ul>
+                    </li>
+                    <li><span class="wsmenu-click"><i class="wsmenu-arrow fa fa-angle-down"></i></span><span class="wsmenu-click"><i class="wsmenu-arrow fa fa-angle-down"></i></span><a target="_self" href="#" title="Finance &amp; Insurance"><span>Finance & Insurance</span></a>
+                      <ul class="megamenu clearfix submenu-link">
+                        <li style="height: 58px;" class="col-xs-12 col-sm-12 col-md-4 col-lg-3 link-default vcenter"><a target="_self" href="http://toyotadev.projectuat.com/en/finance-insurance/finance/" title="Finance Intro">Finance Intro</a></li>
+                        <li style="height: 58px;" class="col-xs-12 col-sm-12 col-md-4 col-lg-3 link-default vcenter has-subsub"><span class="wsmenu-click"><i class="wsmenu-arrow fa fa-angle-down"></i></span><a target="_self" href="http://toyotadev.projectuat.com/en/finance-insurance/insurance/" title="Insurance Programs">Insurance Programs</a>
+                          <ul class="megamenu-sub wsmenu-submenu">
+                            <li><a target="_self" href="http://toyotadev.projectuat.com/en/finance-insurance/insurance/contact-us-enquiry/" title="Insurance Program Enquiry">Insurance Program Enquiry</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="#" title="Toyota Corporate"><span>Toyota Corporate</span></a></li>
+                    <li><a href="about.html" title="About Toyota"><span>About Toyota</span></a>
+                      <ul class="megamenu clearfix submenu-link">
+                        <li class="col-xs-12 col-sm-12 col-md-4 col-lg-3 link-default"><a title="Innovative technologies" href="#">Innovative technologies</a>
+                          <ul class="megamenu-sub wsmenu-submenu">
+                            <li><a href="#" title="submenu-lv2">submenu-lv2</a>
+                            </li>
+                            <li><a href="#" title="submenu-lv2">submenu-lv2</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="col-xs-12 col-sm-12 col-md-4 col-lg-3 link-default"><a href="#" title="Innovation and Technology">Innovation and Technology</a>
+                        </li>
+                        <li class="col-xs-12 col-sm-12 col-md-4 col-lg-3 link-default"><a href="#" title="Vision">Vision</a>
+                        </li>
+                        <li class="col-xs-12 col-sm-12 col-md-4 col-lg-3 link-default"><a href="#" title="Development History">Development History</a>
+                        </li>
+                        <li class="col-xs-12 col-sm-12 col-md-4 col-lg-3 link-default"><a href="#" title="Awards">Awards</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="#" title="E-Magazine"><span>E-Magazine</span></a></li>
+                    <li class="only-mobile">
+                      <div class="external-links">
+                        <div class="links-group"><a href="http://crown-motors.com/tch/main/index.aspx" target="_blank" title="Crown Motors">Crown Motors</a></div>
+                        <div class="links-group"><a href="http://www.toyota-global.com/" target="_blank" title="Toyota Global">Toyota Global</a></div>
+                        <div class="links-group"><a href="#" target="_blank" title="Trac">Trac</a></div>
+                        <div class="links-group"><a href="#" target="_blank" title="Media Center">Media Center</a></div>
+                      </div>
+                      <div class="external-links">   
+                        <div class="links-default"><a href="#" target="_blank" title="Privacy policy">Privacy policy</a></div>
+                        <div class="links-default"><a href="#" target="_blank" title="Legal claims">Legal claims</a></div>
+                      </div>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </header>
+        <script>//- var priceCar = '189,800';</script>
+        <div class="car-sienta-detail">
+          <div class="section section-slider-view">
+            <div class="owl-carousel-car-view">
+              <div class="item banner-intel-scaling-item">
+                <picture>
+                  <source srcset="images/Cars/Sienta/banner-small-1.jpg" media="(max-width: 768px)"><img src="images/Cars/Sienta/banner-1.jpg" alt="Home banner." data-width="1920" data-height="799">
+                </picture>
+                <div class="content">
+                  <div class="block-ow-caption">
+                    <div class="block-left-middle">
+                      <div class="title-small">The Happiest of being together</div>
+                      <h1 class="title">SIENTA
+                        <div class="price">$234,920</div>
+                      </h1>
+                      <div class="description">
+                        <div class="editor-content"><p>On an outing with friends or family, <br/>it's the atmosphere inside the car <br/>that matters.</p></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section section-car-run-sienta">
+            <div class="banner-intel-scaling-item">
+              <div class="block-content">
+                <div class="block-car">
+                  <picture>
+                    <source srcset="images/Cars/Sienta/car-with-door.png" media="(max-width: 1024px)"><img src="images/Cars/Sienta/car-without-door.png" alt="Home banner.">
+                  </picture>
+                  <div class="block-wheel"><img src="images/Cars/Sienta/wheel.png" alt="Wheel" class="wheel-1"><img src="images/Cars/Sienta/wheel.png" alt="Wheel" class="wheel-2"></div>
+                  <div class="block-door"><img src="images/Cars/Sienta/car-door.png" alt="Home banner." class="close"><img src="images/Cars/Sienta/car-door-open.png" alt="Home banner." class="open">
+                    <div class="icon-click"><img src="images/Cars/Sienta/icon-click.png" alt="icon-click."></div>
+                  </div>
+                  <div class="block-arrow">
+                    <div class="arrow arrow-1 horizontal"><span>650mm</span></div>
+                    <div class="arrow arrow-2"><span>1145mm</span></div>
+                    <div class="arrow arrow-3"><span>330mm</span></div>
+                  </div>
+                </div>
+                <div class="block-description">
+                  <div class="block-ow-caption color-green">
+                    <div class="block-right-middle">
+                      <div class="title-small no-bg"></div>
+                      <div class="title"> Dual Power Sliding Doors</div>
+                      <div class="description">
+                        <div class="editor-content"><p>Getting in and out of the Sienta is a piece of cake in even the tightest parking spots. The low ground clearance design allows you to easily hop in and out.</p></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="block-text"></div>
+          </div>
+          <div class="section section-wide-long">
+            <div class="block-img banner-intel-scaling-item">
+              <picture>
+                <source srcset="images/Cars/Sienta/img-23-small-en.jpg" media="(max-width: 767px)"><img src="images/Cars/Sienta/img-23-en.jpg" alt="Car detail" data-x="0" data-y="0">
+              </picture>
+            </div>
+            <div class="block-ow-caption color-green">
+              <div class="block-top-middle">
+                <div class="title">A real 7-seater with space to spare</div>
+                <div class="description">
+                  <div class="editor-content"> 
+                    <p>The Sienta allows 7 adults to relax in style with ample legroom for all. That's the beauty of a real 7-seater.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="car-camry-detail">
+            <div class="section section-super-wide">
+              <div class="section-super-wide-content section-light-in-car">
+                <div class="images-container">
+                  <div class="item banner-intel-scaling-item">
+                    <picture>
+                      <source srcset="images/Cars/Sienta/img-19.png" media="(max-width: 1024px)"><img src="images/Cars/Sienta/img-22.jpg" alt="fold-flat 3">
+                    </picture>
+                  </div>
+                  <div class="item banner-intel-scaling-item">
+                    <picture>
+                      <source srcset="images/Cars/Sienta/img-18.png" media="(max-width: 1024px)"><img src="images/Cars/Sienta/img-21.jpg" alt="fold-flat 3">
+                    </picture>
+                  </div>
+                  <div class="item banner-intel-scaling-item">
+                    <picture>
+                      <source srcset="images/Cars/Sienta/img-17.png" media="(max-width: 1024px)"><img src="images/Cars/Sienta/img-20.jpg" alt="fold-flat 1">
+                    </picture>
+                  </div>
+                </div>
+                <div class="section-light-in-car-content">
+                  <div class="block-ow-caption">
+                    <div class="block-img"><img src="images/Cars/Sienta/img-16.png" alt="fold-flat 1"></div>
+                    <div class="block-caption color-green">
+                      <div class="title">Space maker</div>
+                      <div class="sub-title"></div>
+                      <div class="note-text"> More storage by conveniently fold the backs of the third-row seats and hide them underneath the second-row.</div>
+                    </div>
+                  </div>
+                  <div class="nav">
+                    <input type="range" min="0" max="100" step="50" value="0" class="tooltip-content-range-slider">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section section-car-detail">
+            <div class="section-car-detail-navigation">
+              <div class="container">
+                <div data-id="1" class="tab tab-1 active"><span>EXTERIOR</span>
+                  <div class="icon icon-1">&nbsp;</div>
+                </div>
+                <div data-id="2" class="tab tab-2"><span>INTERIOR</span>
+                  <div class="icon icon-2">&nbsp;</div>
+                </div>
+                <div data-id="3" class="tab tab-3"><span>PERFORMANCE</span>
+                  <div class="icon icon-3">&nbsp;</div>
+                </div>
+              </div>
+            </div>
+            <div class="section-car-detail-content">
+              <div id="tab-1" class="active">
+                <div class="section-car-detail-content-exterior car-section-content">
+                  <div class="block-img image-center">
+                    <picture>
+                      <source srcset="images/Cars/Sienta/img-24.jpg" media="(max-width: 767px)"><img src="images/Cars/Sienta/img-24.jpg" alt="Car detail" data-x="0" data-y="0">
+                    </picture>
+                    <div class="block-tooltip">
+                      <div data-target="tooltip-exterior-1" data-x="29.3" data-y="41.1" data-dx="0" data-dy="0" data-dir="top" class="tooltip"><img src="images/Cars/Ractis/icon-tooltip-new.png" alt="tooltip-icon"/>
+                        <div class="icon-tooltip">&nbsp;</div>
+                      </div>
+                      <div data-target="tooltip-exterior-2" data-x="38.5" data-y="64.1" data-dx="0" data-dy="0" data-dir="top" class="tooltip"><img src="images/Cars/Ractis/icon-tooltip-new.png" alt="tooltip-icon"/>
+                        <div class="icon-tooltip">&nbsp;</div>
+                      </div>
+                      <div data-target="tooltip-exterior-3" data-x="48.5" data-y="64.3" data-dx="0" data-dy="0" data-dir="top" class="tooltip"><img src="images/Cars/Ractis/icon-tooltip-new.png" alt="tooltip-icon"/>
+                        <div class="icon-tooltip">&nbsp;</div>
+                      </div>
+                      <div data-target="tooltip-exterior-4" data-x="61" data-y="55.5" data-dx="0" data-dy="0" data-dir="top" class="tooltip"><img src="images/Cars/Ractis/icon-tooltip-new.png" alt="tooltip-icon"/>
+                        <div class="icon-tooltip">&nbsp;</div>
+                      </div>
+                      <div data-target="tooltip-exterior-5" data-x="54" data-y="36.3" data-dx="0" data-dy="0" data-dir="top" class="tooltip"><img src="images/Cars/Ractis/icon-tooltip-new.png" alt="tooltip-icon"/>
+                        <div class="icon-tooltip">&nbsp;</div>
+                      </div>
+                      <div data-target="tooltip-exterior-6" data-x="67.5" data-y="36.3" data-dx="0" data-dy="0" data-dir="top" class="tooltip"><img src="images/Cars/Ractis/icon-tooltip-new.png" alt="tooltip-icon"/>
+                        <div class="icon-tooltip">&nbsp;</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-description">
+                    <div class="editor-content">
+                      <p>With its stunning exterior and glorious V-Shaped LED headlamps, you'll always stand out from the crowd.</p>
+                    </div>
+                  </div>
+                  <div class="block-popup">
+                    <div class="tooltip-navigation">
+                      <div class="container"><span class="prev">&nbsp;</span>
+                        <div class="editor-content tooltip-title-container">&nbsp;</div><span class="next">&nbsp;</span>
+                      </div>
+                      <div class="close-btn"><a href="#" title="close">&nbsp;</a></div>
+                    </div>
+                    <!-- Tooltip detail item-->
+                    <div id="tooltip-exterior-1" data-type="carousel" class="tooltip-detail-content tooltip-carousel-content">
+                      <div class="icon-tooltip-phone"><img src="images/Cars/Ractis/icon-popup-phone.png" alt=""></div>
+                      <p class="tooltip-title">Auto On/Off LED Headlamps with Levelling</p>
+                      <div class="images-container">
+                        <div class="item image-center"><img src="images/Cars/Sienta/01_exterior_01.jpg" alt="fold-flat 1"></div>
+                      </div>
+                      <div class="dots-nav"><a href="#" data-index="1">&nbsp;</a></div>
+                    </div>
+                    <div id="tooltip-exterior-2" data-type="carousel" class="tooltip-detail-content tooltip-carousel-content">
+                      <div class="icon-tooltip-phone"><img src="images/Cars/Ractis/icon-popup-phone.png" alt=""></div>
+                      <p class="tooltip-title">Front Fog lamps</p>
+                      <div class="images-container">
+                        <div class="item image-center"><img src="images/Cars/Sienta/01_exterior_04.jpg" alt="fold-flat 1"></div>
+                      </div>
+                      <div class="dots-nav"><a href="#" data-index="1">&nbsp;</a></div>
+                    </div>
+                    <div id="tooltip-exterior-3" data-type="carousel" class="tooltip-detail-content tooltip-carousel-content">
+                      <div class="icon-tooltip-phone"><img src="images/Cars/Ractis/icon-popup-phone.png" alt=""></div>
+                      <p class="tooltip-title">16-inch Alloy Wheels</p>
+                      <div class="images-container">
+                        <div class="item image-center"><img src="images/Cars/Sienta/01_exterior_05.jpg" alt="fold-flat 1"></div>
+                      </div>
+                      <div class="dots-nav"><a href="#" data-index="1">&nbsp;</a></div>
+                    </div>
+                    <div id="tooltip-exterior-4" data-type="carousel" class="tooltip-detail-content tooltip-carousel-content">
+                      <div class="icon-tooltip-phone"><img src="images/Cars/Ractis/icon-popup-phone.png" alt=""></div>
+                      <p class="tooltip-title">Remote Control Power Doors with One Touch Electric Sliding Door Open, Auto-closure Function and Jam Protection</p>
+                      <div class="images-container">
+                        <div class="item image-center"><img src="images/Cars/Sienta/01_exterior_06.jpg" alt="fold-flat 1"></div>
+                      </div>
+                      <div class="dots-nav"><a href="#" data-index="1">&nbsp;</a></div>
+                    </div>
+                    <div id="tooltip-exterior-5" data-type="carousel" class="tooltip-detail-content tooltip-carousel-content">
+                      <div class="icon-tooltip-phone"><img src="images/Cars/Ractis/icon-popup-phone.png" alt=""></div>
+                      <p class="tooltip-title">Power Adjustable Door Mirror with Trafficators</p>
+                      <div class="images-container">
+                        <div class="item image-center"><img src="images/Cars/Sienta/01_exterior_03.jpg" alt="fold-flat 1"></div>
+                      </div>
+                      <div class="dots-nav"><a href="#" data-index="1">&nbsp;</a></div>
+                    </div>
+                    <div id="tooltip-exterior-6" data-type="carousel" class="tooltip-detail-content tooltip-carousel-content">
+                      <div class="icon-tooltip-phone"><img src="images/Cars/Ractis/icon-popup-phone.png" alt=""></div>
+                      <p class="tooltip-title">LED Brake Lamp</p>
+                      <div class="images-container">
+                        <div class="item image-center"><img src="images/Cars/Sienta/01_exterior_02.jpg" alt="fold-flat 1"></div>
+                      </div>
+                      <div class="dots-nav"><a href="#" data-index="1">&nbsp;</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="tab-2">
+                <div class="section-car-detail-content-interior car-section-content">
+                  <!-- Image with tooltip-->
+                  <div class="block-img image-drag">
+                    <picture>
+                      <source srcset="images/Cars/Sienta/img-2.jpg" media="(max-width: 767px)"><img src="images/Cars/Sienta/img-2.jpg" alt="Car detail" data-x="0" data-y="0">
+                    </picture>
+                    <div class="block-tooltip light">
+                      <div data-target="tooltip-interior-1" data-x="6.3" data-y="15.5" data-dx="0" data-dy="0" data-dir="top" class="tooltip"><img src="images/Cars/Ractis/icon-tooltip-new.png" alt="tooltip-icon"/>
+                        <div class="icon-tooltip">&nbsp;</div>
+                      </div>
+                      <div data-target="tooltip-interior-2" data-x="63.1" data-y="36.2" data-dx="0" data-dy="0" data-dir="top" class="tooltip"><img src="images/Cars/Ractis/icon-tooltip-new.png" alt="tooltip-icon"/>
+                        <div class="icon-tooltip">&nbsp;</div>
+                      </div>
+                      <div data-target="tooltip-interior-3" data-x="83.5" data-y="36.2" data-dx="0" data-dy="0" data-dir="top" class="tooltip"><img src="images/Cars/Ractis/icon-tooltip-new.png" alt="tooltip-icon"/>
+                        <div class="icon-tooltip">&nbsp;</div>
+                      </div>
+                      <div data-target="tooltip-interior-4" data-x="91.5" data-y="64.7" data-dx="0" data-dy="0" data-dir="top" class="tooltip"><img src="images/Cars/Ractis/icon-tooltip-new.png" alt="tooltip-icon"/>
+                        <div class="icon-tooltip">&nbsp;</div>
+                      </div>
+                      <div data-target="tooltip-interior-5" data-x="3.3" data-y="30.5" data-dx="0" data-dy="0" data-dir="top" class="tooltip"><img src="images/Cars/Ractis/icon-tooltip-new.png" alt="tooltip-icon"/>
+                        <div class="icon-tooltip">&nbsp;</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-description">
+                    <div class="editor-content">
+                      <p>The spacious interior, with its theatre-style seating arrangement, offers comfort, luxury, and a panoramic view.</p>
+                    </div>
+                  </div>
+                  <div class="block-text">
+                    <div class="editor-content"> 
+                      <p>Overseas model shown</p>
+                      <p>Two options for interior colour</p>
+                    </div>
+                  </div>
+                  <div class="block-popup">
+                    <div class="tooltip-navigation">
+                      <div class="container"><span class="prev">&nbsp;</span>
+                        <div class="editor-content tooltip-title-container">&nbsp;</div><span class="next">&nbsp;</span>
+                      </div>
+                      <div class="close-btn"><a href="#" title="close">&nbsp;</a></div>
+                    </div>
+                    <!-- Tooltip detail item-->
+                    <div id="tooltip-interior-1" data-type="carousel" class="tooltip-detail-content tooltip-carousel-content">
+                      <div class="icon-tooltip-phone"><img src="images/Cars/Ractis/icon-popup-phone.png" alt=""></div>
+                      <p class="tooltip-title">Combination Meter with 4.2" TFT Color Multi-information Display</p>
+                      <div class="images-container">
+                        <div class="item image-center"><img src="images/Cars/Sienta/02_Interior_01a.jpg" alt="fold-flat 1"></div>
+                        <div class="item image-center"><img src="images/Cars/Sienta/02_Interior_01b.jpg" alt="fold-flat 1"></div>
+                      </div>
+                      <div class="dots-nav"><a href="#" data-index="1">&nbsp;</a><a href="#" data-index="2">&nbsp;</a>
+                      </div>
+                    </div>
+                    <div id="tooltip-interior-2" data-type="carousel" class="tooltip-detail-content tooltip-carousel-content">
+                      <div class="icon-tooltip-phone"><img src="images/Cars/Ractis/icon-popup-phone.png" alt=""></div>
+                      <p class="tooltip-title">50/50 Split Tumble Second Row Seatbacks</p>
+                      <div class="images-container">
+                        <div class="item image-center"><img src="images/Cars/Sienta/02_Interior_02.jpg" alt="fold-flat 1"></div>
+                      </div>
+                      <div class="dots-nav"><a href="#" data-index="1">&nbsp;</a></div>
+                    </div>
+                    <div id="tooltip-interior-3" data-type="carousel" class="tooltip-detail-content tooltip-carousel-content">
+                      <div class="icon-tooltip-phone"><img src="images/Cars/Ractis/icon-popup-phone.png" alt=""></div>
+                      <p class="tooltip-title">Easy Stow Third Row Seats</p>
+                      <div class="images-container">
+                        <div class="item image-center"><img src="images/Cars/Sienta/02_Interior_03.jpg" alt="fold-flat 1"></div>
+                      </div>
+                      <div class="dots-nav"><a href="#" data-index="1">&nbsp;</a></div>
+                    </div>
+                    <div id="tooltip-interior-4" data-type="carousel" class="tooltip-detail-content tooltip-carousel-content">
+                      <div class="icon-tooltip-phone"><img src="images/Cars/Ractis/icon-popup-phone.png" alt=""></div>
+                      <p class="tooltip-title">Spacious Storage Space</p>
+                      <div class="images-container">
+                        <div class="item image-center"><img src="images/Cars/Sienta/02_Interior_04a.jpg" alt="fold-flat 1"></div>
+                        <div class="item image-center"><img src="images/Cars/Sienta/02_Interior_04b.jpg" alt="fold-flat 1"></div>
+                        <div class="item image-center"><img src="images/Cars/Sienta/02_Interior_04c.jpg" alt="fold-flat 1"></div>
+                      </div>
+                      <div class="dots-nav"><a href="#" data-index="1">&nbsp;</a><a href="#" data-index="2">&nbsp;</a><a href="#" data-index="3">&nbsp;</a></div>
+                    </div>
+                    <div id="tooltip-interior-5" data-type="carousel" class="tooltip-detail-content tooltip-carousel-content">
+                      <div class="icon-tooltip-phone"><img src="images/Cars/Ractis/icon-popup-phone.png" alt=""></div>
+                      <p class="tooltip-title">All New Center Console Design</p>
+                      <div class="images-container">
+                        <div class="item image-center"><img src="images/Cars/Sienta/02_Interior_05.jpg" alt="fold-flat 1"></div>
+                      </div>
+                      <div class="dots-nav"><a href="#" data-index="1">&nbsp;</a></div>
+                      <div class="block-text">
+                        <div class="editor-content"> 
+                          <p>Overseas model shown</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="tab-3">
+                <div class="section-car-detail-content-performance car-section-content tab-content-car-carousel">
+                  <!-- Image with carousel-->
+                  <div class="owl-carousel-car-view">
+                    <div class="item image-center"><img src="images/Cars/Sienta/03_Performance_01.jpg" alt="Performance 1"></div>
+                    <div class="item image-center"><img src="images/Cars/Sienta/03_Performance_01b.jpg" alt="Performance 1b"></div>
+                    <div class="item image-center"><img src="images/Cars/Sienta/03_Performance_02.jpg" alt="Performance 2"></div>
+                  </div>
+                  <div class="owl-carousel-car-view-nav">
+                    <div class="container">
+                      <div class="nav-5"><a href="#" class="prev">&nbsp;</a>
+                        <div class="editor-content tooltip-title-container">
+                          <p>1,496 cc Displacement</p>
+                          <p class="hide">L4 DOHC 16-valve VVT-iE Engine with Start Stop System</p>
+                          <p class="hide">Super CVT-i Transmission</p>
+                        </div><a href="#" class="next">&nbsp;</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section section-change-color-car">
+            <div class="section-change-color-car-content">
+              <div class="container">
+                <div style="background-image: url(images/Cars/Sienta/00_shadow.png)" class="block-lists-car"><img src="images/Cars/Sienta/01_yellowGreen.png" alt="" class="img-create-height hide">
+                  <div class="car color-1 active"><img src="images/Cars/Sienta/01_yellowGreen.png" alt="Car 1"></div>
+                  <div class="car color-2"><img src="images/Cars/Sienta/02_white.png" alt="Car 1"></div>
+                  <div class="car color-3"><img src="images/Cars/Sienta/03_green.png" alt="Car 1"></div>
+                  <div class="car color-4"><img src="images/Cars/Sienta/04_sliver.png" alt="Car 1"></div>
+                  <div class="car color-5"><img src="images/Cars/Sienta/05_red.png" alt="Car 1"></div>
+                  <div class="car color-6"><img src="images/Cars/Sienta/06_black.png" alt="Car 1"></div>
+                  <div class="car color-7"><img src="images/Cars/Sienta/07_blue.png" alt="Car 1"></div>
+                  <div class="car color-8"><img src="images/Cars/Sienta/08_brown.png" alt="Car 1"></div>
+                  <svg id="mask-view" xmlns="http://www.w3.org/2000/svg" width="931px" height="390px" viewbox="0 0 931 390" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                      <pattern id="car-embed" patternunits="userSpaceOnUse" width="931" height="390">
+                        <image id="masked-image" xlink:href="images/Cars/Sienta/01_yellowGreen.png" x="0" y="0" width="931" height="390"></image>
+                      </pattern>
+                    </defs>
+                    <circle id="walt-embed" cx="50" cy="50" r="40" stroke="none" fill="url(#car-embed)"></circle>
+                  </svg>
+                </div>
+                <div class="block-desctiption">
+                  <div class="editor-content">
+                    <p></p>
+                  </div>
+                </div>
+                <div class="block-lists-color">
+                  <div data-color="color-1" class="color-item active">
+                    <div class="icon color-1"><img src="images/Cars/Sienta/bg-color-car-1.png" alt=""></div><span>Fresh Air Yellow</span>
+                  </div>
+                  <div data-color="color-2" class="color-item">
+                    <div class="icon color-2"><img src="images/Cars/Sienta/bg-color-car-2.png" alt=""></div><span>White Pearl Crystal Shine</span>
+                  </div>
+                  <div data-color="color-3" class="color-item">
+                    <div class="icon color-3"><img src="images/Cars/Sienta/bg-color-car-3.png" alt=""></div><span>Green Mica Metallic</span>
+                  </div>
+                  <div data-color="color-4" class="color-item">
+                    <div class="icon color-4"><img src="images/Cars/Sienta/bg-color-car-4.png" alt=""></div><span>Silver Metallic</span>
+                  </div>
+                  <div data-color="color-5" class="color-item">
+                    <div class="icon color-5"><img src="images/Cars/Sienta/bg-color-car-5.png" alt=""></div><span>Red Mica Metallic</span>
+                  </div>
+                  <div data-color="color-6" class="color-item">
+                    <div class="icon color-6"><img src="images/Cars/Sienta/bg-color-car-6.png" alt=""></div><span>Black Mica</span>
+                  </div>
+                  <div data-color="color-7" class="color-item">
+                    <div class="icon color-7"><img src="images/Cars/Sienta/bg-color-car-7.png" alt=""></div><span>Blue Metallic</span>
+                  </div>
+                  <div data-color="color-8" class="color-item">
+                    <div class="icon color-8"><img src="images/Cars/Sienta/bg-color-car-8.png" alt=""></div><span>Vintage Brown Pearl Crystal Shine</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section section-specification-car">
+            <div class="container">
+              <h2 class="title">HIGHLIGHTED SPECIFICATION</h2>
+              <div class="table-content">
+                <table>
+                  <tbody>
+                    <tr> 
+                      <td rowspan="2" class="title">Dimensions & Weights</td>
+                      <td>Overall Length x Overall Width x <br/>Overall Height (mm) </td>
+                      <td>4,400 x 1,695 x 1,460</td>
+                    </tr>
+                    <tr> 
+                      <td>Seating Capacity (including driver)</td>
+                      <td>5</td>
+                    </tr>
+                    <tr> 
+                      <td rowspan="4" class="title">Engine</td>
+                      <td>Type</td>
+                      <td>Valve VVT-iE Engine with Start Stop <br/>System</td>
+                    </tr>
+                    <tr> 
+                      <td>Displacement (cc)</td>
+                      <td>1496</td>
+                    </tr>
+                    <tr> 
+                      <td>*Max. Output   kW (PS) / rpm</td>
+                      <td>80 (109) / 6,000</td>
+                    </tr>
+                    <tr> 
+                      <td>*Max. Torque   Nm (kg-m) / rpms</td>
+                      <td>136 (13.9) / 4,400</td>
+                    </tr>
+                    <tr> 
+                      <td rowspan="3" class="title">Chassis</td>
+                      <td>Transmission Type</td>
+                      <td>CVT</td>
+                    </tr>
+                    <tr> 
+                      <td>Fuel Consumption</td>
+                      <td>23.4 km/L (JC08 mode)</td>
+                    </tr>
+                    <tr> 
+                      <td>Tyre & Wheel </td>
+                      <td>175/65 R15 Alloy Wheel <br/>(Corolla Super Luxury)<br/>175/65 R15 Full Wheel Cap<br/>(Corolla Luxury)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="section section-components-car">
+            <div class="section-components-car-content">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="block-downlink"><a href="#" title="Download e-Catalogue"><i class="fa fa-download"> </i><span>Download e-Catalogue</span></a><img src="images/Cars/Sienta/car-small.png" alt="Download"><a href="#" title="Download Specification Sheet"><i class="fa fa-download"> </i><span>Download Specification Sheet</span></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section section-interest">
+            <div class="section-interest-content">
+              <div class="container">
+                <div class="title">YOU MAY ALSO HAVE INTEREST</div>
+                <div class="block-lists-interest">
+                  <div class="item-interest"><a href="#" title="Prius C">
+                      <div class="block-img"><img src="images/Cars/Ractis/car-interest-1.jpg" alt="car interest 1"/></div><span>Prius C</span></a></div>
+                  <div class="item-interest"><a href="#" title="Prius">
+                      <div class="block-img"><img src="images/Cars/Ractis/car-interest-2.jpg" alt="car interest 2"/></div><span>Prius</span></a></div>
+                  <div class="item-interest"><a href="#" title="RAV4">
+                      <div class="block-img"><img src="images/Cars/Ractis/car-interest-3.jpg" alt="car interest 3"/></div><span>RAV4</span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+        <div class="footer-top-section">
+          <div class="container">
+            <div class="social-links">
+              <p>Follow Toyota Hong Kong</p>
+              <ul>
+                <li><a href="#" title="facebook" class="facebook">facebook</a></li>
+                <li><a href="#" title="youtube" class="youtube">youtube</a></li>
+                <li><a href="#" title="instagram" class="instagram">instagram</a></li>
+              </ul>
+            </div>
+            <div class="footer-main-content">
+              <div class="models">
+                <h4>All models</h4>
+                <table>
+                  <tr>
+                    <td><a href="#" title="86">86</a></td>
+                    <td><a href="car-ractis.html" title="Ractis">Ractis</a></td>
+                    <td><a href="#" title="Prius C">Prius C</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#" title="Spade">Spade</a></td>
+                    <td><a href="car-corolla.html" title="Corolla">Corolla</a></td>
+                    <td><a href="car-camry.html" title="Camry">Camry</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#" title="Mark X">Mark X</a></td>
+                    <td><a href="#" title="Prius">Prius</a></td>
+                    <td><a href="#" title="RAV4">RAV4</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#" title="Pardo">Pardo</a></td>
+                    <td><a href="#" title="Sienta">Sienta</a></td>
+                    <td><a href="#" title="Wish">Wish</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#" title="Noah">Noah</a></td>
+                    <td><a href="#" title="Prius V">Prius V</a></td>
+                    <td><a href="#" title="Previa">Previa</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#" title="Alphard">Alphard</a></td>
+                    <td><a href="#" title="Vellfire">Vellfire</a></td>
+                    <td><a href="#" title="Hiace">Hiace</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#" title="Coaster">Coaster</a></td>
+                    <td><a href="#" title="Taxi">Taxi</a></td>
+                    <td><a href="price-list.html" title="Price list">Price list</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="promotion-list.html" title="Promotion List">Promotion List</a></td>
+                    <td><a href="#" title="Trade-in Services">Trade-in Services</a></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="links">
+                <div class="external-links-col w11p">
+                  <h4> <a href="#" title="Used Cars">Used Cars</a></h4>
+                </div>
+                <div class="external-links-col w11p">
+                  <h4> <a href="#" title="TRAC">TRAC</a></h4>
+                </div>
+                <div class="external-links-col w22p">
+                  <h4>Aftersales</h4>
+                  <ul>
+                    <li><a href="#" title="Recall Inquiry">Recall Inquiry</a></li>
+                    <li><a href="#" title="Maintenance Service">Maintenance Service</a></li>
+                    <li><a href="#" title="Aftersales Service Package &amp; Promotion">Aftersales Service Package <br/> & Promotion</a></li>
+                    <li><a href="#" title="Maintenance &amp; Driving Tips">Maintenance & Driving Tips</a></li>
+                    <li><a href="#" title="Warranty">Warranty</a></li>
+                    <li><a href="#" title="Toyota 1st time Check Up">Toyota 1st time Check Up</a></li>
+                  </ul>
+                </div>
+                <div class="external-links-col">
+                  <h4>Finance & Insurance</h4>
+                  <ul>
+                    <li><a href="#" title="Finance Intro">Finance Intro</a></li>
+                    <li><a href="#" title="Insurance Programs">Insurance Programs</a></li>
+                  </ul>
+                </div>
+                <div class="external-links-col w22p subscribe">
+                  <h4>Media Center </h4>
+                  <ul>
+                    <li><a href="#" title="News &amp; events">News & events</a></li>
+                  </ul>
+                  <h4> <a href="#" title="Contact Us">Contact Us</a></h4>
+                  <div class="subscription">
+                    <h4>Subscribe e-Newsletter</h4>
+                    <p>For recieve ourlatest promotion, event and activity at once.</p><a href="#">Go</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom-section">
+          <div class="container">
+            <div class="copyright">
+              <p>© 2015 Toyota Motor Corporation. All Rights Reserved. </p>
+            </div>
+            <div class="terms">
+              <ul>
+                <li><a href="#" title="Sitemap">Sitemap</a></li>
+                <li><a href="#" title="Legal Claims">Legal Claims</a></li>
+                <li><a href="#" title="Privacy Policy">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!--a.btn.btn-primary(data-toggle='modal', href='#survey-popup') Trigger modal-->
+      <div id="survey-popup" class="survey-popup modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" data-dismiss="modal" class="close"><span sr-only>Close</span></button>
+            </div>
+            <div class="modal-body">
+              <form action="/" method="POST" class="validate-form">
+                <div class="question question-1">
+                  <h3>Question 1 of 3</h3>
+                  <p class="question-title">Please rate your overall experience on our site today</p>
+                  <div class="answer">
+                          <div class="row star-rating">
+                            <div class="col-xs-12">
+                              <div class="stars"><a href="#" title="1" data-value="1">1</a><a href="#" title="2" data-value="2">2</a><a href="#" title="3" data-value="3">3</a><a href="#" title="4" data-value="4">4</a><a href="#" title="5" data-value="5">5</a><a href="#" title="6" data-value="6">6</a><a href="#" title="7" data-value="7">7</a><a href="#" title="8" data-value="8">8</a><a href="#" title="9" data-value="9">9</a><a href="#" title="10" data-value="10">10</a>
+                              </div>
+                              <input type="text" name="overallExp" required="required"/>
+                            </div>
+                          </div>
+                          <div class="row rating-description">
+                            <div class="col-xs-4 text-left">Poor</div>
+                            <div class="col-xs-4 text-center">Average</div>
+                            <div class="col-xs-4 text-right">Excellent</div>
+                          </div>
+                  </div>
+                  <div class="submission text-center"><span class="error hide">Please fill in your answer</span>
+                    <button data-question="2" class="btn common-btn forward">Next</button>
+                  </div>
+                </div>
+                <div class="question question-2 hide">
+                  <h3>Question 2 of 3</h3>
+                  <p class="question-title">Were you able to do what you wanted on the site today?</p>
+                  <div class="answer">
+                    <div class="radioUI radio-primary">
+                      <input type="radio" name="dowhatyouwant" value="yes" checked="checked" id="dowhatyouwant-yes"/>
+                      <label for="dowhatyouwant-yes">Yes</label>
+                    </div>
+                    <div class="radioUI radio-primary">
+                      <input type="radio" name="dowhatyouwant" value="no" id="dowhatyouwant-no"/>
+                      <label for="dowhatyouwant-no">No</label>
+                    </div>
+                    <div class="radioUI radio-primary">
+                      <input type="radio" name="dowhatyouwant" value="too-early" id="dowhatyouwant-too-early"/>
+                      <label for="dowhatyouwant-too-early">Too early to say</label>
+                    </div>
+                  </div>
+                  <p class="question-title">If not, why not</p>
+                  <div class="answer">
+                    <div class="charcount">
+                      <textarea maxlength="500"></textarea><small class="counter-message"><span class="counter">500 </span> characters remaining</small>
+                    </div>
+                  </div>
+                  <div class="submission text-center"><span class="error hide">Please fill in your answer</span>
+                    <button data-question="1" class="btn common-btn back">Back</button>
+                    <button data-question="3" class="btn common-btn forward">Next</button>
+                  </div>
+                </div>
+                <div class="question question-3 hide">
+                  <h3>Question 3 of 3</h3>
+                  <p class="question-title">
+                     
+                    Thinking about your experience on our site today,<br class="hidden-xs">how likely are you to recommend us to <br class="hidden-xs">your family or friends?
+                  </p>
+                  <div class="answer">
+                    <div class="radioUI radio-primary">
+                      <input type="radio" name="doyoulike" value="extremelylikely" checked="checked" id="doyoulike-extremelylikely"/>
+                      <label for="extremelylikely-yes">Extremely Likely</label>
+                    </div>
+                    <div class="radioUI radio-primary">
+                      <input type="radio" name="doyoulike" value="extremelyunlikely" id="doyoulike-extremelyunlikely"/>
+                      <label for="dowhatyouwant-no">Extremely Unlikely</label>
+                    </div>
+                  </div>
+                  <p class="question-title">Please tell us why?</p>
+                  <div class="answer">
+                    <div class="charcount">
+                      <textarea maxlength="500"></textarea><small class="counter-message"><span class="counter">500 </span> characters remaining</small>
+                    </div>
+                  </div>
+                  <div class="submission text-center"><span class="error hide">Please fill in your answer</span>
+                    <button data-question="2" class="btn common-btn back">Back</button>
+                    <button class="btn common-btn submit">Finish</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--a.btn.btn-primary(data-toggle='modal', href='#survey-popup') Trigger modal-->
+      <div id="survey-thankyou-popup" class="survey-popup survey-thankyou-popup modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" data-dismiss="modal" class="close"><span sr-only>Close</span></button>
+            </div>
+            <div class="modal-body">
+              <form action="/" method="POST" class="validate-form">
+                <input type="hidden" name="recordId" value=""/>
+                <div class="question question-1">
+                  <h3>Thank you for your valuable feedback.</h3>
+                  <p class="request-title">If you would like us to contact you to understand more about your responses, please leave your details and one of our representatives will be in touch.</p>
+                  <p class="question-title">We will not share your details with any third parties.</p>
+                  <div class="answer reviewer-details">
+                    <div class="form-group">
+                      <label for="reviewerName" class="control-label text-left">Name</label>
+                      <div class="input">
+                        <input id="reviewerName" type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="reviewerEmail" class="control-label text-left">Email</label>
+                      <div class="input">
+                        <input id="reviewerEmail" type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="reviewerTelephone" class="control-label text-left">Telephone</label>
+                      <div class="input">
+                        <input id="reviewerTelephone" type="text" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="submission text-center"><span class="error hide">Please fill in your answer</span>
+                    <button data-question="2" class="btn common-btn forward">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-outdate-browsers" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" data-dismiss="modal" class="close"><img src="images/icon-close-popup.png" alt=""></button>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-sm-12 col-md-12">
+                <div class="title">Did you know that your Internet Explorer is out of date?</div>
+                <div class="description">
+                  <p>To get the best possible experience using our website we recommend that you upgrade to a newer version or other web browser. A list of the most popular web browsers can be found below.</p>
+                  <p>Just click on the icons to get to the download page.</p>
+                </div>
+                <div class="block-browsers"><a href="#" title="ie"><img src="images/img-ie.png" alt="ie"/></a><a href="#" title="firefox"><img src="images/img-firefox.png" alt="firefox"/></a><a href="#" title="safari"><img src="images/img-safari.png" alt="safari"/></a><a href="#" title="chrome"><img src="images/img-chrome.png" alt="chrome"/></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/cdn.js" type="text/javascript"></script>
+    <script>
+      jQuery(document).ready(function($) {
+        $('.ie8 #modal-outdate-browsers').modal('show');
+        });
+      
+      
+    </script>
+    <script src="scripts/dep.js" type="text/javascript"></script>
+    <script src="scripts/car-detail-dep.js" type="text/javascript"></script>
+    <script src="scripts/car-detail.js" type="text/javascript"></script>
+    <script src="scripts/form-dep.js" type="text/javascript"></script>
+    <script src="scripts/form.js" type="text/javascript"></script>
+    <script src="scripts/main.js" type="text/javascript"></script>
+    <script>
+      //- Your master script stays here
+      //- This block will be override on each page.
+    </script>
+    <!--[if lt IE 8]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+    <noscript>JavaScript is off. Please enable to view full site.</noscript>
+  </body>
+</html>

@@ -1,0 +1,751 @@
+@keyframes changeColorAnimation 
+  0%   
+    height: 20px
+  100%
+    height: 74px
+
+@keyframes scaleAnimation 
+  0%   
+    transform: scale(1,1)
+  50%   
+    transform: scale(1.1,1.1)
+  100%
+    transform: scale(1,1)
+
+.section-change-color-car
+  .color-item 
+    .icon
+      position: relative
+    .animation
+      background: url('../images/Cars/Sienta/animation-change-color-car.png') no-repeat 
+      width: 20px
+      height: 20px
+      position: absolute 
+      z-index: 9999
+      bottom: 60px
+      left: 20px
+      display: block
+      animation: changeColorAnimation 3s infinite 
+    &.active
+      .animation  
+        display: none
+        animation: none
+
+
+.car-sienta-detail
+  .owl-carousel-car-view
+    .item
+      position: relative
+  .block-ow-caption
+    .block-left-middle
+      left: 21%
+    .title .price
+      text-transform: none
+    &.color-green
+      color: #339966
+      .title, .title-small, .price
+        color: inherit
+      .description .editor-content p
+        color: #666666
+      .title-small
+        background: none
+        position: relative
+        &:before
+          background: #339966
+          width: 20px
+          margin-left: -10px
+
+  .section-slider-view .owl-carousel-car-view-nav 
+    .nav 
+      a
+        background: url('../images/Cars/Camry/icon-4.png') no-repeat
+        background-size: 100%
+        opacity: 1
+        &:nth-child(2)
+          opacity: 0
+      &.right
+        a 
+          opacity: 0
+          &:nth-child(2)
+            opacity: 1
+
+  .section-car-run-sienta
+    background: url('../images/Cars/Sienta/bg-section-run.jpg') no-repeat top center #ECECEC
+    .color-green
+      .block-right-middle
+        text-shadow: none
+        right: 12%
+        top: 270px
+        width: 440px
+      .title-small
+        color: #666666
+        font-size: 18px
+        margin-bottom: 20px
+        &:before
+          content: none
+      .title
+        font-size: 90px
+        line-height: 1.1
+        margin-bottom: 0
+    .block-text
+      font-size: 12px
+      color: #666666
+      line-height: 1.5
+      text-align: left
+      position: relative
+      left: 200px
+      bottom: 65px
+      z-index: 99
+    .banner-intel-scaling-item
+      position: relative
+    .block-content
+      position: relative
+      right: -78%
+      width: 1920px
+      &.active
+        right: 4.7%
+        -webkit-transition: right 3s
+        -moz-transition: right 3s
+        -ms-transition: right 3s
+        -o-transition: right 3s
+        transition: right 3s
+        .icon-click img
+          filter: alpha(opacity=100)
+          opacity: 1
+          -webkit-transition: opacity 0.1s 3s
+          -moz-transition: opacity 0.1s 3s
+          -ms-transition: opacity 0.1s 3s
+          -o-transition: opacity 0.1s 3s
+          transition: opacity 0.1s 3s
+        .block-wheel img
+      .block-car
+        position: relative
+        top: 220px
+        left: 120px
+      .block-wheel
+        img 
+          position: absolute
+          top: 317px 
+          left: 126px
+          &.wheel-2
+            left: 867px
+        &.active 
+          img             
+            -ms-transform: rotate(-1080deg)
+            -webkit-transform: rotate(-1080deg)
+            -moz-transform: rotate(-1080deg)
+            transform: rotate(-1080deg)
+
+            -webkit-transition: transform 3s
+            -moz-transition: transform 3s
+            -ms-transition: transform 3s
+            -o-transition: transform 3s
+            transition: transform 3s
+      .block-door
+        position: absolute
+        left: 566px
+        top: 32px
+        img 
+          filter: alpha(opacity=0)
+          opacity: 0
+          position: absolute
+          top: 0
+          left: 0
+          &.close
+            filter: alpha(opacity=100)
+            opacity: 1
+        .icon-click img
+          position: absolute
+          top: 123px
+          left: -28px
+          cursor: pointer
+        &.active        
+          .close
+            filter: alpha(opacity=0)
+            opacity: 0
+          .open 
+            filter: alpha(opacity=100)
+            opacity: 1
+            left: 177px
+            top: -5px
+            -webkit-transition: left 3s 0.5s, top 0s
+            -moz-transition: left 3s 0.5s, top 0s
+            -ms-transition: left 3s 0.5s, top 0s
+            -o-transition: left 3s 0.5s, top 0s
+            transition: left 3s 0.5s, top 0s
+          .icon-click img
+            display: none
+
+      .block-arrow
+        filter: alpha(opacity=0)
+        opacity: 0
+        position: absolute
+        top: 0
+        left: 0
+        .arrow
+          position: absolute
+          width: 5px
+          height: 5px 
+          background: url('../images/Cars/Sienta/bg-arrow.png')
+          z-index: 99
+          -webkit-transition: all 2s
+          -moz-transition: all 2s
+          -ms-transition: all 2s
+          -o-transition: all 2s
+          transition: all 2s
+          
+          span
+            font-size: 14px
+            color: rgb( 51, 153, 102 )
+            position: absolute
+            display: none
+          &:before, &:after
+            content: ""
+            background: url('../images/Cars/Sienta/icon-arrow.png')
+            width: 11px
+            height: 5px
+            display: block
+            position: absolute
+            top: -4px
+            left: -3px
+          &:after
+            background-position: -37px 0px
+            top: auto
+            bottom: -5px
+          &.horizontal
+            &:before, &:after
+              top: -3px
+              left: -5px
+              background-position: 0px -8px
+              width: 5px
+              height: 11px
+            &:after
+              left: auto
+              right: -5px
+              background-position: -11px -8px
+          &.arrow-1
+            top: 90px
+            left: 680px
+            height: 5px
+            width: 28px
+          &.arrow-2
+            top: 200px
+            left: 630px
+            height: 28px
+            width: 5px
+          &.arrow-3
+            top: 413px 
+            left: 630px 
+            height: 38px
+            width: 5px
+        &.active
+          filter: alpha(opacity=100)
+          opacity: 1
+          -webkit-transition: opacity 0.1s 3.3s
+          -moz-transition: opacity 0.1s 3.3s
+          -ms-transition: opacity 0.1s 3.3s
+          -o-transition: opacity 0.1s 3.3s
+          transition: opacity 0.1s 3.3s          
+          
+          .arrow-1
+            left: 615px
+            width: 131px
+            span 
+              left: 50px
+              top: 10px
+              display: block
+          .arrow-2
+            top: 80px
+            height: 290px    
+            span 
+              top: 132px
+              left: 10px
+              display: block
+          .arrow-3
+            opacity: 1
+            span 
+              top: 6px
+              left: 10px
+              display: block
+          .arrow 
+            -webkit-transition: top 3s 3.5s, left 3s 3.5s, width 3s 3.5s, height 3s 3.5s
+            -moz-transition: top 3s 3.5s, left 3s 3.5s, width 3s 3.5s, height 3s 3.5s
+            -ms-transition: top 3s 3.5s, left 3s 3.5s, width 3s 3.5s, height 3s 3.5s
+            -o-transition: top 3s 3.5s, left 3s 3.5s, width 3s 3.5s, height 3s 3.5s
+            transition: top 3s 3.5s, left 3s 3.5s, width 3s 3.5s, height 3s 3.5s
+              
+
+
+            
+  .section-car-detail-content-exterior
+    .block-description
+      top: 680px
+
+  .section-change-color-car
+    background: #f1f1f1
+    .section-change-color-car-content
+      background: none
+      .block-lists-car
+        width: 934px
+        height: 390px
+
+  .section-wide-long
+    .banner-intel-scaling-item
+      position: relative
+    .block-ow-caption 
+      .block-top-middle
+        width: 100%
+        left: 0
+        .block-img-wide-long-full
+          display: none
+        .title
+          font-size: 60px
+          margin: 0
+        .description
+          position: relative
+          top: 460px
+        .description .editor-content p
+          color: #fff
+          font-size: 16px
+    .block-wide-long-img
+      position: absolute
+      left: 0
+      top: 170px
+      width: 100%
+      .container 
+        position: relative
+      .item 
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        text-align: center
+
+        &.img-size
+          position: relative
+    .block-wide-long-control
+      position: absolute
+      left: 0
+      bottom: 50px
+      width: 100%
+      text-align: center
+      .item 
+        background: url('../images/Cars/Sienta/icon-2.png')
+        width: 21px
+        height: 54px
+        display: inline-block
+        margin: 0 15px
+        cursor: pointer
+        &.active
+          background-position: 0 54px
+
+  
+  #tab-2, #tab-4
+    .block-text
+      position: absolute
+      bottom: 5%
+      left: 5%
+      .editor-content p 
+        color: #fff
+ 
+  #tooltip-interior-5
+    .block-text
+      position: absolute
+      bottom: 23%
+      left: 5%
+      .editor-content p 
+        color: #fff
+
+.en-US .car-sienta-detail , .car-sienta-detail
+  .section-light-in-car
+    background: #f3f3f3
+    .nav
+      left: 15% 
+      bottom: 160px
+      .rangeslider
+        background-image: url('../images/Cars/Sienta/icon-1.png')
+        &:before
+          background-image: url('../images/Cars/Sienta/icon-1.png')
+          z-index: 9
+      .rangeslider__fill
+        box-shadow: none
+      .rangeslider__handle
+        background-image: url('../images/Cars/Sienta/icon-light-in-car-nav-handle.png')
+        box-shadow: none
+      &.nav-banner-sienta
+        left: 26% 
+        bottom: 0px
+        .rangeslider
+          background-image: url('../images/Cars/Sienta/super-wide-bg-control.png')
+          width: 327px 
+          &:before
+            background-image: url('../images/Cars/Sienta/super-wide-bg-control.png')
+            z-index: 9
+        .rangeslider__fill
+          box-shadow: none
+        .rangeslider__handle
+          background-image: url('../images/Cars/Sienta/super-wide-btn-control.png')
+          box-shadow: none
+          width: 70px
+          height: 70px
+    .block-img
+      position: absolute
+      top: 160px
+      left: 15%
+      z-index: 99
+    .block-caption
+      left: 15%
+      top: 260px 
+      text-shadow: none
+      width: 374px
+      .title
+        font-size: 90px
+        color: rgb( 51, 153, 102 )
+        line-height: 1.1
+        text-align: center
+        padding: 0
+        margin: 0
+      .sub-title
+        font-size: 60px
+        color: rgb( 51, 153, 102 )
+        line-height: 1.3
+        text-align: center
+      .note-text
+        color: #333
+        text-align: center
+
+    .btn-video
+      a 
+        background: url('../images/Cars/Sienta/btn-video.png') no-repeat
+        position: absolute
+        left: 55%
+        top: 530px
+        width: 176px
+        height: 176px
+        animation: scaleAnimation 3s infinite 
+
+.zh-HK 
+  .car-sienta-detail .section-light-in-car .btn-video a
+    background-image: url('../images/Cars/Sienta/btn-video-tc.png')
+  .car-sienta-detail .section-light-in-car .nav.nav-banner-sienta .rangeslider
+    background-image: url('../images/Cars/Sienta/super-wide-bg-control-tc.png')
+    &:before 
+      background-image: url('../images/Cars/Sienta/super-wide-bg-control-tc.png')
+
+.fancybox-overlay
+  z-index: 9999
+.fancybox-wrap
+  z-index: 99999  
+
+@media screen and (min-width: 1025px)
+  // fix version Eng
+  .en-US
+    .car-sienta-detail 
+      .section-car-run-sienta 
+        .color-green 
+          .block-right-middle
+            top: 250px
+          .title
+            line-height: 0.8
+
+
+
+@media screen and (max-width: 1152px)
+  .en-US 
+    .car-sienta-detail 
+      .section-car-run-sienta .color-green .block-right-middle
+        right: 14%
+      .section-light-in-car 
+        .block-caption, .block-img, .nav
+          left: 12%
+
+@media screen and (max-width: 1024px)
+  .car-sienta-detail
+    .section-super-wide
+      .block-ow-caption 
+        .block-left-middle
+          position: relative
+          top: 0
+          left: 0
+          width: 100%
+          .title, .title-small
+            color: #339966
+          .title-small:before 
+            background-color: #339966
+          .description .editor-content p
+            color: #666666
+
+    .section-car-run-sienta
+      height: auto
+      .banner-intel-scaling-item
+        height: auto
+        width: 100%
+      .block-content
+        width: 100%
+        left: 0
+        margin-top: 50px
+        .block-wheel , .block-door, .icon-click
+          display: none
+        .block-car
+          position: relative
+          left: 0
+          top: 0
+          width: 100%
+          text-align: center
+          padding: 0 20px 
+          img 
+            max-width: 100%
+      .block-ow-caption 
+        position: relative
+        margin-top: 30px
+        .block-right-middle
+          position: relative
+          left: 0
+          top: 0
+          width: 100%
+      .block-text
+        position: relative
+        left: 0
+        bottom: 0
+        width: 100%
+        margin: 30px 0
+        padding: 0 30px
+    
+    .section-super-wide
+      height: auto
+    #tab-2, #tab-4
+      .block-text
+        position: relative
+        bottom: 0
+        left: 5%
+        margin: 20px 0
+        .editor-content p 
+          color: #333
+
+    #tooltip-interior-5 
+      .block-text
+        left: 20px
+        bottom: 20px
+        display: none
+      &.active .block-text
+        display: block
+
+  .en-US .car-sienta-detail , .car-sienta-detail
+    .section-light-in-car.section-light-in-car-sienta-1 
+      .images-container
+        margin-top: 0
+        .item
+          top: 0
+      .section-light-in-car-content
+        position: relative
+    .section-light-in-car 
+      height: auto
+      .block-ow-caption, .block-img, .block-caption, .nav
+        position: relative
+        left: 0
+        top: 0
+        width: 100%
+        margin: 10px 0 
+      .images-container
+        margin: 20px 0
+      
+      .item
+        width: 100%
+        height: auto
+        position: absolute
+        left: 0
+        top: 20px
+        transform: none
+        text-align: center
+        img
+          max-width: 100%
+        &:first-child
+          position: relative
+          top: 0
+      .section-light-in-car-content .block-ow-caption
+        padding: 0 20px
+      .nav .rangeslider
+        margin: 0 auto
+      .nav.nav-banner-sienta
+        left: 0
+      &.in-car
+        .item img           
+          padding: 0 10px
+        .btn-video a 
+          width: 80px
+          height: 80px
+          background: url('../images/Cars/Sienta/btn-small-video.png') no-repeat
+          background-size: cover
+          left: calc(50% - 40px)
+          top: calc(100% + 250px)
+        .nav
+          margin-bottom: 110px
+    .section-change-color-car
+      .color-item .animation
+        display: none
+  .zh-HK .car-sienta-detail
+    .section-light-in-car.in-car .btn-video a
+      top: calc(100% + 330px)   
+      background-image: url('../images/Cars/Sienta/btn-small-video-tc.png')
+
+      
+
+
+@media screen and (max-width: 1023px) 
+  .car-sienta-detail        
+    .block-ow-caption
+      color: #339966
+      .title-small:before
+        background: #339966
+      .description .editor-content p
+        color: #666
+    .section-change-color-car
+      .section-change-color-car-content 
+        padding-bottom: 50px
+        height: auto
+        .block-lists-car
+          width: 100%
+          height: auto
+          background-size: 100% 100%
+    .section-wide-long
+      .block-ow-caption
+        position: absolute
+      .banner-intel-scaling-item
+        height: 799px
+        > picture > img 
+          height: 799px
+          width: 100%
+          max-width: inherit
+
+@media screen and (max-width: 768px)
+  .car-sienta-detail 
+    .section-car-run-sienta 
+      .color-green 
+        .title-small
+          font-size: 18px
+        .title
+          font-size: 80px
+          padding: 0 0px
+        .editor-content p
+          font-size: 16px
+    .section-slider-view .item img
+      width: 100%
+  .en-US .car-sienta-detail, .car-sienta-detail 
+    .section-light-in-car 
+      .nav.nav-banner-sienta
+        position: absolute
+        height: 100%
+        bottom: 100px
+        top: auto
+    .section-wide-long
+      .block-wide-long-img, .block-wide-long-control
+        display: none
+      .block-ow-caption
+        position: relative 
+        .block-top-middle 
+          .block-img-wide-long-full
+            display: block
+            position: relative
+            text-align: center
+            img 
+              max-width: 100%
+          .description
+            top: 0
+      .banner-intel-scaling-item
+        position: absolute
+    .section-light-in-car.in-car .btn-video a
+      top: calc(100% + 300px)
+  .zh-HK .car-sienta-detail
+    .section-light-in-car.in-car .btn-video a
+      top: calc(100% + 350px)
+        
+      
+
+
+@media screen and (max-width: 767px)
+  .car-sienta-detail 
+    .section-wide-long
+      margin-bottom: 0
+    .section-slider-view .item img
+      width: 100%
+    .section-car-run-sienta 
+      margin: 0
+      .color-green 
+        .title-small
+          font-size: 16px
+        .title
+          font-size: 60px
+        .editor-content p
+          font-size: 14px
+    .section-change-color-car-content 
+      .block-desctiption .editor-content p
+        font-size: 16px
+        margin-bottom: 20px
+  .en-US .car-sienta-detail , .car-sienta-detail
+    .section-light-in-car 
+      .section-light-in-car-content
+        position: relative
+        top: 0
+        left: 0
+        .block-caption 
+          .title
+            font-size: 60px
+          .sub-title
+            font-size: 40px
+          .note-text
+            font-size: 14px
+    .section-light-in-car.in-car .btn-video a
+      top: calc(100% + 270px)
+  .zh-HK .car-sienta-detail
+    .section-light-in-car.in-car .btn-video a
+      top: calc(100% + 300px)
+  .car-sienta-detail .section-light-in-car .block-img
+    padding: 0 10px
+
+@media screen and (max-width: 375px)
+  .car-camry-detail 
+    .section-light-in-car 
+      .nav 
+        .rangeslider
+          width: 272px
+          background-position: 15px 16px
+          background-size: 89% !important
+          height: 61px
+          &.step-1:before 
+            background-position: 0px -58px
+            background-size: 571%
+            width: 43px
+            height: 45px
+            left: 15px
+            top: 16px
+          &.step-2:before
+            background-position: -102px -58px
+            background-size: 571%
+            width: 43px
+            height: 45px
+            left: 116px
+            top: 16px
+          &.step-3:before
+            background-position: -203px -58px
+            background-size: 571%
+            width: 43px
+            height: 45px
+            left: 214px
+            top: 16px
+        .rangeslider__handle
+          width: 72px
+          height: 72px
+          background-size: 100%
+          top: 2px
+  .en-US .car-sienta-detail, .car-sienta-detail
+    .section-light-in-car 
+      .nav.nav-banner-sienta  
+        margin: 0
+        .rangeslider__handle
+          width: 55px
+          height: 55px  
+          top: 8px   
+        .rangeslider
+          width: 300px
+    .section-light-in-car.in-car .btn-video a
+      top: calc(100% + 290px)
